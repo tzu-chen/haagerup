@@ -1,0 +1,104 @@
+Independent checks of the saved order-19 field and phase data
+certificate_sha256=e72ca3621ff36a80c90395b62b5b6f4484b1fad06bb96212ce90c56476fd4585
+[ok] odd prime and primitive scalar
+[ok] irreducible monic absolute field
+[ok] quadratic dimension
+[ok] scalar field automorphism fixes dimension
+[ok] scalar half-power is the stated involution
+[ok] primitive generator inverted by the involution
+[ok] involution fixed field is totally real
+[ok] all real places have negative dimension
+[ok] physical Hermitian symmetry
+[ok] exceptional entries
+[ok] generic norms
+[ok] mirror first row
+[ok] coherent phase form throughout the upper triangle
+[ok] rotation symmetry
+[ok] scalar covariance
+[ok] every quadratic equation by scalar covariance
+[ok] constructed n=19 eta satisfies the formerly recognized full polynomial
+[ok] constructed n=19 branch coefficient has the Hilbert-class quadratic
+STRUCTURE_AND_QUADRATIC_PASSED n=19
+Cubic verification is a separate required stage.
+
+
+Complete exact order-19 cubic coverage on the saved data
+n=19; matrix_sha256=e72ca3621ff36a80c90395b62b5b6f4484b1fad06bb96212ce90c56476fd4585
+4369 cross-free scalar tuples; 91 beta representatives; 4 batches
+[ok] exact cubic range [0,22); elapsed_s=2.2
+[ok] exact cubic range [45,68); elapsed_s=2.3
+[ok] exact cubic range [22,45); elapsed_s=2.3
+[ok] exact cubic range [68,91); elapsed_s=2.3
+ALL CUBIC EQUATIONS CERTIFIED BY COMPLETE BALANCED-BETA ORBIT COVERAGE
+
+
+Independent checks of the saved order-199 field and phase data
+certificate_sha256=74c3fba23c9e9f545d53b8e057ad0e4f1afcdb19981142cbd884508c4079022d
+[ok] odd prime and primitive scalar
+[ok] irreducible monic absolute field
+[ok] quadratic dimension
+[ok] scalar field automorphism fixes dimension
+[ok] scalar half-power is the stated involution
+[ok] primitive generator inverted by the involution
+[ok] involution fixed field is totally real
+[ok] all real places have negative dimension
+[ok] physical Hermitian symmetry
+[ok] exceptional entries
+[ok] generic norms
+[ok] mirror first row
+[ok] coherent phase form throughout the upper triangle
+[ok] rotation symmetry
+[ok] scalar covariance
+[ok] every quadratic equation by scalar covariance
+STRUCTURE_AND_QUADRATIC_PASSED n=199
+Cubic verification is a separate required stage.
+
+
+Complete exact order-199 cubic coverage on the saved data
+n=199; matrix_sha256=74c3fba23c9e9f545d53b8e057ad0e4f1afcdb19981142cbd884508c4079022d
+7568149 cross-free scalar tuples; 108406 beta representatives; 16 batches
+[ok] exact cubic range [81304,88079); elapsed_s=116.2
+[ok] exact cubic range [20326,27101); elapsed_s=116.7
+[ok] exact cubic range [94855,101630); elapsed_s=117.1
+[ok] exact cubic range [47427,54203); elapsed_s=117.1
+[ok] exact cubic range [6775,13550); elapsed_s=117.3
+[ok] exact cubic range [88079,94855); elapsed_s=117.5
+[ok] exact cubic range [40652,47427); elapsed_s=117.6
+[ok] exact cubic range [33876,40652); elapsed_s=117.8
+[ok] exact cubic range [74529,81304); elapsed_s=118.1
+[ok] exact cubic range [0,6775); elapsed_s=118.8
+[ok] exact cubic range [60978,67753); elapsed_s=118.9
+[ok] exact cubic range [13550,20326); elapsed_s=119.3
+[ok] exact cubic range [101630,108406); elapsed_s=119.4
+[ok] exact cubic range [67753,74529); elapsed_s=119.5
+[ok] exact cubic range [54203,60978); elapsed_s=119.9
+[ok] exact cubic range [27101,33876); elapsed_s=120.1
+ALL CUBIC EQUATIONS CERTIFIED BY COMPLETE BALANCED-BETA ORBIT COVERAGE
+
+
+Exact equality of saved data with original construction matrices
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+  *** read: Warning: increasing stack size to 16000000.
+  ***   Warning: increasing stack size to 16000000.
+  ***   Warning: increasing stack size to 32000000.
+  ***   Warning: increasing stack size to 64000000.
+  ***   Warning: increasing stack size to 128000000.
+  ***   Warning: increasing stack size to 256000000.
+  ***   Warning: increasing stack size to 16000000.
+  ***   Warning: increasing stack size to 32000000.
+  ***   Warning: increasing stack size to 64000000.
+  ***   Warning: increasing stack size to 128000000.
+  ***   Warning: increasing stack size to 256000000.
+  *** read: Warning: increasing stack size to 512000000.
+[ok] saved order-199 certificate expands to the exact matrix used by every cubic batch
+  *** read: Warning: increasing stack size to 16000000.
+  *** read: Warning: increasing stack size to 32000000.
+  ***   Warning: increasing stack size to 16000000.
+  ***   Warning: increasing stack size to 32000000.
+  ***   Warning: increasing stack size to 16000000.
+  ***   Warning: increasing stack size to 32000000.
+  *** read: Warning: increasing stack size to 64000000.
+[ok] saved order-19 certificate expands to the completed exact matrix
+
+
+COMPLETE EXACT SAVED CERTIFICATES PASSED FOR n=19 AND n=199

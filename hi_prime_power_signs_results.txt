@@ -1,0 +1,7 @@
+[ok] n=3: every one of 2 sign choices; max residual 3.14e-16
+[ok] n=9: every one of 4 sign choices; max residual 8.18e-15
+[ok] n=27: every one of 8 sign choices; max residual 1.14e-13
+[ok] n=81: every one of 16 sign choices; max residual 6.37e-12
+[ok] n=25: every one of 4 sign choices; max residual 6.61e-14
+[ok] n=125: every one of 8 sign choices; max residual 1.46e-11
+ALL PRIME-POWER LINEAR SIGN IDENTITIES PASSED

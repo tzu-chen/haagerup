@@ -1,0 +1,183 @@
+Initial exact field and row-root stages
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+[ok] input is an odd prime
+CASE n = 199
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+  *** polredbest: Warning: increasing stack size to 16000000.
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (3)
+[ok] complete consistent residue labels
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for new row orbit 2
+[ok] exact fourth-root lift for row entry 2
+[ok] two exact fourth-root lifts for new row orbit 3
+[ok] exact fourth-root lift for row entry 3
+[ok] two exact fourth-root lifts for new row orbit 4
+[ok] exact fourth-root lift for row entry 4
+[ok] two exact fourth-root lifts for new row orbit 5
+[ok] exact fourth-root lift for row entry 5
+[ok] two exact fourth-root lifts for new row orbit 6
+[ok] exact fourth-root lift for row entry 6
+[ok] two exact fourth-root lifts for new row orbit 7
+[ok] exact fourth-root lift for row entry 7
+[ok] two exact fourth-root lifts for new row orbit 8
+[ok] exact fourth-root lift for row entry 8
+[ok] two exact fourth-root lifts for new row orbit 9
+[ok] exact fourth-root lift for row entry 9
+[ok] two exact fourth-root lifts for new row orbit 10
+[ok] exact fourth-root lift for row entry 10
+[ok] two exact fourth-root lifts for new row orbit 11
+[ok] exact fourth-root lift for row entry 11
+[ok] two exact fourth-root lifts for new row orbit 12
+[ok] exact fourth-root lift for row entry 12
+[ok] two exact fourth-root lifts for new row orbit 13
+[ok] exact fourth-root lift for row entry 13
+[ok] two exact fourth-root lifts for new row orbit 14
+[ok] exact fourth-root lift for row entry 14
+[ok] two exact fourth-root lifts for new row orbit 15
+[ok] exact fourth-root lift for row entry 15
+[ok] two exact fourth-root lifts for new row orbit 16
+[ok] exact fourth-root lift for row entry 16
+[ok] two exact fourth-root lifts for new row orbit 17
+[ok] exact fourth-root lift for row entry 17
+[ok] exact fourth-root lift for row entry 18
+[ok] exact fourth-root lift for row entry 19
+[ok] exact fourth-root lift for row entry 20
+[ok] exact fourth-root lift for row entry 21
+[ok] exact fourth-root lift for row entry 22
+[ok] exact fourth-root lift for row entry 23
+[ok] exact fourth-root lift for row entry 24
+[ok] exact fourth-root lift for row entry 25
+[ok] exact fourth-root lift for row entry 26
+[ok] exact fourth-root lift for row entry 27
+[ok] two exact fourth-root lifts for new row orbit 28
+[ok] exact fourth-root lift for row entry 28
+[ok] two exact fourth-root lifts for new row orbit 29
+[ok] exact fourth-root lift for row entry 29
+[ok] two exact fourth-root lifts for new row orbit 30
+[ok] exact fourth-root lift for row entry 30
+[ok] exact fourth-root lift for row entry 31
+[ok] two exact fourth-root lifts for new row orbit 32
+[ok] exact fourth-root lift for row entry 32
+[ok] exact fourth-root lift for row entry 33
+[ok] exact fourth-root lift for row entry 34
+[ok] exact fourth-root lift for row entry 35
+[ok] two exact fourth-root lifts for new row orbit 36
+[ok] exact fourth-root lift for row entry 36
+[ok] exact fourth-root lift for row entry 37
+[ok] two exact fourth-root lifts for new row orbit 38
+[ok] exact fourth-root lift for row entry 38
+[ok] exact fourth-root lift for row entry 39
+[ok] exact fourth-root lift for row entry 40
+[ok] exact fourth-root lift for row entry 41
+[ok] exact fourth-root lift for row entry 42
+[ok] exact fourth-root lift for row entry 43
+[ok] exact fourth-root lift for row entry 44
+[ok] two exact fourth-root lifts for new row orbit 45
+[ok] exact fourth-root lift for row entry 45
+[ok] exact fourth-root lift for row entry 46
+[ok] exact fourth-root lift for row entry 47
+[ok] exact fourth-root lift for row entry 48
+[ok] exact fourth-root lift for row entry 49
+[ok] exact fourth-root lift for row entry 50
+[ok] exact fourth-root lift for row entry 51
+[ok] exact fourth-root lift for row entry 52
+[ok] exact fourth-root lift for row entry 53
+[ok] exact fourth-root lift for row entry 54
+[ok] two exact fourth-root lifts for new row orbit 55
+[ok] exact fourth-root lift for row entry 55
+[ok] exact fourth-root lift for row entry 56
+[ok] exact fourth-root lift for row entry 57
+[ok] exact fourth-root lift for row entry 58
+[ok] exact fourth-root lift for row entry 59
+[ok] exact fourth-root lift for row entry 60
+[ok] exact fourth-root lift for row entry 61
+[ok] exact fourth-root lift for row entry 62
+[ok] exact fourth-root lift for row entry 63
+[ok] exact fourth-root lift for row entry 64
+[ok] exact fourth-root lift for row entry 65
+[ok] exact fourth-root lift for row entry 66
+[ok] exact fourth-root lift for row entry 67
+[ok] two exact fourth-root lifts for new row orbit 68
+[ok] exact fourth-root lift for row entry 68
+[ok] exact fourth-root lift for row entry 69
+[ok] exact fourth-root lift for row entry 70
+[ok] exact fourth-root lift for row entry 71
+[ok] exact fourth-root lift for row entry 72
+[ok] exact fourth-root lift for row entry 73
+[ok] exact fourth-root lift for row entry 74
+[ok] exact fourth-root lift for row entry 75
+[ok] exact fourth-root lift for row entry 76
+[ok] exact fourth-root lift for row entry 77
+[ok] exact fourth-root lift for row entry 78
+[ok] exact fourth-root lift for row entry 79
+[ok] exact fourth-root lift for row entry 80
+[ok] exact fourth-root lift for row entry 81
+[ok] exact fourth-root lift for row entry 82
+[ok] exact fourth-root lift for row entry 83
+[ok] exact fourth-root lift for row entry 84
+[ok] exact fourth-root lift for row entry 85
+[ok] exact fourth-root lift for row entry 86
+[ok] exact fourth-root lift for row entry 87
+[ok] exact fourth-root lift for row entry 88
+[ok] exact fourth-root lift for row entry 89
+[ok] exact fourth-root lift for row entry 90
+[ok] exact fourth-root lift for row entry 91
+[ok] exact fourth-root lift for row entry 92
+[ok] two exact fourth-root lifts for new row orbit 93
+[ok] exact fourth-root lift for row entry 93
+[ok] exact fourth-root lift for row entry 94
+[ok] exact fourth-root lift for row entry 95
+[ok] exact fourth-root lift for row entry 96
+[ok] exact fourth-root lift for row entry 97
+[ok] exact fourth-root lift for row entry 98
+[ok] exact fourth-root lift for row entry 99
+[ok] exact fourth-root lift for row entry 100
+Saved exact row checkpoint to /tmp/hi199_rows.bin
+  *** _/_: Warning: increasing stack size to 32000000.
+  *** _/_: Warning: increasing stack size to 64000000.
+  *** _/_: Warning: increasing stack size to 128000000.
+  ***   Warning: increasing stack size to 256000000.
+[ok] sign transport closes and respects negation
+  *** Mod: Warning: increasing stack size to 512000000.
+[ok] transport solves every linear sign equation
+  *** Mod: Warning: increasing stack size to 1024000000.
+[ok] their only freedom is a global generic sign
+  *** Mod: Warning: increasing stack size to 2048000000.
+
+
+Completed exact matrix, covariance, norm, and quadratic checks
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+RESUMING previously checked exact row data for n=199
+  *** _/_: Warning: increasing stack size to 16000000.
+  *** _/_: Warning: increasing stack size to 32000000.
+  *** _/_: Warning: increasing stack size to 64000000.
+  *** _/_: Warning: increasing stack size to 128000000.
+  ***   Warning: increasing stack size to 256000000.
+[ok] sign transport closes and respects negation
+  *** Mod: Warning: increasing stack size to 512000000.
+[ok] transport solves every linear sign equation
+  *** Mod: Warning: increasing stack size to 1024000000.
+[ok] their only freedom is a global generic sign
+[ok] multiplier covariance
+  *** Mod: Warning: increasing stack size to 2048000000.
+[ok] all quadratic Izumi equations, by exact scalar covariance
+[ok] rotation symmetry
+[ok] all generic fourth-power Stark formulas
+[ok] generic norms are delta
+Saved exact matrix checkpoint before cubic verification to /tmp/hi199_matrix.bin
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+Cubic progress: 1000 / 108406; elapsed_ms=317125
+Cubic progress: 2000 / 108406; elapsed_ms=432829
+
+
+The sequential cubic loop was replaced by complete exact batches.
+See hi_stark199_cubic_results.txt for the finished final stage.

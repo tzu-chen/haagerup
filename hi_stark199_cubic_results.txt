@@ -1,0 +1,19 @@
+n=199; matrix_sha256=74c3fba23c9e9f545d53b8e057ad0e4f1afcdb19981142cbd884508c4079022d
+7568149 cross-free scalar tuples; 108406 beta representatives; 16 batches
+[ok] exact cubic range [81304,88079); elapsed_s=116.2
+[ok] exact cubic range [20326,27101); elapsed_s=116.7
+[ok] exact cubic range [94855,101630); elapsed_s=117.1
+[ok] exact cubic range [47427,54203); elapsed_s=117.1
+[ok] exact cubic range [6775,13550); elapsed_s=117.3
+[ok] exact cubic range [88079,94855); elapsed_s=117.5
+[ok] exact cubic range [40652,47427); elapsed_s=117.6
+[ok] exact cubic range [33876,40652); elapsed_s=117.8
+[ok] exact cubic range [74529,81304); elapsed_s=118.1
+[ok] exact cubic range [0,6775); elapsed_s=118.8
+[ok] exact cubic range [60978,67753); elapsed_s=118.9
+[ok] exact cubic range [13550,20326); elapsed_s=119.3
+[ok] exact cubic range [101630,108406); elapsed_s=119.4
+[ok] exact cubic range [67753,74529); elapsed_s=119.5
+[ok] exact cubic range [54203,60978); elapsed_s=119.9
+[ok] exact cubic range [27101,33876); elapsed_s=120.1
+ALL CUBIC EQUATIONS CERTIFIED BY COMPLETE BALANCED-BETA ORBIT COVERAGE

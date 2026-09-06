@@ -1,0 +1,9 @@
+m=5; n=11; factor(n)=Mat([11, 1]); ray_group=[2]; degree=2; unit_image_order=5; order_conductor=5
+m=7; n=29; factor(n)=Mat([29, 1]); ray_group=[4]; degree=4; unit_image_order=7; order_conductor=13
+m=11; n=199; factor(n)=Mat([199, 1]); ray_group=[18]; degree=18; unit_image_order=11; order_conductor=89
+m=13; n=521; factor(n)=Mat([521, 1]); ray_group=[40]; degree=40; unit_image_order=13; order_conductor=233
+m=17; n=3571; factor(n)=Mat([3571, 1]); ray_group=[210]; degree=210; unit_image_order=17; order_conductor=1597
+m=19; n=9349; factor(n)=Mat([9349, 1]); ray_group=[492]; degree=492; unit_image_order=19; order_conductor=4181
+m=23; n=64079; factor(n)=[139, 1; 461, 1]; ray_group=[1380, 2]; degree=2760; unit_image_order=23; order_conductor=28657
+m=25; n=167761; factor(n)=[11, 1; 101, 1; 151, 1]; ray_group=[300, 10, 2]; degree=6000; unit_image_order=25; order_conductor=75025
+ALL PELL/RAY ARITHMETIC CHECKS PASSED

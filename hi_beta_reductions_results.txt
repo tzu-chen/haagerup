@@ -1,0 +1,16 @@
+[ok] all three collision coefficients, as exact rational identities
+[ok] cubic/beta change of variables for arbitrary phases at n=3,5,7,9
+[ok] every balanced beta identity at n=13; max residual 1.52e-14
+[ok] every boundary cubic identity at n=13; max residual 2.31e-16
+[ok] n=3: 1 cross-free scalar tuples covered by 1 beta orbits
+[ok] n=5: 15 cross-free scalar tuples covered by 2 beta orbits
+[ok] n=7: 85 cross-free scalar tuples covered by 6 beta orbits
+[ok] n=11: 585 cross-free scalar tuples covered by 17 beta orbits
+[ok] n=13: 1111 cross-free scalar tuples covered by 30 beta orbits
+[ok] n=17: 2955 cross-free scalar tuples covered by 63 beta orbits
+[ok] n=19: 4369 cross-free scalar tuples covered by 91 beta orbits
+[ok] n=29: 18279 cross-free scalar tuples covered by 320 beta orbits
+[ok] n=9: all 2072 cross-free tuples covered by 14 beta orbits
+[ok] n=15: all 26390 cross-free tuples covered by 86 beta orbits
+[ok] n=25: all 267720 cross-free tuples covered by 246 beta orbits
+ALL BETA-REDUCTION CHECKS PASSED

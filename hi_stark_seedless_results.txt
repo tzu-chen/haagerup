@@ -1,0 +1,198 @@
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+[ok] input is an odd prime
+CASE n = 7
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (3)
+[ok] complete consistent residue labels
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for new row orbit 2
+[ok] exact fourth-root lift for row entry 2
+[ok] two exact fourth-root lifts for new row orbit 3
+[ok] exact fourth-root lift for row entry 3
+[ok] exact fourth-root lift for row entry 4
+[ok] sign transport closes and respects negation
+[ok] transport solves every linear sign equation
+[ok] their only freedom is a global generic sign
+[ok] multiplier covariance
+[ok] all quadratic Izumi equations, by exact scalar covariance
+[ok] rotation symmetry
+[ok] all generic fourth-power Stark formulas
+[ok] generic norms are delta
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] every cubic Izumi equation, by exact balanced-beta orbit coverage
+[ok] independent complete quadratic regression
+[ok] independent complete scalar-orbit cubic regression
+CERTIFIED n=7; ray_group=[6]; absolute_degree=12; sign_rank=2; beta_representatives=6; elapsed_ms=74
+[ok] input is an odd prime
+CASE n = 11
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (2)
+[ok] complete consistent residue labels
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for new row orbit 2
+[ok] exact fourth-root lift for row entry 2
+[ok] two exact fourth-root lifts for new row orbit 3
+[ok] exact fourth-root lift for row entry 3
+[ok] exact fourth-root lift for row entry 4
+[ok] exact fourth-root lift for row entry 5
+[ok] exact fourth-root lift for row entry 6
+[ok] sign transport closes and respects negation
+[ok] transport solves every linear sign equation
+[ok] their only freedom is a global generic sign
+[ok] multiplier covariance
+[ok] all quadratic Izumi equations, by exact scalar covariance
+[ok] rotation symmetry
+[ok] all generic fourth-power Stark formulas
+[ok] generic norms are delta
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] every cubic Izumi equation, by exact balanced-beta orbit coverage
+[ok] independent complete quadratic regression
+[ok] independent complete scalar-orbit cubic regression
+[ok] constructed n=11 solution is the simple-ray secondary branch
+CERTIFIED n=11; ray_group=[2]; absolute_degree=4; sign_rank=4; beta_representatives=17; elapsed_ms=58
+[ok] input is an odd prime
+CASE n = 13
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (2)
+[ok] complete consistent residue labels
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for new row orbit 2
+[ok] exact fourth-root lift for row entry 2
+[ok] two exact fourth-root lifts for new row orbit 3
+[ok] exact fourth-root lift for row entry 3
+[ok] two exact fourth-root lifts for new row orbit 4
+[ok] exact fourth-root lift for row entry 4
+[ok] exact fourth-root lift for row entry 5
+[ok] exact fourth-root lift for row entry 6
+[ok] exact fourth-root lift for row entry 7
+[ok] sign transport closes and respects negation
+[ok] transport solves every linear sign equation
+[ok] their only freedom is a global generic sign
+[ok] multiplier covariance
+[ok] all quadratic Izumi equations, by exact scalar covariance
+[ok] rotation symmetry
+[ok] all generic fourth-power Stark formulas
+[ok] generic norms are delta
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] every cubic Izumi equation, by exact balanced-beta orbit coverage
+[ok] independent complete quadratic regression
+[ok] independent complete scalar-orbit cubic regression
+[ok] constructed n=13 orbit equals the formerly recognized HI polynomial
+CERTIFIED n=13; ray_group=[12]; absolute_degree=24; sign_rank=5; beta_representatives=30; elapsed_ms=4376
+[ok] input is an odd prime
+CASE n = 17
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+  *** rnfconductor: Warning: increasing stack size to 16000000.
+  *** rnfconductor: Warning: increasing stack size to 32000000.
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (3)
+[ok] complete consistent residue labels
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for new row orbit 2
+[ok] exact fourth-root lift for row entry 2
+[ok] two exact fourth-root lifts for new row orbit 3
+[ok] exact fourth-root lift for row entry 3
+[ok] two exact fourth-root lifts for new row orbit 4
+[ok] exact fourth-root lift for row entry 4
+[ok] exact fourth-root lift for row entry 5
+[ok] exact fourth-root lift for row entry 6
+[ok] exact fourth-root lift for row entry 7
+[ok] exact fourth-root lift for row entry 8
+[ok] exact fourth-root lift for row entry 9
+[ok] sign transport closes and respects negation
+[ok] transport solves every linear sign equation
+[ok] their only freedom is a global generic sign
+[ok] multiplier covariance
+[ok] all quadratic Izumi equations, by exact scalar covariance
+[ok] rotation symmetry
+[ok] all generic fourth-power Stark formulas
+[ok] generic norms are delta
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] every cubic Izumi equation, by exact balanced-beta orbit coverage
+[ok] independent complete quadratic regression
+[ok] independent complete scalar-orbit cubic regression
+[ok] constructed n=17 orbit equals the formerly recognized P2
+[ok] constructed n=17 orbit equals the formerly recognized P3
+[ok] constructed n=17 orbit equals the formerly recognized P4
+CERTIFIED n=17; ray_group=[16]; absolute_degree=32; sign_rank=7; beta_representatives=63; elapsed_ms=34174
+[ok] input is an odd prime
+CASE n = 29
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (2)
+[ok] complete consistent residue labels
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for new row orbit 2
+[ok] exact fourth-root lift for row entry 2
+[ok] two exact fourth-root lifts for new row orbit 3
+[ok] exact fourth-root lift for row entry 3
+[ok] two exact fourth-root lifts for new row orbit 4
+[ok] exact fourth-root lift for row entry 4
+[ok] exact fourth-root lift for row entry 5
+[ok] exact fourth-root lift for row entry 6
+[ok] exact fourth-root lift for row entry 7
+[ok] exact fourth-root lift for row entry 8
+[ok] exact fourth-root lift for row entry 9
+[ok] exact fourth-root lift for row entry 10
+[ok] exact fourth-root lift for row entry 11
+[ok] exact fourth-root lift for row entry 12
+[ok] exact fourth-root lift for row entry 13
+[ok] exact fourth-root lift for row entry 14
+[ok] exact fourth-root lift for row entry 15
+[ok] sign transport closes and respects negation
+[ok] transport solves every linear sign equation
+[ok] their only freedom is a global generic sign
+[ok] multiplier covariance
+[ok] all quadratic Izumi equations, by exact scalar covariance
+[ok] rotation symmetry
+[ok] all generic fourth-power Stark formulas
+[ok] generic norms are delta
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] every cubic Izumi equation, by exact balanced-beta orbit coverage
+[ok] independent complete quadratic regression
+[ok] independent complete scalar-orbit cubic regression
+CERTIFIED n=29; ray_group=[4]; absolute_degree=8; sign_rank=13; beta_representatives=320; elapsed_ms=18351
+ALL REQUESTED EXACT CERTIFICATES PASSED

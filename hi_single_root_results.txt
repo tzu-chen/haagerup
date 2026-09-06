@@ -1,0 +1,42 @@
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+  *** read: Warning: increasing stack size to 16000000.
+  *** read: Warning: increasing stack size to 32000000.
+  ***   Warning: increasing stack size to 64000000.
+[ok] one Kummer root at n=19
+[ok] physical norms of the reconstructed cochain
+[ok] every generic entry equals the single-root coboundary
+[ok] every unit scalar root label
+[ok] the sign-selecting trace is nonzero
+[ok] one quadratic equation selects the saved global sign
+[ok] the globally opposite sign fails that quadratic equation
+  ***   Warning: increasing stack size to 128000000.
+Exact stratum-sign linear rank: 1 / 1
+[ok] the linear stratum-sign equation selects only the saved signs
+SINGLE-ROOT AND SIGN CHECKS PASSED n=19
+  ***   Warning: increasing stack size to 256000000.
+[ok] one Kummer root at n=199
+[ok] physical norms of the reconstructed cochain
+[ok] every generic entry equals the single-root coboundary
+[ok] every unit scalar root label
+[ok] the sign-selecting trace is nonzero
+[ok] one quadratic equation selects the saved global sign
+[ok] the globally opposite sign fails that quadratic equation
+  ***   Warning: increasing stack size to 512000000.
+Exact stratum-sign linear rank: 1 / 1
+[ok] the linear stratum-sign equation selects only the saved signs
+SINGLE-ROOT AND SIGN CHECKS PASSED n=199
+[ok] one Kummer root at n=25
+[ok] physical norms of the reconstructed cochain
+[ok] every generic entry equals the single-root coboundary
+[ok] every unit scalar root label
+[ok] the sign-selecting trace is nonzero
+[ok] one quadratic equation selects the saved global sign
+[ok] the globally opposite sign fails that quadratic equation
+Exact stratum-sign linear rank: 2 / 2
+[ok] the linear stratum-sign equation selects only the saved signs
+[ok] the saved nonunit root is exactly the twisted odd norm
+Rejected relative stratum signs 1 at [1, 1]
+Rejected relative stratum signs 2 at [1, 1]
+Rejected relative stratum signs 3 at [1, 1]
+[ok] only the saved stratum signs satisfy Q at n=25
+SINGLE-ROOT AND SIGN CHECKS PASSED n=25

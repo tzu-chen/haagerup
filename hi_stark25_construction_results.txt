@@ -1,0 +1,119 @@
+Complete exact order-25 construction; see hi_stark25_verification_results.txt for the independent full certificate.
+
+Field, norm, and root preparation (the earlier full-row run):
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+[ok] input is an odd prime power
+CASE n = 25
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+  *** rnfconductor: Warning: increasing stack size to 16000000.
+  *** rnfconductor: Warning: increasing stack size to 32000000.
+  *** rnfconductor: Warning: increasing stack size to 64000000.
+  *** rnfconductor: Warning: increasing stack size to 128000000.
+  *** rnfconductor: Warning: increasing stack size to 256000000.
+  *** rnfconductor: Warning: increasing stack size to 512000000.
+  *** rnfconductor: Warning: increasing stack size to 1024000000.
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+  *** polredbest: Warning: increasing stack size to 2048000000.
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (2)
+[ok] complete consistent labels at additive order 25
+[ok] lower conductor and degree at additive order 5
+[ok] relative norm is exactly a lower-conductor Stark root at order 5
+[ok] complete consistent labels at additive order 5
+[ok] every nonzero residue, including nonunits, has a label
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for new row orbit 2
+[ok] exact fourth-root lift for row entry 2
+[ok] two exact fourth-root lifts for new row orbit 3
+[ok] exact fourth-root lift for row entry 3
+[ok] two exact fourth-root lifts for new row orbit 4
+[ok] exact fourth-root lift for row entry 4
+[ok] two exact fourth-root lifts for new row orbit 5
+[ok] exact fourth-root lift for row entry 5
+[ok] exact fourth-root lift for row entry 6
+[ok] exact fourth-root lift for row entry 7
+[ok] exact fourth-root lift for row entry 8
+[ok] exact fourth-root lift for row entry 9
+[ok] two exact fourth-root lifts for new row orbit 10
+[ok] exact fourth-root lift for row entry 10
+[ok] exact fourth-root lift for row entry 11
+[ok] exact fourth-root lift for row entry 12
+[ok] exact fourth-root lift for row entry 13
+Saved exact row checkpoint to /tmp/hi25_rows.bin
+PRIME-POWER FIELD, LOWER-CONDUCTOR NORM, AND ROW-ROOT STAGES PASSED
+
+Untwisted negative experiment (every stratum-sign choice fails Q):
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+[ok] cyclic odd prime-power input
+  *** _*=_: Warning: increasing stack size to 16000000.
+  *** polcoef: Warning: increasing stack size to 32000000.
+  ***   Warning: increasing stack size to 64000000.
+[ok] one fourth root of delta squared times the full Stark unit
+[ok] norm-descended fourth root on stratum 1
+[ok] cochain labels close on the scalar orbit
+[ok] conductor descent degree is odd
+[ok] norm-descended fourth root on stratum 5
+[ok] cochain labels close on the scalar orbit
+[ok] all cochain roots and physical norms
+[ok] negation is physical conjugation of the cochain
+  *** _/_: Warning: increasing stack size to 128000000.
+  ***   Warning: increasing stack size to 256000000.
+  *** _*_: Warning: increasing stack size to 512000000.
+FAILED: error("user error: check failed: an orbit-sign choice satisfies all quadratic equations")
+
+Reproduced conjugate-prime Artin computation:
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+[ok] order-25 input with rational-2 scalar
+  *** _*=_: Warning: increasing stack size to 16000000.
+  *** polcoef: Warning: increasing stack size to 32000000.
+  ***   Warning: increasing stack size to 64000000.
+[ok] cyclic ray group of order 40
+  *** nfgaloisconj: Warning: increasing stack size to 128000000.
+  *** nfgaloisconj: Warning: increasing stack size to 256000000.
+  *** nfgaloisconj: Warning: increasing stack size to 512000000.
+  *** nfgaloisconj: Warning: increasing stack size to 1024000000.
+auxiliary rational prime, base root, ray coordinates: [23, 6, 29, 33]
+[ok] unique exact auxiliary Frobenius in an etale power basis
+[ok] conjugate-prime Frobenius squares to the rational-2 Frobenius
+[ok] the conjugate-prime twist changes the lower-conductor generator
+CONJUGATE-PRIME ARTIN AUTOMORPHISM SAVED TO /tmp/hi25_artin_reproduced.bin
+
+Reproduced one-root construction with exact linear sign selection:
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+[ok] cyclic odd prime-power input
+  *** _*=_: Warning: increasing stack size to 16000000.
+  *** polcoef: Warning: increasing stack size to 32000000.
+  ***   Warning: increasing stack size to 64000000.
+[ok] conjugate-prime map is a base-field automorphism commuting with scalar action
+[ok] one fourth root of delta squared times the full Stark unit
+[ok] norm-descended fourth root on stratum 1
+[ok] cochain labels close on the scalar orbit
+[ok] conductor descent degree is odd
+[ok] norm-descended fourth root on stratum 5
+Applied conjugate-prime Artin twist on stratum 5
+[ok] cochain labels close on the scalar orbit
+[ok] all cochain roots and physical norms
+[ok] negation is physical conjugation of the cochain
+  *** _*_: Warning: increasing stack size to 128000000.
+  *** _*_: Warning: increasing stack size to 256000000.
+  *** _*_: Warning: increasing stack size to 512000000.
+Exact stratum-sign linear rank: 2 / 2
+[ok] at least one stratum sign passes the necessary linear equation
+  *** _*_: Warning: increasing stack size to 1024000000.
+[ok] an orbit-sign choice satisfies all quadratic equations
+Passing orbit-sign choice: 0
+[ok] scalar covariance
+[ok] physical Hermitian symmetry
+[ok] rotation symmetry
+SINGLE-ROOT PHASE AND QUADRATIC CERTIFICATE SAVED TO /tmp/hi25_single_matrix_v2.gp
+PARTIAL: the cubic stage is still required
+
+The reproduced output is byte-identical to hi_stark25_certificate.gp.
+SHA256 e19474b7d332a306ab2d13009d526a7bd484011bdbeeb7fa77eef7d10d73477b

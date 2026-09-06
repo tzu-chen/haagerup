@@ -1,0 +1,7 @@
+[ok] n=9: all stabilizers odd; 2 independent orbit signs
+[ok] n=27: all stabilizers odd; 3 independent orbit signs
+[ok] n=25: all stabilizers odd; 2 independent orbit signs
+[ok] n=49: all stabilizers odd; 2 independent orbit signs
+[ok] n=81: all stabilizers odd; 4 independent orbit signs
+[ok] n=15 abstract stabilizer obstruction, despite trivial negation error
+ALL COMPOSITE SIGN CHECKS PASSED

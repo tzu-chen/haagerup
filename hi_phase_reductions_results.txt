@@ -1,0 +1,5 @@
+[ok] exact cocycle duplication and higher-multiplier telescoping
+[ok] exact binary sign ranks for primes 3 through 31
+[ok] Fourier equivalence for arbitrary phases at n=3,5,9
+[ok] n=13 recorded phases satisfy (Q); max residual = 5.9036308e-79
+ALL PHASE-REDUCTION CHECKS PASSED

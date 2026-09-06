@@ -1,0 +1,38 @@
+PARTIAL CHECKPOINT ONLY. The external 600-second limit ended the run
+with status 124 before matrix verification. No full n=19 certificate.
+Command: timeout 600 env HI_STARK_CASES='[19]' gp -q -f hi_stark_seedless.gp
+
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+[ok] input is an odd prime
+CASE n = 19
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+  *** rnfconductor: Warning: increasing stack size to 16000000.
+  *** rnfconductor: Warning: increasing stack size to 32000000.
+  *** rnfconductor: Warning: increasing stack size to 64000000.
+  *** rnfconductor: Warning: increasing stack size to 128000000.
+  *** rnfconductor: Warning: increasing stack size to 256000000.
+  *** rnfconductor: Warning: increasing stack size to 512000000.
+  *** rnfconductor: Warning: increasing stack size to 1024000000.
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (2)
+[ok] complete consistent residue labels
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for row entry 2
+[ok] two exact fourth-root lifts for row entry 3
+[ok] two exact fourth-root lifts for row entry 4
+[ok] two exact fourth-root lifts for row entry 5
+[ok] two exact fourth-root lifts for row entry 6
+[ok] two exact fourth-root lifts for row entry 7
+[ok] two exact fourth-root lifts for row entry 8
+[ok] two exact fourth-root lifts for row entry 9
+[ok] two exact fourth-root lifts for row entry 10
+
+NOT CERTIFIED: full quadratic and cubic verification was not completed.

@@ -1,0 +1,28 @@
+CASE n=3
+basis_size=3
+quotient_dimension=6
+beta_representatives=1
+membership_failures=0
+EXACT IDEAL MEMBERSHIP PASSED
+CASE n=5
+basis_size=14
+quotient_dimension=20
+beta_representatives=2
+membership_failures=0
+EXACT IDEAL MEMBERSHIP PASSED
+CASE n=7
+basis_size=41
+quotient_dimension=42
+beta_representatives=6
+membership_failures=0
+EXACT IDEAL MEMBERSHIP PASSED
+ALL REQUESTED QUADRATIC-IDEAL CHECKS PASSED
+
+Composite-order continuation:
+CASE n=9
+basis_size=132
+quotient_dimension=108
+beta_representatives=14
+membership_failures=0
+EXACT IDEAL MEMBERSHIP PASSED
+ALL REQUESTED QUADRATIC-IDEAL CHECKS PASSED

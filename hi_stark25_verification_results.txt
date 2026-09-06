@@ -1,0 +1,30 @@
+certificate_sha256=e19474b7d332a306ab2d13009d526a7bd484011bdbeeb7fa77eef7d10d73477b
+[ok] odd prime power and primitive scalar
+[ok] irreducible monic absolute field
+[ok] quadratic dimension
+[ok] scalar field automorphism fixes dimension
+[ok] scalar half-power is the stated involution
+[ok] primitive generator inverted by the involution
+[ok] involution fixed field is totally real
+[ok] all real places have negative dimension
+[ok] physical Hermitian symmetry
+[ok] exceptional entries
+[ok] generic norms
+[ok] mirror first row
+[ok] coherent phase form throughout the upper triangle
+[ok] rotation symmetry
+[ok] scalar covariance
+[ok] every quadratic equation by scalar-stratum coverage
+STRUCTURE_AND_QUADRATIC_PASSED n=25
+n=25; matrix_sha256=e19474b7d332a306ab2d13009d526a7bd484011bdbeeb7fa77eef7d10d73477b
+267720 enumerated cross-free tuples; 246 beta representatives; 8 batches
+[ok] exact cubic range [123,153); elapsed_s=6.7
+[ok] exact cubic range [0,30); elapsed_s=6.7
+[ok] exact cubic range [30,61); elapsed_s=6.8
+[ok] exact cubic range [184,215); elapsed_s=6.9
+[ok] exact cubic range [61,92); elapsed_s=6.9
+[ok] exact cubic range [215,246); elapsed_s=6.9
+[ok] exact cubic range [92,123); elapsed_s=6.9
+[ok] exact cubic range [153,184); elapsed_s=6.9
+ALL CUBIC EQUATIONS CERTIFIED BY COMPLETE BALANCED-BETA ORBIT COVERAGE
+COMPLETE EXACT HI EXISTENCE CERTIFICATE PASSED n=25
