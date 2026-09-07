@@ -1,0 +1,2 @@
+NUMERICAL independent integral values lie in all 9 printed Arb balls.
+COMPLETE: independent double-sine integral comparison for all level-9 correction input balls.

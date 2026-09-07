@@ -1,0 +1,17 @@
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+  ***   Warning: new maximum stack size = 3000000512 (2861.023 Mbytes).
+  *** nfinit: Warning: increasing stack size to 16000000.
+  *** nfinit: Warning: increasing stack size to 32000000.
+  *** nfinit: Warning: increasing stack size to 64000000.
+  *** nfinit: Warning: increasing stack size to 128000000.
+  *** nfinit: Warning: increasing stack size to 256000000.
+  *** nfinit: Warning: increasing stack size to 512000000.
+n=19 ray=[18, 2] absolute degree=72 signature=[36, 18]
+Using the explicit unit 1+sqrt(1-d)
+[ok] fixed-field degree=36; exact W*c(W)=d
+EXACT RAY NORM CONSTRUCTION PASSED
+  *** polredbest: Warning: increasing stack size to 1024000000.
+[ok] unique arithmetic Frobenius at (2)
+[ok] Artin generator closes on the entire field
+[ok] physical conjugation is a nontrivial involution
+[ok] initial exact norm

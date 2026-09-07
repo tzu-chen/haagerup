@@ -1,0 +1,9 @@
+EXACT generic r=2: Bezout division, symmetry, diagonal, and resultant determinant passed.
+EXACT generic r=3: Bezout division, symmetry, diagonal, and resultant determinant passed.
+NUMERICAL n=3, r=2: rational monodromy and Bezout reduction error=6.89533e-50
+NUMERICAL n=3, r=3: rational monodromy and Bezout reduction error=8.50673e-50
+NUMERICAL n=7, r=2: rational monodromy and Bezout reduction error=5.50572e-50
+NUMERICAL n=7, r=3: rational monodromy and Bezout reduction error=3.21012e-50
+NUMERICAL n=11, r=2: rational monodromy and Bezout reduction error=1.49059e-49
+NUMERICAL n=11, r=3: rational monodromy and Bezout reduction error=1.95585e-49
+ALL MONODROMY CHECKS PASSED; unweighted finite Q/C sums remain unproved.

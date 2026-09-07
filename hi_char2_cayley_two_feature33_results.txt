@@ -1,0 +1,4 @@
+SOURCE n=33 points=100 finite=80 input_permutations=15
+COMPLETE PERMUTED SEMILINEAR FIT {"n": 33, "input_permutations": 15, "terms": 2, "feature_spaces": 315, "distinct_spaces": 23, "membership_tests": {"finite": 25200}, "fits": 3050, "fitted_points": 80, "dimensions": {"('reciprocal', 32)": 75, "('reciprocal', 24)": 15, "('power', 24)": 90, "('power', 32)": 120, "('power', 30)": 15}}
+No uniform existence assertion.
+peak_RSS_KiB=17456 elapsed_seconds=0.62

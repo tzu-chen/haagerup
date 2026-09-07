@@ -1,0 +1,11 @@
+EXACT SCALAR COMPLETION CERTIFICATES; only the listed orders are proved.
+n=3: exact base dimension=6; exact full-Q-plus-trace dimension=2
+  integral reduction p=32003, d=20720: exact rank=4, nullity=2
+  equal dimension bounds prove one-column-plus-trace = full-Q-plus-trace; all 2 cubic orbits vanish (2 cross-free tuples)
+n=5: exact base dimension=30; exact full-Q-plus-trace dimension=4
+  integral reduction p=32003, d=19299: exact rank=26, nullity=4
+  equal dimension bounds prove one-column-plus-trace = full-Q-plus-trace; all 8 cubic orbits vanish (60 cross-free tuples)
+n=7: exact base dimension=140; exact full-Q-plus-trace dimension=6
+  integral reduction p=32003, d=7268: exact rank=134, nullity=6
+  equal dimension bounds prove one-column-plus-trace = full-Q-plus-trace; all 28 cubic orbits vanish (510 cross-free tuples)
+ALL REQUESTED EXACT SCALAR COMPLETION CHECKS PASSED

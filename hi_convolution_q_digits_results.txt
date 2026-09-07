@@ -1,0 +1,19 @@
+EXACT residue identity n=3; tuples=5; Q=2
+EXACT perturbed lifts n=3; (Q_v,updated_norm_v):counts={(8, 8): 1, (2, 3): 1, (3, 4): 1, (4, 5): 1}
+EXACT residue identity n=5; tuples=17; Q=4
+EXACT perturbed lifts n=5; (Q_v,updated_norm_v):counts={(1, 2): 1, (2, 3): 1, (3, 4): 1, (4, 5): 1}
+EXACT residue identity n=7; tuples=63; Q=6
+EXACT perturbed lifts n=7; (Q_v,updated_norm_v):counts={(1, 2): 1, (2, 3): 1, (3, 4): 1, (4, 5): 1}
+EXACT residue identity n=9; tuples=325; Q=12
+EXACT perturbed lifts n=9; (Q_v,updated_norm_v):counts={(1, 2): 1, (2, 3): 1, (3, 4): 1, (4, 5): 1}
+EXACT lifted branches n=3; (Q_v,norm_v):counts={(6, 6): 2}; cap=6
+EXACT lifted branches n=5; (Q_v,norm_v):counts={(6, 6): 4}; cap=6
+EXACT lifted branches n=7; (Q_v,norm_v):counts={(6, 6): 6}; cap=6
+EXACT lifted branches n=9; (Q_v,norm_v):counts={(6, 6): 12}; cap=6
+EXACT lifted branches n=15; (Q_v,norm_v):counts={(6, 6): 24}; cap=6
+EXACT lifted branches n=19; (Q_v,norm_v):counts={(6, 6): 36}; cap=6
+EXACT lifted branches n=21; (Q_v,norm_v):counts={(6, 6): 48}; cap=6
+EXACT lifted branches n=27; (Q_v,norm_v):counts={(6, 6): 54}; cap=6
+elapsed_seconds=9.920
+peak_RSS_MiB=15.63
+COMPLETE: paired Q identities and finite lift checks; no uniform cubic completion claimed.

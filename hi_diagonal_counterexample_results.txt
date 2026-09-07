@@ -1,0 +1,6 @@
+[ok] irreducible quartic and cyclic order-4 multiplier automorphism
+[ok] every multiplier-covariance and formal-conjugation identity
+[ok] all four quartic roots have physical modulus sqrt(d)
+[ok] all diagonal quadratics vanish exactly
+[ok] all 8 remaining quadratics equal 2*(d-1), hence are nonzero
+EXACT PHYSICAL DIAGONAL COUNTEREXAMPLE PASSED

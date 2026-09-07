@@ -1,0 +1,77 @@
+REPLAYED identity n=3; quad=(1, 1, 1, 1); L=0; terms=0
+REPLAYED BUNDLE n=3; certificates=1/1; complete_degree_bound=True
+REPLAYED identity n=5; quad=(1, 1, 1, 3); L=0; terms=0
+REPLAYED identity n=5; quad=(1, 1, 1, 1); L=1; terms=6
+REPLAYED BUNDLE n=5; certificates=2/2; complete_degree_bound=True
+REPLAYED identity n=7; quad=(1, 1, 1, 5); L=0; terms=0
+REPLAYED identity n=7; quad=(1, 1, 2, 4); L=0; terms=0
+REPLAYED identity n=7; quad=(1, 1, 1, 1); L=2; terms=46
+REPLAYED identity n=7; quad=(1, 1, 1, 3); L=2; terms=43
+REPLAYED identity n=7; quad=(1, 1, 2, 2); L=2; terms=42
+REPLAYED identity n=7; quad=(1, 2, 1, 2); L=2; terms=44
+REPLAYED BUNDLE n=7; certificates=6/6; complete_degree_bound=True
+REPLAYED identity n=9; quad=(1, 1, 1, 7); L=0; terms=0
+REPLAYED identity n=9; quad=(1, 1, 2, 6); L=0; terms=0
+REPLAYED identity n=9; quad=(3, 3, 3, 3); L=0; terms=0
+REPLAYED identity n=9; quad=(1, 1, 1, 3); L=2; terms=237
+REPLAYED identity n=9; quad=(1, 1, 1, 5); L=2; terms=226
+REPLAYED identity n=9; quad=(1, 1, 1, 6); L=2; terms=233
+REPLAYED identity n=9; quad=(1, 1, 2, 2); L=2; terms=233
+REPLAYED identity n=9; quad=(1, 1, 2, 4); L=2; terms=224
+REPLAYED identity n=9; quad=(1, 1, 3, 3); L=2; terms=224
+REPLAYED identity n=9; quad=(1, 2, 1, 2); L=2; terms=220
+REPLAYED identity n=9; quad=(1, 2, 1, 5); L=2; terms=221
+REPLAYED identity n=9; quad=(1, 2, 1, 6); L=2; terms=238
+REPLAYED identity n=9; quad=(1, 1, 1, 1); L=3; terms=221
+REPLAYED identity n=9; quad=(1, 1, 1, 4); L=3; terms=237
+REPLAYED BUNDLE n=9; certificates=14/14; complete_degree_bound=True
+REPLAYED identity n=11; quad=(1, 1, 1, 9); L=0; terms=0
+REPLAYED identity n=11; quad=(1, 1, 2, 8); L=0; terms=0
+REPLAYED identity n=11; quad=(1, 1, 1, 1); L=3; terms=708
+REPLAYED identity n=11; quad=(1, 1, 1, 4); L=3; terms=727
+REPLAYED identity n=11; quad=(1, 1, 1, 7); L=3; terms=711
+REPLAYED identity n=11; quad=(1, 1, 1, 8); L=3; terms=721
+REPLAYED identity n=11; quad=(1, 1, 2, 5); L=3; terms=676
+REPLAYED identity n=11; quad=(1, 1, 3, 3); L=3; terms=706
+REPLAYED identity n=11; quad=(1, 2, 1, 2); L=3; terms=717
+REPLAYED identity n=11; quad=(1, 1, 2, 2); L=3; terms=700
+REPLAYED identity n=11; quad=(1, 1, 2, 6); L=3; terms=706
+REPLAYED identity n=11; quad=(1, 1, 4, 4); L=3; terms=714
+REPLAYED identity n=11; quad=(1, 1, 1, 3); L=3; terms=701
+REPLAYED identity n=11; quad=(1, 1, 1, 6); L=3; terms=718
+REPLAYED identity n=11; quad=(1, 1, 2, 4); L=3; terms=731
+REPLAYED identity n=11; quad=(1, 2, 1, 4); L=3; terms=724
+REPLAYED identity n=11; quad=(1, 2, 3, 4); L=3; terms=699
+REPLAYED BUNDLE n=11; certificates=17/17; complete_degree_bound=True
+REPLAYED identity n=13; quad=(1, 1, 1, 11); L=0; terms=0
+REPLAYED identity n=13; quad=(1, 1, 2, 10); L=0; terms=0
+REPLAYED identity n=13; quad=(1, 1, 3, 9); L=0; terms=0
+REPLAYED identity n=13; quad=(1, 1, 1, 1); L=3; terms=2603
+REPLAYED identity n=13; quad=(1, 1, 1, 3); L=3; terms=2616
+REPLAYED identity n=13; quad=(1, 1, 1, 4); L=3; terms=2636
+REPLAYED identity n=13; quad=(1, 1, 1, 7); L=3; terms=2576
+REPLAYED identity n=13; quad=(1, 1, 1, 8); L=3; terms=2621
+REPLAYED identity n=13; quad=(1, 1, 1, 10); L=3; terms=2596
+REPLAYED identity n=13; quad=(1, 1, 2, 2); L=3; terms=2627
+REPLAYED identity n=13; quad=(1, 1, 2, 4); L=3; terms=2591
+REPLAYED identity n=13; quad=(1, 1, 2, 5); L=3; terms=2536
+REPLAYED identity n=13; quad=(1, 1, 2, 6); L=3; terms=2559
+REPLAYED identity n=13; quad=(1, 1, 2, 7); L=3; terms=2566
+REPLAYED identity n=13; quad=(1, 1, 2, 8); L=3; terms=2624
+REPLAYED identity n=13; quad=(1, 1, 2, 9); L=3; terms=2627
+REPLAYED identity n=13; quad=(1, 1, 3, 5); L=3; terms=2595
+REPLAYED identity n=13; quad=(1, 1, 5, 5); L=3; terms=2610
+REPLAYED identity n=13; quad=(1, 2, 1, 2); L=3; terms=2587
+REPLAYED identity n=13; quad=(1, 2, 4, 2); L=3; terms=2660
+REPLAYED identity n=13; quad=(1, 2, 5, 3); L=3; terms=2621
+REPLAYED identity n=13; quad=(1, 3, 1, 3); L=3; terms=2631
+REPLAYED identity n=13; quad=(1, 1, 3, 3); L=3; terms=2603
+REPLAYED identity n=13; quad=(1, 1, 4, 4); L=3; terms=2565
+REPLAYED identity n=13; quad=(1, 2, 1, 5); L=3; terms=2608
+REPLAYED identity n=13; quad=(1, 2, 1, 7); L=3; terms=2598
+REPLAYED identity n=13; quad=(1, 1, 1, 5); L=3; terms=2581
+REPLAYED identity n=13; quad=(1, 1, 1, 9); L=3; terms=2607
+REPLAYED identity n=13; quad=(1, 2, 3, 3); L=3; terms=2569
+REPLAYED identity n=13; quad=(1, 2, 1, 4); L=3; terms=2612
+REPLAYED BUNDLE n=13; certificates=30/30; complete_degree_bound=True
+elapsed_seconds=0.632; peak_RSS_MiB=104.18

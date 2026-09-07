@@ -1,0 +1,6 @@
+  ***   Warning: new maximum stack size = 2000003072 (1907.352 Mbytes).
+[ok] absolute row field degree=8, signature=[4, 2]
+[ok] W^5=d*r^2*r2 has no root inside this field
+[ok] discriminant=5^5*29^4; [d mod P,e,f]=[[1, 4, 1], [4, 2, 2]]
+[ok] both primes above 5 ramify, so this is not the prescribed single-prime ray field
+EXACT DIAGONAL KUMMER OBSTRUCTION PASSED

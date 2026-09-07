@@ -1,0 +1,41 @@
+START n=3; candidates=5; term_counts=[4]; table_MiB=0.00; field_degree=4
+NATIVE_COMPLETE first=2 accepted=2
+  ORBIT seed=(2, 0, 0); length=2; Q=True; origin_v=4; norm_v=4
+COMPLETE n=3; allO=2; Q_among_O=2; norms_mod8=2
+START n=5; candidates=17; term_counts=[5]; table_MiB=0.00; field_degree=8
+NATIVE_COMPLETE first=4 accepted=4
+  ORBIT seed=(3, 0, 0); length=4; Q=True; origin_v=4; norm_v=4
+COMPLETE n=5; allO=4; Q_among_O=4; norms_mod8=4
+START n=7; candidates=63; term_counts=[8]; table_MiB=0.00; field_degree=6
+NATIVE_COMPLETE first=6 accepted=6
+  ORBIT seed=(3, 0, 0); length=3; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(15, 0, 0); length=3; Q=True; origin_v=4; norm_v=4
+COMPLETE n=7; allO=6; Q_among_O=6; norms_mod8=6
+START n=9; candidates=325; term_counts=[9, 9]; table_MiB=0.00; field_degree=12
+NATIVE_COMPLETE first=16 accepted=12
+  ORBIT seed=(1, 0, 0); length=6; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(5, 1, 0); length=6; Q=True; origin_v=4; norm_v=4
+COMPLETE n=9; allO=12; Q_among_O=12; norms_mod8=12
+START n=15; candidates=21675; term_counts=[16, 16, 16]; table_MiB=0.01; field_degree=8
+NATIVE_COMPLETE first=154 accepted=32
+  ORBIT seed=(14, 13, 1); length=4; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(27, 7, 0); length=4; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(29, 13, 2); length=4; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(31, 13, 4); length=4; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(46, 13, 3); length=4; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(51, 6, 4); length=4; Q=False; origin_v=3; norm_v=2
+  ORBIT seed=(51, 7, 4); length=4; Q=False; origin_v=3; norm_v=2
+  ORBIT seed=(57, 11, 0); length=4; Q=True; origin_v=4; norm_v=4
+COMPLETE n=15; allO=32; Q_among_O=24; norms_mod8=24
+START n=27; candidates=85197125; term_counts=[28, 28, 28]; table_MiB=6.00; field_degree=36
+NATIVE_COMPLETE first=968 accepted=66
+  ORBIT seed=(1509, 12, 3); length=18; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(3577, 14, 2); length=18; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(6763, 2, 4); length=18; Q=True; origin_v=4; norm_v=4
+  ORBIT seed=(52429, 10, 1); length=6; Q=False; origin_v=3; norm_v=2
+  ORBIT seed=(52429, 35, 4); length=6; Q=False; origin_v=3; norm_v=2
+COMPLETE n=27; allO=66; Q_among_O=54; norms_mod8=54
+elapsed_seconds=5.559
+parent_peak_RSS_MiB=17.00
+child_peak_RSS_MiB=65.18
+COMPLETE: native norm-obstruction census; no uniform completion theorem claimed.

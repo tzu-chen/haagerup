@@ -1,0 +1,5 @@
+EXACT_PATH_CERTIFICATE 4 tensor factors; 5 vertices; 5 edges; 1 faces; 1 eliminations; max cost 1
+EXACT_PATH_CERTIFICATE 5 tensor factors; 14 vertices; 21 edges; 9 faces; 8 eliminations; max cost 1
+EXACT_PATH_CERTIFICATE 6 tensor factors; 42 vertices; 84 edges; 56 faces; 43 eliminations; max cost 1
+EXACT_PATH_CERTIFICATE 7 tensor factors; 132 vertices; 330 edges; 300 faces; 199 eliminations; max cost 1
+ALL EXACT PATH CERTIFICATES PASSED; THIS IS NOT AN HI EXISTENCE SEARCH

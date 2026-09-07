@@ -1,0 +1,14 @@
+EXACT symbolic n=3; lift_generators=1; quotient expansion, derivative decomposition, character weights and symmetries agree
+EXACT symbolic n=5; lift_generators=3; quotient expansion, derivative decomposition, character weights and symmetries agree
+EXACT symbolic n=7; lift_generators=6; quotient expansion, derivative decomposition, character weights and symmetries agree
+EXACT symbolic n=9; lift_generators=10; quotient expansion, derivative decomposition, character weights and symmetries agree
+EXACT symbolic n=11; lift_generators=15; quotient expansion, derivative decomposition, character weights and symmetries agree
+EXACT symbolic n=13; lift_generators=21; quotient expansion, derivative decomposition, character weights and symmetries agree
+EXACT numeric n=3; coordinates=16; Laurent evaluation agrees with the independently checked Witt formula
+EXACT numeric n=5; coordinates=64; Laurent evaluation agrees with the independently checked Witt formula
+EXACT numeric n=7; coordinates=144; Laurent evaluation agrees with the independently checked Witt formula
+EXACT numeric n=9; coordinates=256; Laurent evaluation agrees with the independently checked Witt formula
+EXACT n=3 character twist chi=1; Q=0; L=0; same matrix; all 81 cubics hold
+EXACT n=3 character twist chi=2; Q=0; L=3; same matrix; all 81 cubics hold
+EXACT n=3 character twist chi=3; Q=0; L=3; same matrix; all 81 cubics hold
+elapsed_seconds=0.294; peak_RSS_MiB=72.66

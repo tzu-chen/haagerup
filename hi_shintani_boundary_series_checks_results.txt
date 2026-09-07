@@ -1,0 +1,15 @@
+EXACT p=4: E_p=5525/311711546474496; decimal upper approximation=1.77247204e-11
+EXACT p=6: E_p=17122625/1540780974613232932161060864; decimal upper approximation=1.11129520e-20
+EXACT p=8: E_p=17683547706625/582845516104180952166319170789714366616829952; decimal upper approximation=3.03400253e-32
+EXACT p=10: E_p=2781477050779920025/8063670791981975380553320868845223564655241528837536156355657728; decimal upper approximation=3.44939311e-46
+EXACT p=12: E_p=59673561082203181356923292925/3739721317326709979171431043256998131313316198924224521449321159809942221121457780349206528; decimal upper approximation=1.59566866e-62
+EXACT: geometric weights, moment cancellations, and remainder formula passed.
+EXACT norm identity and 2560 numerical small-divisor bound regressions passed.
+NUMERICAL complex kernel n=3 r=2 terms=64 relative error=1.235577e-34 tail bound=6.273654e-33
+NUMERICAL complex kernel n=3 r=3 terms=64 relative error=2.032842e-34 tail bound=9.410481e-33
+NUMERICAL complex kernel n=7 r=2 terms=123 relative error=4.063181e-36 tail bound=9.401584e-33
+NUMERICAL complex kernel n=7 r=3 terms=124 relative error=7.577945e-36 tail bound=7.605224e-33
+NUMERICAL complex kernel n=11 r=2 terms=185 relative error=4.287886e-36 tail bound=8.945365e-33
+NUMERICAL complex kernel n=11 r=3 terms=186 relative error=4.757044e-36 tail bound=8.85379e-33
+NUMERICAL independent integral values lie in all 9 printed Arb balls.
+COMPLETE: independent checks passed; no exact Q/C or infinitude claim.

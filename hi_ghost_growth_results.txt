@@ -1,0 +1,14 @@
+EXACT_GAUGE_MULTISET 3 all core positions; invariant product degree 81
+EXACT_GAUGE_MULTISET 5 all core positions; invariant product degree 625
+EXACT_GAUGE_MULTISET 7 all core positions; invariant product degree 2401
+EXACT: centered sampling identity and elementary hyperbolic-kernel majorant
+kappa=3*f(1/3)= 0.32306594721945051409363651072380639
+GHOST_GROWTH_REGRESSION 3 log_Gamma -0.04657609421245886 log_Gamma_over_n -0.015525364737486 scaled_Gamma 0.62721381009828 limit 0.75983568565159 max_centered_remainder 0.014381998
+GHOST_GROWTH_REGRESSION 7 log_Gamma 0.8862037620961096 log_Gamma_over_n 0.1266005374423 scaled_Gamma 0.66877821305742 limit 0.75983568565159 max_centered_remainder 0.025653774
+GHOST_GROWTH_REGRESSION 11 log_Gamma 1.986696202352862 log_Gamma_over_n 0.18060874566844 scaled_Gamma 0.69206072061403 limit 0.75983568565159 max_centered_remainder 0.02705175
+GHOST_GROWTH_REGRESSION 31 log_Gamma 7.989066126161632 log_Gamma_over_n 0.25771181052134 scaled_Gamma 0.73419205050769 limit 0.75983568565159 max_centered_remainder 0.027478319
+GHOST_GROWTH_REGRESSION 101 log_Gamma 30.0363731554198 log_Gamma_over_n 0.29738983322198 scaled_Gamma 0.75146754677124 limit 0.75983568565159 max_centered_remainder 0.027287002
+GHOST_GROWTH_REGRESSION 301 log_Gamma 94.11091042748297 log_Gamma_over_n 0.31266083198499 scaled_Gamma 0.75700565658818 limit 0.75983568565159 max_centered_remainder 0.027191398
+GHOST_GROWTH_REGRESSION 1001 log_Gamma 319.6588546561748 log_Gamma_over_n 0.31933951514103 scaled_Gamma 0.75897903727795 limit 0.75983568565159 max_centered_remainder 0.027153286
+Peak RSS: 57.4 MiB
+COMPLETE: uniform growth and gauge obstruction checks; NO INFINITUDE CLAIM

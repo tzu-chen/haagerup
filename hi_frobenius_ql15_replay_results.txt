@@ -1,0 +1,9 @@
+REPLAYED identity n=15; quad=(1, 1, 1, 13); L=0; terms=0
+REPLAYED identity n=15; quad=(1, 1, 2, 12); L=0; terms=0
+REPLAYED identity n=15; quad=(1, 1, 3, 11); L=0; terms=0
+REPLAYED identity n=15; quad=(1, 1, 4, 10); L=0; terms=0
+REPLAYED identity n=15; quad=(1, 1, 5, 9); L=0; terms=0
+REPLAYED identity n=15; quad=(3, 3, 3, 9); L=0; terms=0
+REPLAYED identity n=15; quad=(5, 5, 5, 5); L=0; terms=0
+REPLAYED BUNDLE n=15; certificates=7/86; complete_degree_bound=False
+elapsed_seconds=0.048; peak_RSS_MiB=75.01

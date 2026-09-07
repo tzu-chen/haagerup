@@ -1,0 +1,191 @@
+TRACE-PULLBACK POINT source 9 target 513 index 1 first-Q residual bits 1970
+TRACE-PULLBACK POINT source 9 target 513 index 2 first-Q residual bits 1970
+TRACE-PULLBACK POINT source 9 target 513 index 3 first-Q residual bits 2677
+TRACE-PULLBACK POINT source 9 target 513 index 4 first-Q residual bits 2677
+TRACE-PULLBACK POINT source 9 target 513 index 5 first-Q residual bits 3527
+TRACE-PULLBACK POINT source 9 target 513 index 6 first-Q residual bits 3527
+TRACE-PULLBACK POINT source 9 target 513 index 7 first-Q residual bits 4081
+TRACE-PULLBACK POINT source 9 target 513 index 8 first-Q residual bits 4081
+TRACE-PULLBACK POINT source 9 target 513 index 9 first-Q residual bits 814
+TRACE-PULLBACK POINT source 9 target 513 index 10 first-Q residual bits 814
+TRACE-PULLBACK POINT source 9 target 513 index 11 first-Q residual bits 3294
+TRACE-PULLBACK POINT source 9 target 513 index 12 first-Q residual bits 3294
+COMPLETE TRACE-PULLBACK source 9 target 513 candidates 12 first Q 0
+TRACE-PULLBACK POINT source 33 target 32769 index 1 first-Q residual bits 796246
+TRACE-PULLBACK POINT source 33 target 32769 index 2 first-Q residual bits 796246
+TRACE-PULLBACK POINT source 33 target 32769 index 3 first-Q residual bits 131201
+TRACE-PULLBACK POINT source 33 target 32769 index 4 first-Q residual bits 131201
+TRACE-PULLBACK POINT source 33 target 32769 index 5 first-Q residual bits 585343
+TRACE-PULLBACK POINT source 33 target 32769 index 6 first-Q residual bits 585343
+TRACE-PULLBACK POINT source 33 target 32769 index 7 first-Q residual bits 
+1020396
+TRACE-PULLBACK POINT source 33 target 32769 index 8 first-Q residual bits 
+1020396
+TRACE-PULLBACK POINT source 33 target 32769 index 9 first-Q residual bits 102299
+TRACE-PULLBACK POINT source 33 target 32769 index 10 first-Q residual bits 
+102299
+TRACE-PULLBACK POINT source 33 target 32769 index 11 first-Q residual bits 
+1012032
+TRACE-PULLBACK POINT source 33 target 32769 index 12 first-Q residual bits 
+1012032
+TRACE-PULLBACK POINT source 33 target 32769 index 13 first-Q residual bits 
+486100
+TRACE-PULLBACK POINT source 33 target 32769 index 14 first-Q residual bits 
+486100
+TRACE-PULLBACK POINT source 33 target 32769 index 15 first-Q residual bits 
+475306
+TRACE-PULLBACK POINT source 33 target 32769 index 16 first-Q residual bits 
+475306
+TRACE-PULLBACK POINT source 33 target 32769 index 17 first-Q residual bits 
+186509
+TRACE-PULLBACK POINT source 33 target 32769 index 18 first-Q residual bits 
+186509
+TRACE-PULLBACK POINT source 33 target 32769 index 19 first-Q residual bits 
+663571
+TRACE-PULLBACK POINT source 33 target 32769 index 20 first-Q residual bits 
+663571
+TRACE-PULLBACK POINT source 33 target 32769 index 21 first-Q residual bits 
+359212
+TRACE-PULLBACK POINT source 33 target 32769 index 22 first-Q residual bits 
+359212
+TRACE-PULLBACK POINT source 33 target 32769 index 23 first-Q residual bits 
+970906
+TRACE-PULLBACK POINT source 33 target 32769 index 24 first-Q residual bits 
+970906
+TRACE-PULLBACK POINT source 33 target 32769 index 25 first-Q residual bits 
+668010
+TRACE-PULLBACK POINT source 33 target 32769 index 26 first-Q residual bits 
+668010
+TRACE-PULLBACK POINT source 33 target 32769 index 27 first-Q residual bits 96880
+TRACE-PULLBACK POINT source 33 target 32769 index 28 first-Q residual bits 96880
+TRACE-PULLBACK POINT source 33 target 32769 index 29 first-Q residual bits 
+794359
+TRACE-PULLBACK POINT source 33 target 32769 index 30 first-Q residual bits 
+794359
+TRACE-PULLBACK POINT source 33 target 32769 index 31 first-Q residual bits 62954
+TRACE-PULLBACK POINT source 33 target 32769 index 32 first-Q residual bits 62954
+TRACE-PULLBACK POINT source 33 target 32769 index 33 first-Q residual bits 
+796145
+TRACE-PULLBACK POINT source 33 target 32769 index 34 first-Q residual bits 
+796145
+TRACE-PULLBACK POINT source 33 target 32769 index 35 first-Q residual bits 
+836956
+TRACE-PULLBACK POINT source 33 target 32769 index 36 first-Q residual bits 
+836956
+TRACE-PULLBACK POINT source 33 target 32769 index 37 first-Q residual bits 51923
+TRACE-PULLBACK POINT source 33 target 32769 index 38 first-Q residual bits 51923
+TRACE-PULLBACK POINT source 33 target 32769 index 39 first-Q residual bits 
+267290
+TRACE-PULLBACK POINT source 33 target 32769 index 40 first-Q residual bits 
+267290
+TRACE-PULLBACK POINT source 33 target 32769 index 41 first-Q residual bits 
+444584
+TRACE-PULLBACK POINT source 33 target 32769 index 42 first-Q residual bits 
+444584
+TRACE-PULLBACK POINT source 33 target 32769 index 43 first-Q residual bits 
+213494
+TRACE-PULLBACK POINT source 33 target 32769 index 44 first-Q residual bits 
+213494
+TRACE-PULLBACK POINT source 33 target 32769 index 45 first-Q residual bits 
+183754
+TRACE-PULLBACK POINT source 33 target 32769 index 46 first-Q residual bits 
+183754
+TRACE-PULLBACK POINT source 33 target 32769 index 47 first-Q residual bits 
+105796
+TRACE-PULLBACK POINT source 33 target 32769 index 48 first-Q residual bits 
+105796
+TRACE-PULLBACK POINT source 33 target 32769 index 49 first-Q residual bits 
+622921
+TRACE-PULLBACK POINT source 33 target 32769 index 50 first-Q residual bits 
+622921
+TRACE-PULLBACK POINT source 33 target 32769 index 51 first-Q residual bits 
+921358
+TRACE-PULLBACK POINT source 33 target 32769 index 52 first-Q residual bits 
+921358
+TRACE-PULLBACK POINT source 33 target 32769 index 53 first-Q residual bits 
+899252
+TRACE-PULLBACK POINT source 33 target 32769 index 54 first-Q residual bits 
+899252
+TRACE-PULLBACK POINT source 33 target 32769 index 55 first-Q residual bits 
+189459
+TRACE-PULLBACK POINT source 33 target 32769 index 56 first-Q residual bits 
+189459
+TRACE-PULLBACK POINT source 33 target 32769 index 57 first-Q residual bits 
+624337
+TRACE-PULLBACK POINT source 33 target 32769 index 58 first-Q residual bits 
+624337
+TRACE-PULLBACK POINT source 33 target 32769 index 59 first-Q residual bits 92937
+TRACE-PULLBACK POINT source 33 target 32769 index 60 first-Q residual bits 92937
+TRACE-PULLBACK POINT source 33 target 32769 index 61 first-Q residual bits 
+112442
+TRACE-PULLBACK POINT source 33 target 32769 index 62 first-Q residual bits 
+112442
+TRACE-PULLBACK POINT source 33 target 32769 index 63 first-Q residual bits 51572
+TRACE-PULLBACK POINT source 33 target 32769 index 64 first-Q residual bits 51572
+TRACE-PULLBACK POINT source 33 target 32769 index 65 first-Q residual bits 11751
+TRACE-PULLBACK POINT source 33 target 32769 index 66 first-Q residual bits 11751
+TRACE-PULLBACK POINT source 33 target 32769 index 67 first-Q residual bits 
+217896
+TRACE-PULLBACK POINT source 33 target 32769 index 68 first-Q residual bits 
+217896
+TRACE-PULLBACK POINT source 33 target 32769 index 69 first-Q residual bits 
+1016627
+TRACE-PULLBACK POINT source 33 target 32769 index 70 first-Q residual bits 
+1016627
+TRACE-PULLBACK POINT source 33 target 32769 index 71 first-Q residual bits 
+632977
+TRACE-PULLBACK POINT source 33 target 32769 index 72 first-Q residual bits 
+632977
+TRACE-PULLBACK POINT source 33 target 32769 index 73 first-Q residual bits 
+971940
+TRACE-PULLBACK POINT source 33 target 32769 index 74 first-Q residual bits 
+971940
+TRACE-PULLBACK POINT source 33 target 32769 index 75 first-Q residual bits 
+739517
+TRACE-PULLBACK POINT source 33 target 32769 index 76 first-Q residual bits 
+739517
+TRACE-PULLBACK POINT source 33 target 32769 index 77 first-Q residual bits 
+926440
+TRACE-PULLBACK POINT source 33 target 32769 index 78 first-Q residual bits 
+926440
+TRACE-PULLBACK POINT source 33 target 32769 index 79 first-Q residual bits 
+930704
+TRACE-PULLBACK POINT source 33 target 32769 index 80 first-Q residual bits 
+930704
+TRACE-PULLBACK POINT source 33 target 32769 index 81 first-Q residual bits 
+454665
+TRACE-PULLBACK POINT source 33 target 32769 index 82 first-Q residual bits 
+454665
+TRACE-PULLBACK POINT source 33 target 32769 index 83 first-Q residual bits 
+147385
+TRACE-PULLBACK POINT source 33 target 32769 index 84 first-Q residual bits 
+147385
+TRACE-PULLBACK POINT source 33 target 32769 index 85 first-Q residual bits 
+745828
+TRACE-PULLBACK POINT source 33 target 32769 index 86 first-Q residual bits 
+745828
+TRACE-PULLBACK POINT source 33 target 32769 index 87 first-Q residual bits 
+616061
+TRACE-PULLBACK POINT source 33 target 32769 index 88 first-Q residual bits 
+616061
+TRACE-PULLBACK POINT source 33 target 32769 index 89 first-Q residual bits 
+445198
+TRACE-PULLBACK POINT source 33 target 32769 index 90 first-Q residual bits 
+445198
+TRACE-PULLBACK POINT source 33 target 32769 index 91 first-Q residual bits 92334
+TRACE-PULLBACK POINT source 33 target 32769 index 92 first-Q residual bits 92334
+TRACE-PULLBACK POINT source 33 target 32769 index 93 first-Q residual bits 87959
+TRACE-PULLBACK POINT source 33 target 32769 index 94 first-Q residual bits 87959
+TRACE-PULLBACK POINT source 33 target 32769 index 95 first-Q residual bits 
+455599
+TRACE-PULLBACK POINT source 33 target 32769 index 96 first-Q residual bits 
+455599
+TRACE-PULLBACK POINT source 33 target 32769 index 97 first-Q residual bits 
+841603
+TRACE-PULLBACK POINT source 33 target 32769 index 98 first-Q residual bits 
+841603
+TRACE-PULLBACK POINT source 33 target 32769 index 99 first-Q residual bits 
+875558
+TRACE-PULLBACK POINT source 33 target 32769 index 100 first-Q residual bits 
+875558
+COMPLETE TRACE-PULLBACK source 33 target 32769 candidates 100 first Q 0

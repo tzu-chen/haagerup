@@ -1,0 +1,15 @@
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+p=3 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(7*y - 8, y^2 - 3*y - 1); Q11(-)=Mod(Mod(-5*y + 8, y^2 - 3*y - 1), x^2 + Mod(y - 1, y^2 - 3*y - 1))
+p=7 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-13*y + 16, y^2 - 7*y - 1); Q11(-)=Mod(Mod(-9*y + 16, y^2 - 7*y - 1), x^2 + Mod(y - 1, y^2 - 7*y - 1))
+p=11 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-y + 8, y^2 - 11*y - 1); Q11(-)=Mod(Mod(-13*y + 24, y^2 - 11*y - 1), x^2 + Mod(y - 1, y^2 - 11*y - 1))
+p=19 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-9*y + 24, y^2 - 19*y - 1); Q11(-)=Mod(Mod(-21*y + 40, y^2 - 19*y - 1), x^2 + Mod(y - 1, y^2 - 19*y - 1))
+p=23 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-29*y + 48, y^2 - 23*y - 1); Q11(-)=Mod(Mod(-25*y + 48, y^2 - 23*y - 1), x^2 + Mod(y - 1, y^2 - 23*y - 1))
+p=31 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-37*y + 64, y^2 - 31*y - 1); Q11(-)=Mod(Mod(-33*y + 64, y^2 - 31*y - 1), x^2 + Mod(y - 1, y^2 - 31*y - 1))
+p=43 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-33*y + 72, y^2 - 43*y - 1); Q11(-)=Mod(Mod(-45*y + 88, y^2 - 43*y - 1), x^2 + Mod(y - 1, y^2 - 43*y - 1))
+p=47 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-53*y + 96, y^2 - 47*y - 1); Q11(-)=Mod(Mod(-49*y + 96, y^2 - 47*y - 1), x^2 + Mod(y - 1, y^2 - 47*y - 1))
+p=59 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-49*y + 104, y^2 - 59*y - 1); Q11(-)=Mod(Mod(-61*y + 120, y^2 - 59*y - 1), x^2 + Mod(y - 1, y^2 - 59*y - 1))
+p=67 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-57*y + 120, y^2 - 67*y - 1); Q11(-)=Mod(Mod(-69*y + 136, y^2 - 67*y - 1), x^2 + Mod(y - 1, y^2 - 67*y - 1))
+p=71 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-77*y + 144, y^2 - 71*y - 1); Q11(-)=Mod(Mod(-73*y + 144, y^2 - 71*y - 1), x^2 + Mod(y - 1, y^2 - 71*y - 1))
+p=79 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-85*y + 160, y^2 - 79*y - 1); Q11(-)=Mod(Mod(-81*y + 160, y^2 - 79*y - 1), x^2 + Mod(y - 1, y^2 - 79*y - 1))
+p=83 integral-order discriminant=1-d; unit norm=d; Q11(+)=Mod(-73*y + 152, y^2 - 83*y - 1); Q11(-)=Mod(Mod(-85*y + 168, y^2 - 83*y - 1), x^2 + Mod(y - 1, y^2 - 83*y - 1))
+ALL EXPLICIT RAY UNIT AND DIAGONAL OBSTRUCTION CHECKS PASSED

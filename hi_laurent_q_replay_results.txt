@@ -1,0 +1,10 @@
+REPLAYED identity n=11; multiplier_bound=5; terms=599
+REPLAYED identity n=13; multiplier_bound=6; terms=2667
+REPLAYED identity n=15; multiplier_bound=6; terms=8528
+REPLAYED identity n=3; multiplier_bound=6; terms=4
+REPLAYED identity n=5; multiplier_bound=5; terms=10
+REPLAYED identity n=7; multiplier_bound=6; terms=62
+REPLAYED identity n=9; multiplier_bound=5; terms=187
+REPLAYED separating functional n=13; multiplier_bound=5; rows=5901
+elapsed_seconds=0.228
+peak_RSS_MiB=18.07

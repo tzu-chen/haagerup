@@ -1,0 +1,2666 @@
+[
+  {
+    "n": 9,
+    "histogram": {
+      "(False, 2, True)": 6,
+      "(True, 1, True)": 6
+    },
+    "accepted": 12,
+    "points": 12,
+    "certificates": [
+      {
+        "mask": 34,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          3363
+        ],
+        "normalized_values": [
+          [
+            1,
+            1
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 35,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          3362
+        ],
+        "normalized_values": [
+          [
+            1,
+            1
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 166,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          3363
+        ],
+        "normalized_values": [
+          [
+            2,
+            2
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 167,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          3362
+        ],
+        "normalized_values": [
+          [
+            2,
+            2
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 190,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          3363
+        ],
+        "normalized_values": [
+          [
+            3,
+            3
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 191,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          3362
+        ],
+        "normalized_values": [
+          [
+            3,
+            3
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 24,
+        "boundary": 2,
+        "trace_values": [
+          0
+        ],
+        "normalized_values": [
+          [
+            2,
+            1
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 25,
+        "boundary": 2,
+        "trace_values": [
+          1
+        ],
+        "normalized_values": [
+          [
+            2,
+            1
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 48,
+        "boundary": 2,
+        "trace_values": [
+          0
+        ],
+        "normalized_values": [
+          [
+            1,
+            3
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 49,
+        "boundary": 2,
+        "trace_values": [
+          1
+        ],
+        "normalized_values": [
+          [
+            1,
+            3
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 40,
+        "boundary": 2,
+        "trace_values": [
+          0
+        ],
+        "normalized_values": [
+          [
+            3,
+            2
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      },
+      {
+        "mask": 41,
+        "boundary": 2,
+        "trace_values": [
+          1
+        ],
+        "normalized_values": [
+          [
+            3,
+            2
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": true,
+        "reconstruction_verified": true
+      }
+    ],
+    "synthetic_reconstructions": 6
+  },
+  {
+    "n": 33,
+    "histogram": {
+      "(False, 3, False)": 50,
+      "(False, 2, False)": 20,
+      "(False, 3, True)": 10,
+      "(True, 3, False)": 20
+    },
+    "accepted": 0,
+    "points": 100,
+    "certificates": [
+      {
+        "mask": 64989013,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            12,
+            14
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 64989012,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            12,
+            14
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 107244792,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            6,
+            7
+          ],
+          [
+            0,
+            14
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 107244793,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            6,
+            7
+          ],
+          [
+            0,
+            14
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 251496637,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 251496636,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 175522397,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            2,
+            13
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 175522396,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            2,
+            13
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 414317049,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            9,
+            4
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            4
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 414317048,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            9,
+            4
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            4
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 469139613,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            1,
+            9
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            14,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 469139612,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            1,
+            9
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            14,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 351645305,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            7,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            11,
+            3
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 351645304,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            7,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            11,
+            3
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 964297281,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            3,
+            12
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            13,
+            12
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 964297280,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            3,
+            12
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            13,
+            12
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 701785916,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            14,
+            6
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            0,
+            15
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 701785917,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            14,
+            6
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            0,
+            15
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 728452732,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            7,
+            3
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 728452733,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            7,
+            3
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 621097425,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            13,
+            8
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 621097424,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            13,
+            8
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1789022676,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            13,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            13
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1789022677,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            13,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            13
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2021874173,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            9,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            14,
+            9
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2021874172,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            9,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            14,
+            9
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1996608439,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            15,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1996608438,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            15,
+            12
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2003677009,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            8,
+            10
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 2003677008,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            8,
+            10
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 1427928802,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            2,
+            14
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            6
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1427928803,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            2,
+            14
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            6
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1569610536,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            10,
+            1
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            11,
+            1
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1569610537,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            10,
+            1
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            11,
+            1
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1160223901,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            5,
+            15
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1160223900,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            5,
+            15
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1120600644,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            3,
+            12
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1120600645,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            3,
+            12
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1139510524,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            6,
+            7
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 1139510525,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            6,
+            7
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3222690605,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            10,
+            1
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            12,
+            10
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3222690604,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            10,
+            1
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            12,
+            10
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3354314576,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            12,
+            14
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            10,
+            14
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3354314577,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            12,
+            14
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            10,
+            14
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3645047384,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            2,
+            13
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 3645047385,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            2,
+            13
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 3644571295,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            4,
+            3
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            2,
+            13
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3644571294,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            4,
+            3
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            2,
+            13
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3662192792,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            1,
+            9
+          ],
+          [
+            11,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 3662192793,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            1,
+            9
+          ],
+          [
+            11,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 3658421991,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            2,
+            14
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            1,
+            9
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3658421990,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            2,
+            14
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            1,
+            9
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3533837234,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            15,
+            12
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            2,
+            14
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3533837235,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            15,
+            12
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            2,
+            14
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 4128546142,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            8,
+            6
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 4128546143,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            8,
+            6
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 4134684856,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            4,
+            5
+          ],
+          [
+            13,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 4134684857,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            4,
+            5
+          ],
+          [
+            13,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 3963946808,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            14,
+            6
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3963946809,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            14,
+            6
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3842088752,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            11,
+            2
+          ],
+          [
+            10,
+            15
+          ],
+          [
+            9,
+            2
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3842088753,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            11,
+            2
+          ],
+          [
+            10,
+            15
+          ],
+          [
+            9,
+            2
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2724056917,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            12,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2724056916,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            12,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3147406683,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            8,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3147406682,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            8,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3166148242,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            1,
+            7
+          ],
+          [
+            12,
+            15
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3166148243,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            1,
+            7
+          ],
+          [
+            12,
+            15
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3085051269,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            15,
+            11
+          ],
+          [
+            12,
+            15
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 3085051268,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            15,
+            11
+          ],
+          [
+            12,
+            15
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2534571829,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            11,
+            2
+          ],
+          [
+            1,
+            14
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2534571828,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            11,
+            2
+          ],
+          [
+            1,
+            14
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2295784833,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            15,
+            11
+          ],
+          [
+            10,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 2295784832,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            15,
+            11
+          ],
+          [
+            10,
+            0
+          ]
+        ],
+        "affine_line": true,
+        "single_feature": false
+      },
+      {
+        "mask": 2292315799,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            15,
+            11
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2292315798,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476308,
+          476309
+        ],
+        "normalized_values": [
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            15,
+            11
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2411404441,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            5,
+            15
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            10,
+            15
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2411404440,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            5,
+            15
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            10,
+            15
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2157108890,
+        "boundary": 0,
+        "trace_values": [
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            4,
+            3
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            15,
+            12
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 2157108891,
+        "boundary": 0,
+        "trace_values": [
+          0,
+          476309
+        ],
+        "normalized_values": [
+          [
+            4,
+            3
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            15,
+            12
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 191761516,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            6,
+            14
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            5,
+            12
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 191761517,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            6,
+            14
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            5,
+            12
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 141274343,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            7,
+            6
+          ],
+          [
+            15,
+            11
+          ],
+          [
+            0,
+            11
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 141274342,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            7,
+            6
+          ],
+          [
+            15,
+            11
+          ],
+          [
+            0,
+            11
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 406939262,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            0,
+            13
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 406939263,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            0,
+            13
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 429826839,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            14,
+            12
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            0,
+            9
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 429826838,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            14,
+            12
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            0,
+            9
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 420431335,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            12,
+            3
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            0,
+            10
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 420431334,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            12,
+            3
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            0,
+            10
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 505760845,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            7,
+            6
+          ],
+          [
+            0,
+            15
+          ],
+          [
+            11,
+            14
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 505760844,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            7,
+            6
+          ],
+          [
+            0,
+            15
+          ],
+          [
+            11,
+            14
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 351430271,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            3,
+            7
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            13,
+            6
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 351430270,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            3,
+            7
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            13,
+            6
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 280595565,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            6,
+            14
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 280595564,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            6,
+            14
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 734389180,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            14,
+            12
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            9,
+            3
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 734389181,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            14,
+            12
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            9,
+            3
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 712926540,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476308
+        ],
+        "normalized_values": [
+          [
+            12,
+            3
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            10,
+            7
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      },
+      {
+        "mask": 712926541,
+        "boundary": 8,
+        "trace_values": [
+          0,
+          1,
+          476309
+        ],
+        "normalized_values": [
+          [
+            12,
+            3
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            10,
+            7
+          ]
+        ],
+        "affine_line": false,
+        "single_feature": false
+      }
+    ],
+    "synthetic_reconstructions": 10
+  }
+]

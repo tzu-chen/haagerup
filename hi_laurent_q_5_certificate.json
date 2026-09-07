@@ -1,0 +1,123 @@
+{
+  "n": 5,
+  "omega": 2,
+  "quad": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "multiplier_bound": 5,
+  "terms": [
+    {
+      "q": [
+        2,
+        2
+      ],
+      "shift": [
+        0,
+        0
+      ],
+      "coefficient": 3
+    },
+    {
+      "q": [
+        2,
+        2
+      ],
+      "shift": [
+        -2,
+        1
+      ],
+      "coefficient": 2
+    },
+    {
+      "q": [
+        2,
+        2
+      ],
+      "shift": [
+        -1,
+        -2
+      ],
+      "coefficient": 2
+    },
+    {
+      "q": [
+        1,
+        1
+      ],
+      "shift": [
+        1,
+        2
+      ],
+      "coefficient": 3
+    },
+    {
+      "q": [
+        1,
+        2
+      ],
+      "shift": [
+        2,
+        -1
+      ],
+      "coefficient": 2
+    },
+    {
+      "q": [
+        1,
+        1
+      ],
+      "shift": [
+        -3,
+        -1
+      ],
+      "coefficient": 2
+    },
+    {
+      "q": [
+        1,
+        2
+      ],
+      "shift": [
+        -3,
+        -1
+      ],
+      "coefficient": 2
+    },
+    {
+      "q": [
+        2,
+        2
+      ],
+      "shift": [
+        -3,
+        -1
+      ],
+      "coefficient": 2
+    },
+    {
+      "q": [
+        1,
+        1
+      ],
+      "shift": [
+        -5,
+        0
+      ],
+      "coefficient": 3
+    },
+    {
+      "q": [
+        1,
+        2
+      ],
+      "shift": [
+        -5,
+        0
+      ],
+      "coefficient": 3
+    }
+  ]
+}

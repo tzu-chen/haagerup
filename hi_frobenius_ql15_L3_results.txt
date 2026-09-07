@@ -1,0 +1,15 @@
+START n=15; periods=(255, 17, 5); algebra_dimension=21675; generators=56; lift_errors=True; cubic_orbits=86
+CERTIFIED n=15; quad=(1, 1, 1, 13); L=0; terms=0; remaining=85
+CERTIFIED n=15; quad=(1, 1, 2, 12); L=0; terms=0; remaining=84
+CERTIFIED n=15; quad=(1, 1, 3, 11); L=0; terms=0; remaining=83
+CERTIFIED n=15; quad=(1, 1, 4, 10); L=0; terms=0; remaining=82
+CERTIFIED n=15; quad=(1, 1, 5, 9); L=0; terms=0; remaining=81
+CERTIFIED n=15; quad=(3, 3, 3, 9); L=0; terms=0; remaining=80
+CERTIFIED n=15; quad=(5, 5, 5, 5); L=0; terms=0; remaining=79
+LEVEL n=15; L=0; words=1; inputs=56; columns=3303; rank=56; pending=79
+LEVEL n=15; L=1; words=15; inputs=840; columns=16034; rank=840; pending=79
+LEVEL n=15; L=2; words=113; inputs=6328; columns=21619; rank=6321; pending=79
+INCOMPLETE n=15; reason=timeout; inputs=16595; columns=21675; rank=16581
+BUNDLE hi_frobenius_ql_batch15_L3_certificates.json.gz; certificates=7/86; bounds={0: 7}; complete_degree_bound=False
+elapsed_seconds=90.003; peak_RSS_MiB=180.52
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.

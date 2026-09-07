@@ -1,0 +1,16 @@
+EXACT cyclic five-factor phase is minus twice the consecutive-triple cubic.
+EXACT torus monomial exponent determinant is 3; the torus character sum is -1.
+EXACT p=5: cubic zero count=1025, additive character sum=500
+EXACT p=11: cubic zero count=20141, additive character sum=6050
+EXACT p=17: cubic zero count=105281, additive character sum=23120
+EXACT p=23: cubic zero count=335501, additive character sum=58190
+DIRECT MATRIX CHECK p=5: normalized trace Rbar^5=(0.5249001137225627-2.3897550605056493e-16j), normalized HS(F)^2=0.4405212866
+OPERATOR PROBE p=5: Q_error=0.65414884, distance_to_Rbar=0.58075849, proved_distance_bound=0.82532588; samples=4; HS(F)^2/N estimate=0.46922571; operator_norm_F lower bound=0.76338396; HS(Rbar^5-I)^2/N estimate=1.0502981; Tr(Rbar^5)/N estimate=(0.41357099475263065+0.0467673961044069j); exact-formula trace/N=0.5249001137
+DIRECT MATRIX CHECK p=11: normalized trace Rbar^5=(0.34649287412529434-5.3217302006825687e-17j), normalized HS(F)^2=1.147009984
+OPERATOR PROBE p=11: Q_error=1.3313234, distance_to_Rbar=0.54935928, proved_distance_bound=0.55650246; samples=4; HS(F)^2/N estimate=1.1210412; operator_norm_F lower bound=1.1064615; HS(Rbar^5-I)^2/N estimate=1.1819232; Tr(Rbar^5)/N estimate=(0.39949405692665785-0.0464848856144222j); exact-formula trace/N=0.3464928741
+OPERATOR PROBE p=23: Q_error=0.91477597, distance_to_Rbar=0.38836354, proved_distance_bound=0.38918681; samples=4; HS(F)^2/N estimate=1.5548995; operator_norm_F lower bound=1.2597495; HS(Rbar^5-I)^2/N estimate=1.5852474; Tr(Rbar^5)/N estimate=(0.20540658560115355-0.006513069180049735j); exact-formula trace/N=0.191752911
+OPERATOR PROBE p=47: Q_error=0.62567003, distance_to_Rbar=0.27594185, proved_distance_bound=0.27604143; samples=4; HS(F)^2/N estimate=1.7939668; operator_norm_F lower bound=1.353767; HS(Rbar^5-I)^2/N estimate=1.7789248; Tr(Rbar^5)/N estimate=(0.10977883834253513+0.0006872588817783149j); exact-formula trace/N=0.1001417722
+OPERATOR PROBE p=101: Q_error=0.416796, distance_to_Rbar=0.19089792, proved_distance_bound=0.19093896; samples=4; HS(F)^2/N estimate=1.9093781; operator_norm_F lower bound=1.3899513; HS(Rbar^5-I)^2/N estimate=1.9068898; Tr(Rbar^5)/N estimate=(0.046399896930940335-0.005615861590421677j); exact-formula trace/N=0.04814224775
+OPERATOR PROBE p=257: Q_error=0.25736146, distance_to_Rbar=0.12132888, proved_distance_bound=0.12132916; samples=4; HS(F)^2/N estimate=1.965647; operator_norm_F lower bound=1.4043762; HS(Rbar^5-I)^2/N estimate=1.9626976; Tr(Rbar^5)/N estimate=(0.01862475727612754-2.986088735436684e-05j); exact-formula trace/N=0.01924387828
+OPERATOR PROBE p=509: Q_error=0.181221, distance_to_Rbar=0.086852015, proved_distance_bound=0.086852344; samples=4; HS(F)^2/N estimate=1.9806897; operator_norm_F lower bound=1.4091061; HS(Rbar^5-I)^2/N estimate=1.9790545; Tr(Rbar^5)/N estimate=(0.010466053265321865-0.0005669284780841532j); exact-formula trace/N=0.009769221392
+ALL CHECKS PASSED; large-matrix samples are numerical estimates, not HI certificates.

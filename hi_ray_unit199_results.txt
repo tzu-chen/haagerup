@@ -1,0 +1,74 @@
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+  ***   Warning: new maximum stack size = 3000000512 (2861.023 Mbytes).
+  *** nfinit: Warning: increasing stack size to 16000000.
+n=199 ray=[18] absolute degree=36 signature=[18, 9]
+  *** rnfisnorminit: Warning: increasing stack size to 32000000.
+  *** rnfisnorminit: Warning: increasing stack size to 64000000.
+[ok] fixed-field degree=18; exact W*c(W)=d
+EXACT RAY NORM CONSTRUCTION PASSED
+[ok] unique arithmetic Frobenius at (3)
+[ok] Artin generator closes on the entire field
+[ok] physical conjugation is a nontrivial involution
+[ok] initial exact norm
+Absolute unit basis completeness certified: 0
+[ok] initial norm element is integral and is a unit
+[ok] exact unit conjugation column 1
+[ok] exact unit conjugation column 2
+[ok] exact unit conjugation column 3
+[ok] exact unit conjugation column 4
+[ok] exact unit conjugation column 5
+[ok] exact unit conjugation column 6
+[ok] exact unit conjugation column 7
+[ok] exact unit conjugation column 8
+[ok] exact unit conjugation column 9
+[ok] exact unit conjugation column 10
+[ok] exact unit conjugation column 11
+[ok] exact unit conjugation column 12
+[ok] exact unit conjugation column 13
+[ok] exact unit conjugation column 14
+[ok] exact unit conjugation column 15
+[ok] exact unit conjugation column 16
+[ok] exact unit conjugation column 17
+[ok] exact unit conjugation column 18
+[ok] exact unit conjugation column 19
+[ok] exact unit conjugation column 20
+[ok] exact unit conjugation column 21
+[ok] exact unit conjugation column 22
+[ok] exact unit conjugation column 23
+[ok] exact unit conjugation column 24
+[ok] exact unit conjugation column 25
+[ok] exact unit conjugation column 26
+[ok] free unit conjugation squares to identity
+[ok] expected relative unit rank
+[ok] relative unit norm 1
+[ok] relative unit norm 2
+[ok] relative unit norm 3
+[ok] relative unit norm 4
+[ok] relative unit norm 5
+[ok] relative unit norm 6
+[ok] relative unit norm 7
+[ok] relative unit norm 8
+[ok] relative unit norm 9
+[ok] integral exact twice-offset
+Relative unit rank=9; twice-offset=[-1, 1, 0, 0, 0, 0, 0, 0, -1]
+[ok] lattice basis change is unimodular
+[ok] recentered exact free exponents
+Numerical lowest squared doubled-log score=53.75412336187267006230645018505005199235772606010434362756867303071463887786537844902395173818107271
+Refined sphere vectors modulo +/-=630
+[ok] saved unit fourth power and norm
+[ok] saved unit generates the full field
+[ok] exact base-field expression in the saved unit
+[ok] exact Artin expression in the saved unit
+Lowest-shell vector 1: exact saved-certificate match (+)=1 (-)=0
+[ok] exact isomorphism transports the complete saved Izumi certificate
+Lowest-shell vector 2: exact saved-certificate match (+)=1 (-)=0
+Lowest-shell vector 3: exact saved-certificate match (+)=1 (-)=0
+Lowest-shell vector 4: exact saved-certificate match (+)=0 (-)=1
+Lowest-shell vector 5: exact saved-certificate match (+)=0 (-)=1
+Lowest-shell vector 6: exact saved-certificate match (+)=1 (-)=0
+Lowest-shell vector 7: exact saved-certificate match (+)=1 (-)=0
+Lowest-shell vector 8: exact saved-certificate match (+)=0 (-)=1
+Lowest-shell vector 9: exact saved-certificate match (+)=0 (-)=1
+[ok] at least one complete Izumi solution was obtained
+RAY UNIT SEARCH PASSED: n=199; accepted shell vectors=9; exact Galois orbits=1
+ALL REQUESTED RAY UNIT SEARCHES PASSED

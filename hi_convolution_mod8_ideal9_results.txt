@@ -1,0 +1,6 @@
+START n=9; coefficient_ring=Z/8; residue_Q_imposed=False
+COEFFICIENT_CHECK=8,4
+BASIS_SIZE=108
+INCOMPLETE n=9; timeout_seconds=25.0
+elapsed_seconds=25.019
+child_peak_RSS_MiB=48.66

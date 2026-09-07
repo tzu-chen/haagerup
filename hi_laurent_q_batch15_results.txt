@@ -1,0 +1,74 @@
+LEVEL n=15; L=0; inputs=28; columns=596; rank=28; pending=86
+LEVEL n=15; L=1; inputs=28; columns=596; rank=28; pending=86
+LEVEL n=15; L=2; inputs=28; columns=596; rank=28; pending=86
+LEVEL n=15; L=3; inputs=1092; columns=2739; rank=1092; pending=86
+LEVEL n=15; L=4; inputs=4732; columns=5810; rank=4354; pending=86
+LEVEL n=15; L=5; inputs=13300; columns=13925; rank=12841; pending=86
+CERTIFIED n=15; quad=(1, 1, 1, 3); L=6; terms=8536; remaining=85
+CERTIFIED n=15; quad=(1, 1, 1, 8); L=6; terms=8497; remaining=84
+CERTIFIED n=15; quad=(1, 1, 1, 9); L=6; terms=8494; remaining=83
+CERTIFIED n=15; quad=(1, 1, 1, 12); L=6; terms=8481; remaining=82
+CERTIFIED n=15; quad=(1, 1, 2, 2); L=6; terms=8639; remaining=81
+CERTIFIED n=15; quad=(1, 1, 2, 7); L=6; terms=8482; remaining=80
+CERTIFIED n=15; quad=(1, 1, 2, 10); L=6; terms=8674; remaining=79
+CERTIFIED n=15; quad=(1, 1, 2, 11); L=6; terms=8702; remaining=78
+CERTIFIED n=15; quad=(1, 1, 2, 12); L=6; terms=8418; remaining=77
+CERTIFIED n=15; quad=(1, 1, 3, 7); L=6; terms=8710; remaining=76
+CERTIFIED n=15; quad=(1, 1, 3, 11); L=6; terms=8510; remaining=75
+CERTIFIED n=15; quad=(1, 1, 4, 9); L=6; terms=8587; remaining=74
+CERTIFIED n=15; quad=(1, 2, 1, 4); L=6; terms=8540; remaining=73
+CERTIFIED n=15; quad=(1, 2, 1, 5); L=6; terms=8573; remaining=72
+CERTIFIED n=15; quad=(1, 2, 1, 6); L=6; terms=8547; remaining=71
+CERTIFIED n=15; quad=(1, 2, 1, 8); L=6; terms=8566; remaining=70
+CERTIFIED n=15; quad=(1, 2, 1, 9); L=6; terms=8585; remaining=69
+CERTIFIED n=15; quad=(1, 2, 1, 10); L=6; terms=8586; remaining=68
+CERTIFIED n=15; quad=(1, 2, 1, 11); L=6; terms=8602; remaining=67
+CERTIFIED n=15; quad=(1, 2, 3, 3); L=6; terms=8642; remaining=66
+CERTIFIED n=15; quad=(1, 2, 3, 4); L=6; terms=8436; remaining=65
+CERTIFIED n=15; quad=(1, 2, 3, 9); L=6; terms=8398; remaining=64
+CERTIFIED n=15; quad=(1, 2, 3, 10); L=6; terms=8604; remaining=63
+CERTIFIED n=15; quad=(1, 2, 3, 12); L=6; terms=8607; remaining=62
+CERTIFIED n=15; quad=(1, 2, 4, 2); L=6; terms=8515; remaining=61
+CERTIFIED n=15; quad=(1, 2, 4, 4); L=6; terms=8606; remaining=60
+CERTIFIED n=15; quad=(1, 2, 5, 2); L=6; terms=8696; remaining=59
+CERTIFIED n=15; quad=(1, 2, 5, 5); L=6; terms=8590; remaining=58
+CERTIFIED n=15; quad=(1, 2, 5, 9); L=6; terms=8460; remaining=57
+CERTIFIED n=15; quad=(1, 2, 5, 10); L=6; terms=8756; remaining=56
+CERTIFIED n=15; quad=(1, 2, 5, 12); L=6; terms=8583; remaining=55
+CERTIFIED n=15; quad=(1, 3, 1, 5); L=6; terms=8676; remaining=54
+CERTIFIED n=15; quad=(1, 3, 1, 9); L=6; terms=8688; remaining=53
+CERTIFIED n=15; quad=(1, 3, 2, 4); L=6; terms=8499; remaining=52
+CERTIFIED n=15; quad=(1, 3, 3, 3); L=6; terms=8606; remaining=51
+CERTIFIED n=15; quad=(1, 3, 3, 5); L=6; terms=8576; remaining=50
+CERTIFIED n=15; quad=(1, 4, 1, 9); L=6; terms=8627; remaining=49
+CERTIFIED n=15; quad=(1, 4, 5, 5); L=6; terms=8635; remaining=48
+CERTIFIED n=15; quad=(3, 3, 3, 9); L=6; terms=8596; remaining=47
+CERTIFIED n=15; quad=(1, 1, 2, 5); L=6; terms=8498; remaining=46
+CERTIFIED n=15; quad=(1, 1, 2, 8); L=6; terms=8545; remaining=45
+CERTIFIED n=15; quad=(1, 1, 3, 9); L=6; terms=8609; remaining=44
+CERTIFIED n=15; quad=(1, 2, 3, 6); L=6; terms=8564; remaining=43
+CERTIFIED n=15; quad=(1, 2, 6, 3); L=6; terms=8552; remaining=42
+CERTIFIED n=15; quad=(1, 1, 1, 5); L=6; terms=8594; remaining=41
+CERTIFIED n=15; quad=(1, 1, 2, 6); L=6; terms=8467; remaining=40
+CERTIFIED n=15; quad=(1, 1, 4, 8); L=6; terms=8406; remaining=39
+CERTIFIED n=15; quad=(1, 2, 3, 8); L=6; terms=8611; remaining=38
+CERTIFIED n=15; quad=(1, 5, 3, 5); L=6; terms=8481; remaining=37
+CERTIFIED n=15; quad=(1, 1, 5, 5); L=6; terms=9001; remaining=36
+CERTIFIED n=15; quad=(1, 1, 5, 9); L=6; terms=9048; remaining=35
+CERTIFIED n=15; quad=(1, 3, 2, 11); L=6; terms=8753; remaining=34
+CERTIFIED n=15; quad=(1, 5, 1, 9); L=6; terms=8712; remaining=33
+CERTIFIED n=15; quad=(1, 5, 1, 5); L=6; terms=9406; remaining=32
+CERTIFIED n=15; quad=(1, 5, 5, 5); L=6; terms=8931; remaining=31
+CERTIFIED n=15; quad=(1, 1, 2, 4); L=6; terms=8623; remaining=30
+CERTIFIED n=15; quad=(1, 1, 2, 9); L=6; terms=8587; remaining=29
+CERTIFIED n=15; quad=(1, 1, 3, 5); L=6; terms=8634; remaining=28
+CERTIFIED n=15; quad=(1, 2, 3, 11); L=6; terms=8605; remaining=27
+CERTIFIED n=15; quad=(1, 2, 5, 3); L=6; terms=8528; remaining=26
+CERTIFIED n=15; quad=(1, 2, 6, 10); L=6; terms=8490; remaining=25
+CERTIFIED n=15; quad=(1, 2, 6, 11); L=6; terms=8572; remaining=24
+CERTIFIED n=15; quad=(1, 3, 6, 4); L=6; terms=8517; remaining=23
+LEVEL n=15; L=6; inputs=36148; columns=28187; rank=27823; pending=23
+BOUNDED_NONMEMBERSHIP n=15; quad=(1, 1, 1, 1); L=6; dual_support=328
+BUNDLE hi_laurent_q_batch15_certificates.json; certificates=63/86; bounds={6: 63}; complete_degree_bound=False
+elapsed_seconds=82.573; peak_RSS_MiB=689.84
+Finite identities only. No new category existence or uniform degree bound is asserted.

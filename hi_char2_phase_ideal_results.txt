@@ -1,0 +1,24 @@
+BUILD n 3 relations 2
+FINITE NONEMPTY n 3 basis 3 length 6 CPU 0.000
+ALL Q AND CROSS-FREE C IDEAL MEMBERSHIPS PASSED n 3 cubic orbit representatives 
+1 length 6
+BUILD n 5 relations 5
+FINITE NONEMPTY n 5 basis 10 length 20 CPU 0.000
+ALL Q AND CROSS-FREE C IDEAL MEMBERSHIPS PASSED n 5 cubic orbit representatives 
+2 length 20
+BUILD n 7 relations 9
+FINITE NONEMPTY n 7 basis 28 length 42 CPU 0.010
+ALL Q AND CROSS-FREE C IDEAL MEMBERSHIPS PASSED n 7 cubic orbit representatives 
+6 length 42
+BUILD n 9 relations 14
+FINITE NONEMPTY n 9 basis 126 length 108 CPU 0.030
+ALL Q AND CROSS-FREE C IDEAL MEMBERSHIPS PASSED n 9 cubic orbit representatives 
+14 length 108
+BUILD n 11 relations 20
+FINITE NONEMPTY n 11 basis 194 length 132 CPU 0.360
+ALL Q AND CROSS-FREE C IDEAL MEMBERSHIPS PASSED n 11 cubic orbit representatives
+17 length 132
+BUILD n 13 relations 27
+FINITE NONEMPTY n 13 basis 301 length 156 CPU 5.780
+ALL Q AND CROSS-FREE C IDEAL MEMBERSHIPS PASSED n 13 cubic orbit representatives
+30 length 156

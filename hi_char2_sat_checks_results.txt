@@ -1,0 +1,5 @@
+OFF-SOLUTION EXACT TRACE/CIRCUIT 3 pairs [(1, 1), (2, 1), (1, 2)] nonzero 0 variables 77
+OFF-SOLUTION EXACT TRACE/CIRCUIT 9 pairs [(1, 1), (2, 1), (3, 1), (1, 8), (2, 3), (4, 7), (3, 3)] nonzero 6 variables 3023
+OFF-SOLUTION EXACT TRACE/CIRCUIT 27 pairs [(1, 1), (2, 1), (9, 1), (1, 26), (2, 3), (4, 7), (9, 9)] nonzero 7 variables 92657
+OFF-SOLUTION EXACT TRACE/CIRCUIT 81 pairs [(1, 1), (2, 1), (27, 1), (1, 80), (2, 3), (4, 7), (27, 27)] nonzero 7 variables 1880056
+ALL EXACT CIRCUIT CHECKS PASSED

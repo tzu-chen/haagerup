@@ -1,0 +1,36 @@
+n=3; field degree=4; norm-torus orders=[5]; candidates=5
+TWO-Q first-phase degree=2 count=2
+TWO QUADRATICS total=2 primitive=2
+COMPLETE allQ=2 firstQ=2
+Frobenius representative (2,); orbit length=2
+EXACT FINITE-FIELD HI CERTIFICATE: n=3 characteristic=2 field degree=4; all 9 Q and 81 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+n=9; field degree=12; norm-torus orders=[65, 5]; candidates=325
+FILTER F(2,1) rejects=12
+TWO-Q first-phase degree=6 count=12
+TWO QUADRATICS total=12 primitive=12
+COMPLETE allQ=12 firstQ=24
+Frobenius representative (1, 0); orbit length=6
+Frobenius representative (5, 1); orbit length=6
+EXACT FINITE-FIELD HI CERTIFICATE: n=9 characteristic=2 field degree=12; all 81 Q and 6561 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=9 characteristic=2 field degree=12; all 81 Q and 6561 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+n=27; field degree=36; norm-torus orders=[262145, 65, 5]; candidates=85197125
+FILTER F(2,1) rejects=1278
+FILTER F(3,1) rejects=6
+FILTER F(8,1) rejects=12
+TWO-Q first-phase degree=6 count=18
+TWO-Q first-phase degree=18 count=54
+TWO QUADRATICS total=72 primitive=54
+COMPLETE allQ=54 firstQ=1350
+Frobenius representative (1509, 12, 3); orbit length=18
+Frobenius representative (3577, 14, 2); orbit length=18
+Frobenius representative (6763, 2, 4); orbit length=18
+EXACT FINITE-FIELD HI CERTIFICATE: n=27 characteristic=2 field degree=36; all 729 Q and 531441 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=27 characteristic=2 field degree=36; all 729 Q and 531441 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=27 characteristic=2 field degree=36; all 729 Q and 531441 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+ALL FROBENIUS-ORBIT REPRESENTATIVES PASSED COMPLETE INDEPENDENT CERTIFICATION

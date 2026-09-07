@@ -1,0 +1,47 @@
+COMPLETE n=3; residue_field_degree=4; tuples=5; bits=8; allQ=2
+  residue_Q=False; origin_valuation=2; norm_valuation=1; count=3
+  residue_Q=True; origin_valuation=8; norm_valuation=8; count=2
+  normalized_mod_2^2: accepted=2; nonQ=0
+  normalized_mod_2^3: accepted=2; nonQ=0
+  normalized_mod_2^4: accepted=2; nonQ=0
+  normalized_mod_2^5: accepted=2; nonQ=0
+  normalized_mod_2^6: accepted=2; nonQ=0
+  normalized_mod_2^7: accepted=2; nonQ=0
+  normalized_mod_2^8: accepted=2; nonQ=0
+COMPLETE n=5; residue_field_degree=8; tuples=17; bits=8; allQ=4
+  residue_Q=False; origin_valuation=2; norm_valuation=1; count=8
+  residue_Q=False; origin_valuation=3; norm_valuation=1; count=5
+  residue_Q=True; origin_valuation=8; norm_valuation=8; count=4
+  normalized_mod_2^2: accepted=4; nonQ=0
+  normalized_mod_2^3: accepted=4; nonQ=0
+  normalized_mod_2^4: accepted=4; nonQ=0
+  normalized_mod_2^5: accepted=4; nonQ=0
+  normalized_mod_2^6: accepted=4; nonQ=0
+  normalized_mod_2^7: accepted=4; nonQ=0
+  normalized_mod_2^8: accepted=4; nonQ=0
+COMPLETE n=7; residue_field_degree=6; tuples=63; bits=8; allQ=6
+  residue_Q=False; origin_valuation=2; norm_valuation=1; count=57
+  residue_Q=True; origin_valuation=8; norm_valuation=8; count=6
+  normalized_mod_2^2: accepted=6; nonQ=0
+  normalized_mod_2^3: accepted=6; nonQ=0
+  normalized_mod_2^4: accepted=6; nonQ=0
+  normalized_mod_2^5: accepted=6; nonQ=0
+  normalized_mod_2^6: accepted=6; nonQ=0
+  normalized_mod_2^7: accepted=6; nonQ=0
+  normalized_mod_2^8: accepted=6; nonQ=0
+COMPLETE n=9; residue_field_degree=12; tuples=325; bits=8; allQ=12
+  residue_Q=False; origin_valuation=2; norm_valuation=1; count=252
+  residue_Q=False; origin_valuation=3; norm_valuation=1; count=36
+  residue_Q=False; origin_valuation=4; norm_valuation=1; count=19
+  residue_Q=False; origin_valuation=5; norm_valuation=1; count=6
+  residue_Q=True; origin_valuation=8; norm_valuation=8; count=12
+  normalized_mod_2^2: accepted=12; nonQ=0
+  normalized_mod_2^3: accepted=12; nonQ=0
+  normalized_mod_2^4: accepted=12; nonQ=0
+  normalized_mod_2^5: accepted=12; nonQ=0
+  normalized_mod_2^6: accepted=12; nonQ=0
+  normalized_mod_2^7: accepted=12; nonQ=0
+  normalized_mod_2^8: accepted=12; nonQ=0
+elapsed_seconds=2.856
+peak_RSS_MiB=17.11
+COMPLETE: finite norm-obstruction census; no uniform Q or C completion claimed.

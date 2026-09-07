@@ -1,0 +1,24 @@
+CYCLIC PENTAGON n 3 base degree over F4 3 Weyl, intertwiner, period five, scalar
+fifth power: PASS
+CYCLIC SPECTRUM n 3 B multiplicities [ 1, 0, 1, 1, 0 ]
+Ad(B) multiplicities [ 3, 1, 2, 2, 1 ]
+CYCLIC FIFTH-ROOT LABELS n 3 roots of lambda^2+omega^-1*lambda+1 [ 1, 4 ]
+CYCLIC PENTAGON n 5 base degree over F4 2 Weyl, intertwiner, period five, scalar
+fifth power: PASS
+CYCLIC PENTAGON n 7 base degree over F4 3 Weyl, intertwiner, period five, scalar
+fifth power: PASS
+CYCLIC SPECTRUM n 7 B multiplicities [ 1, 2, 1, 1, 2 ]
+Ad(B) multiplicities [ 11, 9, 10, 10, 9 ]
+CYCLIC FIFTH-ROOT LABELS n 7 roots of lambda^2+omega^-1*lambda+1 [ 1, 4 ]
+CYCLIC PENTAGON n 9 base degree over F4 9 Weyl, intertwiner, period five, scalar
+fifth power: PASS
+CYCLIC SPECTRUM n 9 B multiplicities [ 1, 2, 2, 2, 2 ]
+Ad(B) multiplicities [ 17, 16, 16, 16, 16 ]
+CYCLIC FIFTH-ROOT LABELS n 9 roots of lambda^2+omega^-1*lambda+1 [ 1, 4 ]
+CYCLIC PENTAGON n 15 base degree over F4 6 Weyl, intertwiner, period five, 
+scalar fifth power: PASS
+CYCLIC PENTAGON n 27 base degree over F4 27 Weyl, intertwiner, period five, 
+scalar fifth power: PASS
+CYCLIC SPECTRUM n 27 B multiplicities [ 5, 6, 5, 5, 6 ]
+Ad(B) multiplicities [ 147, 145, 146, 146, 145 ]
+CYCLIC FIFTH-ROOT LABELS n 27 roots of lambda^2+omega^-1*lambda+1 [ 1, 4 ]

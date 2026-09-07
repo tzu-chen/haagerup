@@ -1,0 +1,12 @@
+BUILD n 9 relations 14
+BASIS n 9 size 126 dimension 0 []
+time 0.030
+DEGREE 108
+BUILD n 13 relations 27
+BASIS n 13 size 301 dimension 0 []
+time 6.150
+DEGREE 156
+BUILD n 17 relations 44
+BASIS n 17 size 694 dimension 0 []
+time 2922.520
+DEGREE 272

@@ -1,0 +1,22 @@
+F4 n=3: diagonal exclusions=6; off-solution trace identities=0; explicit failed-Q witnesses=0
+F4 n=7: diagonal exclusions=6; off-solution trace identities=48; explicit failed-Q witnesses=2
+F4 n=9: diagonal exclusions=72; off-solution trace identities=0; explicit failed-Q witnesses=0
+F4 n=11: diagonal exclusions=30; off-solution trace identities=0; explicit failed-Q witnesses=0
+F4 n=15: diagonal exclusions=234; off-solution trace identities=0; explicit failed-Q witnesses=0
+F4 n=23: diagonal exclusions=22; off-solution trace identities=880; explicit failed-Q witnesses=2
+F4 n=31: diagonal exclusions=270; off-solution trace identities=6720; explicit failed-Q witnesses=8
+F4 n=47: diagonal exclusions=46; off-solution trace identities=123; explicit failed-Q witnesses=2
+F4 n=71: diagonal exclusions=70; off-solution trace identities=123; explicit failed-Q witnesses=2
+F4 n=79: diagonal exclusions=78; off-solution trace identities=127; explicit failed-Q witnesses=2
+F4 n=103: diagonal exclusions=102; off-solution trace identities=124; explicit failed-Q witnesses=2
+F4 n=127: diagonal exclusions=1274; off-solution trace identities=2014; explicit failed-Q witnesses=32
+Inflation |G|=9, |K|=3: all 64 off-solution identities passed
+Inflation |G|=15, |K|=5: all 224 off-solution identities passed
+Inflation |G|=21, |K|=7: all 480 off-solution identities passed
+Inflation |G|=27, |K|=9: all 832 off-solution identities passed
+Inflation |G|=35, |K|=7: all 816 off-solution identities passed
+Inflation |G|=63, |K|=9: all 1984 off-solution identities passed
+F16 n=3: exhaustive candidates=5; all-Q winners=[(1,), (4,)]
+F16 n=11: exhaustive candidates=5; all-Q winners=[(2,), (3,)]
+F16 n=43: exhaustive candidates=125; all-Q winners=[]
+ALL EXACT CHECKS PASSED; the uniform obstruction is proved in Section 64.

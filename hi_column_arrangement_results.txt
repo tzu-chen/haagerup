@@ -1,0 +1,16 @@
+EXACT ONE-COLUMN ARRANGEMENT COUNTS; no additional Izumi equations asserted.
+n=3; exact affine characteristic polynomial=t - 3
+  one-column solutions=2; nonuniform subsets=0
+n=5; exact affine characteristic polynomial=t^2 - 5*t + 10
+  one-column solutions=6; nonuniform subsets=0
+n=7; exact affine characteristic polynomial=t^3 - 7*t^2 + 21*t - 35
+  one-column solutions=20; nonuniform subsets=0
+n=9; exact affine characteristic polynomial=t^4 - 9*t^3 + 36*t^2 - 83*t + 113
+  one-column solutions=58; nonuniform subsets=16
+n=11; exact affine characteristic polynomial=t^5 - 11*t^4 + 55*t^3 - 165*t^2 + 330*t - 462
+  one-column solutions=252; nonuniform subsets=0
+n=13; exact affine characteristic polynomial=t^6 - 13*t^5 + 78*t^4 - 286*t^3 + 715*t^2 - 1287*t + 1716
+  one-column solutions=924; nonuniform subsets=0
+n=15; exact affine characteristic polynomial=t^7 - 15*t^6 + 105*t^5 - 455*t^4 + 1363*t^3 - 2973*t^2 + 4785*t - 5303
+  one-column solutions=2492; nonuniform subsets=1858
+EXACT ARRANGEMENT CHECKS PASSED

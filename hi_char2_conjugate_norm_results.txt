@@ -1,0 +1,160 @@
+EXACT rational exceptional-term, factorization, and Mobius identities passed
+OFF-SOLUTION r=1 n=3 mode=fixed_line checks=16 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=3 mode=unit_norm checks=16 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=7 mode=fixed_line checks=48 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=7 mode=unit_norm checks=48 diagonal_zeros=0 
+F4_cross_witnesses=6
+OFF-SOLUTION r=1 n=9 mode=fixed_line checks=64 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=9 mode=unit_norm checks=64 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=15 mode=fixed_line checks=112 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=15 mode=unit_norm checks=112 diagonal_zeros=48 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=23 mode=fixed_line checks=176 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=23 mode=unit_norm checks=176 diagonal_zeros=0 
+F4_cross_witnesses=6
+OFF-SOLUTION r=1 n=31 mode=fixed_line checks=240 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=31 mode=unit_norm checks=240 diagonal_zeros=60 
+F4_cross_witnesses=4
+OFF-SOLUTION r=1 n=47 mode=fixed_line checks=368 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=47 mode=unit_norm checks=368 diagonal_zeros=276 
+F4_cross_witnesses=6
+OFF-SOLUTION r=1 n=71 mode=fixed_line checks=560 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=71 mode=unit_norm checks=560 diagonal_zeros=0 
+F4_cross_witnesses=5
+OFF-SOLUTION r=1 n=127 mode=fixed_line checks=1008 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=1 n=127 mode=unit_norm checks=1008 diagonal_zeros=322 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=3 mode=fixed_line checks=16 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=3 mode=unit_norm checks=16 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=7 mode=fixed_line checks=48 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=7 mode=unit_norm checks=48 diagonal_zeros=0 
+F4_cross_witnesses=2
+OFF-SOLUTION r=3 n=9 mode=fixed_line checks=64 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=9 mode=unit_norm checks=64 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=15 mode=fixed_line checks=112 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=15 mode=unit_norm checks=112 diagonal_zeros=48 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=23 mode=fixed_line checks=176 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=23 mode=unit_norm checks=176 diagonal_zeros=0 
+F4_cross_witnesses=7
+OFF-SOLUTION r=3 n=31 mode=fixed_line checks=240 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=31 mode=unit_norm checks=240 diagonal_zeros=40 
+F4_cross_witnesses=1
+OFF-SOLUTION r=3 n=47 mode=fixed_line checks=368 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=47 mode=unit_norm checks=368 diagonal_zeros=230 
+F4_cross_witnesses=5
+OFF-SOLUTION r=3 n=71 mode=fixed_line checks=560 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=71 mode=unit_norm checks=560 diagonal_zeros=0 
+F4_cross_witnesses=7
+OFF-SOLUTION r=3 n=127 mode=fixed_line checks=1008 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=3 n=127 mode=unit_norm checks=1008 diagonal_zeros=308 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=3 mode=fixed_line checks=16 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=3 mode=unit_norm checks=16 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=7 mode=fixed_line checks=48 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=7 mode=unit_norm checks=48 diagonal_zeros=0 
+F4_cross_witnesses=4
+OFF-SOLUTION r=5 n=9 mode=fixed_line checks=64 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=9 mode=unit_norm checks=64 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=15 mode=fixed_line checks=112 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=15 mode=unit_norm checks=112 diagonal_zeros=56 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=23 mode=fixed_line checks=176 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=23 mode=unit_norm checks=176 diagonal_zeros=0 
+F4_cross_witnesses=4
+OFF-SOLUTION r=5 n=31 mode=fixed_line checks=240 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=31 mode=unit_norm checks=240 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=47 mode=fixed_line checks=368 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=47 mode=unit_norm checks=368 diagonal_zeros=276 
+F4_cross_witnesses=6
+OFF-SOLUTION r=5 n=71 mode=fixed_line checks=560 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=71 mode=unit_norm checks=560 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=127 mode=fixed_line checks=1008 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=5 n=127 mode=unit_norm checks=1008 diagonal_zeros=196 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=3 mode=fixed_line checks=16 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=3 mode=unit_norm checks=16 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=7 mode=fixed_line checks=48 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=7 mode=unit_norm checks=48 diagonal_zeros=0 
+F4_cross_witnesses=6
+OFF-SOLUTION r=7 n=9 mode=fixed_line checks=64 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=9 mode=unit_norm checks=64 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=15 mode=fixed_line checks=112 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=15 mode=unit_norm checks=112 diagonal_zeros=40 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=23 mode=fixed_line checks=176 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=23 mode=unit_norm checks=176 diagonal_zeros=0 
+F4_cross_witnesses=5
+OFF-SOLUTION r=7 n=31 mode=fixed_line checks=240 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=31 mode=unit_norm checks=240 diagonal_zeros=30 
+F4_cross_witnesses=1
+OFF-SOLUTION r=7 n=47 mode=fixed_line checks=368 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=47 mode=unit_norm checks=368 diagonal_zeros=276 
+F4_cross_witnesses=6
+OFF-SOLUTION r=7 n=71 mode=fixed_line checks=560 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=71 mode=unit_norm checks=560 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=127 mode=fixed_line checks=1008 diagonal_zeros=0 
+F4_cross_witnesses=0
+OFF-SOLUTION r=7 n=127 mode=unit_norm checks=1008 diagonal_zeros=0 
+F4_cross_witnesses=0
+LEGENDRE n=7 field_degree=6 mode=fixed_line first_Q=false
+LEGENDRE n=7 field_degree=6 mode=unit_norm first_Q=false
+LEGENDRE n=23 field_degree=22 mode=fixed_line first_Q=false
+LEGENDRE n=23 field_degree=22 mode=unit_norm first_Q=false
+LEGENDRE n=31 field_degree=10 mode=fixed_line first_Q=false
+LEGENDRE n=31 field_degree=10 mode=unit_norm first_Q=false
+LEGENDRE n=47 field_degree=46 mode=fixed_line first_Q=false
+LEGENDRE n=47 field_degree=46 mode=unit_norm first_Q=false
+LEGENDRE n=71 field_degree=70 mode=fixed_line first_Q=false
+LEGENDRE n=71 field_degree=70 mode=unit_norm first_Q=false
+LEGENDRE n=79 field_degree=78 mode=fixed_line first_Q=false
+LEGENDRE n=79 field_degree=78 mode=unit_norm first_Q=false
+LEGENDRE n=103 field_degree=102 mode=fixed_line first_Q=false
+LEGENDRE n=103 field_degree=102 mode=unit_norm first_Q=false
+COMPLETE CONJUGATE-NORM CHECKS; no HI nonexistence or infinitude assertion

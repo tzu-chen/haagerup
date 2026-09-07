@@ -1,0 +1,32 @@
+START n=3; coefficient_ring=Z/8; residue_Q_imposed=False
+COEFFICIENT_CHECK=0,4
+Singular : signal 11 (v: 44105):
+current line:>>ideal J=std(I);<<
+Segment fault/Bus error occurred at 7fa6d64069a8 because of 10206 (r:1788767069)
+please inform the authors
+trying to restart...
+BASIS_SIZE=0
+C_FAILURES_1_2_4=81,81,81
+COMPLETE_MOD8_C_IDEAL
+START n=5; coefficient_ring=Z/8; residue_Q_imposed=False
+COEFFICIENT_CHECK=0,4
+Singular : signal 11 (v: 44105):
+current line:>>ideal J=std(I);<<
+Segment fault/Bus error occurred at 7fac9d2069a8 because of 10206 (r:1788767069)
+please inform the authors
+trying to restart...
+BASIS_SIZE=0
+C_FAILURES_1_2_4=625,625,625
+COMPLETE_MOD8_C_IDEAL
+START n=7; coefficient_ring=Z/8; residue_Q_imposed=False
+COEFFICIENT_CHECK=0,4
+Singular : signal 11 (v: 44105):
+current line:>>ideal J=std(I);<<
+Segment fault/Bus error occurred at 7f5e12a069a8 because of 10202 (r:1788767069)
+please inform the authors
+trying to restart...
+BASIS_SIZE=0
+C_FAILURES_1_2_4=2401,2401,2401
+COMPLETE_MOD8_C_IDEAL
+elapsed_seconds=0.194
+child_peak_RSS_MiB=18.87

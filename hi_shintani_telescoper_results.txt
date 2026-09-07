@@ -1,0 +1,8 @@
+EXACT generic quadratic: B primitive and reciprocal A primitive passed.
+EXACT endpoint coefficients: lower q^(k+1)-1; upper d_r*(q^(k+r+1)-q^2).
+EXACT rational r=2: Laurent degrees -8..8 unique primitive.
+EXACT rational r=3: Laurent degrees -8..8 inconsistent.
+NUMERICAL n=3: direct double-sine primitive errors=3.219369e-45
+NUMERICAL n=7: direct double-sine primitive errors=3.2617898e-45
+NUMERICAL n=11: direct double-sine primitive errors=2.6724025e-44
+COMPLETE: period primitives verified; the unweighted finite Q/C sums remain unproved.

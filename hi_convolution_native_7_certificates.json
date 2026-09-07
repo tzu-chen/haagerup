@@ -1,0 +1,94 @@
+{
+  "n": 7,
+  "modulus": 109,
+  "delta": 22,
+  "alpha": 4,
+  "N": 63,
+  "sizes": [
+    63,
+    1,
+    1
+  ],
+  "coefficients": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      0
+    ],
+    [
+      47,
+      0,
+      0
+    ],
+    [
+      16,
+      0,
+      0
+    ],
+    [
+      59,
+      0,
+      0
+    ],
+    [
+      62,
+      0,
+      0
+    ]
+  ],
+  "bits": 4,
+  "records": [
+    {
+      "seed": [
+        3,
+        0,
+        0
+      ],
+      "orbit_length": 3,
+      "phases": [
+        1,
+        21,
+        7,
+        25,
+        18,
+        59,
+        52
+      ],
+      "q": true,
+      "first_q": [],
+      "origin_valuation": 4,
+      "norm_valuation": 4
+    },
+    {
+      "seed": [
+        15,
+        0,
+        0
+      ],
+      "orbit_length": 3,
+      "phases": [
+        1,
+        25,
+        52,
+        7,
+        59,
+        21,
+        18
+      ],
+      "q": true,
+      "first_q": [],
+      "origin_valuation": 4,
+      "norm_valuation": 4
+    }
+  ]
+}

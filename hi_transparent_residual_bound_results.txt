@@ -1,0 +1,10 @@
+EXACT: generic C indices, unit-channel specializations, inverse Q indices, and exceptional-row cancellations
+TRANSPARENT_RESIDUAL_REGRESSION 3 negative pentagons 7776 entries 46494 Q_magnitude 2.982688965684015 C_magnitude 14.744531191605697 identity_error 1.790180836524724e-15
+TRANSPARENT_RESIDUAL_REGRESSION 3 positive pentagons 124 entries 2278 Q_magnitude 0.9365068376953253 C_magnitude 0.9365068376953253 identity_error 1.1443916996305594e-16
+TRANSPARENT_RESIDUAL_REGRESSION 5 negative pentagons 140 entries 20797 Q_magnitude 9.586176274967485 C_magnitude 29.88822340760817 identity_error 3.972054645195637e-15
+TRANSPARENT_RESIDUAL_REGRESSION 7 negative pentagons 156 entries 82943 Q_magnitude 6.290315743993567 C_magnitude 15.579703409161832 identity_error 1.4210854715202004e-14
+EXACT_RATIONAL_CORRECTION_REPLAY 3 sufficient_ratio_less_than 2e-16 rigidity_margin_passed
+EXACT_RATIONAL_CORRECTION_REPLAY 7 sufficient_ratio_less_than 5.9300525e-09 rigidity_margin_passed
+EXACT_RATIONAL_CORRECTION_REPLAY 11 sufficient_ratio_less_than 0.4362147822176608 rigidity_margin_passed
+Peak RSS: 103.3 MiB
+COMPLETE: transparent residual identities and inverse bounds; NO INFINITUDE CLAIM

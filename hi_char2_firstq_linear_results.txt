@@ -1,0 +1,13 @@
+SAVED n=3 branch=0: lower bits=0; rank=0; norm-compatible recoveries=1
+SAVED n=9 branch=0: lower bits=4; rank=4; norm-compatible recoveries=1
+SAVED n=9 branch=1: lower bits=4; rank=4; norm-compatible recoveries=1
+SAVED n=27 branch=0: lower bits=16; rank=16; norm-compatible recoveries=1
+SAVED n=27 branch=1: lower bits=16; rank=15; norm-compatible recoveries=1
+SAVED n=27 branch=2: lower bits=16; rank=16; norm-compatible recoveries=1
+TOP-SEED EXHAUSTION n=9: tested=65; affine-compatible=23; norm/first-Q candidates=24; large-kernel cases skipped=0
+  [rank, affine-compatible, norm-compatible lower count] histogram: [[1, 1, 2], 2; [1, 1, 3], 2; [2, 1, 2], 1; [3, 0, 0], 24; [4, 0, 0], 18; [4, 1, 0], 6; [4, 1, 1], 12]
+TOP-SEED SAMPLE n=27: tested=64; affine-compatible=17; norm/first-Q candidates=0; large-kernel cases skipped=1
+  [rank, affine-compatible, norm-compatible lower count] histogram: [[2, 1, -1], 1; [15, 0, 0], 13; [16, 0, 0], 34; [16, 1, 0], 16]
+TOP-SEED SAMPLE n=81: tested=64; affine-compatible=20; norm/first-Q candidates=0; large-kernel cases skipped=1
+  [rank, affine-compatible, norm-compatible lower count] histogram: [[2, 1, -1], 1; [51, 0, 0], 20; [51, 1, 0], 1; [52, 0, 0], 24; [52, 1, 0], 18]
+ALL EXACT FIRST-Q LINEAR CHECKS PASSED; remaining Q and C are not automatic.

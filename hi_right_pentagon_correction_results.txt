@@ -1,0 +1,17 @@
+EXACT_PATH_CERTIFICATE 5 tensor factors; 14 vertices; 21 edges; 9 faces; 8 eliminations; max cost 1
+RIGHT_COFACE {"face": 0, "old_transport": [3], "standard_transport": [3], "comparison_loop": [], "cost": 0}
+RIGHT_COFACE {"face": 2, "old_transport": [3, 11, -5], "standard_transport": [1], "comparison_loop": [3, 11, -5, -1], "cost": 0}
+RIGHT_COFACE {"face": 3, "old_transport": [3, 11, -5, 4, 9, 18, 20, -16, -12, -3], "standard_transport": [], "comparison_loop": [3, 11, -5, 4, 9, 18, 20, -16, -12, -3], "cost": 2}
+RIGHT_COFACE {"face": 7, "old_transport": [3, 11, -5, 4, 8, 10, -17], "standard_transport": [1, 4, 9], "comparison_loop": [3, 11, -5, 4, 8, 10, -17, -9, -4, -1], "cost": 2}
+RIGHT_COFACE {"face": 1, "old_transport": [3, 11, -5, 4, 8, -6], "standard_transport": [2], "comparison_loop": [3, 11, -5, 4, 8, -6, -2], "cost": 1}
+RIGHT_COFACE {"face": 8, "old_transport": [3, 11, -5, -1], "standard_transport": [], "comparison_loop": [3, 11, -5, -1], "cost": 0}
+EXACT_BIANCHI_TRANSPORT_BOUND 10 times q
+EXACT_CORRECTION_CONSTANTS: beta=57; e0<=1/130 gives eta<=1/2; displacement<=2e0
+RIGHT_COCHAIN_REGRESSION 0.0 q 2.33968125477998e-16 homotopy 1.4564595088825703e-16 homotopy_bound 1.4651803722655582e-15 Bianchi 2.0944800061979303e-17 Bianchi_bound 9.741694915787607e-31 exact_middle 1.3877787807814457e-17 handle 1.1102230246251565e-16 boundary 1.7067889794351463e-16
+RIGHT_COCHAIN_REGRESSION 0.0005 q 0.0015071560570466033 homotopy 0.0001791353685486992 homotopy_bound 0.009042936342279866 Bianchi 8.294332626410104e-07 Bianchi_bound 5.6787978057555325e-05 exact_middle 6.99574829982285e-17 handle 7.600592773963083e-05 boundary 0.00012268721796262523
+RIGHT_COCHAIN_REGRESSION 0.01 q 0.019589007692212116 homotopy 0.0005750957862694722 homotopy_bound 0.11753404615327283 Bianchi 5.876061693626086e-05 Bianchi_bound 0.009593046494578976 exact_middle 8.326718849482525e-17 handle 0.0005347293185491636 boundary 0.00023354984646941054
+RIGHT_COCHAIN_REGRESSION 0.1 q 0.31273596041317564 homotopy 0.016815901344010193 homotopy_bound 1.876415762479054 Bianchi 0.023682033779452716 Bianchi_bound 2.4330635516492385 exact_middle 6.143485085244438e-17 handle 0.004238779769209195 boundary 0.014939671437142215
+CORRECTION 0 q 0.0015071560570466033 e 0.0015071556291047688 mu 2.4548647759028076e-16 path_length 0.0
+CORRECTION 1 q 2.317099555125003e-08 e 2.3170995551250013e-08 mu 9.72829567489464e-09 path_length 0.0005098640246541397
+CORRECTION 2 q 2.536624606814088e-16 e 2.2444070730716007e-16 mu 1.2274323879514038e-16 path_length 0.0005098710504597229
+ALL RIGHT-COCHAIN AND CORRECTION REGRESSIONS PASSED; NO NEW HI EXISTENCE CLAIM

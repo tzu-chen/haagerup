@@ -1,0 +1,49 @@
+{
+  "n": 3,
+  "modulus": 31,
+  "delta": 13,
+  "alpha": 2,
+  "N": 5,
+  "sizes": [
+    5,
+    1,
+    1
+  ],
+  "coefficients": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      0
+    ]
+  ],
+  "bits": 4,
+  "records": [
+    {
+      "seed": [
+        2,
+        0,
+        0
+      ],
+      "orbit_length": 2,
+      "phases": [
+        1,
+        14,
+        3
+      ],
+      "q": true,
+      "first_q": [],
+      "origin_valuation": 4,
+      "norm_valuation": 4
+    }
+  ]
+}

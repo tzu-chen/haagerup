@@ -1,0 +1,9 @@
+n=3; target_digits=60; working_digits=80; norm=5.271099e-82; all Q=4.2168792e-81; all C=8.4337584e-81; cubic_count=81; worst=(0, 0, 0, 1)
+n=5; target_digits=60; working_digits=80; norm=1.0542198e-81; all Q=1.0015088e-80; all C=2.5301275e-80; cubic_count=625; worst=(2, 2, 3, 3)
+n=9; target_digits=60; working_digits=80; norm=2.6355495e-82; all Q=6.4146804e-80; all C=8.3717921e-79; cubic_count=6561; worst=(3, 3, 3, 3)
+n=17; target_digits=60; working_digits=80; norm=6.5888737e-82; all Q=4.6890298e-78; all C=1.3525283e-75; cubic_count=83521; worst=(7, 5, 7, 5)
+n=33; target_digits=60; working_digits=86; norm=1.0053823e-87; all Q=9.0092911e-80; sampled C=1.6855099e-75; cubic_count=1222; worst=(9, 15, 4, 10)
+n=65; target_digits=60; working_digits=102; norm=1.7091791e-103; all Q=1.5249076e-87; sampled C=3.3634312e-78; cubic_count=1414; worst=(21, 24, 19, 22)
+elapsed_seconds=40.655
+peak_RSS_MiB=36.03
+PASS: direct numerical residual checks; no interval certification claimed.

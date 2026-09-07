@@ -1,0 +1,3 @@
+n=9: all 12 twisted cross-branch norms passed; naive same-branch failures=12; failures after omitting the wrap-around Frobenius=0
+n=27: all 72 twisted cross-branch norms passed; naive same-branch failures=72; failures after omitting the wrap-around Frobenius=24
+SAVED FINITE CERTIFICATES SATISFY THE BRANCH-PERMUTING NORM LAWS

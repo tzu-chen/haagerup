@@ -1,0 +1,34 @@
+VERTICES {"0": "(a(b(c(de))))", "1": "(a(b((cd)e)))", "2": "(a((bc)(de)))", "3": "(a((b(cd))e))", "4": "(a(((bc)d)e))", "5": "((ab)(c(de)))", "6": "((ab)((cd)e))", "7": "((a(bc))(de))", "8": "(((ab)c)(de))", "9": "((a(b(cd)))e)", "10": "((a((bc)d))e)", "11": "(((ab)(cd))e)", "12": "(((a(bc))d)e)", "13": "((((ab)c)d)e)"}
+EDGES {"1": [0, 1], "2": [0, 2], "3": [0, 5], "4": [1, 3], "5": [1, 6], "6": [2, 4], "7": [2, 7], "8": [3, 4], "9": [3, 9], "10": [4, 10], "11": [5, 6], "12": [5, 8], "13": [6, 11], "14": [7, 8], "15": [7, 12], "16": [8, 13], "17": [9, 10], "18": [9, 11], "19": [10, 12], "20": [11, 13], "21": [12, 13]}
+FACE {"id": 0, "interval": [0, 2], "length": 5, "whisker": [], "word": [11, 13, 20, -16, -12]}
+FACE {"id": 2, "interval": [2, 4], "length": 5, "whisker": [11], "word": [-5, 4, 9, 18, -13]}
+FACE {"id": 3, "interval": [3, 5], "length": 5, "whisker": [11, -5, 4, 9, 18, 20, -16], "word": [-14, -7, -2, 3, 12]}
+FACE {"id": 4, "interval": [0, 3], "length": 4, "whisker": [11, -5, 4, 9, 18, 20], "word": [-21, -15, 14, 16]}
+FACE {"id": 5, "interval": [1, 4], "length": 4, "whisker": [11, -5, 4], "word": [8, 10, -17, -9]}
+FACE {"id": 7, "interval": [0, 4], "length": 5, "whisker": [11, -5, 4, 8, 10], "word": [19, 21, -20, -18, 17]}
+FACE {"id": 1, "interval": [1, 3], "length": 5, "whisker": [11, -5, 4, 8], "word": [-6, 7, 15, -19, -10]}
+FACE {"id": 8, "interval": [1, 5], "length": 5, "whisker": [11, -5], "word": [-1, 2, 6, -8, -4]}
+FACE {"id": 6, "interval": [2, 5], "length": 4, "whisker": [], "word": [-3, 1, 5, -11]}
+PRODUCT_ORDER [6, 8, 1, 7, 5, 4, 3, 2, 0]
+EXACT_FREE_WORD_BOUNDARY_PASSED: six pentagons, three squares, empty reduced word
+CANONICAL_FACE {"id": 0, "sign": -1, "transport": [12, 16], "pentagon": [-20, -13, -11, 12, 16]}
+CANONICAL_FACE {"id": 2, "sign": -1, "transport": [11, 13], "pentagon": [-18, -9, -4, 5, 13]}
+CANONICAL_FACE {"id": 3, "sign": 1, "transport": [11, -5, 4, 9, 18, 20, -16], "pentagon": [-14, -7, -2, 3, 12]}
+CANONICAL_FACE {"id": 7, "sign": -1, "transport": [11, -5, 4, 8, 10, 19, 21], "pentagon": [-21, -19, -17, 18, 20]}
+CANONICAL_FACE {"id": 1, "sign": 1, "transport": [11, -5, 4, 8, 10, 19], "pentagon": [-19, -10, -6, 7, 15]}
+CANONICAL_FACE {"id": 8, "sign": 1, "transport": [11, -5, 4, 8], "pentagon": [-8, -4, -1, 2, 6]}
+EXACT_TRANSPORT_LENGTH_SUM 28 B_LIPSCHITZ_BOUND 56
+EXACT_CORRECTION_CONSTANTS radius 1/200 e0 1/1000 eta 11/16 displacement 2/625
+EXACT_DUALITY_MARGIN: e0 <= 1/(4d) gives displacement <= 4/(5d) < 1/d
+UNITARY_REGRESSION 2 0.002 q 0.00683341473503313 r 0.006833374848653365 B_over_r_squared 0.4062584775139632
+UNITARY_REGRESSION 2 0.02 q 0.08116279243206556 r 0.08109593343309364 B_over_r_squared 0.19106861891776733
+UNITARY_REGRESSION 2 0.1 q 0.30402657999664257 r 0.30049331977891464 B_over_r_squared 0.42871288376607386
+UNITARY_REGRESSION 3 0.002 q 0.006415172271700386 r 0.006415139270016497 B_over_r_squared 0.475567774429802
+UNITARY_REGRESSION 3 0.02 q 0.06866769846168375 r 0.06862721333228093 B_over_r_squared 0.2730336642425171
+UNITARY_REGRESSION 3 0.1 q 0.3504004705784807 r 0.34498076412151896 B_over_r_squared 0.7514938810378637
+UNITARY_REGRESSION 7 0.002 q 0.004969990720265021 r 0.004969975374893162 B_over_r_squared 0.82355049087167
+UNITARY_REGRESSION 7 0.02 q 0.054264120230081175 r 0.05424414332250626 B_over_r_squared 0.8482163710391325
+UNITARY_REGRESSION 7 0.1 q 0.26532287758176587 r 0.2629777977148475 B_over_r_squared 0.9508852113864581
+FIVE_FACTOR_SECOND_DERIVATIVE 4.5642237643209596 bound 25
+MATRIX_REGRESSIONS_PASSED; max B/r^2 0.9508852113864581
+NO_HI_EXISTENCE_OR_OFF_SOLUTION_HOMOTOPY_CERTIFIED

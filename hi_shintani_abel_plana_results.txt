@@ -1,0 +1,9 @@
+NUMERICAL n=3 r=2 A/B/n-shift relative error=1.9000801e-30
+Finite sample sum: -1.77493703674727656217639e-30
+NUMERICAL nodes=32 cutoff=12.0 horizontal/endpoint/vertical=['2.31363190783534223', '-2.67522671799218719', '0.361594810157095308'] error=2.5034815e-13
+NUMERICAL nodes=64 cutoff=12.0 horizontal/endpoint/vertical=['2.31363190783534223', '-2.67522671799218719', '0.361594810156844621'] error=3.3901738e-16
+NUMERICAL n=3 r=3 A/B/n-shift relative error=6.9558232e-30
+Finite sample sum: 27.3245763329050030920088
+NUMERICAL nodes=32 cutoff=12.0 horizontal/endpoint/vertical=['22.2387582052411414', '6.97044038721988532', '-1.88462225957618374'] error=2.0160143e-11
+NUMERICAL nodes=64 cutoff=12.0 horizontal/endpoint/vertical=['22.2387582052411414', '6.97044038721988532', '-1.88462225955602283'] error=7.6058606e-16
+ABEL--PLANA AND PERIOD CHECKS PASSED; uniform target evaluations remain unproved.

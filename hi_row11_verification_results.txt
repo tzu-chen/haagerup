@@ -1,0 +1,12 @@
+homogeneity_failures=0
+EXACT RATIONAL STANDARD BASIS FINISHED
+input_inclusion_remainders=0
+characteristic_zero_hilbert_numerator=1, 0, 0, 0, 0, 0, -6, -4, -3, -2, -1, 93, 391, -1728, 2404, -1587, 500, -58, 0
+finite_field_hilbert_numerator=1, 0, 0, 0, 0, 0, -6, -4, -3, -2, -1, 93, 391, -1728, 2404, -1587, 500, -58, 0
+affine_inclusion_remainders=0
+affine_basis_size=21
+affine_scheme_length=12
+beta_representatives=17
+membership_failures=0
+EXACT ROW IDEAL MEMBERSHIP PASSED
+EXACT ORDER-11 HILBERT AND CUBIC CERTIFICATE PASSED

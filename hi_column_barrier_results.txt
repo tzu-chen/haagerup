@@ -1,0 +1,44 @@
+Concave-barrier construction: no Stark or HI seeds. Residual measurements are NUMERICAL.
+n=3: Newton steps=6; chamber margins x=0.243489, y=0.756511
+  NUMERICAL norm=0.0; proved column Q=2.45455e-91; conjectural all-column Q=1.96364e-90
+  NUMERICAL conjectural C (orbits, 2 tests)=1.22727e-91; 2 cross-free tuples covered
+  comparison to separately evaluated double sines: 1.81962e-60
+  q1=1.72208380573904224502706921215; seconds=0.00
+n=7: Newton steps=8; chamber margins x=0.0633596, y=0.153955
+  NUMERICAL norm=2.45455e-91; proved column Q=3.68182e-91; conjectural all-column Q=1.96364e-90
+  NUMERICAL conjectural C (orbits, 28 tests)=2.35962e-90; 510 cross-free tuples covered
+  comparison to separately evaluated double sines: 7.84589e-61
+  q1=10.3078696780804590050094397024; seconds=0.01
+n=11: Newton steps=8; chamber margins x=0.027122, y=0.0613394
+  NUMERICAL norm=2.45455e-91; proved column Q=6.21886e-66; conjectural all-column Q=1.05056e-64
+  NUMERICAL conjectural C (orbits, 170 tests)=6.91368e-64; 5850 cross-free tuples covered
+  comparison to separately evaluated double sines: 1.63179e-60
+  q1=34.3346905292460505794120242601; seconds=0.02
+n=19: Newton steps=9; chamber margins x=0.00923996, y=0.0198276
+  NUMERICAL norm=2.45455e-91; proved column Q=1.97262e-69; conjectural all-column Q=4.84598e-67
+  NUMERICAL conjectural C (orbits, 1590 tests)=2.10851e-65; 78642 cross-free tuples covered
+  comparison to separately evaluated double sines: 3.16256e-60
+  q1=164.657555451566428375044230822; seconds=0.16
+n=25: Newton steps=10; chamber margins x=0.00532833, y=0.0112395
+  NUMERICAL norm=2.45455e-91; proved column Q=3.36139e-89; conjectural all-column Q=2.0658e-85
+  NUMERICAL conjectural C (orbits, 4888 tests)=1.04275e-82; 267720 cross-free tuples covered
+  comparison to separately evaluated double sines: 2.28122e-60
+  q1=370.854191041311329724617215636; seconds=0.51
+n=31: Newton steps=10; chamber margins x=0.00345364, y=0.00720937
+  NUMERICAL norm=9.81819e-91; proved column Q=1.89699e-80; conjectural all-column Q=2.14482e-76
+  NUMERICAL conjectural C (orbits, 11760 tests)=5.21404e-73; 682950 cross-free tuples covered
+  comparison to separately evaluated double sines: 3.58497e-60
+  q1=705.254622306293774896681402411; seconds=1.30
+REQUESTED BARRIER CONSTRUCTIONS FINISHED; full existence is not proved uniformly.
+
+Larger orders: all quadratics, only eight sampled cubics.
+Concave-barrier construction: no Stark or HI seeds. Residual measurements are NUMERICAL.
+n=51: Newton steps=12; chamber margins x=0.00126242, y=0.00259102
+  NUMERICAL norm=1.68021e-150; proved column Q=7.48794e-149; conjectural all-column Q=3.27787e-139
+  NUMERICAL conjectural C (sample, 8 tests)=1.2369e-137
+  q1=3157.64629801472202889681818961; seconds=0.57
+n=101: Newton steps=13; chamber margins x=0.000317206, y=0.000642717
+  NUMERICAL norm=2.52032e-150; proved column Q=5.04238e-148; conjectural all-column Q=1.9698e-126
+  NUMERICAL conjectural C (sample, 8 tests)=1.75189e-119
+  q1=24934.1019511747067809632112362; seconds=4.05
+REQUESTED BARRIER CONSTRUCTIONS FINISHED; full existence is not proved uniformly.

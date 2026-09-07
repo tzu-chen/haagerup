@@ -1,0 +1,10 @@
+EXACT Euler word (DP)^3: coupling reflection, all phases cancel.
+EXACT partial Fourier reindexing: 276 off-solution cases; 276 have nonzero cubic residuals.
+NUMERICAL n=3: signed_column=5.04871e-29, two_ratio_shift=3.143248e-28, extra_residues=1.010431e-28, diagonal_residue=1.753473e-28
+NUMERICAL n=5: signed_column=2.019484e-28, two_ratio_shift=4.001344e-28, extra_residues=3.155607e-28, diagonal_residue=1.448593e-27
+NUMERICAL n=7: signed_column=3.029226e-28, two_ratio_shift=3.864539e-28, extra_residues=1.060315e-27, diagonal_residue=4.948315e-28
+NUMERICAL quadrature nodes=40, cutoff=12: Euler_error=1.0164316e-15, corrected_product_Fourier_error=5.37707e-7
+NUMERICAL quadrature nodes=80, cutoff=12: Euler_error=3.8919884e-16, corrected_product_Fourier_error=2.4404408e-13
+elapsed_seconds=154.850
+peak_RSS_MiB=29.24
+COMPLETE: requested reduction checks pass. Finite cubic transformation and HI infinitude remain unproved.

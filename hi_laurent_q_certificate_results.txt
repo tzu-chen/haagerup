@@ -1,0 +1,29 @@
+LEVEL n=3; L1_multiplier_bound=0; inputs=1; columns=5; rank=1; member=False
+LEVEL n=3; L1_multiplier_bound=1; inputs=3; columns=11; rank=3; member=False
+LEVEL n=3; L1_multiplier_bound=2; inputs=5; columns=13; rank=5; member=False
+LEVEL n=3; L1_multiplier_bound=3; inputs=7; columns=14; rank=7; member=False
+LEVEL n=3; L1_multiplier_bound=4; inputs=9; columns=16; rank=9; member=False
+LEVEL n=3; L1_multiplier_bound=5; inputs=11; columns=18; rank=11; member=False
+BOUNDED_NONMEMBERSHIP n=3; multiplier_bound=5; no nonexistence claim
+LEVEL n=5; L1_multiplier_bound=0; inputs=3; columns=12; rank=3; member=False
+LEVEL n=5; L1_multiplier_bound=1; inputs=15; columns=48; rank=15; member=False
+LEVEL n=5; L1_multiplier_bound=2; inputs=39; columns=72; rank=39; member=False
+LEVEL n=5; L1_multiplier_bound=3; inputs=75; columns=98; rank=75; member=False
+LEVEL n=5; L1_multiplier_bound=4; inputs=123; columns=130; rank=109; member=False
+LEVEL n=5; L1_multiplier_bound=5; inputs=183; columns=165; rank=145; member=True
+CERTIFIED n=5; terms=10; multiplier_degrees={0: 1, 3: 4, 4: 3, 5: 2}; elapsed_seconds=0.001
+LEVEL n=7; L1_multiplier_bound=0; inputs=6; columns=26; rank=6; member=False
+LEVEL n=7; L1_multiplier_bound=1; inputs=42; columns=152; rank=42; member=False
+LEVEL n=7; L1_multiplier_bound=2; inputs=150; columns=296; rank=150; member=False
+LEVEL n=7; L1_multiplier_bound=3; inputs=378; columns=487; rank=376; member=False
+LEVEL n=7; L1_multiplier_bound=4; inputs=774; columns=738; rank=681; member=False
+LEVEL n=7; L1_multiplier_bound=5; inputs=1386; columns=1058; rank=1008; member=False
+BOUNDED_NONMEMBERSHIP n=7; multiplier_bound=5; no nonexistence claim
+LEVEL n=9; L1_multiplier_bound=0; inputs=10; columns=44; rank=10; member=False
+LEVEL n=9; L1_multiplier_bound=1; inputs=90; columns=372; rank=90; member=False
+LEVEL n=9; L1_multiplier_bound=2; inputs=410; columns=948; rank=410; member=False
+LEVEL n=9; L1_multiplier_bound=3; inputs=1290; columns=1853; rank=1290; member=False
+LEVEL n=9; L1_multiplier_bound=4; inputs=3210; columns=3201; rank=3001; member=False
+LEVEL n=9; L1_multiplier_bound=5; inputs=6810; columns=5131; rank=4949; member=True
+CERTIFIED n=9; terms=187; multiplier_degrees={0: 6, 3: 97, 4: 83, 5: 1}; elapsed_seconds=0.183
+peak_RSS_MiB=24.55

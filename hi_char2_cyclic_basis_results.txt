@@ -1,0 +1,21 @@
+BASIS COMPARISON n 3 branch 0 HI corrected support 65 cyclic support 18 block 
+difference ranks [ 1, 3, 3 ]
+DIRECT WEYL-BASIS INTERTWINING PASSED n 3 branch 0
+CLUSTER BASIS COMPARISON n 3 branch 0 support 15 rank(Ctheta-R) 7
+BASIS COMPARISON n 9 branch 0 HI corrected support 2849 cyclic support 405 block
+difference ranks [ 1, 9, 9, 9, 9, 9, 9, 9, 9 ]
+DIRECT WEYL-BASIS INTERTWINING PASSED n 9 branch 0
+CLUSTER BASIS COMPARISON n 9 branch 0 support 416 rank(Ctheta-R) 72
+BASIS COMPARISON n 9 branch 1 HI corrected support 2849 cyclic support 405 block
+difference ranks [ 1, 9, 9, 9, 9, 9, 9, 9, 9 ]
+DIRECT WEYL-BASIS INTERTWINING PASSED n 9 branch 1
+CLUSTER BASIS COMPARISON n 9 branch 1 support 416 rank(Ctheta-R) 73
+BASIS COMPARISON n 27 branch 0 HI corrected support 90689 cyclic support 10206 
+block difference ranks [ 1, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 
+27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27 ]
+BASIS COMPARISON n 27 branch 1 HI corrected support 90689 cyclic support 10206 
+block difference ranks [ 1, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 
+27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27 ]
+BASIS COMPARISON n 27 branch 2 HI corrected support 90689 cyclic support 10206 
+block difference ranks [ 1, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 
+27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27 ]

@@ -1,0 +1,39 @@
+EXHAUSTIVE n=5; binary field degree=8; seed sizes=[17, 1, 1]; candidates=17; Q representatives=2
+TWO-Q first-seed degree=4 count=4
+TWO QUADRATICS total=4 primitive=4
+COMPLETE allQ=4 firstQ=4
+EXACT FINITE-FIELD HI CERTIFICATE: n=5 characteristic=2 field degree=8; all 25 Q and 625 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+COMPLETE PHASE CLASSIFICATION n=5: canonical points=4; Frobenius orbits=1; total phase points=20
+ARITHMETIC COMPARISON n=5: maximal-order discriminant=29; class number=1; h*phi(n)=4; canonical count=4; match=True
+EXHAUSTIVE n=7; binary field degree=6; seed sizes=[63, 1, 1]; candidates=63; Q representatives=2
+TWO-Q first-seed degree=3 count=6
+TWO QUADRATICS total=6 primitive=6
+COMPLETE allQ=6 firstQ=6
+EXACT FINITE-FIELD HI CERTIFICATE: n=7 characteristic=2 field degree=6; all 49 Q and 2401 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=7 characteristic=2 field degree=6; all 49 Q and 2401 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+COMPLETE PHASE CLASSIFICATION n=7: canonical points=6; Frobenius orbits=2; total phase points=42
+ARITHMETIC COMPARISON n=7: maximal-order discriminant=53; class number=1; h*phi(n)=6; canonical count=6; match=True
+EXHAUSTIVE n=11; binary field degree=20; seed sizes=[1025, 1, 1]; candidates=1025; Q representatives=3
+TWO-Q first-seed degree=2 count=2
+TWO-Q first-seed degree=10 count=10
+TWO QUADRATICS total=12 primitive=10
+COMPLETE allQ=12 firstQ=12
+EXACT FINITE-FIELD HI CERTIFICATE: n=11 characteristic=2 field degree=20; all 121 Q and 14641 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=11 characteristic=2 field degree=20; all 121 Q and 14641 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+COMPLETE PHASE CLASSIFICATION n=11: canonical points=12; Frobenius orbits=2; total phase points=132
+ARITHMETIC COMPARISON n=11: maximal-order discriminant=5; class number=1; h*phi(n)=10; canonical count=12; match=False
+EXHAUSTIVE n=13; binary field degree=24; seed sizes=[4097, 1, 1]; candidates=4097; Q representatives=4
+FILTER F(1,2) rejects=4
+TWO-Q first-seed degree=12 count=12
+TWO QUADRATICS total=12 primitive=12
+COMPLETE allQ=12 firstQ=16
+EXACT FINITE-FIELD HI CERTIFICATE: n=13 characteristic=2 field degree=24; all 169 Q and 28561 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+COMPLETE PHASE CLASSIFICATION n=13: canonical points=12; Frobenius orbits=1; total phase points=156
+ARITHMETIC COMPARISON n=13: maximal-order discriminant=173; class number=1; h*phi(n)=12; canonical count=12; match=True
+ALL EXPORTED ORBITS PASSED COMPLETE Q/C; these finite orders do not prove infinitude.

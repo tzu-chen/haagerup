@@ -1,0 +1,18 @@
+EXACT: all 16 reduced pentagon type patterns hold over Z
+EXACT: the unique invertible affine rule is f(a,b,c,o,x)=b+o-x
+EXACT: all four mixed pentagons give the stated support covariances
+EXACT finite-map lemma regression: n=3, 27 maps, only h(y)=y
+EXACT finite-map lemma regression: n=5, 3125 maps, only h(y)=y
+EXACT finite-map lemma regression: n=7, 823543 maps, only h(y)=y
+NUMERICAL: all associator blocks unitary at n=3
+NUMERICAL: every scalar balance summand agrees at n=3
+NUMERICAL: all Fibonacci pentagons pass at n=1
+n=3: invertible-output lower bound=1.732050807569; one noninvertible-output defect=1.939688993225; threshold=0.007692307692
+n=5: invertible-output lower bound=1.902113032590; one noninvertible-output defect=1.856686546511; threshold=0.007692307692
+n=7: invertible-output lower bound=1.949855824364; one noninvertible-output defect=1.819696601194; threshold=0.007692307692
+n=9: invertible-output lower bound=1.969615506024; one noninvertible-output defect=1.799456120489; threshold=0.007692307692
+n=11: invertible-output lower bound=1.979642883762; one noninvertible-output defect=1.786764132250; threshold=0.007692307692
+n=15: invertible-output lower bound=1.989043790737; one noninvertible-output defect=1.771765677929; threshold=0.007692307692
+n=23: invertible-output lower bound=1.995337538381; one noninvertible-output defect=1.757683661170; threshold=0.007692307692
+Peak RSS: 101.4 MiB
+COMPLETE: reduced construction and uniform extension obstruction; NO HI INFINITUDE CLAIM

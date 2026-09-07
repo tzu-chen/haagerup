@@ -1,0 +1,109 @@
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+  ***   Warning: new maximum stack size = 3000000512 (2861.023 Mbytes).
+n=3 ray=[2] absolute degree=4 signature=[2, 1]
+Using the explicit unit 1+sqrt(1-d)
+[ok] fixed-field degree=2; exact W*c(W)=d
+EXACT RAY NORM CONSTRUCTION PASSED
+[ok] unique arithmetic Frobenius at (2)
+[ok] Artin generator closes on the entire field
+[ok] physical conjugation is a nontrivial involution
+[ok] initial exact norm
+Initial norm candidate: Q(+)=0 Q(-)=0
+[ok] certified full absolute unit group
+Absolute unit basis completeness certified: 1
+[ok] initial norm element is integral and is a unit
+[ok] exact unit conjugation column 1
+[ok] exact unit conjugation column 2
+[ok] free unit conjugation squares to identity
+[ok] expected relative unit rank
+[ok] relative unit norm 1
+[ok] integral exact twice-offset
+Relative unit rank=1; twice-offset=[-5]
+[ok] lattice basis change is unimodular
+[ok] recentered exact free exponents
+Numerical lowest squared doubled-log score=0.5908607500705286150857550505421769144583930047255038706479303810108708758742624182966928021639756878
+Refined sphere vectors modulo +/-=1
+Lowest-shell vector 1: Q(+)=1 Q(-)=0
+[ok] selected unit has exact norm d
+[ok] all multiplier covariance entries
+[ok] all quadratic identities
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] all cubic identities via 1 balanced-beta representatives
+absolute trace W=3; absolute trace W^2/d=-1
+[ok] at least one complete Izumi solution was obtained
+RAY UNIT SEARCH PASSED: n=3; accepted shell vectors=1; exact Galois orbits=1
+n=7 ray=[6] absolute degree=12 signature=[6, 3]
+Using the explicit unit 1+sqrt(1-d)
+[ok] fixed-field degree=6; exact W*c(W)=d
+EXACT RAY NORM CONSTRUCTION PASSED
+[ok] unique arithmetic Frobenius at (3)
+[ok] Artin generator closes on the entire field
+[ok] physical conjugation is a nontrivial involution
+[ok] initial exact norm
+Initial norm candidate: Q(+)=0 Q(-)=0
+[ok] certified full absolute unit group
+Absolute unit basis completeness certified: 1
+[ok] initial norm element is integral and is a unit
+[ok] exact unit conjugation column 1
+[ok] exact unit conjugation column 2
+[ok] exact unit conjugation column 3
+[ok] exact unit conjugation column 4
+[ok] exact unit conjugation column 5
+[ok] exact unit conjugation column 6
+[ok] exact unit conjugation column 7
+[ok] exact unit conjugation column 8
+[ok] free unit conjugation squares to identity
+[ok] expected relative unit rank
+[ok] relative unit norm 1
+[ok] relative unit norm 2
+[ok] relative unit norm 3
+[ok] integral exact twice-offset
+Relative unit rank=3; twice-offset=[2, -1, -3]
+[ok] lattice basis change is unimodular
+[ok] recentered exact free exponents
+Numerical lowest squared doubled-log score=17.37648545206436164058019373507439851502301582994461374044128208035214380219184691573161875845679322
+Refined sphere vectors modulo +/-=9
+Lowest-shell vector 1: Q(+)=0 Q(-)=1
+[ok] selected unit has exact norm d
+[ok] all multiplier covariance entries
+[ok] all quadratic identities
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] all cubic identities via 6 balanced-beta representatives
+absolute trace W=7; absolute trace W^2/d=-15
+Lowest-shell vector 2: Q(+)=0 Q(-)=1
+Lowest-shell vector 3: Q(+)=0 Q(-)=1
+[ok] at least one complete Izumi solution was obtained
+RAY UNIT SEARCH PASSED: n=7; accepted shell vectors=3; exact Galois orbits=1
+n=11 ray=[2] absolute degree=4 signature=[2, 1]
+Using the explicit unit 1+sqrt(1-d)
+[ok] fixed-field degree=2; exact W*c(W)=d
+EXACT RAY NORM CONSTRUCTION PASSED
+[ok] unique arithmetic Frobenius at (2)
+[ok] Artin generator closes on the entire field
+[ok] physical conjugation is a nontrivial involution
+[ok] initial exact norm
+Initial norm candidate: Q(+)=0 Q(-)=0
+[ok] certified full absolute unit group
+Absolute unit basis completeness certified: 1
+[ok] initial norm element is integral and is a unit
+[ok] exact unit conjugation column 1
+[ok] exact unit conjugation column 2
+[ok] free unit conjugation squares to identity
+[ok] expected relative unit rank
+[ok] relative unit norm 1
+[ok] integral exact twice-offset
+Relative unit rank=1; twice-offset=[-5]
+[ok] lattice basis change is unimodular
+[ok] recentered exact free exponents
+Numerical lowest squared doubled-log score=1.177183143385125359131681044592070865062294422023721343335483956800405493944686564885635153677072196
+Refined sphere vectors modulo +/-=1
+Lowest-shell vector 1: Q(+)=1 Q(-)=0
+[ok] selected unit has exact norm d
+[ok] all multiplier covariance entries
+[ok] all quadratic identities
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] all cubic identities via 17 balanced-beta representatives
+absolute trace W=4; absolute trace W^2/d=-3
+[ok] at least one complete Izumi solution was obtained
+RAY UNIT SEARCH PASSED: n=11; accepted shell vectors=1; exact Galois orbits=1
+ALL REQUESTED RAY UNIT SEARCHES PASSED

@@ -1,0 +1,9 @@
+LEVEL n=15; L1_multiplier_bound=0; inputs=28; columns=178; rank=28; member=False
+LEVEL n=15; L1_multiplier_bound=1; inputs=28; columns=178; rank=28; member=False
+LEVEL n=15; L1_multiplier_bound=2; inputs=28; columns=178; rank=28; member=False
+LEVEL n=15; L1_multiplier_bound=3; inputs=1092; columns=2601; rank=1092; member=False
+LEVEL n=15; L1_multiplier_bound=4; inputs=4732; columns=5771; rank=4354; member=False
+LEVEL n=15; L1_multiplier_bound=5; inputs=13300; columns=13907; rank=12841; member=False
+LEVEL n=15; L1_multiplier_bound=6; inputs=36148; columns=28187; rank=27823; member=True
+CERTIFIED n=15; terms=8528; multiplier_degrees={0: 25, 3: 781, 4: 2355, 5: 4315, 6: 1052}; elapsed_seconds=76.588
+peak_RSS_MiB=279.70

@@ -1,0 +1,58 @@
+CASE n=3 digits=40
+  NUMERICAL kernel_shift=5.1103701e-41
+  NUMERICAL sample_correction=3.4438311e-41
+  NUMERICAL residue_cancellation=3.4438311e-41
+  NUMERICAL fourier=1.377536e-40
+  NUMERICAL spectral_inverse=2.0663028e-40
+  NUMERICAL all_Q=4.5917748e-41
+  NUMERICAL convolution=4.5917748e-41
+  NUMERICAL zero_mode=1.1479437e-41
+  NUMERICAL scalar_H=0.0
+  prescribed coordinate and Fourier chamber: PASS
+CASE n=5 digits=40
+  NUMERICAL kernel_shift=7.6736707e-41
+  NUMERICAL sample_correction=9.1835496e-41
+  NUMERICAL residue_cancellation=6.8876622e-41
+  NUMERICAL fourier=3.7020072e-40
+  NUMERICAL spectral_inverse=3.7537626e-40
+  NUMERICAL all_Q=1.8367099e-40
+  NUMERICAL convolution=9.1835496e-41
+  NUMERICAL zero_mode=9.1835496e-41
+  NUMERICAL scalar_H=0.0
+  prescribed coordinate and Fourier chamber: PASS
+CASE n=7 digits=40
+  NUMERICAL kernel_shift=1.6178816e-40
+  NUMERICAL sample_correction=2.7550649e-40
+  NUMERICAL residue_cancellation=2.8698593e-40
+  NUMERICAL fourier=2.2040519e-39
+  NUMERICAL spectral_inverse=1.2201316e-39
+  NUMERICAL all_Q=3.0588402e-40
+  NUMERICAL convolution=3.6734198e-40
+  NUMERICAL zero_mode=2.2040519e-39
+  NUMERICAL scalar_H=2.2958874e-40
+  prescribed coordinate and Fourier chamber: PASS
+CASE n=9 digits=40
+  NUMERICAL kernel_shift=1.5285079e-40
+  NUMERICAL sample_correction=4.5917748e-40
+  NUMERICAL residue_cancellation=2.7550649e-40
+  NUMERICAL fourier=1.5062875e-39
+  NUMERICAL spectral_inverse=9.5357535e-40
+  NUMERICAL all_Q=2.3543742e-39
+  NUMERICAL convolution=6.4284847e-40
+  NUMERICAL zero_mode=1.4693679e-39
+  NUMERICAL scalar_H=9.1835496e-41
+  prescribed coordinate and Fourier chamber: PASS
+CASE n=11 digits=40
+  NUMERICAL kernel_shift=2.6217361e-40
+  NUMERICAL sample_correction=8.2651947e-40
+  NUMERICAL residue_cancellation=1.102026e-39
+  NUMERICAL fourier=5.7026811e-39
+  NUMERICAL spectral_inverse=1.4189189e-38
+  NUMERICAL all_Q=8.4167057e-39
+  NUMERICAL convolution=1.5612034e-39
+  NUMERICAL zero_mode=2.9387359e-39
+  NUMERICAL scalar_H=8.2651947e-40
+  prescribed coordinate and Fourier chamber: PASS
+elapsed_seconds=67.879
+peak_RSS_MiB=26.01
+COMPLETE: all requested Fourier, residue, chamber and Q checks pass. The uniform proof is in Section 93; cubic identities and infinitude remain open.

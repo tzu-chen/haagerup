@@ -1,0 +1,9 @@
+CASE RM n=3 B=1.30277563773199465 shift_error=5.14981e-31
+  finite_sum=-1.08468374467889123244113e-30 endpoint_pair=-0.981606085906847952874193
+  NUMERICAL nodes=64 cutoff=24.0 contour=-0.981606045248214308597344 formula_error=4.0658634e-8
+  NUMERICAL nodes=128 cutoff=24.0 contour=-0.981606085906851669884682 formula_error=3.7170105e-15
+CASE off_RM n=3 B=1.25 shift_error=5.122894e-31
+  finite_sum=-0.538419808274932123173486 endpoint_pair=-1.19423840753153837781217
+  NUMERICAL nodes=64 cutoff=24.0 contour=-0.655818594552421548526529 formula_error=4.7041847e-9
+  NUMERICAL nodes=128 cutoff=24.0 contour=-0.655818599256569869696456 formula_error=3.6384942e-14
+COMPLETE: the contour identity is checked; its uniform RM evaluation remains unproved.

@@ -1,0 +1,7 @@
+ORBIT n=33 mask=64989013 boundary=0 length=20 F4_residue_degree=10
+ORBIT n=33 mask=251496637 boundary=0 length=20 F4_residue_degree=10
+ORBIT n=33 mask=414317049 boundary=0 length=20 F4_residue_degree=10
+ORBIT n=33 mask=1996608439 boundary=0 length=20 F4_residue_degree=10
+ORBIT n=33 mask=191761516 boundary=8 length=20 F4_residue_degree=10
+COMPLETE CLASSIFICATION n=33 norm_Frobenius_candidates=5384453125 first_Q=5265842 canonical_Q=100 U_orbits=5 raw_phase_count_if_C_verified=3300
+Cubic acceptance is supplied separately by the independent GP certificates.

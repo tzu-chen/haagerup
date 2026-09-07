@@ -1,0 +1,16 @@
+seed=9, branch=0, inflated order=27: 16 local Q passed; F(8,1)=1; full Q deliberately fails
+seed=9, branch=0, inflated order=45: 16 local Q passed; F(8,1)=1; full Q deliberately fails
+seed=9, branch=0, inflated order=81: 16 local Q passed; F(8,1)=1; full Q deliberately fails
+seed=9, branch=1, inflated order=27: 16 local Q passed; F(8,1)=1; full Q deliberately fails
+seed=9, branch=1, inflated order=45: 16 local Q passed; F(8,1)=1; full Q deliberately fails
+seed=9, branch=1, inflated order=81: 16 local Q passed; F(8,1)=1; full Q deliberately fails
+seed=27, branch=0, inflated order=81: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+seed=27, branch=0, inflated order=135: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+seed=27, branch=0, inflated order=243: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+seed=27, branch=1, inflated order=81: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+seed=27, branch=1, inflated order=135: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+seed=27, branch=1, inflated order=243: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+seed=27, branch=2, inflated order=81: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+seed=27, branch=2, inflated order=135: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+seed=27, branch=2, inflated order=243: 169 local Q passed; F(26,1)=1; full Q deliberately fails
+ALL EXACT INFLATION IDENTITIES PASSED; these are counterexamples to partial sufficiency.

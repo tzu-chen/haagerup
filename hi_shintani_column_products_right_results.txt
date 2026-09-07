@@ -1,0 +1,6 @@
+NUMERICAL shifted-interval collision residue error=1.009742e-28
+NUMERICAL shifted-interval nodes=40, cutoff=12: corrected_product_Fourier_error=6.2679128e-5
+NUMERICAL shifted-interval nodes=80, cutoff=12: corrected_product_Fourier_error=2.8930757e-10
+elapsed_seconds 67.60470258101122
+peak_RSS_MiB 26.98046875
+COMPLETE: shifted-interval numerical regression passes; finite cubic transformation remains unproved.

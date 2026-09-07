@@ -1,0 +1,15 @@
+[ok] exact general design weights and the HI specialization
+[ok] p=5: exact cyclotomic obstruction; differential error 3.97e-15
+[ok] p=7: exact cyclotomic obstruction; differential error 1.48e-14
+[ok] p=11: exact cyclotomic obstruction; differential error 2.81e-14
+[ok] p=13: exact cyclotomic obstruction; differential error 8.88e-14
+[ok] p=17: exact cyclotomic obstruction; differential error 9.57e-14
+[ok] p=19: exact cyclotomic obstruction; differential error 1.63e-13
+[ok] p=23: exact cyclotomic obstruction; differential error 2.43e-13
+[ok] p=29: exact cyclotomic obstruction; differential error 2.48e-13
+[ok] p=31: exact cyclotomic obstruction; differential error 2.17e-13
+[ok] Alltop tensor design at p=5; residual 2.47e-16
+[ok] Alltop tensor design at p=7; residual 8.88e-16
+[ok] Alltop tensor design at p=11; residual 2.44e-15
+[ok] HI weighted tensor design at n=13; residual 2.22e-15
+ALL WEIGHTED-DESIGN AND ALLTOP CHECKS PASSED

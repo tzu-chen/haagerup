@@ -1,0 +1,4 @@
+ORBIT n=9 mask=34 boundary=0 length=6 F4_residue_degree=6
+ORBIT n=9 mask=24 boundary=2 length=6 F4_residue_degree=6
+COMPLETE CLASSIFICATION n=9 norm_Frobenius_candidates=325 first_Q=24 canonical_Q=12 U_orbits=2 raw_phase_count_if_C_verified=108
+Cubic acceptance is supplied separately by the independent GP certificates.

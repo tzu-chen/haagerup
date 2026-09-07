@@ -1,0 +1,9 @@
+Odd orders 3 through 101: 50 exact lattice/matrix checks.
+Exact randomized quotient, pairing, form, and Galois comparisons: 6000.
+Gauss sums at multipliers 1,2,3: max error 4.794e-15.
+n=3, rank=12: S^2 5.412e-16, (ST)^3 1.353e-15, Sv-v 5.551e-16, Tv-v 0.000e+00, Gram 3.553e-15.
+n=5, rank=28: S^2 2.455e-16, (ST)^3 7.760e-16, Sv-v 2.220e-16, Tv-v 0.000e+00, Gram 5.329e-15.
+n=7, rank=52: S^2 3.331e-16, (ST)^3 1.348e-15, Sv-v 1.943e-16, Tv-v 0.000e+00, Gram 2.665e-14.
+n=9, rank=84: S^2 4.441e-16, (ST)^3 1.196e-15, Sv-v 4.718e-16, Tv-v 0.000e+00, Gram 7.105e-15.
+These checks do not construct associators or a Lagrangian algebra.
+Elapsed 0.681s; peak RSS 12.71 MiB.

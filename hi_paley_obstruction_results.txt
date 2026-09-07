@@ -1,0 +1,13 @@
+EXACT off-solution character identities: p=3
+EXACT off-solution character identities: p=7
+EXACT off-solution character identities: p=11
+EXACT off-solution character identities: p=19
+EXACT off-solution character identities: p=23
+EXACT off-solution character identities: p=31
+EXACT off-solution character identities: p=43
+EXACT double resultant, chi(2)=-1: p**6*(p - 11)**2*(p - 3)**14
+EXACT double resultant, chi(2)=1: p**6*(p + 1)**12*(p**4 - 76*p**3 + 406*p**2 + 532*p - 4047)
+Necessary Q identities exclude every prime p == 3 mod 4 except 3, 11.
+EXACT p=3: all 9 Q and 81 C positions passed; 0.01 seconds
+EXACT p=11: all 121 Q and 14641 C positions passed; 3.48 seconds
+PALEY OBSTRUCTION AND BOTH FINITE CERTIFICATES PASSED

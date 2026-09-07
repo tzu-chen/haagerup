@@ -1,0 +1,5 @@
+BUILD n 15 relations 35
+BASIS n 15 size 693 dimension 0 []
+time 57.570
+DEGREE 360
+BUILD n 19 relations 54

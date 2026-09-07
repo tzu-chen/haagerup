@@ -1,0 +1,10 @@
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+n=3; discriminant=13; class group=[]; ray group=[2]; order of Frobenius at (2)=2; index=1; conjugate-prime order=2; cycles of length 1 on Frobenius cosets=1
+n=9; discriminant=85; class group=[2]; ray group=[12]; order of Frobenius at (2)=6; index=2; conjugate-prime order=12; cycles of length 2 on Frobenius cosets=1
+n=27; discriminant=733; class group=[3]; ray group=[54]; order of Frobenius at (2)=18; index=3; conjugate-prime order=54; cycles of length 3 on Frobenius cosets=1
+n=81; discriminant=6565; class group=[4, 2]; ray group=[216, 2]; order of Frobenius at (2)=54; index=8; conjugate-prime order=216; cycles of length 4 on Frobenius cosets=2
+n=243; discriminant=59053; class group=[25]; ray group=[4050]; order of Frobenius at (2)=162; index=25; conjugate-prime order=810; cycles of length 5 on Frobenius cosets=5
+n=729; discriminant=531445; class group=[6, 6]; ray group=[2916, 6]; order of Frobenius at (2)=486; index=36; conjugate-prime order=2916; cycles of length 6 on Frobenius cosets=6
+n=2187; discriminant=4782973; class group=[42, 2]; ray group=[30618, 2, 2]; order of Frobenius at (2)=1458; index=84; conjugate-prime order=10206; cycles of length 7 on Frobenius cosets=12
+NONMAXIMAL ORDER: n=6561; conductor=5; maximal class number=96; order class number=384; conjugate-prime class order=8
+RAY INDICES CERTIFIED; HI ORBIT COUNTS ABOVE 27 ARE NOT ESTABLISHED

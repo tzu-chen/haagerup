@@ -1,0 +1,19 @@
+EXACT n=3 known_certificate_branch_0 absolute_residue_degree=4 modulus=2^24
+  contraction_defect_valuations=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+  arithmetic_Frobenius_4_equals_label_doubling: PASS
+  residual_valuations origin=24 norm=24 Q=24 all_C=24 (value 24 means zero modulo 2^24)
+EXACT n=9 known_certificate_branch_0 absolute_residue_degree=12 modulus=2^24
+  contraction_defect_valuations=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+  arithmetic_Frobenius_4_equals_label_doubling: PASS
+  residual_valuations origin=24 norm=24 Q=24 all_C=24 (value 24 means zero modulo 2^24)
+EXACT n=9 known_certificate_branch_1 absolute_residue_degree=12 modulus=2^24
+  contraction_defect_valuations=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+  arithmetic_Frobenius_4_equals_label_doubling: PASS
+  residual_valuations origin=24 norm=24 Q=24 all_C=24 (value 24 means zero modulo 2^24)
+EXACT n=3 constant_phase_negative_control absolute_residue_degree=4 modulus=2^24
+  contraction_defect_valuations=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+  arithmetic_Frobenius_4_equals_label_doubling: PASS
+  residual_valuations origin=2 norm=1 Q=0 all_C=0 (value 24 means zero modulo 2^24)
+elapsed_seconds=3.254
+peak_RSS_MiB=15.46
+COMPLETE: exact finite-precision lift and Frobenius checks pass. The negative control excludes completion from the convolution alone; uniform cubic completion is not proved.

@@ -1,0 +1,10 @@
+Checking scalar-reindexing orbit 2: hi_finite_field_certificates/hi_finite_field_33_char2_cayley_251496637.json
+EXACT FINITE-FIELD HI CERTIFICATE: n=33 characteristic=2 field degree=20; all 1089 Q and 1185921 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+Checking scalar-reindexing orbit 3: hi_finite_field_certificates/hi_finite_field_33_char2_cayley_414317049.json
+EXACT FINITE-FIELD HI CERTIFICATE: n=33 characteristic=2 field degree=20; all 1089 Q and 1185921 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+Checking scalar-reindexing orbit 4: hi_finite_field_certificates/hi_finite_field_33_char2_cayley_1996608439.json
+EXACT FINITE-FIELD HI CERTIFICATE: n=33 characteristic=2 field degree=20; all 1089 Q and 1185921 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+COMPLETE INDEPENDENT VERIFICATION: 3 scalar-reindexing orbit(s), 1 earlier orbit(s) skipped.

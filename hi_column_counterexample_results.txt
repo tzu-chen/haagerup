@@ -1,0 +1,3 @@
+[ok] exact order-three symmetry, generic norms, and complete columns 0, 1, 4
+[ok] the four remaining nonzero Q residuals equal -31*d-4
+EXACT ALGEBRAIC ONE-COLUMN COUNTEREXAMPLE PASSED

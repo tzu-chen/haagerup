@@ -1,0 +1,6 @@
+PROBE COUNTS n 3 direct [trials,norm,firstQ,fullQ] [ 60, 33, 0, 0 ]
+relative norm [trials,norm,firstQ,fullQ] [ 60, 33, 0, 0 ]
+PROBE COUNTS n 9 direct [trials,norm,firstQ,fullQ] [ 450, 0, 0, 0 ]
+relative norm [trials,norm,firstQ,fullQ] [ 450, 0, 0, 0 ]
+PROBE COUNTS n 27 direct [trials,norm,firstQ,fullQ] [ 3780, 0, 0, 0 ]
+relative norm [trials,norm,firstQ,fullQ] [ 3780, 0, 0, 0 ]

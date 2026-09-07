@@ -1,0 +1,8 @@
+EXACT lens Bernoulli/sign identity passed off the RM locus for all odd n<=59.
+NUMERICAL fixed-period identity n=3; old/new log error=2.03916e-56; log(q_0)-log(d)=0.0; inverse-norm error=0.0; W_0=-1 recovered
+NUMERICAL fixed-period identity n=5; old/new log error=2.44699e-55; log(q_0)-log(d)=1.83524e-55; inverse-norm error=3.05874e-55; W_0=-1 recovered
+NUMERICAL fixed-period identity n=7; old/new log error=1.46819e-54; log(q_0)-log(d)=4.07832e-56; inverse-norm error=2.07994e-54; W_0=-1 recovered
+NUMERICAL fixed-period identity n=9; old/new log error=1.46787e-41; log(q_0)-log(d)=2.85482e-55; inverse-norm error=1.38663e-54; W_0=-1 recovered
+NUMERICAL fixed-period identity n=11; old/new log error=1.12901e-42; log(q_0)-log(d)=1.22349e-55; inverse-norm error=1.91681e-54; W_0=-1 recovered
+NUMERICAL fixed-period identity n=15; old/new log error=6.2485e-43; log(q_0)-log(d)=1.63133e-54; inverse-norm error=8.64603e-54; W_0=-1 recovered
+ALL REQUESTED COMPARISONS PASSED; no uniform additive HI identity is proved.

@@ -1,0 +1,17 @@
+EXACT n=3, r=2: all 6 balanced cross-free multiset pairs pass lift and sign checks; 0 use reversal.
+EXACT n=3, r=3: all 6 balanced cross-free multiset pairs pass lift and sign checks; 3 use reversal.
+NUMERICAL n=3, r=2: bare-sine finite target relative residual=1.257802e-41; a=(-1, -1), c=(2, 0)
+NUMERICAL n=3, r=3: bare-sine finite target relative residual=0.0; a=(-1, -1, -1), c=(2, 2, 2)
+EXACT n=5, r=2: all 30 balanced cross-free multiset pairs pass lift and sign checks; 0 use reversal.
+EXACT n=5, r=3: all 60 balanced cross-free multiset pairs pass lift and sign checks; 15 use reversal.
+EXACT n=7, r=2: all 84 balanced cross-free multiset pairs pass lift and sign checks; 0 use reversal.
+EXACT n=7, r=3: all 336 balanced cross-free multiset pairs pass lift and sign checks; 49 use reversal.
+NUMERICAL n=7, r=2: bare-sine finite target relative residual=2.918496e-42; a=(-5, -5), c=(6, 4)
+NUMERICAL n=7, r=3: bare-sine finite target relative residual=1.568253e-40; a=(-1, -5, -5), c=(6, 6, 6)
+EXACT n=9, r=2: all 180 balanced cross-free multiset pairs pass lift and sign checks; 0 use reversal.
+EXACT n=9, r=3: all 1242 balanced cross-free multiset pairs pass lift and sign checks; 108 use reversal.
+EXACT n=11, r=2: all 330 balanced cross-free multiset pairs pass lift and sign checks; 0 use reversal.
+EXACT n=11, r=3: all 3520 balanced cross-free multiset pairs pass lift and sign checks; 198 use reversal.
+NUMERICAL n=11, r=2: bare-sine finite target relative residual=3.364115e-41; a=(-9, -9), c=(10, 8)
+NUMERICAL n=11, r=3: bare-sine finite target relative residual=1.079765e-40; a=(-1, -9, -9), c=(10, 10, 10)
+ALL CANONICAL-LIFT CHECKS PASSED; uniform finite sums remain unproved.

@@ -1,0 +1,17 @@
+ORDER 3
+encoded F(1,1): variables=71, AND gates=29, XOR gates=37
+SAT status=True; elapsed=0.1s
+Every quadratic passed independently; full-Q data saved at /tmp/hi_sat_3_fullq.json.
+EXACT FINITE-FIELD HI CERTIFICATE: n=3 characteristic=2 field degree=4; all 9 Q and 81 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+INDEPENDENT COMPLETE CUBIC VERIFICATION PASSED. This proves one finite order only.
+ORDER 9
+encoded F(1,1): variables=1956, AND gates=788, XOR gates=1151
+encoded F(1,2): variables=2447, AND gates=980, XOR gates=1450
+encoded F(1,3): variables=2719, AND gates=1076, XOR gates=1626
+encoded F(3,3): variables=2857, AND gates=1108, XOR gates=1732
+SAT status=True; elapsed=0.1s
+Every quadratic passed independently; full-Q data saved at /tmp/hi_sat_9_fullq.json.
+EXACT FINITE-FIELD HI CERTIFICATE: n=9 characteristic=2 field degree=12; all 81 Q and 6561 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+INDEPENDENT COMPLETE CUBIC VERIFICATION PASSED. This proves one finite order only.

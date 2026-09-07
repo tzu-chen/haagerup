@@ -1,0 +1,17 @@
+EXACT FINITE-FIELD HI CERTIFICATE: n=3 characteristic=32029 field degree=1; all 9 Q and 81 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=3 characteristic=32029 field degree=1; all 9 Q and 81 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=5 characteristic=32051 field degree=2; all 25 Q and 625 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=5 characteristic=32051 field degree=2; all 25 Q and 625 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=7 characteristic=32089 field degree=6; all 49 Q and 2401 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=11 characteristic=32099 field degree=2; all 121 Q and 14641 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=11 characteristic=32099 field degree=10; all 121 Q and 14641 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=13 characteristic=32059 field degree=12; all 169 Q and 28561 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+ALL REQUESTED COMPLETE FINITE-FIELD CERTIFICATES PASSED

@@ -1,0 +1,24 @@
+SPECTRAL BUILD n 3 branch 0 size 9
+SPECTRAL RESULT n 3 branch 0 multiplicities [ 3, 1, 2, 2, 1 ]
+Jordan corrections [ 1, 0, 1, 1, 0 ]
+CPU seconds 0.000
+SPECTRAL BUILD n 9 branch 0 size 81
+SPECTRAL RESULT n 9 branch 0 multiplicities [ 17, 17, 15, 15, 17 ]
+Jordan corrections [ 1, 1, 0, 0, 1 ]
+CPU seconds 0.000
+SPECTRAL BUILD n 9 branch 1 size 81
+SPECTRAL RESULT n 9 branch 1 multiplicities [ 17, 16, 16, 16, 16 ]
+Jordan corrections [ 1, 1, 0, 0, 1 ]
+CPU seconds 0.010
+SPECTRAL BUILD n 27 branch 0 size 729
+SPECTRAL RESULT n 27 branch 0 multiplicities [ 147, 145, 146, 146, 145 ]
+Jordan corrections [ 1, 0, 1, 1, 0 ]
+CPU seconds 0.660
+SPECTRAL BUILD n 27 branch 1 size 729
+SPECTRAL RESULT n 27 branch 1 multiplicities [ 147, 145, 146, 146, 145 ]
+Jordan corrections [ 1, 0, 1, 1, 0 ]
+CPU seconds 0.680
+SPECTRAL BUILD n 27 branch 2 size 729
+SPECTRAL RESULT n 27 branch 2 multiplicities [ 147, 145, 146, 146, 145 ]
+Jordan corrections [ 1, 0, 1, 1, 0 ]
+CPU seconds 0.660

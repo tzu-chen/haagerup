@@ -1,0 +1,39 @@
+LEVEL n=13; L=0; inputs=21; columns=261; rank=21; pending=30
+LEVEL n=13; L=1; inputs=21; columns=261; rank=21; pending=30
+LEVEL n=13; L=2; inputs=21; columns=261; rank=21; pending=30
+LEVEL n=13; L=3; inputs=609; columns=1253; rank=609; pending=30
+LEVEL n=13; L=4; inputs=2373; columns=2522; rank=2163; pending=30
+CERTIFIED n=13; quad=(1, 1, 1, 7); L=5; terms=2398; remaining=29
+CERTIFIED n=13; quad=(1, 1, 2, 2); L=5; terms=2295; remaining=28
+CERTIFIED n=13; quad=(1, 1, 2, 5); L=5; terms=2351; remaining=27
+CERTIFIED n=13; quad=(1, 1, 2, 6); L=5; terms=2322; remaining=26
+CERTIFIED n=13; quad=(1, 1, 2, 10); L=5; terms=2291; remaining=25
+CERTIFIED n=13; quad=(1, 1, 3, 9); L=5; terms=2350; remaining=24
+CERTIFIED n=13; quad=(1, 2, 1, 4); L=5; terms=2275; remaining=23
+CERTIFIED n=13; quad=(1, 2, 1, 7); L=5; terms=2344; remaining=22
+LEVEL n=13; L=5; inputs=5901; columns=5438; rank=5273; pending=22
+CERTIFIED n=13; quad=(1, 1, 1, 9); L=6; terms=2382; remaining=21
+CERTIFIED n=13; quad=(1, 1, 2, 8); L=6; terms=2302; remaining=20
+CERTIFIED n=13; quad=(1, 1, 3, 3); L=6; terms=2629; remaining=19
+CERTIFIED n=13; quad=(1, 1, 5, 5); L=6; terms=2594; remaining=18
+CERTIFIED n=13; quad=(1, 2, 4, 2); L=6; terms=2342; remaining=17
+CERTIFIED n=13; quad=(1, 1, 1, 3); L=6; terms=2652; remaining=16
+CERTIFIED n=13; quad=(1, 1, 1, 4); L=6; terms=2898; remaining=15
+CERTIFIED n=13; quad=(1, 1, 1, 5); L=6; terms=2638; remaining=14
+CERTIFIED n=13; quad=(1, 1, 1, 8); L=6; terms=2685; remaining=13
+CERTIFIED n=13; quad=(1, 1, 1, 10); L=6; terms=2689; remaining=12
+CERTIFIED n=13; quad=(1, 1, 2, 9); L=6; terms=2660; remaining=11
+CERTIFIED n=13; quad=(1, 2, 1, 2); L=6; terms=2840; remaining=10
+CERTIFIED n=13; quad=(1, 2, 1, 5); L=6; terms=2651; remaining=9
+CERTIFIED n=13; quad=(1, 2, 3, 3); L=6; terms=2672; remaining=8
+CERTIFIED n=13; quad=(1, 3, 1, 3); L=6; terms=2616; remaining=7
+CERTIFIED n=13; quad=(1, 1, 2, 4); L=6; terms=2684; remaining=6
+CERTIFIED n=13; quad=(1, 1, 2, 7); L=6; terms=2357; remaining=5
+CERTIFIED n=13; quad=(1, 1, 3, 5); L=6; terms=2326; remaining=4
+CERTIFIED n=13; quad=(1, 2, 5, 3); L=6; terms=2667; remaining=3
+CERTIFIED n=13; quad=(1, 1, 1, 11); L=6; terms=3042; remaining=2
+CERTIFIED n=13; quad=(1, 1, 4, 4); L=6; terms=3128; remaining=1
+CERTIFIED n=13; quad=(1, 1, 1, 1); L=6; terms=3100; remaining=0
+BUNDLE hi_laurent_q_batch13_certificates.json; certificates=30/30; bounds={5: 8, 6: 22}; complete_degree_bound=True
+elapsed_seconds=2.140; peak_RSS_MiB=139.89
+Finite identities only. No new category existence or uniform degree bound is asserted.

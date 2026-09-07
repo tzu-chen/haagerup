@@ -1,0 +1,7 @@
+EXACT n=3; tuples=5; comparison_identities=20; direct_integer_ring_checks=4
+EXACT n=5; tuples=17; comparison_identities=272; direct_integer_ring_checks=8
+EXACT n=7; tuples=20; comparison_identities=720; direct_integer_ring_checks=12
+EXACT n=9; tuples=20; comparison_identities=1280; direct_integer_ring_checks=16
+elapsed_seconds=0.506
+peak_RSS_MiB=14.82
+COMPLETE: degree-eleven obstruction and exact Q-ideal comparison; no uniform cubic certificate.

@@ -1,0 +1,27 @@
+Analytic Shintani ghost construction, 60 requested digits + 15 guard digits.
+No polynomial seeds, unit searches, or fitted signs. Every additive check is NUMERICAL.
+NUMERICAL integral reflection/shift/scaling checks: 5.6999e-76
+n=3: q1=1.72208380573904224502706921215; norm=1.3818e-76; conjugate product-1=1.3818e-76
+  NUMERICAL Q=1.1054e-75; C representatives=2.2454e-76; 2 orbits cover 2 cross-free tuples; seconds=1.69
+n=7: q1=10.3078696780804590050094397024; norm=1.1054e-75; conjugate product-1=7.0817e-76
+  NUMERICAL Q=5.2049e-75; C representatives=1.3438e-74; 28 orbits cover 510 cross-free tuples; seconds=9.30
+n=11: q1=34.3346905292460505794120242601; norm=1.1054e-75; conjugate product-1=1.7791e-75
+  NUMERICAL Q=3.6391e-74; C representatives=1.0376e-72; 170 orbits cover 5850 cross-free tuples; seconds=22.32
+n=13: q1=54.9139905860709429142660850619; norm=3.3163e-75; conjugate product-1=5.009e-76
+  NUMERICAL Q=2.8367e-73; C representatives=9.9322e-72; 336 orbits cover 13332 cross-free tuples; seconds=31.03
+n=19: q1=164.657555451566428375044230822; norm=5.5271e-75; conjugate product-1=4.3008e-75
+  NUMERICAL Q=4.5307e-72; C representatives=1.8433e-69; 1590 orbits cover 78642 cross-free tuples; seconds=66.63
+n=25: q1=370.854191041311329724617215636; norm=4.4217e-75; conjugate product-1=6.7189e-75
+  NUMERICAL Q=1.1863e-70; C representatives=2.5599e-67; 4888 orbits cover 267720 cross-free tuples; seconds=114.78
+n=31: q1=705.254622306293774896681402411; norm=1.5476e-74; conjugate product-1=1.982e-75
+  NUMERICAL Q=1.0931e-68; C representatives=1.3887e-64; 11760 orbits cover 682950 cross-free tuples; seconds=177.05
+ALL REQUESTED NUMERICAL CHECKS PASSED; infinitude and physical realization remain unproved.
+
+Independent higher-precision full-cubic regression:
+Analytic Shintani ghost construction, 80 requested digits + 15 guard digits.
+No polynomial seeds, unit searches, or fitted signs. Every additive check is NUMERICAL.
+NUMERICAL integral reflection/shift/scaling checks: 4.7987e-96
+n=7: q1=10.3078696780804590050094397024; norm=7.4907e-96; conjugate product-1=7.1396e-96
+  NUMERICAL Q=1.561e-95; C representatives=6.3737e-95; 28 orbits cover 510 cross-free tuples; seconds=17.56
+  independent full cubic maximum: 8.246e-95
+ALL REQUESTED NUMERICAL CHECKS PASSED; infinitude and physical realization remain unproved.

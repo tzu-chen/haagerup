@@ -1,0 +1,11 @@
+START n=17; periods=(257, 257); algebra_dimension=66049; Q_generators=36; cubic_orbits=63
+CERTIFIED n=17; quad=(1, 1, 1, 15); L=0; terms=0; remaining=62
+CERTIFIED n=17; quad=(1, 1, 2, 14); L=0; terms=0; remaining=61
+CERTIFIED n=17; quad=(1, 1, 3, 13); L=0; terms=0; remaining=60
+LEVEL n=17; L=0; words=1; inputs=36; columns=646; rank=36; pending=60
+LEVEL n=17; L=1; words=17; inputs=612; columns=3898; rank=612; pending=60
+LEVEL n=17; L=2; words=145; inputs=5220; columns=16034; rank=5212; pending=60
+BOUNDED_NONMEMBERSHIP n=17; quad=(1, 1, 1, 1); L=2; dual_support=1151
+BUNDLE hi_frobenius_q_batch17_L2_certificates.json.gz; certificates=3/63; bounds={0: 3}; complete_degree_bound=False
+elapsed_seconds=0.223; peak_RSS_MiB=91.29
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.

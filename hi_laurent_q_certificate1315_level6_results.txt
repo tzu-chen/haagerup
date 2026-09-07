@@ -1,0 +1,16 @@
+LEVEL n=13; L1_multiplier_bound=0; inputs=21; columns=120; rank=21; member=False
+LEVEL n=13; L1_multiplier_bound=1; inputs=21; columns=120; rank=21; member=False
+LEVEL n=13; L1_multiplier_bound=2; inputs=21; columns=120; rank=21; member=False
+LEVEL n=13; L1_multiplier_bound=3; inputs=609; columns=1213; rank=609; member=False
+LEVEL n=13; L1_multiplier_bound=4; inputs=2373; columns=2509; rank=2163; member=False
+LEVEL n=13; L1_multiplier_bound=5; inputs=5901; columns=5433; rank=5273; member=False
+LEVEL n=13; L1_multiplier_bound=6; inputs=14133; columns=9985; rank=9973; member=True
+CERTIFIED n=13; terms=2667; multiplier_degrees={0: 14, 3: 417, 4: 1123, 5: 1059, 6: 54}; elapsed_seconds=5.954
+LEVEL n=15; L1_multiplier_bound=0; inputs=28; columns=178; rank=28; member=False
+LEVEL n=15; L1_multiplier_bound=1; inputs=28; columns=178; rank=28; member=False
+LEVEL n=15; L1_multiplier_bound=2; inputs=28; columns=178; rank=28; member=False
+LEVEL n=15; L1_multiplier_bound=3; inputs=1092; columns=2601; rank=1092; member=False
+LEVEL n=15; L1_multiplier_bound=4; inputs=4732; columns=5771; rank=4354; member=False
+LEVEL n=15; L1_multiplier_bound=5; inputs=13300; columns=13907; rank=12841; member=False
+INCOMPLETE n=15; level=6; timeout_seconds=45.0
+peak_RSS_MiB=247.15

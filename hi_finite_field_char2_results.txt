@@ -1,0 +1,5 @@
+EXACT FINITE-FIELD HI CERTIFICATE: n=3 characteristic=2 field degree=4; all 9 Q and 81 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+EXACT FINITE-FIELD HI CERTIFICATE: n=11 characteristic=2 field degree=4; all 121 Q and 14641 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+ALL REQUESTED COMPLETE FINITE-FIELD CERTIFICATES PASSED

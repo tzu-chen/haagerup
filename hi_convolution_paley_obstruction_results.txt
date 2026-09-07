@@ -1,0 +1,11 @@
+EXACT symbolic elimination and unit factor: PASS
+EXACT p=3; a=11; b=13; norm_v=16; origin_v=16; witness=None
+EXACT p=11; a=2; b=3; norm_v=16; origin_v=16; witness=None
+EXACT p=19; a=11; b=13; norm_v=2; origin_v=3; witness={'q_indices': [1, 2], 'q': 6, 'c_indices': [0, 2, 1, 18], 'c': 7}
+EXACT p=43; a=2; b=3; norm_v=3; origin_v=4; witness={'q_indices': [1, 5], 'q': 6, 'c_indices': [0, 5, 1, 42], 'c': 7}
+EXACT p=67; a=11; b=13; norm_v=4; origin_v=5; witness={'q_indices': [1, 2], 'q': 1, 'c_indices': [0, 2, 1, 66], 'c': 6}
+EXACT p=131; a=11; b=13; norm_v=5; origin_v=6; witness={'q_indices': [1, 2], 'q': 1, 'c_indices': [0, 2, 1, 130], 'c': 6}
+EXACT p=4099; a=11; b=13; norm_v=10; origin_v=11; witness={'q_indices': [1, 2], 'q': 1, 'c_indices': [0, 2, 1, 4098], 'c': 6}
+elapsed_seconds=0.271
+peak_RSS_MiB=56.36
+COMPLETE: norm-only modulo-8 completion is false; residue-Q completion is not refuted.

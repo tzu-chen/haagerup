@@ -1,0 +1,12 @@
+START n=5; coefficient_ring=Z/8; residue_Q_imposed=False
+COEFFICIENT_CHECK=8,4
+BASIS_SIZE=31
+C_FAILURES_1_2_4=480,0,0
+COMPLETE_MOD8_C_IDEAL
+START n=7; coefficient_ring=Z/8; residue_Q_imposed=False
+COEFFICIENT_CHECK=8,4
+BASIS_SIZE=66
+C_FAILURES_1_2_4=2040,0,0
+COMPLETE_MOD8_C_IDEAL
+elapsed_seconds=3.621
+child_peak_RSS_MiB=33.06

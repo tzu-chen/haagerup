@@ -1,0 +1,8 @@
+LEVEL n=17; L1_multiplier_bound=0; inputs=36; columns=252; rank=36; member=False
+LEVEL n=17; L1_multiplier_bound=1; inputs=36; columns=252; rank=36; member=False
+LEVEL n=17; L1_multiplier_bound=2; inputs=36; columns=252; rank=36; member=False
+LEVEL n=17; L1_multiplier_bound=3; inputs=1764; columns=4820; rank=1764; member=False
+LEVEL n=17; L1_multiplier_bound=4; inputs=8676; columns=12193; rank=8046; member=False
+LEVEL n=17; L1_multiplier_bound=5; inputs=27684; columns=32897; rank=27054; member=False
+BOUNDED_NONMEMBERSHIP n=17; multiplier_bound=5; no nonexistence claim
+peak_RSS_MiB=269.80

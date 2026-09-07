@@ -1,0 +1,5 @@
+NORMAL-BASIS FIRST Q r 1 theta exponent 0 selfdual true gamma 0 fullQ true
+NORMAL-BASIS FIRST Q r 1 theta exponent 0 selfdual true gamma 1 fullQ true
+NORMAL-BASIS COUNTS r 1 n 3 normal theta 1 selfdual theta 1 first Q 2 full Q 2
+NORMAL-BASIS COUNTS r 3 n 9 normal theta 3 selfdual theta 3 first Q 0 full Q 0
+NORMAL-BASIS COUNTS r 5 n 33 normal theta 15 selfdual theta 5 first Q 0 full Q 0

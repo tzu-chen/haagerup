@@ -1,0 +1,1 @@
+COMPLETE n=33 candidates=4194304 first_Q=4188 full_Q=0 seconds=0.550173

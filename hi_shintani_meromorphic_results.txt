@@ -1,0 +1,7 @@
+NUMERICAL n=3: off-diagonal two-factor relative error=3.97297e-61
+NUMERICAL n=3: complex shift=4.32964e-60; complex norm=4.77101e-61; integer jump=4.45342e-60; origin residue=4.80201e-47
+NUMERICAL n=7: off-diagonal two-factor relative error=3.88986e-60
+NUMERICAL n=7: complex shift=3.26463e-59; complex norm=1.05076e-60; integer jump=4.61156e-59; origin residue=1.17001e-46
+NUMERICAL n=11: off-diagonal two-factor relative error=2.05671e-50
+NUMERICAL n=11: complex shift=2.6205e-59; complex norm=1.3684e-60; integer jump=1.86201e-58; origin residue=2.43375e-46
+ALL REQUESTED MEROMORPHIC CHECKS PASSED; no additive HI proof is claimed.

@@ -1,0 +1,80 @@
+START n=3; periods=(5,); algebra_dimension=5; generators=2; lift_errors=True; cubic_orbits=1
+CERTIFIED n=3; quad=(1, 1, 1, 1); L=0; terms=0; remaining=0
+LEVEL n=3; L=0; words=1; inputs=2; columns=5; rank=2; pending=0
+BUNDLE hi_frobenius_ql_batch3_L2_certificates.json.gz; certificates=1/1; bounds={0: 1}; complete_degree_bound=True
+elapsed_seconds=0.001; peak_RSS_MiB=71.72
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.
+START n=5; periods=(17,); algebra_dimension=17; generators=6; lift_errors=True; cubic_orbits=2
+CERTIFIED n=5; quad=(1, 1, 1, 3); L=0; terms=0; remaining=1
+LEVEL n=5; L=0; words=1; inputs=6; columns=17; rank=6; pending=1
+CERTIFIED n=5; quad=(1, 1, 1, 1); L=1; terms=9; remaining=0
+LEVEL n=5; L=1; words=5; inputs=30; columns=17; rank=13; pending=0
+BUNDLE hi_frobenius_ql_batch5_L2_certificates.json.gz; certificates=2/2; bounds={0: 1, 1: 1}; complete_degree_bound=True
+elapsed_seconds=0.001; peak_RSS_MiB=71.72
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.
+START n=7; periods=(63,); algebra_dimension=63; generators=12; lift_errors=True; cubic_orbits=6
+CERTIFIED n=7; quad=(1, 1, 1, 5); L=0; terms=0; remaining=5
+CERTIFIED n=7; quad=(1, 1, 2, 4); L=0; terms=0; remaining=4
+LEVEL n=7; L=0; words=1; inputs=12; columns=57; rank=12; pending=4
+CERTIFIED n=7; quad=(1, 1, 1, 1); L=1; terms=39; remaining=3
+CERTIFIED n=7; quad=(1, 1, 1, 3); L=1; terms=40; remaining=2
+CERTIFIED n=7; quad=(1, 1, 2, 2); L=1; terms=46; remaining=1
+CERTIFIED n=7; quad=(1, 2, 1, 2); L=1; terms=42; remaining=0
+LEVEL n=7; L=1; words=7; inputs=84; columns=63; rank=57; pending=0
+BUNDLE hi_frobenius_ql_batch7_L2_certificates.json.gz; certificates=6/6; bounds={0: 2, 1: 4}; complete_degree_bound=True
+elapsed_seconds=0.006; peak_RSS_MiB=71.97
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.
+START n=9; periods=(65, 5); algebra_dimension=325; generators=20; lift_errors=True; cubic_orbits=14
+CERTIFIED n=9; quad=(1, 1, 1, 7); L=0; terms=0; remaining=13
+CERTIFIED n=9; quad=(1, 1, 2, 6); L=0; terms=0; remaining=12
+CERTIFIED n=9; quad=(3, 3, 3, 3); L=0; terms=0; remaining=11
+LEVEL n=9; L=0; words=1; inputs=20; columns=270; rank=20; pending=11
+LEVEL n=9; L=1; words=9; inputs=180; columns=325; rank=180; pending=11
+CERTIFIED n=9; quad=(1, 1, 1, 1); L=2; terms=234; remaining=10
+CERTIFIED n=9; quad=(1, 1, 1, 3); L=2; terms=226; remaining=9
+CERTIFIED n=9; quad=(1, 1, 1, 4); L=2; terms=231; remaining=8
+CERTIFIED n=9; quad=(1, 1, 1, 5); L=2; terms=224; remaining=7
+CERTIFIED n=9; quad=(1, 1, 1, 6); L=2; terms=232; remaining=6
+CERTIFIED n=9; quad=(1, 1, 2, 2); L=2; terms=223; remaining=5
+CERTIFIED n=9; quad=(1, 1, 2, 4); L=2; terms=231; remaining=4
+CERTIFIED n=9; quad=(1, 1, 3, 3); L=2; terms=237; remaining=3
+CERTIFIED n=9; quad=(1, 2, 1, 2); L=2; terms=234; remaining=2
+CERTIFIED n=9; quad=(1, 2, 1, 5); L=2; terms=237; remaining=1
+CERTIFIED n=9; quad=(1, 2, 1, 6); L=2; terms=240; remaining=0
+BUNDLE hi_frobenius_ql_batch9_L2_certificates.json.gz; certificates=14/14; bounds={0: 3, 2: 11}; complete_degree_bound=True
+elapsed_seconds=0.123; peak_RSS_MiB=73.23
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.
+START n=11; periods=(1025,); algebra_dimension=1025; generators=30; lift_errors=True; cubic_orbits=17
+CERTIFIED n=11; quad=(1, 1, 1, 9); L=0; terms=0; remaining=16
+CERTIFIED n=11; quad=(1, 1, 2, 8); L=0; terms=0; remaining=15
+LEVEL n=11; L=0; words=1; inputs=30; columns=648; rank=30; pending=15
+LEVEL n=11; L=1; words=11; inputs=330; columns=1025; rank=330; pending=15
+CERTIFIED n=11; quad=(1, 1, 1, 1); L=2; terms=751; remaining=14
+CERTIFIED n=11; quad=(1, 1, 1, 3); L=2; terms=779; remaining=13
+CERTIFIED n=11; quad=(1, 1, 1, 4); L=2; terms=754; remaining=12
+CERTIFIED n=11; quad=(1, 1, 1, 6); L=2; terms=752; remaining=11
+CERTIFIED n=11; quad=(1, 1, 1, 7); L=2; terms=757; remaining=10
+CERTIFIED n=11; quad=(1, 1, 1, 8); L=2; terms=791; remaining=9
+CERTIFIED n=11; quad=(1, 1, 2, 2); L=2; terms=754; remaining=8
+CERTIFIED n=11; quad=(1, 1, 2, 4); L=2; terms=726; remaining=7
+CERTIFIED n=11; quad=(1, 1, 2, 5); L=2; terms=764; remaining=6
+CERTIFIED n=11; quad=(1, 1, 2, 6); L=2; terms=774; remaining=5
+CERTIFIED n=11; quad=(1, 1, 3, 3); L=2; terms=743; remaining=4
+CERTIFIED n=11; quad=(1, 1, 4, 4); L=2; terms=770; remaining=3
+CERTIFIED n=11; quad=(1, 2, 1, 2); L=2; terms=762; remaining=2
+CERTIFIED n=11; quad=(1, 2, 1, 4); L=2; terms=755; remaining=1
+CERTIFIED n=11; quad=(1, 2, 3, 4); L=2; terms=743; remaining=0
+BUNDLE hi_frobenius_ql_batch11_L2_certificates.json.gz; certificates=17/17; bounds={0: 2, 2: 15}; complete_degree_bound=True
+elapsed_seconds=0.652; peak_RSS_MiB=75.98
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.
+START n=13; periods=(4097,); algebra_dimension=4097; generators=42; lift_errors=True; cubic_orbits=30
+CERTIFIED n=13; quad=(1, 1, 1, 11); L=0; terms=0; remaining=29
+CERTIFIED n=13; quad=(1, 1, 2, 10); L=0; terms=0; remaining=28
+CERTIFIED n=13; quad=(1, 1, 3, 9); L=0; terms=0; remaining=27
+LEVEL n=13; L=0; words=1; inputs=42; columns=1548; rank=42; pending=27
+LEVEL n=13; L=1; words=13; inputs=546; columns=4009; rank=546; pending=27
+LEVEL n=13; L=2; words=85; inputs=3570; columns=4097; rank=3564; pending=27
+BOUNDED_NONMEMBERSHIP n=13; quad=(1, 1, 1, 1); L=2; dual_support=2705
+BUNDLE hi_frobenius_ql_batch13_L2_certificates.json.gz; certificates=3/30; bounds={0: 3}; complete_degree_bound=False
+elapsed_seconds=2.547; peak_RSS_MiB=78.98
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.

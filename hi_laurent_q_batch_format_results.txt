@@ -1,0 +1,13 @@
+LEVEL n=3; L=0; inputs=1; columns=5; rank=1; pending=1
+LEVEL n=3; L=1; inputs=1; columns=5; rank=1; pending=1
+LEVEL n=3; L=2; inputs=1; columns=5; rank=1; pending=1
+LEVEL n=3; L=3; inputs=3; columns=6; rank=3; pending=1
+LEVEL n=3; L=4; inputs=3; columns=6; rank=3; pending=1
+LEVEL n=3; L=5; inputs=3; columns=6; rank=3; pending=1
+CERTIFIED n=3; quad=(1, 1, 1, 1); L=6; terms=4; remaining=0
+LEVEL n=3; L=6; inputs=5; columns=7; rank=5; pending=0
+BUNDLE hi_laurent_q_batch3_certificates.json.gz; certificates=1/1; bounds={6: 1}; complete_degree_bound=True
+elapsed_seconds=0.001; peak_RSS_MiB=71.99
+Finite identities only. No new category existence or uniform degree bound is asserted.
+REPLAYED identity n=3; multiplier_bound=6; terms=4
+REPLAYED BUNDLE n=3; certificates=1/1; complete_degree_bound=True

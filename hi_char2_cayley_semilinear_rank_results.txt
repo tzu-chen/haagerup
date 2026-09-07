@@ -1,0 +1,4 @@
+EXACT SINGLE-FEATURE RANK {"n": 9, "histogram": {"(False, 2, True)": 6, "(True, 1, True)": 6}, "accepted": 12, "points": 12, "synthetic_reconstructions": 6}
+EXACT SINGLE-FEATURE RANK {"n": 33, "histogram": {"(False, 3, False)": 50, "(False, 2, False)": 20, "(False, 3, True)": 10, "(True, 3, False)": 20}, "accepted": 0, "points": 100, "synthetic_reconstructions": 10}
+COMPLETE: exact interpolation obstruction; infinitude is not established.
+peak_RSS_KiB=15168 elapsed_seconds=2.61

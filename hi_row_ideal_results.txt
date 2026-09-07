@@ -1,0 +1,29 @@
+CASE n=3
+ROW GROEBNER BASIS FINISHED
+basis_size=2
+scheme_length=2
+beta_representatives=1
+membership_failures=0
+EXACT ROW IDEAL MEMBERSHIP PASSED
+CASE n=5
+ROW GROEBNER BASIS FINISHED
+basis_size=6
+scheme_length=4
+beta_representatives=2
+membership_failures=0
+EXACT ROW IDEAL MEMBERSHIP PASSED
+CASE n=7
+ROW GROEBNER BASIS FINISHED
+basis_size=10
+scheme_length=6
+beta_representatives=6
+membership_failures=0
+EXACT ROW IDEAL MEMBERSHIP PASSED
+CASE n=9
+ROW GROEBNER BASIS FINISHED
+basis_size=16
+scheme_length=12
+beta_representatives=14
+membership_failures=0
+EXACT ROW IDEAL MEMBERSHIP PASSED
+ALL REQUESTED ROW IDEAL CHECKS PASSED

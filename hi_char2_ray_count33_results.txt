@@ -1,0 +1,1 @@
+CERTIFIED RAY-COUNT ARITHMETIC n=33; fundamental D=1093; conductor=1; maximal unit index=1; [overorder conductor,class number,unit image order,ray degree]=[[1, 5, 1, 100]]; sum=100; exact finite HI count matched

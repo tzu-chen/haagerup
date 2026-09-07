@@ -1,0 +1,86 @@
+constructed 3 q 32029 d 16171 size 2
+exact finite field: critical relations, commutativity, complete column passed 3
+Exact Krylov basis: order=3, dimension=2, choice=1
+p=3 q=32029 one-column length=2 H-phase quotient length=2 all-Q length in H quotient=2 selected factor degrees=[[1, 1], [1, 1]]
+FINITE-FIELD SCALAR CHECK PASSED; characteristic-zero lower bound still required
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+Exact characteristic-zero full-Q/H quotient length at 3: 2; all C passed
+EXACT SCALAR COMPLETION p=3: upper=lower=2; 0.06 seconds
+constructed 5 q 32051 d 648 size 6
+exact finite field: critical relations, commutativity, complete column passed 5
+Exact Krylov basis: order=5, dimension=6, choice=1
+p=5 q=32051 one-column length=6 H-phase quotient length=4 all-Q length in H quotient=4 selected factor degrees=[[2, 1], [2, 1]]
+FINITE-FIELD SCALAR CHECK PASSED; characteristic-zero lower bound still required
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+Exact characteristic-zero full-Q/H quotient length at 5: 4; all C passed
+EXACT SCALAR COMPLETION p=5: upper=lower=4; 0.08 seconds
+constructed 7 q 32089 d 16285 size 20
+exact finite field: critical relations, commutativity, complete column passed 7
+Exact Krylov basis: order=7, dimension=20, choice=1
+p=7 q=32089 one-column length=20 H-phase quotient length=6 all-Q length in H quotient=6 selected factor degrees=[[6, 1]]
+FINITE-FIELD SCALAR CHECK PASSED; characteristic-zero lower bound still required
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+Exact characteristic-zero full-Q/H quotient length at 7: 6; all C passed
+EXACT SCALAR COMPLETION p=7: upper=lower=6; 3.28 seconds
+constructed 11 q 32099 d 4506 size 252
+exact finite field: critical relations, commutativity, complete column passed 11
+Exact Krylov basis: order=11, dimension=252, choice=1
+p=11 q=32099 one-column length=252 H-phase quotient length=12 all-Q length in H quotient=12 selected factor degrees=[[2, 1], [10, 1]]
+FINITE-FIELD SCALAR CHECK PASSED; characteristic-zero lower bound still required
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+p=11 characteristic zero one-column length=12 H-phase quotient length=12 all-Q length in H quotient=12 selected factor degrees=[[2, 1], [10, 1]]
+EXACT CHARACTERISTIC-ZERO LOWER BOUND PASSED
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+  ***   Warning: new maximum stack size = 3000000512 (2861.023 Mbytes).
+EXACT SCALAR COMPLETION p=11: upper=lower=12; 3.19 seconds
+constructed 13 q 32059 d 1153 size 924
+exact finite field: critical relations, commutativity, complete column passed 13
+Exact Krylov basis: order=13, dimension=924, choice=1
+p=13 q=32059 one-column length=924 H-phase quotient length=12 all-Q length in H quotient=12 selected factor degrees=[[12, 1]]
+FINITE-FIELD SCALAR CHECK PASSED; characteristic-zero lower bound still required
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+  *** factor: Warning: increasing stack size to 16000000.
+[ok] input is an odd prime
+CASE n = 13
+[ok] base class/unit computation is certified
+[ok] returned polynomial has full ray degree
+[ok] returned polynomial is irreducible
+[ok] returned polynomial is reciprocal and monic
+[ok] returned field has the intended full ray conductor and degree
+[ok] relative root is the absolute primitive element
+[ok] embedded dimension has its defining equation
+[ok] field is Galois over the quadratic base
+[ok] unique arithmetic Frobenius at (2)
+[ok] complete consistent residue labels
+[ok] residue -1 inverts the Stark generator
+[ok] its fixed field is totally real
+[ok] all real embeddings of the full field have delta negative
+[ok] two exact fourth-root lifts for new row orbit 2
+[ok] exact fourth-root lift for row entry 2
+[ok] two exact fourth-root lifts for new row orbit 3
+[ok] exact fourth-root lift for row entry 3
+[ok] two exact fourth-root lifts for new row orbit 4
+[ok] exact fourth-root lift for row entry 4
+[ok] exact fourth-root lift for row entry 5
+[ok] exact fourth-root lift for row entry 6
+[ok] exact fourth-root lift for row entry 7
+[ok] sign transport closes and respects negation
+[ok] transport solves every linear sign equation
+[ok] their only freedom is a global generic sign
+[ok] multiplier covariance
+[ok] all quadratic Izumi equations, by exact scalar covariance
+[ok] rotation symmetry
+[ok] all generic fourth-power Stark formulas
+[ok] generic norms are delta
+[ok] balanced-beta orbits cover every cross-free scalar tuple
+[ok] every cubic Izumi equation, by exact balanced-beta orbit coverage
+[ok] constructed n=13 orbit equals the formerly recognized HI polynomial
+CERTIFIED n=13; ray_group=[12]; absolute_degree=24; sign_rank=5; beta_representatives=30; elapsed_ms=1082
+[ok] unique phase root in the certified field
+[ok] all phase norms
+[ok] exact scalar completion condition
+[ok] row coordinate has full absolute degree 24
+EXACT LOWER BOUND 12 AT ORDER 13 PASSED
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+EXACT SCALAR COMPLETION p=13: upper=lower=12; 111.39 seconds
+ALL REQUESTED CIRCUIT SCALAR-COMPLETION CERTIFICATES PASSED

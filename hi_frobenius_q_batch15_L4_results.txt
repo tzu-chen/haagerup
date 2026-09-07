@@ -1,0 +1,92 @@
+START n=15; periods=(255, 17, 5); algebra_dimension=21675; Q_generators=28; cubic_orbits=86
+CERTIFIED n=15; quad=(1, 1, 1, 13); L=0; terms=0; remaining=85
+CERTIFIED n=15; quad=(1, 1, 2, 12); L=0; terms=0; remaining=84
+CERTIFIED n=15; quad=(1, 1, 3, 11); L=0; terms=0; remaining=83
+CERTIFIED n=15; quad=(1, 1, 4, 10); L=0; terms=0; remaining=82
+CERTIFIED n=15; quad=(1, 1, 5, 9); L=0; terms=0; remaining=81
+CERTIFIED n=15; quad=(3, 3, 3, 9); L=0; terms=0; remaining=80
+CERTIFIED n=15; quad=(5, 5, 5, 5); L=0; terms=0; remaining=79
+LEVEL n=15; L=0; words=1; inputs=28; columns=567; rank=28; pending=79
+LEVEL n=15; L=1; words=15; inputs=420; columns=2479; rank=420; pending=79
+LEVEL n=15; L=2; words=113; inputs=3164; columns=8020; rank=3157; pending=79
+CERTIFIED n=15; quad=(1, 1, 1, 1); L=3; terms=10479; remaining=78
+CERTIFIED n=15; quad=(1, 1, 1, 3); L=3; terms=10533; remaining=77
+CERTIFIED n=15; quad=(1, 1, 1, 4); L=3; terms=10496; remaining=76
+CERTIFIED n=15; quad=(1, 1, 1, 5); L=3; terms=10456; remaining=75
+CERTIFIED n=15; quad=(1, 1, 1, 6); L=3; terms=10585; remaining=74
+CERTIFIED n=15; quad=(1, 1, 1, 8); L=3; terms=10596; remaining=73
+CERTIFIED n=15; quad=(1, 1, 1, 9); L=3; terms=10548; remaining=72
+CERTIFIED n=15; quad=(1, 1, 1, 10); L=3; terms=10483; remaining=71
+CERTIFIED n=15; quad=(1, 1, 1, 11); L=3; terms=10635; remaining=70
+CERTIFIED n=15; quad=(1, 1, 1, 12); L=3; terms=10541; remaining=69
+CERTIFIED n=15; quad=(1, 1, 2, 4); L=3; terms=10564; remaining=68
+CERTIFIED n=15; quad=(1, 1, 2, 5); L=3; terms=10546; remaining=67
+CERTIFIED n=15; quad=(1, 1, 2, 6); L=3; terms=10520; remaining=66
+CERTIFIED n=15; quad=(1, 1, 2, 7); L=3; terms=10491; remaining=65
+CERTIFIED n=15; quad=(1, 1, 2, 8); L=3; terms=10492; remaining=64
+CERTIFIED n=15; quad=(1, 1, 2, 9); L=3; terms=10684; remaining=63
+CERTIFIED n=15; quad=(1, 1, 2, 10); L=3; terms=10531; remaining=62
+CERTIFIED n=15; quad=(1, 1, 3, 5); L=3; terms=10578; remaining=61
+CERTIFIED n=15; quad=(1, 1, 3, 7); L=3; terms=10534; remaining=60
+CERTIFIED n=15; quad=(1, 1, 3, 8); L=3; terms=10565; remaining=59
+CERTIFIED n=15; quad=(1, 1, 3, 9); L=3; terms=10513; remaining=58
+CERTIFIED n=15; quad=(1, 1, 3, 10); L=3; terms=10635; remaining=57
+CERTIFIED n=15; quad=(1, 1, 4, 4); L=3; terms=10651; remaining=56
+CERTIFIED n=15; quad=(1, 1, 4, 7); L=3; terms=10584; remaining=55
+CERTIFIED n=15; quad=(1, 1, 4, 8); L=3; terms=10442; remaining=54
+CERTIFIED n=15; quad=(1, 1, 4, 9); L=3; terms=10488; remaining=53
+CERTIFIED n=15; quad=(1, 1, 5, 5); L=3; terms=10533; remaining=52
+CERTIFIED n=15; quad=(1, 1, 6, 6); L=3; terms=10506; remaining=51
+CERTIFIED n=15; quad=(1, 2, 1, 2); L=3; terms=10580; remaining=50
+CERTIFIED n=15; quad=(1, 2, 1, 4); L=3; terms=10552; remaining=49
+CERTIFIED n=15; quad=(1, 2, 1, 5); L=3; terms=10539; remaining=48
+CERTIFIED n=15; quad=(1, 2, 3, 4); L=3; terms=10435; remaining=47
+CERTIFIED n=15; quad=(1, 2, 3, 6); L=3; terms=10502; remaining=46
+CERTIFIED n=15; quad=(1, 2, 3, 9); L=3; terms=10569; remaining=45
+CERTIFIED n=15; quad=(1, 2, 3, 10); L=3; terms=10518; remaining=44
+CERTIFIED n=15; quad=(1, 2, 3, 11); L=3; terms=10630; remaining=43
+CERTIFIED n=15; quad=(1, 2, 3, 12); L=3; terms=10559; remaining=42
+CERTIFIED n=15; quad=(1, 2, 4, 2); L=3; terms=10622; remaining=41
+CERTIFIED n=15; quad=(1, 2, 5, 2); L=3; terms=10492; remaining=40
+CERTIFIED n=15; quad=(1, 2, 5, 3); L=3; terms=10546; remaining=39
+CERTIFIED n=15; quad=(1, 2, 5, 9); L=3; terms=10594; remaining=38
+CERTIFIED n=15; quad=(1, 2, 5, 10); L=3; terms=10638; remaining=37
+CERTIFIED n=15; quad=(1, 2, 5, 12); L=3; terms=10549; remaining=36
+CERTIFIED n=15; quad=(1, 2, 6, 2); L=3; terms=10575; remaining=35
+CERTIFIED n=15; quad=(1, 2, 6, 3); L=3; terms=10522; remaining=34
+CERTIFIED n=15; quad=(1, 2, 6, 10); L=3; terms=10535; remaining=33
+CERTIFIED n=15; quad=(1, 2, 6, 11); L=3; terms=10543; remaining=32
+CERTIFIED n=15; quad=(1, 2, 6, 12); L=3; terms=10622; remaining=31
+CERTIFIED n=15; quad=(1, 3, 1, 3); L=3; terms=10636; remaining=30
+CERTIFIED n=15; quad=(1, 3, 1, 5); L=3; terms=10575; remaining=29
+CERTIFIED n=15; quad=(1, 3, 1, 9); L=3; terms=10593; remaining=28
+CERTIFIED n=15; quad=(1, 3, 2, 4); L=3; terms=10656; remaining=27
+CERTIFIED n=15; quad=(1, 3, 3, 3); L=3; terms=10570; remaining=26
+CERTIFIED n=15; quad=(1, 3, 3, 5); L=3; terms=10557; remaining=25
+CERTIFIED n=15; quad=(1, 3, 6, 4); L=3; terms=10591; remaining=24
+CERTIFIED n=15; quad=(1, 4, 1, 4); L=3; terms=10570; remaining=23
+CERTIFIED n=15; quad=(1, 4, 1, 9); L=3; terms=10438; remaining=22
+CERTIFIED n=15; quad=(1, 4, 1, 10); L=3; terms=10633; remaining=21
+CERTIFIED n=15; quad=(1, 4, 5, 5); L=3; terms=10563; remaining=20
+CERTIFIED n=15; quad=(1, 5, 1, 5); L=3; terms=10493; remaining=19
+CERTIFIED n=15; quad=(1, 5, 1, 9); L=3; terms=10518; remaining=18
+CERTIFIED n=15; quad=(1, 5, 3, 5); L=3; terms=10622; remaining=17
+CERTIFIED n=15; quad=(1, 5, 5, 5); L=3; terms=10650; remaining=16
+CERTIFIED n=15; quad=(3, 3, 3, 3); L=3; terms=10538; remaining=15
+LEVEL n=15; L=3; words=549; inputs=15372; columns=14596; rank=14393; pending=15
+CERTIFIED n=15; quad=(1, 2, 1, 6); L=4; terms=10500; remaining=14
+CERTIFIED n=15; quad=(1, 2, 1, 9); L=4; terms=10486; remaining=13
+CERTIFIED n=15; quad=(1, 2, 1, 12); L=4; terms=10544; remaining=12
+CERTIFIED n=15; quad=(1, 2, 3, 8); L=4; terms=10468; remaining=11
+CERTIFIED n=15; quad=(1, 1, 4, 6); L=4; terms=10562; remaining=10
+CERTIFIED n=15; quad=(1, 2, 1, 8); L=4; terms=10592; remaining=9
+CERTIFIED n=15; quad=(1, 3, 2, 11); L=4; terms=10551; remaining=8
+CERTIFIED n=15; quad=(1, 1, 2, 2); L=4; terms=10558; remaining=7
+CERTIFIED n=15; quad=(1, 1, 2, 11); L=4; terms=10557; remaining=6
+CERTIFIED n=15; quad=(1, 1, 3, 3); L=4; terms=10620; remaining=5
+CERTIFIED n=15; quad=(1, 2, 1, 11); L=4; terms=10697; remaining=4
+CERTIFIED n=15; quad=(1, 2, 3, 3); L=4; terms=10552; remaining=3
+INCOMPLETE n=15; reason=timeout; inputs=26936; columns=17050; rank=16991
+BUNDLE hi_frobenius_q_batch15_L4_certificates.json.gz; certificates=83/86; bounds={0: 7, 3: 64, 4: 12}; complete_degree_bound=False
+elapsed_seconds=95.049; peak_RSS_MiB=301.69
+Finite identities modulo norm and Frobenius; no uniform implication is asserted.

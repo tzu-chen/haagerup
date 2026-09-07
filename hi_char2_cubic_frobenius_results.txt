@@ -1,0 +1,13 @@
+EXACT OFF-SOLUTION DIAGONAL-CUBIC IDENTITIES n=3; nonzero Q columns=2; nonzero Frobenius columns=2
+EXACT OFF-SOLUTION DIAGONAL-CUBIC IDENTITIES n=5; nonzero Q columns=4; nonzero Frobenius columns=4
+EXACT OFF-SOLUTION DIAGONAL-CUBIC IDENTITIES n=7; nonzero Q columns=6; nonzero Frobenius columns=6
+EXACT OFF-SOLUTION DIAGONAL-CUBIC IDENTITIES n=9; nonzero Q columns=8; nonzero Frobenius columns=8
+EXACT OFF-SOLUTION DIAGONAL-CUBIC IDENTITIES n=11; nonzero Q columns=10; nonzero Frobenius columns=10
+EXACT OFF-SOLUTION DIAGONAL-CUBIC IDENTITIES n=13; nonzero Q columns=12; nonzero Frobenius columns=12
+EXACT UNIQUE FROBENIUS GAUGE n=3 branch=0; all 3 character twists recovered; matrix covariance passed
+EXACT UNIQUE FROBENIUS GAUGE n=9 branch=0; all 9 character twists recovered; matrix covariance passed
+EXACT UNIQUE FROBENIUS GAUGE n=9 branch=1; all 9 character twists recovered; matrix covariance passed
+EXACT UNIQUE FROBENIUS GAUGE n=27 branch=0; all 27 character twists recovered; matrix covariance passed
+EXACT UNIQUE FROBENIUS GAUGE n=27 branch=1; all 27 character twists recovered; matrix covariance passed
+EXACT UNIQUE FROBENIUS GAUGE n=27 branch=2; all 27 character twists recovered; matrix covariance passed
+ALL EXACT DIAGONAL-CUBIC/FROBENIUS CHECKS PASSED; infinitude is not proved.

@@ -1,0 +1,10 @@
+START n=3; characteristic=0; timeout_seconds=20.0
+H_NORM_DIM=2
+Q_FAILURES=0
+COMPLETE_H_NORM_IDEAL
+START n=5; characteristic=0; timeout_seconds=20.0
+H_NORM_DIM=4
+Q_FAILURES=0
+COMPLETE_H_NORM_IDEAL
+elapsed_seconds=0.031
+child_peak_RSS_MiB=20.52

@@ -1,0 +1,9 @@
+OFF-SOLUTION Q/C TRANSFER IDENTITIES PASSED n=5
+OFF-SOLUTION Q/C TRANSFER IDENTITIES PASSED n=5
+Corrected pentagon eigen multiplicities: [3, 2, 1, 1, 2]
+COMPLETE CHAR-2 TRANSFER CERTIFICATE n=3; rank(R^5-I)=3, rank((R^5-I)^2)=1, rank(N)=2; order(R)=30
+Corrected pentagon eigen multiplicities: [17, 17, 15, 15, 17]
+COMPLETE CHAR-2 TRANSFER CERTIFICATE n=9; rank(R^5-I)=3, rank((R^5-I)^2)=1, rank(N)=2; order(R)=30
+Corrected pentagon eigen multiplicities: [17, 16, 16, 16, 16]
+COMPLETE CHAR-2 TRANSFER CERTIFICATE n=9; rank(R^5-I)=3, rank((R^5-I)^2)=1, rank(N)=2; order(R)=30
+ALL TRANSFER IDENTITY AND CHARACTERISTIC-TWO SPECTRAL CHECKS PASSED

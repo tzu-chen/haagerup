@@ -1,0 +1,7 @@
+EXACT Q ORBIT COVERAGE n=3: 4 pairs, 1 representatives
+EXACT Q ORBIT COVERAGE n=9: 64 pairs, 4 representatives
+EXACT Q ORBIT COVERAGE n=27: 676 pairs, 13 representatives
+EXACT Q ORBIT COVERAGE n=81: 6400 pairs, 40 representatives
+EXACT Q ORBIT COVERAGE n=243: 58564 pairs, 121 representatives
+EXACT Q ORBIT COVERAGE n=729: 529984 pairs, 364 representatives
+ALL ORBIT CHECKS PASSED; existence and uniform Q => C remain open.

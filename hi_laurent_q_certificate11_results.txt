@@ -1,0 +1,8 @@
+LEVEL n=11; L1_multiplier_bound=0; inputs=15; columns=76; rank=15; member=False
+LEVEL n=11; L1_multiplier_bound=1; inputs=165; columns=786; rank=165; member=False
+LEVEL n=11; L1_multiplier_bound=2; inputs=915; columns=2536; rank=915; member=False
+LEVEL n=11; L1_multiplier_bound=3; inputs=3465; columns=5863; rank=3465; member=False
+LEVEL n=11; L1_multiplier_bound=4; inputs=10215; columns=11513; rank=10070; member=False
+LEVEL n=11; L1_multiplier_bound=5; inputs=25245; columns=20543; rank=20131; member=True
+CERTIFIED n=11; terms=599; multiplier_degrees={0: 12, 3: 188, 4: 322, 5: 77}; elapsed_seconds=2.620
+peak_RSS_MiB=135.60

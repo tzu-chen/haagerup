@@ -1,0 +1,19 @@
+EXACT SCALAR ACTION n=3; canonical points=2; unit-group orbits=1; [stabilizer,multiplicity]=[((1,), 1)]; [F4 degree,field factors]=[(2, 1)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=5; canonical points=4; unit-group orbits=1; [stabilizer,multiplicity]=[((1,), 1)]; [F4 degree,field factors]=[(4, 1)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=7; canonical points=6; unit-group orbits=1; [stabilizer,multiplicity]=[((1,), 1)]; [F4 degree,field factors]=[(3, 2)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=9; canonical points=12; unit-group orbits=2; [stabilizer,multiplicity]=[((1,), 2)]; [F4 degree,field factors]=[(6, 2)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=11; canonical points=12; unit-group orbits=2; [stabilizer,multiplicity]=[((1,), 1), ((1, 3, 4, 5, 9), 1)]; [F4 degree,field factors]=[(2, 1), (10, 1)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=13; canonical points=12; unit-group orbits=1; [stabilizer,multiplicity]=[((1,), 1)]; [F4 degree,field factors]=[(12, 1)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=15; canonical points=24; unit-group orbits=3; [stabilizer,multiplicity]=[((1,), 3)]; [F4 degree,field factors]=[(4, 6)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=17; canonical points=16; unit-group orbits=1; [stabilizer,multiplicity]=[((1,), 1)]; [F4 degree,field factors]=[(8, 2)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=19; canonical points=36; unit-group orbits=2; [stabilizer,multiplicity]=[((1,), 2)]; [F4 degree,field factors]=[(18, 2)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=21; canonical points=48; unit-group orbits=4; [stabilizer,multiplicity]=[((1,), 4)]; [F4 degree,field factors]=[(6, 8)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=23; canonical points=44; unit-group orbits=2; [stabilizer,multiplicity]=[((1,), 2)]; [F4 degree,field factors]=[(11, 4)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=25; canonical points=40; unit-group orbits=2; [stabilizer,multiplicity]=[((1,), 2)]; [F4 degree,field factors]=[(20, 2)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=27; canonical points=54; unit-group orbits=3; [stabilizer,multiplicity]=[((1,), 3)]; [F4 degree,field factors]=[(18, 3)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=29; canonical points=60; unit-group orbits=3; [stabilizer,multiplicity]=[((1,), 2), ((1, 7, 16, 20, 23, 24, 25), 1)]; [F4 degree,field factors]=[(4, 1), (28, 2)]; all ray-action comparisons passed
+EXACT SCALAR ACTION n=31; canonical points=60; unit-group orbits=2; [stabilizer,multiplicity]=[((1,), 2)]; [F4 degree,field factors]=[(5, 12)]; all ray-action comparisons passed
+ARITHMETIC ONLY n=39; [conductor,class number,unit subgroup,Frobenius order]=[[1, 1, [1], 12], [5, 4, [1], 12]]; NO HI SOLUTION ASSERTED
+ARITHMETIC ONLY n=81; [conductor,class number,unit subgroup,Frobenius order]=[[1, 8, [1], 54]]; NO HI SOLUTION ASSERTED
+ARITHMETIC ONLY n=6561; [conductor,class number,unit subgroup,Frobenius order]=[[1, 96, [1], 4374], [5, 384, [1], 4374]]; NO HI SOLUTION ASSERTED
+ALL FINITE SCALAR-ACTION COMPARISONS PASSED; no uniform parametrization is proved.

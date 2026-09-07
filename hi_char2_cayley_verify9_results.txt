@@ -1,0 +1,4 @@
+Checking scalar-reindexing orbit 1: hi_finite_field_certificates/hi_finite_field_9_char2_cayley_34.json
+EXACT FINITE-FIELD HI CERTIFICATE: n=9 characteristic=2 field degree=12; all 81 Q and 6561 C passed; nonzero global dimension
+  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).
+COMPLETE INDEPENDENT VERIFICATION: 1 scalar-reindexing orbit(s).

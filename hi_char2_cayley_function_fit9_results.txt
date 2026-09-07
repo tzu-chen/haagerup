@@ -1,0 +1,10 @@
+FINITE CHART n=9 full-Q points=6 algebraic degree histogram={2: 6}
+FEATURE reciprocal dimension=10 fits=[(34, 2176), (35, 2177), (166, 2052), (167, 2053), (190, 2076), (191, 2077)]
+FEATURE power_1 dimension=8 fits=[]
+FEATURE power_2 dimension=8 fits=[]
+FEATURE power_3 dimension=10 fits=[(34, 2202), (35, 2203), (166, 2078), (167, 2079), (190, 2054), (191, 2055)]
+FEATURE power_4 dimension=8 fits=[]
+FEATURE power_5 dimension=10 fits=[(34, 2178), (35, 2179), (166, 2054), (167, 2055), (190, 2078), (191, 2079)]
+FEATURE power_6 dimension=10 fits=[(34, 2054), (35, 2055), (166, 2178), (167, 2179), (190, 2202), (191, 2203)]
+FEATURE power_7 dimension=10 fits=[(34, 2078), (35, 2079), (166, 2202), (167, 2203), (190, 2178), (191, 2179)]
+COMPLETE SEMILINEAR FUNCTION-FIT CHECK; no uniform existence assertion.

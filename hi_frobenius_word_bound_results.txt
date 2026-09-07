@@ -1,0 +1,6 @@
+QUAD (1, 5, 13, 41); cross_sums=(6, -13, -41, 18, -1, -29, 42, 23, -5)
+EXACT 118 orbit checks: r=11..128; n=2**r-1; nine independent coordinates
+The uniform proof, not this finite check, establishes the bound for every r>=11.
+Every Laurent Q certificate for this cubic modulo norm/Frobenius needs degree >=5.
+elapsed_seconds=0.039; peak_RSS_MiB=9.88
+No failure of Q-to-C or category nonexistence is asserted. Infinitude remains unproved.

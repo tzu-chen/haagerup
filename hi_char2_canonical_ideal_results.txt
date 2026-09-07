@@ -1,0 +1,6 @@
+CANONICAL BUILD n 9 relations 16 Q representatives 4
+CANONICAL BASIS n 9 size 29 dimension 0 []
+time 0.000
+CANONICAL DEGREE 12
+CUBIC MEMBERSHIP HAS NOT BEEN TESTED IN THIS RUN
+CANONICAL BUILD n 27 relations 52 Q representatives 13

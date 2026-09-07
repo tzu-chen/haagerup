@@ -1,0 +1,19 @@
+LINEAR-CAYLEY FIRST Q r 1 seed exponent 0 gamma 0 full Q true
+LINEAR-CAYLEY FIRST Q r 1 seed exponent 0 gamma 1 full Q true
+LINEAR-CAYLEY COUNTS r 1 n 3 seeds 1 candidates 4 first Q 2 full Q 2
+LINEAR-CAYLEY FIRST Q r 3 seed exponent 0 gamma g^1365 full Q false
+LINEAR-CAYLEY FIRST Q r 3 seed exponent 0 gamma g^2730 full Q false
+LINEAR-CAYLEY COUNTS r 3 n 9 seeds 16 candidates 64 first Q 2 full Q 0
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 0 gamma 0 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 0 gamma 1 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 179 gamma g^349525 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 179 gamma g^699050 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 203 gamma g^349525 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 203 gamma g^699050 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 716 gamma g^349525 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 716 gamma g^699050 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 812 gamma g^349525 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 812 gamma g^699050 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 818 gamma g^349525 full Q false
+LINEAR-CAYLEY FIRST Q r 5 seed exponent 818 gamma g^699050 full Q false
+LINEAR-CAYLEY COUNTS r 5 n 33 seeds 256 candidates 1024 first Q 12 full Q 0

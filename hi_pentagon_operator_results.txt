@@ -1,0 +1,45 @@
+  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).
+  ***   Warning: new maximum stack size = 3000000512 (2861.023 Mbytes).
+n=3 ray=[2] absolute degree=4 signature=[2, 1]
+[ok] fixed-field degree=2; exact W*c(W)=d
+EXACT RAY NORM CONSTRUCTION PASSED
+[ok] unique arithmetic Frobenius at (2)
+[ok] Artin generator closes on the entire field
+[ok] physical conjugation is a nontrivial involution
+[ok] initial exact norm
+[ok] complete quadratic input for the operator theorem
+[ok] exact two rank-one unitarity defects
+[ok] the universal three-dimensional invariant subspace
+[ok] exact scalar fifth-trace cubic certificate
+[ok] equivalent degree-eight operator polynomial
+PENTAGON OPERATOR CERTIFICATE PASSED: n=3; dimension of unitary part=6
+n=5 ray=[4] absolute degree=8 signature=[4, 2]
+[ok] fixed-field degree=4; exact W*c(W)=d
+EXACT RAY NORM CONSTRUCTION PASSED
+[ok] unique arithmetic Frobenius at (2)
+[ok] Artin generator closes on the entire field
+[ok] physical conjugation is a nontrivial involution
+[ok] initial exact norm
+[ok] complete quadratic input for the operator theorem
+[ok] exact two rank-one unitarity defects
+[ok] the universal three-dimensional invariant subspace
+[ok] exact scalar fifth-trace cubic certificate
+[ok] equivalent degree-eight operator polynomial
+PENTAGON OPERATOR CERTIFICATE PASSED: n=5; dimension of unitary part=22
+n=7 ray=[6] absolute degree=12 signature=[6, 3]
+[ok] fixed-field degree=6; exact W*c(W)=d
+EXACT RAY NORM CONSTRUCTION PASSED
+[ok] unique arithmetic Frobenius at (3)
+[ok] Artin generator closes on the entire field
+[ok] physical conjugation is a nontrivial involution
+[ok] initial exact norm
+[ok] complete quadratic input for the operator theorem
+[ok] exact two rank-one unitarity defects
+  *** _*_: Warning: increasing stack size to 16000000.
+[ok] the universal three-dimensional invariant subspace
+[ok] exact scalar fifth-trace cubic certificate
+  *** _*_: Warning: increasing stack size to 32000000.
+  *** _*_: Warning: increasing stack size to 64000000.
+[ok] equivalent degree-eight operator polynomial
+PENTAGON OPERATOR CERTIFICATE PASSED: n=7; dimension of unitary part=46
+ALL EXACT PENTAGON OPERATOR CHECKS PASSED

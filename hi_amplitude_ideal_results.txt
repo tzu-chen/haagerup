@@ -1,0 +1,21 @@
+CASE n=5
+basis_size=40
+dimension=0
+scheme_length=120
+amplitude_elimination=t^6+4*t^4-6*t^2+1
+EXACT ELIMINATION IDEAL EQUALITY PASSED
+Alltop_scheme_length=40
+HI_scheme_length=80
+SIC_scheme_length=0
+EXACT AMPLITUDE CALCULATION PASSED
+CASE n=7
+basis_size=196
+dimension=0
+scheme_length=308
+amplitude_elimination=t^10+2*t^8-36*t^6+9*t^4+28*t^2-4
+EXACT ELIMINATION IDEAL EQUALITY PASSED
+Alltop_scheme_length=84
+HI_scheme_length=168
+SIC_scheme_length=56
+EXACT AMPLITUDE CALCULATION PASSED
+ALL REQUESTED AMPLITUDE CHECKS PASSED

@@ -1,0 +1,15 @@
+EXACT four-term primitive: generic Laurent identity is zero.
+EXACT cross-free residual normalization: 572 off-solution cases.
+EXACT descending permutations: 202368 cases through n=35; all exceptional-frequency sets are consecutive blocks.
+EXACT signed normal form: 95496 cross-free quadruples through n=17; 47748 use simultaneous negation.
+NUMERICAL n=3: off-real gamma primitive error=1.2498921e-32
+NUMERICAL n=3: signed_Fourier_error=1.0894705e-32; 3 coefficient quadruples, relative error=7.3955761e-32
+NUMERICAL n=5: off-real gamma primitive error=5.2043902e-32
+NUMERICAL n=5: signed_Fourier_error=3.7265625e-32; 21 coefficient quadruples, relative error=4.9303883e-32
+NUMERICAL n=7: off-real gamma primitive error=2.5668359e-32
+NUMERICAL n=7: signed_Fourier_error=1.91753e-31; 47 coefficient quadruples, relative error=2.0337822e-31
+NUMERICAL n=9: off-real gamma primitive error=6.2069006e-32
+NUMERICAL n=9: signed_Fourier_error=1.8985567e-31; 81 coefficient quadruples, relative error=1.3714117e-31
+elapsed_seconds=18.811
+peak_RSS_MiB=57.88
+COMPLETE: all requested proof audits pass. Uniformity is supplied by the analytic and combinatorial proofs in Section 111.

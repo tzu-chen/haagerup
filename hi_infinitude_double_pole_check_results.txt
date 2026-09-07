@@ -1,0 +1,7 @@
+NUMERICAL coincident integer patch error 3.081487911e-33
+NUMERICAL full double-pole residue relative error 1.078520769e-32
+NUMERICAL nodes=40, cutoff=12: product Fourier error=2.144757378e-5
+NUMERICAL nodes=80, cutoff=12: product Fourier error=6.581894724e-12
+elapsed_seconds=83.093
+peak_RSS_MiB=29.07
+COMPLETE: the full double residue and the coincident diagonal patch both pass.

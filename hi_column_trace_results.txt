@@ -1,0 +1,22 @@
+NUMERICAL TRACE TESTS; no uniform completion theorem is asserted.
+n=3: S=1.0; Tr(R)=1.0; scalar defect=5.14994e-115; period-40 defect=2.69867e-115
+n=5: S=-7.419036789691902e-91; Tr(R)=2.0; scalar defect=2.66073e-90; period-40 defect=7.41904e-91
+n=7: S=1.0; Tr(R)=1.0; scalar defect=5.11957e-118; period-40 defect=1.62262e-118
+n=9: S=-0.6180339887498948; Tr(R)=1.618033988749895; scalar defect=6.49025e-85; period-40 defect=2.77305e-85
+n=11: S=0.6180339887498948; Tr(R)=1.618033988749895; scalar defect=3.87259e-121; period-40 defect=4.84074e-121
+n=13: S=-1.0; Tr(R)=1.0; scalar defect=6.32304e-108; period-40 defect=2.04966e-108
+n=15: S=9.347937707511743e-91; Tr(R)=2.0; scalar defect=2.52288e-90; period-40 defect=9.34794e-91
+n=17: S=-1.0; Tr(R)=1.0; scalar defect=4.95692e-119; period-40 defect=6.77704e-120
+n=19: S=-0.6180339887498948; Tr(R)=1.618033988749895; scalar defect=1.40962e-118; period-40 defect=2.44941e-119
+n=25: S=-9.731062840511347e-102; Tr(R)=2.0; scalar defect=1.46272e-101; period-40 defect=9.73106e-102
+n=31: S=-0.6180339887498948; Tr(R)=1.618033988749895; scalar defect=4.83454e-117; period-40 defect=5.95411e-119
+n=51: S=0.6180339887498948; Tr(R)=1.618033988749895; scalar defect=2.63211e-93; period-40 defect=2.27027e-93
+n=79: S=0.6180339887498948; Tr(R)=1.618033988749895; scalar defect=8.64636e-111; period-40 defect=2.16986e-115
+n=5, 4 orthants in ONE Fourier chamber: neither/trace-only/Q-only/both=[2, 0, 0, 2]; max Q accepted=3.13716e-87, max Q rejected=1.38516
+n=7, 8 orthants in ONE Fourier chamber: neither/trace-only/Q-only/both=[6, 0, 0, 2]; max Q accepted=2.45655e-101, max Q rejected=1.81049
+n=9, 16 orthants in ONE Fourier chamber: neither/trace-only/Q-only/both=[10, 0, 0, 6]; max Q accepted=1.47466e-83, max Q rejected=7.93349
+n=11, 32 orthants in ONE Fourier chamber: neither/trace-only/Q-only/both=[28, 0, 0, 4]; max Q accepted=2.47062e-96, max Q rejected=21.8264
+n=13, 64 orthants in ONE Fourier chamber: neither/trace-only/Q-only/both=[62, 0, 0, 2]; max Q accepted=2.12318e-86, max Q rejected=124.239
+n=15, 128 orthants in ONE Fourier chamber: neither/trace-only/Q-only/both=[122, 0, 0, 6]; max Q accepted=3.20405e-89, max Q rejected=422.027
+n=17, 256 orthants in ONE Fourier chamber: neither/trace-only/Q-only/both=[254, 0, 0, 2]; max Q accepted=4.94731e-82, max Q rejected=1452.16
+NUMERICAL TRACE TESTS FINISHED

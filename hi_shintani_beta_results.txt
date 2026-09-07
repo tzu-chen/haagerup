@@ -1,0 +1,4 @@
+NUMERICAL n=3; symmetric parameters a=c=[mpf('-0.5'), mpf('-0.5'), mpf('2.5')]; four-shift beta RHS=(0.0543986387185115715635018 + 0.0j)
+NUMERICAL nodes=32; cutoff=8.0; integral=0.0543986387093924343298662; error=9.1191372e-12
+NUMERICAL nodes=64; cutoff=8.0; integral=0.0543986387185115715151362; error=4.8365599e-20
+CONTINUOUS BETA NORMALIZATION CHECK PASSED; finite HI summation remains unproved.

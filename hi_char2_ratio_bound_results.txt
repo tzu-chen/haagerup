@@ -1,0 +1,7 @@
+n=3 branch=0: minimal patched rational-ratio degree=0; uniform lower bound=0; square-root Frobenius residual degree=0
+n=9 branch=0: minimal patched rational-ratio degree=4; uniform lower bound=2; square-root Frobenius residual degree=16
+n=9 branch=1: minimal patched rational-ratio degree=4; uniform lower bound=2; square-root Frobenius residual degree=16
+n=27 branch=0: minimal patched rational-ratio degree=12; uniform lower bound=6; square-root Frobenius residual degree=48
+n=27 branch=1: minimal patched rational-ratio degree=12; uniform lower bound=6; square-root Frobenius residual degree=48
+n=27 branch=2: minimal patched rational-ratio degree=12; uniform lower bound=6; square-root Frobenius residual degree=48
+ALL EXACT PATCHED-RATIO CHECKS PASSED; this is an obstruction, not infinitude.

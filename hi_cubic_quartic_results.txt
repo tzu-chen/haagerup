@@ -1,0 +1,7 @@
+EXACT off-solution residual identity: n=3, delta=2, axes=False; all 81 quartic positions passed
+EXACT off-solution residual identity: n=3, delta=2, axes=True; all 81 quartic positions passed
+EXACT off-solution residual identity: n=5, delta=-3/7, axes=False; all 625 quartic positions passed
+EXACT off-solution residual identity: n=5, delta=-3/7, axes=True; all 625 quartic positions passed
+EXACT off-solution residual identity: n=7, delta=11/4, axes=False; all 2401 quartic positions passed
+EXACT off-solution residual identity: n=7, delta=11/4, axes=True; all 2401 quartic positions passed
+ALL EXACT CUBIC-TO-QUARTIC INDEXING CHECKS PASSED

@@ -1,0 +1,11 @@
+EXACT off-solution Witt formulas n=3; tuples=5
+EXACT off-solution Witt formulas n=5; tuples=8
+EXACT off-solution Witt formulas n=7; tuples=8
+EXACT off-solution Witt formulas n=9; tuples=8
+EXACT all first-Q lift errors vanish on saved Q orbits n=3
+EXACT all first-Q lift errors vanish on saved Q orbits n=9
+EXACT all first-Q lift errors vanish on saved Q orbits n=27
+checked_Q_coordinates=2218
+elapsed_seconds=5.084
+peak_RSS_MiB=15.39
+COMPLETE: explicit Witt/Q obstruction formulas; uniform completion remains unproved.

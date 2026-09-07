@@ -1,0 +1,22 @@
+{
+  "n": 15,
+  "omega": 2,
+  "model": "canonical_norm_frobenius_v1",
+  "quad": [
+    1,
+    1,
+    2,
+    2
+  ],
+  "multiplier_bound": 3,
+  "functional": [
+    {
+      "exponent": [
+        96,
+        13,
+        3
+      ],
+      "coefficient": 1
+    }
+  ]
+}

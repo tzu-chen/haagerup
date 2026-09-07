@@ -1,0 +1,12 @@
+LARGEST FEATURE SPACES count=7 linear_dimension=32
+COMMON FIBER dimension=24 contained_in_each_space=true
+TRACE PLANE input_mask=1 features=reciprocal,power_3 binary_normal=6
+TRACE PLANE input_mask=1 features=reciprocal,power_5 binary_normal=4
+TRACE PLANE input_mask=1 features=reciprocal,power_7 binary_normal=2
+TRACE PLANE input_mask=1 features=power_3,power_7 binary_normal=7
+TRACE PLANE input_mask=1 features=power_3,power_15 binary_normal=1
+TRACE PLANE input_mask=1 features=power_5,power_15 binary_normal=3
+TRACE PLANE input_mask=3 features=power_5,power_15 binary_normal=5
+TRACE PATTERNS count=256 all_covered=true cover_multiplicities={1: 168, 3: 84, 7: 4}
+COMPLETE: all 4294967296 finite norm/Frobenius functions at order 33 fit this union of two-feature spaces. Only 80 satisfy full Q; these fits alone provide no HI construction.
+peak_RSS_KiB=13092 elapsed_seconds=0.30

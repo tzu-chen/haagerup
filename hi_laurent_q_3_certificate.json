@@ -1,0 +1,53 @@
+{
+  "n": 3,
+  "omega": 2,
+  "quad": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "multiplier_bound": 6,
+  "terms": [
+    {
+      "q": [
+        1,
+        1
+      ],
+      "shift": [
+        0
+      ],
+      "coefficient": 2
+    },
+    {
+      "q": [
+        1,
+        1
+      ],
+      "shift": [
+        -3
+      ],
+      "coefficient": 2
+    },
+    {
+      "q": [
+        1,
+        1
+      ],
+      "shift": [
+        3
+      ],
+      "coefficient": 1
+    },
+    {
+      "q": [
+        1,
+        1
+      ],
+      "shift": [
+        -6
+      ],
+      "coefficient": 1
+    }
+  ]
+}

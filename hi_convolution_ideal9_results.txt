@@ -1,0 +1,4 @@
+START n=9; characteristic=0; timeout_seconds=20.0
+INCOMPLETE n=9; timeout_seconds=20.0
+elapsed_seconds=20.022
+child_peak_RSS_MiB=26.57

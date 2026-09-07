@@ -1,0 +1,28 @@
+PARAMETERS n=3 precision=256 levels=9 uniform log remainder=[6.43008575900e-39 +/- 4.89e-51]
+BALL n=3 w=1 terms=75776 [1.3122819078761400972586326080198960087 +/- 1.97e-38]
+ENCLOSURE n=3 Q count=9 every residual lies in [+/- 1.71e-38] zero_contained=9/9
+ENCLOSURE n=3 C count=81 every residual lies in [+/- 6.51e-38] zero_contained=81/81
+CORRECTION n=3 M0_upper=[6.6055512875319 +/- 4.73e-14] full_pentagon_upper=[3.1243237844250e-35 +/- 3.80e-49] threshold=[2.3298815560292e-19 +/- 3.53e-33]
+CORRECTION n=3 sufficient_ratio=[1.3409796632537e-16 +/- 1.46e-30] unit_coefficient_change_upper=[1.4407984226056e-31 +/- 4.84e-45] result=VERIFIED_EXISTENCE_BY_CORRECTION
+PARAMETERS n=7 precision=256 levels=9 uniform log remainder=[6.43008575900e-39 +/- 4.89e-51]
+BALL n=7 w=1 terms=144896 [3.2105871235773152594302214787836268769 +/- 4.57e-38]
+BALL n=7 w=2 terms=144896 [2.3341940194792453664542882854430474611 +/- 4.87e-38]
+BALL n=7 w=3 terms=144896 [1.3563633902015582067991278350966734676 +/- 2.38e-38]
+ENCLOSURE n=7 Q count=49 every residual lies in [+/- 3.41e-37] zero_contained=49/49
+ENCLOSURE n=7 C count=2401 every residual lies in [+/- 1.98e-36] zero_contained=2401/2401
+CORRECTION n=7 M0_upper=[14.280109912157 +/- 5.88e-14] full_pentagon_upper=[2.0516452039357e-32 +/- 4.96e-46] threshold=[4.7843077280610e-24 +/- 5.10e-39]
+CORRECTION n=7 sufficient_ratio=[4.2882801871259e-9 +/- 4.24e-23] unit_coefficient_change_upper=[9.5590975253390e-28 +/- 1.74e-42] result=VERIFIED_EXISTENCE_BY_CORRECTION
+PARAMETERS n=11 precision=256 levels=9 uniform log remainder=[6.43008575900e-39 +/- 4.89e-51]
+BALL n=11 w=1 terms=216576 [5.8595810882046892772149419702617706153 +/- 4.30e-38]
+BALL n=11 w=2 terms=216576 [5.7772935189630276297823121397655201848 +/- 8.39e-38]
+BALL n=11 w=3 terms=216576 [4.1775916886257499399787433049005184320 +/- 3.77e-38]
+BALL n=11 w=4 terms=216576 [2.5172378665169101537512611927671492374 +/- 5.12e-38]
+BALL n=11 w=5 terms=216576 [1.3745828841138818346981582469351866398 +/- 3.01e-38]
+ENCLOSURE n=11 Q count=121 every residual lies in [+/- 3.30e-36] zero_contained=121/121
+ENCLOSURE n=11 C count=14641 every residual lies in [+/- 6.67e-35] zero_contained=14641/14641
+CORRECTION n=11 M0_upper=[34.334690749645 +/- 2.34e-13] full_pentagon_upper=[9.6705570028741e-30 +/- 5.71e-45] threshold=[2.2171590404732e-29 +/- 3.30e-44]
+CORRECTION n=11 sufficient_ratio=[0.43616884609280 +/- 2.00e-15] unit_coefficient_change_upper=[6.2628338773515e-24 +/- 7.11e-39] result=VERIFIED_EXISTENCE_BY_CORRECTION
+Peak RSS: 12.5 MiB
+COMPLETE: certified candidate and residual enclosures; exact Q/C and infinitude are NOT proved.
+PEAK_RSS_KIB 13100
+ELAPSED_SECONDS 3.07

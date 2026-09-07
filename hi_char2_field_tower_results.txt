@@ -1,0 +1,19 @@
+n=9: 120 off-solution unit-period identities passed; all three possible residual values are nonzero
+n=27: 360 off-solution unit-period identities passed; all three possible residual values are nonzero
+n=81: 1080 off-solution unit-period identities passed; all three possible residual values are nonzero
+n=243: 240 off-solution unit-period identities passed; all three possible residual values are nonzero
+n=3: saved R_2 degrees over F4 are [2]; each generates its entire saved coefficient field
+n=9: saved R_2 degrees over F4 are [6, 6]; each generates its entire saved coefficient field
+n=27: saved R_2 degrees over F4 are [18, 18, 18]; each generates its entire saved coefficient field
+q=4 normalized-norm exponent=0: irreducible trace choices=4 of 16
+q=4 normalized-norm exponent=1: irreducible trace choices=4 of 16
+q=4 normalized-norm exponent=2: irreducible trace choices=4 of 16
+q=4 normalized-norm exponent=3: irreducible trace choices=4 of 16
+q=4 normalized-norm exponent=4: irreducible trace choices=4 of 16
+q=4: 20 explicit cubic extensions passed both norm checks
+q=64 normalized-norm exponent=0: irreducible trace choices=1344 of 4096
+q=64 normalized-norm exponent=1: irreducible trace choices=1344 of 4096
+q=64 normalized-norm exponent=2: irreducible trace choices=1344 of 4096
+q=64: 3 explicit cubic extensions passed both norm checks
+ALL CUBIC COUNTS PASSED
+ALL EXACT FIELD-TOWER CHECKS PASSED; additive existence remains unresolved.
