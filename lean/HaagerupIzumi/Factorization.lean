@@ -1,4 +1,8 @@
-import HaagerupIzumi.Residuals
+module
+
+public import HaagerupIzumi.Residuals
+
+@[expose] public section
 
 /-!
 # Balanced triples and the factorization of the cubic residual

@@ -1,5 +1,9 @@
-import HaagerupIzumi.Residuals
-import Mathlib.Analysis.Fourier.ZMod
+module
+
+public import HaagerupIzumi.Residuals
+public import Mathlib.Analysis.Fourier.ZMod
+
+@[expose] public section
 
 /-!
 # The Fourier reduction (Lemma 6.1)

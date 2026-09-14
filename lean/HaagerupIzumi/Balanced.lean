@@ -1,5 +1,9 @@
-import HaagerupIzumi.Factorization
-import HaagerupIzumi.Boundary
+module
+
+public import HaagerupIzumi.Factorization
+public import HaagerupIzumi.Boundary
+
+@[expose] public section
 
 /-!
 # The quantity `δ^2 S - τ P` for balanced pairs with a zero cross sum

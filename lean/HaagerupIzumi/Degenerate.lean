@@ -1,4 +1,8 @@
-import HaagerupIzumi.Balanced
+module
+
+public import HaagerupIzumi.Balanced
+
+@[expose] public section
 
 /-!
 # Degenerate cubics

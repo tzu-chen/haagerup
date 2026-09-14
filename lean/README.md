@@ -1,15 +1,33 @@
 # HaagerupIzumi — Lean 4 formalization of the proof up to the Evans–Gannon equations
 
-Lean `v4.33.1`, Mathlib tag `v4.33.1` (commit `0df444a3`). Built with
-`lake build` from this directory (the Mathlib package directory was copied
-from `../../equational-theories-lean-stage2/.lake/packages`, so no cache
-download is needed). There are no `sorry`s; `lake build` succeeds with
-linter warnings only, and
+Lean `v4.33.1`, Mathlib tag `v4.33.1` (commit `0df444a3`). Checkpoint
+`0daf48c` contains the complete conditional theorem below, which built with
+linter warnings only and no `sorry`s. Its reported axiom audit is
 
 ```
 #print axioms HaagerupIzumi.Concrete.EGEquations_concrete
 -- [propext, Classical.choice, Quot.sound]
 ```
+
+The hyperbolic-gamma core is now constructed:
+`ruijsenaarsCore n hn : HypGammaCore (ω₁ n) (ω₂ n)`. Its axiom audit is also
+`[propext, Classical.choice, Quot.sound]`. The entire conditional development
+rebuilds after the refactor. The integral identities required for a complete
+`HypGamma` object remain in progress, so a full unconditional Evans–Gannon
+theorem has not yet been obtained. See [PLAN.md](PLAN.md).
+
+Run compiler checks from the repository root with
+
+```
+python lean/safe_lean.py --build lean/HaagerupIzumi/Analytic/GammaIntegral.lean
+```
+
+Build one file at a time in dependency order. The driver requires cached
+Mathlib dependencies and already-built project prerequisites. It runs through
+`../hi_cft_safe_run.py`, enforcing the shared desktop's memory and CPU limits.
+Modern Lean module headers enable selective import loading, and the small
+process-local helper in `tools/lean_stack_limit.c` limits Lake's thread stack
+reservations without changing proof checking.
 
 ## Main statement
 
@@ -71,14 +89,15 @@ matrix `A` satisfies all four families of Evans–Gannon equations.
 
 ### What is taken as given: the interface `HypGamma`
 
-The hyperbolic gamma function is not constructed. `HypGamma ω₁ ω₂` is a
-structure whose fields are the properties used in the proof, all of which
-are standard facts about Ruijsenaars' hyperbolic gamma function (BSS):
+The main theorem still takes `HypGamma ω₁ ω₂` as an argument. Its
+`HypGammaCore` parent contains the local properties and growth estimate;
+`HypGamma` adds the integral identities. The fields are:
 
 * position of poles and zeros (`poleSet`, `zeroSet`), holomorphy off the
   poles, nonvanishing off the zeros, the two shift identities, reflection;
-* simple poles with residues `residue w`, and the residue `√Ω/(2π)` at the
-  origin;
+* simple poles with residues `residue w`, and the residue
+  `√(ω₁ω₂)/(2π)` at the origin (equal to `√Ω/(2π)` for the specialized
+  periods);
 * positivity on `(0, Ω)` and reality on the real axis;
 * the growth of ratios `γ(z + c)/γ(z)` along vertical lines (Lemma 2.4);
 * the two-gamma integral formula (2.17) along a vertical line, with the
@@ -89,11 +108,34 @@ are standard facts about Ruijsenaars' hyperbolic gamma function (BSS):
   Euler transformation (Lemma 7.3), and the four-term identity (Lemma 7.4)
   at the parameters `R = g/2`, `X = (n+g)/2 + l`, `Y = (n+g)/2 + h`.
 
+The four-term field explicitly requires both `ω₁−ω₂ = n` and
+`ω₁ω₂ = ω₁+ω₂`. The simple-pole property is intended for irrational period
+ratios, as in the specialized construction.
+
 The continuation-in-parameters arguments of Chapter 7 are therefore not
 formalized; they enter through the last group of fields.
 
+### Construction modules checked so far
+
+The following results concern the explicit BSS-normalized integral and do
+not assume a `HypGamma` object:
+
+| Modules | Checked results |
+|---|---|
+| `GammaIntegral`, `GammaHolomorphic` | Absolute convergence, removable endpoint regularization, differentiation under the integral, and holomorphy on `0 < Re z < ω₁+ω₂` |
+| `GammaStrip` | Reflection, midpoint normalization, period symmetry, conjugation, and positivity on the real strip |
+| `GammaElementary`, `GammaNormalization`, `GammaShift` | Cotangent integral, Frullani normalization integral, and both shift identities on their strip overlaps |
+| `GammaModulus`, `GammaCosine`, `GammaModulusUniform`, `GammaGrowth` | Exact cosine-defect integral, uniform logarithmic modulus estimate, and exact-rate ratio bounds within compact substrips |
+| `GammaContinuation`, `GammaIdentities` | Explicit finite-product continuation, global holomorphy, both shifts, reflection, exact zeros, and reality |
+| `GammaResidueZero`, `GammaPoleResidues` | Values at both periods, residue normalization at zero, and nonzero simple residues at every pole for irrational period ratios |
+| `GammaSineGrowth`, `GammaGlobalGrowth` | Exact-rate ratio bounds on arbitrary bounded vertical strips |
+| `GammaConcrete`, `GammaCore` | The actual specialized gamma function and the complete `ruijsenaarsCore` constructor |
+| `ResidueAlgebra` | Unique intrinsic residues, linearity, and corrected-contour additivity for poles of order at most two |
+
 ## What is not formalized
 
-* The hyperbolic gamma function itself and the properties listed above.
+* The integral identities needed for a complete `HypGamma` constructor and
+  the resulting unconditional Evans–Gannon theorem. `HypGammaCore` is now
+  constructed without assumed special-function properties.
 * The Evans–Gannon reconstruction theorem (Chapter 10) and the categorical
   conclusions.

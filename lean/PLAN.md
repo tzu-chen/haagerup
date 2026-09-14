@@ -1,6 +1,7 @@
 # Remaining formalization plan: closing the hyperbolic-gamma interface
 
-Status (2026-09-14): `lake build` is clean, no `sorry`, and
+Checkpoint status (2026-09-14, commit `0daf48c`): the conditional development
+built cleanly, with no `sorry`, and
 
 ```
 #print axioms HaagerupIzumi.Concrete.EGEquations_concrete
@@ -12,21 +13,43 @@ The gamma function enters only through the structure argument
 what it would take to replace that structure by a construction, so that the
 main theorem holds outright for Ruijsenaars' hyperbolic gamma function.
 
+Tier 1–2 complete (2026-09-14): `GammaCore.lean` constructs
+`ruijsenaarsCore n hn : HypGammaCore (ω₁ n) (ω₂ n)` from the explicit
+integral. All its fields are proved: global holomorphy, shifts, reflection,
+the exact pole and zero sets, nonzero simple residues, the residue at zero,
+reality/positivity, and the exact-rate uniform ratio bound on arbitrary
+bounded vertical strips. The constructor's axiom audit is
+`[propext, Classical.choice, Quot.sound]`. The whole existing conditional
+odd-order development also rebuilds after the interface refactor.
+
+Tier 3 remains in progress. No complete `HypGamma` constructor or
+unconditional Evans–Gannon theorem is yet claimed. The new
+`ResidueAlgebra.lean` proves intrinsic residue uniqueness/linearity and
+corrected-contour additivity for use in this stage.
+
+Use `python lean/safe_lean.py --build FILE` to check
+one module with already-built prerequisites under the project's resource
+limits; these checks are serialized across agents.
+
 Everything in Tier 1 and Tier 2 is standard; Tier 3 is where the mathematics
 of BSS Chapter 7 lives and where most of the risk is. Sizes are rough,
 calibrated against the current analytic half (about 9.5k lines).
 
-## Tier 1 — construct γ and prove the local properties
+## Tier 1 — construct γ and prove the local properties (complete)
 
 Fields: `poleSet`/`zeroSet` (as used by `differentiableOn`, `ne_zero`,
 `eq_zero`), `shift₁`, `shift₂`, `reflect`, `residue_zero`, `residue` and
 `hasResidue`, `real_pos`, `real_axis`.
 
-Route: Ruijsenaars' integral representation on the strip `|Im z| < Ω/2`,
+Route: the BSS normalization on the strip `0 < Re z < Ω`,
 
-    γ(z) = exp( i ∫₀^∞ ( sin(2zt) / (2 sinh(ω₁ t) sinh(ω₂ t)) − z/(ω₁ ω₂ t) ) dt/t ),
+    log γ(z) = −∫₀^∞ ( sinh((2z−Ω)t) / (2 sinh(ω₁t) sinh(ω₂t))
+                         − (2z−Ω)/(2ω₁ω₂t) ) dt/t,
+    γ(z) = exp(log γ(z)),
 
-then extension to `ℂ` by the shift relations.
+then extension to `ℂ` by the real shift relations. This is the centered
+Ruijsenaars function evaluated at `i(z−Ω/2)`; the rotation and translation
+are necessary to match the interface's conventions.
 
 Steps:
 
@@ -47,15 +70,17 @@ Steps:
    commute on the strip (they do, by the identities themselves). Poles and
    zeros come from the sine factors; residues at the poles from the shift
    identities and the residue at the origin.
-5. Residue at the origin `√Ω/(2π)`: from the singular part of the integral as
-   `z → 0`, or from the shift identities plus `γ(ω₁) γ(ω₂)` values
-   (`Sampling.lean` already derives `γ(ω₁) = √d`, `γ(ω₂) = 1/√d` from the
-   interface; the construction must supply one of them).
+5. Residue at the origin `√(ω₁ω₂)/(2π)`: the two shifts give
+   `R = ω₂ γ(ω₁)/(2π) = ω₁ γ(ω₂)/(2π)`; reflection and positivity fix the
+   positive square root. The specialized periods satisfy `ω₁ω₂ = Ω`.
+   Simple poles require an irrational period ratio; the construction must
+   establish that hypothesis for the specialized periods.
 
-Estimate: 4k–6k lines. Confidence: high. The definite integrals of step 2 are
-the only new analysis.
+Original estimate: 4k–6k lines. The integral convergence, differentiation,
+and meromorphic gluing also require substantial analysis and endpoint
+bookkeeping; the definite integrals are not the only new work.
 
-## Tier 2 — `ratio_bound` (Lemma 2.4)
+## Tier 2 — `ratio_bound` (Lemma 2.4) (complete)
 
 The proof needs the exact exponential rate of `|γ(z + c)/γ(z)|` as
 `Im z → ±∞`, uniformly on bounded vertical strips, because the decay
@@ -67,6 +92,12 @@ Ruijsenaars' asymptotics
 or, more cheaply, from a direct estimate of `log γ(z + c) − log γ(z)` through
 the integral representation after shifting `z` into the strip (the shift
 identities contribute explicit sine factors whose growth is known).
+
+Preferred route: prove
+`log |γ(x+iy)| = π(x−Ω/2)|y|/(ω₁ω₂) + O(1)` uniformly for `x` in compact
+subintervals of the fundamental strip. A cosine-transform decomposition
+reduces the leading term to `∫₀^∞ (1−cos(2yt))/t² dt = π|y|`; this avoids
+constructing the full complex phase asymptotic.
 
 Estimate: 1k–2k lines. Confidence: medium.
 
@@ -108,6 +139,13 @@ the identities matter for the proof, not the agreement.
   along the lines of Chapter 7, Step 5 of the draft. Moderate once `K₄` is
   concrete and `K4_line` is available; the draft states it after continuation
   in parameters, which the direct definition avoids.
+
+The four-term statement also requires `ω₁ω₂ = ω₁+ω₂`, in addition to
+`ω₁−ω₂ = n`. This hypothesis is now explicit in the interface and supplied
+at its specialized use. For `two_gamma`, Ruijsenaars (2011), Appendix C,
+Proposition C.1 offers a direct dual-shift argument whose constant is fixed
+by a Fourier integral of `sech`; use this to avoid a separate pinching
+normalization argument if its parameter domain fits the required extension.
 
 Estimate: 6k–12k lines. Confidence: low.
 

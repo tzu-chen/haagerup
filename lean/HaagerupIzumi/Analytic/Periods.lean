@@ -1,4 +1,8 @@
-import HaagerupIzumi.Analytic.HypGamma
+module
+
+public import HaagerupIzumi.Analytic.HypGamma
+
+@[expose] public section
 
 /-!
 # The periods of the construction

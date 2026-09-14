@@ -1,4 +1,8 @@
-import HaagerupIzumi.Coefficients
+module
+
+public import HaagerupIzumi.Coefficients
+
+@[expose] public section
 
 /-!
 # The quadratic and cubic residuals

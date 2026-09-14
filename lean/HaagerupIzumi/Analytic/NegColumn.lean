@@ -1,4 +1,8 @@
-import HaagerupIzumi.Analytic.RightProduct
+module
+
+public import HaagerupIzumi.Analytic.RightProduct
+
+@[expose] public section
 
 /-!
 # The negative-column transform (Lemma 8.1)

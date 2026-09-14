@@ -1,4 +1,8 @@
-import HaagerupIzumi.Analytic.Contour
+module
+
+public import HaagerupIzumi.Analytic.Contour
+
+@[expose] public section
 
 /-!
 # The interpolating function `t_p` on all windows

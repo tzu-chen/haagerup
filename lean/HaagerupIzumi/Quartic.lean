@@ -1,4 +1,8 @@
-import HaagerupIzumi.Residuals
+module
+
+public import HaagerupIzumi.Residuals
+
+@[expose] public section
 
 /-!
 # The quartic residual is a contraction of the cubic residual

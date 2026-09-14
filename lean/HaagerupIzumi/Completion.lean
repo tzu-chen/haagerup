@@ -1,7 +1,11 @@
-import HaagerupIzumi.Degenerate
-import HaagerupIzumi.Reflection
-import HaagerupIzumi.Interpolation
-import HaagerupIzumi.Quartic
+module
+
+public import HaagerupIzumi.Degenerate
+public import HaagerupIzumi.Reflection
+public import HaagerupIzumi.Interpolation
+public import HaagerupIzumi.Quartic
+
+@[expose] public section
 
 /-!
 # Algebraic completion of the cubics

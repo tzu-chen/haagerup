@@ -1,6 +1,10 @@
-import HaagerupIzumi.Analytic.Periods
-import HaagerupIzumi.Coefficients
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
+module
+
+public import HaagerupIzumi.Analytic.Periods
+public import HaagerupIzumi.Coefficients
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
+
+@[expose] public section
 
 /-!
 # The sampling function `F` and the coefficients `W`

@@ -1,4 +1,8 @@
-import HaagerupIzumi.Analytic.Windows
+module
+
+public import HaagerupIzumi.Analytic.Windows
+
+@[expose] public section
 
 /-!
 # The two-ratio kernel (Section 6.2–6.3)

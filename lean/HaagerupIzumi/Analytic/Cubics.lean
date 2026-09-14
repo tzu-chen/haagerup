@@ -1,7 +1,11 @@
-import HaagerupIzumi.Analytic.ColumnFourier
-import HaagerupIzumi.Analytic.Restricted
-import HaagerupIzumi.FourierReduction
-import HaagerupIzumi.Completion
+module
+
+public import HaagerupIzumi.Analytic.ColumnFourier
+public import HaagerupIzumi.Analytic.Restricted
+public import HaagerupIzumi.FourierReduction
+public import HaagerupIzumi.Completion
+
+@[expose] public section
 
 /-!
 # The analytic input for the cubics and the main theorem

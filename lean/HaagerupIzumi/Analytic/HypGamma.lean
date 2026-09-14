@@ -1,16 +1,23 @@
-import HaagerupIzumi.Analytic.Residue
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
+module
+
+public import HaagerupIzumi.Analytic.Residue
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Complex
+
+@[expose] public section
 
 open MeasureTheory
 
 /-!
 # The hyperbolic gamma function as an interface
 
-Fact 2.3 and Fact 2.5 of the expanded proof, packaged as a structure. Every
-analytic argument in this development is carried out for an arbitrary
-`G : HypGamma ω₁ ω₂`; the existence of the hyperbolic gamma function itself
-(Belousov–Sarkissian–Spiridonov, Eqs. (1.1)–(1.5) and (2.17)) is not
-formalized.
+Fact 2.3 and Fact 2.5 of the expanded proof, packaged as structures. `HypGammaCore`
+contains the local gamma identities and the ratio bound; `HypGamma` extends it
+with the two-gamma and four-gamma integral identities. Every
+analytic argument in the conditional odd-order theorem is carried out for
+an arbitrary `G : HypGamma ω₁ ω₂`. `GammaCore.lean` constructs the complete
+`HypGammaCore` from the regularized integral for the prescribed periods.
+The integral identities in the extending `HypGamma` structure remain to
+be constructed.
 
 Conventions. `γ` is a total function `ℂ → ℂ`; its values on the pole set are
 junk. The pole set is `{-(r ω₁ + s ω₂)}` and the zero set is
@@ -69,8 +76,9 @@ def K4Conv (ω₁ ω₂ : ℝ) (r y : ℂ) : Prop := |y.re| < (ω₁ + ω₂) / 
 noncomputable def Γr (γ : ℂ → ℂ) (ω₁ ω₂ : ℝ) (r v : ℂ) : ℂ :=
   γ (((ω₁ + ω₂ : ℝ) : ℂ) / 2 + r + v) * γ (((ω₁ + ω₂ : ℝ) : ℂ) / 2 + r - v)
 
-/-- Interface for the hyperbolic gamma function with positive periods `ω₁, ω₂`. -/
-structure HypGamma (ω₁ ω₂ : ℝ) where
+/-- The local hyperbolic gamma properties and the vertical-strip ratio bound.
+The integral identities used by the odd-order construction belong to `HypGamma`. -/
+structure HypGammaCore (ω₁ ω₂ : ℝ) where
   /-- the function -/
   γ : ℂ → ℂ
   pos₁ : 0 < ω₁
@@ -101,6 +109,9 @@ structure HypGamma (ω₁ ω₂ : ℝ) where
   ratio_bound : ∀ c a b : ℝ, ∃ C T : ℝ, 0 < T ∧ ∀ z : ℂ, a ≤ z.re → z.re ≤ b → T ≤ |z.im| →
     z ∉ poleSet ω₁ ω₂ → z + c ∉ poleSet ω₁ ω₂ →
     ‖γ (z + c)‖ ≤ C * Real.exp (π * c * |z.im| / (ω₁ * ω₂)) * ‖γ z‖
+
+/-- The hyperbolic gamma core together with the two-gamma and four-gamma integral identities. -/
+structure HypGamma (ω₁ ω₂ : ℝ) extends HypGammaCore ω₁ ω₂ where
   /-- the two-gamma Fourier integral (Belousov–Sarkissian–Spiridonov (2.17)) along the line
   `Re z = σ`, with the crossed left poles added back. Hypotheses: the exponent parameter is in
   the convergence range, all right poles `h + r ω₁ + s ω₂` lie strictly to the right of the line,
@@ -151,9 +162,11 @@ structure HypGamma (ω₁ ω₂ : ℝ) where
   K4_euler : ∀ r s x y : ℂ, K4Conv ω₁ ω₂ r y → K4Conv ω₁ ω₂ (-r) y →
     K4NoPinch ω₁ ω₂ r s x → K4NoPinch ω₁ ω₂ (-r) s x →
     Γr γ ω₁ ω₂ r y * K4 r s x y = Γr γ ω₁ ω₂ r s * Γr γ ω₁ ω₂ r x * K4 (-r) s x y
-  /-- the four-term identity (Lemma 7.4), for periods with `ω₁ - ω₂ = n`, at the parameters
+  /-- the four-term identity (Lemma 7.4), for periods with `ω₁ - ω₂ = n` and
+  `ω₁ * ω₂ = ω₁ + ω₂`, at the parameters
   `R = g/2`, `X = (n+g)/2 + l`, `Y = (n+g)/2 + h` of (7.13) -/
-  K4_four_term : ∀ (n g h l : ℕ) (Z : ℂ), ω₁ - ω₂ = n → 1 ≤ g → 1 ≤ h → g + h < n → 1 ≤ l →
+  K4_four_term : ∀ (n g h l : ℕ) (Z : ℂ), ω₁ - ω₂ = n → ω₁ * ω₂ = ω₁ + ω₂ →
+    1 ≤ g → 1 ≤ h → g + h < n → 1 ≤ l →
     l ≤ h → |Z.re| < (ω₁ + ω₂ - g) / 2 →
     K4NoPinch ω₁ ω₂ ((g : ℂ) / 2) (((n + g : ℂ)) / 2 + l) (((n + g : ℂ)) / 2 + h + ω₂) →
     K4NoPinch ω₁ ω₂ ((g : ℂ) / 2) (((n + g : ℂ)) / 2 + l) (((n + g : ℂ)) / 2 + h - ω₁) →
@@ -240,10 +253,16 @@ lemma poleSet_isClosed (hω₁ : 0 < ω₁) (hω₂ : 0 < ω₂) : IsClosed (pol
       _ ≤ ‖z‖ + 1 := by rw [dist_eq_norm] at this; linarith
   · exact ⟨Metric.mem_ball_self one_pos, fun h => hz h.1⟩
 
+end HypGamma
+
+namespace HypGammaCore
+
+variable {ω₁ ω₂ : ℝ} (G : HypGammaCore ω₁ ω₂)
+
 /-- `γ` is differentiable at every non-pole. -/
 lemma differentiableAt (z : ℂ) (hz : z ∉ poleSet ω₁ ω₂) : DifferentiableAt ℂ G.γ z :=
   G.differentiableOn.differentiableAt
-    ((poleSet_isClosed G.pos₁ G.pos₂).isOpen_compl.mem_nhds hz)
+    ((HypGamma.poleSet_isClosed G.pos₁ G.pos₂).isOpen_compl.mem_nhds hz)
 
 /-- `γ` is continuous at every non-pole. -/
 lemma continuousAt (z : ℂ) (hz : z ∉ poleSet ω₁ ω₂) : ContinuousAt G.γ z :=
@@ -252,6 +271,24 @@ lemma continuousAt (z : ℂ) (hz : z ∉ poleSet ω₁ ω₂) : ContinuousAt G.�
 /-- The value of the residue function at the origin. -/
 lemma residue_zero_eq : G.residue 0 = Real.sqrt (ω₁ * ω₂) / (2 * π) :=
   tendsto_nhds_unique (G.hasResidue 0 ⟨0, 0, by simp⟩) G.residue_zero
+
+end HypGammaCore
+
+namespace HypGamma
+
+variable {ω₁ ω₂ : ℝ} (G : HypGamma ω₁ ω₂)
+
+/-- `γ` is differentiable at every non-pole. -/
+lemma differentiableAt (z : ℂ) (hz : z ∉ poleSet ω₁ ω₂) : DifferentiableAt ℂ G.γ z :=
+  G.toHypGammaCore.differentiableAt z hz
+
+/-- `γ` is continuous at every non-pole. -/
+lemma continuousAt (z : ℂ) (hz : z ∉ poleSet ω₁ ω₂) : ContinuousAt G.γ z :=
+  G.toHypGammaCore.continuousAt z hz
+
+/-- The value of the residue function at the origin. -/
+lemma residue_zero_eq : G.residue 0 = Real.sqrt (ω₁ * ω₂) / (2 * π) :=
+  G.toHypGammaCore.residue_zero_eq
 
 end HypGamma
 

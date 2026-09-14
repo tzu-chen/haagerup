@@ -1,8 +1,12 @@
-import HaagerupIzumi.Analytic.Sampling
-import HaagerupIzumi.Coefficients
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
-import Mathlib.Analysis.Real.Pi.Bounds
-import Mathlib.Analysis.Fourier.ZMod
+module
+
+public import HaagerupIzumi.Analytic.Sampling
+public import HaagerupIzumi.Coefficients
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
+public import Mathlib.Analysis.Real.Pi.Bounds
+public import Mathlib.Analysis.Fourier.ZMod
+
+@[expose] public section
 
 /-!
 # The contour argument for the column Fourier formula

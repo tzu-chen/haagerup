@@ -1,11 +1,15 @@
-import Mathlib.Analysis.Complex.CauchyIntegral
-import Mathlib.Analysis.Complex.RemovableSingularity
-import Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
-import Mathlib.MeasureTheory.Integral.IntegralEqImproper
-import Mathlib.MeasureTheory.Integral.ExpDecay
-import Mathlib.MeasureTheory.Group.Integral
-import Mathlib.Tactic
+module
+
+public import Mathlib.Analysis.Complex.CauchyIntegral
+public import Mathlib.Analysis.Complex.RemovableSingularity
+public import Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+public import Mathlib.MeasureTheory.Integral.IntegralEqImproper
+public import Mathlib.MeasureTheory.Integral.ExpDecay
+public import Mathlib.MeasureTheory.Group.Integral
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Residue calculus on rectangles and strips

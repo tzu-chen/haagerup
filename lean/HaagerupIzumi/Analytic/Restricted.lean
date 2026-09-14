@@ -1,4 +1,8 @@
-import HaagerupIzumi.Analytic.NegColumn
+module
+
+public import HaagerupIzumi.Analytic.NegColumn
+
+@[expose] public section
 
 /-!
 # Restricted Fourier vanishing (Proposition 8.2)
@@ -890,7 +894,8 @@ theorem bracket_zero (k v : ℤ) (hv : (2 * n : ℤ) ∣ v - (2 * k - n * (g + 1
   have hU := neg_column n hn G hodd g hg (by omega) k v hv hvres
   have hK1 := chain1 n hn G g h l hg hh hgh hl hlh v hvres
   have hK2 := chain2 n hn G g h l hg hh hgh hl hlh v hvres
-  have hFT := G.K4_four_term n g h l (yL n v) (by exact_mod_cast ω₁_sub_ω₂ n) hg hh hgh hl hlh
+  have hFT := G.K4_four_term n g h l (yL n v) (by exact_mod_cast ω₁_sub_ω₂ n)
+    (ω₁_mul_ω₂ n) hg hh hgh hl hlh
     (yL_re_lt n hn g v hvres) (np_ft1 n hn g h l hg hh hgh hl hlh) (np_ft2 n hn g h l hg hh hgh hl hlh)
     (np_ft3 n hn g h l hg hh hgh hl hlh) (np_ft4 n hn g h l hg hh hgh hl hlh)
   have hT1 := term1 n hn G g h l hg hh hgh hl hlh v

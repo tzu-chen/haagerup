@@ -1,6 +1,10 @@
-import Mathlib.Analysis.Fourier.ZMod
-import Mathlib.Algebra.Polynomial.Roots
-import Mathlib.Algebra.Polynomial.Degree.Operations
+module
+
+public import Mathlib.Analysis.Fourier.ZMod
+public import Mathlib.Algebra.Polynomial.Roots
+public import Mathlib.Algebra.Polynomial.Degree.Operations
+
+@[expose] public section
 
 /-!
 # Vanishing Fourier block

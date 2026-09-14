@@ -1,6 +1,10 @@
-import HaagerupIzumi.Analytic.Contour
-import HaagerupIzumi.Residuals
-import Mathlib.Analysis.Fourier.ZMod
+module
+
+public import HaagerupIzumi.Analytic.Contour
+public import HaagerupIzumi.Residuals
+public import Mathlib.Analysis.Fourier.ZMod
+
+@[expose] public section
 
 /-!
 # The Fourier transform of a column and the quadratic identities

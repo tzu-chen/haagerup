@@ -1,5 +1,9 @@
-import HaagerupIzumi.Residuals
-import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+module
+
+public import HaagerupIzumi.Residuals
+public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+
+@[expose] public section
 
 /-!
 # Reflection by matrix inversion

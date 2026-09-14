@@ -1,4 +1,8 @@
-import HaagerupIzumi.Analytic.LeftProduct
+module
+
+public import HaagerupIzumi.Analytic.LeftProduct
+
+@[expose] public section
 
 /-!
 # The right product transform (Proposition 6.3 (2))

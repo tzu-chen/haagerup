@@ -1,23 +1,28 @@
-import HaagerupIzumi.Coefficients
-import HaagerupIzumi.Residuals
-import HaagerupIzumi.Quartic
-import HaagerupIzumi.Factorization
-import HaagerupIzumi.Boundary
-import HaagerupIzumi.Balanced
-import HaagerupIzumi.Degenerate
-import HaagerupIzumi.Interpolation
-import HaagerupIzumi.Reflection
-import HaagerupIzumi.Completion
-import HaagerupIzumi.Analytic.HypGamma
-import HaagerupIzumi.Analytic.Periods
-import HaagerupIzumi.Analytic.Sampling
-import HaagerupIzumi.Analytic.ColumnFourier
-import HaagerupIzumi.Analytic.Residue
-import HaagerupIzumi.Analytic.Windows
-import HaagerupIzumi.Analytic.Products
-import HaagerupIzumi.Analytic.LeftProduct
-import HaagerupIzumi.Analytic.RightProduct
-import HaagerupIzumi.Analytic.NegColumn
-import HaagerupIzumi.Analytic.Restricted
-import HaagerupIzumi.FourierReduction
-import HaagerupIzumi.Analytic.Cubics
+module
+
+public import HaagerupIzumi.Coefficients
+public import HaagerupIzumi.Residuals
+public import HaagerupIzumi.Quartic
+public import HaagerupIzumi.Factorization
+public import HaagerupIzumi.Boundary
+public import HaagerupIzumi.Balanced
+public import HaagerupIzumi.Degenerate
+public import HaagerupIzumi.Interpolation
+public import HaagerupIzumi.Reflection
+public import HaagerupIzumi.Completion
+public import HaagerupIzumi.Analytic.HypGamma
+public import HaagerupIzumi.Analytic.Periods
+public import HaagerupIzumi.Analytic.Sampling
+public import HaagerupIzumi.Analytic.ColumnFourier
+public import HaagerupIzumi.Analytic.Residue
+public import HaagerupIzumi.Analytic.Windows
+public import HaagerupIzumi.Analytic.Products
+public import HaagerupIzumi.Analytic.LeftProduct
+public import HaagerupIzumi.Analytic.RightProduct
+public import HaagerupIzumi.Analytic.NegColumn
+public import HaagerupIzumi.Analytic.Restricted
+public import HaagerupIzumi.FourierReduction
+public import HaagerupIzumi.Analytic.Cubics
+public import HaagerupIzumi.Analytic.GammaCore
+
+@[expose] public section
