@@ -12,9 +12,12 @@ linter warnings only and no `sorry`s. Its reported axiom audit is
 The hyperbolic-gamma core is now constructed:
 `ruijsenaarsCore n hn : HypGammaCore (ω₁ n) (ω₂ n)`. Its axiom audit is also
 `[propext, Classical.choice, Quot.sound]`. The entire conditional development
-rebuilds after the refactor. The integral identities required for a complete
-`HypGamma` object remain in progress, so a full unconditional Evans–Gannon
-theorem has not yet been obtained. See [PLAN.md](PLAN.md).
+rebuilds after the refactor. The corrected four-gamma integral now satisfies
+the line, evenness, swap, and four-term identities. The symmetric two-gamma
+evaluation is proved with its exact normalization on the positive-parameter
+domain. Its full residue-corrected extension and the Euler transformation
+remain in progress, so a full unconditional Evans–Gannon theorem has not yet
+been obtained. See [PLAN.md](PLAN.md).
 
 Run compiler checks from the repository root with
 
@@ -112,8 +115,9 @@ The four-term field explicitly requires both `ω₁−ω₂ = n` and
 `ω₁ω₂ = ω₁+ω₂`. The simple-pole property is intended for irrational period
 ratios, as in the specialized construction.
 
-The continuation-in-parameters arguments of Chapter 7 are therefore not
-formalized; they enter through the last group of fields.
+The concrete contour definition proves the line, evenness, swap, and
+four-term fields directly. The two-gamma formula outside the initial
+positive-sum domain and the Euler transformation remain to be supplied.
 
 ### Construction modules checked so far
 
@@ -131,11 +135,18 @@ not assume a `HypGamma` object:
 | `GammaSineGrowth`, `GammaGlobalGrowth` | Exact-rate ratio bounds on arbitrary bounded vertical strips |
 | `GammaConcrete`, `GammaCore` | The actual specialized gamma function and the complete `ruijsenaarsCore` constructor |
 | `ResidueAlgebra` | Unique intrinsic residues, linearity, and corrected-contour additivity for poles of order at most two |
+| `GammaKernelBounds`, `GammaKernelDecay`, `GammaTwoDecay` | Uniform exponential bounds for the two- and four-gamma kernels |
+| `GammaK4Contour`, `GammaK4Residues`, `GammaK4Line`, `GammaK4Even`, `GammaK4Swap`, `GammaK4Interface` | Concrete corrected four-gamma contour and the exact line/symmetry identities |
+| `ContourAffine`, `ContourLinearity`, `GammaFourTerm*`, `GammaK4LinearRelations`, `GammaK4FourTerm*` | Affine transport, finite contour linearity, and the complete four-term identity |
+| `DominatedHolomorphic`, `GammaFourier*`, `GammaPeriodUniqueness`, `GammaStripPeriodicity`, `GammaSech` | Parameter holomorphy, dual Fourier shifts, uniqueness from local incommensurable periods, and the normalized symmetric two-gamma evaluation |
+| `GammaTwoFourier`, `GammaTwoFourierShifts`, `GammaTwoCenter`, `GammaTwoContour*` | Asymmetric transform, corrected contours and residues, line independence, and reduction to the symmetric integral for positive parameter sum |
 
 ## What is not formalized
 
-* The integral identities needed for a complete `HypGamma` constructor and
-  the resulting unconditional Evans–Gannon theorem. `HypGammaCore` is now
-  constructed without assumed special-function properties.
+* The full residue-corrected two-gamma evaluation, the Euler transformation,
+  and the resulting unconditional Evans–Gannon theorem. The gamma core,
+  four-gamma line/symmetry/four-term identities, and the initial-domain
+  two-gamma evaluation are constructed without assumed special-function
+  properties.
 * The Evans–Gannon reconstruction theorem (Chapter 10) and the categorical
   conclusions.

@@ -24,5 +24,10 @@ public import HaagerupIzumi.Analytic.Restricted
 public import HaagerupIzumi.FourierReduction
 public import HaagerupIzumi.Analytic.Cubics
 public import HaagerupIzumi.Analytic.GammaCore
+public import HaagerupIzumi.Analytic.GammaK4Interface
+public import HaagerupIzumi.Analytic.GammaK4FourTermInterface
+public import HaagerupIzumi.Analytic.GammaFourierEvaluation
+public import HaagerupIzumi.Analytic.GammaTwoContourCenter
+public import HaagerupIzumi.Analytic.GammaTwoDecay
 
 @[expose] public section

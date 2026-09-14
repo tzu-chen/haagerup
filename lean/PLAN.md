@@ -22,10 +22,29 @@ bounded vertical strips. The constructor's axiom audit is
 `[propext, Classical.choice, Quot.sound]`. The whole existing conditional
 odd-order development also rebuilds after the interface refactor.
 
-Tier 3 remains in progress. No complete `HypGamma` constructor or
-unconditional Evans–Gannon theorem is yet claimed. The new
-`ResidueAlgebra.lean` proves intrinsic residue uniqueness/linearity and
-corrected-contour additivity for use in this stage.
+Tier 3a and the four-term identity are complete (2026-09-14). The actual
+corrected four-gamma integral satisfies `K4_line`, `K4_even`, `K4_swap`, and
+`K4_four_term`, including coincident poles and the equal-label case. The
+proofs use the constructed gamma function, intrinsic generalized residues,
+uniform decay, affine contour transport, and finite contour linearity.
+
+The symmetric two-gamma evaluation is also complete on its initial domain:
+`GammaContinuation.symmetricTransform_evaluation` proves
+
+    J(q,y) = sqrt(a*b) * gamma(2*q)
+               * gamma((a+b)/2-q+i*y) * gamma((a+b)/2-q-i*y)
+
+for `0 < Re q` and `|Im y| < (a+b)/2 - Re q`, with positive ordered periods
+and irrational ratio. Local incommensurable periods determine both variable
+dependencies, and the elementary sech integral fixes the constant. The
+corrected two-gamma contour, its line independence, and its reduction to this
+symmetric integral when `Re(f+h)>0` are checked as well.
+
+Still in progress: extension of the two-gamma evaluation to the full
+residue-corrected domain, and `K4_euler`. No complete `HypGamma` constructor
+or unconditional Evans–Gannon theorem is yet claimed. The planned extension
+uses finite backward shifts in the smaller period, solving a two-equation
+system whose determinant is nonzero under the no-pinch hypothesis.
 
 Use `python lean/safe_lean.py --build FILE` to check
 one module with already-built prerequisites under the project's resource
@@ -103,7 +122,7 @@ Estimate: 1k–2k lines. Confidence: medium.
 
 ## Tier 3 — the integral identities
 
-### 3a. `K4_line`, `K4_even`, `K4_swap` (moderate)
+### 3a. `K4_line`, `K4_even`, `K4_swap` (complete)
 
 Define `K₄(r, s, x, y)` directly by the vertical-line integral with crossed
 poles added back, formula (2.2), at the parameter ranges actually used
@@ -121,6 +140,12 @@ agree with the draft's `K₄` on the parameter set where both are defined; only
 the identities matter for the proof, not the agreement.
 
 ### 3b. `two_gamma` (2.17), `K4_euler` (Lemma 7.3), `K4_four_term` (Lemma 7.4) (hard)
+
+Current status: `K4_four_term` is complete, with its exact interface adapter
+in `GammaK4FourTermInterface.lean`. The initial-domain two-gamma evaluation
+is complete in `GammaFourierEvaluation.lean`; the full corrected extension
+and Euler transformation remain in progress. The estimates and suggested
+routes below describe the original plan.
 
 * `two_gamma`: the hyperbolic beta integral. Standard proof: the integral as a
   function of the parameters satisfies first-order difference equations in
