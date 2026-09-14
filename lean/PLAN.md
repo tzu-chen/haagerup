@@ -1,58 +1,54 @@
-# Remaining formalization plan: closing the hyperbolic-gamma interface
+# Hyperbolic-gamma formalization: completed plan
 
-Checkpoint status (2026-09-14, commit `0daf48c`): the conditional development
-built cleanly, with no `sorry`, and
+Completed on 2026-09-14. The initial conditional development was checkpointed
+in `0daf48c` before construction began. `6a301f6` records the gamma core;
+`bb2b1c9` records the contour identities and normalized symmetric Fourier
+integral. All remaining special-function identities are now proved.
 
-```
-#print axioms HaagerupIzumi.Concrete.EGEquations_concrete
--- [propext, Classical.choice, Quot.sound]
-```
+`GammaConstruction.lean` constructs
 
-The gamma function enters only through the structure argument
-`G : HypGamma (ω₁ n) (ω₂ n)` (`Analytic/HypGamma.lean`). This file records
-what it would take to replace that structure by a construction, so that the
-main theorem holds outright for Ruijsenaars' hyperbolic gamma function.
+    ruijsenaarsHypGamma n hn : HypGamma (ω₁ n) (ω₂ n)
 
-Tier 1–2 complete (2026-09-14): `GammaCore.lean` constructs
-`ruijsenaarsCore n hn : HypGammaCore (ω₁ n) (ω₂ n)` from the explicit
-integral. All its fields are proved: global holomorphy, shifts, reflection,
-the exact pole and zero sets, nonzero simple residues, the residue at zero,
-reality/positivity, and the exact-rate uniform ratio bound on arbitrary
-bounded vertical strips. The constructor's axiom audit is
-`[propext, Classical.choice, Quot.sound]`. The whole existing conditional
-odd-order development also rebuilds after the interface refactor.
+from the explicit BSS-normalized integral and its finite-product continuation.
+`EGEquations_ruijsenaars` verifies the actual resulting coefficients, and
+`exists_EGEquations_odd n hodd` proves existence for every odd natural number,
+with no assumed gamma properties or integral identities.
 
-Tier 3a and the four-term identity are complete (2026-09-14). The actual
-corrected four-gamma integral satisfies `K4_line`, `K4_even`, `K4_swap`, and
-`K4_four_term`, including coincident poles and the equal-label case. The
-proofs use the constructed gamma function, intrinsic generalized residues,
-uniform decay, affine contour transport, and finite contour linearity.
+The complete umbrella module builds successfully. The final constructor,
+Euler and two-gamma identities, and both unconditional main theorems all
+have axiom dependencies exactly `[propext, Classical.choice, Quot.sound]`.
+No `sorry` or new axiom was introduced.
 
-The symmetric two-gamma evaluation is also complete on its initial domain:
-`GammaContinuation.symmetricTransform_evaluation` proves
+The completed routes are:
 
-    J(q,y) = sqrt(a*b) * gamma(2*q)
-               * gamma((a+b)/2-q+i*y) * gamma((a+b)/2-q-i*y)
+* **Tiers 1–2:** the regularized integral, strip holomorphy and identities,
+  global continuation, exact zeros and poles, residues, reality, and uniform
+  exact-rate ratio bounds (`GammaCore.lean`).
+* **Contour and four-term identities:** a concrete corrected four-gamma
+  contour, intrinsic generalized residues, contour transport, and finite
+  contour linearity (`GammaK4Interface.lean`, `GammaK4FourTermInterface.lean`).
+* **Two-gamma formula:** local incommensurable periods determine the
+  symmetric transform; the elementary sech integral fixes its normalization.
+  Two shift equations then extend the evaluation to the full corrected
+  domain, giving the exact interface (`GammaTwoGammaInterface.lean`).
+* **Euler transformation:** absolutely integrable Fourier insertion and
+  Fubini prove the identity on an initial open tube. Fixed rectangles around
+  moving pole clusters establish parameter holomorphy, including merged
+  poles. A connected complex scaling domain and the identity theorem give
+  the full parameter range (`GammaK4EulerInterface.lean`).
 
-for `0 < Re q` and `|Im y| < (a+b)/2 - Re q`, with positive ordered periods
-and irrational ratio. Local incommensurable periods determine both variable
-dependencies, and the elementary sech integral fixes the constant. The
-corrected two-gamma contour, its line independence, and its reduction to this
-symmetric integral when `Re(f+h)>0` are checked as well.
-
-Still in progress: extension of the two-gamma evaluation to the full
-residue-corrected domain, and `K4_euler`. No complete `HypGamma` constructor
-or unconditional Evans–Gannon theorem is yet claimed. The planned extension
-uses finite backward shifts in the smaller period, solving a two-equation
-system whose determinant is nonzero under the no-pinch hypothesis.
+The original plan and estimates below are retained to explain the order and
+mathematical choices. Every planned hyperbolic-gamma field is complete; the
+Evans–Gannon reconstruction theorem and categorical conclusions remain
+outside this plan.
 
 Use `python lean/safe_lean.py --build FILE` to check
 one module with already-built prerequisites under the project's resource
 limits; these checks are serialized across agents.
 
-Everything in Tier 1 and Tier 2 is standard; Tier 3 is where the mathematics
-of BSS Chapter 7 lives and where most of the risk is. Sizes are rough,
-calibrated against the current analytic half (about 9.5k lines).
+The original assessment placed most mathematical risk in Tier 3, where
+BSS Chapter 7 enters. The estimates below were calibrated against the
+then-existing analytic development and are historical estimates.
 
 ## Tier 1 — construct γ and prove the local properties (complete)
 
@@ -120,7 +116,7 @@ constructing the full complex phase asymptotic.
 
 Estimate: 1k–2k lines. Confidence: medium.
 
-## Tier 3 — the integral identities
+## Tier 3 — the integral identities (complete)
 
 ### 3a. `K4_line`, `K4_even`, `K4_swap` (complete)
 
@@ -139,13 +135,13 @@ Estimate: 2k–3k lines. Confidence: medium. The definition must be checked to
 agree with the draft's `K₄` on the parameter set where both are defined; only
 the identities matter for the proof, not the agreement.
 
-### 3b. `two_gamma` (2.17), `K4_euler` (Lemma 7.3), `K4_four_term` (Lemma 7.4) (hard)
+### 3b. `two_gamma` (2.17), `K4_euler` (Lemma 7.3), `K4_four_term` (Lemma 7.4) (complete)
 
-Current status: `K4_four_term` is complete, with its exact interface adapter
-in `GammaK4FourTermInterface.lean`. The initial-domain two-gamma evaluation
-is complete in `GammaFourierEvaluation.lean`; the full corrected extension
-and Euler transformation remain in progress. The estimates and suggested
-routes below describe the original plan.
+All three exact interface adapters are complete in
+`GammaK4FourTermInterface.lean`, `GammaTwoGammaInterface.lean`, and
+`GammaK4EulerInterface.lean`. The suggested routes below describe the original
+plan; the implemented normalization uses the sech integral, and Euler
+continuation uses fixed contours around moving pole clusters.
 
 * `two_gamma`: the hyperbolic beta integral. Standard proof: the integral as a
   function of the parameters satisfies first-order difference equations in
@@ -174,7 +170,7 @@ normalization argument if its parameter domain fits the required extension.
 
 Estimate: 6k–12k lines. Confidence: low.
 
-## Recommended order and intermediate milestones
+## Original order and intermediate milestones (all achieved)
 
 1. Tier 1, then Tier 2: instantiate `HypGamma` from the construction except
    for the six `two_gamma`/`K4_*` fields. Milestone: a structure

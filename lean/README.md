@@ -1,23 +1,24 @@
 # HaagerupIzumi — Lean 4 formalization of the proof up to the Evans–Gannon equations
 
-Lean `v4.33.1`, Mathlib tag `v4.33.1` (commit `0df444a3`). Checkpoint
-`0daf48c` contains the complete conditional theorem below, which built with
-linter warnings only and no `sorry`s. Its reported axiom audit is
+Lean `v4.33.1`, Mathlib tag `v4.33.1` (commit `0df444a3`). The odd-order
+Evans–Gannon theorem is now unconditional: the hyperbolic gamma function and
+all required integral identities are constructed and proved.
 
-```
-#print axioms HaagerupIzumi.Concrete.EGEquations_concrete
--- [propext, Classical.choice, Quot.sound]
-```
+`ruijsenaarsHypGamma n hn` supplies the complete `HypGamma` interface from
+its explicit regularized integral. `EGEquations_ruijsenaars` verifies the
+resulting concrete coefficient data, and `exists_EGEquations_odd n hodd`
+requires only oddness of `n`. The initial conditional development was
+checkpointed in `0daf48c`; see [PLAN.md](PLAN.md) for the completed proof plan.
 
-The hyperbolic-gamma core is now constructed:
-`ruijsenaarsCore n hn : HypGammaCore (ω₁ n) (ω₂ n)`. Its axiom audit is also
-`[propext, Classical.choice, Quot.sound]`. The entire conditional development
-rebuilds after the refactor. The corrected four-gamma integral now satisfies
-the line, evenness, swap, and four-term identities. The symmetric two-gamma
-evaluation is proved with its exact normalization on the positive-parameter
-domain. Its full residue-corrected extension and the Euler transformation
-remain in progress, so a full unconditional Evans–Gannon theorem has not yet
-been obtained. See [PLAN.md](PLAN.md).
+The full umbrella module builds with linter warnings only. The final axiom
+audit for the constructor and both main theorems reports exactly
+`[propext, Classical.choice, Quot.sound]`; there are no `sorry`s or added
+axioms. For example, after importing `HaagerupIzumi`:
+
+```lean
+#print axioms HaagerupIzumi.GammaContinuation.hypGamma
+#print axioms HaagerupIzumi.exists_EGEquations_odd
+```
 
 Run compiler checks from the repository root with
 
@@ -34,13 +35,18 @@ reservations without changing proof checking.
 
 ## Main statement
 
-`HaagerupIzumi.Concrete.EGEquations_concrete` (in `Analytic/Cubics.lean`):
-for every odd `n ≥ 1` and every `G : HypGamma (ω₁ n) (ω₂ n)` (an interface
-packaging the properties of the hyperbolic gamma function with periods
-`ω₁ = d + 1`, `ω₂ = 1 + 1/d`, see below), the concrete coefficient matrix
-`D n hn G hodd` built from the samples `W a = -sgn(a) F(a)/√d` satisfies all
-four families of Evans–Gannon equations (linear, quadratic, cubic, quartic)
-for the cyclic Haagerup–Izumi fusion ring `Z/n`.
+`HaagerupIzumi.exists_EGEquations_odd` (in
+`Analytic/GammaConstruction.lean`) proves that every odd natural number has
+complex coefficient data satisfying all Evans–Gannon equations. Its only
+mathematical premise is `Odd n`; the necessary nonzero instance follows
+from oddness.
+
+`HaagerupIzumi.EGEquations_ruijsenaars` proves those equations for the actual
+`ruijsenaarsCoeffData n hn hodd`, constructed from the samples
+`W a = -sgn(a) F(a)/√d` of the proved gamma function. The general theorem
+`Concrete.EGEquations_concrete` in `Analytic/Cubics.lean` remains available
+for any object satisfying the `HypGamma` interface; `GammaConstruction`
+supplies that object without assuming special-function properties.
 
 The proof follows `../hi_infinitude_expanded.tex` (`../proof_expanded/`)
 through Chapter 9 and stops there: the reconstruction theorem of Chapter 10
@@ -90,11 +96,12 @@ matrix `A` satisfies all four families of Evans–Gannon equations.
 | `Analytic/Restricted` | no-pinch conditions, Euler/shift/evenness chain for the left kernels, the Γ-factor bookkeeping and the four coefficient identities (`term1`–`term4`), and Proposition 8.2 `bracket_zero` |
 | `Analytic/Cubics` | the restricted frequency set (`exists_freq`), `restricted_fourier`, and `EGEquations_concrete` |
 
-### What is taken as given: the interface `HypGamma`
+### The proved interface `HypGamma`
 
-The main theorem still takes `HypGamma ω₁ ω₂` as an argument. Its
-`HypGammaCore` parent contains the local properties and growth estimate;
-`HypGamma` adds the integral identities. The fields are:
+The generic analytic development is organized around `HypGamma ω₁ ω₂`.
+Its `HypGammaCore` parent contains the local properties and growth estimate;
+`HypGamma` adds the integral identities. The concrete constructor proves
+every field:
 
 * position of poles and zeros (`poleSet`, `zeroSet`), holomorphy off the
   poles, nonvanishing off the zeros, the two shift identities, reflection;
@@ -116,10 +123,12 @@ The four-term field explicitly requires both `ω₁−ω₂ = n` and
 ratios, as in the specialized construction.
 
 The concrete contour definition proves the line, evenness, swap, and
-four-term fields directly. The two-gamma formula outside the initial
-positive-sum domain and the Euler transformation remain to be supplied.
+four-term fields directly. The two-gamma formula holds on its full
+residue-corrected domain. Fourier insertion and parameter continuation prove
+the full Euler transformation, including coincident poles of the same
+orientation.
 
-### Construction modules checked so far
+### Construction modules
 
 The following results concern the explicit BSS-normalized integral and do
 not assume a `HypGamma` object:
@@ -140,13 +149,13 @@ not assume a `HypGamma` object:
 | `ContourAffine`, `ContourLinearity`, `GammaFourTerm*`, `GammaK4LinearRelations`, `GammaK4FourTerm*` | Affine transport, finite contour linearity, and the complete four-term identity |
 | `DominatedHolomorphic`, `GammaFourier*`, `GammaPeriodUniqueness`, `GammaStripPeriodicity`, `GammaSech` | Parameter holomorphy, dual Fourier shifts, uniqueness from local incommensurable periods, and the normalized symmetric two-gamma evaluation |
 | `GammaTwoFourier`, `GammaTwoFourierShifts`, `GammaTwoCenter`, `GammaTwoContour*` | Asymmetric transform, corrected contours and residues, line independence, and reduction to the symmetric integral for positive parameter sum |
+| `GammaTwoFourierCandidate`, `GammaTwoShiftUniqueness`, `GammaTwoEvaluation`, `GammaTwoGammaInterface` | Finite backward-shift extension and the full corrected two-gamma interface |
+| `FourierInsertion`, `GammaFourierInsertion`, `GammaFourierDuality`, `GammaK4Duality`, `GammaK4EulerSmall` | Absolutely integrable Fourier insertion, Fubini, duality, and the initial Euler identity |
+| `Parametric*`, `MovingPole*`, `GammaMovingPole*`, `GammaK4MovingGeometry`, `GammaK4LocalCorrection`, `GammaK4Parameter*` | Holomorphic parameter integrals and fixed contours around moving, possibly merged, pole clusters |
+| `ConvexMinusCountable`, `GammaK4ScalingDomain`, `GammaK4Euler`, `GammaK4EulerInterface` | Connected scaling domain, analytic continuation, and the full Euler identity |
+| `GammaFull`, `GammaOdd`, `GammaConstruction` | Assembly of the complete interface and the unconditional odd-order Evans–Gannon theorem |
 
 ## What is not formalized
 
-* The full residue-corrected two-gamma evaluation, the Euler transformation,
-  and the resulting unconditional Evans–Gannon theorem. The gamma core,
-  four-gamma line/symmetry/four-term identities, and the initial-domain
-  two-gamma evaluation are constructed without assumed special-function
-  properties.
 * The Evans–Gannon reconstruction theorem (Chapter 10) and the categorical
   conclusions.

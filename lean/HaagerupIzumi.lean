@@ -29,5 +29,6 @@ public import HaagerupIzumi.Analytic.GammaK4FourTermInterface
 public import HaagerupIzumi.Analytic.GammaFourierEvaluation
 public import HaagerupIzumi.Analytic.GammaTwoContourCenter
 public import HaagerupIzumi.Analytic.GammaTwoDecay
+public import HaagerupIzumi.Analytic.GammaConstruction
 
 @[expose] public section
