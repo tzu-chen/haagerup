@@ -1,0 +1,177 @@
+\section{A complete weight-two chiral three-point dataset}
+\label{sec:physics-couplings}
+
+The coefficient $120$ of the vacuum character is small enough to
+resolve its first interacting primary space completely. Its $113$
+Virasoro primaries comprise the $96$ fields in the eight charged
+current multiplets of the construction, together with $17$ fields
+obtained from the currents and stress tensors. Here ``charged'' refers
+to a nontrivial current multiplet; it does not exclude zero-weight
+components within that multiplet.
+
+\subsection{Actual fields and normalization}
+
+Label the eight original highest fields by $v_{m,0,0}$,
+$m=0,\ldots,7$, in the order
+\[
+ (n_m,r_m)=(1,5),(1,9),(1,9),(1,13),
+            (2,2),(2,6),(2,8),(2,14).
+\]
+These are representation dimensions for the two current algebras.
+The two $(1,9)$ copies are distinct and have different coset-stress
+eigenvalues. In the last multiplet the highest field is the defining
+field $u$, with the normalization inherited from its saved lattice
+vector. Define all components by
+\begin{equation}\label{eq:physics-primary-basis}
+ v_{m,p,q}=(F_L)_0^p(F_R)_0^qv_{m,0,0},
+ \quad 0\leq p<n_m,\quad0\leq q<r_m.
+\end{equation}
+No factorials divide the lowering powers. The Cartan charges are
+$(n_m-1-2p,r_m-1-2q)$.
+
+The remaining highest fields are
+\[
+ v_{8,0,0}=(E_R)_{-1}E_R,\qquad
+ v_{9,0,0}=(E_L)_{-1}E_R,
+\]
+of current types $(1,5)$ and $(3,3)$, and three current singlets.
+To specify the latter, use the four mutually commuting stress tensors
+\[
+ (T_L,T_R,T_e,T_f),\qquad
+ (c_L^{\rm aff},c_R^{\rm aff},c_e,c_f)
+ =\left(1,\frac{117}{41},\frac{2400}{1271},\frac{70}{31}\right).
+\]
+In the next formula abbreviate the first two central charges by
+$c_l,c_r$, to distinguish them from the spacetime charges $c_L=c_R=8$.
+The singlets are
+\begin{align}
+ v_{10,0,0}&=c_rT_L-c_lT_R,\\
+ v_{11,0,0}&=c_e(T_L+T_R)-(c_l+c_r)T_e,\\
+ v_{12,0,0}&=c_f(T_L+T_R+T_e)-(c_l+c_r+c_e)T_f.
+ \label{eq:physics-stress-primaries}
+\end{align}
+Because $\langle T_i,T_j\rangle=\delta_{ij}c_i/2$, these three
+vectors are mutually orthogonal and orthogonal to the total stress
+tensor. A combination $\sum a_iT_i$ is a total-Virasoro primary
+exactly when $\sum a_ic_i=0$, proving their primarity directly.
+
+The right spin-two multiplet is the traceless symmetric current
+product. The cross-current multiplet is primary because the two
+current factors commute. At level one the left spin-two current
+product is null, so there is no additional $(5,1)$ multiplet.
+Together these add $5+9+3=17$ fields. The exact calculation checks
+the Virasoro-primary conditions, all possible off-diagonal Gram
+entries within equal Cartan weights, and positive norms for all
+$113$ vectors. Distinct Cartan weights are orthogonal by the compact
+real form. Their independence and the character count
+$120-6-1=113$ prove completeness: the subtractions remove six current
+derivatives and the total stress tensor.
+
+Put $N_i=\langle v_i,v_i\rangle_g$ and
+$\widehat v_i=v_i/\sqrt{N_i}$, choosing the positive square root.
+The exported coefficients use the antilinear first-slot Hermitian
+pairing and the transported lattice PCT of \eqref{eq:pct}:
+\begin{equation}\label{eq:physics-primary-three-point}
+ C_{ij}^{\ k}
+ =\langle\widehat v_k,(\widehat v_i)_1\widehat v_j\rangle_g
+ =\frac{\langle v_k,(v_i)_1v_j\rangle_g}
+ {\sqrt{N_iN_jN_k}}.
+\end{equation}
+Equivalently this is the three-point coefficient with the conjugate
+of $\widehat v_k$ at infinity. The singular OPE contains
+$z^{-2}C_{ij}^{\ k}\widehat v_k(0)$, in addition to current,
+stress-tensor and descendant contributions. The unnormalized
+numerator and norm product lie in
+$\mathbb Q(\sqrt{13},\sqrt{-3})$; the positive square-root
+normalization is left explicit. Thus the table retains the complex
+phase, not only $|C|^2$.
+
+\subsection{From directly computed seeds to the full tensor}
+
+Let $P$ be orthogonal projection onto this primary space and write
+$P((v_i)_1v_j)=\sum_k p_{ij}^{\ k}v_k$. Since current zero modes
+commute with the total Virasoro algebra, this projection is equivariant.
+For either lowering operator $F$ the derivation identity gives
+\begin{equation}\label{eq:physics-Ward-completion}
+ P((Fv_i)_1v_j)=F\,P((v_i)_1v_j)-P((v_i)_1Fv_j).
+\end{equation}
+Starting with $i$ highest in each of the thirteen multiplets determines
+the entire tensor recursively. In the raw basis \eqref{eq:physics-primary-basis},
+$F$ simply advances one lowering exponent; its raising partner acts
+by $E v_p=p(n-p)v_{p-1}$. Equation~\eqref{eq:physics-Ward-completion}
+therefore uses only exact additions and multiplications of known
+coefficients. Orthogonal projection is essential here: we do not
+discard descendants before justifying equivariance.
+
+The direct seed calculation evaluates $1137$ actual lattice mode
+products and $3512$ charge-compatible projections, of which $1639$
+are nonzero. The completed tensor has
+\[
+ 113^3=1442897\quad\hbox{ordered entries},\qquad
+ 18365\quad\hbox{nonzero entries}.
+\]
+All omitted entries in the sparse table are exactly zero within this
+complete weight-two primary tensor. Every raising and lowering Ward
+identity is checked, including at the tops and bottoms of multiplets:
+there are $51076$ pairwise checks. Primary skew-symmetry gives a
+further $12769$ checks, and $33$ additional direct lattice products
+test components outside the initial seed slice. These checks verify
+the specified finite tensor; they are not a test of arbitrary-weight
+associativity or full-CFT sewing.
+
+A cross-check connects this tensor to an independent four-point
+calculation. The weight $(-1,-13)$ component is unique, so
+$\widehat v_{7,1,13}$ equals $\widehat u^\dagger$ up to a phase.
+Summing its nine nonzero primary projections gives exactly
+\[
+ \sum_{k=1}^{113}|C_{\widehat u,\widehat u^\dagger}^{\ k}|^2
+ =\frac{11}{3}.
+\]
+Adding the total-stress contribution one reproduces the global
+weight-two coefficient $14/3$ in the Gaussian four-point function
+\eqref{eq:physics-u-neutral}. The three stress-difference contributions
+separately agree with their Ward values. The small standalone checker
+\artifact{check_physics_crosslinks.py} verifies these sums without
+importing the lattice mode engine.
+
+Several entries are short enough to check without navigating a large
+file. The indices below are the explicit $(m,p,q)$ labels above.
+\begin{center}
+\begin{tabular}{ccc|r}
+\toprule
+$i$&$j$&$k$&$|C_{ij}^{\ k}|^2$\\
+\midrule
+$(0,0,0)$&$(0,0,2)$&$(0,0,0)$&$4356/8645$\\
+$(1,0,0)$&$(1,0,6)$&$(0,0,0)$&$39605/717288$\\
+$(7,0,0)$&$(7,1,13)$&$(10,0,0)$&$13/316$\\
+$(8,0,0)$&$(8,0,3)$&$(8,0,1)$&$1225/741$\\
+$(9,0,0)$&$(9,2,0)$&$(8,0,0)$&$76/39$\\
+$(10,0,0)$&$(10,0,0)$&$(10,0,0)$&$23104/9243$\\
+$(12,0,0)$&$(12,0,0)$&$(12,0,0)$&$2916/3115$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For example, for $A=c_rT_L-c_lT_R$ one has
+\[
+ \langle A,A\rangle=\frac{c_lc_r(c_l+c_r)}2,\qquad
+ |C_{AAA}|^2=\frac{8(c_r-c_l)^2}{c_lc_r(c_l+c_r)}
+ =\frac{23104}{9243}.
+\]
+This follows just from the two commuting stress OPEs and provides a
+human-sized independent normalization check on the lattice table.
+
+The principal files are
+\artifact{c8_physics_20260927/full_weight_two/low_weight_basis.json},
+which stores every actual lattice vector and norm;
+\artifact{low_weight_products.jsonl}, which stores each seed product;
+and \artifact{complete_primary_couplings.tsv}, which stores every
+nonzero normalized coefficient by its exact numerator and norm product.
+The accompanying JSON report documents the recurrence checks and
+source hashes. The earlier $96$-field slice remains available as an
+intermediate audit, but the $113$-field table is the complete release.
+
+These are chiral vacuum-module observables of $U$, hence also
+observables of its selected extension. They give local spinning fields
+in either bulk theory. Factorized products of these fields give
+additional full-CFT vacuum-sector correlators. They do not supply the
+three-point constants of generic nonvacuum diagonal-sector primaries.

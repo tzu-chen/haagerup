@@ -1,0 +1,354 @@
+\section{Exact correlators and channel data}
+\label{sec:physics-correlators}
+
+The vacuum algebra gives several explicit interacting chiral correlators,
+in addition to current and stress-tensor Ward identities.  We give two
+four-point functions of the weight-two generator, two spin-three four-point
+functions, and selected intertwiner blocks for the lightest nonvacuum
+module.  All normalizations below are fixed.  The last family consists of
+chiral blocks obtained from the containing lattice theory; it does not
+specify the diagonal $U$ theory's nonvacuum bulk four-point function.
+
+\subsection{Conventions and Ward identities}
+
+Write $T$ for the total stress tensor, with
+\begin{equation}
+ T(z)T(0)\sim \frac{4}{z^4}+\frac{2T(0)}{z^2}
+                   +\frac{\partial T(0)}{z}.
+\end{equation}
+The two commuting affine $\mathfrak{sl}_2$ algebras have levels
+$k_L=1$ and $k_R=39$.  We use Cartan currents with
+$H_L(z)H_L(0)\sim2z^{-2}$ and
+$H_R(z)H_R(0)\sim78z^{-2}$; their mixed two-point function vanishes.
+More generally, for invariant form $\kappa$ normalized by
+$\kappa(H,H)=2$, the currents obey
+\begin{equation}
+ J^a(z)J^b(0)\sim\frac{k\kappa^{ab}}{z^2}
+               +\frac{f^{ab}{}_cJ^c(0)}{z}.
+\end{equation}
+This fixes every vacuum current correlator recursively.  For example,
+with $f^{abc}=f^{ab}{}_d\kappa^{dc}$,
+$\langle J^a(z_1)J^b(z_2)J^c(z_3)\rangle
+=k f^{abc}/(z_{12}z_{13}z_{23})$.
+
+Let $\widehat u=u/\sqrt{12}$ and let $\widehat u^\dagger$ denote its
+chiral adjoint in the transported positive lattice form.  The symbol
+$\dagger$ does not introduce an antiholomorphic field.  This primary has
+weight two, Cartan charges $(q_L,q_R)=(1,13)$, and
+\begin{align}
+ \langle\widehat u(z)\widehat u^\dagger(0)\rangle&=z^{-4},\\
+ \langle H_a(z_1)\widehat u(z_2)\widehat u^\dagger(z_3)\rangle
+  &=\frac{q_a}{z_{12}z_{13}z_{23}^{3}},\\
+ \langle T(z_1)\widehat u(z_2)\widehat u^\dagger(z_3)\rangle
+  &=\frac{2}{z_{12}^{2}z_{13}^{2}z_{23}^{2}}.
+\end{align}
+Consequently the squared couplings to the unit Cartan currents are
+$1/2$ and $13/6$.  A useful mixed four-point function is
+\begin{equation}
+ \begin{aligned}
+ \langle H_a(z_1)H_b(z_2)\widehat u(z_3)
+                  \widehat u^\dagger(z_4)\rangle
+ ={}&\frac{1}{z_{34}^{4}}\left[
+ \frac{K_{ab}}{z_{12}^{2}}+
+ q_aq_b\left(\frac1{z_{13}}-\frac1{z_{14}}\right)
+       \left(\frac1{z_{23}}-\frac1{z_{24}}\right)\right].
+ \end{aligned}
+\end{equation}
+Here $K=\operatorname{diag}(2,78)$.
+The unit stress tensor is $\widehat T=T/2$; both
+$C_{\widehat T\widehat u\widehat u^\dagger}$ and
+$C_{\widehat T\widehat T\widehat T}$ equal one in these conventions.
+Writing $y=1-x$, the normalized four-point functions of any unit
+Cartan current $\widehat H$ and of $\widehat T$ are
+\begin{align}
+ \langle\widehat H(\infty)\widehat H(1)
+                 \widehat H(x)\widehat H(0)\rangle
+ &=1+x^{-2}+y^{-2},\\
+ \langle\widehat T(\infty)\widehat T(1)
+                 \widehat T(x)\widehat T(0)\rangle
+ &=1+x^{-4}+y^{-4}+x^{-2}+y^{-2}+x^{-1}+y^{-1}.
+\end{align}
+The first follows from Heisenberg Wick contractions, the second from
+the Virasoro Ward identity at central charge eight.
+
+\subsection{A three-exponential four-point function}
+
+In simple-root coordinates of $E_6\oplus A_2$, put
+\begin{align}
+ a_1&=(0,0,0,0,0,-1,1,1),\\
+ a_2&=(0,0,0,1,1,-1,0,0),\\
+ a_3&=(1,1,0,0,0,-1,0,0),\\
+ u&=e^{a_1}+\frac{\sqrt{13}+3\sqrt{-3}}{20}e^{a_2}
+             +\frac{\sqrt{13}-3\sqrt{-3}}{20}e^{a_3}.
+\end{align}
+The simple-root Gram matrix has diagonal entries two and entries minus
+one along the edges $(0,1),(1,2),(2,3),(3,4),(2,5),(6,7)$, with indices
+starting at zero.  Thus $(a_i,a_i)=4$ and $(a_i,a_j)=2$ for $i\ne j$.
+In the torus gauge $(5,8,9,8,5,1,2,2)$, the three exponential squared
+norms are $4,40,40$.  Their coefficients therefore contribute $4,4,4$
+to $\|u\|^2=12$.  In particular this calculation uses the transported
+positive form, rather than treating the three displayed coefficients as
+coordinates in an orthonormal basis.
+
+The lattice Gaussian formula in a specified cocycle gauge is
+\begin{equation}
+ \left\langle\prod_{j=1}^{n}e^{b_j}(z_j)\right\rangle
+ =\delta_{\sum_j b_j,0}\,
+   \varepsilon(b_1,\ldots,b_n)
+   \prod_{i<j}(z_i-z_j)^{(b_i,b_j)}.
+\end{equation}
+Here the integer-lattice cocycle is
+\begin{equation}
+ \varepsilon(a,b)=(-1)^{\sum_i a_i b_i+
+                  \sum_{i>j}a_i b_jG_{ij}},
+\end{equation}
+and the multivariable factor is its iterated product.  These formulas
+also give a short independent derivation: expand each of the four
+fields, discard nonzero total charge, and multiply their six pairwise
+Gaussian factors.  Of the $3^4=81$ terms, fifteen survive.  All fifteen
+have coefficient $1/9$ after inserting the adjoint gauge and normalizing
+the four external fields.
+
+Set the insertion points to $(\infty,1,x,0)$, with
+$\phi(\infty)=\lim_{R\to\infty}R^{2h}\phi(R)$.  The two useful
+reflection-positive channels are
+\begin{align}
+ G_0(x)&=\langle\widehat u^\dagger(\infty)\widehat u(1)
+                 \widehat u^\dagger(x)\widehat u(0)\rangle
+       =\boxed{\frac{3-4x+4x^2}{3x^4(1-x)^4}},
+       \label{eq:physics-u-neutral}\\
+ G_+(x)&=\langle\widehat u^\dagger(\infty)\widehat u^\dagger(1)
+                 \widehat u(x)\widehat u(0)\rangle
+       =\boxed{\frac{x^2(4-4x+3x^2)}{3(1-x)^4}}.
+       \label{eq:physics-u-charged}
+\end{align}
+For example, the fifteen neutral contributions to the first formula
+sum to
+\begin{equation}
+ \frac{1}{3x^4(1-x)^4}
+ +\frac{2}{3x^2(1-x)^4}
+ +\frac{2}{3x^4(1-x)^2}.
+\end{equation}
+The three inequivalent orderings follow from
+$G_0(1-x)=G_0(x)$,
+$G_+(x)=x^{-4}G_0(1/x)$, and $G_+(1-x)$; their adjoint orderings agree.
+These are exact rational identities, not truncated series fits.
+
+To display positive channel data, expand in global conformal blocks:
+\begin{equation}
+ x^{2h_{\rm ext}}G(x)=A_0+
+       \sum_{n\ge1}A_n x^n\,{}_2F_1(n,n;2n;x).
+ \label{eq:physics-global-block-convention}
+\end{equation}
+For the two channels above, $A_n$ is the sum of squared couplings to
+orthonormal global quasiprimaries of weight $n$ in the appropriate charge
+sector.  This statement uses the positive radial pairing.  It does not
+identify $A_n$ with a single primary coupling or a Virasoro block
+coefficient.  The first neutral coefficients are
+\begin{equation}
+ (A_0,A_1,A_2,A_3,A_4)
+ =\left(1,\frac83,\frac{14}3,\frac{58}9,\frac{107}{15}\right).
+\end{equation}
+The value $A_1=1/2+13/6$ reproduces the two Cartan-current exchanges.
+At weight two the total stress tensor contributes one, leaving
+$11/3$ as the squared-coupling sum to ambient Virasoro primaries.
+In the equal-charge channel the first nonzero coefficient is
+$A_6=4/3$, followed by $A_8=19/13$; odd weights vanish.  Indeed,
+the leading state $\widehat u_{(-3)}\widehat u$ is supported on the
+three momenta $a_i+a_j$ with $i<j$, each of norm squared twelve.
+It is a weight-six Virasoro primary of squared norm $4/3$.
+The normalized leading OPE coefficient can therefore be chosen
+$2/\sqrt3$.  In particular the equal-charge OPE vanishes through
+orders $x^0$ and $x^1$ and starts at $x^2$.
+
+The four orthogonal commuting stress tensors give additional resolved
+weight-two data.  If $T_i$ has central charge $c_i$ and $u$ has
+$T_i$-weight $h_i$, then
+$C_{\widehat T_i\widehat u\widehat u^\dagger}^2=2h_i^2/c_i$.
+Here the entries are
+\begin{center}
+\begin{tabular}{c|c|c|c}
+stress & $c_i$ & $h_i$ & squared unit-field coupling\\\hline
+$T_L$ & $1$ & $1/4$ & $1/8$\\
+$T_R$ & $117/41$ & $195/164$ & $325/328$\\
+$e$ & $2400/1271$ & $180/1271$ & $27/1271$\\
+$f$ & $70/31$ & $13/31$ & $169/1085$
+\end{tabular}
+\end{center}
+Their charges and weights sum to eight and two, respectively.
+
+\subsection{Potts and parafermion spin-three four-point functions}
+
+The embedded Potts and parafermion algebras contain canonical spin-three generators with
+parameters
+\begin{equation}
+ (c,\lambda)=\left(\frac45,\frac4{13}\right)
+ \quad\hbox{and}\quad
+ (c,\lambda)=\left(\frac85,\frac{14}{473}\right).
+\end{equation}
+These are the Potts and level-thirteen parafermion cases, in the
+normalization of the universal $\mathcal W(c,\lambda)$ algebra
+\cite{Linshaw,DLY}.  Denote either spin-three field by $a$, its intrinsic
+stress tensor by $T_c$, and put
+\begin{equation}
+ N=\frac c3,\qquad b=a_{(1)}a,\qquad
+ A=31-16\lambda(c+2),\qquad B=NA.
+\end{equation}
+The exact checked singular self-OPE is
+\begin{align}
+ a(z)a(0)\sim{}&\frac{N}{z^6}+\frac{2T_c}{z^4}
+ +\frac{\partial T_c}{z^3}+\frac{b}{z^2}
+ +\frac{\frac12\partial b-\frac1{12}\partial^3T_c}{z},
+ \label{eq:physics-spin3-ope}\\
+ a_{(3)}b={}&Aa,\qquad \|b\|^2=B.
+\end{align}
+The positive normalization is chosen so that $a$ has two-point
+coefficient $N$; write $\widehat a=a/\sqrt N$.  The exact values of
+$(A,B)$ are $(1119/65,1492/325)$ for Potts and
+$(69283/2365,554264/35475)$ for the parafermion generator.
+
+Meromorphy, the OPE and crossing determine the complete correlator:
+\begin{align}
+ N^2\langle\widehat a(\infty)\widehat a(1)
+                 \widehat a(x)\widehat a(0)\rangle
+ ={}&N^2\bigl[1+x^{-6}+(1-x)^{-6}\bigr]\nonumber\\
+ &+2c\bigl[x^{-4}+(1-x)^{-4}
+             +x^{-3}+(1-x)^{-3}\bigr]\nonumber\\
+ &+B\bigl[x^{-2}+(1-x)^{-2}\bigr]
+ +(2B-2c)\bigl[x^{-1}+(1-x)^{-1}\bigr].
+ \label{eq:physics-spin3-fourpoint}
+\end{align}
+For completeness, the principal part at zero follows by pairing the
+five terms of \eqref{eq:physics-spin3-ope} with the outer two fields.
+The Ward identity gives
+$\langle a(\infty)a(1)T_c(0)\rangle=3N$; its first derivative is
+$6N$, and its third derivative is $72N$.  Likewise
+$\langle a(\infty)a(1)b(0)\rangle=B$, whose first derivative is
+$4B$.  These give residues $N^2,2c,2c,B,2B-2c$ at pole orders
+$6,4,3,2,1$.  Interchange of the equal fields fixes the principal part
+at one.  The identity channel at infinity fixes the constant $N^2$.
+The difference between the displayed function and the correlator is
+therefore a holomorphic function on the sphere vanishing at infinity.
+Both crossing generators $x\mapsto1-x$ and $x\mapsto1/x$ can also be
+verified directly in the displayed expression.
+
+The self-cubic coefficient $C_{\widehat a\widehat a\widehat a}$
+vanishes.  The squared coupling to the unit intrinsic stress tensor is
+$18/c$.  To isolate the new weight-four channel from Virasoro
+descendants, put
+\begin{equation}
+ \Lambda=:T_cT_c:-\frac3{10}\partial^2T_c,
+ \qquad \|\Lambda\|^2=\frac{c(5c+22)}{10},
+ \qquad W_4^{\rm prim}
+ =b-\frac{32}{5c+22}\Lambda-\frac3{10}\partial^2T_c.
+\end{equation}
+The squared $\widehat a\widehat a\Lambda/\|\Lambda\|$ coupling
+is $4608/[5c(5c+22)]$.  Subtracting this contribution from the global
+weight-four coefficient gives
+\begin{equation}
+ \gamma_4^2
+ =\frac{48(c+2)\{8-\lambda(5c+22)\}}{c(5c+22)}
+ =\begin{cases}
+ 0,&\text{Potts},\\
+ 60552/2365,&\text{level-thirteen parafermion}.
+ \end{cases}
+\end{equation}
+Thus the Potts extra weight-four primary is null, whereas the
+parafermion channel has a strictly positive extra coupling.  This
+separation refers to the intrinsic Virasoro algebra of central charge
+$c$, not to the total central-charge-eight Virasoro algebra.  The
+corresponding total global weight-four coefficients are $576/13$ and
+$21192/473$.  Equation \eqref{eq:physics-spin3-fourpoint} supplies all
+higher global coefficients without a new high-weight mode calculation.
+
+\subsection{Selected blocks for the lightest module}
+
+The two $B$-lattice sectors $(0,+1)$ and $(0,-1)$ both restrict to the
+simple $U$-module $c_1$ of lowest weight $1/3$ and top dimension three.
+In the $A_2$ simple-root basis its three fundamental weights are
+\begin{equation}
+ \beta_0=(2/3,1/3),\quad
+ \beta_1=(-1/3,1/3),\quad
+ \beta_2=(-1/3,-2/3),\qquad
+ (\beta_i,\beta_j)=\delta_{ij}-\frac13.
+\end{equation}
+Their $H_R$ charges are $q=(2,0,-2)$; their $H_L$ charges vanish.
+Choose paired lattice intertwiners with unit leading vacuum coefficient.
+On the branch $0<x<1$ with positive real powers, the nine selected
+four-point blocks are
+\begin{equation}
+ \mathcal F_{ij}(x)
+ =\langle V_{-\beta_i}(\infty)V_{\beta_i}(1)
+           V_{-\beta_j}(x)V_{\beta_j}(0)\rangle
+ =\boxed{x^{-2/3}(1-x)^{-(\beta_i,\beta_j)}}.
+ \label{eq:physics-lightest-block}
+\end{equation}
+Thus the diagonal entries are $[x(1-x)]^{-2/3}$ and the off-diagonal
+entries are $x^{-2/3}(1-x)^{1/3}$.  Analytic continuation requires a
+specified path; the fractional powers must not be replaced by a
+single-valued rational function.
+
+In the $x\to0$ channel these blocks factor through the $B$ vacuum
+sector, whose restriction is $U\oplus X$, with $X$ the module denoted
+$b$ in the modular table.  The first coefficient of the reduced block
+is $(\beta_i,\beta_j)$.  The decomposition of the intermediate
+weight-one Heisenberg vector gives the explicit split
+\begin{equation}
+ (\beta_i,\beta_j)
+ =\underbrace{\frac{q_iq_j}{78}}_{U\text{ current exchange}}
+ +\underbrace{\left(\beta_i,\beta_j\right)
+                    -\frac{q_iq_j}{78}}_{X\text{ top exchange}}.
+\end{equation}
+For $i=j=0$ these two positive coefficients are $2/39$ and $8/13$.
+The three-by-three $X$ Gram matrix has eigenvalues $0,1,35/39$,
+providing a direct positive-channel check.  Off-diagonal entries need
+not be positive: they are overlaps, rather than squared norms.
+The six ordered triples with three distinct weights have nonzero
+three-point functions proportional to
+$(z_{12}z_{13}z_{23})^{-1/3}$, with coefficient of absolute square one
+in this normalization.  Their phases depend on the lattice-intertwiner
+cocycle and chosen bases.  Two distinct positive weights add to the
+negative of the remaining weight and hence exhibit a $c_1$ channel.
+
+Restriction of a lattice intertwiner gives a genuine $U$ intertwiner,
+so these are nonvacuum chiral data, beyond Ward identities.  Their
+particular linear combinations and normalizations remember the
+extension $U\subset B$.  They neither form a complete basis of all
+$U$ channels nor determine the diagonal theory's local bulk correlator
+$\langle\Phi\Phi\Phi\Phi\rangle$ for its lightest scalar.
+That quantity additionally requires channel and multiplicity bases,
+the full relevant intertwining operators and the left-right sewing
+coefficients.  In particular, multiplying one selected block by its
+complex conjugate has not been justified as that bulk correlator.
+
+\subsection{Reproducible data and verification scope}
+
+The bounded standard-library script
+\artifact{c8_physics_20260927/correlators.py} exports
+\artifact{c8_physics_20260927/correlators.json}, together with the
+tables \artifact{c8_physics_20260927/correlators.terms.tsv},
+\artifact{c8_physics_20260927/correlators.global_blocks.tsv}, and
+\artifact{c8_physics_20260927/correlators.samples.tsv}.
+The first table retains all $486$ assignments across the six charge
+orderings, including vanishing terms, their cocycle signs and exact
+coefficients in $\mathbb Q(\sqrt{13},\sqrt{-3})$.
+The second gives the exact global-block decomposition of the two
+$u$ channels, both spin-three correlators and the two Ward correlators through the recorded
+cutoff, with default weight $32$; the third gives exact values at five
+rational cross-ratios.  Polynomial crossing identities, reconstruction
+of the truncated series, positivity in the specified channels and the
+lightest-module Gram decomposition are checked exactly.
+
+The script checks the three-exponential input against
+\artifact{hi_cft_20260923_c8_exact_fields.json}.  The spin-three
+parameters and norms are read from
+\artifact{hi_cft_20260923_proof_pf13_ope.json}; their singular OPE
+provenance is
+\artifact{hi_cft_20260923_proof_pf13_upper_poles.py} and its saved
+report.  Source hashes are included.  The export does not import the
+lattice mode engine or repeat its higher-grade computations.  Its
+finite positivity tests provide reproducible consistency checks;
+all-order positivity follows here from the positive VOA realization,
+rather than from extrapolating those tests.  The separately exported
+low-weight coupling tensor resolves many of the summed weight-two
+channels above into individual normalized primary couplings.
