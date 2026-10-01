@@ -30,6 +30,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 LEAN_DIR = ROOT / 'lean'
 GIB = 1024 ** 3
+RESOURCE_GUARD = Path.home() / '.local/bin/research-safe-run'
 
 
 def main():
@@ -56,8 +57,7 @@ def main():
             sys.exit('--build is limited to HaagerupIzumi project modules')
         module_name = '.'.join(relative.with_suffix('').parts)
     if not guarded:
-        os.execv(sys.executable, [sys.executable,
-            str(ROOT / 'hi_cft_safe_run.py'), '--', sys.executable,
+        os.execv(str(RESOURCE_GUARD), [str(RESOURCE_GUARD), '--', sys.executable,
             str(Path(__file__).resolve()), '--guarded',
             *(['--build'] if build else []), str(source), *arguments[1:]])
 
@@ -66,8 +66,8 @@ def main():
         parent_command = Path(f'/proc/{os.getppid()}/cmdline').read_bytes().split(b'\0')
     except OSError:
         sys.exit('Refusing: cannot verify the resource watchdog parent')
-    if len(parent_command) < 2 or parent_command[1] != os.fsencode(ROOT / 'hi_cft_safe_run.py'):
-        sys.exit('Refusing: --guarded requires the active hi_cft_safe_run.py watchdog parent')
+    if len(parent_command) < 2 or Path(os.fsdecode(parent_command[1])).resolve() != RESOURCE_GUARD.resolve():
+        sys.exit('Refusing: --guarded requires the active ~/.local/bin/research-safe-run watchdog parent')
     if hard == resource.RLIM_INFINITY or hard > 6 * GIB:
         sys.exit('Refusing: the 6 GiB address-space guard is not active')
     if len(os.sched_getaffinity(0)) > 2:

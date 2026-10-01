@@ -28,7 +28,7 @@ python lean/safe_lean.py --build lean/HaagerupIzumi/Analytic/GammaIntegral.lean
 
 Build one file at a time in dependency order. The driver requires cached
 Mathlib dependencies and already-built project prerequisites. It runs through
-`../hi_cft_safe_run.py`, enforcing the shared desktop's memory and CPU limits.
+`~/.local/bin/research-safe-run`, enforcing the shared desktop's memory and CPU limits.
 Modern Lean module headers enable selective import loading, and the small
 process-local helper in `tools/lean_stack_limit.c` limits Lake's thread stack
 reservations without changing proof checking.

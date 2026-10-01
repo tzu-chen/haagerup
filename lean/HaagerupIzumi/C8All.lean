@@ -1,0 +1,87 @@
+module
+
+public import HaagerupIzumi.C8.Analytic.Comparison
+public import HaagerupIzumi.C8.Analytic.GraphReduction
+public import HaagerupIzumi.C8.Analytic.NetCount
+public import HaagerupIzumi.C8.Analytic.PoleCancellation
+public import HaagerupIzumi.C8.AnalyticContinuation
+public import HaagerupIzumi.C8.Branching
+public import HaagerupIzumi.C8.Category.BraidedModules
+public import HaagerupIzumi.C8.Category.RelativeTensor
+public import HaagerupIzumi.C8.CharacterUniqueness
+public import HaagerupIzumi.C8.Characters
+public import HaagerupIzumi.C8.CoreTops
+public import HaagerupIzumi.C8.CubeRootTwists
+public import HaagerupIzumi.C8.Data.CoreTops
+public import HaagerupIzumi.C8.Data.CoreTopsBridge
+public import HaagerupIzumi.C8.Data.Lattice
+public import HaagerupIzumi.C8.Data.Spectra
+public import HaagerupIzumi.C8.Data.Weights
+public import HaagerupIzumi.C8.FormalCodegrees
+public import HaagerupIzumi.C8.Fusion.AutInvertible
+public import HaagerupIzumi.C8.Fusion.BasedRing
+public import HaagerupIzumi.C8.Fusion.Center
+public import HaagerupIzumi.C8.Fusion.E8FixedPoints
+public import HaagerupIzumi.C8.Fusion.FusionAlgebra
+public import HaagerupIzumi.C8.Fusion.NearGroup
+public import HaagerupIzumi.C8.Fusion.NearGroupRing
+public import HaagerupIzumi.C8.Fusion.NearGroupTwists
+public import HaagerupIzumi.C8.Fusion.Pivotal
+public import HaagerupIzumi.C8.Fusion.Rank6
+public import HaagerupIzumi.C8.Fusion.Rank6Indicators
+public import HaagerupIzumi.C8.Fusion.Rank6Iso
+public import HaagerupIzumi.C8.InitialGrades
+public import HaagerupIzumi.C8.LatticeNilpotence
+public import HaagerupIzumi.C8.MainProperness
+public import HaagerupIzumi.C8.MinimalGeneration
+public import HaagerupIzumi.C8.ModularLinearAlgebra
+public import HaagerupIzumi.C8.NearGroupMoments
+public import HaagerupIzumi.C8.Nilpotence
+public import HaagerupIzumi.C8.NumberTheory.Conductor40
+public import HaagerupIzumi.C8.NumberTheory.MultiplicityOne
+public import HaagerupIzumi.C8.NumberTheory.Squareclass
+public import HaagerupIzumi.C8.NumberTheory.Thirteen
+public import HaagerupIzumi.C8.PositiveStress
+public import HaagerupIzumi.C8.ProofMap
+public import HaagerupIzumi.C8.ProofMapProperness
+public import HaagerupIzumi.C8.Properness.Corollary
+public import HaagerupIzumi.C8.Properness.Final
+public import HaagerupIzumi.C8.Properness.FullNormal
+public import HaagerupIzumi.C8.Properness.Gate4
+public import HaagerupIzumi.C8.Properness.Gate5
+public import HaagerupIzumi.C8.Properness.Lower
+public import HaagerupIzumi.C8.Properness.ModeLemmas
+public import HaagerupIzumi.C8.Properness.Setup
+public import HaagerupIzumi.C8.RankFour
+public import HaagerupIzumi.C8.RankSixMoments
+public import HaagerupIzumi.C8.Regularity.CompatibleTop
+public import HaagerupIzumi.C8.Regularity.Energy
+public import HaagerupIzumi.C8.SimpleQuotient
+public import HaagerupIzumi.C8.Sl2.CurrentBounds
+public import HaagerupIzumi.C8.Sl2.Projectors
+public import HaagerupIzumi.C8.Theta.Basic
+public import HaagerupIzumi.C8.Theta.Harmonic
+public import HaagerupIzumi.C8.Theta.M3First
+public import HaagerupIzumi.C8.Theta.M3Reverse
+public import HaagerupIzumi.C8.Theta.M6First
+public import HaagerupIzumi.C8.Theta.M6Reverse
+public import HaagerupIzumi.C8.Theta.NearGroup
+public import HaagerupIzumi.C8.VacuumLike
+public import HaagerupIzumi.C8.VertexAlgebra.Basic
+public import HaagerupIzumi.C8.VertexAlgebra.Borcherds
+public import HaagerupIzumi.C8.VertexAlgebra.Diagonal
+public import HaagerupIzumi.C8.VertexAlgebra.FilteredWick
+public import HaagerupIzumi.C8.VertexAlgebra.NormalWords
+public import HaagerupIzumi.C8.VertexAlgebra.PF13
+public import HaagerupIzumi.C8.VertexAlgebra.PF13Product
+public import HaagerupIzumi.C8.VertexAlgebra.Recursive
+public import HaagerupIzumi.C8.VertexAlgebra.Weak
+
+@[expose] public section
+
+/-!
+# Umbrella for the c=8 formalization
+
+Imports every module of `HaagerupIzumi/C8` (see `C8/README.md`).  Checking this file verifies
+that all modules elaborate together (no declaration-name clashes).
+-/
