@@ -12,21 +12,22 @@ public import Mathlib.Tactic.LinearCombination
 # Multiplicity one in the rank-six ring (Appendix G, lines 3926–4007)
 
 For the rank-six fusion ring `a³ = 1`, `ρa = a²ρ`, `ρ² = 1 + m(ρ + aρ + a²ρ)` (eq:rank6-ring),
-Lemma `lem:rank6-induction` (line 3842) produces a multiset of `4m² + 2` roots of unity (the
+Lemma `lem:rank6-induction` (lines 3834–3854) produces a multiset of `4m² + 2` roots of unity (the
 residual twists `θ_j`, each repeated `n_j²` times) with
 * eq:indicator-first:  `∑ θ = -(m² + m√Δ)/2`,
 * eq:indicator-second: `∑ θ² = (-m² + (2ε - m)√Δ)/2`, `ε ∈ {1, -1}`,
 where `Δ = 9m² + 4`.  The main theorem `multiplicity_eq_one` deduces `m = 1`
 (manuscript lines 3926–4004).
 
-## Hypotheses (not proved here)
+## Hypotheses of the theorems in this file (both proved elsewhere)
 
-* `LarsonRootCount` — **external theorem**: H. Larson, *Pseudo-unitary non-self-dual fusion
-  categories of rank 4*, arXiv:1401.1879, Theorem 1.3 (= Theorem 6.2).  Used only for
-  squarefree `c > 1`.
-* `Conductor40Bound` — **the manuscript's own Lemma `lem:conductor40`** (line 3949), stated
-  exactly; its proof (Galois averaging over `ℚ(√10)`, Ramanujan and Gauss sums) is not
-  formalized here.
+* `LarsonRootCount` — H. Larson, arXiv:1401.1879, Theorem 1.3 (= Theorem 6.2), for squarefree
+  `c > 1`.  Proved in `NumberTheory/LarsonProof.lean` (`larsonRootCount`).
+* `Conductor40Bound` — **the manuscript's own Lemma `lem:conductor40`** (lines 3950–3995), stated
+  exactly.  Proved in `NumberTheory/Conductor40Proof.lean` (`conductor40Bound`, Galois averaging
+  in `NumberTheory/GaloisAverage.lean`).
+  The unconditional statements are `multiplicity_eq_one_unconditional`,
+  `multiplicity_eq_one_of_family_unconditional` (`LarsonProof.lean`).
 * The data of Lemma `lem:rank6-induction` (the root multiset, its cardinality and the two
   moments) enter as hypotheses of `multiplicity_eq_one` / `multiplicity_eq_one_of_family`.
   No hypothesis mentions `m = 1`.
@@ -49,18 +50,21 @@ def IsRootOfUnity (z : ℂ) : Prop := ∃ k : ℕ, 0 < k ∧ z ^ k = 1
 /-- **Larson, Theorem 1.3** (arXiv:1401.1879, Theorem 1.3 = Theorem 6.2): *if `a, b, c ∈ ℤ`,
 `c` squarefree, and `a + b√c` is a sum of `n` roots of unity, then `n ≥ |b| φ(2c)`.*
 Larson's proof sums Galois orbits over `ℚ(√c)`, i.e. it treats irrational `√c`; the printed
-statement is literally false for `c = 1` (e.g. `1 = 3 - 2√1` is one root of unity).  We state
-it for squarefree `c > 1`, the only case used (manuscript line 3936). -/
+statement is literally false for `c = 1` (e.g. `1 = 3 - 2√1` is one root of unity; Larson prints
+"`c` nonnegative and squarefree").  We state it for squarefree `c > 1`, the only case used
+(manuscript line 3936), in the wording of Theorem 6.2 ("at least `|b| φ(2c)` roots").  Proved in
+`NumberTheory/LarsonProof.lean` (`larsonRootCount`). -/
 def LarsonRootCount : Prop :=
   ∀ (c : ℕ), Squarefree c → 1 < c → ∀ (a b : ℤ) (s : Multiset ℂ),
     (∀ z ∈ s, IsRootOfUnity z) →
     s.sum = (a : ℂ) + (b : ℂ) * (Real.sqrt c : ℂ) →
     |b| * (Nat.totient (2 * c) : ℤ) ≤ (Multiset.card s : ℤ)
 
-/-- **Lemma `lem:conductor40`** (manuscript line 3949): *if a multiset of `N` roots of unity
+/-- **Lemma `lem:conductor40`** (manuscript lines 3950–3955; proof to 3995): *if a multiset of `N` roots of unity
 has sum `-a - b√10` with `a, b ∈ ℤ_{≥0}`, then `N ≥ a + 8b`; if equality holds and the sum of
 the squared roots lies in `ℚ(√10)`, that second sum is `a`.*  This is the manuscript's own
-lemma; it is a hypothesis here (not formalized). -/
+lemma; it is a hypothesis of the theorems here and is proved in `Conductor40Proof.lean`
+(`conductor40Bound`). -/
 def Conductor40Bound : Prop :=
   ∀ (a b : ℕ) (s : Multiset ℂ), (∀ z ∈ s, IsRootOfUnity z) →
     s.sum = -(a : ℂ) - (b : ℂ) * (Real.sqrt 10 : ℂ) →
@@ -69,7 +73,7 @@ def Conductor40Bound : Prop :=
         (∃ x y : ℚ, (s.map (fun z => z ^ 2)).sum = (x : ℂ) + (y : ℂ) * (Real.sqrt 10 : ℂ)) →
         (s.map (fun z => z ^ 2)).sum = (a : ℂ))
 
-/-- The polynomial identity of manuscript line 3944. -/
+/-- The polynomial identity of manuscript line 3945. -/
 theorem multiplicity_identity (m : ℤ) :
     36 * m ^ 2 * (9 * m ^ 2 + 4) - 13 * (4 * m ^ 2 + 2) ^ 2 =
       4 * (m ^ 2 - 1) * (29 * m ^ 2 + 13) := by
@@ -124,7 +128,7 @@ theorem multiplicity_eq_one (hLarson : LarsonRootCount) (hC40 : Conductor40Bound
     rw [hΔ, Real.sqrt_mul (show (0 : ℝ) ≤ (t : ℝ) ^ 2 by positivity) (D : ℝ),
       Real.sqrt_sq (show (0 : ℝ) ≤ (t : ℝ) by positivity)]
   by_cases h10 : D = 10
-  · -- The exceptional squareclass `D = 10` (manuscript lines 3990–4000).
+  · -- The exceptional squareclass `D = 10` (manuscript lines 3997–4006).
     exfalso
     subst h10
     obtain ⟨k, rfl⟩ : ∃ k, m = 2 * k := by
@@ -229,7 +233,7 @@ theorem rootMultiset_roots {ι : Type*} [Fintype ι] {n : ι → ℕ} {θ : ι �
   exact hθ j
 
 /-- **Multiplicity one, in the notation of Lemma `lem:rank6-induction`** (manuscript lines
-3842–3858 and 3926–4004): residual central simples `Z_j` with `F(Z_j) = n_j R`, twists `θ_j`
+3834–3854 and 3926–4004): residual central simples `Z_j` with `F(Z_j) = n_j R`, twists `θ_j`
 (roots of unity), `∑ n_j² = 4m² + 2` and the two indicator moments eq:indicator-first and
 eq:indicator-second.  Assuming Larson's Theorem 1.3 and Lemma `lem:conductor40`, `m = 1`. -/
 theorem multiplicity_eq_one_of_family (hLarson : LarsonRootCount) (hC40 : Conductor40Bound)

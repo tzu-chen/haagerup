@@ -13,8 +13,10 @@ Proposition `prop:optional-algebraic-identification`, lines 4109–4118 of
 The ratio of two pivotal structures on a categorification of `eq:rank6-ring` is
 a tensor automorphism of the identity functor; on simples it is a function
 `t : ι → G` (scalars in `G = ℂˣ`) with `t_i t_j = t_l` whenever `l ⊂ i ⊗ j`.
-That this is how monoidal automorphisms of the identity act on simples is
-categorical and not formalized; the based-ring statement proved here is that
+That this is how monoidal automorphisms of the identity act on simples (Schur, naturality,
+monoidality) is proved in `Category/MonoidalAutomorphism.lean`
+(`IsHIRing.monoidalAut_eq_refl`, `IsHIRing.monoidalIso_eq`); the based-ring statement proved here
+is that
 every such `t` is identically one (for any `m ≥ 1`, in particular `m = 1`):
 `ρ² ∋ 1, ρ` gives `t_ρ² = 1 = t_ρ`, `ρ² ∋ aρ, a²ρ` gives their scalars, and
 `a ⊗ ρ = aρ` gives `t_a = 1`.

@@ -237,7 +237,7 @@ theorem squareclass_bound_nat {D : ℕ} (hsf : Squarefree D) (h1 : 1 < D) (h3 : 
       nlinarith
     · exact two_factor_bound hsf h5 (one_lt_card_primeFactors hsf h1 hDp)
 
-/-- **eq:squareclass-bound** (manuscript line 3930): `φ(2D)/√D ≥ 12/√13` for every
+/-- **eq:squareclass-bound** (manuscript lines 3925–3928): `φ(2D)/√D ≥ 12/√13` for every
 squarefree `D > 1` with `D ≡ 1 (mod 3)`, `7 ∤ D` and `D ≠ 10`. -/
 theorem squareclass_bound {D : ℕ} (hsf : Squarefree D) (h1 : 1 < D) (h3 : D % 3 = 1)
     (h7 : ¬ 7 ∣ D) (h10 : D ≠ 10) :

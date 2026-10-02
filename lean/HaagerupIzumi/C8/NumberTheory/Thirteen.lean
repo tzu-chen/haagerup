@@ -27,16 +27,19 @@ Let `ζ = exp(2πi/13)`, `N = {2,5,6,7,8,11}` (the quadratic nonresidues mod 13)
   nonresidues to residues, so `∑_{n∈N} ζ²ⁿ = (-1+√13)/2`;
 * `six_residual_twists`: Lemma `lem:six-residual-twists` — six residual central simples,
   each with `n_j = 1`, twists exactly the six nonresidue thirteenth roots, and `ε = ν₂(ρ) = 1` —
-  **conditional on** `NonresidueOrbitStep`;
+  given `NonresidueOrbitStep` (proved in `ThirteenOrbit.lean`; unconditional version
+  `six_residual_twists_proved`);
 * `epsilon_eq_one_of_larson`: independently, `ε = 1` follows from Larson's Theorem 1.3 alone
   (if `ε = -1`, twelve roots would sum to `-1 - 3√13`, needing `3 φ(26) = 36` roots).
 
-## Hypotheses (not proved here)
+## Hypotheses of the theorems in this file (both proved elsewhere)
 
 * `NonresidueOrbitStep` — **the manuscript's own Galois-averaging step** in the proof of
-  Lemma `lem:six-residual-twists` (lines 4026–4037): a multiset of six roots of unity with
-  sum `(-1-√13)/2` consists of nonresidue thirteenth roots.  Not formalized.
-* `LarsonRootCount` (external, Larson Theorem 1.3) — only in `epsilon_eq_one_of_larson`.
+  Lemma `lem:six-residual-twists` (lines 4025–4039): a multiset of six roots of unity with
+  sum `(-1-√13)/2` consists of nonresidue thirteenth roots.  Proved in `ThirteenOrbit.lean`
+  (`nonresidueOrbitStep`).
+* `LarsonRootCount` (Larson Theorem 1.3) — only in `epsilon_eq_one_of_larson`; proved in
+  `LarsonProof.lean` (`larsonRootCount`).
 -/
 
 namespace HaagerupIzumi.C8.NumberTheory
@@ -223,10 +226,11 @@ theorem nonresidue_powers_linearIndependent :
 /-! ### Lemma `lem:six-residual-twists` -/
 
 /-- **The Galois-averaging step** of the proof of Lemma `lem:six-residual-twists`
-(manuscript lines 4026–4037), stated as a hypothesis: *every root in a multiset of six roots
+(manuscript lines 4025–4039), stated as a hypothesis: *every root in a multiset of six roots
 of unity with sum `(-1-√13)/2` is one of the six nonresidue thirteenth roots.*  The
 manuscript proves this by averaging over a cyclotomic Galois group fixing `√13` (as in Lemma
-`lem:conductor40`, with the induced quadratic Gauss sum); this is not formalized here. -/
+`lem:conductor40`, with the induced quadratic Gauss sum); proved in `ThirteenOrbit.lean`
+(`nonresidueOrbitStep`). -/
 def NonresidueOrbitStep : Prop :=
   ∀ s : Multiset ℂ, (∀ z ∈ s, IsRootOfUnity z) → Multiset.card s = 6 →
     s.sum = (-1 - (Real.sqrt 13 : ℂ)) / 2 → ∀ z ∈ s, ∃ e ∈ nonresidues13, z = zeta13 ^ e
@@ -400,7 +404,7 @@ theorem epsilon_eq_one_of_larson (hLarson : LarsonRootCount) (s : Multiset ℂ)
 
 /-! ### Assembly: `m = 1`, the Haagerup dimensions and the six twists -/
 
-/-- eq:haagerup-dimensions (manuscript line 4011): at `m = 1`, `d = (3+√13)/2`,
+/-- eq:haagerup-dimensions (manuscript lines 4013–4017): at `m = 1`, `d = (3+√13)/2`,
 `s = 1 + d² = (13+3√13)/2` and `d_X = d² = (11+3√13)/2`. -/
 theorem haagerup_dimensions :
     (3 * (1 : ℝ) + Real.sqrt (9 * 1 ^ 2 + 4)) / 2 = (3 + Real.sqrt 13) / 2 ∧

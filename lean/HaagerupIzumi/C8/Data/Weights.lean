@@ -190,7 +190,8 @@ theorem coset_Lplus_meets_Lminus_once : ∀ v : ZMod 3 × ZMod 3,
 
 /-- **The fully-faithfulness count** of free `H/B`-module induction on `L₋` (lines 3340–3345).
 With `H/B = ⊕_{ℓ ∈ L₊} ℓ` in the pointed category, `Hom_{H/B}(x ⊗ (H/B), y ⊗ (H/B)) ≅
-Hom(x, y ⊗ (H/B))` (free-module adjunction, external) has dimension the number of `ℓ ∈ L₊` with
+Hom(x, y ⊗ (H/B))` (free-module adjunction: `RightMod.freeHomEquivFree`, `finrank_hom_free` in
+`Category/FreeModule.lean`) has dimension the number of `ℓ ∈ L₊` with
 `x = y + ℓ`; for `x = (a,-a)`, `y = (b,-b)` in `L₋` this is `δ_{x,y}`. -/
 theorem free_induction_hom_count : ∀ a b : ZMod 3,
     (Finset.univ.filter (fun c : ZMod 3 =>

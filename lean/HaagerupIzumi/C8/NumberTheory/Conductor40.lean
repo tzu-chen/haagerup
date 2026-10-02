@@ -8,13 +8,12 @@ public import Mathlib.Algebra.Order.Group.Multiset
 @[expose] public section
 
 /-!
-# Finite facts behind Lemma `lem:conductor40` (manuscript lines 3949–3988)
+# Finite facts behind Lemma `lem:conductor40` (manuscript lines 3950–3995)
 
-**Lemma `lem:conductor40` itself is not proved here**; it remains the hypothesis
-`Conductor40Bound` of `MultiplicityOne.lean`.  Its proof averages a multiset of roots of unity
-over the Galois group of a cyclotomic field fixing `√10` and evaluates every orbit sum through
-Ramanujan sums and imprimitive Gauss sums of the conductor-40 character; that general orbit
-analysis is not formalized.
+**Lemma `lem:conductor40` itself is proved in `Conductor40Proof.lean`** (`conductor40Bound`,
+discharging the hypothesis `Conductor40Bound` of `MultiplicityOne.lean`), by Galois averaging
+(`GaloisAverage.lean`) with a route that needs no Ramanujan sums or imprimitive Gauss sums; it
+uses `orbitPlus40_eq` and `orbitMinus40_eq` below.
 
 This file proves the explicit facts about primitive fortieth roots used in the equality case,
 with `ω = exp(2πi/40)` and `χ₄₀(u) = (2/u)(u/5)` (the primitive real character of conductor

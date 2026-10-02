@@ -38,7 +38,8 @@ structure Nodes where
   /-- Cert. `cert:initial`, `cert:lower`, the Gate 4/5 records and minimal generation:
   the exact lattice identities from which the closure hypotheses are derived. -/
   certFiniteClosure : Prop
-  /-- `dim K = 6` and `dim B₁ = 86` in the lattice VOA. -/
+  /-- `dim K = 6` and `dim B₁ = 86` in the lattice VOA, and `K` is spanned by two commuting
+  standard 𝔰𝔩₂-triples (the brackets of the currents; `ProofMapProperness.IsSl2SumSpan`). -/
   certDimensions : Prop
   /-- The exact PCT certificate `θ_g S₂ = S₂`. -/
   certPCT : Prop
@@ -185,8 +186,12 @@ structure Inputs (N : Nodes) : Prop where
   /-- External: the Dong–Lam–Yamada decoupling and Linshaw's recursive first rows for
   `K(𝔰𝔩₂,13)`; manuscript Proposition `prop:pf13-finite-reconstruction`.  Uniqueness half formalized:
   `Diagonal.diagonal_reconstruction` (with `SimpleQuotient.simple_quotient_unique`); the OPE
-  recovery `PF13.all_pairs`, `PF13Product.pf13_reconstruction` is conditional on the manuscript's
-  weight-bounded Wick claims `A₆, A₇, A₈, B₇` (not yet formalized). -/
+  recovery `PF13.all_pairs`, `PF13.pf13_reconstruction` takes the weight-bounded Wick claims
+  `A₆, A₇, A₈, B₇` as hypotheses, and these are proved in `PF13Wick.Data.claims`: the
+  unconditional statements are `PF13Wick.pf13_reconstruction'` and
+  `PF13Wick.pf13_reconstruction_of_rows` (paper pass: `VertexAlgebra/PF13_PAPER_PASS.md`).  The
+  simplicity of the generated subalgebra uses its PCT stability (CKLW-type argument, lines
+  2838–2841). -/
   L_pf13 : N.certStructural → N.pf13Factor
   /-- Haar averaging in `S₂` and Carathéodory give `eq:finite-positive-stress`; regularity,
   unitarity and nonnegative lowest weights of `K(𝔰𝔩₂,3)`, `K(𝔰𝔩₂,13)`, `A_{1,1}`,
@@ -205,11 +210,17 @@ structure Inputs (N : Nodes) : Prop where
   over the Zhu algebra, every finite-dimensional Zhu-submodule is a sum of tops and `L^A(0)` is
   diagonalizable on it with eigenvalues among the lowest weights;
   `CompatibleTop.isNonnegDiagonalizable_of_compatible` gives the input of `top_trace_nonneg`).
-  Also formalized: the commutator step (`CompatibleTop.commutator_step`, given the module
-  commutator relation; lines 2941–2943), the vacuum-top step (`CompatibleTop.vacuum_top_step`,
-  2952–2954) and the section `a ↦ a_(-1) v` (`VacuumLike.vacuumLike_section`, 2972–2978).  Not
-  formalized: finite length from `C₂`-cofiniteness, absence of negative weights, and the
-  choice of `v ∈ N_[0]` with `π v = 𝟏`.  Uses that `U` is a simple unitary VOA of CFT type
+  Also formalized: the commutator step (`CompatibleTop.commutator_step`, with the module
+  commutator relation itself derived from the weak-module axioms in
+  `VacuumProjective.L0_commutator`; lines 2941–2943), its generalized-weight-space form
+  (`VacuumProjective.act_mem_maxGenEigenspace`), the vacuum-top step
+  (`CompatibleTop.vacuum_top_step`, 2952–2954), the linear algebra of "no negative weights
+  through a composition series" (`VacuumProjective.maxGenEigenspace_eq_bot_of_filtration`,
+  `lowering_mode_eq_zero`, 2959–2964), the choice of `v ∈ N_[0]` with `π v = 𝟏`
+  (`VacuumProjective.exists_vacuum_preimage`) and the section `a ↦ a_(-1) v`
+  (`VacuumLike.vacuumLike_section`; with `L_N(-1) = ω_(0)`:
+  `VacuumProjective.omega_vacuumLike_section`, 2971–2978).  External: finite length from
+  `C₂`-cofiniteness (Huang, Miyamoto).  Uses that `U` is a simple unitary VOA of CFT type
   (lines 2933, 2956–2957: node `initialGrades`). -/
   L_projectiveVacuum : N.positiveStress → N.c2Cofinite → N.initialGrades → N.projectiveVacuum
   /-- Lemma `lem:projective-unit` with McRae (Sections 2.3, 3: finite braided GV category)
@@ -245,9 +256,12 @@ structure Inputs (N : Nodes) : Prop where
     N.certDiscriminant → N.lagrangianCenter
   /-- Adjunction: `rank 𝓕 = dim End(H) = ∑ mult² ∈ {4, 6}` (`Branching.rank_fork`). -/
   L_rankFork : N.lagrangianCenter → N.branchH → N.rankFork
-  /-- Lemma `lem:automorphisms-invertibles` with Bischoff–Jones (Lemma 3.1, Corollary 3.4).
-  Fusion-ring core formalized: `Fusion.aut_invertible`. -/
-  L_autInvertible : N.lagrangianCenter → N.invertiblesContainZ3
+  /-- Lemma `lem:automorphisms-invertibles` with Bischoff–Jones (Lemma 3.1, Corollary 3.4),
+  applied to the order-three automorphisms of `H/B` (line 3295); these come from the lattice
+  extension `H = B ⊕ J ⊕ J²` (line 3231), selected by the line `L₊` of the discriminant form
+  (`certDiscriminant`).  Fusion-ring core formalized: `Fusion.aut_invertible`; proved for concrete
+  nodes in `ProofMapConcreteBoundary.autInvertible_arrow`. -/
+  L_autInvertible : N.lagrangianCenter → N.certDiscriminant → N.invertiblesContainZ3
   /-- Lemma `lem:no-sign-extension`, external: finite-order automorphisms of simple Lie
   algebras fix a toral subalgebra of dimension the number of diagram orbits (RLYG §5.2).
   Formalized: the diagram automorphisms of `E₆` are `1` and the flip
@@ -272,10 +286,13 @@ structure Inputs (N : Nodes) : Prop where
   Dong–Mason Theorem 1, Ostrik's formal codegrees, Ng–Schauenburg, DLN Theorem II(iii),
   Kirillov–Ostrik Theorems 4.1/4.5, AGJS Table 4, Weil-representation theta series,
   pole cancellation.  Assembled in `RankFour.rank_four_excluded` (case `m = 0` proved in
-  `RankFour.nearGroup_m0_impossible`).  Formalized pieces: `Fusion.nearGroup_length`,
-  `Fusion.m6_balanced_impossible` (Verlinde value; the two `S` rows are manuscript input),
+  `RankFour.nearGroup_m0_impossible`).  Formalized pieces: `Fusion.nearGroup_length`
+  (from `Dim Z(𝓕) = (Dim 𝓕)²` stated generally: `CenterDimension.nearGroup_length_of_center`),
+  `Fusion.m6_balanced_impossible` (Verlinde value), and `Fusion.m6_balanced_impossible_of_modular`
+  (the same from the Verlinde formula, `S_{𝟏j} = d_j/Dim 𝓕` and DLN II(iii) stated generally),
   `Fusion.m6_projection_twists`, `Fusion.m3_twists`, `Fusion.e8_A4_invariants_ge`,
-  `CubeRootTwists.neargroup_twists`, `NearGroupMoments.neargroup_moments`,
+  `CubeRootTwists.neargroup_twists`, `NearGroupMoments.neargroup_moments` (from the
+  Ng–Schauenburg formula stated generally: `TwistTraces.neargroup_moments_of_trace`),
   `ModularLinearAlgebra.m6_projection`, `ModularLinearAlgebra.row_unique`, the four theta
   tables `m3First_table`, `m3Reverse_table`, `m6First_table`, `m6Reverse_table` with
   `near_group_formulas_ne_six` (Theta/; the obstruction theorems are conditional on the applied
@@ -295,16 +312,22 @@ structure Inputs (N : Nodes) : Prop where
   /-- Lemma `lem:rank6-induction`; external: Ostrik (Theorems 2.5, 2.13),
   Ng–Schauenburg Theorem 4.1.  Formalized: `CubeRootTwists.eq_one_of_weighted_sum` (cube-root twists),
   `CubeRootTwists.rank6_twists` (twists `1, ζ, ζ²`, `b_j = m`), `RankSixMoments.indicator_moments`
-  (the two moments from the evaluated traces), `FormalCodegrees.rank6_codegrees`,
-  `Fusion.rank6_center_count`.  Pseudo-unitarity from the Lagrangian center (line 3836). -/
+  (the two moments from the evaluated traces; from the Ng–Schauenburg formula stated generally:
+  `TwistTraces.indicator_moments_of_trace`), `FormalCodegrees.rank6_codegrees`,
+  `Fusion.rank6_center_count` (from `Dim Z(𝓕) = (Dim 𝓕)²`:
+  `CenterDimension.rank6_length_of_center`).  Pseudo-unitarity from the Lagrangian center
+  (line 3836). -/
   L_rankSixMoments : N.rankSixRing → N.untwistedPointed → N.lagrangianCenter →
     N.rankSixMoments
   /-- `m = 1`: squareclass bound, Larson Theorem 1.3, Lemma `lem:conductor40`.
-  Formalized: `NumberTheory.multiplicity_eq_one` from `LarsonRootCount` (external, `c > 1`) and
-  `Conductor40Bound` (Lemma `lem:conductor40`, not yet formalized). -/
+  Formalized without hypotheses beyond the `lem:rank6-induction` data:
+  `NumberTheory.multiplicity_eq_one_unconditional`; Lemma `lem:conductor40` is proved
+  (`NumberTheory.conductor40Bound`, Galois averaging in `NumberTheory/GaloisAverage`) and so is
+  Larson's Theorem 1.3 for squarefree `c > 1` (`NumberTheory.larsonRootCount`,
+  `NumberTheory/LarsonProof`). -/
   L_multiplicityOne : N.rankSixMoments → N.multiplicityOne
-  /-- Lemma `lem:six-residual-twists`.  Formalized: `NumberTheory.six_residual_twists` from
-  `NonresidueOrbitStep` (its Galois-averaging step, not yet formalized). -/
+  /-- Lemma `lem:six-residual-twists`.  Formalized: `NumberTheory.six_residual_twists_proved`
+  (its Galois-averaging step is `NumberTheory.nonresidueOrbitStep`). -/
   L_twelveTwists : N.multiplicityOne → N.rankSixMoments → N.twelveTwists
   /-- External: Gannon–Schopieray–Yadav (GSY) Theorem A(2)/5.1 for complex spherical
   untwisted HI categories (lines 4065–4066): the HI ring (`multiplicityOne`) and the spherical
@@ -318,15 +341,19 @@ structure Inputs (N : Nodes) : Prop where
   `Characters.gamma_eq_zero`, Lemma `lem:pole-cancellation` itself (`pole_cancellation`,
   Analytic/PoleCancellation, from Mathlib's modular forms), and Lemma
   `lem:haagerup-character-unique` as stated (`CharacterUniqueness.haagerup_character_unique`,
-  via `character_vector_unique` and `character_vector_unique_of_qexp`).  Uses strict positivity of
+  via `character_vector_unique` and `character_vector_unique_of_qexp`); reading `dim U₁ = 6 + 13γ`
+  off `χ = Ξ₀ + γ Ξ₃` uses uniqueness of `q`-expansion coefficients
+  (`ProofMapConcreteCharacters.qseries_coeff_eq_zero`).  Uses strict positivity of
   the nonvacuum lowest weights (Lemma `lem:vacuum-projective`), `c = 8` (line 4139) and Zhu/Huang
   modular invariance with Huang's identification of the character `S` with the categorical `S`
   (strong rationality).  The bound `17/10` appears only as a comparison (lines 4189–4190). -/
   L_characters : N.modularData → N.weightOne → N.projectiveVacuum → N.initialGrades →
     N.stronglyRational → N.characterVector ∧ N.lowestWeights
   /-- Corollary `cor:unmixed-lattice-restrictions`; formalized:
-  `Characters.unmixed_restriction`, `Characters.unmixed_restriction_two`. -/
-  L_unmixed : N.lowestWeights → N.stronglyRational → N.unmixedRestrictions
+  `Characters.unmixed_restriction`, `Characters.unmixed_restriction_two`.  Uses the lattice modules
+  `(0, ±1)`, `(±1, 0)` of the discriminant group: weights in `1/3 + ℤ`, `2/3 + ℤ`, top dimensions
+  `3`, `27` (lines 4198–4205; `certDiscriminant`). -/
+  L_unmixed : N.lowestWeights → N.stronglyRational → N.certDiscriminant → N.unmixedRestrictions
   -- Analytic comparison.
   /-- External: Tener [TenFusion] Corollary 4.24; Tener [TenFields] Proposition 7.5 and
   Lemma 7.6; Longo Theorem 24 (lines 4271–4279). -/
@@ -434,7 +461,7 @@ theorem boundary_chain (I : Inputs N) :
   have hH := I.L_branchH hB htop I.C_structural hrat
   have hlag := I.E_dmno hH hrat hproj hB I.C_discriminant
   have hfork := I.L_rankFork hlag hH
-  have hinv := I.L_autInvertible hlag
+  have hinv := I.L_autInvertible hlag I.C_discriminant
   have hsign := I.L_noSign h1 hB hrat
   have h3 := I.L_threeInvertibles hinv hsign hfork hlag
   have hunt := I.L_untwisted h3 I.C_discriminant hlag hrat

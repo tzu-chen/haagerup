@@ -43,7 +43,8 @@ any `R`-module with `Ω ≃ ⨁ₖ top (j k)`, each `top j` a simple `R`-module 
 Modelling step: `E` is an `R`-submodule of `Ω`, i.e. `E ⊆ Ω_A(M)` and `E` is stable under zero
 modes; in the manuscript this is the commutator computation of `lem:vacuum-projective`
 (lines 2941–2943), whose algebra is `commutator_step` (the commutator relation
-`[L(0), a_(n)] = (wt a - n - 1) a_(n)` on modules is a hypothesis).  External inputs (hypotheses): the zero-mode action
+`[L(0), a_(n)] = (wt a - n - 1) a_(n)` on modules is a hypothesis here; it is derived from the
+weak-module axioms in `VacuumProjective.L0_commutator`).  External inputs (hypotheses): the zero-mode action
 of the Zhu algebra on `Ω_A(M)` and the decomposition `Ω_A(M) ≅ ⨁ tops` (regularity of `A`), the
 simplicity of each top over the Zhu algebra, `L^A(0) = wt` on each top, and nonnegativity of
 the lowest weights.  The manuscript cites nothing at this point; Zhu's theorem and
@@ -228,8 +229,9 @@ theorem isNonnegDiagonalizable_of_compatible (ℓ : R) {J : Type*} (top : J → 
 `[L(0), A] = d·A` (for `A = a_(n)`, `d = wt a - n - 1`) and `L(0) v = h v`, then
 `L(0)(A v) = (h + d) A v`.  So on the lowest space `E = M_h` (no eigenvalue `h + d` when `d < 0`)
 lowering modes vanish, and degree-zero modes (`d = 0`) preserve `E`: `E` lies in `Ω_A(M)` and is
-stable under zero modes.  The commutator relation itself (module Jacobi identity) is a
-hypothesis. -/
+stable under zero modes.  The commutator relation itself is a hypothesis here; for weak modules
+of a VOA it is `VacuumProjective.L0_commutator_step`, and `VacuumProjective.module_commutator_step`
+is this lemma with the hypothesis discharged. -/
 theorem commutator_step {k M : Type*} [Field k] [AddCommGroup M] [Module k M]
     (L0 A : M →ₗ[k] M) (d h : k) (hcomm : ∀ w, L0 (A w) = A (L0 w) + d • A w) {v : M}
     (hv : L0 v = h • v) :

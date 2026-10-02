@@ -29,6 +29,8 @@ decomposition of Lemma `lem:rank6-induction`; that decomposition (multiplicities
 dimensions `d², s, 3n_j d`, `C`-twists `1, ζ, ζ²`) comes from Ostrik's induction–codegree
 correspondence (external) together with `CubeRootTwists.rank6_twists` and
 `CubeRootTwists.eq_one_of_weighted_sum` (manuscript steps, proved there).
+`TwistTraces.indicator_moments_of_trace` derives `trace1`, `trace2` from the Ng–Schauenburg
+formula stated for the list of center constituents of `I(ρ)`.
 -/
 
 namespace HaagerupIzumi.C8.RankSixMoments

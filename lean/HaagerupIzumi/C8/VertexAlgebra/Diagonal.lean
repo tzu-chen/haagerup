@@ -29,8 +29,8 @@ characteristic zero):
   `V × V'`, `WeakVertexAlgebra.normalSpan_isClosed`).  For Proposition
   `prop:pf13-finite-reconstruction`, `hcert` is **not** a certificate input: it is the conclusion
   of the first half of the proof (recovery of all generator rows, lines 2742–2813).  Only the
-  `a`-rows `a_n a`, `a_n b`, `a_n d` are certificate inputs there; see `PF13.lean` and
-  `PF13Product.lean` for what of the recovery is formalized.
+  `a`-rows `a_n a`, `a_n b`, `a_n d` are certificate inputs there; the recovery is formalized in
+  `PF13.lean`, `PF13Product.lean` and (the Wick claims) `PF13Wick.lean`.
 * `diagonalVA`: `D` is a vertex algebra of CFT type (`D_0 = k·(1, 1)`, grading inherited,
   internal direct sum).
 * `proj₁_isGradedHom`, `proj₂_isGradedHom`: the coordinate projections are grading-preserving

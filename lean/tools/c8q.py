@@ -224,6 +224,17 @@ def runner():
             refused = code != 0 and 'Refusing:' in text and any(m in text for m in BUSY_MARKERS) \
                 and 'Resource guard: slot' not in text
             breached = 'job memory exceeded its cgroup reservation' in text or code in (137, -9)
+            if not breached and code in (143, -15):
+                # The guard's watchdog stops a job at its reservation with SIGTERM; the only
+                # trace is a sampled peak close to the declared reservation.
+                peak = 0.0
+                for line in text.splitlines():
+                    if 'sampled peak scope memory' in line:
+                        try:
+                            peak = max(peak, float(line.split('memory')[1].split('MiB')[0]))
+                        except (IndexError, ValueError):
+                            pass
+                breached = peak >= 0.9 * req['mem_used']
             if refused or (breached and req['mem_used'] < MEMORY_CAP_MIB):
                 req.pop('started', None)
                 req['attempts'] = req.get('attempts', 0) + 1

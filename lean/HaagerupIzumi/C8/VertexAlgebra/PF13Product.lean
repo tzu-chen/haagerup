@@ -21,9 +21,11 @@ If the rows `(a_n b, a'_n b')`, `(a_n d, a'_n d')` lie in `D` (the checked PF13 
 `a, a` row follows from the self-row, `raa_of_selfrow`), the remaining self-row facts
 `a_0 a = ½Tb − (1/12)T³L`, `a_n b = 0` (`n ≥ 4`), `a_3 b ∈ k·a`, `a_2 b ∈ k·Ta` hold, **and the
 manuscript's intermediate claims `A_6` (only on `a_0 b`, by `hA6_of_a0b`), `A_7`, `A_8`, `B_7` hold
-(hypotheses `claimA6_a0b`, `claimA7`, `claimA8`, `claimB7`: not certificate inputs, not yet
-formalized)**, then `V ≅ V'` identifying `L, a, b, d`.  The theorem is therefore the
-reconstruction *conditional on* those four claims.
+(hypotheses `claimA6_a0b`, `claimA7`, `claimA8`, `claimB7`: not certificate inputs)**, then
+`V ≅ V'` identifying `L, a, b, d`.  The four claims are proved in `VertexAlgebra/PF13Wick.lean`;
+the unconditional statements are `PF13Wick.pf13_reconstruction'` and
+`PF13Wick.pf13_reconstruction_of_rows` (the latter also without `a_n b = 0` (`n ≥ 4`),
+`a_3 b ∈ k·a`, `a_2 b ∈ k·Ta`, which are not used).
 -/
 
 namespace HaagerupIzumi.C8
@@ -130,11 +132,11 @@ theorem raa_of_selfrow {L : W} {c : k} (hT : ∀ x ∈ N, P.T x ∈ N) (hvacN : 
 
 end Reduce
 
-/-- **Proposition `prop:pf13-finite-reconstruction`, conditional on the manuscript claims
+/-- **Proposition `prop:pf13-finite-reconstruction`, given the manuscript claims
 `A_6` (on `a_0 b`), `A_7`, `A_8`, `B_7`.**  The hypotheses `claimA6_a0b`, `claimA7`, `claimA8`,
 `claimB7` are instances of the manuscript's intermediate claims `A_r`/`B_r` (lines 2777–2811),
-**not certificate inputs and not yet formalized**; the theorem is the reconstruction conditional
-on them.  All other hypotheses are the proposition's own: Virasoro/primary data, the self-row
+not certificate inputs; they are proved in `PF13Wick.Data.claims`, and
+`PF13Wick.pf13_reconstruction'` is this theorem without them.  All other hypotheses are the proposition's own: Virasoro/primary data, the self-row
 (`a_0 a = ½Tb − (1/12)T³L`, `a_2 a = TL`, `a_3 a = 2L`, `a_4 a = 0`, `a_5 a = (c/3)·1`,
 `a_n b = 0` for `n ≥ 4`, `a_3 b ∈ k·a`, `a_2 b ∈ k·Ta`, with the same constants in `V` and
 `V'`), the certificate rows `(a_n b, a'_n b')`, `(a_n d, a'_n d') ∈ D` (the `a, a` row is derived

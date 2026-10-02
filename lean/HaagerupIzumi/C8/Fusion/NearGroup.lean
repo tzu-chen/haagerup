@@ -28,14 +28,18 @@ explicit hypotheses of the theorems below.
   formula `Dim Z(𝓕) = (Dim 𝓕)²` applied to the forgetful images listed in
   Lemma `lem:near-group-induction`, whose determination uses Ostrik's
   induction/formal-codegree correspondence and the Ng–Schauenburg twist
-  formula (external; supplied as the hypothesis `hcenter`).
+  formula (external; supplied as the hypothesis `hcenter`).  `CenterDimension.nearGroup_length_of_center`
+  derives it from `Dim Z(𝓕) = (Dim 𝓕)²` stated for the list of center simples.
 * `nearGroup_m0`: `m = 0` gives `s = 2`, hence `d_X = s - 1 = 1` (line 3366).
 * `m6_balanced_*`: Lemma `lem:m6-balanced` (lines 3516–3548).  With
   `u = (2-√3)/12`, `v = (2+√3)/12` one has `u+v = 1/3`, `uv = 1/144`, and the
   Verlinde sum for `N_{XX}^X` along the rows forced by signed Galois symmetry
   equals `v³/u + u³/v + 3/9 + 4/36 - 22/48 = 4/3`, which is not an integer.
   The Galois symmetry of the `S`-matrix (Dong–Lin–Ng, Theorem II(iii)) and the
-  Verlinde formula are external and enter as the hypothesis `hVerlinde`.
+  Verlinde formula are external and enter as the hypothesis `hVerlinde`;
+  `Fusion.m6_balanced_impossible_of_modular` (`Fusion/M6BalancedModular.lean`) derives the
+  forced rows and the value from the Verlinde formula, `S_{𝟏j} = d_j/Dim 𝓕` and DLN II(iii)
+  stated generally.
 * `current_obstruction_*`: the final arithmetic of Proposition
   `prop:near-group-current-obstructions` (lines 3614–3770).  The theta-series
   identities themselves (pole cancellation, Weil representations) are
@@ -163,7 +167,8 @@ theorem four_thirds_ne_int (N : ℤ) : (N : ℝ) ≠ 4 / 3 := by
 /-- Lemma `lem:m6-balanced`: the balanced pattern `p = q = 1` is impossible.
 `hVerlinde` is the Verlinde formula for the fusion coefficient `N_{XX}^X`
 evaluated on the rows forced by signed Galois symmetry (DLN, Theorem II(iii));
-it is an external input. -/
+it is an external input here.  `m6_balanced_impossible_of_modular` replaces it by the cited
+statements themselves. -/
 theorem m6_balanced_impossible {J : Type*} [Fintype J] (n : J → ℕ) (hn : ∀ j, n j ≠ 0)
     (hsum : ∑ j, (n j : ℝ) ^ 2 = 22) (NXXX : ℕ)
     (hVerlinde : (NXXX : ℝ) = m6v ^ 3 / m6u + m6u ^ 3 / m6v + 3 * ((1 / 3 : ℝ) ^ 3 / (1 / 3)) +

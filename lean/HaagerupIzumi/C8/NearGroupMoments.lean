@@ -25,7 +25,9 @@ concludes (eq:near-group-moments, using `3/d = d - 3k` and `3s/d = √(9k² + 12
 `trace2` are the Ng–Schauenburg formula already evaluated on the induction decomposition
 displayed above (whose twists come from `CubeRootTwists.neargroup_twists` and
 `CubeRootTwists.neargroup_multiplicities`, and whose objects come from Ostrik's
-correspondence, external).
+correspondence, external).  `TwistTraces.neargroup_moments_of_trace` derives `trace1`, `trace2`
+from the Ng–Schauenburg formula stated for the list of center constituents of `I(ρ)`, for either
+primitive cube root `ζ`.
 -/
 
 namespace HaagerupIzumi.C8.NearGroupMoments

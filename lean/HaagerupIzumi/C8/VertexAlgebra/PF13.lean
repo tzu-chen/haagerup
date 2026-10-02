@@ -26,7 +26,7 @@ Proved here, from the stated hypotheses:
 * the Virasoro rows `row_LL`, `row_La`, `row_Lb`, `row_Ld` (lines 2752–2756);
 * `all_pairs`: every ordered pair of generators has all singular products in `N`.
 
-**Conditional on unformalized manuscript claims.**  `all_pairs` takes four families of
+**Conditional here; discharged in `PF13Wick`.**  `all_pairs` takes four families of
 memberships as hypotheses, `claimA6`, `claimA7`, `claimA8`, `claimB7`:
 `a_(m) (a_(j) b)`, `a_(m) (a_(j) d)`, `a_(m) (b_(j) d)`, `b_(m) (a_(j) d) ∈ N`.
 These are **not certificate inputs**: they are instances of the manuscript's own intermediate
@@ -34,10 +34,11 @@ claims `A_6`, `A_7`, `A_8`, `B_7` (lines 2777–2811: "`a_n P` [resp. `b_n P`] l
 span for every normal polynomial `P` of weight at most `r`"), namely the instances consumed by
 the iterate identities for `b_n b`, `b_n d`, `d_n d`.  The manuscript proves them by a
 core-by-core filtered Wick verification through weight eight (using the self-row
-`a_0 a = ½Tb − (1/12)T³L`, `a_n b = 0` for `n ≥ 4`, `a_3 b ∈ k·a`, `a_2 b ∈ k·Ta`); that
-verification is **not yet formalized**.  So `all_pairs`, and everything built on it, is the
-recovery *conditional on* `A_6, A_7, A_8, B_7`.  Everything else in the recovery (Virasoro
-rows, skew reversal, iterate reductions) is proved.
+`a_0 a = ½Tb − (1/12)T³L`, `a_n b = 0` for `n ≥ 4`, `a_3 b ∈ k·a`, `a_2 b ∈ k·Ta`).  That
+verification is formalized in `VertexAlgebra/PF13Wick.lean` (`PF13Wick.Data.claims` proves the
+four hypotheses; `PF13Wick.Data.all_pairs` is the unconditional version of `all_pairs`).
+Everything else in the recovery (Virasoro rows, skew reversal, iterate reductions) is proved
+here.
 -/
 
 namespace HaagerupIzumi.C8
@@ -213,12 +214,12 @@ theorem row_Ld (n : ℕ) : P.mode n L d ∈ N := by
 
 include hT hvacN hLN haN hbN hdN hLg hag hbg hdg hb hd hLm1 hL0 hLL2 hLL3 hLa haa2 haa3 haa4
   haa5 raa rab rad claimA6 claimA7 claimA8 claimB7 in
-/-- **All generator rows, conditional on the manuscript claims `A_6, A_7, A_8, B_7`.**  Every
+/-- **All generator rows, given the manuscript claims `A_6, A_7, A_8, B_7`** (proved in
+`PF13Wick.Data.claims`; unconditional version `PF13Wick.Data.all_pairs`).  Every
 ordered pair of generators `x, y ∈ {L, a, b, d}` has all singular products `x_(n) y` (`n ≥ 0`)
 in `N`, given the Virasoro and self-row hypotheses, the input rows `a_(n) a`, `a_(n) b`,
 `a_(n) d ∈ N`, and the hypotheses `claimA6`, `claimA7`, `claimA8`, `claimB7`, which are instances
-of the manuscript's intermediate claims `A_6`, `A_7`, `A_8`, `B_7` (not certificate inputs, not yet
-formalized). -/
+of the manuscript's intermediate claims `A_6`, `A_7`, `A_8`, `B_7` (not certificate inputs). -/
 theorem all_pairs : ∀ x ∈ ({L, a, b, d} : Set W), ∀ y ∈ ({L, a, b, d} : Set W), ∀ n : ℕ,
     P.mode n x y ∈ N := by
   have LL := row_LL P hT hvacN hLN hLg hLm1 hL0 hLL2 hLL3
