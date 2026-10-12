@@ -1,0 +1,81 @@
+\section{Solutions for Chapter~\ref{ch:unitarity}}
+
+\paragraph{Exercise~\ref{ex:unitarity-damping}.}
+\phantomsection
+\label{sol:ex:unitarity-damping}
+Set $a=-2\log r>0$. The continuous function
+$f(x)=(x+1)e^{-ax}$ has derivative
+$e^{-ax}[1-a(x+1)]$. Thus
+\[
+ \sup_{n\ge0}(n+1)r^{2n}\le
+ \begin{cases}
+ 1,&a\ge1,\\
+ e^{a-1}/a,&0<a<1.
+ \end{cases}
+\]
+Choosing an integer nearest $1/a-1$ also shows that the
+discrete supremum diverges like $1/(ea)$ as $a\downarrow0$.
+The estimate is finite for every proper annulus and loses
+uniformity as the damping annulus degenerates.
+
+
+
+\paragraph{Exercise~\ref{ex:unitarity-projector}.}
+\phantomsection
+\label{sol:ex:unitarity-projector}
+Because $P$ preserves the common core, $1-P$ preserves it too,
+and $T_0(1-P)=(1-P)T_0$. Apply the same graph-limit
+argument to both projections. Their ranges then give a
+direct-sum decomposition of the \emph{closed operator and its
+domain}. The adjoint of this direct sum is the direct sum of
+the adjoints, proving reduction of $T^*$. Only proving
+invariance of one subspace would not by itself give this
+direct-sum statement.
+
+
+
+\paragraph{Exercise~\ref{ex:unitarity-counting}.}
+\phantomsection
+\label{sol:ex:unitarity-counting}
+Full faithfulness identifies each image endomorphism algebra
+with $\C$, so the image of a simple is simple in the target
+semisimple category. It also preserves the vanishing of
+Hom spaces between distinct simples, making the twelve
+images pairwise nonisomorphic. They exhaust the twelve target
+simples, and additivity exhausts finite direct sums.
+A tensorator would be a coherent natural isomorphism
+$F(X)\otimes F(Y)\to F(X\otimes Y)$.
+Counting objects and morphism dimensions neither supplies
+these maps nor verifies their pentagon and braiding compatibilities.
+
+
+
+\paragraph{Exercise~\ref{ex:unitarity-deck}.}
+\phantomsection
+\label{sol:ex:unitarity-deck}
+A full rotation on the $h=1/3$ module is
+$e^{2\pi i/3}$, while on the integer-graded vacuum VOA it is
+one. If $v\in U$ is homogeneous, every mode changes energy
+by the integer $\wt(v)-n-1$. Hence every mode commutes
+with $Z=e^{2\pi iL_0}$, and
+$BZ^mY(v,z)Z^{-m}A=BY(v,z)A$ on the test domain.
+Bounded extension preserves this equality. The paired
+cancellation does not make the individual charged-sector
+phase equal to one.
+
+
+
+\paragraph{Exercise~\ref{ex:unitarity-end}.}
+\phantomsection
+\label{sol:ex:unitarity-end}
+For four mutually inequivalent summands, Schur's lemma gives
+$\C^4$, of dimension four. If $Y\cong Y^*$, the $Y$
+multiplicity space is two-dimensional, giving
+$\C\oplus\C\oplus M_2(\C)$, of dimension six and
+noncommutative. The canonical extension argument translates
+these dimensions into the rank-four and rank-six alternatives.
+It is the repeated simple, rather than four displayed summands,
+that produces a matrix block.
+
+
+

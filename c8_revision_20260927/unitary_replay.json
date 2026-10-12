@@ -1,0 +1,165 @@
+{
+  "coefficient_field": "Q(sqrt(13),sqrt(-3))",
+  "exact_stress_charge": "2400/1271",
+  "exact_complement_charge": "70/31",
+  "exact_grade_two_dimension": 120,
+  "primary_checks": [
+    {
+      "dimensions": [
+        1,
+        5
+      ],
+      "e_weight": "798/1271",
+      "exact_primary_and_eigenvalue_checks": true,
+      "states": 5
+    },
+    {
+      "dimensions": [
+        1,
+        9
+      ],
+      "e_weight": "200/1271",
+      "exact_primary_and_eigenvalue_checks": true,
+      "states": 9
+    },
+    {
+      "dimensions": [
+        1,
+        9
+      ],
+      "e_weight": "1512/1271",
+      "exact_primary_and_eigenvalue_checks": true,
+      "states": 9
+    },
+    {
+      "dimensions": [
+        1,
+        13
+      ],
+      "e_weight": "420/1271",
+      "exact_primary_and_eigenvalue_checks": true,
+      "states": 13
+    },
+    {
+      "dimensions": [
+        2,
+        2
+      ],
+      "e_weight": "192/1271",
+      "exact_primary_and_eigenvalue_checks": true,
+      "states": 4
+    },
+    {
+      "dimensions": [
+        2,
+        6
+      ],
+      "e_weight": "1830/1271",
+      "exact_primary_and_eigenvalue_checks": true,
+      "states": 12
+    },
+    {
+      "dimensions": [
+        2,
+        8
+      ],
+      "e_weight": "752/1271",
+      "exact_primary_and_eigenvalue_checks": true,
+      "states": 16
+    },
+    {
+      "dimensions": [
+        2,
+        14
+      ],
+      "e_weight": "180/1271",
+      "exact_primary_and_eigenvalue_checks": true,
+      "states": 28
+    }
+  ],
+  "exact_OPE_closure": true,
+  "OPE_rows": [
+    {
+      "dimensions": [
+        1,
+        5
+      ],
+      "e_weight": "798/1271",
+      "exact_pairs": 96,
+      "seconds": 4.391683563007973
+    },
+    {
+      "dimensions": [
+        1,
+        9
+      ],
+      "e_weight": "200/1271",
+      "exact_pairs": 96,
+      "seconds": 2.4414338910137303
+    },
+    {
+      "dimensions": [
+        1,
+        9
+      ],
+      "e_weight": "1512/1271",
+      "exact_pairs": 96,
+      "seconds": 2.3657173580140807
+    },
+    {
+      "dimensions": [
+        1,
+        13
+      ],
+      "e_weight": "420/1271",
+      "exact_pairs": 96,
+      "seconds": 0.5207640040316619
+    },
+    {
+      "dimensions": [
+        2,
+        2
+      ],
+      "e_weight": "192/1271",
+      "exact_pairs": 96,
+      "seconds": 3.4421507350052707
+    },
+    {
+      "dimensions": [
+        2,
+        6
+      ],
+      "e_weight": "1830/1271",
+      "exact_pairs": 96,
+      "seconds": 2.2335232340265065
+    },
+    {
+      "dimensions": [
+        2,
+        8
+      ],
+      "e_weight": "752/1271",
+      "exact_pairs": 96,
+      "seconds": 1.5185388150275685
+    },
+    {
+      "dimensions": [
+        2,
+        14
+      ],
+      "e_weight": "180/1271",
+      "exact_pairs": 96,
+      "seconds": 0.14990583597682416
+    }
+  ],
+  "exact_PCT_preservation": true,
+  "exact_complementary_Virasoro_modes": true,
+  "seconds": 18.368248272978235,
+  "peak_rss_KiB": 42476,
+  "scope": "Exact ambient grade-two fields and the specified low-grade identities. No all-grade character, rationality, or Haagerup representation-category claim.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact_check.py": "f66cc7a10e052531920214bac17b4ce393911d206d37fb46f5e4d4669a7ff94d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact.py": "e9816e9b3cd30d092b45d6ce85297f49ec8431f2f6081d862dd2b41c17ebc865",
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d"
+  }
+}

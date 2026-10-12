@@ -1,0 +1,1035 @@
+% Standalone input fragment; requires amsmath, amssymb, booktabs,
+% longtable, url or hyperref, and the master document artifact macro.
+% No bibliography dependency; msref/mspageref/msnameref link to the current manuscript.
+\providecommand{\leanid}[1]{\nolinkurl{#1}}
+
+\section{Lean formalization: present coverage and remaining work}
+\label{sec:review-lean}
+
+The present Lean development does not formalize the central-charge-eight
+construction or its main theorem. It checks several useful implications
+inside the finite-closure and top-bound arguments. A separate, much larger
+development proves existence of coefficients satisfying the Evans--Gannon
+equations; its categorical reconstruction and its connection to this VOA
+are not formalized. These are substantive results with different scopes.
+Neither should be described as a formal verification of the entire CFT
+manuscript.
+
+This assessment reads the revised manuscript, the local Lean sources,
+their saved check reports, and the installed Mathlib sources. The pinned
+toolchain is Lean \leanid{v4.33.1}; the Mathlib revision in
+\artifact{lean/lakefile.toml} is
+\leanid{0df444a360eaa60ab8c11dca51a86af692955474}.
+Paths below are relative to the repository; paths beginning
+\artifact{Mathlib/} are relative to
+\artifact{lean/.lake/packages/mathlib/}. Declaration names were checked
+against that checkout. This is a source and scope audit, not a new
+compiler run or an audit of every transitive dependency.
+
+\subsection{What is already checked}
+
+All five declarations below are in the namespace
+\leanid{HaagerupIzumi.CFT}. The two source files are independent of
+the Evans--Gannon umbrella import \leanid{HaagerupIzumi.lean}.
+
+\begin{longtable}{@{}P{0.34\linewidth}P{0.58\linewidth}@{}}
+\toprule
+Declaration and source & Exact scope of the conclusion\\
+\midrule\endfirsthead
+\toprule Declaration and source & Exact scope of the conclusion\\
+\midrule\endhead
+\bottomrule\endfoot
+\leanid{nilpotent_raising_saturation},
+\artifact{CFT/FiniteClosure.lean}
+& A submodule stable under two linear operators is the whole module,
+assuming a spanning equation modulo their two images and vanishing of
+every operator word of one fixed length. Joint nilpotence is an input;
+the theorem does not derive it from the actual current weights.\\
+\leanid{projected_residual_recovery}, same file
+& From $v-Pv\in C$ and $Pv\in C$, deduce $v\in C$.
+No idempotence of $P$ is needed. The actual projector coefficients and
+the two membership assertions are not checked by this theorem.\\
+\leanid{jacobi_bottom_witness}, same file
+& From $f(v)=g(u)$, $u=0$, $v=cq$, and $c\ne0$, deduce $f(q)=0$.
+The Jacobi identity, the relevant quotient, and the particular bottom
+coefficient are explicit inputs, not reconstructed VOA facts.\\
+\leanid{core_top_deficit_identity},
+\artifact{CFT/TopBound.lean}
+& The printed fourteen-variable polynomial identity, with the exact
+dimension and integer-scaled trace coefficient definitions.\\
+\leanid{core_top_bound}, same file
+& Nonnegative multiplicities and the two stated current-character
+inequalities imply the cleared-denominator $17/10$ bound. It does not
+derive the fourteen tops, their multiplicities, or their stress traces.\\
+\end{longtable}
+
+The full file paths have prefix \artifact{lean/HaagerupIzumi/}.
+The reports \artifact{c8_revision_20260927/lean_finite_closure_final.log}
+and \artifact{c8_revision_20260927/lean_top_bound.log} record successful
+checks. Their axiom reports contain only \leanid{propext},
+\leanid{Quot.sound}, and, where used, \leanid{Classical.choice}.
+The projected-residual lemma has an empty axiom report. These are the
+usual logical foundations of the stated Lean proofs, rather than new
+CFT-specific assumptions. The rational reconstruction of the top table
+in \artifact{c8_revision_20260927/check_top_bound.py} is separate from
+the Lean proof of the inequality.
+
+\subsection{Assessment of every manuscript section}
+
+The difficulty descriptions distinguish a \emph{local conditional
+formalization}, in which the surrounding mathematical structures and
+theorems are supplied explicitly, from an \emph{end-to-end
+formalization}, which constructs those structures and proves the
+inputs. ``Focused'' means a bounded algebraic or analytic lemma with
+nearby library support. ``Substantial'' means several interacting new
+definitions and proofs. ``Foundational'' means that major mathematical
+theories or deep external theorems still have to be formalized. These
+are assessments of dependency scope, not estimates of working hours.
+
+\begin{longtable}{@{}P{0.15\linewidth}P{0.25\linewidth}P{0.52\linewidth}@{}}
+\toprule
+Current anchor & Existing CFT coverage & Missing work and conversion difficulty\\
+\midrule\endfirsthead
+\toprule
+Current anchor & Existing CFT coverage & Missing work and conversion difficulty\\
+\midrule\endhead
+\bottomrule\endfoot
+Section~\msref{sec:statement}\newline p.~\mspageref{sec:statement}
+& No formal main theorem or definition of the constructed $U$.
+& A theorem assembling explicit interfaces would be focused once its
+inputs exist. A proof of the stated existence theorem inherits all
+the foundational dependencies below; packaging them as assumptions
+does not discharge them.\\
+Appendix~\msref{sec:construction}\newline p.~\mspageref{sec:construction}
+& No lattice VOA, cocycle-to-field construction, or embedding is
+formalized here.
+& Finite lattice arithmetic, the four-component coefficient algebra,
+and low-weight identities are substantial but concrete targets.
+Construction of the Fock space, lattice fields, PCT, and their VOA
+identities is foundational.\\
+Appendix~\msref{sec:finite}\newline p.~\mspageref{sec:finite}
+& No filtered Wick theorem or all-weight recursion is formalized.
+& A graded mode-algebra interface could support the induction,
+filtration, skew-symmetry, and Wick reductions. This is a substantial
+local project; deriving that interface for the actual lattice VOA
+adds foundational work.\\
+Appendix~\msref{sec:gate4}\newline p.~\mspageref{sec:gate4}
+& Raising saturation and projected-residual recovery are checked as
+abstract implications.
+& Prove bounded-current-weight joint nilpotence, the singlet
+projection identities, and the actual rank and residual certificates.
+These are focused to substantial once the finite spaces and current
+actions are represented faithfully.\\
+Appendix~\msref{sec:gate5}\newline p.~\mspageref{sec:gate5}
+& Only the abstract bottom-witness scalar cancellation is checked.
+& Derive the quotient Jacobi relation from mode identities, justify
+the charged spanning and neutral-family reductions, and verify all
+nonzero coefficients. The local proof is substantial; most scalar
+identities are focused.\\
+Appendix~\msref{sec:properness}\newline p.~\mspageref{sec:properness}
+& No theorem applies the gates to the actual subVOA.
+& Given a formal recursive criterion and genuine gate inputs, the
+induction, dimension comparison, and properness deduction are focused.
+Without the bridge from finite data to actual modes, they remain
+conditional.\\
+Appendix~\msref{sec:regularity}\newline p.~\mspageref{sec:regularity}
+& No embedded Potts/parafermion VOA or regularity theorem is formalized.
+& Finite positive-operator inequalities and the displayed stress
+identity are accessible local targets. Their application requires
+conformal vectors, $C_2$ spaces, regular modules, cosets, and the
+relevant rationality theorems: foundational work.\\
+Appendix~\msref{sec:branching}\newline p.~\mspageref{sec:branching}
+& The final fourteen-variable top-bound identity and inequality are
+checked.
+& Derive the core-top table and current inequalities; formalize
+branching, the rank-four exclusion, rank-six based-ring argument,
+formal codegrees, and center data. Conditional finite arithmetic is
+focused to substantial. VOA tensor theory and fusion-category
+classification remain foundational. The optional classification
+route must retain its extra hypothesis.\\
+Appendix~\msref{sec:characters}\newline p.~\mspageref{sec:characters}
+& No theorem identifies the full character vector.
+& Finite twist arithmetic and the equation $6=6+13\gamma$ are focused.
+The proof needs trace characters, Zhu modularity, the specified
+modular representation, finite image, the principal-part uniqueness
+argument, and the Evans--Gannon fundamental matrix. Their complete
+formalization is foundational, despite existing scalar modular-form
+infrastructure.\\
+Appendix~\msref{sec:analytic-unitarity}\newline p.~\mspageref{sec:analytic-unitarity}
+& None of the analytic comparison propositions is formalized.
+& Common-core reduction, dense-domain transport, analytic continuation,
+and the Haag-duality squeeze are bounded local targets. Conformal
+nets, DHR sectors, reconstruction, annulus integration, sewing, and
+fusion positivity constitute the principal foundational burden.
+Detailed distinctions appear below.\\
+Appendix~\msref{sec:analytic-category}\newline p.~\mspageref{sec:analytic-category}
+& No unitary ribbon identification is checked.
+& The ring-level scalar arguments and cyclic-group obstruction
+calculations can be isolated. A proof of the categorical conclusion
+needs unitary fusion categories, the relevant Izumi classification,
+Morita equivalence, and the center/ribbon comparison. General rigid
+and braided categories in Mathlib supply only part of this framework.\\
+Appendix~\msref{sec:analytic-full-theory}\newline p.~\mspageref{sec:analytic-full-theory}
+& No Q-system extension, diagonal full theory, or $E_8$ identification
+is formalized.
+& Once extension correspondences and categorical duality are inputs,
+transport of the chosen algebra and finite dimension checks are
+substantial local targets. Proving the correspondences, the full-net
+construction, and the holomorphic-VOA classification is foundational.\\
+Appendix~\msref{sec:comparison}\newline p.~\mspageref{sec:comparison}
+& No formal identification with another physical construction.
+& Most assertions are scope statements, not independent formal
+theorems. One can formalize the conditional character and extension
+comparisons after the earlier interfaces exist. Neither those
+interfaces nor current Lean files imply a spin-chain continuum limit
+or uniqueness of all $c=8$ theories.\\
+Appendix~\msref{sec:ledger}\newline p.~\mspageref{sec:ledger}
+& No Lean authentication or mathematical replay of the frozen data.
+& A small sound certificate checker with explicit data is a concrete,
+substantial target. Its soundness must connect encoded vectors and
+matrices to the actual fields. Hash agreement binds files but proves
+neither their residual identities nor their VOA interpretation.\\
+Appendix~\msref{sec:formalization}\newline p.~\mspageref{sec:formalization}
+& The five construction declarations listed above, plus elementary
+support lemmas in their two files. The current appendix also records
+the two thermal lemmas assessed in the physics supplement below.
+& Keep theorem names, assumptions, source hashes, toolchain, and axiom
+reports synchronized. This is focused maintenance; the appendix must
+not enlarge the scope of the checked declarations.\\
+Appendix~\msref{sec:compilation}\newline p.~\mspageref{sec:compilation}
+& Successful TeX compilation is not a Lean result.
+& A reproducible build manifest can record the checked artifacts and
+interfaces. Mathematical review, compiler checking, finite replay,
+and PDF compilation are separate checks with separate conclusions.\\
+\end{longtable}
+
+\subsection{Finite certificates and the algebraic sections}
+
+The new companion now supplies concrete data for this next stage:
+a $120$-row short-generation graph with normalization and target
+expansions, $33$ projected Gate~4 vectors and all twelve relations,
+the explicit Potts and parafermion membership expressions, and the
+eighty-current space's matrices and cyclic-basis recipes.  These are
+in \artifact{c8_reviewability_20260927/}, with separate successful
+Python coordinate, residual, and matrix checks.  They remove the
+need to extract those witnesses again.  They introduce no Lean
+proofs: formal parsers, checker soundness, and the interpretation
+of the supplied mode recipes and matrices remain to be established.
+
+For Appendices~\msref{sec:construction}--\msref{sec:properness}
+and the ledger in Appendix~\msref{sec:ledger}, the most valuable next boundary is
+between the sparse finite data and the mode calculations that they
+purport to represent. A certificate checker should have a proved
+interpretation map from its encoded vectors into a mathematical vector
+space. It should prove that its addition, scalar multiplication, mode
+actions, and selected column combinations have the stated meanings.
+Only then does a zero residual certify the required identity in that
+space. The further identification of this space and action with the
+actual lattice fields is a distinct theorem.
+
+The coefficient algebra uses $1,s,t,st$ with $s^2=13$ and $t^2=-3$.
+One can first verify multiplication and residual identities in this
+four-dimensional rational algebra. Rank arguments additionally need
+a field, or an appropriately injective embedding into the intended
+complex coefficient field; merely writing a quotient by the two
+polynomials does not establish those properties. Sparse vectors fit
+\leanid{Finsupp.linearCombination} in
+\artifact{Mathlib/LinearAlgebra/Finsupp/LinearCombination.lean}.
+The declarations \leanid{Matrix.rank_of_det_ne_zero},
+\leanid{Matrix.rank_submatrix_le}, and
+\leanid{Matrix.rank_eq_finrank_span_cols} in
+\artifact{Mathlib/LinearAlgebra/Matrix/Rank.lean} provide useful rank
+interfaces. A nonzero minor together with an independently proved
+upper bound gives an economical exact rank certificate. A modular
+nonzero minor may also prove a characteristic-zero lower bound once
+the reduction map and cleared denominators are justified; a modular
+zero residual is insufficient for characteristic-zero containment.
+
+The current-algebra part has more reusable support than a new
+representation-theory library would suggest. In
+\artifact{Mathlib/Algebra/Lie/Sl2.lean},
+\leanid{IsSl2Triple.HasPrimitiveVectorWith} packages a highest-weight
+vector. Its lemmas \leanid{lie_h_pow_toEnd_f},
+\leanid{lie_e_pow_succ_toEnd_f}, and
+\leanid{pow_toEnd_f_eq_zero_of_eq_nat} give the standard weight,
+raising-coefficient, and finite-dimensional nilpotence calculations.
+These can support the singlet polynomials and the bounded-weight
+argument supplying \leanid{nilpotent_raising_saturation}.
+They do not identify the present current actions with integrable
+affine-VOA modules. Nor does the generic saturation theorem verify
+the saved spanning matrix.
+
+Mathlib already has formal vertex \emph{operators}:
+\leanid{VertexOperator}, \leanid{VertexOperator.ncoeff}, and
+\leanid{VertexOperator.of_coeff} are in
+\artifact{Mathlib/Algebra/Vertex/VertexOperator.lean}.
+They use Hahn-series linear maps from
+\artifact{Mathlib/Algebra/Vertex/HVertexOperator.lean}, which provides
+coefficient and composition operations. This is relevant groundwork
+for mode indexing and lower truncation. The inspected file does not
+provide a complete conformal vertex algebra with vacuum, translation,
+Jacobi/locality, modules, and invariant forms; its own TODO list
+includes locality and residue products. Directory and declaration
+searches, followed by inspection of these files, located no existing
+implementation of the manuscript's complete VOA interface. That is
+a statement about the audited checkout, not a claim that Mathlib
+contains no relevant vertex-algebra ingredients.
+
+The filtered Wick criterion is therefore a worthwhile intermediate
+deliverable. Its hypotheses should explicitly state the mode identities
+and filtration controls used in the proof. Formalizing only an abstract
+implication is useful, provided the final theorem continues to display
+those hypotheses until the actual lattice construction supplies them.
+
+For Appendix~\msref{sec:regularity}, the positive stress identity separates similarly.
+Finite-grade self-adjoint operators and their nonnegative quadratic
+forms can be treated with the inner-product-space library. For example,
+\leanid{LinearMap.IsSymmetric.eigenvectorBasis} in
+\artifact{Mathlib/Analysis/InnerProductSpace/Spectrum.lean} supports
+finite-dimensional diagonalization. Turning the inequality into
+regularity requires the specified conformal embeddings and the
+module-theoretic finiteness results. A formal proof of a positive
+matrix identity alone cannot establish those embeddings or
+$C_2$-cofiniteness.
+
+Appendix~\msref{sec:branching} has three distinct layers. The first is the core-top
+enumeration and exact trace inequality; only the last linear implication
+is currently checked. The second is finite algebra: branching
+multiplicities, a based ring on four or six symbols, dimension equations,
+and root-of-unity sums. These are credible conditional targets using
+finite types, matrices, polynomial identities, and number theory.
+The third is the interpretation through semisimple tensor categories,
+formal codegrees, indicators, induction, and a modular center. It needs
+structures and theorems beyond a table of fusion coefficients. In
+particular, verifying a fusion table does not verify a pentagon,
+construct its associator, or classify its categorifications.
+
+The optional algebraic classification
+Proposition~\msref{prop:optional-algebraic-identification}
+(p.~\mspageref{prop:optional-algebraic-identification}) must have an explicit
+parameter expressing exhaustion by the four categories in the cited
+list. Its pivotal-scalar exclusion can then be formalized separately.
+The repository's Evans--Gannon coefficient construction does not
+discharge that exhaustion hypothesis. The manuscript's unitary route
+avoids this optional assumption, but a Lean version of that route still
+needs the separate unitary classification and Morita-equivalence
+theorems. Avoiding one external premise does not automatically formalize
+the replacement theorem.
+
+For Appendix~\msref{sec:characters}, the installed library has \leanid{ModularForm} in
+\artifact{Mathlib/NumberTheory/ModularForms/Basic.lean} and
+\leanid{UpperHalfPlane.qExpansion},
+\leanid{UpperHalfPlane.qExpansion_eq_zero_iff}, and
+\leanid{UpperHalfPlane.qExpansion_coeff_unique} in
+\artifact{Mathlib/NumberTheory/ModularForms/QExpansion.lean}.
+There are also scalar theta, eta, congruence-subgroup, and level-one
+developments. They do not directly supply Zhu's vector-valued
+characters or the exact finite-image representation used here.
+An appropriate first theorem would prove principal-part uniqueness
+under explicit transformation, holomorphy, cusp, and invariant-vector
+hypotheses, and then distinguish its application to the actual trace
+functions from finite coefficient arithmetic.
+
+\subsection{The analytic comparison in detail: A2, A3, and A1}
+
+The target is Appendix~\msref{sec:analytic-unitarity},
+\emph{\msnameref{sec:analytic-unitarity}}, beginning on
+p.~\mspageref{sec:analytic-unitarity}.
+
+The manuscript now gives mathematical proofs of all three comparison
+steps. Their lack of a Lean formalization is not an assertion that they
+remain mathematical conjectures. Conversely, replacing each of them
+by a Lean proposition whose proof is an assumed field would only record
+the dependency graph.
+
+\paragraph{A2: the actual subnet and sector count.}
+Proposition~\msref{clm:analytic-net-count}
+(p.~\mspageref{clm:analytic-net-count}) is the precise target.
+A local formalization can separate the branching multiplicities
+$1,1,2$, the endomorphism algebra
+$\mathbb C\oplus\mathbb C\oplus M_2(\mathbb C)$, and the rank-six
+based-ring argument. Those are finite algebra once the representation
+objects and their decompositions are supplied. The passage from an
+algebraic VOA summand to a reducing Hilbert subspace requires the A3
+common-core lemma, energy bounds, and an actual represented subnet.
+The proof of local irreducibility uses locality, strong additivity,
+the shared rotation action, and the separating vacuum; all four inputs
+must be visible in a formal statement.
+
+End-to-end A2 then needs finite-index local extensions, DHR sectors,
+statistical dimension, the canonical algebra, center induction, and
+complete rationality. The index-two exclusion also needs the precise
+net-automorphism/VOA-automorphism correspondence and the finite-order
+Lie-algebra fixed-rank argument. Its untwisted $\mathbb Z/3$ subcategory
+comes from the transverse diagonal and antidiagonal isotropic lines,
+followed by free-module induction. A formal proof should preserve that
+construction: an abstract group of three invertible symbols does not
+determine a trivial associator.
+
+Mathlib does provide \leanid{VonNeumannAlgebra} and
+\leanid{VonNeumannAlgebra.commutant} in
+\artifact{Mathlib/Analysis/VonNeumannAlgebra/Basic.lean}.
+Here a concrete von Neumann algebra is packaged by its bicommutant
+property. This is useful support for locality and commutant arguments.
+The file is not a conformal-net, DHR, subfactor-index, or Connes-fusion
+library. Those theories were not located in the audited checkout.
+The distinction matters: the basic operator-algebra vocabulary exists,
+while the net-theoretic theorems used by A2 still need formalization.
+
+\paragraph{A3: reconstruction, common cores, and exhaustion.}
+The reconstruction statement is
+Proposition~\msref{clm:analytic-reconstruction}
+(p.~\mspageref{clm:analytic-reconstruction}), with its strong-unitarity
+consequence in Proposition~\msref{prop:analytic-strong-unitarity}.
+The most accessible analytic target is the graph-reduction
+Lemma~\msref{lem:analytic-graph-reduction}
+(p.~\mspageref{lem:analytic-graph-reduction}).
+Represent a densely defined operator by \leanid{LinearPMap}, require
+closability, and assume explicitly that the bounded orthogonal
+projection preserves its domain and commutes there. The map
+$(\xi,\eta)\mapsto(P\xi,P\eta)$ preserves the graph and therefore its
+closure. This proves commutation on the closed domain. The adjoint
+claim follows from the defining inner-product identity, using
+$P^*=P$ and domain invariance. Both arguments can be formalized without
+claiming that the original core is a core for the adjoint.
+
+The existing declarations
+\leanid{LinearPMap.IsClosable.graph_closure_eq_closure_graph},
+\leanid{LinearPMap.IsClosable.closure_isClosed}, and
+\leanid{LinearPMap.HasCore} are in
+\artifact{Mathlib/Topology/Algebra/Module/LinearPMap.lean}.
+The complementary file
+\artifact{Mathlib/Analysis/InnerProductSpace/LinearPMap.lean} provides
+\leanid{LinearPMap.IsFormalAdjoint} and
+\leanid{LinearPMap.adjoint}.
+Projection APIs include \leanid{Submodule.orthogonalProjectionOnto}
+and \leanid{Submodule.starProjection} in
+\artifact{Mathlib/Analysis/InnerProductSpace/Projection/Basic.lean}.
+These are actual reusable declarations, not proposed abstractions.
+The further conclusion about the von Neumann algebra generated by an
+unbounded field requires an affiliation or polar/spectral-generation
+interface in addition to the graph lemma.
+
+The next target is the energy-domain argument. Starting with a positive
+energy representation whose bounded-energy vectors form a weak module,
+regularity gives an ordinary simple summand $S$. One must prove that
+its Hilbert closure reduces $L_0$ and that its projection sends every
+bounded-energy vector into a finite sum of finite-dimensional grades
+of $S$. This establishes $PM\subset S\subset M$ before any field
+commutation is used. Assuming finite multiplicities for the original
+net representation would remove precisely the issue the proof resolves.
+Likewise, a smeared field need not map the bounded-energy core to
+itself; its value is a Hilbert-space vector. A Lean signature that
+accidentally makes every smeared field an endomorphism of that core
+would encode a stronger and inappropriate premise.
+
+The grade-by-grade comparison of two positive invariant forms is another
+bounded target. It first constructs an algebraic module endomorphism,
+uses an eigenvector on a finite-dimensional lowest grade and simplicity
+to prove that endomorphism scalar, and only then obtains boundedness of
+the module isomorphism. This order avoids importing a Hilbert-space
+Schur lemma before boundedness is known. Finite direct sums and the
+counting argument that twelve reconstructed simple modules exhaust
+twelve algebraic simples are comparatively small after the interfaces
+are fixed.
+
+Full A3 still requires the Henriques--Tener reconstruction theorem,
+including its bounded-energy extension, equality of closed smeared
+fields, and reconstruction of the original vacuum VOA. Formalizing
+the consequences of an explicitly supplied reconstruction interface
+would be useful. It would not be a formal proof of that theorem.
+
+\paragraph{A1: pairwise annulus compatibility and positivity.}
+The compatibility assertion is
+Proposition~\msref{clm:analytic-annulus}
+(p.~\mspageref{clm:analytic-annulus}); its domain and continuation steps
+are Lemmas~\msref{lem:analytic-inverse-domain} and
+\msref{lem:analytic-insertion-continuation}. The final application is
+Theorem~\msref{thm:analytic-complete-unitarity}.
+The revised proof deliberately constructs a lift for each compatible
+annulus pair. It does not require a global canonical choice of lifts
+for every annulus. A suitable formal interface would record the
+following data and laws:
+\begin{enumerate}
+\item the centrally extended annulus semigroup and its localized
+subsemigroups, together with their positive-energy representations;
+\item the common localizer $\delta$, localized lifts $D_A,D_B$, and
+the pair $\widetilde A=\widetilde\delta^{-1}D_A$,
+$\widetilde B=D_B\widetilde\delta$, so that
+$\widetilde B\widetilde A=D_BD_A$ is canonically localized;
+\item the equality of local annulus actions with the represented
+vacuum operators, incoming insertions, sewing, and the outgoing
+unitary adjoint formula;
+\item the round-annulus factorization giving both finite-energy
+range inclusion and density of the transported form domain;
+\item holomorphy on the sewn interior, coverage by all allowed
+geometric representatives, and the no-insertion generators.
+\end{enumerate}
+The deck ambiguity must be retained: changing the common lift conjugates
+the inserted field by $e^{2\pi i mL_0}$. Integer VOA weights make this
+conjugation trivial even when module lowest weights are fractional.
+Normalizing a vacuum operator alone does not eliminate the deck group
+on those modules. This small algebraic cancellation is a realistic
+formal target once the grading and representation laws are explicit.
+
+The analytic continuation step can use
+\leanid{AnalyticOnNhd.eqOn_of_preconnected_of_eventuallyEq} from
+\artifact{Mathlib/Analysis/Analytic/Uniqueness.lean}, applied to scalar
+matrix coefficients after all holomorphy and component hypotheses are
+supplied. The finite-energy range and dense-domain lemmas can also be
+isolated from annulus geometry. The final equality of concrete nets is
+an elementary conditional commutant argument:
+\[
+ \mathcal A^{\mathrm{bl}}(I)\subset\mathcal N(I)
+ \subset\mathcal A^{\mathrm{bl}}(I')'
+ =\mathcal A^{\mathrm{bl}}(I).
+\]
+It explicitly uses locality and Haag duality on the same vacuum Hilbert
+space; an abstract isomorphism of the two nets would not suffice.
+
+These smaller arguments do not build the central extension, integrate
+Virasoro representations, prove geometric sewing, or prove positivity
+of Connes fusion and the resulting canonical VOA fusion pairings.
+Those are the large missing foundations. An honest intermediate
+formalization would name the exact integration, reconstruction, and
+sewing hypotheses, prove their pairwise consequence, and keep the
+positive-fusion theorem separate until it too is formalized.
+
+\subsection{Categories, extensions, and the independent Evans--Gannon proof}
+
+Mathlib has substantial general categorical infrastructure. Verified
+examples include \leanid{CategoryTheory.BraidedCategory} in
+\artifact{Mathlib/CategoryTheory/Monoidal/Braided/Basic.lean},
+\leanid{CategoryTheory.RigidCategory} and duality interfaces in
+\artifact{Mathlib/CategoryTheory/Monoidal/Rigid/Basic.lean}, and
+\leanid{CategoryTheory.HalfBraiding}, \leanid{CategoryTheory.Center},
+\leanid{CategoryTheory.Center.forget}, and
+\leanid{CategoryTheory.Center.ofBraided} in
+\artifact{Mathlib/CategoryTheory/Monoidal/Center.lean}.
+These permit genuine reuse in Appendices~\msref{sec:branching},
+\msref{sec:analytic-category}, and \msref{sec:analytic-full-theory}. They do not by
+themselves provide a unitary fusion category with finite simple-object
+data, positive spherical dimensions, modular $S,T$, a Q-system
+correspondence, or the Haagerup classification. No such complete
+manuscript-level framework was located in the local source audit.
+
+A finite based ring can be formalized before its categorical realization.
+One can then prove the conditional dimension equations and obstruction
+calculations, keeping separate the theorem that a given unitary
+category realizes that ring. Similarly, transporting an already
+constructed algebra along a braided equivalence is distinct from
+proving that it yields a local net or a unitary VOA extension.
+The formal target for Appendix~\msref{sec:analytic-full-theory}
+must preserve the manuscript's scope:
+the original embedded extension and the chosen $\mathcal H_3$
+extension need not be the same algebra; the 36 bimodule defects
+preserve $U$; and the holomorphic-net construction is not identified
+with the $E_8$ net by the VOA classification theorem.
+
+The existing Evans--Gannon development should be credited precisely.
+In \artifact{lean/HaagerupIzumi/Analytic/GammaConstruction.lean},
+\leanid{HaagerupIzumi.GammaContinuation.hypGamma} constructs the
+hyperbolic-gamma interface from the proved integral development.
+\leanid{HaagerupIzumi.ruijsenaarsHypGamma} specializes it to the
+required periods, and \leanid{HaagerupIzumi.EGEquations_ruijsenaars}
+proves the equations for the resulting concrete coefficient data.
+The theorem \leanid{HaagerupIzumi.exists_EGEquations_odd} assumes only
+\leanid{Odd n} and produces complex coefficient data satisfying all
+the packaged Evans--Gannon equations. The source genuinely supplies
+the earlier analytic interface; this final theorem does not assume
+an unconstructed gamma function.
+
+The packaged proposition \leanid{HaagerupIzumi.CoeffData.EGEquations}
+is defined in \artifact{lean/HaagerupIzumi/Completion.lean}; it records
+the linear symmetries and axis sums together with the quadratic,
+cubic, and quartic equations. The project README explicitly stops
+before the reconstruction theorem and categorical conclusions of
+the separate infinitude manuscript. Thus this development does not
+prove exhaustion of rank-six fusion categories, construct the
+present lattice subVOA, or establish its complete unitarity. Its
+finite Fourier infrastructure can be reused: the local interpolation
+proof already uses \leanid{ZMod.dft} and related declarations from
+\artifact{Mathlib/Analysis/Fourier/ZMod.lean}. Its contour machinery
+may be useful for appropriate scalar analytic sublemmas, but it is
+not an annulus or conformal-net construction.
+
+\subsection{A staged program with explicit completion criteria}
+
+The following stages give reviewable deliverables without suggesting
+that a short final Lean file would amount to a short foundational proof.
+Some stages can proceed independently; their applications must retain
+unproved inputs visibly.
+\begin{enumerate}
+\item \textbf{Certify finite data.} Define the exact coefficient algebra,
+sparse vectors, and matrix witnesses; prove a small checker's soundness;
+import and verify selected residual and rank certificates. The
+deliverable is a theorem about named finite data, with the interpretation
+map stated. It is not yet a theorem about the actual VOA.
+\item \textbf{Complete the current-algebra layer.} Formalize the bounded
+weight argument for joint nilpotence, the singlet projection, the
+charged-module spanning deductions, and the top-table arithmetic.
+Connect these to the already checked saturation and inequality lemmas.
+The deliverable removes the corresponding finite algebraic assumptions.
+\item \textbf{Formalize the recursive closure criterion.} Give a precise
+graded mode-algebra interface and prove the filtered Wick and Jacobi
+reductions. Instantiate the finite gates through the certified data.
+Construction of the genuine lattice VOA and validation of that
+instantiation remain explicit subsequent obligations.
+\item \textbf{Separate representation theory from finite consequences.}
+Formalize the core-top and branching deductions, the based-ring
+classification, and character uniqueness under stated VOA and
+categorical interfaces. Keep optional categorical exhaustion as a
+separate parameter. The deliverable should make clear which deep
+representation-theory theorems remain inputs.
+\item \textbf{Formalize the analytic lemmas.} Prove common-core reduction,
+adjoint commutation, dense-domain transport, grade-wise form comparison,
+deck cancellation, and the conditional Haag-duality squeeze. State
+reconstruction and annulus comparison with their full domains and
+normalizations. These supply reusable analysis without pretending to
+formalize the entire net/VOA correspondence.
+\item \textbf{Discharge the foundational interfaces.} Build the required
+VOA, module tensor, conformal-net, annulus, and unitary fusion theories;
+formalize the cited reconstruction, classification, positivity, and
+extension theorems; construct the actual objects and connect the finite
+certificates. Only completion of these dependencies supports an
+end-to-end Lean theorem matching the manuscript's full conclusion.
+\end{enumerate}
+
+\subsection{Assumptions, computation, and the trust boundary}
+
+A theorem with explicit parameters such as a spanning identity or a
+reconstruction theorem can be fully kernel-checked as an implication.
+Its parameters are not new global logical axioms. Nevertheless, the
+application to the CFT is unproved until those parameters are supplied.
+An interface whose fields simply repeat the desired conclusion adds
+little verification; useful interfaces expose the smaller mathematical
+laws from which the conclusion is actually derived.
+
+An admitted \leanid{sorry} introduces \leanid{sorryAx}; a declared
+\leanid{axiom} installs an unproved proposition. Neither is equivalent
+to a theorem with all premises discharged. A source search of the local
+\leanid{HaagerupIzumi} Lean files found no uses of \leanid{sorry},
+new \leanid{axiom} declarations, or \leanid{native_decide}; the saved
+axiom reports give the more relevant dependency information for the
+specific checked conclusions. A text search alone is not a substitute
+for an axiom audit of the final theorem.
+
+There is a version-specific point about computation. In this Lean
+4.33.1 installation, \leanid{native_decide} calls
+\leanid{Lean.Meta.nativeEqTrue}; the implementation in
+\artifact{Lean/Meta/Native.lean} compiles and evaluates a closed Boolean
+and, on success, introduces an auxiliary axiom asserting that its value
+is true. The kernel then checks a proof relative to that axiom; it does
+not independently replay the native computation by ordinary reduction.
+The older \leanid{Lean.ofReduceBool} mechanism is deprecated in this
+toolchain. Consequently a future certificate replay using
+\leanid{native_decide} would need an explicit expanded trust statement,
+even if it is useful operationally.
+
+By contrast, ordinary proof-producing tactics and a \leanid{decide}
+proof checked by kernel reduction can verify an exact certificate
+without that native-evaluation axiom, subject to the final dependency
+report. For large data, the practical target is a small sound checker
+and manageable proof certificates, not necessarily replaying the
+original search algorithm inside the kernel. A Boolean printed by
+\texttt{\#eval}, a Python exact calculation, a successful hash check,
+and a theorem with a kernel-checked proof are different artifacts.
+They should remain separately labeled in the ledger.
+
+Future compiler and certificate runs must retain the repository's
+shared-desktop resource policy and run serially through its guarded
+launcher. The preserved baseline assessment introduced no new Lean declarations and
+does not claim any additional kernel-checked results beyond the
+recorded files above.
+
+\section{Additional assessment of the physics revision}
+\label{sec:physics-lean-assessment}
+
+The new physics sections provide much more explicit mathematical data:
+character coefficients, Virasoro-primary multiplicities, spin-resolved
+spectra, thermal intervals, low-weight couplings, rational correlators,
+fusion coefficients, defects, and boundary partition functions. None
+of the Python producers in \artifact{c8_physics_20260927/} is a Lean
+proof or has a Lean-verified implementation. Their exact arithmetic
+and internal checks improve reviewability and supply concrete inputs
+for formalization; they do not enlarge the scopes of the five existing
+CFT declarations listed in the preceding assessment. A separate new
+file adds the two small thermal-comparison lemmas stated below, bringing
+the selected CFT coverage to seven principal declarations in three
+files. The five baseline declarations retain their original scope.
+
+\subsection{Current manuscript anchors and historical concordance}
+
+The linked numbers, titles, and pages in the following table refer to
+the current manuscript. The first column is only a concordance for
+readers of the archived 55-page PDF; its former section numbers are
+not operative references in this guide. The current document places
+the mathematical development in appendices after the physics sections.
+
+\begin{longtable}{@{}P{0.11\linewidth}P{0.57\linewidth}P{0.24\linewidth}@{}}
+\toprule
+Archived label & Current manuscript title & Current anchor\\
+\midrule\endfirsthead
+\toprule Archived label & Current manuscript title & Current anchor\\
+\midrule\endhead\bottomrule\endfoot
+1 & \msnameref{sec:statement}
+& Section~\msref{sec:statement}, p.~\mspageref{sec:statement}\\
+2 & \msnameref{sec:construction}
+& Appendix~\msref{sec:construction}, p.~\mspageref{sec:construction}\\
+3 & \msnameref{sec:finite}
+& Appendix~\msref{sec:finite}, p.~\mspageref{sec:finite}\\
+4 & \msnameref{sec:gate4}
+& Appendix~\msref{sec:gate4}, p.~\mspageref{sec:gate4}\\
+5 & \msnameref{sec:gate5}
+& Appendix~\msref{sec:gate5}, p.~\mspageref{sec:gate5}\\
+6 & \msnameref{sec:properness}
+& Appendix~\msref{sec:properness}, p.~\mspageref{sec:properness}\\
+7 & \msnameref{sec:regularity}
+& Appendix~\msref{sec:regularity}, p.~\mspageref{sec:regularity}\\
+8 & \msnameref{sec:branching}
+& Appendix~\msref{sec:branching}, p.~\mspageref{sec:branching}\\
+9 & \msnameref{sec:characters}
+& Appendix~\msref{sec:characters}, p.~\mspageref{sec:characters}\\
+10 & \msnameref{sec:analytic-unitarity}
+& Appendix~\msref{sec:analytic-unitarity}, p.~\mspageref{sec:analytic-unitarity}\\
+11 & \msnameref{sec:analytic-category}
+& Appendix~\msref{sec:analytic-category}, p.~\mspageref{sec:analytic-category}\\
+12 & \msnameref{sec:analytic-full-theory}
+& Appendix~\msref{sec:analytic-full-theory}, p.~\mspageref{sec:analytic-full-theory}\\
+13 & \msnameref{sec:comparison}
+& Appendix~\msref{sec:comparison}, p.~\mspageref{sec:comparison}\\
+A & \msnameref{sec:ledger}
+& Appendix~\msref{sec:ledger}, p.~\mspageref{sec:ledger}\\
+B & \msnameref{sec:formalization}
+& Appendix~\msref{sec:formalization}, p.~\mspageref{sec:formalization}\\
+C & \msnameref{sec:compilation}
+& Appendix~\msref{sec:compilation}, p.~\mspageref{sec:compilation}\\
+\end{longtable}
+
+The added physics material has the following current anchors.
+``Focused'', ``substantial'', and ``foundational'' retain the
+dependency-based meanings stated earlier.
+
+\begin{longtable}{@{}P{0.70\linewidth}P{0.21\linewidth}@{}}
+\toprule
+Current section title & Current anchor\\
+\midrule\endfirsthead
+\toprule Current section title & Current anchor\\
+\midrule\endhead\bottomrule\endfoot
+\msnameref{sec:physics-spectrum}
+& Section~\msref{sec:physics-spectrum}, p.~\mspageref{sec:physics-spectrum}\\
+\msnameref{sec:physics-correlators}
+& Section~\msref{sec:physics-correlators}, p.~\mspageref{sec:physics-correlators}\\
+\msnameref{sec:physics-couplings}
+& Section~\msref{sec:physics-couplings}, p.~\mspageref{sec:physics-couplings}\\
+\msnameref{sec:physics-defects}
+& Section~\msref{sec:physics-defects}, p.~\mspageref{sec:physics-defects}\\
+\msnameref{sec:physics-H3}
+& Section~\msref{sec:physics-H3}, p.~\mspageref{sec:physics-H3}\\
+\msnameref{sec:physics-data-guide}
+& Section~\msref{sec:physics-data-guide}, p.~\mspageref{sec:physics-data-guide}\\
+\end{longtable}
+
+\subsection{Characters, Virasoro primaries, and the full spectrum}
+
+Section~\msref{sec:physics-spectrum},
+\emph{\msnameref{sec:physics-spectrum}}, is in
+\artifact{c8_physics_20260927/spectrum.tex}. Its producer
+\artifact{spectrum.py} checks the published initial coefficients,
+the rational matrix recurrence, nonnegative integrality through the
+requested grade, descendant reconstruction, parity of the resulting
+spin spectrum, and an independent $E_4/\eta^8$ identity. The default
+data include 25 coefficients for each of twelve characters, complete
+full-CFT spectra through $\Delta=24$, and an independent $E_8$ spectrum.
+These are finite arithmetic conclusions conditional on the input
+matrices and their character interpretation.
+
+\begin{longtable}{@{}P{0.26\linewidth}P{0.64\linewidth}@{}}
+\toprule
+Physics argument & Missing Lean theorem and difficulty\\
+\midrule\endfirsthead
+\toprule Physics argument & Missing Lean theorem and difficulty\\
+\midrule\endhead\bottomrule\endfoot
+Matrix recurrence
+& Define the twelve-dimensional exponent/characteristic data and a
+finite rational recurrence, prove nonzero denominators, and prove that
+its finite output agrees with the formal differential equation.
+This is focused to substantial. Identifying the resulting vector with
+the actual VOA trace functions still requires the foundational
+character theorem assessed under Appendix~\msref{sec:characters}.\\
+Virasoro-primary subtraction
+& The finite Euler-product convolution and its inverse are focused.
+Their interpretation needs the irreducible $c=8$ Virasoro characters,
+the Kac determinant or an equivalent irreducibility theorem, and the
+unitary highest-weight decomposition of each module. These are
+substantial to foundational representation-theoretic inputs.\\
+Complete spin-resolved cutoff
+& Given nonnegative lowest weights and coefficient functions, prove
+the product formula and that no grade above $N$ contributes to
+$\Delta\leq N$. The finite sums, parity identity, and relevant/marginal
+counts are focused. The tensor-product Hilbert-space interpretation
+and the diagonal modular invariant are additional premises.\\
+$E_8$ comparison and invariant counts
+& A finite identity between the oscillator series and the selected
+character combination is focused. It does not identify the extension
+algebra. Counts $1488=6\cdot248$ for one chiral Haagerup action and
+$36=6^2$ for both independent actions additionally require the precise
+invariant-space theorem. That categorical interpretation belongs to
+the separate defect formalization below.\\
+\end{longtable}
+
+There is useful existing power-series infrastructure.
+\leanid{PowerSeries.coeff_mk} and \leanid{PowerSeries.coeff_mul} occur
+in \artifact{Mathlib/RingTheory/PowerSeries/Basic.lean}.
+The file
+\artifact{Mathlib/Combinatorics/Enumerative/Pentagonal/PowerSeries.lean}
+contains the Euler-product development, including
+\leanid{PowerSeries.coeff_prod_one_sub_X_pow_eventually_eq} and
+\leanid{PowerSeries.WithPiTopology.hasProd_one_sub_X_pow}.
+These declarations were read in the pinned checkout. They support
+formal coefficient manipulations; they do not state that these
+coefficients count this CFT's Virasoro primaries.
+
+An economical formalization would first take an abstract sequence of
+graded dimensions and prove the descendant-removal and tensor-product
+counting lemmas. A second layer would connect that sequence to the
+Evans--Gannon recurrence. The final interpretation theorem must connect
+both layers to the actual modules. Merely importing the printed
+integers as definitions and proving that their sum is $2941$ would
+check arithmetic but leave the substantial spectral assertion open.
+
+\subsection{Thermal bounds and their numerical intervals}
+
+Proposition~\msref{prop:physics-modular-tail}
+(p.~\mspageref{prop:physics-modular-tail}) proves the modular heavy-tail
+estimate in Section~\msref{sec:physics-spectrum}. For
+$E=\Delta-2/3$, an exact cutoff $D>2/3$, and $b'=4\pi^2/b$, it uses
+\[
+ Z=L_D+H_D,\qquad Z(b)=Z(b'),\qquad
+ H_D(b)\leq e^{-(b-b')(D-2/3)}H_D(b')
+\]
+to bound the tail at $b>2\pi$. Two real-number steps are now checked in
+\artifact{lean/HaagerupIzumi/CFT/PhysicsBounds.lean}, in namespace
+\leanid{HaagerupIzumi.CFT}:
+\begin{itemize}
+\item \leanid{modular_heavy_tail_comparison} assumes
+$L+H=L_d+H_d$, $H\leq rH_d$, and $0\leq r<1$, and proves
+$H\leq r(L-L_d)/(1-r)$;
+\item \leanid{selfdual_tail_first_moment_comparison} assumes
+$E_{\rm cut}>0$ and $E_{\rm cut}H\leq L'$, and proves
+$H\leq L'/E_{\rm cut}$.
+\end{itemize}
+The successful guarded compiler record is
+\artifact{c8_physics_20260927/physics_lean.log}, with sampled peak
+group RSS $1.549$~GiB. Both axiom reports contain only
+\leanid{propext}, \leanid{Classical.choice}, and \leanid{Quot.sound};
+the source contains neither \texttt{sorry} nor new axioms. The
+nonnegative contraction range is retained explicitly, although the
+first rearrangement only needs $r<1$ once its comparison is supplied.
+
+These lemmas do not derive the comparison from a spectral sum or
+identify $r$ with the exponential in the application. The actual
+infinite-sum theorem remains more substantial: it needs convergence,
+termwise positivity, completeness of the finite cutoff, and the
+modular functional equation. Its self-dual form also needs
+differentiability and the identity $Z'(2\pi)=0$. The first and second
+moment bounds require justified moment convergence and the elementary
+optimization of $E^ke^{-aE}$ on a positive half-line.
+
+The Python output is a conditional interval certificate. Its positive
+spectrum and modular invariance are mathematical premises, not facts
+established by evaluating finitely many coefficients. The implementation
+uses directed decimal arithmetic, a fixed rational enclosure of $\pi$,
+and correctly rounded exponential/logarithm functions; the displayed
+six-decimal table is accepted only when every rigorous interval lies
+within $10^{-6}$ of its printed value. None of that implementation is
+currently kernel checked.
+
+For a Lean version, a small rational interval checker with proved
+exponential and logarithm enclosures would be preferable to treating
+Python's decimal library as an axiom. One can separately formalize the
+analytic tail theorem over the real numbers and feed it certified
+finite moment bounds. Existing real analysis and infinite-sum
+infrastructure is relevant, but the complete pipeline from characters
+to the saved numerical intervals is new work. The two checked
+implications are the completed local algebraic part; sound interval
+evaluation and its analytic interpretation
+are substantial. The CFT assumptions still inherit the foundational
+requirements of the earlier sections.
+
+\subsection{Currents, lattice correlators, and low-weight couplings}
+
+The correlator and coupling material in
+Sections~\msref{sec:physics-correlators} and
+\msref{sec:physics-couplings} is supplied by
+\artifact{c8_physics_20260927/correlators.tex} and
+\artifact{c8_physics_20260927/couplings.tex}. Its data distinguish
+direct finite lattice-mode products, rational identities reconstructed
+from saved singular OPEs, and coefficients completed using current
+Ward identities. Those three forms of evidence have different
+interpretation obligations; the final reports specify the supplied
+bases and direct probes.
+
+In particular the completed weight-two dataset in
+\artifact{c8_physics_20260927/full_weight_two/} uses all $113$ chiral
+Virasoro primaries. Its saved report records $1{,}442{,}897$ ordered
+tensor slots, $18{,}365$ nonzero entries, $51{,}076$ current Ward
+checks, and $33$ additional direct lattice-mode probes beyond the
+seed calculation. This supplies substantially more explicit input
+than a list of summed OPE coefficients. Those successful Python
+checks remain separate from the Lean obligations below.
+
+The following finite targets are realistic once the coefficient
+algebra and basis conventions are represented in Lean:
+\begin{itemize}
+\item singular current brackets, levels, gauge factors, pairings, and
+the orthogonality and positivity of the stated finite Gram matrices;
+\item polynomial identities obtained by clearing denominators in
+the displayed rational four-point functions, with collision loci
+excluded when interpreting them as functions;
+\item exact extraction of three-point coefficients and their squared
+unit-norm values, retaining the specified invariant/Hermitian pairing
+and adjoint conventions;
+\item the finite Ward recursion, its compatibility with both current
+factors, and uniqueness of its completion from the supplied seed slice;
+\item the completeness of the chosen low-weight primary subspace,
+provided its exact rank and descendant-complement certificates.
+\end{itemize}
+These are substantial finite algebra rather than a need to formalize
+all CFT at once. The bridge from encoded lattice words to actual mode
+operators is the same missing bridge described for the finite gates.
+A successful check of a completed tensor against Ward identities
+establishes consistency of the completion. Its identification with
+all actual mode products also needs a proved determination theorem
+and authenticated seed products; a finite selection of direct probes
+does not by itself check every omitted product.
+
+Beyond that finite layer, one needs the state-field correspondence,
+locality, conformal covariance, OPE convergence or formal expansion
+identities, and an explanation of how the chiral functions assemble
+into local bulk correlators. The known Potts and parafermion inputs
+also need their formal embeddings. These are foundational. A chiral
+vacuum correlator or a chosen lattice intertwiner block is not by
+itself the four-point function of the lightest diagonal bulk scalar.
+The formal statement must preserve the external fields and their
+normalization rather than silently promote one kind of block to the
+other.
+
+No claim that a dimension-two scalar is exactly marginal follows
+from its existence or its three-point coefficient alone. A formal
+statement about a conformal manifold would additionally require a
+precise deformation theory, beta functions, and the appropriate
+all-orders argument. That subject is outside both the present Lean
+files and the finite arithmetic producer.
+
+\subsection{Modular data, defects, and conformal boundaries}
+
+Sections~\msref{sec:physics-defects} and \msref{sec:physics-H3},
+\emph{\msnameref{sec:physics-defects}} and
+\emph{\msnameref{sec:physics-H3}}, are in
+\artifact{c8_physics_20260927/defects.tex}. Their
+producer \artifact{defects.py} computes in
+$\mathbb Q(\zeta_{13})$, with exact Verlinde coefficients, modular
+relations, the forgetful multiplicities, and boundary/defect spectral
+tables. These checks establish finite algebraic properties of the
+input matrices and based rings, not the existence of the required
+associator or a conformal defect.
+
+\begin{longtable}{@{}P{0.27\linewidth}P{0.63\linewidth}@{}}
+\toprule
+Physics argument & Missing Lean theorem and difficulty\\
+\midrule\endfirsthead
+\toprule Physics argument & Missing Lean theorem and difficulty\\
+\midrule\endhead\bottomrule\endfoot
+Cyclotomic modular arithmetic
+& Prove that the twelve-coordinate quotient representation is a
+field embedded in $\mathbb C$, fix the primitive root and conjugation,
+and verify the Gauss-sum square root and sign. Then $S^2=1$, the
+twist relation, Verlinde integrality, and fusion associativity are
+substantial but bounded exact computations.\\
+Diagonal Verlinde lines
+& Given a unitary modular tensor category and the diagonal full CFT,
+derive line eigenvalues, twisted character matrices, and their
+sector multiplicities. The scalar sums are focused; the theorem that
+these matrices describe actual topological defects requires the
+categorical/full-CFT construction and is foundational.\\
+Cardy boundaries and annuli
+& Formalize the boundary-state normalization, open/closed-channel
+identity, and the positive square roots entering $g$ factors.
+Finite character multiplicities are focused. Their interpretation
+as boundary Hilbert spaces requires the Cardy/extension theorem.
+Formal verification of annulus integers is not that theorem.\\
+Selected chiral $\mathcal H_3$ action
+& Prove the center-forgetful correspondence for the chosen extension,
+the bimodule/full-defect equivalence, and the identification of tube
+multiplicity spaces with $M_\mu\otimes\overline{H'}$.
+These are foundational categorical inputs. Once supplied, the
+$6\times12$ forgetful ring-map check and charge matrices are
+substantial finite algebra.\\
+Invariant and charged gaps
+& Under the correct action, derive the fixed spaces and count their
+lowest scalar grades. This is focused after the sector assignment.
+It must distinguish one chiral action from both independent factors,
+and tube multiplicity spaces from their multiple copies in actual
+defect Hilbert spaces. Modular covariance alone is insufficient.\\
+Six extension boundaries
+& Verify the finite annulus coefficients from the forgetful functor
+and the six-object fusion ring. The data-to-category interface must
+retain the actual module category, duals, and boundary normalization.
+The finite arithmetic is substantial; constructing these boundaries
+as part of the full CFT remains foundational.\\
+\end{longtable}
+
+The pinned checkout defines \leanid{CyclotomicField} and
+\leanid{IsCyclotomicExtension} in
+\artifact{Mathlib/NumberTheory/Cyclotomic/Basic.lean}; it also has
+primitive-root, complex-root-of-unity, and cyclotomic-polynomial
+developments. Thus the field-theory layer need not start from scratch.
+It still takes work to prove that the producer's concrete coordinate
+arithmetic and chosen complex embedding agree with those structures.
+An arbitrary root of the polynomial without the intended complex
+embedding does not determine the positive quantum dimensions used
+by the physics interpretation.
+
+\subsection{Bootstrap placement and observable scope}
+
+The physics reading guide in Section~\msref{sec:physics-data-guide}
+distinguishes the diagonal full theory from
+the selected holomorphic extension and states which published bootstrap
+plots use which symmetry sectors. Formalizing the label correspondence,
+the central-charge convention $c_L=c_R=8$, and a rational gap extracted
+from a proved spectrum would be focused. It would not formally verify
+a published numerical exclusion curve. That requires the original
+functional, its positivity on every required conformal block, the
+truncation/error bounds, and a sound numerical or exact certificate.
+A plotted point read from a figure is evidence for comparison, not a
+kernel-checked exclusion or inclusion theorem.
+
+The observable inventory is also an interface specification. Characters
+determine unflavoured multiplicities and, with analytic control,
+partition functions. They do not determine every normalized OPE
+coefficient or defect eigenvector. The new coupling and defect datasets
+close specific parts of that gap; each needs its own sound checker and
+interpretation theorem. Keeping those claims separate is essential to
+an eventual formal treatment that a physicist can use without reading
+the implementation.
+
+\subsection{A concrete order of formalization}
+
+A useful first deliverable is a small exact coefficient library covering
+the rational recurrence, finite Euler product, primary reconstruction,
+and cutoff-completeness lemma. Its theorem should expose the input
+character interpretation explicitly. A second deliverable is a sound
+finite algebra checker for the cyclotomic modular data and the supplied
+low-weight tensors, with an explicit interpretation map. A third is
+the real-analytic tail theorem and a certified interval evaluator.
+Each can be independently reviewed before the foundational VOA and
+defect interfaces are complete.
+
+Completion criteria must be semantic: the formal theorem should refer
+to the actual character coefficients, mode products, or represented
+sectors through proved maps. File hashes, successful Python assertions,
+or a Lean theorem about unrelated constants cannot replace that
+connection. The two explicitly stated thermal-comparison lemmas are
+the additional Lean results of this physics revision; the much larger
+analytic and physical interpretations remain to be formalized.

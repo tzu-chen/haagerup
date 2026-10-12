@@ -1,0 +1,98 @@
+Independent hand review: E8 root-count example and r03 narrative
+Reviewer: scope_construction
+Timestamp: 2026-10-05 20:57:33 UTC (clock tool)
+Scope: source reading and hand algebra. No numerical or symbolic jobs,
+imports, builds, or live edits.
+
+Conclusion
+----------
+PASS. The whole new example ex:char-E8-root-count is correct, including
+the parity conditions, perpendicular root counts, all six proposed E6
+simple roots, and the two81-dimensional glue tops. I found no new
+forward-dependency or coordinate-convention problem in r03.
+
+Detailed root checks
+--------------------
+chapters/r03_characters.tex:93--107:
+In D8+s, a norm-two vector has coordinates +/-1/2. Subtracting s
+gives one -1 for each negative coordinate and0 for each positive one,
+so D8 membership is exactly an even number of minus signs. Hence
+the two root families have4*binomial(8,2)=112 and2^7=128 elements.
+The eight momentum-zero oscillators are separate, giving248 currents.
+
+lines109--118:
+beta=e7+e8 and gamma=e6-e7 have norm2 and inner product-1.
+Orthogonality imposes x7+x8=0 and x6-x7=0, equivalently
+x6=x7=-x8. An integer norm-two root has only two nonzero coordinates,
+so this three-coordinate equality forces all three to be zero.
+The first five coordinates therefore contribute4*binomial(5,2)=40.
+For half-integer roots the last signs are(+,+,-), with one minus,
+or(-,-,+), with two. The first five signs must respectively have
+odd or even minus parity, giving16 choices in either case, hence32.
+The perpendicular root total is72.
+
+lines120--131:
+Number the displayed roots r1,...,r6 in their written order. The
+sixth root has six negative coordinates, so it belongs to D8+s;
+all six roots are perpendicular to beta and gamma and have norm2.
+The ONLY off-diagonal nonzero inner products are
+  (r1,r2)=(r2,r3)=(r3,r4)=(r3,r5)=(r5,r6)=-1.
+For example r5.r6=(-1/2)+(-1/2)=-1, whereas
+r4.r6=(-1/2)-(-1/2)=0. The central node r3 has arms of lengths
+2,1,2, the E6 Dynkin diagram. This verifies the stated type with
+the actual displayed signs; no hidden Weyl reflection is needed.
+
+lines131--143:
+The orthogonal E6+A2 root lattice contributes72+6=78 roots and
+rank8, giving86 currents. Its determinant is3*3=9, so it has index3
+inside unimodular E8. Every norm-two vector in this orthogonal
+direct sum belongs to one root factor: a vector nonzero in both
+has squared norm at least4. Thus precisely the other162 E8 roots
+are outside the zero glue coset. The quotient has order3; negation
+exchanges its two nonzero classes and preserves root norm, so each
+has81 roots. No oscillator can supply another weight-one state in
+a nonzero glue class, because its momentum already has the minimum
+positive E8 weight1. Thus these are exactly the two81-dimensional
+tops, not merely81 selected states in larger tops.
+
+Optional teaching clause, not a required correction
+---------------------------------------------------
+At lines136--139, one could explain the index in this coordinate
+model with the short sentence:
+  "The direct-sum root lattice has determinant3*3=9, so its index
+   in unimodular E8 is3."
+The earlier lattice-embedding chapter already establishes index-three
+glue, so the example is valid without repeating this argument. It
+would just make its final equal81 count locally self-contained.
+
+Narrative/dependency check
+--------------------------
+* The counting coordinates are explicitly orthonormal, unlike the
+  simple-root coordinates used for the actual exceptional generator.
+  The final sentence correctly prevents identification of these
+  coordinate vectors with the earlier construction data.
+* Neither the81 count nor scalar character equality chooses whether
+  the original repeated U summand is a or c0. Lines271--273 retain
+  the right warning: equal characters cannot identify the extension
+  algebra or its multiplication.
+* The actual main-file order is c05, r04, r03. Thus r03's modular
+  data and strong-unitarity premises are available before use.
+  In particular r04:550--557 already constructs the separately
+  selected canonical H3 holomorphic extension, so r03:258's
+  'selected holomorphic extension' is not an unsupported forward
+  assertion. The full nonchiral pairing is appropriately left for r05.
+* The new example uses only ambient lattice geometry and does not
+  feed the E8 character or its coefficients into the earlier finite
+  closure/properness argument. The dependency warning at210--214
+  remains correct.
+* The locally named A2 root gamma and the next section's integer polar
+  coefficient gamma have different, explicitly declared scopes. This
+  is harmless notation reuse, not a formula ambiguity requiring edits.
+* The character-principal-part argument still distinguishes categorical
+  twists from the c/24-shifted character T matrix. The root-count example
+  introduces no alternate norm or q-exponent convention.
+
+Sources read: chapters/r03_characters.tex in full; main include order;
+the concluding positivity/selected-extension passage of r04; the opening
+full-theory definitions of r05. No external theorem or saved numerical
+record was re-executed in this review.

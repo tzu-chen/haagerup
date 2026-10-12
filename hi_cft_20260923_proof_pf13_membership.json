@@ -1,0 +1,27 @@
+{
+  "exact_membership_in_generated_S3": true,
+  "Cartan_zero_span_rank_at_membership": 58,
+  "zero_weight_pairs": 154,
+  "positive_stress_decomposition_coefficients": [
+    "1",
+    "3403/4563",
+    "25/6",
+    "25/26"
+  ],
+  "decomposition_order": [
+    "omega_A1_1",
+    "omega_A1_39",
+    "SU2_average_Potts_stress",
+    "SU2_average_c8over5_stress"
+  ],
+  "PCT_stable_weight_three_line": true,
+  "conditional_consequence": "If <z,w> is the rational K(sl2,13), the positive-stress argument of Dong-Wang proves U is C2-cofinite.",
+  "parafermion_identification_proved": false,
+  "seconds": 179.77104525500908,
+  "scope": "Exact membership and positive stress control. The C2 conclusion is conditional, not established.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_pf13_membership.py": "6309214b9de77a1e5c4a4c2e730fa524add6e552a77a4d400891eb0a9703a4b7",
+    "hi_cft_20260923_proof_pf13_exact.json": "e39ade557fcca58488c21760382c1cbc54457500f1dc5503e126aa7f0b6b4b92",
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d"
+  }
+}

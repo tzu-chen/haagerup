@@ -1,0 +1,121 @@
+\section{Solutions for Chapter~\ref{ch:regularity}}
+
+\paragraph{Exercise~\ref{ex:c-regular-1}: the graded quotient.}
+\phantomsection
+\label{sol:ex:c-regular-1}
+For homogeneous $a,b$, the vector $a_{(-2)}b$ has weight
+$\wt(a)+\wt(b)+1$. Hence $C_2(V)$ is a direct sum of homogeneous
+subspaces. In finite-dimensional $V_n$ every subspace has an
+orthogonal complement, and
+$V_n/(C_2(V)\cap V_n)$ is represented by that complement.
+This is finite-dimensional linear algebra grade by grade; no
+assertion about Hilbert-space closure of the infinite direct sum
+is needed.
+
+
+
+\paragraph{Exercise~\ref{ex:c-regular-2}: the trace step.}
+\phantomsection
+\label{sol:ex:c-regular-2}
+A diagonalizable operator with nonnegative eigenvalues has trace the
+sum of those eigenvalues. Zero trace forces each to vanish, so the
+operator vanishes. Without diagonalizability,
+$\left(\begin{smallmatrix}0&1\\0&0\end{smallmatrix}\right)$ has
+zero spectrum and trace but is nonzero. This is precisely why the
+regular component top decomposition is used on a generalized
+weight-zero space: nilpotence of the total energy alone is insufficient.
+The argument does not require a positive form on the module carrying
+these operators. It uses diagonalizability and the signs of their
+eigenvalues, both supplied separately by the component theory.
+
+
+
+\paragraph{Exercise~\ref{ex:c-regular-3}: downward induction to the vacuum condition.}
+\phantomsection
+\label{sol:ex:c-regular-3}
+For each fixed $a$, lower truncation supplies an integer $N\geq3$ with
+$a_{(n)}v=0$ for all $n\geq N$. Since $L_{-1}v=0$,
+translation covariance implies
+$(n+1)a_{(n)}v=-L_{-1}a_{(n+1)}v$.
+Descending from $N$ first reaches $a_{(3)}v=0$, and then gives
+\[
+ 3a_{(2)}v=-L_{-1}a_{(3)}v=0,\qquad
+ 2a_{(1)}v=-L_{-1}a_{(2)}v=0,\qquad
+ a_{(0)}v=-L_{-1}a_{(1)}v=0.
+\]
+The coefficient is nonzero for every $n\geq0$. At $n=-1$ it
+would vanish, exactly where a creation mode may act nontrivially.
+In particular the argument imposes no erroneous vanishing of
+$a_{(-1)}v$, which is the desired copy of the state $a$.
+
+
+
+\paragraph{Exercise~\ref{ex:c-regular-4}: a nonsplit extension.}
+\phantomsection
+\label{sol:ex:c-regular-4}
+Let $A=\C[\varepsilon]/(\varepsilon^2)$. Its regular module fits
+into
+$0\to\C\varepsilon\to A\to A/(\varepsilon)\to0$,
+with both endpoints the simple module on which $\varepsilon$ acts
+as zero. A section would send $1$ to $1+b\varepsilon$, but
+$\varepsilon(1+b\varepsilon)=\varepsilon\ne0$, so no section is
+$A$-linear. The simple module is therefore not projective. In the
+VOA proof, the positive stress identity supplies the missing
+vacuum-like lift and thereby rules out the analogous nonsplit
+extension onto the unit.
+
+
+
+\paragraph{Exercise~\ref{ex:c-regular-5}: factorial versus exponential.}
+\phantomsection
+\label{sol:ex:c-regular-5}
+For $n$ even, the final $n/2$ factors of $n!$ are at least $n/2$,
+so $n!\geq(n/2)^{n/2}$. Once $n/2>A^2$, this is greater than
+$A^n$. A fixed prefactor can be absorbed by choosing $n$ larger.
+To see this uniformly for even and odd $n$, put $r_n=n!/A^n$.
+For $n+1\geq2A$ one has $r_{n+1}/r_n=(n+1)/A\geq2$;
+hence $r_n$ eventually exceeds every fixed constant.
+In the moderate-growth argument take
+$A=C_X^2$ and the fixed constant $d_0(\one)^2$. Then, for all
+sufficiently large $n$,
+\[
+ \dim\End(X^{\otimes n})
+ \leq d_0(\one)^2C_X^{2n}<n!,
+\]
+which is exactly the hypothesis needed there.
+
+
+
+\paragraph{Exercise~\ref{ex:c-regular-6}: the logical uses of the hypotheses.}
+\phantomsection
+\label{sol:ex:c-regular-6}
+Positive coefficients let separate upper bounds on partial-energy
+expectations add to an upper bound on ambient energy. They also
+make a zero sum of nonnegative partial traces force each trace
+to vanish. Component regularity supplies ordinary semisimple
+restrictions, finitely many simple types, and, together with its
+$C_2$ consequences, the finite component quotient bounds.
+Grading compatibility makes component modes have their expected
+ambient degrees. It places a lowest ambient space in complete
+component tops and makes each partial energy preserve finite
+ambient grades.
+
+The unique simple component module at weight zero identifies those
+zero-energy tops with vacuum tops. Their translation operators
+therefore annihilate the selected vectors, giving the vacuum-like
+lift needed for projectivity. If another simple had weight zero,
+the trace argument would still force its energy to vanish, but
+would not force its translation mode to vanish. Both uniqueness
+of the $V$ module of weight zero and vacuum projectivity would
+lose their stated proof. The $C_2$ bound itself would remain valid
+if the other component hypotheses remained true.
+
+Braiding is a premise of the categorical rigidity theorem used after
+projectivity. Before rigidity, right exactness turns a surjection
+$P^{\oplus d_0(Z)}\twoheadrightarrow Z$ into one onto $Z\otimes X$;
+this gives the exponential bound on tensor-power endomorphisms.
+Only after rigidity has been established is tensoring known to be
+exact, allowing projectivity of the unit to imply projectivity of
+every object. Interchanging these stages would be circular.
+
+

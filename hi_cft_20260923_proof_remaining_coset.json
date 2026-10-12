@@ -1,0 +1,1231 @@
+{
+  "remaining_central_charge": "18/5",
+  "stress": [
+    {
+      "momentum": [
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "0",
+        "1/30",
+        "1/10",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        -1,
+        -1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-7/100",
+        "0",
+        "0",
+        "3/100"
+      ]
+    },
+    {
+      "momentum": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "1/60",
+        "1/20",
+        "-1/60",
+        "1/60"
+      ]
+    },
+    {
+      "momentum": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "1/60",
+        "-1/20",
+        "1/60",
+        "1/60"
+      ]
+    },
+    {
+      "momentum": [
+        -1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-19/150",
+        "0",
+        "0",
+        "1/150"
+      ]
+    },
+    {
+      "momentum": [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/90",
+        "0",
+        "0",
+        "-1/90"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "0",
+        "-1/10",
+        "1/10",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/10",
+        "1/30",
+        "-1/30",
+        "-1/30"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/10",
+        "-1/30",
+        "1/30",
+        "-1/30"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/12",
+        "0",
+        "0",
+        "1/60"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "0",
+        "-1/10",
+        "-1/10",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/10",
+        "0",
+        "1/10",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/10",
+        "0",
+        "-1/10",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/50",
+        "0",
+        "0",
+        "-1/50"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        1,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "0",
+        "1/30",
+        "-1/10",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/10",
+        "-1/30",
+        "-1/30",
+        "1/30"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/10",
+        "1/30",
+        "1/30",
+        "1/30"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "1/60",
+        "-1/20",
+        "-1/60",
+        "-1/60"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "1/60",
+        "1/20",
+        "1/60",
+        "-1/60"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        0,
+        0
+      ],
+      "coefficient": [
+        "2/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        0,
+        2
+      ],
+      "coefficient": [
+        "-1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        0,
+        3
+      ],
+      "coefficient": [
+        "-2/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        0,
+        4
+      ],
+      "coefficient": [
+        "-1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        1,
+        1
+      ],
+      "coefficient": [
+        "2/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        1,
+        2
+      ],
+      "coefficient": [
+        "1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        1,
+        3
+      ],
+      "coefficient": [
+        "-1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        1,
+        4
+      ],
+      "coefficient": [
+        "-2/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        1,
+        6
+      ],
+      "coefficient": [
+        "-1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        1,
+        7
+      ],
+      "coefficient": [
+        "-1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        2,
+        2
+      ],
+      "coefficient": [
+        "1/5",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        2,
+        3
+      ],
+      "coefficient": [
+        "1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        2,
+        4
+      ],
+      "coefficient": [
+        "-1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        2,
+        6
+      ],
+      "coefficient": [
+        "-1/5",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        2,
+        7
+      ],
+      "coefficient": [
+        "-1/5",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        3,
+        3
+      ],
+      "coefficient": [
+        "2/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        3,
+        6
+      ],
+      "coefficient": [
+        "-1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        3,
+        7
+      ],
+      "coefficient": [
+        "-1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        4,
+        4
+      ],
+      "coefficient": [
+        "2/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        6,
+        6
+      ],
+      "coefficient": [
+        "2/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        6,
+        7
+      ],
+      "coefficient": [
+        "1/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [
+        7,
+        7
+      ],
+      "coefficient": [
+        "2/15",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "1/150",
+        "1/50",
+        "-1/150",
+        "1/150"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "1/150",
+        "-1/50",
+        "1/150",
+        "1/150"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/40",
+        "1/120",
+        "-1/120",
+        "-1/120"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/40",
+        "-1/120",
+        "1/120",
+        "-1/120"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        -1,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "0",
+        "1/300",
+        "1/100",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/90",
+        "0",
+        "0",
+        "1/90"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/45",
+        "0",
+        "1/45",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/45",
+        "0",
+        "-1/45",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "0",
+        "-1/180",
+        "1/180",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/12",
+        "0",
+        "0",
+        "-1/60"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/40",
+        "-1/120",
+        "-1/120",
+        "1/120"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/40",
+        "1/120",
+        "1/120",
+        "1/120"
+      ]
+    },
+    {
+      "momentum": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "0",
+        "-1/180",
+        "-1/180",
+        "0"
+      ]
+    },
+    {
+      "momentum": [
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-1/50",
+        "0",
+        "0",
+        "1/50"
+      ]
+    },
+    {
+      "momentum": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-19/150",
+        "0",
+        "0",
+        "-1/150"
+      ]
+    },
+    {
+      "momentum": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "1/150",
+        "-1/50",
+        "-1/150",
+        "-1/150"
+      ]
+    },
+    {
+      "momentum": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "1/150",
+        "1/50",
+        "1/150",
+        "-1/150"
+      ]
+    },
+    {
+      "momentum": [
+        1,
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "-7/100",
+        "0",
+        "0",
+        "-3/100"
+      ]
+    },
+    {
+      "momentum": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "oscillators": [],
+      "coefficient": [
+        "0",
+        "1/300",
+        "-1/100",
+        "0"
+      ]
+    }
+  ],
+  "PF13_stress_PCT_and_ambient_quasiprimary_exact": true,
+  "PF13_translation_on_generator_exact": true,
+  "commutes_exactly_with_core_and_PF13_stress": true,
+  "right_E_F_conformal_weights": {
+    "core": "6/65",
+    "PF13": "7/65",
+    "remaining": "4/5"
+  },
+  "numerical_PF13_L0_spectrum_on_core_commutant_S2": {
+    "0": 2,
+    "2/5": 1,
+    "2": 1
+  },
+  "numerical_remaining_commutant_S2_dimension": 2,
+  "invariance_residual": 8.317432620017337e-14,
+  "scope": "The commuting stress and current weights are exact; dimensions refer only to the saved finite spans. No identification or rationality claim for the remaining coset.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_remaining_coset.py": "8a5a37ba2bf3cc10fc3e57f7fea4a37a2c651291364d4ba2aae4b26d1f3b7d04",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_general_modes_v2.py": "4bd1e6d4df8122734e90da1096fb5d30ed74aec40574a8bee7642307d27099f1"
+  }
+}

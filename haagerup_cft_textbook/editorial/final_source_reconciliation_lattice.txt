@@ -1,0 +1,108 @@
+Final lattice-source reconciliation
+Date: 2026-10-05, 22:01:55 UTC
+Reviewer: scope_lattice
+Method: read-only comparison of current completed status/handoffs,
+selected saved JSON fields, and l04/l06/r11. No scripts or imports,
+numerical jobs, builds, queued continuations, or scientific edits.
+
+RESULT: PASS. No new source interpretation or accidental textbook
+mismatch found. This review precedes root's planned 22:35 UTC
+source snapshot and does not claim to cover subsequent changes.
+
+STOP AND SOURCE STATUS
+
+The current hi_cft_20261005_status.md says the research task stopped
+at the user's request around 18:56 UTC; its jobs were finished at
+wrap-up and no continuum CFT was identified. The chain/theory handoffs
+retain the same distinction between completed producers and prepared,
+unexecuted readers/wrappers.
+
+The latest inspected summary mtimes are:
+  status.md: 19:02:21 UTC;
+  independent_module_interpretation.md: 19:00:17 UTC;
+  chain_handoff.md: 18:58:03 UTC;
+  theory_handoff.md: 18:56:52 UTC.
+These precede the earlier integrated scope review at 20:25 UTC.
+The inspected numerical records also predate the stop. Root separately
+reports that no selected scientific source has mtime after 19:02.
+
+RANK QUALIFICATION AND ENTROPY (l04)
+
+Freshly reread primary fields in
+hi_cft_20261005_step0_r144_b1.json:1973-1982,3346,5287:
+three accepted gradients plus the uncached same-point check,
+gradient 7.668421278317545e-7, energy -.8453364684666173,
+component transfer length 154.86128466169043, qualification true.
+
+hi_cft_20261005_step0_r156_b1.json:2229-2230,6614-6617:
+energy -.845337245891912, gradient 6.265620766267367e-5,
+no qualifying fresh check, unchanged-threshold qualification false.
+The textbook correctly uses the later rank144 continuation, excludes
+rank156 despite lower energy, and does not retroactively qualify an
+older endpoint. It calls the fresh check uncached rather than implying
+an independently implemented gradient.
+
+The scaling JSON at :4794-4814,4889-4932,5061-5109 gives:
+  ranks120-132: c1=2.7560800172711177,
+    c2=2.6557860747135846, cinfinity=2.3519664134401914;
+  ranks132-144: c1=1.5582391954885022,
+    c2=1.5932082989444452, cinfinity=1.4787621536737219;
+  four-point108-144: c1=2.098900492067317.
+All printed rounding is correct. All 28 contiguous windows are retained
+in the source. l04 expressly denies a plateau, continuum error bound,
+or proof of the finite-entanglement scaling premise.
+
+WARD COVERAGE AND OPERATOR COMPARISONS (l06)
+
+The current 64-state window JSONs retain empirical coverage true
+for all four N12 windows, and true/true/true/false for the four N15
+windows. The latter upper returned level is 3.4755457528917453,
+below the widest window endpoint 3.5. The aggregate source scopes
+deny certified ordering and a rigorous missing-energy threshold.
+l06 reproduces exactly that coverage and qualification.
+
+The completed intermediate N15 producer still has recipe47's
+joint ratio .6417214096454787+.006451077035342201i,
+alignment eta=.983205094525584, and energy/norm ratio
+1.038620571548298 (:8820-8845). l06 keeps the correct lesson:
+near-unit alignment does not establish normalized daughter amplitude.
+It does not attribute values to the unexecuted intermediate reader.
+
+The completed density reader still labels its six nonzero minors
+as floating finite common-operator tests, not an infrared primary
+count or two-coupling flow. l06 uses V_diff for the second microscopic
+density, avoids the previous Potts W collision, and states those
+limits. Its equal-energy sentence correctly describes catalog-wide
+deviations, not bounds on every operator pair.
+
+DIRECT MODULE CORRELATIONS (l06)
+
+Both 18/54 exact-frame continuation records retain the accepted-state
+fresh-gradient/all-charge-spectrum status. The fresh gradients are
+9.835302978748377e-7 and 8.154898861609418e-7.
+The current physical-correlation JSON reports its controls passed,
+and at 513 retains
+  seed193: .10500781921498549+9.465415249168552e-8 i;
+  seed194: .44003803511595974-1.5033026056626708e-9 i.
+The module interpretation distinguishes seed193's period-three
+complex pattern from seed194's nearly uniform long-distance values.
+l06 matches these interpretations and retains finite-capacity,
+local-stationarity, no-infinite-plateau, no-vacuum-count, and no-gap
+qualifiers. No failed earlier growth endpoint is substituted.
+
+The module note's exact-only spectral-transport and physical-overlap
+appendices require faithful invariant metrics, exact unitary peripheral
+generators, and complete peripheral control. They do not promote the
+finite measurements to those hypotheses. No such promotion appears
+in l04/l06.
+
+SOURCE GUIDE (r11)
+
+r11 names the completed Oct1 sources and current Oct5 status plus
+chain/theory handoffs, accurately says their qualified sequence and
+completed operator/correlation comparisons are included, and preserves
+the nonretroactive qualification rule. It makes no claim that the
+unrun N18 density wrapper, offdiagonal correlation consumer, intermediate
+Ward reader, second rank156 continuation, or rank168 growth completed.
+
+No change requested.

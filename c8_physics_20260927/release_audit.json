@@ -1,0 +1,5848 @@
+{
+  "status": "PASS",
+  "checks": {
+    "spectrum_source_hashes": 4,
+    "spectrum_output_hashes": 11,
+    "seed_and_completed_coupling_hashes": true,
+    "correlator_source_hashes": 6,
+    "defect_generator_hash_and_checks": true,
+    "crosslink_source_hashes": 6,
+    "thermal_constant_source_hashes": 2,
+    "fresh_tree_replay": {
+      "status": "PASS",
+      "fresh_tree": "/tmp/c8-physics-release-replay-s1ixdltr",
+      "producers": [
+        "spectrum",
+        "primary_seeds",
+        "primary_tensor",
+        "correlators",
+        "defects",
+        "crosslinks"
+      ],
+      "byte_identical_payload_files": 31,
+      "structured_payload_comparisons": 4,
+      "ignored_run_metadata": "elapsed time, measured RSS and absolute fresh-output locations only",
+      "elapsed_seconds": 95.85010581201641,
+      "scope": "Fresh-tree arithmetic replay from the same files selected for the release. Does not replay the entire historical CFT construction or bootstrap SDP."
+    },
+    "hi_cft_c8_proof": {
+      "pages": 78,
+      "sha256": "38d3bc1c04f3805ca9d6a08fb0de342793058c54a93947a68340b324fd09dd64",
+      "bytes": 1308255,
+      "clean_TeX_checks": true
+    },
+    "hi_cft_c8_lean_assessment": {
+      "pages": 17,
+      "sha256": "5028134f9448c893e7802c43479423bcfe70b490f64e9ee44d44dae0fbb963dd",
+      "bytes": 352094,
+      "clean_TeX_checks": true
+    },
+    "hi_cft_c8_verification_guide": {
+      "pages": 20,
+      "sha256": "0159bd0125900217826947fc4b43ebbf051a6cd9b3d5140a887a8c7a4a58bca2",
+      "bytes": 409139,
+      "clean_TeX_checks": true
+    },
+    "TeX_dependency_files": [
+      "c8_physics_20260927/bibliography_additions.tex",
+      "c8_physics_20260927/correlators.tex",
+      "c8_physics_20260927/couplings.tex",
+      "c8_physics_20260927/data/thermal_readable.tex",
+      "c8_physics_20260927/defects.tex",
+      "c8_physics_20260927/figures/defect_observables.pdf",
+      "c8_physics_20260927/figures/haagerup_bootstrap_comparison.pdf",
+      "c8_physics_20260927/figures/physics_primary_spectrum.pdf",
+      "c8_physics_20260927/figures/physics_thermal_comparison.pdf",
+      "c8_physics_20260927/lean_assessment.tex",
+      "c8_physics_20260927/lean_baseline_assessment.tex",
+      "c8_physics_20260927/manuscript_refs.tex",
+      "c8_physics_20260927/physics_guide.tex",
+      "c8_physics_20260927/spectrum.tex",
+      "c8_physics_20260927/verification_finite_inputs.tex",
+      "c8_reviewability_20260927/structural_inputs.tex",
+      "hi_cft_c8_bibliography.tex",
+      "hi_cft_c8_manuscript_analytic.tex",
+      "hi_cft_c8_manuscript_structure.tex"
+    ],
+    "current_manuscript_references": {
+      "schema": "c8-manuscript-reference-check-v1",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "guides": {
+        "hi_cft_c8_verification_guide.tex": {
+          "pdf": "hi_cft_c8_verification_guide.pdf",
+          "active_tex_sources": [
+            "c8_physics_20260927/manuscript_refs.tex",
+            "c8_physics_20260927/verification_finite_inputs.tex",
+            "c8_reviewability_20260927/structural_inputs.tex",
+            "hi_cft_c8_verification_guide.tex"
+          ],
+          "reference_occurrences": 41,
+          "unique_labels": 23,
+          "resolved_references": [
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 60,
+              "command": "ref",
+              "label": "sec:finite",
+              "number": "B",
+              "page": 31,
+              "title": "Finite closure and the all-weight criterion",
+              "destination": "section.B",
+              "expected_visible_text": "B"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 60,
+              "command": "ref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "K"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 96,
+              "command": "ref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "A"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 97,
+              "command": "pageref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "28"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 97,
+              "command": "ref",
+              "label": "lem:levels",
+              "number": "A.1",
+              "page": 29,
+              "title": "The two affine levels",
+              "destination": "theorem.A.1",
+              "expected_visible_text": "A.1"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 98,
+              "command": "ref",
+              "label": "cert:initial",
+              "number": "A.2",
+              "page": 30,
+              "title": "Actual initial spaces",
+              "destination": "theorem.A.2",
+              "expected_visible_text": "A.2"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 99,
+              "command": "ref",
+              "label": "sec:finite",
+              "number": "B",
+              "page": 31,
+              "title": "Finite closure and the all-weight criterion",
+              "destination": "section.B",
+              "expected_visible_text": "B"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 100,
+              "command": "pageref",
+              "label": "sec:finite",
+              "number": "B",
+              "page": 31,
+              "title": "Finite closure and the all-weight criterion",
+              "destination": "section.B",
+              "expected_visible_text": "31"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 100,
+              "command": "ref",
+              "label": "thm:recursive",
+              "number": "B.3",
+              "page": 32,
+              "title": "Recursive strong-generation criterion",
+              "destination": "theorem.B.3",
+              "expected_visible_text": "B.3"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 101,
+              "command": "ref",
+              "label": "cert:lower",
+              "number": "B.6",
+              "page": 34,
+              "title": "Lower identities and the actual triplet",
+              "destination": "theorem.B.6",
+              "expected_visible_text": "B.6"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 102,
+              "command": "ref",
+              "label": "sec:gate4",
+              "number": "C",
+              "page": 34,
+              "title": "Gate 4: exact seeds, raising, and singlet recovery",
+              "destination": "section.C",
+              "expected_visible_text": "C"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 102,
+              "command": "ref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "E"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 103,
+              "command": "pageref",
+              "label": "sec:gate4",
+              "number": "C",
+              "page": 34,
+              "title": "Gate 4: exact seeds, raising, and singlet recovery",
+              "destination": "section.C",
+              "expected_visible_text": "34"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 103,
+              "command": "pageref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "38"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 104,
+              "command": "ref",
+              "label": "lem:singlet",
+              "number": "C.2",
+              "page": 34,
+              "title": "Recovery from a joint-singlet projection",
+              "destination": "theorem.C.2",
+              "expected_visible_text": "C.2"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 104,
+              "command": "ref",
+              "label": "lem:bootstrap",
+              "number": "C.3",
+              "page": 35,
+              "title": "Virasoro and current bootstrap",
+              "destination": "theorem.C.3",
+              "expected_visible_text": "C.3"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 104,
+              "command": "ref",
+              "label": "lem:jacobi",
+              "number": "D.2",
+              "page": 37,
+              "title": "Jacobi reduction",
+              "destination": "theorem.D.2",
+              "expected_visible_text": "D.2"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 105,
+              "command": "ref",
+              "label": "sec:regularity",
+              "number": "F",
+              "page": 39,
+              "title": "Regularity from a positive conformal-vector identity",
+              "destination": "section.F",
+              "expected_visible_text": "F"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 106,
+              "command": "pageref",
+              "label": "sec:regularity",
+              "number": "F",
+              "page": 39,
+              "title": "Regularity from a positive conformal-vector identity",
+              "destination": "section.F",
+              "expected_visible_text": "39"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 106,
+              "command": "ref",
+              "label": "cert:structural-inputs",
+              "number": "F.1",
+              "page": 39,
+              "title": "Embedded structural data",
+              "destination": "theorem.F.1",
+              "expected_visible_text": "F.1"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 107,
+              "command": "ref",
+              "label": "prop:pf13-finite-reconstruction",
+              "number": "F.2",
+              "page": 40,
+              "title": "Finite reconstruction of the parafermion factor",
+              "destination": "theorem.F.2",
+              "expected_visible_text": "F.2"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 108,
+              "command": "ref",
+              "label": "thm:positive-stress-rationality",
+              "number": "F.8",
+              "page": 44,
+              "title": "Positive stresses imply strong rationality",
+              "destination": "theorem.F.8",
+              "expected_visible_text": "F.8"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 109,
+              "command": "ref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "G"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 109,
+              "command": "ref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "H"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 110,
+              "command": "pageref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "44"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 110,
+              "command": "pageref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "58"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 111,
+              "command": "ref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "I"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 111,
+              "command": "ref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "K"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 112,
+              "command": "pageref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "59"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 112,
+              "command": "pageref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "69"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 113,
+              "command": "ref",
+              "label": "sec:physics-spectrum",
+              "number": "2",
+              "page": 7,
+              "title": "Characters and a spin-resolved physical spectrum",
+              "destination": "section.2",
+              "expected_visible_text": "2"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 113,
+              "command": "ref",
+              "label": "sec:physics-data-guide",
+              "number": "7",
+              "page": 26,
+              "title": "Perturbations, bootstrap coordinates, and use of the data",
+              "destination": "section.7",
+              "expected_visible_text": "7"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 114,
+              "command": "pageref",
+              "label": "sec:physics-spectrum",
+              "number": "2",
+              "page": 7,
+              "title": "Characters and a spin-resolved physical spectrum",
+              "destination": "section.2",
+              "expected_visible_text": "7"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 114,
+              "command": "pageref",
+              "label": "sec:physics-data-guide",
+              "number": "7",
+              "page": 26,
+              "title": "Perturbations, bootstrap coordinates, and use of the data",
+              "destination": "section.7",
+              "expected_visible_text": "26"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 115,
+              "command": "ref",
+              "label": "sec:physics-data-guide",
+              "number": "7",
+              "page": 26,
+              "title": "Perturbations, bootstrap coordinates, and use of the data",
+              "destination": "section.7",
+              "expected_visible_text": "7"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 116,
+              "command": "ref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "M"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 116,
+              "command": "ref",
+              "label": "sec:compilation",
+              "number": "O",
+              "page": 75,
+              "title": "Compilation and review scope",
+              "destination": "section.O",
+              "expected_visible_text": "O"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 117,
+              "command": "pageref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "71"
+            },
+            {
+              "source": "hi_cft_c8_verification_guide.tex",
+              "line": 117,
+              "command": "pageref",
+              "label": "sec:compilation",
+              "number": "O",
+              "page": 75,
+              "title": "Compilation and review scope",
+              "destination": "section.O",
+              "expected_visible_text": "75"
+            },
+            {
+              "source": "c8_physics_20260927/verification_finite_inputs.tex",
+              "line": 4,
+              "command": "ref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "A"
+            },
+            {
+              "source": "c8_physics_20260927/verification_finite_inputs.tex",
+              "line": 4,
+              "command": "ref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "E"
+            }
+          ],
+          "expected_destination_occurrences": {
+            "section.B": 3,
+            "section.K": 3,
+            "section.A": 3,
+            "theorem.A.1": 1,
+            "theorem.A.2": 1,
+            "theorem.B.3": 1,
+            "theorem.B.6": 1,
+            "section.C": 2,
+            "section.E": 3,
+            "theorem.C.2": 1,
+            "theorem.C.3": 1,
+            "theorem.D.2": 1,
+            "section.F": 2,
+            "theorem.F.1": 1,
+            "theorem.F.2": 1,
+            "theorem.F.8": 1,
+            "section.G": 2,
+            "section.H": 2,
+            "section.I": 2,
+            "section.2": 2,
+            "section.7": 3,
+            "section.M": 2,
+            "section.O": 2
+          },
+          "actual_destination_annotation_counts": {
+            "section.B": 3,
+            "section.K": 3,
+            "section.A": 3,
+            "theorem.A.1": 1,
+            "theorem.A.2": 1,
+            "theorem.B.3": 1,
+            "theorem.B.6": 1,
+            "section.C": 2,
+            "section.E": 3,
+            "theorem.C.2": 1,
+            "theorem.C.3": 1,
+            "theorem.D.2": 1,
+            "section.F": 2,
+            "theorem.F.1": 1,
+            "theorem.F.2": 1,
+            "theorem.F.8": 1,
+            "section.G": 2,
+            "section.H": 2,
+            "section.I": 2,
+            "section.2": 2,
+            "section.7": 3,
+            "section.M": 2,
+            "section.O": 2
+          },
+          "actual_manuscript_pdf_links": [
+            {
+              "object": [
+                109,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": null,
+              "destination_kind": "array",
+              "rectangle": [
+                370.455,
+                681.269,
+                481.628,
+                693.2
+              ]
+            },
+            {
+              "object": [
+                123,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.B",
+              "destination_kind": "named",
+              "rectangle": [
+                386.629,
+                451.435,
+                396.502,
+                463.063
+              ]
+            },
+            {
+              "object": [
+                124,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                400.074,
+                451.435,
+                410.721,
+                463.063
+              ]
+            },
+            {
+              "object": [
+                125,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                286.1,
+                85.267,
+                296.274,
+                100.809
+              ]
+            },
+            {
+              "object": [
+                126,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                313.675,
+                85.267,
+                326.577,
+                100.809
+              ]
+            },
+            {
+              "object": [
+                127,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.A.1",
+              "destination_kind": "named",
+              "rectangle": [
+                370.19,
+                85.267,
+                388.849,
+                100.809
+              ]
+            },
+            {
+              "object": [
+                128,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.A.2",
+              "destination_kind": "named",
+              "rectangle": [
+                465.068,
+                85.267,
+                483.727,
+                100.809
+              ]
+            },
+            {
+              "object": [
+                129,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.B",
+              "destination_kind": "named",
+              "rectangle": [
+                286.1,
+                71.718,
+                295.819,
+                87.26
+              ]
+            },
+            {
+              "object": [
+                130,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.B",
+              "destination_kind": "named",
+              "rectangle": [
+                313.22,
+                71.718,
+                326.122,
+                87.26
+              ]
+            },
+            {
+              "object": [
+                131,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.B.3",
+              "destination_kind": "named",
+              "rectangle": [
+                376.886,
+                71.718,
+                395.09,
+                87.26
+              ]
+            },
+            {
+              "object": [
+                132,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.B.6",
+              "destination_kind": "named",
+              "rectangle": [
+                471.31,
+                71.718,
+                489.514,
+                87.26
+              ]
+            },
+            {
+              "object": [
+                133,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.C",
+              "destination_kind": "named",
+              "rectangle": [
+                294.342,
+                682.512,
+                304.213,
+                698.054
+              ]
+            },
+            {
+              "object": [
+                134,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                307.675,
+                682.512,
+                317.092,
+                698.054
+              ]
+            },
+            {
+              "object": [
+                135,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.C",
+              "destination_kind": "named",
+              "rectangle": [
+                340.553,
+                682.512,
+                353.455,
+                698.054
+              ]
+            },
+            {
+              "object": [
+                136,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                356.917,
+                682.512,
+                369.819,
+                698.054
+              ]
+            },
+            {
+              "object": [
+                137,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.C.2",
+              "destination_kind": "named",
+              "rectangle": [
+                417.735,
+                682.512,
+                436.09,
+                698.054
+              ]
+            },
+            {
+              "object": [
+                138,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.C.3",
+              "destination_kind": "named",
+              "rectangle": [
+                440.765,
+                682.512,
+                459.12,
+                698.054
+              ]
+            },
+            {
+              "object": [
+                139,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.D.2",
+              "destination_kind": "named",
+              "rectangle": [
+                485.006,
+                682.512,
+                503.817,
+                698.054
+              ]
+            },
+            {
+              "object": [
+                140,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.F",
+              "destination_kind": "named",
+              "rectangle": [
+                286.1,
+                670.907,
+                295.214,
+                684.505
+              ]
+            },
+            {
+              "object": [
+                141,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.F",
+              "destination_kind": "named",
+              "rectangle": [
+                312.615,
+                670.907,
+                325.516,
+                684.505
+              ]
+            },
+            {
+              "object": [
+                142,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.F.1",
+              "destination_kind": "named",
+              "rectangle": [
+                383.554,
+                670.907,
+                401.153,
+                684.505
+              ]
+            },
+            {
+              "object": [
+                143,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.F.2",
+              "destination_kind": "named",
+              "rectangle": [
+                464.554,
+                670.907,
+                482.153,
+                684.505
+              ]
+            },
+            {
+              "object": [
+                144,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.F.8",
+              "destination_kind": "named",
+              "rectangle": [
+                281.797,
+                655.414,
+                299.396,
+                668.986
+              ]
+            },
+            {
+              "object": [
+                145,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                294.342,
+                641.865,
+                304.895,
+                657.407
+              ]
+            },
+            {
+              "object": [
+                146,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                308.357,
+                641.865,
+                318.531,
+                657.407
+              ]
+            },
+            {
+              "object": [
+                147,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                341.993,
+                641.865,
+                354.895,
+                657.407
+              ]
+            },
+            {
+              "object": [
+                148,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                358.357,
+                641.865,
+                371.258,
+                657.407
+              ]
+            },
+            {
+              "object": [
+                149,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                294.342,
+                628.316,
+                300.274,
+                643.857
+              ]
+            },
+            {
+              "object": [
+                150,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                303.736,
+                628.316,
+                314.213,
+                643.857
+              ]
+            },
+            {
+              "object": [
+                151,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                337.675,
+                628.316,
+                350.577,
+                643.857
+              ]
+            },
+            {
+              "object": [
+                152,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                354.039,
+                628.316,
+                366.94,
+                643.857
+              ]
+            },
+            {
+              "object": [
+                153,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.2",
+              "destination_kind": "named",
+              "rectangle": [
+                278.585,
+                601.217,
+                286.032,
+                616.759
+              ]
+            },
+            {
+              "object": [
+                154,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.7",
+              "destination_kind": "named",
+              "rectangle": [
+                289.494,
+                601.217,
+                296.941,
+                616.759
+              ]
+            },
+            {
+              "object": [
+                155,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.2",
+              "destination_kind": "named",
+              "rectangle": [
+                320.402,
+                601.217,
+                327.85,
+                616.759
+              ]
+            },
+            {
+              "object": [
+                156,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.7",
+              "destination_kind": "named",
+              "rectangle": [
+                331.312,
+                601.217,
+                344.213,
+                616.759
+              ]
+            },
+            {
+              "object": [
+                157,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.7",
+              "destination_kind": "named",
+              "rectangle": [
+                470.766,
+                601.217,
+                478.213,
+                616.759
+              ]
+            },
+            {
+              "object": [
+                158,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                294.342,
+                587.668,
+                306.335,
+                603.21
+              ]
+            },
+            {
+              "object": [
+                159,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.O",
+              "destination_kind": "named",
+              "rectangle": [
+                309.797,
+                587.668,
+                320.274,
+                603.21
+              ]
+            },
+            {
+              "object": [
+                160,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                343.736,
+                587.668,
+                356.638,
+                603.21
+              ]
+            },
+            {
+              "object": [
+                161,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.O",
+              "destination_kind": "named",
+              "rectangle": [
+                360.1,
+                587.668,
+                373.001,
+                603.21
+              ]
+            },
+            {
+              "object": [
+                191,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                286.5,
+                123.079,
+                296.838,
+                134.708
+              ]
+            },
+            {
+              "object": [
+                192,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                300.409,
+                123.079,
+                309.974,
+                134.708
+              ]
+            },
+            {
+              "object": [
+                193,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": null,
+              "destination_kind": "array",
+              "rectangle": [
+                346.133,
+                123.079,
+                402.315,
+                134.708
+              ]
+            }
+          ],
+          "pdf_parser": {
+            "ordinary_objects": 70,
+            "object_streams": 4,
+            "objects_after_expansion": 410,
+            "inflated_bytes": 54281
+          },
+          "all_referenced_labels_unique": true,
+          "all_aux_pages_agree_with_actual_pdf_destinations": true,
+          "actual_named_destination_annotation_coverage": true,
+          "visible_text_crosscheck": [
+            {
+              "command": "pageref",
+              "text": "26",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "28",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "31",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "34",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "38",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "39",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "44",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "58",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "59",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "69",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "7",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "71",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "75",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "2",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "7",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "A",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "A.1",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "A.2",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "B",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "B.3",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "B.6",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "C",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "C.2",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "C.3",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "D.2",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "E",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "F",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "F.1",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "F.2",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "F.8",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "G",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "H",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "K",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "M",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "O",
+              "present_in_linked_text_pool": true
+            }
+          ],
+          "visible_text_scope": "Global linked-text pool only; Poppler discards GoToR destination fragments and may merge adjacent anchor text. Exact targets were checked independently from actual PDF annotation dictionaries.",
+          "literal_reference_review": []
+        },
+        "hi_cft_c8_lean_assessment.tex": {
+          "pdf": "hi_cft_c8_lean_assessment.pdf",
+          "active_tex_sources": [
+            "c8_physics_20260927/lean_assessment.tex",
+            "c8_physics_20260927/lean_baseline_assessment.tex",
+            "c8_physics_20260927/manuscript_refs.tex",
+            "hi_cft_c8_lean_assessment.tex"
+          ],
+          "reference_occurrences": 142,
+          "unique_labels": 32,
+          "resolved_references": [
+            {
+              "source": "hi_cft_c8_lean_assessment.tex",
+              "line": 45,
+              "command": "ref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "A"
+            },
+            {
+              "source": "hi_cft_c8_lean_assessment.tex",
+              "line": 45,
+              "command": "ref",
+              "label": "sec:comparison",
+              "number": "L",
+              "page": 71,
+              "title": "Relation to the proposed Haagerup theories",
+              "destination": "section.L",
+              "expected_visible_text": "L"
+            },
+            {
+              "source": "hi_cft_c8_lean_assessment.tex",
+              "line": 47,
+              "command": "ref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "M"
+            },
+            {
+              "source": "hi_cft_c8_lean_assessment.tex",
+              "line": 47,
+              "command": "ref",
+              "label": "sec:compilation",
+              "number": "O",
+              "page": 75,
+              "title": "Compilation and review scope",
+              "destination": "section.O",
+              "expected_visible_text": "O"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 97,
+              "command": "ref",
+              "label": "sec:statement",
+              "number": "1",
+              "page": 4,
+              "title": "Introduction and statement of results",
+              "destination": "section.1",
+              "expected_visible_text": "1"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 97,
+              "command": "pageref",
+              "label": "sec:statement",
+              "number": "1",
+              "page": 4,
+              "title": "Introduction and statement of results",
+              "destination": "section.1",
+              "expected_visible_text": "4"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 103,
+              "command": "ref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "A"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 103,
+              "command": "pageref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "28"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 110,
+              "command": "ref",
+              "label": "sec:finite",
+              "number": "B",
+              "page": 31,
+              "title": "Finite closure and the all-weight criterion",
+              "destination": "section.B",
+              "expected_visible_text": "B"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 110,
+              "command": "pageref",
+              "label": "sec:finite",
+              "number": "B",
+              "page": 31,
+              "title": "Finite closure and the all-weight criterion",
+              "destination": "section.B",
+              "expected_visible_text": "31"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 116,
+              "command": "ref",
+              "label": "sec:gate4",
+              "number": "C",
+              "page": 34,
+              "title": "Gate 4: exact seeds, raising, and singlet recovery",
+              "destination": "section.C",
+              "expected_visible_text": "C"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 116,
+              "command": "pageref",
+              "label": "sec:gate4",
+              "number": "C",
+              "page": 34,
+              "title": "Gate 4: exact seeds, raising, and singlet recovery",
+              "destination": "section.C",
+              "expected_visible_text": "34"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 123,
+              "command": "ref",
+              "label": "sec:gate5",
+              "number": "D",
+              "page": 36,
+              "title": "Gate 5 from Jacobi identities",
+              "destination": "section.D",
+              "expected_visible_text": "D"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 123,
+              "command": "pageref",
+              "label": "sec:gate5",
+              "number": "D",
+              "page": 36,
+              "title": "Gate 5 from Jacobi identities",
+              "destination": "section.D",
+              "expected_visible_text": "36"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 129,
+              "command": "ref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "E"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 129,
+              "command": "pageref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "38"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 135,
+              "command": "ref",
+              "label": "sec:regularity",
+              "number": "F",
+              "page": 39,
+              "title": "Regularity from a positive conformal-vector identity",
+              "destination": "section.F",
+              "expected_visible_text": "F"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 135,
+              "command": "pageref",
+              "label": "sec:regularity",
+              "number": "F",
+              "page": 39,
+              "title": "Regularity from a positive conformal-vector identity",
+              "destination": "section.F",
+              "expected_visible_text": "39"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 141,
+              "command": "ref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "G"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 141,
+              "command": "pageref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "44"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 150,
+              "command": "ref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "H"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 150,
+              "command": "pageref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "58"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 158,
+              "command": "ref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "I"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 158,
+              "command": "pageref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "59"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 165,
+              "command": "ref",
+              "label": "sec:analytic-category",
+              "number": "J",
+              "page": 67,
+              "title": "Unitary categorical identifications",
+              "destination": "section.J",
+              "expected_visible_text": "J"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 165,
+              "command": "pageref",
+              "label": "sec:analytic-category",
+              "number": "J",
+              "page": 67,
+              "title": "Unitary categorical identifications",
+              "destination": "section.J",
+              "expected_visible_text": "67"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 172,
+              "command": "ref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "K"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 172,
+              "command": "pageref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "69"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 179,
+              "command": "ref",
+              "label": "sec:comparison",
+              "number": "L",
+              "page": 71,
+              "title": "Relation to the proposed Haagerup theories",
+              "destination": "section.L",
+              "expected_visible_text": "L"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 179,
+              "command": "pageref",
+              "label": "sec:comparison",
+              "number": "L",
+              "page": 71,
+              "title": "Relation to the proposed Haagerup theories",
+              "destination": "section.L",
+              "expected_visible_text": "71"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 186,
+              "command": "ref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "M"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 186,
+              "command": "pageref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "71"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 192,
+              "command": "ref",
+              "label": "sec:formalization",
+              "number": "N",
+              "page": 74,
+              "title": "Limited formalization",
+              "destination": "section.N",
+              "expected_visible_text": "N"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 192,
+              "command": "pageref",
+              "label": "sec:formalization",
+              "number": "N",
+              "page": 74,
+              "title": "Limited formalization",
+              "destination": "section.N",
+              "expected_visible_text": "74"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 199,
+              "command": "ref",
+              "label": "sec:compilation",
+              "number": "O",
+              "page": 75,
+              "title": "Compilation and review scope",
+              "destination": "section.O",
+              "expected_visible_text": "O"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 199,
+              "command": "pageref",
+              "label": "sec:compilation",
+              "number": "O",
+              "page": 75,
+              "title": "Compilation and review scope",
+              "destination": "section.O",
+              "expected_visible_text": "75"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 219,
+              "command": "ref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "A"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 219,
+              "command": "ref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "E"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 220,
+              "command": "ref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "M"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 284,
+              "command": "ref",
+              "label": "sec:regularity",
+              "number": "F",
+              "page": 39,
+              "title": "Regularity from a positive conformal-vector identity",
+              "destination": "section.F",
+              "expected_visible_text": "F"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 295,
+              "command": "ref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "G"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 308,
+              "command": "ref",
+              "label": "prop:optional-algebraic-identification",
+              "number": "G.13",
+              "page": 57,
+              "title": "Ribbon identification with an additional classification input",
+              "destination": "theorem.G.13",
+              "expected_visible_text": "G.13"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 309,
+              "command": "pageref",
+              "label": "prop:optional-algebraic-identification",
+              "number": "G.13",
+              "page": 57,
+              "title": "Ribbon identification with an additional classification input",
+              "destination": "theorem.G.13",
+              "expected_visible_text": "57"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 319,
+              "command": "ref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "H"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 335,
+              "command": "ref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "I"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 336,
+              "command": "nameref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "From vacuum unitarity to complete unitarity"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 337,
+              "command": "pageref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "59"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 346,
+              "command": "ref",
+              "label": "clm:analytic-net-count",
+              "number": "I.1",
+              "page": 60,
+              "title": "The actual net branching and sector count; A2",
+              "destination": "theorem.I.1",
+              "expected_visible_text": "I.1"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 347,
+              "command": "pageref",
+              "label": "clm:analytic-net-count",
+              "number": "I.1",
+              "page": 60,
+              "title": "The actual net branching and sector count; A2",
+              "destination": "theorem.I.1",
+              "expected_visible_text": "60"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 381,
+              "command": "ref",
+              "label": "clm:analytic-reconstruction",
+              "number": "I.3",
+              "page": 62,
+              "title": "Reverse module comparison; A3",
+              "destination": "theorem.I.3",
+              "expected_visible_text": "I.3"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 382,
+              "command": "pageref",
+              "label": "clm:analytic-reconstruction",
+              "number": "I.3",
+              "page": 62,
+              "title": "Reverse module comparison; A3",
+              "destination": "theorem.I.3",
+              "expected_visible_text": "62"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 383,
+              "command": "ref",
+              "label": "prop:analytic-strong-unitarity",
+              "number": "I.4",
+              "page": 63,
+              "title": "Strong unitarity from sector exhaustion",
+              "destination": "theorem.I.4",
+              "expected_visible_text": "I.4"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 385,
+              "command": "ref",
+              "label": "lem:analytic-graph-reduction",
+              "number": "I.2",
+              "page": 62,
+              "title": "Reduction on a common core",
+              "destination": "theorem.I.2",
+              "expected_visible_text": "I.2"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 386,
+              "command": "pageref",
+              "label": "lem:analytic-graph-reduction",
+              "number": "I.2",
+              "page": 62,
+              "title": "Reduction on a common core",
+              "destination": "theorem.I.2",
+              "expected_visible_text": "62"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 444,
+              "command": "ref",
+              "label": "clm:analytic-annulus",
+              "number": "I.5",
+              "page": 64,
+              "title": "Pairwise annulus compatibility; A1",
+              "destination": "theorem.I.5",
+              "expected_visible_text": "I.5"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 445,
+              "command": "pageref",
+              "label": "clm:analytic-annulus",
+              "number": "I.5",
+              "page": 64,
+              "title": "Pairwise annulus compatibility; A1",
+              "destination": "theorem.I.5",
+              "expected_visible_text": "64"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 446,
+              "command": "ref",
+              "label": "lem:analytic-inverse-domain",
+              "number": "I.6",
+              "page": 64,
+              "title": "Dense inverse-energy domains",
+              "destination": "theorem.I.6",
+              "expected_visible_text": "I.6"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 447,
+              "command": "ref",
+              "label": "lem:analytic-insertion-continuation",
+              "number": "I.7",
+              "page": 65,
+              "title": "Continuation of the insertion form",
+              "destination": "theorem.I.7",
+              "expected_visible_text": "I.7"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 448,
+              "command": "ref",
+              "label": "thm:analytic-complete-unitarity",
+              "number": "I.8",
+              "page": 67,
+              "title": "Complete unitarity",
+              "destination": "theorem.I.8",
+              "expected_visible_text": "I.8"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 509,
+              "command": "ref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "G"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 510,
+              "command": "ref",
+              "label": "sec:analytic-category",
+              "number": "J",
+              "page": 67,
+              "title": "Unitary categorical identifications",
+              "destination": "section.J",
+              "expected_visible_text": "J"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 510,
+              "command": "ref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "K"
+            },
+            {
+              "source": "c8_physics_20260927/lean_baseline_assessment.tex",
+              "line": 522,
+              "command": "ref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "K"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 31,
+              "command": "nameref",
+              "label": "sec:statement",
+              "number": "1",
+              "page": 4,
+              "title": "Introduction and statement of results",
+              "destination": "section.1",
+              "expected_visible_text": "Introduction and statement of results"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 32,
+              "command": "ref",
+              "label": "sec:statement",
+              "number": "1",
+              "page": 4,
+              "title": "Introduction and statement of results",
+              "destination": "section.1",
+              "expected_visible_text": "1"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 32,
+              "command": "pageref",
+              "label": "sec:statement",
+              "number": "1",
+              "page": 4,
+              "title": "Introduction and statement of results",
+              "destination": "section.1",
+              "expected_visible_text": "4"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 33,
+              "command": "nameref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "The explicit lattice construction"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 34,
+              "command": "ref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "A"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 34,
+              "command": "pageref",
+              "label": "sec:construction",
+              "number": "A",
+              "page": 28,
+              "title": "The explicit lattice construction",
+              "destination": "section.A",
+              "expected_visible_text": "28"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 35,
+              "command": "nameref",
+              "label": "sec:finite",
+              "number": "B",
+              "page": 31,
+              "title": "Finite closure and the all-weight criterion",
+              "destination": "section.B",
+              "expected_visible_text": "Finite closure and the all-weight criterion"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 36,
+              "command": "ref",
+              "label": "sec:finite",
+              "number": "B",
+              "page": 31,
+              "title": "Finite closure and the all-weight criterion",
+              "destination": "section.B",
+              "expected_visible_text": "B"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 36,
+              "command": "pageref",
+              "label": "sec:finite",
+              "number": "B",
+              "page": 31,
+              "title": "Finite closure and the all-weight criterion",
+              "destination": "section.B",
+              "expected_visible_text": "31"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 37,
+              "command": "nameref",
+              "label": "sec:gate4",
+              "number": "C",
+              "page": 34,
+              "title": "Gate 4: exact seeds, raising, and singlet recovery",
+              "destination": "section.C",
+              "expected_visible_text": "Gate 4: exact seeds, raising, and singlet recovery"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 38,
+              "command": "ref",
+              "label": "sec:gate4",
+              "number": "C",
+              "page": 34,
+              "title": "Gate 4: exact seeds, raising, and singlet recovery",
+              "destination": "section.C",
+              "expected_visible_text": "C"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 38,
+              "command": "pageref",
+              "label": "sec:gate4",
+              "number": "C",
+              "page": 34,
+              "title": "Gate 4: exact seeds, raising, and singlet recovery",
+              "destination": "section.C",
+              "expected_visible_text": "34"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 39,
+              "command": "nameref",
+              "label": "sec:gate5",
+              "number": "D",
+              "page": 36,
+              "title": "Gate 5 from Jacobi identities",
+              "destination": "section.D",
+              "expected_visible_text": "Gate 5 from Jacobi identities"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 40,
+              "command": "ref",
+              "label": "sec:gate5",
+              "number": "D",
+              "page": 36,
+              "title": "Gate 5 from Jacobi identities",
+              "destination": "section.D",
+              "expected_visible_text": "D"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 40,
+              "command": "pageref",
+              "label": "sec:gate5",
+              "number": "D",
+              "page": 36,
+              "title": "Gate 5 from Jacobi identities",
+              "destination": "section.D",
+              "expected_visible_text": "36"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 41,
+              "command": "nameref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "From the finite gates to properness"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 42,
+              "command": "ref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "E"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 42,
+              "command": "pageref",
+              "label": "sec:properness",
+              "number": "E",
+              "page": 38,
+              "title": "From the finite gates to properness",
+              "destination": "section.E",
+              "expected_visible_text": "38"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 43,
+              "command": "nameref",
+              "label": "sec:regularity",
+              "number": "F",
+              "page": 39,
+              "title": "Regularity from a positive conformal-vector identity",
+              "destination": "section.F",
+              "expected_visible_text": "Regularity from a positive conformal-vector identity"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 44,
+              "command": "ref",
+              "label": "sec:regularity",
+              "number": "F",
+              "page": 39,
+              "title": "Regularity from a positive conformal-vector identity",
+              "destination": "section.F",
+              "expected_visible_text": "F"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 44,
+              "command": "pageref",
+              "label": "sec:regularity",
+              "number": "F",
+              "page": 39,
+              "title": "Regularity from a positive conformal-vector identity",
+              "destination": "section.F",
+              "expected_visible_text": "39"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 45,
+              "command": "nameref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "Branching and the boundary fusion ring"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 46,
+              "command": "ref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "G"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 46,
+              "command": "pageref",
+              "label": "sec:branching",
+              "number": "G",
+              "page": 44,
+              "title": "Branching and the boundary fusion ring",
+              "destination": "section.G",
+              "expected_visible_text": "44"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 47,
+              "command": "nameref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "The complete character vector"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 48,
+              "command": "ref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "H"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 48,
+              "command": "pageref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "58"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 49,
+              "command": "nameref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "From vacuum unitarity to complete unitarity"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 50,
+              "command": "ref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "I"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 50,
+              "command": "pageref",
+              "label": "sec:analytic-unitarity",
+              "number": "I",
+              "page": 59,
+              "title": "From vacuum unitarity to complete unitarity",
+              "destination": "section.I",
+              "expected_visible_text": "59"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 51,
+              "command": "nameref",
+              "label": "sec:analytic-category",
+              "number": "J",
+              "page": 67,
+              "title": "Unitary categorical identifications",
+              "destination": "section.J",
+              "expected_visible_text": "Unitary categorical identifications"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 52,
+              "command": "ref",
+              "label": "sec:analytic-category",
+              "number": "J",
+              "page": 67,
+              "title": "Unitary categorical identifications",
+              "destination": "section.J",
+              "expected_visible_text": "J"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 52,
+              "command": "pageref",
+              "label": "sec:analytic-category",
+              "number": "J",
+              "page": 67,
+              "title": "Unitary categorical identifications",
+              "destination": "section.J",
+              "expected_visible_text": "67"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 53,
+              "command": "nameref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "Full net theory and a chosen E8 VOA extension"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 54,
+              "command": "ref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "K"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 54,
+              "command": "pageref",
+              "label": "sec:analytic-full-theory",
+              "number": "K",
+              "page": 69,
+              "title": "Full net theory and a chosen \\texorpdfstring {$E_8$}{E8} VOA extension",
+              "destination": "section.K",
+              "expected_visible_text": "69"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 55,
+              "command": "nameref",
+              "label": "sec:comparison",
+              "number": "L",
+              "page": 71,
+              "title": "Relation to the proposed Haagerup theories",
+              "destination": "section.L",
+              "expected_visible_text": "Relation to the proposed Haagerup theories"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 56,
+              "command": "ref",
+              "label": "sec:comparison",
+              "number": "L",
+              "page": 71,
+              "title": "Relation to the proposed Haagerup theories",
+              "destination": "section.L",
+              "expected_visible_text": "L"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 56,
+              "command": "pageref",
+              "label": "sec:comparison",
+              "number": "L",
+              "page": 71,
+              "title": "Relation to the proposed Haagerup theories",
+              "destination": "section.L",
+              "expected_visible_text": "71"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 57,
+              "command": "nameref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "Certificate ledger and reproducibility"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 58,
+              "command": "ref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "M"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 58,
+              "command": "pageref",
+              "label": "sec:ledger",
+              "number": "M",
+              "page": 71,
+              "title": "Certificate ledger and reproducibility",
+              "destination": "section.M",
+              "expected_visible_text": "71"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 59,
+              "command": "nameref",
+              "label": "sec:formalization",
+              "number": "N",
+              "page": 74,
+              "title": "Limited formalization",
+              "destination": "section.N",
+              "expected_visible_text": "Limited formalization"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 60,
+              "command": "ref",
+              "label": "sec:formalization",
+              "number": "N",
+              "page": 74,
+              "title": "Limited formalization",
+              "destination": "section.N",
+              "expected_visible_text": "N"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 60,
+              "command": "pageref",
+              "label": "sec:formalization",
+              "number": "N",
+              "page": 74,
+              "title": "Limited formalization",
+              "destination": "section.N",
+              "expected_visible_text": "74"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 61,
+              "command": "nameref",
+              "label": "sec:compilation",
+              "number": "O",
+              "page": 75,
+              "title": "Compilation and review scope",
+              "destination": "section.O",
+              "expected_visible_text": "Compilation and review scope"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 62,
+              "command": "ref",
+              "label": "sec:compilation",
+              "number": "O",
+              "page": 75,
+              "title": "Compilation and review scope",
+              "destination": "section.O",
+              "expected_visible_text": "O"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 62,
+              "command": "pageref",
+              "label": "sec:compilation",
+              "number": "O",
+              "page": 75,
+              "title": "Compilation and review scope",
+              "destination": "section.O",
+              "expected_visible_text": "75"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 75,
+              "command": "nameref",
+              "label": "sec:physics-spectrum",
+              "number": "2",
+              "page": 7,
+              "title": "Characters and a spin-resolved physical spectrum",
+              "destination": "section.2",
+              "expected_visible_text": "Characters and a spin-resolved physical spectrum"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 76,
+              "command": "ref",
+              "label": "sec:physics-spectrum",
+              "number": "2",
+              "page": 7,
+              "title": "Characters and a spin-resolved physical spectrum",
+              "destination": "section.2",
+              "expected_visible_text": "2"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 76,
+              "command": "pageref",
+              "label": "sec:physics-spectrum",
+              "number": "2",
+              "page": 7,
+              "title": "Characters and a spin-resolved physical spectrum",
+              "destination": "section.2",
+              "expected_visible_text": "7"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 77,
+              "command": "nameref",
+              "label": "sec:physics-correlators",
+              "number": "3",
+              "page": 13,
+              "title": "Exact correlators and channel data",
+              "destination": "section.3",
+              "expected_visible_text": "Exact correlators and channel data"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 78,
+              "command": "ref",
+              "label": "sec:physics-correlators",
+              "number": "3",
+              "page": 13,
+              "title": "Exact correlators and channel data",
+              "destination": "section.3",
+              "expected_visible_text": "3"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 78,
+              "command": "pageref",
+              "label": "sec:physics-correlators",
+              "number": "3",
+              "page": 13,
+              "title": "Exact correlators and channel data",
+              "destination": "section.3",
+              "expected_visible_text": "13"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 79,
+              "command": "nameref",
+              "label": "sec:physics-couplings",
+              "number": "4",
+              "page": 17,
+              "title": "A complete weight-two chiral three-point dataset",
+              "destination": "section.4",
+              "expected_visible_text": "A complete weight-two chiral three-point dataset"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 80,
+              "command": "ref",
+              "label": "sec:physics-couplings",
+              "number": "4",
+              "page": 17,
+              "title": "A complete weight-two chiral three-point dataset",
+              "destination": "section.4",
+              "expected_visible_text": "4"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 80,
+              "command": "pageref",
+              "label": "sec:physics-couplings",
+              "number": "4",
+              "page": 17,
+              "title": "A complete weight-two chiral three-point dataset",
+              "destination": "section.4",
+              "expected_visible_text": "17"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 81,
+              "command": "nameref",
+              "label": "sec:physics-defects",
+              "number": "5",
+              "page": 20,
+              "title": "Modular data, topological defects, and conformal boundaries",
+              "destination": "section.5",
+              "expected_visible_text": "Modular data, topological defects, and conformal boundaries"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 82,
+              "command": "ref",
+              "label": "sec:physics-defects",
+              "number": "5",
+              "page": 20,
+              "title": "Modular data, topological defects, and conformal boundaries",
+              "destination": "section.5",
+              "expected_visible_text": "5"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 82,
+              "command": "pageref",
+              "label": "sec:physics-defects",
+              "number": "5",
+              "page": 20,
+              "title": "Modular data, topological defects, and conformal boundaries",
+              "destination": "section.5",
+              "expected_visible_text": "20"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 83,
+              "command": "nameref",
+              "label": "sec:physics-H3",
+              "number": "6",
+              "page": 23,
+              "title": "The Haagerup symmetry of the holomorphic extension",
+              "destination": "section.6",
+              "expected_visible_text": "The Haagerup symmetry of the holomorphic extension"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 84,
+              "command": "ref",
+              "label": "sec:physics-H3",
+              "number": "6",
+              "page": 23,
+              "title": "The Haagerup symmetry of the holomorphic extension",
+              "destination": "section.6",
+              "expected_visible_text": "6"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 84,
+              "command": "pageref",
+              "label": "sec:physics-H3",
+              "number": "6",
+              "page": 23,
+              "title": "The Haagerup symmetry of the holomorphic extension",
+              "destination": "section.6",
+              "expected_visible_text": "23"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 85,
+              "command": "nameref",
+              "label": "sec:physics-data-guide",
+              "number": "7",
+              "page": 26,
+              "title": "Perturbations, bootstrap coordinates, and use of the data",
+              "destination": "section.7",
+              "expected_visible_text": "Perturbations, bootstrap coordinates, and use of the data"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 86,
+              "command": "ref",
+              "label": "sec:physics-data-guide",
+              "number": "7",
+              "page": 26,
+              "title": "Perturbations, bootstrap coordinates, and use of the data",
+              "destination": "section.7",
+              "expected_visible_text": "7"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 86,
+              "command": "pageref",
+              "label": "sec:physics-data-guide",
+              "number": "7",
+              "page": 26,
+              "title": "Perturbations, bootstrap coordinates, and use of the data",
+              "destination": "section.7",
+              "expected_visible_text": "26"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 91,
+              "command": "ref",
+              "label": "sec:physics-spectrum",
+              "number": "2",
+              "page": 7,
+              "title": "Characters and a spin-resolved physical spectrum",
+              "destination": "section.2",
+              "expected_visible_text": "2"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 92,
+              "command": "nameref",
+              "label": "sec:physics-spectrum",
+              "number": "2",
+              "page": 7,
+              "title": "Characters and a spin-resolved physical spectrum",
+              "destination": "section.2",
+              "expected_visible_text": "Characters and a spin-resolved physical spectrum"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 115,
+              "command": "ref",
+              "label": "sec:characters",
+              "number": "H",
+              "page": 58,
+              "title": "The complete character vector",
+              "destination": "section.H",
+              "expected_visible_text": "H"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 159,
+              "command": "ref",
+              "label": "prop:physics-modular-tail",
+              "number": "2.1",
+              "page": 11,
+              "title": "A tail bound from modular invariance",
+              "destination": "theorem.2.1",
+              "expected_visible_text": "2.1"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 160,
+              "command": "pageref",
+              "label": "prop:physics-modular-tail",
+              "number": "2.1",
+              "page": 11,
+              "title": "A tail bound from modular invariance",
+              "destination": "theorem.2.1",
+              "expected_visible_text": "11"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 161,
+              "command": "ref",
+              "label": "sec:physics-spectrum",
+              "number": "2",
+              "page": 7,
+              "title": "Characters and a spin-resolved physical spectrum",
+              "destination": "section.2",
+              "expected_visible_text": "2"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 219,
+              "command": "ref",
+              "label": "sec:physics-correlators",
+              "number": "3",
+              "page": 13,
+              "title": "Exact correlators and channel data",
+              "destination": "section.3",
+              "expected_visible_text": "3"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 220,
+              "command": "ref",
+              "label": "sec:physics-couplings",
+              "number": "4",
+              "page": 17,
+              "title": "A complete weight-two chiral three-point dataset",
+              "destination": "section.4",
+              "expected_visible_text": "4"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 283,
+              "command": "ref",
+              "label": "sec:physics-defects",
+              "number": "5",
+              "page": 20,
+              "title": "Modular data, topological defects, and conformal boundaries",
+              "destination": "section.5",
+              "expected_visible_text": "5"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 283,
+              "command": "ref",
+              "label": "sec:physics-H3",
+              "number": "6",
+              "page": 23,
+              "title": "The Haagerup symmetry of the holomorphic extension",
+              "destination": "section.6",
+              "expected_visible_text": "6"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 284,
+              "command": "nameref",
+              "label": "sec:physics-defects",
+              "number": "5",
+              "page": 20,
+              "title": "Modular data, topological defects, and conformal boundaries",
+              "destination": "section.5",
+              "expected_visible_text": "Modular data, topological defects, and conformal boundaries"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 285,
+              "command": "nameref",
+              "label": "sec:physics-H3",
+              "number": "6",
+              "page": 23,
+              "title": "The Haagerup symmetry of the holomorphic extension",
+              "destination": "section.6",
+              "expected_visible_text": "The Haagerup symmetry of the holomorphic extension"
+            },
+            {
+              "source": "c8_physics_20260927/lean_assessment.tex",
+              "line": 352,
+              "command": "ref",
+              "label": "sec:physics-data-guide",
+              "number": "7",
+              "page": 26,
+              "title": "Perturbations, bootstrap coordinates, and use of the data",
+              "destination": "section.7",
+              "expected_visible_text": "7"
+            }
+          ],
+          "expected_destination_occurrences": {
+            "section.A": 7,
+            "section.L": 6,
+            "section.M": 7,
+            "section.O": 6,
+            "section.1": 5,
+            "section.B": 5,
+            "section.C": 5,
+            "section.D": 5,
+            "section.E": 6,
+            "section.F": 6,
+            "section.G": 7,
+            "section.H": 7,
+            "section.I": 8,
+            "section.J": 6,
+            "section.K": 7,
+            "section.N": 5,
+            "theorem.G.13": 2,
+            "theorem.I.1": 2,
+            "theorem.I.3": 2,
+            "theorem.I.4": 1,
+            "theorem.I.2": 2,
+            "theorem.I.5": 2,
+            "theorem.I.6": 1,
+            "theorem.I.7": 1,
+            "theorem.I.8": 1,
+            "section.2": 6,
+            "section.3": 4,
+            "section.4": 4,
+            "section.5": 5,
+            "section.6": 5,
+            "section.7": 4,
+            "theorem.2.1": 2
+          },
+          "actual_destination_annotation_counts": {
+            "section.A": 7,
+            "section.L": 6,
+            "section.M": 7,
+            "section.O": 6,
+            "section.1": 5,
+            "section.B": 5,
+            "section.C": 5,
+            "section.D": 5,
+            "section.E": 6,
+            "section.F": 6,
+            "section.G": 7,
+            "section.H": 7,
+            "section.I": 8,
+            "section.J": 6,
+            "section.K": 7,
+            "section.N": 5,
+            "theorem.G.13": 2,
+            "theorem.I.1": 2,
+            "theorem.I.3": 2,
+            "theorem.I.4": 1,
+            "theorem.I.2": 2,
+            "theorem.I.5": 2,
+            "theorem.I.6": 1,
+            "theorem.I.7": 1,
+            "theorem.I.8": 1,
+            "section.2": 6,
+            "section.3": 4,
+            "section.4": 4,
+            "section.5": 5,
+            "section.6": 6,
+            "section.7": 4,
+            "theorem.2.1": 2
+          },
+          "actual_manuscript_pdf_links": [
+            {
+              "object": [
+                84,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                172.763,
+                665.276,
+                182.774,
+                676.905
+              ]
+            },
+            {
+              "object": [
+                85,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.L",
+              "destination_kind": "named",
+              "rectangle": [
+                186.127,
+                665.276,
+                194.801,
+                676.905
+              ]
+            },
+            {
+              "object": [
+                86,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                490.801,
+                665.276,
+                502.594,
+                676.905
+              ]
+            },
+            {
+              "object": [
+                87,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.O",
+              "destination_kind": "named",
+              "rectangle": [
+                505.947,
+                665.276,
+                516.254,
+                676.905
+              ]
+            },
+            {
+              "object": [
+                111,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.1",
+              "destination_kind": "named",
+              "rectangle": [
+                115.951,
+                354.714,
+                123.398,
+                366.191
+              ]
+            },
+            {
+              "object": [
+                112,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.1",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                337.1,
+                97.943,
+                350.027
+              ]
+            },
+            {
+              "object": [
+                113,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                284.847,
+                137.943,
+                298.445
+              ]
+            },
+            {
+              "object": [
+                114,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                269.354,
+                103.398,
+                282.281
+              ]
+            },
+            {
+              "object": [
+                115,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.B",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                217.101,
+                137.488,
+                230.699
+              ]
+            },
+            {
+              "object": [
+                116,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.B",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                201.608,
+                103.398,
+                214.535
+              ]
+            },
+            {
+              "object": [
+                117,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.C",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                149.355,
+                137.64,
+                162.953
+              ]
+            },
+            {
+              "object": [
+                118,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.C",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                133.862,
+                103.398,
+                146.789
+              ]
+            },
+            {
+              "object": [
+                119,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.D",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                670.907,
+                138.095,
+                684.505
+              ]
+            },
+            {
+              "object": [
+                120,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.D",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                655.414,
+                103.398,
+                668.341
+              ]
+            },
+            {
+              "object": [
+                121,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                603.161,
+                137.186,
+                616.759
+              ]
+            },
+            {
+              "object": [
+                122,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                587.668,
+                103.398,
+                600.595
+              ]
+            },
+            {
+              "object": [
+                123,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.F",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                535.415,
+                136.883,
+                549.013
+              ]
+            },
+            {
+              "object": [
+                124,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.F",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                519.922,
+                103.398,
+                532.849
+              ]
+            },
+            {
+              "object": [
+                125,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                467.669,
+                138.322,
+                481.267
+              ]
+            },
+            {
+              "object": [
+                126,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                452.176,
+                103.398,
+                465.103
+              ]
+            },
+            {
+              "object": [
+                127,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                359.275,
+                137.943,
+                372.873
+              ]
+            },
+            {
+              "object": [
+                128,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                343.783,
+                103.398,
+                356.71
+              ]
+            },
+            {
+              "object": [
+                129,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                250.882,
+                133.701,
+                264.48
+              ]
+            },
+            {
+              "object": [
+                130,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                235.389,
+                103.398,
+                248.316
+              ]
+            },
+            {
+              "object": [
+                131,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.J",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                156.037,
+                135.368,
+                169.636
+              ]
+            },
+            {
+              "object": [
+                132,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.J",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                140.545,
+                103.398,
+                153.472
+              ]
+            },
+            {
+              "object": [
+                133,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                670.907,
+                138.247,
+                684.505
+              ]
+            },
+            {
+              "object": [
+                134,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                655.414,
+                103.398,
+                668.341
+              ]
+            },
+            {
+              "object": [
+                135,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.L",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                589.612,
+                136.58,
+                603.21
+              ]
+            },
+            {
+              "object": [
+                136,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.L",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                574.119,
+                103.398,
+                587.046
+              ]
+            },
+            {
+              "object": [
+                137,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                494.767,
+                139.762,
+                508.365
+              ]
+            },
+            {
+              "object": [
+                138,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                479.275,
+                103.398,
+                492.202
+              ]
+            },
+            {
+              "object": [
+                139,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.N",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                413.472,
+                137.943,
+                427.07
+              ]
+            },
+            {
+              "object": [
+                140,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.N",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                397.979,
+                103.398,
+                410.906
+              ]
+            },
+            {
+              "object": [
+                141,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.O",
+              "destination_kind": "named",
+              "rectangle": [
+                127.769,
+                291.529,
+                138.247,
+                305.128
+              ]
+            },
+            {
+              "object": [
+                142,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.O",
+              "destination_kind": "named",
+              "rectangle": [
+                90.496,
+                276.037,
+                103.398,
+                288.964
+              ]
+            },
+            {
+              "object": [
+                154,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                163.519,
+                85.87,
+                173.53,
+                97.499
+              ]
+            },
+            {
+              "object": [
+                155,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                176.882,
+                85.87,
+                186.151,
+                97.499
+              ]
+            },
+            {
+              "object": [
+                156,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                317.895,
+                85.87,
+                329.688,
+                97.499
+              ]
+            },
+            {
+              "object": [
+                162,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.F",
+              "destination_kind": "named",
+              "rectangle": [
+                154.146,
+                204.603,
+                163.117,
+                216.232
+              ]
+            },
+            {
+              "object": [
+                163,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                139.225,
+                123.308,
+                149.949,
+                134.937
+              ]
+            },
+            {
+              "object": [
+                168,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.G.13",
+              "destination_kind": "named",
+              "rectangle": [
+                322.213,
+                664.67,
+                346.795,
+                677.572
+              ]
+            },
+            {
+              "object": [
+                169,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.G.13",
+              "destination_kind": "named",
+              "rectangle": [
+                365.458,
+                664.67,
+                378.403,
+                677.572
+              ]
+            },
+            {
+              "object": [
+                170,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                156.829,
+                583.678,
+                166.913,
+                595.67
+              ]
+            },
+            {
+              "object": [
+                171,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                186.156,
+                439.329,
+                192.088,
+                450.958
+              ]
+            },
+            {
+              "object": [
+                172,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                196.762,
+                439.329,
+                412.318,
+                450.958
+              ]
+            },
+            {
+              "object": [
+                173,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                494.87,
+                439.329,
+                507.772,
+                450.958
+              ]
+            },
+            {
+              "object": [
+                174,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.1",
+              "destination_kind": "named",
+              "rectangle": [
+                379.777,
+                355.712,
+                394.442,
+                368.614
+              ]
+            },
+            {
+              "object": [
+                175,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.1",
+              "destination_kind": "named",
+              "rectangle": [
+                416.599,
+                355.712,
+                429.719,
+                368.614
+              ]
+            },
+            {
+              "object": [
+                176,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.3",
+              "destination_kind": "named",
+              "rectangle": [
+                128.308,
+                69.464,
+                142.476,
+                82.365
+              ]
+            },
+            {
+              "object": [
+                177,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.3",
+              "destination_kind": "named",
+              "rectangle": [
+                160.169,
+                69.464,
+                172.852,
+                82.365
+              ]
+            },
+            {
+              "object": [
+                178,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.4",
+              "destination_kind": "named",
+              "rectangle": [
+                426.795,
+                69.464,
+                440.964,
+                82.365
+              ]
+            },
+            {
+              "object": [
+                179,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.2",
+              "destination_kind": "named",
+              "rectangle": [
+                299.141,
+                705.318,
+                313.806,
+                718.219
+              ]
+            },
+            {
+              "object": [
+                180,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.2",
+              "destination_kind": "named",
+              "rectangle": [
+                333.46,
+                705.318,
+                346.58,
+                718.219
+              ]
+            },
+            {
+              "object": [
+                189,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.5",
+              "destination_kind": "named",
+              "rectangle": [
+                93.736,
+                215.953,
+                108.364,
+                228.854
+              ]
+            },
+            {
+              "object": [
+                190,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.5",
+              "destination_kind": "named",
+              "rectangle": [
+                127.181,
+                215.953,
+                140.268,
+                228.854
+              ]
+            },
+            {
+              "object": [
+                191,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.6",
+              "destination_kind": "named",
+              "rectangle": [
+                379.747,
+                215.953,
+                394.375,
+                228.854
+              ]
+            },
+            {
+              "object": [
+                192,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.7",
+              "destination_kind": "named",
+              "rectangle": [
+                417.506,
+                215.953,
+                432.134,
+                228.854
+              ]
+            },
+            {
+              "object": [
+                193,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.I.8",
+              "destination_kind": "named",
+              "rectangle": [
+                129.008,
+                203.01,
+                143.661,
+                214.638
+              ]
+            },
+            {
+              "object": [
+                205,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                450.912,
+                263.684,
+                461.474,
+                275.676
+              ]
+            },
+            {
+              "object": [
+                206,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.J",
+              "destination_kind": "named",
+              "rectangle": [
+                466.154,
+                263.684,
+                473.758,
+                275.676
+              ]
+            },
+            {
+              "object": [
+                207,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                499.671,
+                263.684,
+                510.157,
+                275.676
+              ]
+            },
+            {
+              "object": [
+                208,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                282.237,
+                155.593,
+                292.859,
+                167.222
+              ]
+            },
+            {
+              "object": [
+                230,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.1",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                582.686,
+                312.562,
+                598.228
+              ]
+            },
+            {
+              "object": [
+                231,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.1",
+              "destination_kind": "named",
+              "rectangle": [
+                458.098,
+                582.686,
+                465.545,
+                598.228
+              ]
+            },
+            {
+              "object": [
+                232,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.1",
+              "destination_kind": "named",
+              "rectangle": [
+                482.946,
+                582.686,
+                490.393,
+                598.228
+              ]
+            },
+            {
+              "object": [
+                233,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                569.137,
+                286.957,
+                584.678
+              ]
+            },
+            {
+              "object": [
+                234,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                569.137,
+                480.09,
+                584.678
+              ]
+            },
+            {
+              "object": [
+                235,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.A",
+              "destination_kind": "named",
+              "rectangle": [
+                497.491,
+                569.137,
+                510.393,
+                584.678
+              ]
+            },
+            {
+              "object": [
+                236,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.B",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                555.588,
+                332.017,
+                571.129
+              ]
+            },
+            {
+              "object": [
+                237,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.B",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                555.588,
+                479.635,
+                571.129
+              ]
+            },
+            {
+              "object": [
+                238,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.B",
+              "destination_kind": "named",
+              "rectangle": [
+                497.037,
+                555.588,
+                509.938,
+                571.129
+              ]
+            },
+            {
+              "object": [
+                239,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.C",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                542.038,
+                367.275,
+                557.58
+              ]
+            },
+            {
+              "object": [
+                240,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.C",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                542.038,
+                479.787,
+                557.58
+              ]
+            },
+            {
+              "object": [
+                241,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.C",
+              "destination_kind": "named",
+              "rectangle": [
+                497.188,
+                542.038,
+                510.09,
+                557.58
+              ]
+            },
+            {
+              "object": [
+                242,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.D",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                528.489,
+                272.941,
+                544.031
+              ]
+            },
+            {
+              "object": [
+                243,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.D",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                528.489,
+                480.242,
+                544.031
+              ]
+            },
+            {
+              "object": [
+                244,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.D",
+              "destination_kind": "named",
+              "rectangle": [
+                497.643,
+                528.489,
+                510.545,
+                544.031
+              ]
+            },
+            {
+              "object": [
+                245,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                514.94,
+                301.229,
+                530.482
+              ]
+            },
+            {
+              "object": [
+                246,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                514.94,
+                479.333,
+                530.482
+              ]
+            },
+            {
+              "object": [
+                247,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.E",
+              "destination_kind": "named",
+              "rectangle": [
+                496.734,
+                514.94,
+                509.635,
+                530.482
+              ]
+            },
+            {
+              "object": [
+                248,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.F",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                501.391,
+                382.653,
+                516.932
+              ]
+            },
+            {
+              "object": [
+                249,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.F",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                501.391,
+                479.03,
+                516.932
+              ]
+            },
+            {
+              "object": [
+                250,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.F",
+              "destination_kind": "named",
+              "rectangle": [
+                496.431,
+                501.391,
+                509.333,
+                516.932
+              ]
+            },
+            {
+              "object": [
+                251,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                487.842,
+                325.955,
+                503.383
+              ]
+            },
+            {
+              "object": [
+                252,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                487.842,
+                480.469,
+                503.383
+              ]
+            },
+            {
+              "object": [
+                253,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.G",
+              "destination_kind": "named",
+              "rectangle": [
+                497.87,
+                487.842,
+                510.772,
+                503.383
+              ]
+            },
+            {
+              "object": [
+                254,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                474.292,
+                279.078,
+                489.834
+              ]
+            },
+            {
+              "object": [
+                255,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                474.292,
+                480.09,
+                489.834
+              ]
+            },
+            {
+              "object": [
+                256,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                497.491,
+                474.292,
+                510.393,
+                489.834
+              ]
+            },
+            {
+              "object": [
+                257,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                460.743,
+                349.532,
+                476.285
+              ]
+            },
+            {
+              "object": [
+                258,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                460.743,
+                475.848,
+                476.285
+              ]
+            },
+            {
+              "object": [
+                259,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.I",
+              "destination_kind": "named",
+              "rectangle": [
+                493.249,
+                460.743,
+                506.151,
+                476.285
+              ]
+            },
+            {
+              "object": [
+                260,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.J",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                447.194,
+                295.472,
+                462.736
+              ]
+            },
+            {
+              "object": [
+                261,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.J",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                447.194,
+                477.515,
+                462.736
+              ]
+            },
+            {
+              "object": [
+                262,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.J",
+              "destination_kind": "named",
+              "rectangle": [
+                494.916,
+                447.194,
+                507.817,
+                462.736
+              ]
+            },
+            {
+              "object": [
+                263,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                433.645,
+                362.985,
+                449.187
+              ]
+            },
+            {
+              "object": [
+                264,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                433.645,
+                480.393,
+                449.187
+              ]
+            },
+            {
+              "object": [
+                265,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.K",
+              "destination_kind": "named",
+              "rectangle": [
+                497.795,
+                433.645,
+                510.696,
+                449.187
+              ]
+            },
+            {
+              "object": [
+                266,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.L",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                420.096,
+                342.683,
+                435.637
+              ]
+            },
+            {
+              "object": [
+                267,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.L",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                420.096,
+                478.727,
+                435.637
+              ]
+            },
+            {
+              "object": [
+                268,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.L",
+              "destination_kind": "named",
+              "rectangle": [
+                496.128,
+                420.096,
+                509.029,
+                435.637
+              ]
+            },
+            {
+              "object": [
+                269,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                406.547,
+                310.623,
+                422.088
+              ]
+            },
+            {
+              "object": [
+                270,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                406.547,
+                481.909,
+                422.088
+              ]
+            },
+            {
+              "object": [
+                271,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.M",
+              "destination_kind": "named",
+              "rectangle": [
+                499.31,
+                406.547,
+                512.212,
+                422.088
+              ]
+            },
+            {
+              "object": [
+                272,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.N",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                392.997,
+                237.349,
+                408.539
+              ]
+            },
+            {
+              "object": [
+                273,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.N",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                392.997,
+                480.09,
+                408.539
+              ]
+            },
+            {
+              "object": [
+                274,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.N",
+              "destination_kind": "named",
+              "rectangle": [
+                497.491,
+                392.997,
+                510.393,
+                408.539
+              ]
+            },
+            {
+              "object": [
+                275,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.O",
+              "destination_kind": "named",
+              "rectangle": [
+                131.842,
+                379.448,
+                277.561,
+                394.99
+              ]
+            },
+            {
+              "object": [
+                276,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.O",
+              "destination_kind": "named",
+              "rectangle": [
+                469.916,
+                379.448,
+                480.393,
+                394.99
+              ]
+            },
+            {
+              "object": [
+                277,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.O",
+              "destination_kind": "named",
+              "rectangle": [
+                497.795,
+                379.448,
+                510.696,
+                394.99
+              ]
+            },
+            {
+              "object": [
+                278,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.2",
+              "destination_kind": "named",
+              "rectangle": [
+                86.085,
+                287.081,
+                324.562,
+                302.623
+              ]
+            },
+            {
+              "object": [
+                279,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.2",
+              "destination_kind": "named",
+              "rectangle": [
+                463.821,
+                287.081,
+                471.268,
+                302.623
+              ]
+            },
+            {
+              "object": [
+                280,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.2",
+              "destination_kind": "named",
+              "rectangle": [
+                488.669,
+                287.081,
+                496.116,
+                302.623
+              ]
+            },
+            {
+              "object": [
+                281,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.3",
+              "destination_kind": "named",
+              "rectangle": [
+                86.085,
+                273.532,
+                255.654,
+                289.073
+              ]
+            },
+            {
+              "object": [
+                282,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.3",
+              "destination_kind": "named",
+              "rectangle": [
+                463.821,
+                273.532,
+                471.268,
+                289.073
+              ]
+            },
+            {
+              "object": [
+                283,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.3",
+              "destination_kind": "named",
+              "rectangle": [
+                488.669,
+                273.532,
+                501.571,
+                289.073
+              ]
+            },
+            {
+              "object": [
+                284,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.4",
+              "destination_kind": "named",
+              "rectangle": [
+                86.085,
+                259.983,
+                322.138,
+                275.524
+              ]
+            },
+            {
+              "object": [
+                285,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.4",
+              "destination_kind": "named",
+              "rectangle": [
+                463.821,
+                259.983,
+                471.268,
+                275.524
+              ]
+            },
+            {
+              "object": [
+                286,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.4",
+              "destination_kind": "named",
+              "rectangle": [
+                488.669,
+                259.983,
+                501.571,
+                275.524
+              ]
+            },
+            {
+              "object": [
+                287,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.5",
+              "destination_kind": "named",
+              "rectangle": [
+                86.085,
+                246.433,
+                378.592,
+                261.975
+              ]
+            },
+            {
+              "object": [
+                288,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.5",
+              "destination_kind": "named",
+              "rectangle": [
+                463.821,
+                246.433,
+                471.268,
+                261.975
+              ]
+            },
+            {
+              "object": [
+                289,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.5",
+              "destination_kind": "named",
+              "rectangle": [
+                488.669,
+                246.433,
+                501.571,
+                261.975
+              ]
+            },
+            {
+              "object": [
+                290,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.6",
+              "destination_kind": "named",
+              "rectangle": [
+                86.085,
+                232.884,
+                349.198,
+                248.426
+              ]
+            },
+            {
+              "object": [
+                291,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.6",
+              "destination_kind": "named",
+              "rectangle": [
+                463.821,
+                232.884,
+                471.268,
+                248.426
+              ]
+            },
+            {
+              "object": [
+                292,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.6",
+              "destination_kind": "named",
+              "rectangle": [
+                488.669,
+                232.884,
+                501.571,
+                248.426
+              ]
+            },
+            {
+              "object": [
+                293,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.7",
+              "destination_kind": "named",
+              "rectangle": [
+                86.085,
+                219.335,
+                363.441,
+                234.877
+              ]
+            },
+            {
+              "object": [
+                294,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.7",
+              "destination_kind": "named",
+              "rectangle": [
+                463.821,
+                219.335,
+                471.268,
+                234.877
+              ]
+            },
+            {
+              "object": [
+                295,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.7",
+              "destination_kind": "named",
+              "rectangle": [
+                488.669,
+                219.335,
+                501.571,
+                234.877
+              ]
+            },
+            {
+              "object": [
+                296,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.2",
+              "destination_kind": "named",
+              "rectangle": [
+                109.88,
+                164.357,
+                117.436,
+                176.35
+              ]
+            },
+            {
+              "object": [
+                297,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.2",
+              "destination_kind": "named",
+              "rectangle": [
+                122.175,
+                164.357,
+                361.584,
+                176.35
+              ]
+            },
+            {
+              "object": [
+                298,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.H",
+              "destination_kind": "named",
+              "rectangle": [
+                271.656,
+                601.217,
+                281.831,
+                614.79
+              ]
+            },
+            {
+              "object": [
+                306,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.2.1",
+              "destination_kind": "named",
+              "rectangle": [
+                129.995,
+                113.957,
+                145.997,
+                126.858
+              ]
+            },
+            {
+              "object": [
+                307,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "theorem.2.1",
+              "destination_kind": "named",
+              "rectangle": [
+                164.657,
+                113.957,
+                177.614,
+                126.858
+              ]
+            },
+            {
+              "object": [
+                308,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.2",
+              "destination_kind": "named",
+              "rectangle": [
+                425.616,
+                113.957,
+                433.09,
+                126.858
+              ]
+            },
+            {
+              "object": [
+                316,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.3",
+              "destination_kind": "named",
+              "rectangle": [
+                311.993,
+                235.988,
+                319.549,
+                247.98
+              ]
+            },
+            {
+              "object": [
+                317,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.4",
+              "destination_kind": "named",
+              "rectangle": [
+                343.286,
+                235.988,
+                350.842,
+                247.98
+              ]
+            },
+            {
+              "object": [
+                323,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.5",
+              "destination_kind": "named",
+              "rectangle": [
+                114.03,
+                259.006,
+                121.554,
+                270.634
+              ]
+            },
+            {
+              "object": [
+                324,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.6",
+              "destination_kind": "named",
+              "rectangle": [
+                144.651,
+                259.006,
+                152.174,
+                270.634
+              ]
+            },
+            {
+              "object": [
+                325,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.5",
+              "destination_kind": "named",
+              "rectangle": [
+                156.889,
+                259.006,
+                447.387,
+                270.634
+              ]
+            },
+            {
+              "object": [
+                326,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.6",
+              "destination_kind": "named",
+              "rectangle": [
+                470.484,
+                259.006,
+                540.996,
+                270.634
+              ]
+            },
+            {
+              "object": [
+                331,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.6",
+              "destination_kind": "named",
+              "rectangle": [
+                71.004,
+                245.153,
+                268.361,
+                257.146
+              ]
+            },
+            {
+              "object": [
+                333,
+                0
+              ],
+              "action": "GoToR",
+              "file": "hi_cft_c8_proof.pdf",
+              "destination": "section.7",
+              "destination_kind": "named",
+              "rectangle": [
+                257.224,
+                128.112,
+                264.78,
+                139.741
+              ]
+            }
+          ],
+          "pdf_parser": {
+            "ordinary_objects": 60,
+            "object_streams": 4,
+            "objects_after_expansion": 441,
+            "inflated_bytes": 58856
+          },
+          "all_referenced_labels_unique": true,
+          "all_aux_pages_agree_with_actual_pdf_destinations": true,
+          "actual_named_destination_annotation_coverage": true,
+          "visible_text_crosscheck": [
+            {
+              "command": "nameref",
+              "text": "A complete weight-two chiral three-point dataset",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Branching and the boundary fusion ring",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Certificate ledger and reproducibility",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Characters and a spin-resolved physical spectrum",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Compilation and review scope",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Exact correlators and channel data",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Finite closure and the all-weight criterion",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "From the finite gates to properness",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "From vacuum unitarity to complete unitarity",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Full net theory and a chosen E8 VOA extension",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Gate 4: exact seeds, raising, and singlet recovery",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Gate 5 from Jacobi identities",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Introduction and statement of results",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Limited formalization",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Modular data, topological defects, and conformal boundaries",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Perturbations, bootstrap coordinates, and use of the data",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Regularity from a positive conformal-vector identity",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Relation to the proposed Haagerup theories",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "The Haagerup symmetry of the holomorphic extension",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "The complete character vector",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "The explicit lattice construction",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "nameref",
+              "text": "Unitary categorical identifications",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "11",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "13",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "17",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "20",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "23",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "26",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "28",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "31",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "34",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "36",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "38",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "39",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "4",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "44",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "57",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "58",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "59",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "60",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "62",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "64",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "67",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "69",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "7",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "71",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "74",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "pageref",
+              "text": "75",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "1",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "2",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "2.1",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "3",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "4",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "5",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "6",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "7",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "A",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "B",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "C",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "D",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "E",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "F",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "G",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "G.13",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "H",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I.1",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I.2",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I.3",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I.4",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I.5",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I.6",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I.7",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "I.8",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "J",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "K",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "L",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "M",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "N",
+              "present_in_linked_text_pool": true
+            },
+            {
+              "command": "ref",
+              "text": "O",
+              "present_in_linked_text_pool": true
+            }
+          ],
+          "visible_text_scope": "Global linked-text pool only; Poppler discards GoToR destination fragments and may merge adjacent anchor text. Exact targets were checked independently from actual PDF annotation dictionaries.",
+          "literal_reference_review": []
+        }
+      },
+      "main": {
+        "pdf": "hi_cft_c8_proof.pdf",
+        "aux": "hi_cft_c8_proof.aux",
+        "pages": 78,
+        "named_destination_count": 402,
+        "aux_label_count": 184
+      },
+      "scope": "Literal TeX reference discovery, AUX uniqueness, actual main PDF named destinations/pages, and actual companion GoToR annotation coverage. Visible reference text is checked globally in each document linked-text pool, not spatially or occurrence by occurrence. No mathematical theorem is checked.",
+      "source_sha256": {
+        "hi_cft_c8_proof.aux": "0818c8caa1f839a3619a0f905bc6ba1b78421a038a5263f40fae4fadcdda07b9",
+        "hi_cft_c8_proof.pdf": "38d3bc1c04f3805ca9d6a08fb0de342793058c54a93947a68340b324fd09dd64",
+        "hi_cft_c8_verification_guide.tex": "057592b29fcf11c0601c7907dce409189d30d56b792b30804384e01e9efdebc2",
+        "c8_physics_20260927/manuscript_refs.tex": "4b40cf19d01695f531b79b4c5cb7925e1cfaf4504481cd065e7eafcdc4261654",
+        "c8_physics_20260927/verification_finite_inputs.tex": "045fb2b3fc8f7fe4f02d4748df5a643052f33fee31ed2ff3f4f812357be4b4d0",
+        "c8_reviewability_20260927/structural_inputs.tex": "094dd20a4baafcb2444b913da1bbc54a82b6ec2091724d032f4cb622ba89afe6",
+        "hi_cft_c8_verification_guide.pdf": "0159bd0125900217826947fc4b43ebbf051a6cd9b3d5140a887a8c7a4a58bca2",
+        "hi_cft_c8_lean_assessment.tex": "067c45b54317ed5ba3d7b52b2b6084f2c3f0f20bed44cd708e969fa535cd9368",
+        "c8_physics_20260927/lean_baseline_assessment.tex": "4768c77a4270a7153ad679520153e4cc654d73703c6b86009e15b3126d4c285d",
+        "c8_physics_20260927/lean_assessment.tex": "3a6d53ac01ab0ef694fa4c4f10e94e4d4fe790013494357a0821678d6e33a55b",
+        "hi_cft_c8_lean_assessment.pdf": "5028134f9448c893e7802c43479423bcfe70b490f64e9ee44d44dae0fbb963dd"
+      },
+      "checker_sha256": "696c5dc5c04027e7d109dcd8f3d10f424dc3064e8f7cf0466f6c7671306d5357",
+      "checked_at_UTC": "2026-09-27T17:23:51.348683+00:00"
+    },
+    "two_Lean_thermal_lemmas": {
+      "passed": true,
+      "source_sha256": "eaf1652f1927a2fb51d39ecb6d2c34ecb225c7a01cf04605fe0c3157f6a1b81f",
+      "scope": "Algebraic implications with explicit analytic premises."
+    }
+  },
+  "scope": "Document/dependency/source audit and successful saved arithmetic replay; not a formal proof of the full manuscript."
+}

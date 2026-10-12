@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "u_conjugate_pair_indices": [
+    68,
+    95
+  ],
+  "u_pair_primary_projection_sum": [
+    "11/3",
+    "0",
+    "0",
+    "0"
+  ],
+  "u_pair_total_stress_projection": "1",
+  "u_neutral_global_weight2": "14/3",
+  "three_stress_primary_projection": [
+    "41/140",
+    "0",
+    "0",
+    "0"
+  ],
+  "four_stress_projection": "181/140",
+  "u_pair_nonzero_targets": [
+    {
+      "k": 2,
+      "name": "v0_0_2",
+      "abs_C_squared": [
+        "65/133",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "k": 9,
+      "name": "v1_0_4",
+      "abs_C_squared": [
+        "273/880",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "k": 18,
+      "name": "v2_0_4",
+      "abs_C_squared": [
+        "13/336",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "k": 29,
+      "name": "v3_0_6",
+      "abs_C_squared": [
+        "13/154",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "k": 98,
+      "name": "v8_0_2",
+      "abs_C_squared": [
+        "26/19",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "k": 105,
+      "name": "v9_1_1",
+      "abs_C_squared": [
+        "13/12",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "k": 110,
+      "name": "v10_0_0",
+      "abs_C_squared": [
+        "13/316",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "k": 111,
+      "name": "v11_0_0",
+      "abs_C_squared": [
+        "1587/7031",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "k": 112,
+      "name": "v12_0_0",
+      "abs_C_squared": [
+        "81/3115",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "complete_weight_two_primary_count": 113,
+  "spectrum_defect_labels_weights_tops_agree": true,
+  "scope": "Independent exact arithmetic linking the113-primary tensor to the separate Gaussian four-point derivation, stress Ward identities, character count and defect sector conventions.",
+  "source_sha256": {
+    "check_physics_crosslinks.py": "74d18ff4f891daa7af6ead335c1945a8a490440c3c0882b64e9725b79e3cc5a0",
+    "full_weight_two/complete_primary_couplings.tsv": "b4d0c1723f8545570cecaf976e6027ac6fea13d9cab7771e0cfaa129a6ff4273",
+    "full_weight_two/low_weight_basis.json": "cc17704dfd5aeb7bed5cc37cc5eb315f84dd564497f539072e18b3a50a59c1ef",
+    "correlators.json": "06f792bbf410488efb919b4e81c52df044ee99eb967c8ed54509fe139d457404",
+    "data/characters.json": "b03b49bb3c05a5db467a15662b1202405b7cbb704afd1dd6bd6bdc5d0fc7fa80",
+    "defect_data.json": "e4f64d3e051d07d060afa6725cbae304e3c513e3cf972176364e9f5b9b80dc3f"
+  }
+}

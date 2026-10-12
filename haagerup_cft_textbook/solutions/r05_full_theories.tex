@@ -1,0 +1,157 @@
+\section{Solutions for Chapter~\ref{ch:full_theories}}
+
+\paragraph{Exercise~\ref{ex:full-relevant}.}
+\phantomsection
+\label{sol:ex:full-relevant}
+Squaring the seven top dimensions gives
+\[
+ 3^2+5^2+7^2+13^2+14^2+27^2+42^2
+ =9+25+49+169+196+729+1764=2941.
+\]
+These entries follow the increasing dimensions in the chapter's
+table. A scalar in a diagonal sector has equal grades on the two
+sides, so any positive grade adds at least two to its dimension.
+This explains why the relevant scalar list uses only top states.
+
+For the spinning levels, each positive-weight top vector supplies
+one grade-one descendant. It cannot vanish in a unitary module,
+because $\|L_{-1}|h\rangle\|^2=2h\langle h|h\rangle>0$.
+Thus $v_i(1)=a_i(1)-a_i(0)$. In the $d_4$ sector,
+\[
+ (h,\bar h)=\left(\frac5{13}+1,\frac5{13}\right),
+ \qquad \Delta=\frac{23}{13},\quad s_{\rm spin}=1,
+\]
+and the multiplicity is $5(229-5)=1120$.
+Interchanging the two grades gives another $1120$ states of
+spin $-1$. Similarly, the $d_1$ top has weight $6/13$, giving
+$\Delta=2(6/13)+1=25/13$ and $7(292-7)=1995$ primary
+components for each spin sign.
+
+
+
+\paragraph{Exercise~\ref{ex:full-E8states}.}
+\phantomsection
+\label{sol:ex:full-E8states}
+Integer grading leaves exactly three pairs of weights at total
+dimension two: $(1,1)$, $(2,0)$, and $(0,2)$.
+At $(1,1)$ there are $248^2=61504$ scalar primaries.
+The chiral character has $4124$ states at weight two.
+Of these, $248$ are the independent derivatives $L_{-1}J^A$
+of the currents, and one is $L_{-2}\one$, the stress state.
+There is no $L_{-1}\one$ descendant. Subtracting leaves
+$4124-248-1=3875$ chiral primaries. Each of the pairs
+$(2,0)$ and $(0,2)$ contains one copy of this decomposition.
+Thus the total is
+\[
+ 61504+2(3875)+2(248)+2=69752.
+\]
+The last $498$ states are not Virasoro primaries.
+
+
+
+\paragraph{Exercise~\ref{ex:full-tail}.}
+\phantomsection
+\label{sol:ex:full-tail}
+For each omitted state, factor
+$E^ke^{-bE}=e^{-b_0E}[E^ke^{-(b-b_0)E}]$
+and bound the bracket by its supremum for $E\ge E_D$.
+Positivity permits summation. With $a=b-b_0>0$, the
+suprema are
+\[
+ \sup_{E\ge E_D}Ee^{-aE}=
+ \begin{cases}E_De^{-aE_D},&aE_D\ge1,\\
+ (ae)^{-1},&aE_D<1,\end{cases}
+\]
+and
+\[
+ \sup_{E\ge E_D}E^2e^{-aE}=
+ \begin{cases}E_D^2e^{-aE_D},&aE_D\ge2,\\
+ 4/(a^2e^2),&aE_D<2.\end{cases}
+\]
+Heat capacity uses the variance
+$\langle E^2\rangle-\langle E\rangle^2$, so one needs
+control of the zeroth, first, and second weighted sums,
+including their common denominator. A small unweighted
+tail can still carry a substantial energy moment.
+
+
+
+\paragraph{Exercise~\ref{ex:full-onevac}.}
+\phantomsection
+\label{sol:ex:full-onevac}
+There are six dimension-zero states, which describes a
+multiple-vacuum or disconnected situation instead of the
+specified connected theory with a unique vacuum.
+Division by six can destroy integral multiplicities and
+does not construct identity fields, OPEs, or sewing maps.
+A numerical rescaling of a partition function cannot repair
+missing local-theory data.
+
+
+
+\paragraph{Exercise~\ref{ex:full-symmetry}.}
+\phantomsection
+\label{sol:ex:full-symmetry}
+The $36=6^2$ count is the diagonal theory's scalar
+dimension-two subspace invariant under all its Verlinde lines.
+The $1488=6\cdot248$ count is invariant under the selected
+first-factor $\mathcal H_3$ action in the extended full theory.
+The $61504=248^2$ count is the entire scalar dimension-two
+space of that extended theory, with no symmetry restriction.
+Different ambient Hilbert spaces and line actions are being used.
+
+The invariant spaces themselves can also be checked.
+In the diagonal theory, modular orthogonality makes the projector
+in Chapter~\ref{ch:defects} select precisely
+$U\otimes\overline U$. In the extension, use the line matrices
+on $H'=U\oplus b\oplus(\C^2\otimes a)$.
+The invariance conditions are
+$\widehat\alpha\psi=\psi$ and $\widehat\rho\psi=d\psi$.
+The $a$ multiplicity block has $\alpha$ eigenvalues
+$\omega,\omega^2$, so it contributes no invariant vector.
+The $b$ block survives $\alpha$ but has $\rho$ eigenvalue
+$-d^{-1}\ne d$, so it also contributes none.
+The entire $U$ block survives. Since the chosen first factor
+does not act on the right movers, the full invariant space is
+$U\otimes\overline{H'}$. Its scalar weight pair $(1,1)$
+has $6\cdot248$ components. Imposing the independent right
+action repeats the same argument and reduces this to $6^2$.
+
+
+
+\paragraph{Exercise~\ref{ex:full-boost}.}
+\phantomsection
+\label{sol:ex:full-boost}
+The two block products are
+\[
+ X^{\mathsf t}\eta=
+ \begin{pmatrix}0&-\varepsilon\\
+ \varepsilon^{\mathsf t}&0\end{pmatrix},\qquad
+ \eta X=
+ \begin{pmatrix}0&\varepsilon\\
+ -\varepsilon^{\mathsf t}&0\end{pmatrix}.
+\]
+They sum to zero. Thus $e^{tX}$ preserves the quadratic
+form $p^{\mathsf t}\eta p$, and its infinitesimal action is
+the stated charge boost: differentiate $p(t)=e^{tX}p(0)$
+at $t=0$ and read its two blocks. In particular,
+\[
+ \delta(p_L^2-p_R^2)
+ =2p_L^{\mathsf t}\varepsilon p_R
+  -2p_R^{\mathsf t}\varepsilon^{\mathsf t}p_L=0,
+ \qquad
+ \delta\Delta=2p_L^{\mathsf t}\varepsilon p_R.
+\]
+For $r=1$ and $\varepsilon=-1$,
+$X^2=I$ and $e^{tX}=I\cosh t+X\sinh t$.
+Starting at $(p_L,p_R)=(\sqrt2,0)$ yields
+$(\sqrt2\cosh t,-\sqrt2\sinh t)$.
+The spin remains $(p_L^2-p_R^2)/2=1$, although
+$\bar h=\sinh^2t>0$ for $t\ne0$.
+This is a statement about the charge contribution, with oscillator
+and neutral labels held fixed. Establishing a local conformal
+family uses the abelian current-current theorem in the chapter;
+the matrix identity alone would not construct one or transport
+the Haagerup defect junctions.
+
+

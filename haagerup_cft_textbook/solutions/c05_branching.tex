@@ -1,0 +1,133 @@
+\section{Solutions for Chapter~\ref{ch:branching}}
+
+\paragraph{Exercise~\ref{ex:c-branch-1}: the $x_4$ top.}
+\phantomsection
+\label{sol:ex:c-branch-1}
+At $m=6$, the lattice--Potts contribution is $36/156=3/13$.
+The paired parafermion charge is $k=-5\cdot6=-4$ modulo thirteen,
+and its energy is
+$4\cdot5/15-16/13=4/3-16/13=(52-48)/39=4/39$. The sum is
+$9/39+4/39=1/3$. The opposite charge supplies the conjugate
+minimizer. Since these are distinct lattice charge sectors and each
+has one top state here, their contributions add to a two-dimensional
+top. They are not two copies produced by left/right bulk pairing.
+
+
+
+\paragraph{Exercise~\ref{ex:c-branch-2}: checking the top certificate.}
+\phantomsection
+\label{sol:ex:c-branch-2}
+The coefficient $4680(17/10)$ equals $7956$. For the requested
+three variables the left-side coefficients are
+\[
+ x_0:7956,\qquad
+ x_5:14(7956)-148560=-37176,\qquad
+ y_4:14(7956)-81480=29904.
+\]
+The right side gives respectively $7956$,
+$-8460-28716=-37176$, and $28716+1188=29904$.
+In particular the negative $x_5$ coefficient is absorbed by
+the actual representation constraints
+$y_2-x_5\geq0$ and $y_4-x_5-x_6\geq0$.
+
+Ignoring those constraints and taking a weighted average of
+individual row ratios gives only the bound by their maximum.
+The $x_5$ row alone has ratio $619/273>2$. Such a bound could
+not exclude an additional integer-graded module beginning at
+weight two. The current character inequalities force the high
+Cartan charges of that row to come with lower-charge companions;
+their combined contribution yields the stronger bound $17/10$.
+The individual ratio is bookkeeping, not a separate ambient
+energy eigenvalue.
+
+
+
+\paragraph{Exercise~\ref{ex:c-branch-3}: multiplicities are squared.}
+\phantomsection
+\label{sol:ex:c-branch-3}
+Schur's lemma gives $\Hom(X_i,X_j)=0$ for $i\ne j$ and
+$\End(X_i)=\C$. Hence the endomorphism algebra is
+$\bigoplus_iM_{m_i}(\C)$ and has dimension $\sum_i m_i^2$.
+The branching $1+X+Y+Y^*$ therefore gives endomorphism dimension
+$1+1+1+1=4$ if the four simples differ, and dimension
+$1+1+2^2=6$ when it becomes $1+X+2Y$.
+The boundary-rank formula established in the chapter equates these
+dimensions with the two possible boundary ranks. This latter
+identification is an extension-theory result, not part of Schur's
+lemma for an arbitrary semisimple object.
+
+
+
+\paragraph{Exercise~\ref{ex:c-branch-4}: the complex fusion algebra.}
+\phantomsection
+\label{sol:ex:c-branch-4}
+In a one-dimensional representation, write the images as scalars
+$a,r$. The quadratic relation rules out $r=0$, since that would
+give $0=1$. The cross relation now gives $ra=a^2r$, hence
+$a=a^2$; together with $a^3=1$, this forces $a=1$.
+The remaining quadratic is $r^2-3mr-1=0$, whose roots are
+$d_m$ and $-d_m^{-1}$. For the two-dimensional representation take
+\[
+ \alpha=\begin{pmatrix}\zeta_3&0\\0&\zeta_3^2\end{pmatrix},
+ \qquad\rho=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+The cross relation is immediate, and
+$(1+\alpha+\alpha^2)\rho=0$, so the quadratic relation reduces to
+$\rho^2=1$. Also $\alpha^3=1$ entry by entry. The two distinct
+eigenlines of $\alpha$ are exchanged by $\rho$, so neither is a
+common invariant line; the representation is irreducible.
+These inequivalent irreducibles have squared dimensions
+$1+1+4=6$, exhausting the six-dimensional semisimple complex fusion
+algebra.
+
+
+
+\paragraph{Exercise~\ref{ex:c-branch-5}: the arithmetic exclusion.}
+\phantomsection
+\label{sol:ex:c-branch-5}
+Expanding the difference gives
+\begin{align*}
+ 36m^2(9m^2+4)-13(4m^2+2)^2
+ &=116m^4-64m^2-52\\
+ &=4(m^2-1)(29m^2+13).
+\end{align*}
+For $m>1$ it is strictly positive. Both sides of the preceding
+root-sum inequality are positive, so squaring would give the
+opposite weak inequality
+$13(4m^2+2)^2\geq36m^2(9m^2+4)$; this is the contradiction outside
+the exceptional squareclass.
+
+For $m=2$, $\sqrt{9m^2+4}=2\sqrt{10}$, and the second moment is
+\[
+ \frac{-4+(2\varepsilon-2)2\sqrt{10}}2
+ =\begin{cases}
+ -2,&\varepsilon=1,\\
+ -2-4\sqrt{10},&\varepsilon=-1.
+ \end{cases}
+\]
+The first sum is $-2-2\sqrt{10}$, expressed with $4m^2+2=18$
+roots. The conductor-forty bound $a+8b$ is exactly
+$2+8(2)=18$, so its equality condition requires the squared-root
+sum to be $a=2$. The second-moment formulas do lie in
+$\Q(\sqrt{10})$, as required for that equality condition.
+Neither permitted indicator sign gives the required value.
+Thus the exceptional case does not survive.
+
+
+
+\paragraph{Exercise~\ref{ex:c-branch-6}: center global dimension.}
+\phantomsection
+\label{sol:ex:c-branch-6}
+The sum is
+\[
+ 1+d^4+4(1+d^2)^2+6(3d)^2.
+\]
+Squaring $d^2-1=3d$ gives $d^4-2d^2+1=9d^2$, hence
+$d^4-11d^2+1=0$. Subtracting
+the displayed sum from $9(1+d^2)^2$ gives
+$4(d^4-11d^2+1)=0$. Thus the center global dimension is the square
+of the boundary global dimension $3(1+d^2)$. Its total quantum
+dimension is the positive square root, namely $3(1+d^2)$. Its
+rank is twelve; these are three different invariants.
+
+

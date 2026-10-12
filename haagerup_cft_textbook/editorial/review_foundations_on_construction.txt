@@ -1,0 +1,480 @@
+Independent foundations review of construction chapters c01--c05
+Reviewer: scope_foundations. Date: 2026-10-05.
+Snapshot: source read approximately 17:15--17:27 UTC. Line numbers below
+refer to that snapshot and may move during revision.
+
+Scope and confidence
+====================
+I read all five chapters against the corresponding arguments in
+hi_cft_c8_proof.tex and hi_cft_c8_manuscript_structure.tex. I independently
+checked the finite-closure induction, the ordering of the parafermion
+reconstruction, the positive-energy quotient argument, the vacuum-projectivity
+argument, the categorical growth argument, the displayed top-bound arithmetic,
+and the squareclass reduction by hand. I did not recompute the model-specific
+lattice products, finite ranks, or theta coefficients. Those remain the
+explicit construction inputs and specialized source results that the book
+identifies. No numerical jobs or typesetting were launched.
+
+Overall assessment: the logical route is sound conditional on the stated
+finite inputs. The main mathematical correction is a cocycle formula stated
+too generally. The most important exposition gaps concern the exact positive-
+mode bootstrap, the acyclic parafermion calculation, the charge multiplicities
+behind the top inequalities, and the hypotheses behind the squareclass bound.
+These can all be repaired locally without changing the construction.
+
+1. Corrections and necessary clarifications
+=========================================
+
+1.1 c01_lattice_embedding.tex:45--57 -- cocycle diagonal term.
+The chapter starts with an arbitrary positive even lattice and an integral
+basis. In that generality the displayed epsilon(a,b) is not guaranteed to
+satisfy epsilon(a,-a)=(-1)^((a,a)/2). Its diagonal exponent must be
+
+    sum_i (G_ii/2) a_i b_i + sum_{i>j} a_i b_j G_ij   (mod 2).
+
+Counterexample to the current statement: a rank-one even lattice with a
+generator of norm four. The printed formula gives epsilon(alpha,-alpha)=-1,
+whereas (-1)^((alpha,alpha)/2)=+1. The later E6+A2 simple-root basis has
+G_ii=2, so the actual construction is unaffected.
+
+Repair: use the general formula, then say that its first sum simplifies to
+sum_i a_i b_i for the norm-two root basis used below. Also replace the eight-
+element basis by a rank-r basis in this introductory general paragraph, or
+say explicitly here that the discussion is now specialized to rank eight.
+This supplies a useful exercise: verify bilinearity, the commutator sign,
+and the diagonal sign for the corrected formula.
+
+1.2 c02_finite_closure.tex:244 -- TeX typo.
+The map defining f_a has ',qquad' rather than ',\\qquad'.
+
+1.3 c03_factors.tex:363 -- ambiguous claim of a finite-field calculation.
+The phrase 'The finite field calculation gives' precedes exact rational
+projection coefficients. In this context it reads as a finite-field
+certificate, which by itself would not establish those characteristic-zero
+equalities. The source argument is an exact calculation in the finite-
+dimensional space S_2.
+
+Repair: write 'The exact calculation in this finite-dimensional space gives'.
+The nearby construction-input box already scopes the equality appropriately.
+
+1.4 c05_branching.tex:84--99 -- the per-core W is bookkeeping, not an
+individual ambient-energy trace.
+The coefficient 83/6084 is correct: (3403/4563)(3/164)=83/6084. But an
+individual A_L-module top need not be a complete right sl2 representation.
+Consequently replacing the right Sugawara trace by 3Q/164 is valid after
+summing on E, which is a complete right sl2 representation; it is not
+necessarily valid separately on each core top. The current final warning
+about individual Cartan eigenvectors is helpful but does not quite state this
+distinction.
+
+Repair: define W for each core top as an additive charge-based bookkeeping
+quantity. State explicitly that the sum W_total equals Tr_E L_0 only after
+assembling a complete U-module top E. The individual W entries need not be
+ambient conformal energies or energy traces on invariant U-subspaces. This
+also explains why W/dim can exceed the final bound for an isolated table row.
+
+1.5 c05_branching.tex:357--361 -- exclude a trivial right action before
+calling it the same cycle or its inverse.
+The centralizer of a three-cycle in S_3 has three elements, including the
+identity. Commuting with the free left action alone does not eliminate that
+identity. Duality does: it conjugates the left and right invertible actions,
+so the right action is also transitive.
+
+Repair: insert that sentence, then retain the current commutativity argument.
+For self-duality, add the two-line calculation. If rho*=a^k rho and
+rho a=a^2 rho, then (a^i rho)*=a^{i+k}rho. Applying duality twice gives
+2k=0 modulo three, hence k=0. All three noninvertibles are self-dual.
+
+1.6 c05_branching.tex:393--400 -- restore the arithmetic hypotheses for
+the totient bound.
+The bound phi(2D)/sqrt(D)>=12/sqrt(13), except D=10, is false for general
+squarefree D; D=2,5,7 are immediate counterexamples. It is correct for the
+special squareclasses arising here. The source includes the essential
+restrictions that the chapter has omitted:
+
+    Delta=9m^2+4=t^2 D, D squarefree;
+    (3m)^2 < Delta < (3m+1)^2, hence D>1;
+    Delta=1 mod 3, hence 3 does not divide t and D=1 mod 3;
+    7 does not divide Delta, since m^2=5 mod 7 has no solution.
+
+For odd D, a single prime is therefore at least 13; the first possible pair
+is bounded below by the contribution of 5 and 11. Extra prime factors
+increase the product. For even D, phi(2D)/sqrt(D) has an extra sqrt(2), and
+the single odd-prime case is D=10 or has prime at least 11. These observations
+give exactly the printed inequality. Put them before its use.
+
+The root-sum lower bound also deserves its precise status: it is a specialized
+theorem about expressing quadratic irrationalities as sums of roots of unity,
+not a direct triangle inequality. Name that theorem and explain that applying
+it to two copies of the multiset clears the half-integral coefficients.
+Source: hi_cft_c8_manuscript_structure.tex:1295--1317.
+
+1.7 c05_branching.tex:420--423 -- parity and the exceptional inequality.
+State why m,t are even when Delta=10t^2, so m=2 is the only possible positive
+case below four. Then give the short estimate that currently disappears in
+'the bound is again too large':
+
+    N >= m^2/2 + 4mt,
+    t/m = sqrt((9+4/m^2)/10) > sqrt(9/10) > 15/16,
+    m^2/2 + 4mt > 17m^2/4 > 4m^2+2  for m>=4.
+
+The m=t=2 second-moment contradiction is correctly stated. The extra
+hypothesis that the squared-root sum lies in Q(sqrt(10)) is indispensable and
+is correctly retained in the chapter; please do not simplify it away.
+
+2. Finite closure: sound induction, but restore its concrete hypotheses
+=====================================================================
+
+2.1 c02_finite_closure.tex:87--170 -- positive assessment.
+The filtered Wick reduction and lexicographic induction are correct. In the
+Wick integral a coefficient a_(j)b lowers the total input weight by j+1.
+Positive weights of the omitted normal factors matter. The unique possible
+equal-total-weight term in the recursive Jacobi step is a primitive generator
+of weight wt(t)+1 paired with b, whose left weight is one smaller. The
+separate proof that a_(0) preserves the normal span prevents circularity.
+Neither independence of normal words nor a PBW theorem is used. This is one
+of the strongest pedagogical sections in the current draft.
+
+2.2 c02_finite_closure.tex:316--329 and 398--400 -- make the positive-mode
+bootstrap visible enough to check the recursive theorem's first hypothesis.
+Currently 'repeating with L_1 and L_2' hides several different controls, and
+the final application does not display the positive modes on P_4 recovered
+after Gate 5. A beginner cannot audit that every K_(n)S_d and S2_(n)S_d
+required by the theorem has been supplied.
+
+Suggested insertion before Gate 5: a small lemma with the following table.
+
+    (S2)_1 S3 <= S3, (S2)_2 S3 <= S2, (S2)_3 S3 <= K;
+    K_1 W4 <= S3, K_2 W4 <= S2, K_3 W4 <= K;
+    L_1 N5 <= W4, L_2 N5 <= S3.
+
+The next modes in the first two lines are scalar; higher ones vanish by
+weight. Explain current provenance with the example
+
+    k_1(a_0 b)=(k_0 a)_1 b+(k_1 a)_0 b+a_0(k_1 b).
+
+For a general weight-two a the actual commutators are
+
+    [L_1,a_n]=(2-n)a_(n+1)+(L_1 a)_n,
+    [L_2,a_n]=(3-n)a_(n+2)+3(L_1 a)_(n+1)+(L_2 a)_n.
+
+Explain why the primitive multiplets are quasiprimary: their current types
+do not occur in the weight-one current space, and L_1 is current-equivariant.
+The derivative and affine-normal portions require the general formulas.
+In particular, L_2(a_(-1)b) has the scalar term (L_2a)_(-1)b; it cannot
+silently be dropped. On the other hand, (L_2a)_1=0 when it occurs in the
+displayed positive-mode recursion, since L_2a is scalar.
+
+After Gate 5, display at least the first and last of these consequences,
+or all four in a compact aligned display:
+
+    2a_1p = L_1(a_0p)-a_0L_1p in W4,
+     a_2p = L_1(a_1p)-a_1L_1p in S3,
+    2a_3p = L_2(a_1p)-a_1L_2p in S2,
+     a_4p = L_2(a_2p)-a_2L_2p in K,  p in P4.
+
+These are the missing bridge from the two zero-mode gates to the all-mode
+hypothesis; they should not be left implicit in a comprehensive textbook.
+Sources: hi_cft_c8_proof.tex:835--912 and 1063--1075.
+
+2.3 c02_finite_closure.tex:378--384 -- work one neutral Jacobi reduction.
+The paragraph is accurate but too compressed compared with the carefully
+explained charged gate. Use the actual schematic decomposition
+
+    e_0 a3 = sum_i t_i (x_i)_0 y_i + n,  n in N3,
+
+where x_i,y_i are charged. Applying zero modes to p3 reduces the first
+term to commutators of charged zero modes, already controlled on W4. Then
+
+    e_0((a3)_0 p3)=(a3)_0(e_0 p3)+(e_0 a3)_0 p3 in N5.
+
+The nonzero bottom-triplet coefficient yields the required neutral identity.
+This explicitly uses both Gate 4 and the charged part of Gate 5; it is not
+just an appeal to current covariance. Source: hi_cft_c8_proof.tex:1024--1057.
+
+3. Parafermion identification: show the dependency order and simplicity
+=====================================================================
+
+3.1 c03_factors.tex:214--225 -- acyclicity needs more than the list 6,7,8.
+The iterate formula is correct, and the printed a,a; a,b; a,d rows include
+the simple poles and the crucial weight-six decoupling. The text should
+nevertheless show why evaluating those iterates does not already require
+the unknown b,b or d,d products.
+
+A compact dependency table suffices. Let A_r mean evaluating an external
+a mode on normal polynomials of weight <=r, and similarly B_r for b.
+
+    A6 -> (b,b) -> A7 -> (b,d) -> B6 -> A8 -> B7 -> (d,d).
+
+After moving Virasoro creation operators outward and removing derivatives,
+the possible two-factor non-Virasoro cores are
+
+    <=6: :aa:;
+    <=7: :aa:, :ab:;
+    <=8: :aa:, :ab:, :bb:, :ad:.
+
+There cannot be three such factors below weight nine. This explains every
+arrow and is substantially more useful than an assertion that an order can
+be chosen. For the final arrow print
+
+    d_n s=a_1(b_n s)-a_0(b_(n+1)s)
+             +b_(n+1)(a_0s)-b_n(a_1s),
+
+whose first two terms use A8 and last two use B7 when s=d.
+Source: hi_cft_c8_manuscript_structure.tex:125--188.
+
+3.2 c03_factors.tex:227--235 -- justify the actual factor's simplicity.
+The common simple-quotient argument is correct when both targets are simple
+and CFT type, and the source explains why the actual embedded algebra has
+these properties. Put a sentence immediately before the uniqueness argument:
+PCT stability and the positive inherited form make the actual generated
+subalgebra simple; its conformal grading and intrinsic translation agree
+with the ambient ones on its states. If desired, recall the orthogonal-ideal
+argument: a proper graded ideal misses the vacuum, its orthogonal complement
+is invariant, and a complement containing the vacuum must be the full
+algebra. The presentation by homogeneous positive-weight fields gives the
+CFT-type grading needed for the unique maximal proper graded ideal.
+
+The claim that common closure forces only one degree-zero vacuum line is
+correct and does not require freedom of the normal-word span. Keep that
+point explicit. Source: hi_cft_c8_manuscript_structure.tex:190--219.
+
+3.3 Positive-stress checks.
+The coefficients in c03:365--369 and the resulting positive identity are
+consistent. For example, the e coefficient is (25/6)(9/100)+(25/26)(13/20)
+=3/8+5/8=1; the f coefficient is 13/14+1/14=1. The right affine coefficient
+likewise sums to one. These are good short hand checks to retain. No need
+to repeat the entire coefficient table elsewhere.
+
+4. Regularity and vacuum projectivity
+====================================
+
+4.1 c04_regularity.tex:73--104 -- cite the regular=>C2 fact, not a new
+missing hypothesis.
+On first reading the argument appears to demand C2-cofiniteness of the A_i
+in addition to the definition. This is not a mathematical gap: regularity
+implies C2-cofiniteness, by Li's theorem. A short reminder before the module
+quotient theorem will prevent confusion. Primary sources checked directly:
+https://arxiv.org/abs/math/9807077 (Li, regular=>C2-cofinite);
+https://arxiv.org/html/math/0204021 (Abe--Buhl--Dong, Theorem 4.5 and the
+module-cofiniteness conclusions).
+Thus do not describe this as an extra conjectural property of the components.
+
+4.2 c04:106--135 -- positive assessment.
+The argument on V_n intersect C2(V)^perp is correct. High partial-energy
+eigenspaces lie inside C2(V); self-adjointness then bounds the expectation
+on any vector orthogonal to that subspace. The partial energies need not
+commute, and the chapter explicitly avoids simultaneous diagonalization.
+The finite number of simple component modules supplies uniform D_i. It is
+also right to describe the resulting cutoff as existential rather than a
+computed numerical value.
+
+4.3 c04:161--174, 186--201, 250--270 -- positive assessment and one bridge.
+The compatible-top lemma is valid: regularity decomposes the entire weak
+restriction, and the highest space of a simple ordinary module is its lowest
+space. On a generalized weight-zero space, diagonalizability of each partial
+energy plus its nonnegative spectrum makes zero trace imply the zero
+operator, without needing commuting partial energies or a form on E.
+Vacuum-only component tops then force every component translation to vanish.
+The vacuum-like lemma correctly converts this into a splitting map.
+
+Add one sentence at c04:250: under C2-cofiniteness the simple composition
+factors of the generalized-module category are ordinary modules, so the
+preceding ordinary-simple positivity proposition applies to all of them.
+This is standard and part of the cited module theory, but its use is not
+obvious to a beginning reader. The Abe--Buhl--Dong source above explicitly
+states the ordinary-simple conclusion. No unitarity of all U-modules was
+assumed in any of these steps, which is an important strength of this proof.
+
+4.4 c04:293--340 -- external rigidity theorem checked; application sound.
+I checked Etingof--Penneys 2412.17681v3 directly:
+https://arxiv.org/html/2412.17681v3, Theorem 1.1.
+The exact hypotheses match the chapter: Cauchy-complete linear braided
+category, finite-dimensional Hom spaces, End(1)=C, indecomposable X,
+1 a summand of Y tensor X, and dim End(X^tensor n)<n! for some n.
+The theorem does not require pre-existing tensor exactness.
+
+The finite-algebra realization gives exponential growth using only right
+exactness. A nonzero evaluation onto the simple unit splits by its
+projectivity. Thus rigidity comes before tensor exactness, and using
+Hom(X,-)=Hom(1,- tensor X*) afterwards correctly makes every object
+projective. This portion is careful and should be preserved.
+
+Suggested small example: before the application, show why a finite-dimensional
+right-exact functor between module categories obeys a bound
+dim F(M)<=dim F(P) dim M, by taking a surjection P^(dim M)->M.
+It makes the categorical growth estimate concrete without weakening it.
+
+5. Top bound, boundary rank, and arithmetic: add reconstructible examples
+========================================================================
+
+5.1 c05:119--127 -- give the four charge multiplicities behind the two
+inequalities. This is the highest-priority teaching expansion in c05.
+The top table prints dimension, intrinsic weight, and W, but those three
+columns do not suffice to reconstruct right-current weight multiplicities.
+The minimization formulas do supply them. For the whole space E they give
+
+    mult(H_R=12)=x5,
+    mult(H_R=10)=y2,
+    mult(H_R=9)=2(x5+x6),
+    mult(H_R=7)=2y4.
+
+For a finite sl2 representation, nonnegative weight multiplicities decrease
+as the positive weight increases in steps of two. Hence mult10>=mult12 and
+mult7>=mult9, exactly y2>=x5 and y4>=x5+x6. The factor two in the odd-charge
+rows is the left level-one doublet, not a mysterious multiplicity.
+
+For reproducibility the minimizing absolute j labels for each core top are:
+    x0:0; x1:0; x2:0,3; x3:0,2,3,6; x4:6; x5:1,4,6; x6:4;
+    y0:0; y1:0,5; y2:0,2,3,5; y3:2; y4:1,2,4,6; y5:1,4; y6:4.
+Keep all ties in minimizing m, not merely the smallest absolute charge.
+The relevant lattice--Potts ties are, for epsilon=1,
+j=1: m=1,-12; j=4: m=4,-9; j=5: m=5,-8;
+and for epsilon=tau,
+j=3: m=3,-10; j=5: m=5,-8; j=6: m=6,-7.
+Negative j gives opposite charges. These ties explain exactly the large
+charges entering the inequalities.
+
+The nonnegative certificate itself checks correctly against the table.
+Its structure deserves interpretation as a short linear-programming dual
+certificate: the two representation constraints absorb the otherwise
+negative x5 coefficient, and every remaining coefficient is nonnegative.
+This need not introduce any numerical optimization claim.
+
+5.2 c05:61--73 -- finish one minimization example.
+The y3 example exhibits a minimizer but does not prove it is minimal; x1
+simply asserts the minimum. Add a tiny candidate table or bound. For x1,
+k=0 gives 2/15. For |k|>=2, the parafermion weight alone exceeds 2/15;
+the remaining k=+/-1 occur at j=+/-5 and have lattice--Potts energy 14/13.
+Thus the neutral candidate wins. This is a satisfying fully worked example.
+The finite cutoff |m|<=12 used earlier is correct.
+
+5.3 c05:247--257 -- automorphisms and the untwisted pointed subcategory.
+The distinction between an order-three fusion group and the untwisted
+associator is excellent. The phrase that automorphisms 'supply' invertible
+objects compresses a nontrivial canonical-algebra theorem. Either name that
+theorem explicitly and state its hypotheses, or add a lemma explaining the
+two products on End(I(1)) and why algebra automorphisms correspond to
+invertible boundary simples. The later paragraph at 345--347 also invokes
+this correspondence, so one clear explanation can serve both uses.
+
+5.4 c05:300--336 -- rank-four character obstruction is quoted, not proved
+at textbook level yet.
+The displayed alternatives exclude six, and the specialization hypotheses
+are appropriately stated. But a paragraph about principal-part cancellation
+does not let the reader recover any of 15,10,14,42,8,5,12. Since the user
+asked for a comprehensive treatment with canonical examples, work one of
+these four alternatives in detail: specify the small modular representation,
+the relevant theta forms and their first coefficients, the polar unknowns,
+and the equation producing the vacuum current number. Then clearly label
+the remaining alternatives as the same finite method or as a quoted
+specialized calculation. The root's c06 may already cover related character
+methods, but it should not leave this exclusion numerically opaque.
+
+This is an exposition gap, not a discovered contradiction in the source.
+The m=2 A4 averaging calculation is already a good worked example and its
+bound (248-24-32)/12=16 is correct.
+
+5.5 c05:373--389 -- derive at least the dimension identity and one moment.
+Six lines of induction data are currently followed immediately by the three
+moment equations. A reader should see how the equations are normalized.
+The dimension identity is
+
+    9 s_m^2=1+d_m^4+4s_m^2+9d_m^2 sum_j n_j^2,
+
+which reduces to sum n_j^2=4m^2+2. The induction decomposition is
+
+    I(rho)=mX+mY+m(C0+C1+C2)+sum_j n_j Z_j.
+
+Its first and second twist traces are respectively 0 and
+3s_m epsilon, where epsilon=nu_2(rho). Substituting the dimensions, and
+using d_m^(-1)=d_m-3m, derives the two moment equations. The untwisted
+Vec(Z3) input is used to get the three C_j twists, so recall it here.
+This gives a natural bridge back to the center/Verlinde foundations.
+Source: hi_cft_c8_manuscript_structure.tex:1209--1288.
+
+5.6 c05:439--444 -- six-root uniqueness needs its equality case.
+The final conclusion is right, but minimal root count alone leaves the
+order-26 quadratic orbit as a competitor. The source excludes it with
+the rational coefficient. Briefly show: a Galois orbit supplying the
+sqrt(13) term needs six roots; equality permits orders 13 or 26. Their
+negative quadratic periods are respectively (-1-sqrt(13))/2 and
+(1-sqrt(13))/2. The prescribed rational part picks order 13. Its six
+nonresidue roots are Q-linearly independent: a relation would be a degree
+at-most-12 polynomial with zero constant term divisible by Phi_13, hence
+the zero polynomial. Each root therefore occurs once, forcing n_j=1.
+This is an excellent canonical arithmetic example to work completely.
+Source: hi_cft_c8_manuscript_structure.tex:1394--1425.
+
+6. Suggested priority order for revision
+=======================================
+First fix items 1.1--1.7; the edits are small and prevent literal errors or
+misreadings. Next expand 2.2 and 5.1, which expose the main finite-to-infinite
+and finite-top-to-global bridges. Then add the PF dependency table (3.1),
+one moment derivation (5.5), and six-root equality argument (5.6). If space
+permits, work one rank-four theta obstruction (5.4) rather than multiplying
+general caveats about its status. The existing local construction-input
+boxes already do a good job of separating finite field identities from
+theorems that follow from them.
+
+Cross-chapter notation note: foundations f01--f05 consistently reserve d for
+(3+sqrt(13))/2 and s=1+d^2. The temporary d_m,s_m here are appropriate.
+The boundary generator a in c05 can be changed to alpha when integrating
+with f02/f04, since f04 uses a as a central-sector label. Similarly the
+equality X=b, Y=a in the final central-sector convention deserves an
+explicit mapping sentence once the rank-six result is known.
+
+Follow-up review of expanded c02/c03/c05, 2026-10-05
+--------------------------------------------------
+The construction agent's requested expansions were checked directly after
+their insertion. No new incorrect formula or circular dependency was found.
+No numerical job or typesetting was run.
+
+In c02:350–400 and 500–508, the general weight-two Virasoro commutators
+have the correct coefficients. The scalar L2(a) term is retained at mode
+-1 and vanishes at positive modes, as required. The intermediate positive
+controls precede the weight-five argument. The last four bootstrap equations
+follow successively from those controls and the final zero-mode gate.
+
+In c03:229–287, the order A6 -> (b,b) -> A7 -> (b,d) -> B6 -> A8 -> B7
+-> (d,d) is valid. The noncommutative Wick integrals need precisely the
+previously available brackets stated in the text. In particular A8(:bb:)
+uses B6 on coefficients of [a_lambda b], and the final d,d iterate needs
+A8 and B7, not an unknown d,d row. The displayed Virasoro formulas follow
+from primarity of the weight-three generator a.
+
+In c05:93–199, the distinction between individual bookkeeping W entries
+and the trace identity on a complete U-top is now explicit. The factor
+(3403/4563)*(3/164)=83/6084 is correct. The tied charge representatives
+explain the x5 top dimension and the four Cartan multiplicity constraints;
+the LP certificate has the correct x5 coefficient and a manifestly
+nonnegative remainder. The minimization bound controls each fixed charge's
+lattice-Potts term, so -12<=m<=12 genuinely contains every minimizer.
+
+In c05:429–563, the new theta example checks in detail. The L7 discriminant
+generator 2w/7 has energy 1/7. The two representatives of the r=3 coset
+have a=1/4,b=1/28, producing 3/7 and 4/7. The vacuum root counts produce
+2,-4. The matched coefficients are lambda=7-A+4B, mu=7-A-3B. After dividing
+by eta^8, the only T-fixed coordinate is (0,1), because the phase is shifted
+by -1/3; the S tensor product does not preserve its line. Thus the constant
+remainder vanishes. Keeping delta v00=2 delta chi_U gives
+2(dim U1-22)=2lambda-4mu, hence 15+A+10B. All signs and the reference
+G2,3 fundamental weight 2/7 are consistent.
+
+In c05:583–599, duality now correctly excludes a trivial right action.
+The self-duality calculation and equality of the three remaining rho^2
+coefficients are valid. In 626–660, all first/second moment normalizations
+check. The D restrictions, D=10 parity argument and comparison for m>=4
+are correct; m=t=2 indeed gives second moment -2 or -2-4sqrt(10), contradicting
+the equality-case value 2. The six-root equality argument agrees with the
+full source argument and correctly derives distinct twists only at the end.
+
+Optional precision improvement at c05:743–746: averaging can give fractional
+weights on individual Galois orbits, so the sharp statement is that the
+absolute sqrt(13) coefficient per root in an averaged orbit is at most 1/12,
+with equality only for orders 13 and 26. State this one-line bound explicitly
+before concluding that six roots exhaust the budget. Merely counting the
+size of one full orbit, without this efficiency bound, is less transparent
+when the initial multiset is not Galois invariant. The main source gives
+the needed bound; this is a pedagogical precision suggestion, not a new
+counterexample to the result.

@@ -1,0 +1,5938 @@
+{
+  "coefficient_certificate": {
+    "basis": [
+      [
+        "9/2",
+        "9/2",
+        "-9/2",
+        "-9/2",
+        "1/6",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "13",
+        "-13",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2/5",
+        "18/5",
+        "-153/5",
+        "3/5",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/5",
+        "-21/5",
+        "51/5",
+        "-1/5",
+        "0",
+        "1"
+      ]
+    ],
+    "functional": [
+      1,
+      0,
+      0,
+      0,
+      -27,
+      0,
+      -13,
+      0,
+      0,
+      -13,
+      0,
+      0
+    ],
+    "D2Dchi_leading": [
+      "2/3",
+      "80/3",
+      "27",
+      "27",
+      "0",
+      "3/2",
+      "-35/1014",
+      "1260/169",
+      "32368/507",
+      "-5/169",
+      "4/39",
+      "77/169"
+    ],
+    "E2_squared_chi_leading": [
+      "-42",
+      "80",
+      "81",
+      "81",
+      "3",
+      "27",
+      "7",
+      "42",
+      "119",
+      "5",
+      "13",
+      "14"
+    ],
+    "D2Dchi_functional": "3/2",
+    "E2_squared_chi_functional": -279,
+    "normalized_mixed_identity": "F(R_LR)=2+(F(Q_L)+F(Q_R))/12",
+    "normalized_same_axis_identity": "F(R_LL)=6+F(Q_L)/2",
+    "normalization": "Q=Tr u0^2/kappa; R_LR=Tr u0^2 v0^2/(kappa_u*kappa_v); R_LL=Tr u0^4/kappa^2",
+    "scope": "Orthogonal commuting Cartans. Vacuum pole only; actual Haagerup modular representation and gamma0 character."
+  },
+  "all_tested_levels": [
+    {
+      "levels": [
+        1,
+        1
+      ],
+      "residual_central_charge": "6",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 7,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 5,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "1/8",
+                "161/1872",
+                "119/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "8/3",
+                "b": "10/3",
+                "a": "3",
+                "c0": "3",
+                "c1": "0",
+                "c2": "1",
+                "d1": "0",
+                "d2": "5/3",
+                "d3": "5",
+                "d4": "0",
+                "d5": "2/3",
+                "d6": "1/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "8/3",
+              "identity_polynomial": "-16",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        2
+      ],
+      "residual_central_charge": "11/2",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 4,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 5,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "1/4",
+                "-151/936",
+                "-1283/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "2/3",
+                "b": "34/3",
+                "a": "6",
+                "c0": "6",
+                "c1": "0",
+                "c2": "2",
+                "d1": "0",
+                "d2": "20/3",
+                "d3": "10",
+                "d4": "0",
+                "d5": "2/3",
+                "d6": "-2/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "2/3",
+              "identity_polynomial": "-4",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        3
+      ],
+      "residual_central_charge": "26/5",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/20",
+                  "available_coset_ground_weight": "81/260"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 2
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/20",
+                  "available_coset_ground_weight": "61/260"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "1"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "-47/624",
+                "23/338"
+              ],
+              "predicted_leading_moments": {
+                "0": "3",
+                "b": "15",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "4",
+                "d3": "25",
+                "d4": "0",
+                "d5": "1",
+                "d6": "1"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "3",
+              "identity_polynomial": "-18",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "27/8",
+                "-349/208",
+                "19/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "154",
+                "a": "81",
+                "c0": "81",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "30",
+                "d3": "264",
+                "d4": "1",
+                "d5": "2",
+                "d6": "10"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        4
+      ],
+      "residual_central_charge": "5",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 2,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "1/8",
+                  "available_coset_ground_weight": "35/104"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/3",
+                  "available_coset_ground_weight": "5/39"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 6
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "1/8",
+                  "available_coset_ground_weight": "27/104"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "9"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "1/2",
+                "-151/468",
+                "-2597/3042"
+              ],
+              "predicted_leading_moments": {
+                "0": "1",
+                "b": "23",
+                "a": "12",
+                "c0": "12",
+                "c1": "0",
+                "c2": "4",
+                "d1": "0",
+                "d2": "9",
+                "d3": "30",
+                "d4": "0",
+                "d5": "1",
+                "d6": "0"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "1",
+              "identity_polynomial": "-6",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "6",
+                "-73/39",
+                "383/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "26",
+                "b": "262",
+                "a": "144",
+                "c0": "144",
+                "c1": "0",
+                "c2": "48",
+                "d1": "9",
+                "d2": "67",
+                "d3": "429",
+                "d4": "1",
+                "d5": "2",
+                "d6": "9"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "26",
+              "identity_polynomial": "-36",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        5
+      ],
+      "residual_central_charge": "34/7",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 4,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 4,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/7",
+                  "available_coset_ground_weight": "16/91"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/7",
+                  "available_coset_ground_weight": "9/91"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "8"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "5/8",
+                "-443/1872",
+                "88/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "10/3",
+                "b": "80/3",
+                "a": "15",
+                "c0": "15",
+                "c1": "0",
+                "c2": "5",
+                "d1": "0",
+                "d2": "19/3",
+                "d3": "45",
+                "d4": "0",
+                "d5": "4/3",
+                "d6": "5/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "10/3",
+              "identity_polynomial": "-20",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "75/8",
+                "1529/624",
+                "1961/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "108",
+                "b": "342",
+                "a": "225",
+                "c0": "225",
+                "c1": "0",
+                "c2": "75",
+                "d1": "8",
+                "d2": "89",
+                "d3": "567",
+                "d4": "8",
+                "d5": "6",
+                "d6": "33"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "108",
+              "identity_polynomial": "-200",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        6
+      ],
+      "residual_central_charge": "19/4",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 5,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "1/4",
+                  "available_coset_ground_weight": "11/52"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 8
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/4",
+                  "available_coset_ground_weight": "7/52"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "16"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "8"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "3/4",
+                "-151/312",
+                "-146/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "4/3",
+                "b": "104/3",
+                "a": "18",
+                "c0": "18",
+                "c1": "0",
+                "c2": "6",
+                "d1": "0",
+                "d2": "34/3",
+                "d3": "50",
+                "d4": "0",
+                "d5": "4/3",
+                "d6": "2/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "4/3",
+              "identity_polynomial": "-8",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "27/2",
+                "-141/52",
+                "-1276/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "72",
+                "b": "576",
+                "a": "324",
+                "c0": "324",
+                "c1": "0",
+                "c2": "108",
+                "d1": "16",
+                "d2": "180",
+                "d3": "852",
+                "d4": "8",
+                "d5": "0",
+                "d6": "20"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "72",
+              "identity_polynomial": "-128",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        9
+      ],
+      "residual_central_charge": "50/11",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 4,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 5,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "6/11",
+                  "available_coset_ground_weight": "-12/143"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 20
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/11",
+                  "available_coset_ground_weight": "29/143"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "136"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "8"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "9/8",
+                "-255/208",
+                "-1840/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "-14/3",
+                "b": "176/3",
+                "a": "27",
+                "c0": "27",
+                "c1": "0",
+                "c2": "9",
+                "d1": "0",
+                "d2": "79/3",
+                "d3": "65",
+                "d4": "0",
+                "d5": "4/3",
+                "d6": "-7/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-14/3",
+              "identity_polynomial": "28",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "243/8",
+                "11835/208",
+                "29915/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "972",
+                "b": "486",
+                "a": "729",
+                "c0": "729",
+                "c1": "0",
+                "c2": "243",
+                "d1": "136",
+                "d2": "-111",
+                "d3": "1887",
+                "d4": "8",
+                "d5": "54",
+                "d6": "185"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "972",
+              "identity_polynomial": "-1928",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        10
+      ],
+      "residual_central_charge": "9/2",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/6",
+                  "available_coset_ground_weight": "1/6"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 7,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 5,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-3/4",
+                "805/936",
+                "1190/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "44/3",
+                "b": "64/3",
+                "a": "42",
+                "c0": "42",
+                "c1": "0",
+                "c2": "6",
+                "d1": "0",
+                "d2": "50/3",
+                "d3": "50",
+                "d4": "0",
+                "d5": "20/3",
+                "d6": "10/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "44/3",
+              "identity_polynomial": "-88",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-69/2",
+                "4025/156",
+                "11900/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "296",
+                "b": "496",
+                "a": "1404",
+                "c0": "1404",
+                "c1": "8",
+                "c2": "108",
+                "d1": "0",
+                "d2": "500",
+                "d3": "1500",
+                "d4": "0",
+                "d5": "200",
+                "d6": "100"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "296",
+              "identity_polynomial": "-576",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        12
+      ],
+      "residual_central_charge": "31/7",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/7",
+                  "available_coset_ground_weight": "4/21"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/56",
+                  "available_coset_ground_weight": "297/728"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 2
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/56",
+                  "available_coset_ground_weight": "241/728"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "1"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-1/2",
+                "109/156",
+                "261/338"
+              ],
+              "predicted_leading_moments": {
+                "0": "15",
+                "b": "33",
+                "a": "48",
+                "c0": "48",
+                "c1": "0",
+                "c2": "8",
+                "d1": "0",
+                "d2": "19",
+                "d3": "70",
+                "d4": "0",
+                "d5": "7",
+                "d6": "4"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "15",
+              "identity_polynomial": "-90",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-42",
+                "197/13",
+                "3853/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "170",
+                "b": "1126",
+                "a": "1944",
+                "c0": "1944",
+                "c1": "8",
+                "c2": "192",
+                "d1": "1",
+                "d2": "651",
+                "d3": "2829",
+                "d4": "1",
+                "d5": "218",
+                "d6": "145"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "170",
+              "identity_polynomial": "-324",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        13
+      ],
+      "residual_central_charge": "22/5",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/15",
+                  "available_coset_ground_weight": "1/5"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "1/20",
+                  "available_coset_ground_weight": "107/260"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/15",
+                  "available_coset_ground_weight": "64/195"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 6
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "1/20",
+                  "available_coset_ground_weight": "87/260"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "9"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-3/8",
+                "65/144",
+                "-35/234"
+              ],
+              "predicted_leading_moments": {
+                "0": "13",
+                "b": "41",
+                "a": "51",
+                "c0": "51",
+                "c1": "0",
+                "c2": "9",
+                "d1": "0",
+                "d2": "24",
+                "d3": "75",
+                "d4": "0",
+                "d5": "7",
+                "d6": "3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "13",
+              "identity_polynomial": "-78",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-357/8",
+                "77/48",
+                "-79/3"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "1594",
+                "a": "2241",
+                "c0": "2241",
+                "c1": "8",
+                "c2": "243",
+                "d1": "9",
+                "d2": "958",
+                "d3": "3264",
+                "d4": "1",
+                "d5": "218",
+                "d6": "90"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        15
+      ],
+      "residual_central_charge": "74/17",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 3,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/17",
+                  "available_coset_ground_weight": "11/51"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 5,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "6/17",
+                  "available_coset_ground_weight": "24/221"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 20
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 5,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "136"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-1/8",
+                "-235/624",
+                "-1940/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "14/3",
+                "b": "184/3",
+                "a": "57",
+                "c0": "57",
+                "c1": "0",
+                "c2": "11",
+                "d1": "0",
+                "d2": "125/3",
+                "d3": "75",
+                "d4": "0",
+                "d5": "20/3",
+                "d6": "-5/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "14/3",
+              "identity_polynomial": "-28",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-381/8",
+                "9163/208",
+                "1827/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "604",
+                "b": "1718",
+                "a": "2889",
+                "c0": "2889",
+                "c1": "8",
+                "c2": "363",
+                "d1": "136",
+                "d2": "1401",
+                "d3": "3375",
+                "d4": "0",
+                "d5": "286",
+                "d6": "33"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "604",
+              "identity_polynomial": "-1192",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        18
+      ],
+      "residual_central_charge": "43/10",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/10",
+                  "available_coset_ground_weight": "7/30"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 5,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "3/10",
+                  "available_coset_ground_weight": "21/130"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 20
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/10",
+                  "available_coset_ground_weight": "37/130"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "136"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "8"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "1/4",
+                "-47/104",
+                "-1483/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "22/3",
+                "b": "230/3",
+                "a": "66",
+                "c0": "66",
+                "c1": "0",
+                "c2": "14",
+                "d1": "0",
+                "d2": "124/3",
+                "d3": "110",
+                "d4": "0",
+                "d5": "22/3",
+                "d6": "2/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "22/3",
+              "identity_polynomial": "-44",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-93/2",
+                "603/52",
+                "8/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "288",
+                "b": "3384",
+                "a": "3996",
+                "c0": "3996",
+                "c1": "8",
+                "c2": "588",
+                "d1": "136",
+                "d2": "1716",
+                "d3": "6612",
+                "d4": "8",
+                "d5": "288",
+                "d6": "140"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "288",
+              "identity_polynomial": "-560",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        21
+      ],
+      "residual_central_charge": "98/23",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 3,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 5,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "6/23",
+                  "available_coset_ground_weight": "60/299"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 20
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 5,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "6/23",
+                  "available_coset_ground_weight": "37/299"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 20
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "136"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "136"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "21/8",
+                "-953/624",
+                "-4/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "6",
+                "b": "120",
+                "a": "63",
+                "c0": "63",
+                "c1": "0",
+                "c2": "21",
+                "d1": "0",
+                "d2": "25",
+                "d3": "205",
+                "d4": "0",
+                "d5": "4",
+                "d6": "7"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "6",
+              "identity_polynomial": "-36",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "1323/8",
+                "-7117/208",
+                "4987/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "764",
+                "b": "7174",
+                "a": "3969",
+                "c0": "3969",
+                "c1": "0",
+                "c2": "1323",
+                "d1": "136",
+                "d2": "1353",
+                "d3": "12279",
+                "d4": "136",
+                "d5": "-106",
+                "d6": "577"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "764",
+              "identity_polynomial": "-1512",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        27
+      ],
+      "residual_central_charge": "122/29",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/29",
+                  "available_coset_ground_weight": "23/87"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 7,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "12/29",
+                  "available_coset_ground_weight": "18/377"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 56
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/29",
+                  "available_coset_ground_weight": "119/377"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "784"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "8"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "11/8",
+                "-557/208",
+                "-5689/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "-32/3",
+                "b": "446/3",
+                "a": "93",
+                "c0": "93",
+                "c1": "0",
+                "c2": "23",
+                "d1": "0",
+                "d2": "259/3",
+                "d3": "155",
+                "d4": "0",
+                "d5": "22/3",
+                "d6": "-25/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-32/3",
+              "identity_polynomial": "64",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-21/8",
+                "35379/208",
+                "58661/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "2952",
+                "b": "6714",
+                "a": "8289",
+                "c0": "8289",
+                "c1": "8",
+                "c2": "1587",
+                "d1": "784",
+                "d2": "3381",
+                "d3": "13767",
+                "d4": "8",
+                "d5": "522",
+                "d6": "257"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "2952",
+              "identity_polynomial": "-5888",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        1,
+        39
+      ],
+      "residual_central_charge": "170/41",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/41",
+                  "available_coset_ground_weight": "35/123"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 7,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "12/41",
+                  "available_coset_ground_weight": "90/533"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 56
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 5,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "6/41",
+                  "available_coset_ground_weight": "127/533"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 20
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "784"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "136"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "23/8",
+                "-143/48",
+                "-99/13"
+              ],
+              "predicted_leading_moments": {
+                "0": "0",
+                "b": "210",
+                "a": "129",
+                "c0": "129",
+                "c1": "0",
+                "c2": "35",
+                "d1": "0",
+                "d2": "85",
+                "d3": "295",
+                "d4": "0",
+                "d5": "10",
+                "d6": "1"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "0",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "1203/8",
+                "-2713/16",
+                "-59"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "22186",
+                "a": "16281",
+                "c0": "16281",
+                "c1": "8",
+                "c2": "3675",
+                "d1": "784",
+                "d2": "6861",
+                "d3": "39279",
+                "d4": "136",
+                "d5": "218",
+                "d6": "793"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {
+            "d5": {
+              "target": [
+                4,
+                40,
+                10,
+                4,
+                436
+              ],
+              "witness": {
+                "dimension": 13,
+                "left_Dynkin_index": 4,
+                "right_Dynkin_index": 40,
+                "irreducible_summands": [
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 5,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "6/41",
+                    "available_coset_ground_weight": "209/533"
+                  },
+                  {
+                    "left_dimension": 2,
+                    "right_dimension": 4,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "14/41",
+                    "available_coset_ground_weight": "105/533"
+                  }
+                ]
+              },
+              "DP_statistics": {
+                "states": 245,
+                "entry_cap": 20000,
+                "types": 19
+              }
+            },
+            "d6": {
+              "target": [
+                2,
+                62,
+                1,
+                2,
+                1586
+              ],
+              "witness": {
+                "dimension": 14,
+                "left_Dynkin_index": 2,
+                "right_Dynkin_index": 62,
+                "irreducible_summands": [
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 3,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/41",
+                    "available_coset_ground_weight": "302/533"
+                  },
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 7,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "12/41",
+                    "available_coset_ground_weight": "172/533"
+                  },
+                  {
+                    "left_dimension": 2,
+                    "right_dimension": 2,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "11/41",
+                    "available_coset_ground_weight": "185/533"
+                  }
+                ]
+              },
+              "DP_statistics": {
+                "states": 284,
+                "entry_cap": 20000,
+                "types": 21
+              }
+            }
+          },
+          "passes": true,
+          "failures": []
+        }
+      ]
+    },
+    {
+      "levels": [
+        2,
+        2
+      ],
+      "residual_central_charge": "5",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 3,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 4
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 5,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "8",
+              "8"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "1/2",
+                "-463/468",
+                "-5608/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "-8",
+                "b": "32",
+                "a": "12",
+                "c0": "12",
+                "c1": "0",
+                "c2": "4",
+                "d1": "0",
+                "d2": "20",
+                "d3": "20",
+                "d4": "0",
+                "d5": "0",
+                "d6": "-4"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-8",
+              "identity_polynomial": "48",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        2,
+        3
+      ],
+      "residual_central_charge": "47/10",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/20",
+                  "available_coset_ground_weight": "81/260"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 2
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/20",
+                  "available_coset_ground_weight": "61/260"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "8",
+              "1"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "3/4",
+                "-359/312",
+                "-484/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "-8",
+                "b": "44",
+                "a": "18",
+                "c0": "18",
+                "c1": "0",
+                "c2": "6",
+                "d1": "0",
+                "d2": "18",
+                "d3": "50",
+                "d4": "0",
+                "d5": "0",
+                "d6": "-2"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-8",
+              "identity_polynomial": "48",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "27/8",
+                "-349/208",
+                "19/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "154",
+                "a": "81",
+                "c0": "81",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "30",
+                "d3": "264",
+                "d4": "1",
+                "d5": "2",
+                "d6": "10"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        2,
+        4
+      ],
+      "residual_central_charge": "9/2",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 3,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 4,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 0
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/3",
+                  "available_coset_ground_weight": "2/39"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "8",
+              "0"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "8"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "1",
+                "-307/234",
+                "-3104/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "-8",
+                "b": "56",
+                "a": "24",
+                "c0": "24",
+                "c1": "0",
+                "c2": "8",
+                "d1": "0",
+                "d2": "16",
+                "d3": "80",
+                "d4": "0",
+                "d5": "0",
+                "d6": "0"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-8",
+              "identity_polynomial": "48",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "6",
+                "161/39",
+                "1904/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "104",
+                "b": "184",
+                "a": "144",
+                "c0": "144",
+                "c1": "0",
+                "c2": "48",
+                "d1": "0",
+                "d2": "48",
+                "d3": "312",
+                "d4": "8",
+                "d5": "8",
+                "d6": "32"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "104",
+              "identity_polynomial": "-192",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        2,
+        5
+      ],
+      "residual_central_charge": "61/14",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 6,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/7",
+                  "available_coset_ground_weight": "16/91"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 4
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/7",
+                  "available_coset_ground_weight": "9/91"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "8",
+              "8"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "8"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "5/4",
+                "-2003/936",
+                "-7429/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "-50/3",
+                "b": "230/3",
+                "a": "30",
+                "c0": "30",
+                "c1": "0",
+                "c2": "10",
+                "d1": "0",
+                "d2": "88/3",
+                "d3": "90",
+                "d4": "0",
+                "d5": "-2/3",
+                "d6": "-10/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-50/3",
+              "identity_polynomial": "100",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "75/8",
+                "1529/624",
+                "1961/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "108",
+                "b": "342",
+                "a": "225",
+                "c0": "225",
+                "c1": "0",
+                "c2": "75",
+                "d1": "8",
+                "d2": "89",
+                "d3": "567",
+                "d4": "8",
+                "d5": "6",
+                "d6": "33"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "108",
+              "identity_polynomial": "-200",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        2,
+        10
+      ],
+      "residual_central_charge": "4",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/6",
+                  "available_coset_ground_weight": "1/6"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 4,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 0
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 5,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "8",
+              "0"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-3/2",
+                "-755/468",
+                "-12830/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "-52/3",
+                "b": "268/3",
+                "a": "84",
+                "c0": "84",
+                "c1": "0",
+                "c2": "12",
+                "d1": "0",
+                "d2": "200/3",
+                "d3": "100",
+                "d4": "0",
+                "d5": "20/3",
+                "d6": "-20/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-52/3",
+              "identity_polynomial": "104",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-69/2",
+                "4025/156",
+                "11900/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "296",
+                "b": "496",
+                "a": "1404",
+                "c0": "1404",
+                "c1": "8",
+                "c2": "108",
+                "d1": "0",
+                "d2": "500",
+                "d3": "1500",
+                "d4": "0",
+                "d5": "200",
+                "d6": "100"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "296",
+              "identity_polynomial": "-576",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        2,
+        12
+      ],
+      "residual_central_charge": "55/14",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/7",
+                  "available_coset_ground_weight": "4/21"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/56",
+                  "available_coset_ground_weight": "297/728"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 2
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 2,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/56",
+                  "available_coset_ground_weight": "241/728"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "8",
+              "1"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-1",
+                "-203/78",
+                "-1767/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "-26",
+                "b": "122",
+                "a": "96",
+                "c0": "96",
+                "c1": "0",
+                "c2": "16",
+                "d1": "0",
+                "d2": "78",
+                "d3": "140",
+                "d4": "0",
+                "d5": "6",
+                "d6": "-8"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-26",
+              "identity_polynomial": "156",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-42",
+                "197/13",
+                "3853/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "170",
+                "b": "1126",
+                "a": "1944",
+                "c0": "1944",
+                "c1": "8",
+                "c2": "192",
+                "d1": "1",
+                "d2": "651",
+                "d3": "2829",
+                "d4": "1",
+                "d5": "218",
+                "d6": "145"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "170",
+              "identity_polynomial": "-324",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        2,
+        14
+      ],
+      "residual_central_charge": "31/8",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 3,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/8",
+                  "available_coset_ground_weight": "5/24"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/8",
+                  "available_coset_ground_weight": "35/104"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 4
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/8",
+                  "available_coset_ground_weight": "27/104"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "8",
+              "8"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "8"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-1/2",
+                "-1681/468",
+                "-18976/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "-104/3",
+                "b": "464/3",
+                "a": "108",
+                "c0": "108",
+                "c1": "0",
+                "c2": "20",
+                "d1": "0",
+                "d2": "268/3",
+                "d3": "180",
+                "d4": "0",
+                "d5": "16/3",
+                "d6": "-28/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-104/3",
+              "identity_polynomial": "208",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-93/2",
+                "1649/156",
+                "13184/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "144",
+                "b": "1800",
+                "a": "2556",
+                "c0": "2556",
+                "c1": "8",
+                "c2": "300",
+                "d1": "8",
+                "d2": "836",
+                "d3": "4212",
+                "d4": "8",
+                "d5": "240",
+                "d6": "204"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "144",
+              "identity_polynomial": "-272",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        2,
+        17
+      ],
+      "residual_central_charge": "145/38",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/19",
+                  "available_coset_ground_weight": "88/247"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/2",
+                  "available_coset_ground_weight": "-1/26"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 4
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 5,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "6/19",
+                  "available_coset_ground_weight": "17/247"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 20
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "0",
+              "8",
+              "8"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "136"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "17/4",
+                "-6311/936",
+                "-14713/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "-154/3",
+                "b": "766/3",
+                "a": "102",
+                "c0": "102",
+                "c1": "0",
+                "c2": "34",
+                "d1": "0",
+                "d2": "200/3",
+                "d3": "370",
+                "d4": "0",
+                "d5": "-10/3",
+                "d6": "-2/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-154/3",
+              "identity_polynomial": "308",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "785/156",
+                "6560/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "80",
+                "b": "-8",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "8",
+                "d2": "-12",
+                "d3": "60",
+                "d4": "0",
+                "d5": "8",
+                "d6": "12"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "80",
+              "identity_polynomial": "-144",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "867/8",
+                "9089/624",
+                "29321/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "988",
+                "b": "4214",
+                "a": "2601",
+                "c0": "2601",
+                "c1": "0",
+                "c2": "867",
+                "d1": "8",
+                "d2": "625",
+                "d3": "7599",
+                "d4": "136",
+                "d5": "-26",
+                "d6": "585"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "988",
+              "identity_polynomial": "-1960",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        3,
+        3
+      ],
+      "residual_central_charge": "22/5",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 2,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "3/10",
+                  "available_coset_ground_weight": "21/130"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 2
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 2,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "3/10",
+                  "available_coset_ground_weight": "11/130"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "1",
+              "1",
+              "1"
+            ],
+            "d4": [
+              "1",
+              "1",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "9/8",
+                "161/208",
+                "119/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "20",
+                "b": "34",
+                "a": "27",
+                "c0": "27",
+                "c1": "0",
+                "c2": "9",
+                "d1": "1",
+                "d2": "12",
+                "d3": "54",
+                "d4": "1",
+                "d5": "2",
+                "d6": "4"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "20",
+              "identity_polynomial": "-120",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "27/8",
+                "-349/208",
+                "19/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "154",
+                "a": "81",
+                "c0": "81",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "30",
+                "d3": "264",
+                "d4": "1",
+                "d5": "2",
+                "d6": "10"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "27/8",
+                "-349/208",
+                "19/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "154",
+                "a": "81",
+                "c0": "81",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "30",
+                "d3": "264",
+                "d4": "1",
+                "d5": "2",
+                "d6": "10"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        3,
+        4
+      ],
+      "residual_central_charge": "21/5",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 5,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "1/3"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 0
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/3",
+                  "available_coset_ground_weight": "5/39"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 2,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "11/40",
+                  "available_coset_ground_weight": "97/520"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 6
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 2,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "11/40",
+                  "available_coset_ground_weight": "57/520"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "d1": [
+              "1",
+              "1",
+              "9"
+            ],
+            "d4": [
+              "1",
+              "1",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "3/2",
+                "-47/156",
+                "-753/338"
+              ],
+              "predicted_leading_moments": {
+                "0": "9",
+                "b": "63",
+                "a": "36",
+                "c0": "36",
+                "c1": "0",
+                "c2": "12",
+                "d1": "1",
+                "d2": "26",
+                "d3": "79",
+                "d4": "1",
+                "d5": "1",
+                "d6": "1"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "9",
+              "identity_polynomial": "-54",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "27/8",
+                "-349/208",
+                "19/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "154",
+                "a": "81",
+                "c0": "81",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "30",
+                "d3": "264",
+                "d4": "1",
+                "d5": "2",
+                "d6": "10"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "6",
+                "-73/39",
+                "383/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "26",
+                "b": "262",
+                "a": "144",
+                "c0": "144",
+                "c1": "0",
+                "c2": "48",
+                "d1": "9",
+                "d2": "67",
+                "d3": "429",
+                "d4": "1",
+                "d5": "2",
+                "d6": "9"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "26",
+              "identity_polynomial": "-36",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        3,
+        10
+      ],
+      "residual_central_charge": "37/10",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/6",
+                  "available_coset_ground_weight": "1/6"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 3,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/20",
+                  "available_coset_ground_weight": "81/260"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 0
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "3/20",
+                  "available_coset_ground_weight": "61/260"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "1",
+              "0"
+            ],
+            "d4": [
+              "0",
+              "1",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-9/4",
+                "-235/312",
+                "115/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "-6",
+                "b": "114",
+                "a": "126",
+                "c0": "126",
+                "c1": "0",
+                "c2": "18",
+                "d1": "0",
+                "d2": "40",
+                "d3": "250",
+                "d4": "0",
+                "d5": "10",
+                "d6": "10"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-6",
+              "identity_polynomial": "36",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "27/8",
+                "-349/208",
+                "19/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "154",
+                "a": "81",
+                "c0": "81",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "30",
+                "d3": "264",
+                "d4": "1",
+                "d5": "2",
+                "d6": "10"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-69/2",
+                "4025/156",
+                "11900/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "296",
+                "b": "496",
+                "a": "1404",
+                "c0": "1404",
+                "c1": "8",
+                "c2": "108",
+                "d1": "0",
+                "d2": "500",
+                "d3": "1500",
+                "d4": "0",
+                "d5": "200",
+                "d6": "100"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "296",
+              "identity_polynomial": "-576",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        3,
+        13
+      ],
+      "residual_central_charge": "18/5",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/15",
+                  "available_coset_ground_weight": "1/5"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/15",
+                  "available_coset_ground_weight": "64/195"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 2,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/5",
+                  "available_coset_ground_weight": "17/65"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 6
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 2,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/5",
+                  "available_coset_ground_weight": "12/65"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "1",
+              "1",
+              "9"
+            ],
+            "d4": [
+              "1",
+              "1",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-9/8",
+                "-47/48",
+                "-21/13"
+              ],
+              "predicted_leading_moments": {
+                "0": "0",
+                "b": "162",
+                "a": "153",
+                "c0": "153",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "62",
+                "d3": "304",
+                "d4": "1",
+                "d5": "10",
+                "d6": "10"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "0",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "27/8",
+                "-349/208",
+                "19/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "154",
+                "a": "81",
+                "c0": "81",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "30",
+                "d3": "264",
+                "d4": "1",
+                "d5": "2",
+                "d6": "10"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-357/8",
+                "77/48",
+                "-79/3"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "1594",
+                "a": "2241",
+                "c0": "2241",
+                "c1": "8",
+                "c2": "243",
+                "d1": "9",
+                "d2": "958",
+                "d3": "3264",
+                "d4": "1",
+                "d5": "218",
+                "d6": "90"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {
+            "d5": {
+              "target": [
+                4,
+                40,
+                10,
+                4,
+                436
+              ],
+              "witness": {
+                "dimension": 13,
+                "left_Dynkin_index": 4,
+                "right_Dynkin_index": 40,
+                "irreducible_summands": [
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 5,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/5",
+                    "available_coset_ground_weight": "9/65"
+                  },
+                  {
+                    "left_dimension": 2,
+                    "right_dimension": 4,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/5",
+                    "available_coset_ground_weight": "9/65"
+                  }
+                ]
+              },
+              "DP_statistics": {
+                "states": 245,
+                "entry_cap": 20000,
+                "types": 26
+              }
+            },
+            "d6": {
+              "target": [
+                8,
+                24,
+                10,
+                20,
+                180
+              ],
+              "witness": {
+                "dimension": 14,
+                "left_Dynkin_index": 8,
+                "right_Dynkin_index": 24,
+                "irreducible_summands": [
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 3,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/15",
+                    "available_coset_ground_weight": "94/195"
+                  },
+                  {
+                    "left_dimension": 2,
+                    "right_dimension": 4,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/5",
+                    "available_coset_ground_weight": "14/65"
+                  },
+                  {
+                    "left_dimension": 3,
+                    "right_dimension": 1,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/5",
+                    "available_coset_ground_weight": "14/65"
+                  }
+                ]
+              },
+              "DP_statistics": {
+                "states": 380,
+                "entry_cap": 20000,
+                "types": 28
+              }
+            }
+          },
+          "passes": true,
+          "failures": []
+        }
+      ]
+    },
+    {
+      "levels": [
+        4,
+        10
+      ],
+      "residual_central_charge": "7/2",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/6",
+                  "available_coset_ground_weight": "1/6"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "1/8",
+                  "available_coset_ground_weight": "35/104"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/3",
+                  "available_coset_ground_weight": "5/39"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 6,
+              "right_Dynkin_index": 0
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "1/8",
+                  "available_coset_ground_weight": "27/104"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "9",
+              "0"
+            ],
+            "d4": [
+              "0",
+              "1",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-3",
+                "-755/234",
+                "-12985/1521"
+              ],
+              "predicted_leading_moments": {
+                "0": "-38",
+                "b": "182",
+                "a": "168",
+                "c0": "168",
+                "c1": "0",
+                "c2": "24",
+                "d1": "0",
+                "d2": "90",
+                "d3": "300",
+                "d4": "0",
+                "d5": "10",
+                "d6": "0"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-38",
+              "identity_polynomial": "228",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "6",
+                "-73/39",
+                "383/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "26",
+                "b": "262",
+                "a": "144",
+                "c0": "144",
+                "c1": "0",
+                "c2": "48",
+                "d1": "9",
+                "d2": "67",
+                "d3": "429",
+                "d4": "1",
+                "d5": "2",
+                "d6": "9"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "26",
+              "identity_polynomial": "-36",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-69/2",
+                "4025/156",
+                "11900/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "296",
+                "b": "496",
+                "a": "1404",
+                "c0": "1404",
+                "c1": "8",
+                "c2": "108",
+                "d1": "0",
+                "d2": "500",
+                "d3": "1500",
+                "d4": "0",
+                "d5": "200",
+                "d6": "100"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "296",
+              "identity_polynomial": "-576",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        6,
+        10
+      ],
+      "residual_central_charge": "13/4",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 2,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/6",
+                  "available_coset_ground_weight": "1/6"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "1/4",
+                  "available_coset_ground_weight": "11/52"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 8,
+              "right_Dynkin_index": 0
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/4",
+                  "available_coset_ground_weight": "7/52"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "16",
+              "0"
+            ],
+            "d4": [
+              "0",
+              "8",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-9/2",
+                "-755/156",
+                "-1460/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "-176/3",
+                "b": "824/3",
+                "a": "252",
+                "c0": "252",
+                "c1": "0",
+                "c2": "36",
+                "d1": "0",
+                "d2": "340/3",
+                "d3": "500",
+                "d4": "0",
+                "d5": "40/3",
+                "d6": "20/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-176/3",
+              "identity_polynomial": "352",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "27/2",
+                "-141/52",
+                "-1276/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "72",
+                "b": "576",
+                "a": "324",
+                "c0": "324",
+                "c1": "0",
+                "c2": "108",
+                "d1": "16",
+                "d2": "180",
+                "d3": "852",
+                "d4": "8",
+                "d5": "0",
+                "d6": "20"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "72",
+              "identity_polynomial": "-128",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-69/2",
+                "4025/156",
+                "11900/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "296",
+                "b": "496",
+                "a": "1404",
+                "c0": "1404",
+                "c1": "8",
+                "c2": "108",
+                "d1": "0",
+                "d2": "500",
+                "d3": "1500",
+                "d4": "0",
+                "d5": "200",
+                "d6": "100"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "296",
+              "identity_polynomial": "-576",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
+        9,
+        10
+      ],
+      "residual_central_charge": "67/22",
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/6",
+                  "available_coset_ground_weight": "1/6"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "6/13"
+                },
+                {
+                  "left_dimension": 5,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "6/11",
+                  "available_coset_ground_weight": "-12/143"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 20,
+              "right_Dynkin_index": 0
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 2,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 3,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/11",
+                  "available_coset_ground_weight": "29/143"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 4,
+              "right_Dynkin_index": 0
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "136",
+              "0"
+            ],
+            "d4": [
+              "0",
+              "8",
+              "0"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-27/4",
+                "-1275/104",
+                "-18400/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "-464/3",
+                "b": "1436/3",
+                "a": "378",
+                "c0": "378",
+                "c1": "0",
+                "c2": "54",
+                "d1": "0",
+                "d2": "790/3",
+                "d3": "650",
+                "d4": "0",
+                "d5": "40/3",
+                "d6": "-70/3"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "-464/3",
+              "identity_polynomial": "928",
+              "identity_passes": false
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "243/8",
+                "11835/208",
+                "29915/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "972",
+                "b": "486",
+                "a": "729",
+                "c0": "729",
+                "c1": "0",
+                "c2": "243",
+                "d1": "136",
+                "d2": "-111",
+                "d3": "1887",
+                "d4": "8",
+                "d5": "54",
+                "d6": "185"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "972",
+              "identity_polynomial": "-1928",
+              "identity_passes": false
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-69/2",
+                "4025/156",
+                "11900/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "296",
+                "b": "496",
+                "a": "1404",
+                "c0": "1404",
+                "c1": "8",
+                "c2": "108",
+                "d1": "0",
+                "d2": "500",
+                "d3": "1500",
+                "d4": "0",
+                "d5": "200",
+                "d6": "100"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "296",
+              "identity_polynomial": "-576",
+              "identity_passes": false
+            }
+          },
+          "new_large_ground_support": {},
+          "passes": false,
+          "failures": [
+            "mixed_vacuum_identity",
+            "left_vacuum_identity",
+            "right_vacuum_identity"
+          ]
+        }
+      ]
+    }
+  ],
+  "surviving_levels": [
+    {
+      "levels": [
+        1,
+        39
+      ],
+      "residual_central_charge": "170/41",
+      "witness_count": 1,
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 0,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/41",
+                  "available_coset_ground_weight": "35/123"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 7,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "12/41",
+                  "available_coset_ground_weight": "90/533"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 56
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 5,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "6/41",
+                  "available_coset_ground_weight": "127/533"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 20
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "0",
+              "0",
+              "784"
+            ],
+            "d4": [
+              "0",
+              "0",
+              "136"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "23/8",
+                "-143/48",
+                "-99/13"
+              ],
+              "predicted_leading_moments": {
+                "0": "0",
+                "b": "210",
+                "a": "129",
+                "c0": "129",
+                "c1": "0",
+                "c2": "35",
+                "d1": "0",
+                "d2": "85",
+                "d3": "295",
+                "d4": "0",
+                "d5": "10",
+                "d6": "1"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "0",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "3/8",
+                "161/624",
+                "119/507"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "10",
+                "a": "9",
+                "c0": "9",
+                "c1": "0",
+                "c2": "3",
+                "d1": "0",
+                "d2": "5",
+                "d3": "15",
+                "d4": "0",
+                "d5": "2",
+                "d6": "1"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "1203/8",
+                "-2713/16",
+                "-59"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "22186",
+                "a": "16281",
+                "c0": "16281",
+                "c1": "8",
+                "c2": "3675",
+                "d1": "784",
+                "d2": "6861",
+                "d3": "39279",
+                "d4": "136",
+                "d5": "218",
+                "d6": "793"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {
+            "d5": {
+              "target": [
+                4,
+                40,
+                10,
+                4,
+                436
+              ],
+              "witness": {
+                "dimension": 13,
+                "left_Dynkin_index": 4,
+                "right_Dynkin_index": 40,
+                "irreducible_summands": [
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 5,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "6/41",
+                    "available_coset_ground_weight": "209/533"
+                  },
+                  {
+                    "left_dimension": 2,
+                    "right_dimension": 4,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "14/41",
+                    "available_coset_ground_weight": "105/533"
+                  }
+                ]
+              },
+              "DP_statistics": {
+                "states": 245,
+                "entry_cap": 20000,
+                "types": 19
+              }
+            },
+            "d6": {
+              "target": [
+                2,
+                62,
+                1,
+                2,
+                1586
+              ],
+              "witness": {
+                "dimension": 14,
+                "left_Dynkin_index": 2,
+                "right_Dynkin_index": 62,
+                "irreducible_summands": [
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 3,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/41",
+                    "available_coset_ground_weight": "302/533"
+                  },
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 7,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "12/41",
+                    "available_coset_ground_weight": "172/533"
+                  },
+                  {
+                    "left_dimension": 2,
+                    "right_dimension": 2,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "11/41",
+                    "available_coset_ground_weight": "185/533"
+                  }
+                ]
+              },
+              "DP_statistics": {
+                "states": 284,
+                "entry_cap": 20000,
+                "types": 21
+              }
+            }
+          },
+          "passes": true,
+          "failures": []
+        }
+      ]
+    },
+    {
+      "levels": [
+        3,
+        13
+      ],
+      "residual_central_charge": "18/5",
+      "witness_count": 1,
+      "witnesses": [
+        {
+          "input_witness_index": 0,
+          "original_witness_index": 1,
+          "small_ground_witness": {
+            "c1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/15",
+                  "available_coset_ground_weight": "1/5"
+                }
+              ],
+              "dimension": 3,
+              "left_Dynkin_index": 0,
+              "right_Dynkin_index": 4
+            },
+            "d1": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 3,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "2/15",
+                  "available_coset_ground_weight": "64/195"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 2,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/5",
+                  "available_coset_ground_weight": "17/65"
+                }
+              ],
+              "dimension": 7,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 6
+            },
+            "d4": {
+              "irreducible_summands": [
+                {
+                  "left_dimension": 1,
+                  "right_dimension": 1,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "0",
+                  "available_coset_ground_weight": "5/13"
+                },
+                {
+                  "left_dimension": 2,
+                  "right_dimension": 2,
+                  "multiplicity": 1,
+                  "affine_ground_weight": "1/5",
+                  "available_coset_ground_weight": "12/65"
+                }
+              ],
+              "dimension": 5,
+              "left_Dynkin_index": 2,
+              "right_Dynkin_index": 2
+            }
+          },
+          "known_ground_moments": {
+            "c1": [
+              "0",
+              "0",
+              "8"
+            ],
+            "d1": [
+              "1",
+              "1",
+              "9"
+            ],
+            "d4": [
+              "1",
+              "1",
+              "1"
+            ]
+          },
+          "quartic_predictions": {
+            "mixed": {
+              "kind": "mixed",
+              "holomorphic_M4_coefficients": [
+                "-9/8",
+                "-47/48",
+                "-21/13"
+              ],
+              "predicted_leading_moments": {
+                "0": "0",
+                "b": "162",
+                "a": "153",
+                "c0": "153",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "62",
+                "d3": "304",
+                "d4": "1",
+                "d5": "10",
+                "d6": "10"
+              },
+              "vacuum_expected": "0",
+              "vacuum_predicted": "0",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "left": {
+              "kind": "left",
+              "holomorphic_M4_coefficients": [
+                "27/8",
+                "-349/208",
+                "19/169"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "154",
+                "a": "81",
+                "c0": "81",
+                "c1": "0",
+                "c2": "27",
+                "d1": "1",
+                "d2": "30",
+                "d3": "264",
+                "d4": "1",
+                "d5": "2",
+                "d6": "10"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            },
+            "right": {
+              "kind": "right",
+              "holomorphic_M4_coefficients": [
+                "-357/8",
+                "77/48",
+                "-79/3"
+              ],
+              "predicted_leading_moments": {
+                "0": "8",
+                "b": "1594",
+                "a": "2241",
+                "c0": "2241",
+                "c1": "8",
+                "c2": "243",
+                "d1": "9",
+                "d2": "958",
+                "d3": "3264",
+                "d4": "1",
+                "d5": "218",
+                "d6": "90"
+              },
+              "vacuum_expected": "8",
+              "vacuum_predicted": "8",
+              "identity_polynomial": "0",
+              "identity_passes": true
+            }
+          },
+          "new_large_ground_support": {
+            "d5": {
+              "target": [
+                4,
+                40,
+                10,
+                4,
+                436
+              ],
+              "witness": {
+                "dimension": 13,
+                "left_Dynkin_index": 4,
+                "right_Dynkin_index": 40,
+                "irreducible_summands": [
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 5,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/5",
+                    "available_coset_ground_weight": "9/65"
+                  },
+                  {
+                    "left_dimension": 2,
+                    "right_dimension": 4,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/5",
+                    "available_coset_ground_weight": "9/65"
+                  }
+                ]
+              },
+              "DP_statistics": {
+                "states": 245,
+                "entry_cap": 20000,
+                "types": 26
+              }
+            },
+            "d6": {
+              "target": [
+                8,
+                24,
+                10,
+                20,
+                180
+              ],
+              "witness": {
+                "dimension": 14,
+                "left_Dynkin_index": 8,
+                "right_Dynkin_index": 24,
+                "irreducible_summands": [
+                  {
+                    "left_dimension": 1,
+                    "right_dimension": 3,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/15",
+                    "available_coset_ground_weight": "94/195"
+                  },
+                  {
+                    "left_dimension": 2,
+                    "right_dimension": 4,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/5",
+                    "available_coset_ground_weight": "14/65"
+                  },
+                  {
+                    "left_dimension": 3,
+                    "right_dimension": 1,
+                    "multiplicity": 1,
+                    "affine_ground_weight": "2/5",
+                    "available_coset_ground_weight": "14/65"
+                  }
+                ]
+              },
+              "DP_statistics": {
+                "states": 380,
+                "entry_cap": 20000,
+                "types": 28
+              }
+            }
+          },
+          "passes": true,
+          "failures": []
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "level_pair_count": 2,
+    "witness_count": 2,
+    "residual_lower_bound": "18/5",
+    "minimizing_level_pairs": [
+      [
+        3,
+        13
+      ]
+    ]
+  },
+  "input_energy_filter_applied": false,
+  "input_energy_premise": "No nonvacuum affine-energy inequality used.",
+  "input_bilinear_filter_applied": true,
+  "large_ground_quartic_support_applied": true,
+  "scope": "Exact necessary joint/same-axis Jacobi constraints; no new nonvacuum energy premise. Retains every surviving small-ground witness. Each large-ground DP witness proves only support; failure exhausts its bounded finite domain. Passing does not construct a VOA.",
+  "selftest": {
+    "literal_mixed_weight_cases": 64,
+    "literal_fourth_weights_checked": true,
+    "quartic_support_controls_checked": true,
+    "functional_constants_checked": true,
+    "rank3_scalar_controls": {
+      "level1_Cauchy_gap": "32/169",
+      "level2_same_axis_identity_residual": -144,
+      "scope": "Arithmetic only; the charge-support/orthogonality proof is recorded separately in hi_cft_third_rank3_quartic_obstruction.md."
+    }
+  },
+  "input_record": {
+    "path": "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_d56_orthogonal_results.json",
+    "sha256": "c581aeb995e0a83f572deb3c26def8b6387e56d425a12883b5d342fe9840fe6d"
+  },
+  "producer_source_hashes": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_quartic_check.py": "d8998290ab757e167f7c2ab66b84a7254ef5513542e0fa6382320bd832f4f754",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_trace_check.py": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_d6_check.py": "160d952a08239fbbfe968d8c888b9c7def6c7f572a5cb2b1330a8377a6643dfd",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_joint_ground_check.py": "475302a0990c2654080d42cc1dc2876b8acc5d25d1abd975a3f9ed00e123f162"
+  },
+  "seconds": 0.0166938990005292,
+  "peak_rss_KiB": 22892
+}

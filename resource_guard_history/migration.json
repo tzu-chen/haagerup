@@ -1,0 +1,74 @@
+{
+  "purpose": "Resource guard migration; provenance only, not a numerical result",
+  "canonical_guard": {
+    "path": "/home/tzuchen/.local/bin/research-safe-run",
+    "sha256": "409db08f76729e72b7d23374490e2e4aac1221c02097a819812157bc6ab1dd23"
+  },
+  "compatibility_shim": {
+    "path": "hi_cft_safe_run.py",
+    "sha256": "e06f29f8c507f3355ab005e4bc1216dc2ef21226515fff5ce9bda7528c77517b"
+  },
+  "original_sources": {
+    "c8_reviewability_20260927/check_gate4_packet.py": {
+      "archive": "resource_guard_history/pre_global_migration/c8_reviewability_20260927/check_gate4_packet.py.txt",
+      "sha256": "a48355174393acbb22330192e676b372df8c35863646635e460f87a8c3dc088a"
+    },
+    "c8_reviewability_20260927/finite_witnesses.py": {
+      "archive": "resource_guard_history/pre_global_migration/c8_reviewability_20260927/finite_witnesses.py.txt",
+      "sha256": "9d66091acf3a91a8b2edaef11e943fdda4ecc81091682324b6b0e099fa018cb2"
+    },
+    "c8_revision_20260927/authenticate_inputs.py": {
+      "archive": "resource_guard_history/pre_global_migration/c8_revision_20260927/authenticate_inputs.py.txt",
+      "sha256": "18efdd6ba9e8c346e5293af16ff9c575f3b58e295218b423331324cdda9e1040"
+    },
+    "c8_revision_20260927/complete_ledger_command.sh": {
+      "archive": "resource_guard_history/pre_global_migration/c8_revision_20260927/complete_ledger_command.sh.txt",
+      "sha256": "206c5bb4cf41a37a71606df2156fb2bae62dfff9e9b068e08f10a52336bce801"
+    },
+    "c8_revision_20260927/final_ledger_command.sh": {
+      "archive": "resource_guard_history/pre_global_migration/c8_revision_20260927/final_ledger_command.sh.txt",
+      "sha256": "96d68ac87213479bb6e648af32f1434a54fefc21b66d51395e4aba8a7f13c68a"
+    },
+    "hi_cft_20260929_wait_crossing.py": {
+      "archive": "resource_guard_history/pre_global_migration/hi_cft_20260929_wait_crossing.py.txt",
+      "sha256": "4e45bef35bafd49d20249918ac4e27aea7c8d62c59f95604bf7e17a0a0c45ed2"
+    },
+    "hi_cft_overlap_pumps_optimize.jl": {
+      "archive": "resource_guard_history/pre_global_migration/hi_cft_overlap_pumps_optimize.jl.txt",
+      "sha256": "5e5ca2dcd4aca6e3aa7a2a4c69c79e2510c33e30b96782b0196fb91cc4a57da3"
+    },
+    "hi_cft_overlap_pumps_safe24.jl": {
+      "archive": "resource_guard_history/pre_global_migration/hi_cft_overlap_pumps_safe24.jl.txt",
+      "sha256": "c963f459b333f28d488aa1133694efeae47c8a770e157ae1c2f8e2c47075a9de"
+    },
+    "hi_cft_safe_run.py": {
+      "archive": "resource_guard_history/hi_cft_safe_run_277670ce0b7773afce64b56c8a266b7cb6fe47e056c79d5e9e84262b8674673f.py.txt",
+      "sha256": "277670ce0b7773afce64b56c8a266b7cb6fe47e056c79d5e9e84262b8674673f"
+    },
+    "hi_cft_third_window_run.py": {
+      "archive": "resource_guard_history/pre_global_migration/hi_cft_third_window_run.py.txt",
+      "sha256": "05b7f2bf7c7efc44c0b41f33362a5316d727ec940fa1fd22e399621e2e1af6cd"
+    },
+    "lean/docs/build_dependency_graph.py": {
+      "archive": "resource_guard_history/pre_global_migration/lean/docs/build_dependency_graph.py.txt",
+      "sha256": "598fd43c253a27a4c8d1cc31de7b4297dade32305e4eace62b682e699592d3ac"
+    },
+    "lean/safe_lean.py": {
+      "archive": "resource_guard_history/pre_global_migration/lean/safe_lean.py.txt",
+      "sha256": "bfbad8b1e11dcf1073c305b4212a85eda1d432f9158fac68575680884723324a"
+    }
+  },
+  "primary_lock": "/tmp/research_numerical.lock",
+  "legacy_lock": "/tmp/haagerup_numerical.lock",
+  "policy": "6 GiB per-process AS maximum; 8 GiB process-group RSS watchdog; 32 GiB host reserve; at most two CPUs/threads; one numerical job",
+  "validation": {
+    "regression_tests": 8,
+    "regression_tests_passed": true,
+    "guarded_child_probe": "refused by occupied shared lock before child; no resource limits bypassed",
+    "python_syntax": "passed",
+    "shell_syntax": "passed",
+    "independent_static_review": "passed",
+    "julia_guard": "statically reviewed; Julia not launched"
+  },
+  "historical_hash_policy": "Keep recorded hashes unchanged. Archived bytes verify historical source identity only; they do not authorize skipping current scientific-source validation or launching archived code."
+}

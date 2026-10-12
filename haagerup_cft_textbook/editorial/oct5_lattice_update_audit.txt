@@ -1,0 +1,161 @@
+Static source audit for limited October 5 textbook reconciliation
+Author: scope_lattice. No numerical execution, imports or postprocessing.
+Original drafting stage: no live l04/l06 edits had yet been made.
+Root subsequently integrated the drafts, with a separate scope review
+and minor wording/notation refinements recorded in review_oct5_scope.txt.
+
+Read completed status plus chain/theory/module handoffs. The research task
+stopped around 18:56 UTC. The textbook work is separate; no queued research
+has been resumed. Root will recheck the final source cutoff at 22:35 UTC.
+
+1. Qualified variational sequence
+
+Primary record: hi_cft_20261005_step0_r144_b1.json.
+- lines 1973–1978: unchanged threshold 1e-6; three consecutive accepted
+  steps; uncached same-point check; coordinate-frame qualification.
+- lines 1981–1982: energy -0.8453364684666173 and coordinate gradient
+  7.668421278317545e-7.
+- line 3346: component connected transfer length, in original sites,
+  154.86128466169043.
+- lines 5203–5211 and 5249 onward: fresh same-point check.
+- line 5287: stationary_at_existing_threshold true.
+The old October 1 rank144 endpoint was unqualified. The later continuation
+is a new qualified endpoint, not retroactive promotion of that old tensor.
+The draft uses energy -.84533646847 and length 154.8613 as rounded values.
+
+Primary record: hi_cft_20261005_step0_r156_b1.json.
+- lines 2229–2230: energy -0.845337245891912 and coordinate gradient
+  6.265620766267367e-5.
+- lines 6614–6617: no fresh qualifying check, null verified accepted
+  stationarity, false unchanged-threshold and final-gradient flags.
+Lower energy does not qualify the state for the stationary scaling sequence.
+The draft uses energy -.84533724589 and gradient 6.27e-5.
+
+Primary record: hi_cft_20261005_step0_scaling_r60_r144.json.
+- lines 4794–4814: ranks108,120,132,144; four-point von Neumann entropy
+  fit with conditional c1=2.098900492067317.
+- lines 4889–4932: adjacent120–132 c1=2.7560800172711177,
+  c2=2.6557860747135846, c_infinity=2.3519664134401914.
+- lines 5061–5109: adjacent132–144 c1=1.5582391954885022,
+  c2=1.5932082989444452, c_infinity=1.4787621536737219.
+The draft table rounds each to five decimal places. All 28 contiguous
+windows remain in the source, so the four-point number must not be
+presented as a selected plateau or an uncertainty interval.
+The shorter 120–132 slopes are unchanged from the completed October 1
+scaling report, independently checked in audit_lattice_saved_values.txt.
+
+2. Ward coverage and amplitude qualification
+
+Primary records:
+hi_cft_20261005_chain_ward_window_v2_N12.json:135821–135825:
+all_windows_empirically_covered true; old-state recovery true; explicit
+scope denies certified ordering and a rigorous missing-energy threshold.
+hi_cft_20261005_chain_ward_window_v2_N15.json:
+- 110407–110409: first window empirically covered;
+- 111490–111492: second window empirically covered;
+- 113335–113337: third window empirically covered;
+- 117830–117832: widest window not covered, upper returned level
+  3.4755457528917453 below the required3.5;
+- 135922–135927: aggregate coverage false, known-state recovery true,
+  same empirical-only scope.
+Thus it would be wrong to say all N15 windows fail, or that the complete
+low spectrum has been certified. The four fixed intervals are
+[1.5,2.5], [1.25,2.75], [1,3], [0.5,3.5], in the producer's relative
+descendant-level convention.
+
+The completed intermediate producer exists separately at both N12/N15.
+The result-only intermediate reader remains unexecuted; no values below
+are attributed to that reader.
+hi_cft_20261005_chain_ward_intermediate_N15.json:8820–8829:
+recipe47 in the pair-filtered averaged route, final[1.5,2.5], gives
+velocity-free joint ratio
+0.6417214096454787 + 0.006451077035342201 i
+and squared source–Ward alignment eta=0.983205094525584.
+The energy/norm ratio is 1.038620571548298 at line8845.
+The chain handoff and chain_ward_interpretation_scope.md explain the
+definitions: eta=|C|²/(WQ), joint ratio=C/(a_phi*g_phi²).
+These are different diagnostics; near-unit alignment does not force the
+ideal joint amplitude one. The l06 draft states the lesson in words
+without introducing a second ambiguous symbol J in the closing inventory.
+
+Related small editorial suggestion for root:
+l03's sentence "In the completed finite calculation, a two-candidate span
+at L=15..." now reads like the final state of the project. Its numbers
+remain valid historical data. Change the opening to "In an earlier
+two-candidate calculation at L=15..." if reconciling the surrounding
+chapter, leaving all earlier values unchanged.
+
+3. Two invariant densities
+
+Primary record: hi_cft_20261005_theory_density_rank_readout.json.
+- line1519: normalized_squared_wedge=0.4377640265246384 atN12.
+- line1725: normalized_squared_wedge=0.12861575549981327 atN15.
+- all six stored response minors are nonzero in each preceding block.
+- lines1858–1859 give the exact scope: floating finite rank test,
+  no infrared field count or directed-rounding certificate; pure stress
+  and isolated-scalar dominance are additional premises for OPE readings.
+The two response columns have entries for phi,chi,epsilon,invariant I.
+The source compares P1 with P_alpha_rho−P_alpha²_rho, with a common signed
+I source phase, not independently chosen positive phases.
+The all-six-minor test addresses a weaker temporal-polynomial improvement
+model as well as the stricter equal-source-normalized-column claim.
+The draft says nonproportional finite responses and retains the crucial
+no-two-infrared-primaries/no-two-marginal-couplings qualification.
+It does not reproduce the full diagnostic table at the chapter ending.
+The N18 all-channel wrapper was reviewed but unexecuted.
+
+4. Equal-energy charged comparisons
+
+Primary record: hi_cft_20261005_theory_equal_energy_readout.json.
+Saved aggregate normalized squared wedges include:
+- phi raw: N9 1.1968801677924102e-5 (46558),
+  N15 7.001217211970658e-6 (194198).
+- phi source-normalized: N9 4.4146957738098064e-5 (46622),
+  N15 2.7995838134102986e-5 (194262).
+- chi raw: N9 8.339555006621049e-6 (74609),
+  N15 5.468607937837584e-6 (222249).
+- chi source-normalized: N9 2.3071413123996983e-5 (74663),
+  N15 1.2920326653676723e-5 (222303).
+The completed interpretation supplies the intermediateN12 values and
+retains nonzero bare-phi discrepancies plus structurally zero chi probes.
+Small catalog aggregates do not bound every pair or prove exact rank one.
+Approximate eigenstates do not control an arbitrary unbounded commutator
+improvement. The draft makes no continuum or exact common-field claim.
+
+5. Direct physical correlations of two module branches
+
+Primary record: hi_cft_20261005_independent_module_resume_r18.json.
+- status at1328 and6233: each accepted endpoint passes fresh coordinate
+  gradient and all-charge spectrum checks;
+- seed193 fresh gradient9.835302978748377e-7, at4981/5578;
+- seed194 fresh gradient8.154898861609418e-7, copied also in the
+  correlation report at3855.
+These are the later continued endpoints. The preceding matched growth
+attempt failed stationarity in both branches and must not be substituted.
+
+Primary record: hi_cft_20261005_independent_module_correlations.json.
+- line2: fixed physical-height controls passed.
+- lines3824–3825: seed193 all-height positive-harmonic correlation at513
+  0.10500781921498549 + 9.465415249168552e-8 i.
+- lines6146–6147: seed194 corresponding correlation
+  0.44003803511595974 - 1.5033026056626708e-9 i.
+The completed module interpretation records all two-type complex matrices,
+both harmonics and residues modulo3. Seed193 has period-three phases;
+seed194 is nearly uniform at511,512,513.
+These are direct physical insertion contractions, not merely transfer
+root observations. Cross-type terms matter to the all-height observable.
+The draft does not claim an infinite-distance limit, exact root, complete
+peripheral decomposition, ground-vacuum count or bulk gap.
+The reviewed offdiagonal consumer was not run.
+
+6. Integration and scope
+
+Drafts:
+- editorial/oct5_l04_stationary_update.tex.txt replaces the existing input
+  and optionally changes the illustrative rank132 to144 immediately after it.
+- editorial/oct5_l06_inventory_update.tex.txt replaces only the cutoff
+  paragraph and adds a compact finite-evidence inventory before the
+  independent constructive-CFT discussion.
+The final continuum field-dictionary and gapped-cluster criteria stay intact.
+No research hashes/checkpoint names clutter the proposed textbook prose.
+The exact provenance and longer value inventory stay in this editorial file.

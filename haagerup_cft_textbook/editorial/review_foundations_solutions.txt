@@ -1,0 +1,48 @@
+FOUNDATION SOLUTIONS: READER AND ASSUMPTION PASS
+Reviewer: scope_foundations
+Clock checked 2026-10-05 19:01:56 UTC during this pass.
+
+Reviewed all 32 exercises and corresponding solutions in f01 through
+f06, including the original chapter definitions needed by each answer.
+No numerical/symbolic jobs, builds or typesetting were performed.
+
+No substantive mathematical error was found. The following teaching
+improvements were made directly to the authorized solutions files:
+
+* f01: give the common Fibonacci pentagon matrix after substitution,
+  making the all-entry verification explicit rather than saying the
+  remaining entries match.
+* f02: display all four ring products and the complete 13-dimensional
+  star-representation requested by the neutral-state exercise. Explain
+  why a unitary star-representation does not make a noninvertible line
+  operator a unitary matrix.
+* f03: show the index conditions j=-i and j=2l-i behind the tube count
+  171. Make the positive modular dimension premise explicit in the
+  local-versus-all-modules answer.
+* f04: display all remaining block types in S^2=I, expand the Gauss sum
+  arithmetic, and write both requested residual-sector fusion products
+  in full. The calculations were checked by hand from the displayed
+  constants, row sums and cosine orthogonality formulas.
+* f05: connect the sine ratio explicitly to the sample-shift equation;
+  add an integral-matrix example showing that a zero determinant modulo
+  a denominator-permitted prime is inconclusive; exhibit the zero
+  divisor and inverse directly in Q[t]/(t^2-1), including reduction
+  modulo five.
+* f06: derive the positive s branch and explicit order-eight radical;
+  derive the Smith matrix columns from multiplication; give an actual
+  indefinite trace counterexample to the moment-to-projection inference;
+  record why the selected extended-Haagerup root makes the reflection
+  vector real before concluding unitarity.
+
+All existing exercise and solution labels were preserved. These are
+intentional later mathematical-exposition edits AFTER the solution
+reorganization. The reorganization's archived originals and recorded
+body hashes are historical transformation evidence and were not changed.
+
+Also added the parent-requested two short source-guide paragraphs to
+chapters/r11_sources.tex, using the already reviewed primary GIS,
+BMPS, GMPPS and Morrison--Snyder papers plus the local gamma-status,
+exact order-twelve and extended-Haagerup coefficient source paths.
+The new f03 braiding/twist subsection was independently read-only
+checked: both strict hexagons, the splitting-map R convention, balancing,
+monodromy, and the nondegeneracy statement agree with f01/f04.

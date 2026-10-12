@@ -1,0 +1,115 @@
+\section{Solutions for Chapter~\ref{ch:tensor_networks}}
+
+\paragraph{Exercise~\ref{ex:MPS-schmidt}.}
+\phantomsection
+\label{sol:ex:MPS-schmidt}
+The largest two Schmidt probabilities sum to $5/6$. Their
+normalized truncation is
+\[
+ |\Psi_2\rangle=\sqrt{3/5}|00\rangle+\sqrt{2/5}|11\rangle.
+\]
+Its squared overlap with $\Psi$ is $5/6$, its phase-aligned
+vector-norm error is $\sqrt{2-2\sqrt{5/6}}$, and its energy
+is $-5/6$. The best rank-one energy is $-1/2$.
+The proof by the projector onto the left Schmidt support
+already optimizes over every subspace of the prescribed
+dimension. It therefore includes arbitrary local basis
+changes; it is not restricted to coordinate truncation in
+the original product basis.
+
+
+
+\paragraph{Exercise~\ref{ex:MPS-edge}.}
+\phantomsection
+\label{sol:ex:MPS-edge}
+The only nonzero block of $A^a$ in block row $a$ and column $b$
+is $W_{ab}$. In $A^{x_0}A^{x_1}$, the first tensor's column
+must therefore be the second tensor's row $x_1$, leaving
+$W_{x_0x_1}$ times the next block row. Induction produces
+$W_{x_0x_1}\cdots W_{x_{L-2}x_{L-1}}$ followed by the last
+row. The ordinary trace forces its last column back to $x_0$,
+giving $W_{x_{L-1}x_0}$ and the desired cyclic fiber trace.
+Any forbidden edge makes one factor zero. This proof works
+for unequal fiber dimensions, because consecutive rectangular
+maps have matching intermediate spaces.
+
+
+
+\paragraph{Exercise~\ref{ex:MPS-correlation}.}
+\phantomsection
+\label{sol:ex:MPS-correlation}
+The norm matrix is $(t^2-1)I+J$. Its eigenvalues are $t^2+2$
+on the uniform vector and $t^2-1$ twice on the color-orthogonal
+plane. The nontrivial length is
+\[
+ \xi=-\left[\log\left|\frac{t^2-1}{t^2+2}\right|\right]^{-1}.
+\]
+At $t=0$ the ratio is $-1/2$, giving alternating color
+correlations and finite length $1/\log2$. At $t=1$ it is zero;
+the uniform edge amplitudes give an ordinary product state on
+the supported three colors, with no nonzero-distance connected tail.
+At large $|t|$,
+$|\lambda|=1-3/(t^2+2)$ and $-\log|\lambda|\sim3/t^2$,
+so $\xi\sim t^2/3$ in lattice sites. This growth reflects long
+domains of equal colors. No conformal limit follows merely from this parameter
+limit.
+
+
+
+\paragraph{Exercise~\ref{ex:MPS-cat}.}
+\phantomsection
+\label{sol:ex:MPS-cat}
+Across any nontrivial cut the three distinct product branches
+are orthogonal on both sides. Their Schmidt probabilities are
+$(1/3,1/3,1/3)$, so the entropy is $\log3$. It is independent
+of interval length. The state has three ordered product components
+and a nondecaying order correlator; its standard symmetry-breaking
+parent has a finite ground-state degeneracy. Neither
+feature gives the logarithmic interval growth associated with
+a CFT central charge.
+
+
+
+\paragraph{Exercise~\ref{ex:MPS-resolvent}.}
+\phantomsection
+\label{sol:ex:MPS-resolvent}
+Normalize $(l|r)=1$ and put $\mathcal P=|r)(l|$. The fixed-point
+relations imply $\mathcal E\mathcal P=\mathcal P\mathcal E=
+\mathcal P$. Thus
+$\mathcal E^n=\mathcal P+(\mathcal E-\mathcal P)^n$ for
+$n\geq1$. Subtracting the product of one-point functions in
+a separated correlator removes the $\mathcal P$ term.
+On the complementary space the spectral radius is less than
+one for an injective clustering tensor, so the geometric
+series converges even if the map is not diagonalizable:
+\[
+ \sum_{n\geq0}(\mathcal E-\mathcal P)^n
+ =(1-\mathcal E+\mathcal P)^{-1}.
+\]
+The additional stationary direction of a cat remains after
+subtracting only one rank-one projector. A periodic peripheral
+root likewise has modulus one. The series then fails to
+converge on its coupled direction, and a connected primitive
+component must be specified before using this formula.
+
+
+
+\paragraph{Exercise~\ref{ex:MPS-scaling}.}
+\phantomsection
+\label{sol:ex:MPS-scaling}
+At $n=1,2,\infty$, the logarithmic coefficients in
+\eqref{eq:FES} are respectively $c/6,c/8,c/12$.
+Let $x_a=\log\xi_a$ and $x_b=\log\xi_b$. For
+$S_1=ax+b+u/x$, the secant is
+\[
+ \frac{S_1(x_b)-S_1(x_a)}{x_b-x_a}
+ =a-\frac{u}{x_ax_b}.
+\]
+The corresponding central-charge diagnostic is six times this
+quantity. Increasing $\xi$ by a large factor may still change
+the logarithms modestly, so the correction can drift slowly.
+This illustrative correction is not a derived law for the
+Haagerup sequence; it shows why apparent slope stability needs
+an independently justified remainder model.
+
+

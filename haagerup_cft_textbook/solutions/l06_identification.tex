@@ -1,0 +1,186 @@
+\section{Solutions for Chapter~\ref{ch:identification}}
+
+\paragraph{Exercise~\ref{ex:identification-product}.}
+\phantomsection
+\label{sol:ex:identification-product}
+Independent stress tensors make the dimension of a product
+field the sum of its factor dimensions. The mixed three-point
+function factors into two normalized two-point functions,
+giving $\lambda=1$ in the displayed product convention.
+Moreover $c_\psi=c_\phi c_\chi$, hence $I_\lambda=1$ whenever
+its denominator cubics are nonzero.
+Under independent rephasings, $\lambda$ itself can acquire a
+phase, while $|\lambda|$, all dimensions, and $I_\lambda$
+remain unchanged. Thus the invariant comparison is stronger
+than comparing a printed phase of one matrix element.
+
+
+
+\paragraph{Exercise~\ref{ex:identification-Narain}.}
+\phantomsection
+\label{sol:ex:identification-Narain}
+On a totally isotropic subspace, projection to the positive
+two-dimensional factor has zero kernel: a vector with positive
+part zero must also have negative part zero by nullness. The
+projection is injective, so the subspace has dimension at most
+two. For light scalar charges the integral pairing has absolute
+value strictly below one and must vanish. At a non-strict
+endpoint the value $\pm1$ is not excluded, so the planar
+reduction requires a separate argument.
+
+
+
+\paragraph{Exercise~\ref{ex:identification-triad}.}
+\phantomsection
+\label{sol:ex:identification-triad}
+The only nonzero charge-neutral ordered triples are the six
+permutations of $(p_1,p_2,p_3)$. Each coefficient product is
+$1/(\sqrt3)^3$, giving $2/\sqrt3$. All three external dimensions
+are equal, exactly the case excluded by the unequal-shell
+hypothesis. Arbitrary degeneracy within unequal shells was
+already allowed by that theorem; it is equality of the three
+radii that changes the geometry.
+
+
+
+\paragraph{Exercise~\ref{ex:identification-crossing}.}
+\phantomsection
+\label{sol:ex:identification-crossing}
+Write $q(z)=(1-z)^{2\delta}$ and $P(z)=q(z)g_D(z)$.
+Then $F_D(z)=P(z)-P(1-z)$, so the first and third derivatives
+at $1/2$ are respectively $2P'$ and $2P'''$. At that point,
+\[
+ \frac{q'}q=-4\delta,\qquad
+ \frac{q''}q=8\delta(2\delta-1),\qquad
+ \frac{q'''}q=-32\delta(2\delta-1)(\delta-1).
+\]
+Insert $g_D''=2g_D'+8Cg_D$ and
+$g_D'''=8(C+1)g_D'$, where $C=D(D-1)$, into the product
+rule. With the chapter's $A=1-6\delta+6\delta^2$ and
+$B=1-3\delta+2\delta^2$, this gives
+\[
+ \frac{P'''}q=8(C+A)g_D'-32\delta(3C+B)g_D,
+ \qquad \frac{P'}q=g_D'-4\delta g_D.
+\]
+Substitution into the defined functional yields
+\[
+ \frac{\mathcal L(F_D)}{g_D}
+ =(C+A-\kappa)r_D-4\delta(3C+B-\kappa),
+ \qquad r_D=g_D'/g_D.
+\]
+For the identity $D=0$, use $g_0=1$ directly rather than the
+positive-dimension integral representation.
+
+The arithmetic in the certificate is exact:
+\[
+ \frac54\frac9{10}(.083)=.093375,\qquad
+ \frac{169}{100}\frac{37}{40}(.246)=.3845595,
+\]
+and hence $.303+.093375-.3845595=.0118155>0$.
+The identity, charged, and epsilon contributions have a positive
+total under the stated lower bounds. Every additional exchange
+outside $(.16,1.75)$ has nonnegative coefficient and positive
+functional value, so crossing requires another coupled exchange
+inside that interval.
+
+Application to the chain requires a unitary local continuum
+CFT with the specified normalized Hermitian scalar and a positive,
+convergent block expansion. The proposed dimensions and OPE
+magnitudes must be limiting continuum values, or controlled
+intervals over which the strict inequality survives. Finite
+eigenvector overlaps alone do not establish those premises.
+The additional interpretation as a new two-dimensional scalar
+uses integer locality, even spin in the identical-scalar OPE,
+and the descendant analysis in the chapter. It does not require
+assuming a particular central charge or a named Haagerup CFT.
+It also does not exclude the continuum when the required extra
+scalar is present.
+
+
+
+\paragraph{Exercise~\ref{ex:identification-orbifold}.}
+\phantomsection
+\label{sol:ex:identification-orbifold}
+The oscillator formula gives
+$h_L=11/288$ and $h_R=35/288$. Their sum is $23/144$,
+but that pair is not scalar: its spin is $-1/12$.
+Nonnegative excitations and zero modes imply that a scalar
+must have both weights at least $35/288$, hence
+$\Delta\geq35/144$. Level matching or projection can
+increase this threshold; the bound need not be attained.
+
+If $a^3=1$ in the abelianization and $\chi^2=1$, then
+$\chi(a)^3=\chi(a)^2=1$, so $\chi(a)=1$. This applies
+to each determinant character independently. For the fixed
+Hermitian axis, the unit normalization
+$X=(e^{i\theta}\phi+e^{-i\theta}\phi^\dagger)/\sqrt2$
+gives $|C_{XXX}|=|c_\phi|/\sqrt2$ at a cubic extremum.
+The isometric lift contributes no group-order factor.
+Thus $|c_\phi|/\sqrt2\leq\sqrt{2/3}$ gives the stated
+$2/\sqrt3$, with no further rescaling.
+
+
+
+\paragraph{Exercise~\ref{ex:identification-Potts}.}
+\phantomsection
+\label{sol:ex:identification-Potts}
+Choose the common Potts field phase so that $c_\sigma$ is real
+and positive. The triples $w_i^3$ then contribute $c_\sigma^2a_i^3$:
+two factors contribute conjugate order cubics, whose product is
+$|c_\sigma|^2=c_\sigma^2$, and the third contributes the identity.
+The six permutations of $w_1w_2w_3$ pair each
+Potts order field with its adjoint and contribute
+$6a_1a_2a_3$. Every other triple violates an independent
+ultraviolet charge. In $C(\sigma_1,\chi,\sigma_2^\dagger)$
+only $w_1$ survives, giving $\lambda=a_1$ and hence
+$|\lambda|\leq1$. A large cubic can arise from several
+charge-conserving permutations without increasing this one
+mixed matrix element.
+
+
+
+\paragraph{Exercise~\ref{ex:identification-norm}.}
+\phantomsection
+\label{sol:ex:identification-norm}
+The conjugate of $\varphi$ is $(1-\sqrt5)/2$. Therefore
+\[
+ N(\varphi+2)=\frac{(5+\sqrt5)(5-\sqrt5)}4=5,
+ \qquad
+ N\!\left(\frac{64(\varphi+2)^3}{3}\right)
+ =\frac{64^2 5^3}{9}.
+\]
+An algebraic integer has an integer field norm, so the second
+number proves that the proposed quotient is not an algebraic
+integer. Fusion-subcategory divisibility then excludes an
+order-three pointed subcategory from the ambient category of
+defects preserving the original retained algebra, and hence
+from its smaller maximal-chiral-trivial symmetry kernel.
+It does not control a symmetry that permutes stress tensors
+and acts nontrivially on the chiral algebra. The separate
+three-cycle argument, together with the maximal graph pairing,
+is what bounds those chiral images and prevents independent
+left-right cycles.
+
+
+
+\paragraph{Exercise~\ref{ex:identification-residues}.}
+\phantomsection
+\label{sol:ex:identification-residues}
+Reduce the sums modulo one, keep values strictly between zero
+and $1/2$, and then double them. Adding zero to the Fibonacci
+residues retains only $1/5$, yielding $\Delta=2/5$. Adding
+$1/2$ retains $1/10$ and $3/10$, yielding $1/5$ and $3/5$.
+Adding $5/16$ retains $5/16$ and $9/80$, yielding $5/8$ and
+$9/40$. This gives the chapter's five-element list.
+
+For a scalar below dimension one, positive-energy integer
+grading leaves no freedom to add a nonzero integer to its
+chiral weight while remaining below $1/2$. Therefore twist
+residues impose this necessary condition. The full pairing
+can remove possible entries, and the category does not fix
+their actual multiplicities or lowest characters. An
+intermediate smaller algebra has a different representation
+category, so this residue list cannot be imposed on it by
+performing a further mathematical condensation absent from
+the physical theory.
+

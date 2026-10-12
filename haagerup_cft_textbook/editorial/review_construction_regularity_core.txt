@@ -1,0 +1,169 @@
+Regularity and common-core audit
+Reviewer: construction agent
+Timestamp: 2026-10-05 19:46:23 UTC (clock tool)
+Scope: read-only hand mathematics in c04; root-authorized concise r04
+clarification applied after review. No numerical process or compilation.
+
+Conclusion
+
+The c04 regularity argument is valid with its stated embedded-factor
+hypotheses. In particular, the proof does not assume a positive form on
+unknown U-modules, simultaneous diagonalization of partial energies, or
+tensor exactness before rigidity. The common-core lemma itself is valid.
+Its inherited-field application benefits from naming the actual closure;
+that clarification is now applied in r04. The reconstructed-sector core
+and infinite-multiplicity scope are explicitly covered by the primary
+source, not additional conjectures.
+
+1. C2 finiteness: c04:74--90 and 104--151
+
+Small explicitness improvement: write "finitely many" subalgebras in the
+definition. The displayed vector sum is conventionally finite, and the
+actual family is finite, so this is not an obstruction for U.
+
+The module-cofiniteness premise at 106--116 is correct. A precise source
+is Abe--Buhl--Dong, Proposition 5.2: an irreducible weak module over a
+C2-cofinite VOA is C2-cofinite. It applies in particular to every ordinary
+simple component module. Primary source checked:
+https://arxiv.org/pdf/math/0204021
+Li's regular-implies-C2 result is also correctly used:
+https://arxiv.org/abs/math/9807077
+
+If more mechanism is wanted, the relevant finite spanning-set argument
+is short: choose finitely many homogeneous C2 representatives. The module
+spanning theorem orders their mode indices, makes positive indices
+strictly decreasing, and bounds the number of repetitions of nonpositive
+indices. In the module C2 quotient, a leftmost mode a_(-r), r>=2, vanishes
+because a_(-r)=(T^(r-2)a)_(-2)/(r-1)!. The remaining allowed indices and
+their repetitions are bounded, hence only finitely many spanning words
+remain. This is a structural spanning theorem, not an explicit computed
+cutoff for the Haagerup algebra.
+
+The passage to V, which may have infinitely many copies of component
+simples, is also valid. For an algebraic direct sum,
+C2,A(direct_sum M_j)=direct_sum C2,A(M_j). Component-module isomorphisms
+preserve the intrinsic conformal operator; copies do not acquire arbitrary
+intrinsic energy shifts. Finitely many simple types therefore give one
+cutoff D_i, even with infinite multiplicity.
+
+For each ambient grade V_n, all eigenvectors of L0^(e_i) with eigenvalue
+>D_i lie in C2(V). Thus a vector orthogonal to C2(V) has zero coefficient
+on each such eigenvector. This gives the expectation bound separately for
+each i, without requiring C2(V) to be invariant under every partial
+energy and without requiring the partial energies to commute. The
+ambient grading of C2(V), positivity of the inherited form, and finite
+dimensionality of V_n are the precise last-step premises. All are stated
+or provided by the construction.
+
+2. Component tops: c04:167--218
+
+The lemma is correct. A useful missing teaching sentence is why an
+ordinary simple A-module has no additional vectors in Omega_A above its
+lowest space: after mode reordering, a vector killed by every lowering
+mode generates a module at its own energy and above; if it were above
+the lowest energy, this would be a proper nonzero submodule. Thus its
+full highest space is exactly its top. The condition must concern modes
+of all states, as the chapter already stresses.
+
+The finite invariant E is a module over the semisimple Zhu algebra.
+Each partial energy is diagonalizable there with the known simple top
+weights. The trace identity establishes reality/nonnegativity of the
+ambient lowest weight without choosing any Hermitian form on M. When
+the trace is zero, each partial energy is the zero operator, since its
+spectrum is nonnegative and it is diagonalizable. The unique-zero-top
+condition then places E in actual vacuum summands, where each partial
+translation annihilates it. There is no missing positivity assumption.
+
+3. Vacuum splitting: c04:259--296
+
+The finite-length generalized module category is needed before passing
+from simple-factor weights to E's generalized weights. This input is
+available from C2 cofiniteness and CFT type; it is stated in the proof.
+For teaching, explain that generalized eigenspaces are exact in a short
+exact sequence of locally finite L0-modules. Induction on a composition
+series then gives no negative weights, and exactness at weight zero
+shows E_[0] -> V_0 is onto. These are the two uses of the generalized
+grading in the vacuum-lifting argument.
+
+The zero modes preserve E_[0], all lowering modes kill it, and it is
+finite dimensional. The top lemma applies even though E's ambient L0
+could initially have Jordan blocks. Nilpotency makes its trace zero;
+the separate nonnegative component spectra force every partial L0 to
+vanish. Their vacuum translations vanish too. The vacuum-like lemma
+then supplies the section a |-> a_(-1)v, and pi(s(a))=a. Every step
+checks; the proof does not invoke semisimplicity of the U-module
+category while proving vacuum projectivity.
+
+4. Categorical conclusion: c04:300--403 (line numbers shifted slightly
+by foundation's new duality paragraph during this review)
+
+The finite abelian braided category and contragredient duality are
+available before rigidity. McRae's review gives the finite category in
+Section 2.3, the Grothendieck--Verdier identification in Section 3, and
+uses HLZ3 Proposition 4.26 for right exactness:
+https://arxiv.org/html/2108.01898
+Self-contragredience identifies the dualizing object with the unit.
+
+Foundation's newly inserted Hom(Y tensor X,1)=Hom(Y,DX) paragraph is
+correct and supplies the previously compressed explanation of why
+evaluation is nonzero. The simple unit makes evaluation an epimorphism;
+its projectivity splits that epimorphism. Cauchy completeness and
+Krull--Schmidt hold in a finite abelian category; one sentence saying
+this would finish the theorem's premise checklist.
+
+The dimension bound uses only preservation of epimorphisms by tensoring.
+Iteration is from Z=1 and yields d0(X^n)<=d0(1) C_X^n. The endomorphism
+bound is its square. It therefore supplies the factorial inequality
+required by Etingof--Penneys Theorem 1.1:
+https://arxiv.org/html/2412.17681
+The theorem does not require exact tensor products. Only after rigidity
+does the chapter invoke the two adjoints of tensoring and hence exactness.
+Hom(X,-)=Hom(1,- tensor X*) is then exact, so every object is projective.
+The order of implications is correct. No change of theorem is needed.
+
+5. Common cores: r04:196--209 and 289--325 before clarification
+
+The common-core lemma needs no core assertion for T*, as its direct-sum
+proof shows. For the inherited lattice fields, the chosen smeared
+operator is the closure of its finite-energy restriction. CKLW Section
+6 defines precisely this closure in equations (106)--(108):
+https://arxiv.org/html/1503.01260#S6
+For a smooth-energy vector xi, Q_R xi -> xi in every energy Sobolev
+norm. An energy estimate ||Y(v,f)eta||<=C||(1+L0)^r eta|| then gives
+graph convergence of Q_R xi. This identifies the finite-energy and
+smooth-domain closures. The estimate alone would not establish that
+domain as a core for an arbitrarily chosen closed extension. The concise
+r04 clarification now identifies this actual construction.
+
+For reconstruction, Henriques--Tener Definition 9.4 defines the closed
+field from its algebraic domain, Theorem 9.5 identifies it with the
+represented net field, and Remark 9.8 extends the results to infinite
+multiplicity and nondiscrete spectrum:
+https://arxiv.org/html/2507.20735v3#S9
+Thus bounded-energy M is the relevant core before ordinaryness. The
+book's projection argument uses finite multiplicity only in the chosen
+ordinary summand S, not in the whole net sector. The r04 clarification
+now names those source components, making the scope auditable. No new
+analytic assumption was added.
+
+6. Root's c05 insertions: lines 755--796 and 892--928
+
+Both reviewed independently and passed. FI(alpha)=FI(alpha^2) gives
+the two norm-three multiplicity vectors and their inner product three;
+this forces the same three distinct center simples. Adjunction gives
+one alpha and one alpha^2 in each forgotten object, and centrality
+equates the rho-orbit multiplicities. The third indicator forces cubic
+twists; the first indicator and the disjoint real/imaginary quadratic
+fields are both necessary to obtain one of each twist and b_j=m. The
+new text now supplies both steps rather than inferring one-of-each from
+the third indicator alone.
+
+The conductor-forty averaging argument correctly avoids assuming an
+orbit-constant original multiset. It keeps rational and quadratic costs
+separate. Equality permits only the negative primitive-forty orbit for
+quadratic cost and -1 for rational cost. Squaring the eight orbit roots
+gives the primitive-twenty roots once each, with sum zero. The explicitly
+stated field condition on the second moment is exactly what makes
+averaging multiply the original second moment by the group order.
+The m=t=2 contradiction and the m>=4 inequalities check. No repair is
+needed to these insertions.

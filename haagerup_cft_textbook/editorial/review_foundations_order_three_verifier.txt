@@ -1,0 +1,100 @@
+Static review of check_order_three.py
+Reviewer: scope_foundations
+Clock read: 2026-10-05 20:33:59 UTC
+Method: source reading and hand algebra only. The script was not executed or
+imported. No numerical job was launched.
+
+Disposition: mathematical and allocation review PASS. One small runtime
+robustness repair is recommended before guarded admission: explicitly reject
+Python optimization, because every mathematical check currently uses assert.
+
+Required robustness repair
+--------------------------
+check_order_three.py:83-105 and 107-120
+With PYTHONOPTIMIZE set, or python -O/-OO, all assertions disappear but the
+report still says all_residual_normal_forms_zero=True. Add at the start of
+main(), before checks:
+
+    if not __debug__:
+        raise SystemExit("Do not use Python optimization; checks require assertions.")
+
+This is sufficient for the proposed fixed command. Converting assertions to
+explicit checks would also be valid, but is unnecessary for this small script.
+
+Exact arithmetic and denominators
+--------------------------------
+The ordered basis is (1,delta,p,delta*p). Writing elements A+Bp with
+A,B in Z[delta]/(delta^2-3delta-1), multiplication is
+  (A+Bp)(C+Dp) = AC-delta*BD + (AD+BC+BD)p.
+Lines 26-30 and 66-75 implement these two reductions exactly. Both relations
+are monic, so the displayed four normal-form coefficients give a free
+rank-four Z-module, regardless of whether any field interpretation is used.
+Every operation preserves integer coefficients, and zero equality compares
+all four coefficients. Python's initial integer zero in sum() is handled by
+__radd__; no division or floating arithmetic enters the identities.
+
+The B matrix at 92-95 is exactly f05 equation eq:HI-n3-matrix, with q=1-p.
+For tau=delta-1, hand reduction gives
+  delta*(delta-3)=1,
+  tau^2=delta+2,
+  tau^2*(delta-3)=2*delta-5,
+  tau^3=4*delta-1,
+  tau^3*(delta-3)=7-delta,
+  tau*(delta-2)=3.
+The last identity proves tau invertible after passing to Q, which justifies
+recovering A=B/tau in every complex embedding. It is not asserted that tau
+is a unit in the integral coefficient algebra itself.
+
+Identity-by-identity comparison with chapters/f05_arithmetic.tex
+-------------------------------------------------------------
+Rotation, line 108: indices (g,h), (-h,g-h), (h-g,-g) match exactly.
+Axis, line 109: sum_h B[h,0]=-tau*(delta-3), namely tau times the A-axis
+identity. Both sides reduce to delta-4.
+Quadratic, lines 112-114: multiplying the chapter identity by tau^2 gives
+  sum_m B[m+g,h] B[h,m]
+    = (delta+2)*1_(g=0) - (2*delta-5)*1_(h=0).
+All indices and signs agree.
+Cubic, lines 118-120: multiplying the chapter identity by tau^3 gives
+  sum_m B[m,g+h] B[g,m+k] B[h,m+ell]
+    = tau*B[g+ell,k] B[h+k,ell] - (7-delta)*1_(g=h=0).
+All four index placements agree. Python's g == h == 0 means precisely
+g=0 and h=0. The correction is independent of k and ell; all nine values
+of (k,ell) are checked when g=h=0. Reducing b() indices modulo three handles
+negative and overflowing indices correctly.
+Coverage is nine rotation triples, one axis sum, nine quadratic equations,
+and all 3^4=81 cubic equations. The four diagnostic tables contain actual
+cubic left sides, not residuals, and their report key accurately says so.
+
+Execution path and memory
+-------------------------
+The source imports only Python standard-library modules. There is no exec,
+eval, subprocess call, process/thread creation, networking, external algebra
+library, recursive algorithm, or user-sized input. The only substantive
+arrays are the nine-entry B matrix and four 3-by-3 diagnostic tables. Each
+entry holds four small integer coefficients; products involve at most three
+B entries. itertools.product is traversed without materializing a larger
+product. setdefault constructs occasional unused 3-by-3 defaults, but these
+are tiny, temporary, and do not accumulate.
+The three provenance read_bytes calls inspect files whose current sizes are:
+  verifier: 5,737 bytes;
+  f05 chapter: 31,539 bytes;
+  canonical guard: 29,146 bytes.
+The report is small fixed-size JSON written once, after checks finish.
+These allocations support the stated arithmetic-storage estimate below
+1 MiB. The claimed interpreter RSS below 32 MiB is a plausible estimate,
+not a measurement made by this review. The proposed guarded 128 MiB address
+space/reservation and one CPU are conservative for this inspected path;
+root must still obtain admission from the canonical guard. The script checks
+the guard marker and one-CPU affinity but does not itself replace the guard's
+memory/admission controls.
+
+Scope
+-----
+Passing this checker proves the displayed finite order-three coefficient
+identities exactly in the quotient algebra, and hence after choosing the
+negative delta root and the specified positive p root. It does not prove the
+uniform analytic theorem, positivity, categorical reconstruction, or a CFT.
+The report's explicit scope sentence is correct. The chapter's statement
+that the quadratics alone do not imply the cubics remains logically correct;
+if a successful run is mentioned there, describe this finite independent
+cubic check locally rather than upgrading any all-order construction claim.

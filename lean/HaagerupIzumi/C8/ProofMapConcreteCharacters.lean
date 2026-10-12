@@ -28,7 +28,6 @@ multiplicities of the twelve simples in the four unmixed lattice modules.
 | node | concrete statement |
 |---|---|
 | `initialGrades` | `R.initialGrades`, and `dim U₀ = 1` (`a o 0 = 1`, CFT type) |
-| `projectiveVacuum` | `R.projectiveVacuum`, and the nonvacuum simples `b, a, c₀` of trivial twist have no weight-zero vectors (`a l 0 = 0`; strict positivity of nonvacuum lowest weights) |
 | `characterVector` | `F = Ξ₀` and `a l n = e₀ l n` for all `l, n`: the character vector is the `γ = 0` Evans–Gannon vector |
 | `lowestWeights` | `hw l = lowestWeight l` and `td l = topDim l` (the table at line 4178) |
 | `unmixedRestrictions` | the modules `(0, ±1)` restrict to `c₁` and `(±1, 0)` to `c₂` |
@@ -48,11 +47,13 @@ of `hw, td` and of the `q^{2/3}` coefficient of `ch U` (definitions), the Evans�
 fundamental matrix (`EvansGannon`, external), and, for `L_unmixed`, the lattice data of the four
 unmixed lattice modules (certificate) with the bookkeeping of their semisimple restriction
 (manuscript step).  Inputs that the manuscript takes from a premise node of the arrow are stated
-conditionally on that node of `R` (`modularData`, `stronglyRational`, `certDiscriminant`, and the
-opaque parts of `projectiveVacuum`, `initialGrades`).
+conditionally on that node of `R` (`modularData`, `stronglyRational`, `certDiscriminant`,
+`projectiveVacuum`, which this file does not override, and the opaque part of `initialGrades`).
 
-The index type `Label` of the twelve simple `U`-modules is the one of `Characters`; the combined
-file `ProofMapConcrete` uses it also for the top bound and for strong unitarity.
+The index type `Label` of the twelve labels of the Evans–Gannon table is the one of `Characters`.
+The top bound and strong unitarity are stated over the type `Simp` of simple `U`-modules
+(`ProofMapSimples`); the combined file `ProofMapConcrete` identifies `Simp` with `Label` by
+`SimpleLabels` (conditional on `modularData`).
 -/
 
 namespace HaagerupIzumi.C8.ProofMap
@@ -285,7 +286,6 @@ character nodes made concrete (see the module docstring for the table). -/
 def characterNodes (R : Nodes) (D : ClosureData A) (u : V) (C : CharacterData) : Nodes :=
   { concreteNodes R D u with
     initialGrades := R.initialGrades ∧ C.a .o 0 = 1
-    projectiveVacuum := R.projectiveVacuum ∧ ∀ l, (l = .b ∨ l = .a ∨ l = .c0) → C.a l 0 = 0
     characterVector := C.F = C.Ξ₀ ∧ ∀ l n, (C.a l n : ℂ) = C.e₀ l n
     lowestWeights := ∀ l, C.hw l = lowestWeight l ∧ C.td l = topDim l
     unmixedRestrictions :=
@@ -322,8 +322,14 @@ structure CharacterInputs (R : Nodes) (D : ClosureData A) (u : V) (C : Character
   /-- [external] Zhu: absolute convergence of the characters on `ℍ`. -/
   summ : R.stronglyRational → ∀ l (y : ℝ), 0 < y → Summable fun n : ℕ =>
     ‖(C.a l n : ℂ)‖ * Real.exp (-2 * Real.pi * ((n : ℝ) + (((twistExp l : ℚ) : ℝ) - 1 / 3)) * y)
-  /-- [definitional] `hw l`, `td l` are the lowest weight and top dimension of `M_l`. -/
-  low : ∀ l, (∀ n : ℕ, (n : ℚ) + twistExp l < C.hw l → C.a l n = 0) ∧
+  /-- [definitional] `hw l` is the lowest weight of `M_l`: the coefficients of `ch M_l` below it
+  vanish. -/
+  below : ∀ l, ∀ n : ℕ, (n : ℚ) + twistExp l < C.hw l → C.a l n = 0
+  /-- [definitional] `td l` is the dimension of the top space of `M_l`, which is nonzero; that the
+  lowest weight is one of the exponents `t_l + ℤ_{≥0}` of the expansion uses the twist congruence
+  `hw l ∈ t_l + ℤ` ([external] Huang, `θ = e^{2πiL(0)}`, node `modularData`) and `hw l ≥ 0` (node
+  `projectiveVacuum`). -/
+  low : R.projectiveVacuum → R.modularData → ∀ l,
     (∃ n : ℕ, (n : ℚ) + twistExp l = C.hw l ∧ C.a l n = C.td l) ∧ 0 < C.td l
   /-- [definitional] the `q^{2/3}` coefficient of `ch U` is `dim U₁` (with `U = D.U u`). -/
   U1 : C.a .o 1 = Module.finrank k ↥(D.U u ⊓ A.grade 1)
@@ -350,23 +356,30 @@ structure CharacterInputs (R : Nodes) (D : ClosureData A) (u : V) (C : Character
 /-- **`L_characters`** (Section `sec:characters`, Lemma `lem:haagerup-character-unique`,
 lines 4136–4190).
 
-* Concrete nodes: `weightOne` (`U₁ = K`, `dim K = 6`, from properness), `projectiveVacuum`
-  (no weight-zero vectors in `b, a, c₀`), `initialGrades` (`dim U₀ = 1`), `characterVector`,
-  `lowestWeights`.  `modularData` and `stronglyRational` stay opaque; the inputs drawn from them
-  (and from the opaque parts of `projectiveVacuum`, `initialGrades`) are applied to them.
+* Concrete nodes: `weightOne` (`U₁ = K`, `dim K = 6`, from properness), `initialGrades`
+  (`dim U₀ = 1`), `characterVector`, `lowestWeights`.  `modularData`, `projectiveVacuum` and
+  `stronglyRational` stay opaque here; the inputs drawn from them (and from the opaque part of
+  `initialGrades`) are applied to them.  The strict positivity of the nonvacuum lowest weights
+  enters as `hpos` (no weight-zero vectors in `b, a, c₀`), proved in `ProofMapConcrete` from the
+  concrete `projectiveVacuum` and the identification of the simples with the labels
+  (`ProofMapConcreteVacuum.noWeightZero_of_vacuum`).
 * Concrete theorems: `CharacterUniqueness.haagerup_character_unique` (no invariant vector, then
   `pole_cancellation`) gives `F = Ξ₀ + γ Ξ₃` with `γ` the actual polar coefficient of the `d₃`
   coordinate; `qseries_coeff_eq_zero` compares coefficients; `Characters.gamma_eq_zero` turns
   `dim U₁ = 6 + 13γ` and `dim U₁ = 6` into `γ = 0`.
-* Remaining inputs: the fields `fin`, `T_diag`, `S_ne`, `hol`, `cov`, `qexp`, `summ`, `low`,
-  `U1`, `EG` of `CharacterInputs` (tagged there). -/
+* Remaining inputs: the fields `fin`, `T_diag`, `S_ne`, `hol`, `cov`, `qexp`, `summ`, `below`,
+  `low`, `U1`, `EG` of `CharacterInputs` (tagged there), and `hpos` (no weight-zero vectors in
+  `b, a, c₀`, conditional on `modularData` and `projectiveVacuum`; discharged in
+  `ProofMapConcrete` by `noWeightZero_of_vacuum`). -/
 theorem characters_arrow (R : Nodes) (D : ClosureData A) (u : V) (C : CharacterData)
-    (H : CharacterInputs R D u C) :
+    (H : CharacterInputs R D u C)
+    (hpos : R.modularData → R.projectiveVacuum → ∀ l, (l = .b ∨ l = .a ∨ l = .c0) → C.a l 0 = 0) :
     (characterNodes R D u C).modularData → (characterNodes R D u C).weightOne →
       (characterNodes R D u C).projectiveVacuum → (characterNodes R D u C).initialGrades →
       (characterNodes R D u C).stronglyRational →
       (characterNodes R D u C).characterVector ∧ (characterNodes R D u C).lowestWeights := by
-  rintro hmd ⟨hW1, hW2, -⟩ ⟨hpvR, hpv⟩ ⟨hinitR, hinit⟩ hsr
+  rintro hmd ⟨hW1, hW2, -⟩ hpvR ⟨hinitR, hinit⟩ hsr
+  have hpv := hpos hmd hpvR
   have hfin := H.fin hsr
   have hT := H.T_diag hmd hinitR
   have hS := H.S_ne hmd hsr
@@ -374,7 +387,8 @@ theorem characters_arrow (R : Nodes) (D : ClosureData A) (u : V) (C : CharacterD
   have hFcov := H.cov hsr
   have hFq := H.qexp hpvR hmd
   have ha := H.summ hsr
-  have hlow := H.low
+  have hbelow := H.below
+  have hlow := H.low hpvR hmd
   have hU1 := H.U1
   have EG := H.EG hmd
   -- `γ`: the actual polar coefficient of the twist-`2/13` coordinate
@@ -463,7 +477,7 @@ theorem characters_arrow (R : Nodes) (D : ClosureData A) (u : V) (C : CharacterD
     simp
   refine ⟨⟨hFΞ, hcoef⟩, fun l => ?_⟩
   -- the table of lowest weights and top dimensions
-  obtain ⟨hbelow, ⟨n₀, hn₀, hatd⟩, htdpos⟩ := hlow l
+  obtain ⟨⟨n₀, hn₀, hatd⟩, htdpos⟩ := hlow l
   obtain ⟨hz, htop⟩ := EG.table l
   have hlt : ∀ n < lwIndex l, C.a l n = 0 := fun n hn => by
     have h := hcoef l n
@@ -483,7 +497,7 @@ theorem characters_arrow (R : Nodes) (D : ClosureData A) (u : V) (C : CharacterD
         rw [← hn₀]
         have : ((lwIndex l : ℕ) : ℚ) < n₀ := by exact_mod_cast h
         linarith
-      have h0 := hbelow (lwIndex l) hlt'
+      have h0 := hbelow l (lwIndex l) hlt'
       omega
   subst hn₀eq
   refine ⟨?_, ?_⟩
@@ -529,12 +543,13 @@ nodes, `properness_arrows` also applies to it; so in `Inputs (characterNodes R D
 fields `L_gates`, `L_recursive`, `L_weightOne`, `L_proper`, `L_characters`, `L_unmixed` need
 not be assumed. -/
 theorem character_arrows (R : Nodes) (D : ClosureData A) (u : V) (C : CharacterData)
-    (H : CharacterInputs R D u C) :
+    (H : CharacterInputs R D u C)
+    (hpos : R.modularData → R.projectiveVacuum → ∀ l, (l = .b ∨ l = .a ∨ l = .c0) → C.a l 0 = 0) :
     let N := characterNodes R D u C
     (N.modularData → N.weightOne → N.projectiveVacuum → N.initialGrades → N.stronglyRational →
       N.characterVector ∧ N.lowestWeights) ∧
     (N.lowestWeights → N.stronglyRational → N.certDiscriminant → N.unmixedRestrictions) :=
-  ⟨characters_arrow R D u C H, unmixed_arrow R D u C H⟩
+  ⟨characters_arrow R D u C H hpos, unmixed_arrow R D u C H⟩
 
 #print axioms qseries_coeff_eq_zero
 #print axioms characters_arrow

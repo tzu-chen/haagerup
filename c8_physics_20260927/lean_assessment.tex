@@ -1,0 +1,391 @@
+\section{Additional assessment of the physics revision}
+\label{sec:physics-lean-assessment}
+
+The new physics sections provide much more explicit mathematical data:
+character coefficients, Virasoro-primary multiplicities, spin-resolved
+spectra, thermal intervals, low-weight couplings, rational correlators,
+fusion coefficients, defects, and boundary partition functions. None
+of the Python producers in \artifact{c8_physics_20260927/} is a Lean
+proof or has a Lean-verified implementation. Their exact arithmetic
+and internal checks improve reviewability and supply concrete inputs
+for formalization; they do not enlarge the scopes of the five existing
+CFT declarations listed in the preceding assessment. A separate new
+file adds the two small thermal-comparison lemmas stated below, bringing
+the selected CFT coverage to seven principal declarations in three
+files. The five baseline declarations retain their original scope.
+
+\subsection{Current manuscript anchors and historical concordance}
+
+The linked numbers, titles, and pages in the following table refer to
+the current manuscript. The first column is only a concordance for
+readers of the archived 55-page PDF; its former section numbers are
+not operative references in this guide. The current document places
+the mathematical development in appendices after the physics sections.
+
+\begin{longtable}{@{}P{0.09\linewidth}P{0.59\linewidth}P{0.24\linewidth}@{}}
+\toprule
+Archived label & Current manuscript title & Current anchor\\
+\midrule\endfirsthead
+\toprule Archived label & Current manuscript title & Current anchor\\
+\midrule\endhead\bottomrule\endfoot
+1 & \msnameref{sec:statement}
+& Section~\msref{sec:statement}, p.~\mspageref{sec:statement}\\
+2 & \msnameref{sec:construction}
+& Appendix~\msref{sec:construction}, p.~\mspageref{sec:construction}\\
+3 & \msnameref{sec:finite}
+& Appendix~\msref{sec:finite}, p.~\mspageref{sec:finite}\\
+4 & \msnameref{sec:gate4}
+& Appendix~\msref{sec:gate4}, p.~\mspageref{sec:gate4}\\
+5 & \msnameref{sec:gate5}
+& Appendix~\msref{sec:gate5}, p.~\mspageref{sec:gate5}\\
+6 & \msnameref{sec:properness}
+& Appendix~\msref{sec:properness}, p.~\mspageref{sec:properness}\\
+7 & \msnameref{sec:regularity}
+& Appendix~\msref{sec:regularity}, p.~\mspageref{sec:regularity}\\
+8 & \msnameref{sec:branching}
+& Appendix~\msref{sec:branching}, p.~\mspageref{sec:branching}\\
+9 & \msnameref{sec:characters}
+& Appendix~\msref{sec:characters}, p.~\mspageref{sec:characters}\\
+10 & \msnameref{sec:analytic-unitarity}
+& Appendix~\msref{sec:analytic-unitarity}, p.~\mspageref{sec:analytic-unitarity}\\
+11 & \msnameref{sec:analytic-category}
+& Appendix~\msref{sec:analytic-category}, p.~\mspageref{sec:analytic-category}\\
+12 & \msnameref{sec:analytic-full-theory}
+& Appendix~\msref{sec:analytic-full-theory}, p.~\mspageref{sec:analytic-full-theory}\\
+13 & \msnameref{sec:comparison}
+& Appendix~\msref{sec:comparison}, p.~\mspageref{sec:comparison}\\
+A & \msnameref{sec:ledger}
+& Appendix~\msref{sec:ledger}, p.~\mspageref{sec:ledger}\\
+B & \msnameref{sec:formalization}
+& Appendix~\msref{sec:formalization}, p.~\mspageref{sec:formalization}\\
+C & \msnameref{sec:compilation}
+& Appendix~\msref{sec:compilation}, p.~\mspageref{sec:compilation}\\
+\end{longtable}
+
+The added physics material has the following current anchors.
+``Focused'', ``substantial'', and ``foundational'' retain the
+dependency-based meanings stated earlier.
+
+\begin{longtable}{@{}P{0.70\linewidth}P{0.21\linewidth}@{}}
+\toprule
+Current section title & Current anchor\\
+\midrule\endfirsthead
+\toprule Current section title & Current anchor\\
+\midrule\endhead\bottomrule\endfoot
+\msnameref{sec:physics-spectrum}
+& Section~\msref{sec:physics-spectrum}, p.~\mspageref{sec:physics-spectrum}\\
+\msnameref{sec:physics-correlators}
+& Section~\msref{sec:physics-correlators}, p.~\mspageref{sec:physics-correlators}\\
+\msnameref{sec:physics-couplings}
+& Section~\msref{sec:physics-couplings}, p.~\mspageref{sec:physics-couplings}\\
+\msnameref{sec:physics-defects}
+& Section~\msref{sec:physics-defects}, p.~\mspageref{sec:physics-defects}\\
+\msnameref{sec:physics-H3}
+& Section~\msref{sec:physics-H3}, p.~\mspageref{sec:physics-H3}\\
+\msnameref{sec:physics-data-guide}
+& Section~\msref{sec:physics-data-guide}, p.~\mspageref{sec:physics-data-guide}\\
+\end{longtable}
+
+\subsection{Characters, Virasoro primaries, and the full spectrum}
+
+Section~\msref{sec:physics-spectrum},
+\emph{\msnameref{sec:physics-spectrum}}, is in
+\artifact{c8_physics_20260927/spectrum.tex}. Its producer
+\artifact{spectrum.py} checks the published initial coefficients,
+the rational matrix recurrence, nonnegative integrality through the
+requested grade, descendant reconstruction, parity of the resulting
+spin spectrum, and an independent $E_4/\eta^8$ identity. The default
+data include 25 coefficients for each of twelve characters, complete
+full-CFT spectra through $\Delta=24$, and an independent $E_8$ spectrum.
+These are finite arithmetic conclusions conditional on the input
+matrices and their character interpretation.
+
+\begin{longtable}{@{}P{0.26\linewidth}P{0.64\linewidth}@{}}
+\toprule
+Physics argument & Missing Lean theorem and difficulty\\
+\midrule\endfirsthead
+\toprule Physics argument & Missing Lean theorem and difficulty\\
+\midrule\endhead\bottomrule\endfoot
+Matrix recurrence
+& Define the twelve-dimensional exponent/characteristic data and a
+finite rational recurrence, prove nonzero denominators, and prove that
+its finite output agrees with the formal differential equation.
+This is focused to substantial. Identifying the resulting vector with
+the actual VOA trace functions still requires the foundational
+character theorem assessed under Appendix~\msref{sec:characters}.\\
+Virasoro-primary subtraction
+& The finite Euler-product convolution and its inverse are focused.
+Their interpretation needs the irreducible $c=8$ Virasoro characters,
+the Kac determinant or an equivalent irreducibility theorem, and the
+unitary highest-weight decomposition of each module. These are
+substantial to foundational representation-theoretic inputs.\\
+Complete spin-resolved cutoff
+& Given nonnegative lowest weights and coefficient functions, prove
+the product formula and that no grade above $N$ contributes to
+$\Delta\leq N$. The finite sums, parity identity, and relevant/marginal
+counts are focused. The tensor-product Hilbert-space interpretation
+and the diagonal modular invariant are additional premises.\\
+$E_8$ comparison and invariant counts
+& A finite identity between the oscillator series and the selected
+character combination is focused. It does not identify the extension
+algebra. Counts $1488=6\cdot248$ for one chiral Haagerup action and
+$36=6^2$ for both independent actions additionally require the precise
+invariant-space theorem. That categorical interpretation belongs to
+the separate defect formalization below.\\
+\end{longtable}
+
+There is useful existing power-series infrastructure.
+\leanid{PowerSeries.coeff_mk} and \leanid{PowerSeries.coeff_mul} occur
+in \artifact{Mathlib/RingTheory/PowerSeries/Basic.lean}.
+The file
+\artifact{Mathlib/Combinatorics/Enumerative/Pentagonal/PowerSeries.lean}
+contains the Euler-product development, including
+\leanid{PowerSeries.coeff_prod_one_sub_X_pow_eventually_eq} and
+\leanid{PowerSeries.WithPiTopology.hasProd_one_sub_X_pow}.
+These declarations were read in the pinned checkout. They support
+formal coefficient manipulations; they do not state that these
+coefficients count this CFT's Virasoro primaries.
+
+An economical formalization would first take an abstract sequence of
+graded dimensions and prove the descendant-removal and tensor-product
+counting lemmas. A second layer would connect that sequence to the
+Evans--Gannon recurrence. The final interpretation theorem must connect
+both layers to the actual modules. Merely importing the printed
+integers as definitions and proving that their sum is $2941$ would
+check arithmetic but leave the substantial spectral assertion open.
+
+\subsection{Thermal bounds and their numerical intervals}
+
+Proposition~\msref{prop:physics-modular-tail}
+(p.~\mspageref{prop:physics-modular-tail}) proves the modular heavy-tail
+estimate in Section~\msref{sec:physics-spectrum}. For
+$E=\Delta-2/3$, an exact cutoff $D>2/3$, and $b'=4\pi^2/b$, it uses
+\[
+ Z=L_D+H_D,\qquad Z(b)=Z(b'),\qquad
+ H_D(b)\leq e^{-(b-b')(D-2/3)}H_D(b')
+\]
+to bound the tail at $b>2\pi$. Two real-number steps are now checked in
+\artifact{lean/HaagerupIzumi/CFT/PhysicsBounds.lean}, in namespace
+\leanid{HaagerupIzumi.CFT}:
+\begin{itemize}
+\item \leanid{modular_heavy_tail_comparison} assumes
+$L+H=L_d+H_d$, $H\leq rH_d$, and $0\leq r<1$, and proves
+$H\leq r(L-L_d)/(1-r)$;
+\item \leanid{selfdual_tail_first_moment_comparison} assumes
+$E_{\rm cut}>0$ and $E_{\rm cut}H\leq L'$, and proves
+$H\leq L'/E_{\rm cut}$.
+\end{itemize}
+The successful guarded compiler record is
+\artifact{c8_physics_20260927/physics_lean.log}, with sampled peak
+group RSS $1.549$~GiB. Both axiom reports contain only
+\leanid{propext}, \leanid{Classical.choice}, and \leanid{Quot.sound};
+the source contains neither \texttt{sorry} nor new axioms. The
+nonnegative contraction range is retained explicitly, although the
+first rearrangement only needs $r<1$ once its comparison is supplied.
+
+These lemmas do not derive the comparison from a spectral sum or
+identify $r$ with the exponential in the application. The actual
+infinite-sum theorem remains more substantial: it needs convergence,
+termwise positivity, completeness of the finite cutoff, and the
+modular functional equation. Its self-dual form also needs
+differentiability and the identity $Z'(2\pi)=0$. The first and second
+moment bounds require justified moment convergence and the elementary
+optimization of $E^ke^{-aE}$ on a positive half-line.
+
+The Python output is a conditional interval certificate. Its positive
+spectrum and modular invariance are mathematical premises, not facts
+established by evaluating finitely many coefficients. The implementation
+uses directed decimal arithmetic, a fixed rational enclosure of $\pi$,
+and correctly rounded exponential/logarithm functions; the displayed
+six-decimal table is accepted only when every rigorous interval lies
+within $10^{-6}$ of its printed value. None of that implementation is
+currently kernel checked.
+
+For a Lean version, a small rational interval checker with proved
+exponential and logarithm enclosures would be preferable to treating
+Python's decimal library as an axiom. One can separately formalize the
+analytic tail theorem over the real numbers and feed it certified
+finite moment bounds. Existing real analysis and infinite-sum
+infrastructure is relevant, but the complete pipeline from characters
+to the saved numerical intervals is new work. The two checked
+implications are the completed local algebraic part; sound interval
+evaluation and its analytic interpretation
+are substantial. The CFT assumptions still inherit the foundational
+requirements of the earlier sections.
+
+\subsection{Currents, lattice correlators, and low-weight couplings}
+
+The correlator and coupling material in
+Sections~\msref{sec:physics-correlators} and
+\msref{sec:physics-couplings} is supplied by
+\artifact{c8_physics_20260927/correlators.tex} and
+\artifact{c8_physics_20260927/couplings.tex}. Its data distinguish
+direct finite lattice-mode products, rational identities reconstructed
+from saved singular OPEs, and coefficients completed using current
+Ward identities. Those three forms of evidence have different
+interpretation obligations; the final reports specify the supplied
+bases and direct probes.
+
+In particular the completed weight-two dataset in
+\artifact{c8_physics_20260927/full_weight_two/} uses all $113$ chiral
+Virasoro primaries. Its saved report records $1{,}442{,}897$ ordered
+tensor slots, $18{,}365$ nonzero entries, $51{,}076$ current Ward
+checks, and $33$ additional direct lattice-mode probes beyond the
+seed calculation. This supplies substantially more explicit input
+than a list of summed OPE coefficients. Those successful Python
+checks remain separate from the Lean obligations below.
+
+The following finite targets are realistic once the coefficient
+algebra and basis conventions are represented in Lean:
+\begin{itemize}
+\item singular current brackets, levels, gauge factors, pairings, and
+the orthogonality and positivity of the stated finite Gram matrices;
+\item polynomial identities obtained by clearing denominators in
+the displayed rational four-point functions, with collision loci
+excluded when interpreting them as functions;
+\item exact extraction of three-point coefficients and their squared
+unit-norm values, retaining the specified invariant/Hermitian pairing
+and adjoint conventions;
+\item the finite Ward recursion, its compatibility with both current
+factors, and uniqueness of its completion from the supplied seed slice;
+\item the completeness of the chosen low-weight primary subspace,
+provided its exact rank and descendant-complement certificates.
+\end{itemize}
+These are substantial finite algebra rather than a need to formalize
+all CFT at once. The bridge from encoded lattice words to actual mode
+operators is the same missing bridge described for the finite gates.
+A successful check of a completed tensor against Ward identities
+establishes consistency of the completion. Its identification with
+all actual mode products also needs a proved determination theorem
+and authenticated seed products; a finite selection of direct probes
+does not by itself check every omitted product.
+
+Beyond that finite layer, one needs the state-field correspondence,
+locality, conformal covariance, OPE convergence or formal expansion
+identities, and an explanation of how the chiral functions assemble
+into local bulk correlators. The known Potts and parafermion inputs
+also need their formal embeddings. These are foundational. A chiral
+vacuum correlator or a chosen lattice intertwiner block is not by
+itself the four-point function of the lightest diagonal bulk scalar.
+The formal statement must preserve the external fields and their
+normalization rather than silently promote one kind of block to the
+other.
+
+No claim that a dimension-two scalar is exactly marginal follows
+from its existence or its three-point coefficient alone. A formal
+statement about a conformal manifold would additionally require a
+precise deformation theory, beta functions, and the appropriate
+all-orders argument. That subject is outside both the present Lean
+files and the finite arithmetic producer.
+
+\subsection{Modular data, defects, and conformal boundaries}
+
+Sections~\msref{sec:physics-defects} and \msref{sec:physics-H3},
+\emph{\msnameref{sec:physics-defects}} and
+\emph{\msnameref{sec:physics-H3}}, are in
+\artifact{c8_physics_20260927/defects.tex}. Their
+producer \artifact{defects.py} computes in
+$\mathbb Q(\zeta_{13})$, with exact Verlinde coefficients, modular
+relations, the forgetful multiplicities, and boundary/defect spectral
+tables. These checks establish finite algebraic properties of the
+input matrices and based rings, not the existence of the required
+associator or a conformal defect.
+
+\begin{longtable}{@{}P{0.27\linewidth}P{0.63\linewidth}@{}}
+\toprule
+Physics argument & Missing Lean theorem and difficulty\\
+\midrule\endfirsthead
+\toprule Physics argument & Missing Lean theorem and difficulty\\
+\midrule\endhead\bottomrule\endfoot
+Cyclotomic modular arithmetic
+& Prove that the twelve-coordinate quotient representation is a
+field embedded in $\mathbb C$, fix the primitive root and conjugation,
+and verify the Gauss-sum square root and sign. Then $S^2=1$, the
+twist relation, Verlinde integrality, and fusion associativity are
+substantial but bounded exact computations.\\
+Diagonal Verlinde lines
+& Given a unitary modular tensor category and the diagonal full CFT,
+derive line eigenvalues, twisted character matrices, and their
+sector multiplicities. The scalar sums are focused; the theorem that
+these matrices describe actual topological defects requires the
+categorical/full-CFT construction and is foundational.\\
+Cardy boundaries and annuli
+& Formalize the boundary-state normalization, open/closed-channel
+identity, and the positive square roots entering $g$ factors.
+Finite character multiplicities are focused. Their interpretation
+as boundary Hilbert spaces requires the Cardy/extension theorem.
+Formal verification of annulus integers is not that theorem.\\
+Selected chiral $\mathcal H_3$ action
+& Prove the center-forgetful correspondence for the chosen extension,
+the bimodule/full-defect equivalence, and the identification of tube
+multiplicity spaces with $M_\mu\otimes\overline{H'}$.
+These are foundational categorical inputs. Once supplied, the
+$6\times12$ forgetful ring-map check and charge matrices are
+substantial finite algebra.\\
+Invariant and charged gaps
+& Under the correct action, derive the fixed spaces and count their
+lowest scalar grades. This is focused after the sector assignment.
+It must distinguish one chiral action from both independent factors,
+and tube multiplicity spaces from their multiple copies in actual
+defect Hilbert spaces. Modular covariance alone is insufficient.\\
+Six extension boundaries
+& Verify the finite annulus coefficients from the forgetful functor
+and the six-object fusion ring. The data-to-category interface must
+retain the actual module category, duals, and boundary normalization.
+The finite arithmetic is substantial; constructing these boundaries
+as part of the full CFT remains foundational.\\
+\end{longtable}
+
+The pinned checkout defines \leanid{CyclotomicField} and
+\leanid{IsCyclotomicExtension} in
+\artifact{Mathlib/NumberTheory/Cyclotomic/Basic.lean}; it also has
+primitive-root, complex-root-of-unity, and cyclotomic-polynomial
+developments. Thus the field-theory layer need not start from scratch.
+It still takes work to prove that the producer's concrete coordinate
+arithmetic and chosen complex embedding agree with those structures.
+An arbitrary root of the polynomial without the intended complex
+embedding does not determine the positive quantum dimensions used
+by the physics interpretation.
+
+\subsection{Bootstrap placement and observable scope}
+
+The physics reading guide in Section~\msref{sec:physics-data-guide}
+distinguishes the diagonal full theory from
+the selected holomorphic extension and states which published bootstrap
+plots use which symmetry sectors. Formalizing the label correspondence,
+the central-charge convention $c_L=c_R=8$, and a rational gap extracted
+from a proved spectrum would be focused. It would not formally verify
+a published numerical exclusion curve. That requires the original
+functional, its positivity on every required conformal block, the
+truncation/error bounds, and a sound numerical or exact certificate.
+A plotted point read from a figure is evidence for comparison, not a
+kernel-checked exclusion or inclusion theorem.
+
+The observable inventory is also an interface specification. Characters
+determine unflavoured multiplicities and, with analytic control,
+partition functions. They do not determine every normalized OPE
+coefficient or defect eigenvector. The new coupling and defect datasets
+close specific parts of that gap; each needs its own sound checker and
+interpretation theorem. Keeping those claims separate is essential to
+an eventual formal treatment that a physicist can use without reading
+the implementation.
+
+\subsection{A concrete order of formalization}
+
+A useful first deliverable is a small exact coefficient library covering
+the rational recurrence, finite Euler product, primary reconstruction,
+and cutoff-completeness lemma. Its theorem should expose the input
+character interpretation explicitly. A second deliverable is a sound
+finite algebra checker for the cyclotomic modular data and the supplied
+low-weight tensors, with an explicit interpretation map. A third is
+the real-analytic tail theorem and a certified interval evaluator.
+Each can be independently reviewed before the foundational VOA and
+defect interfaces are complete.
+
+Completion criteria must be semantic: the formal theorem should refer
+to the actual character coefficients, mode products, or represented
+sectors through proved maps. File hashes, successful Python assertions,
+or a Lean theorem about unrelated constants cannot replace that
+connection. The two explicitly stated thermal-comparison lemmas are
+the additional Lean results of this physics revision; the much larger
+analytic and physical interpretations remain to be formalized.

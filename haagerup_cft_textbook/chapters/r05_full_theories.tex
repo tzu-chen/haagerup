@@ -1,0 +1,654 @@
+\chapter{Two full theories at central charge eight}
+\label{ch:full_theories}
+
+A chiral algebra organizes left-moving fields. A full local CFT
+requires a compatible right-moving theory and a prescription for
+pairing their sectors. The Haagerup construction gives two especially
+natural choices. They have the same central charge and sharply
+different spectra, making them a useful example of why the phrase
+``the CFT of a chiral algebra'' needs qualification.
+
+Throughout this chapter we assume the construction inputs and the
+structural and positivity conclusions developed in Part II.
+The full-theory existence statements use the rational extension
+and diagonal constructions. The spectrum calculations themselves
+then follow from the character table by elementary counting.
+
+\section{The diagonal theory and a holomorphic extension}
+\index{diagonal full theory}\index{holomorphic extension}
+
+The diagonal theory has
+\begin{equation}
+ \HH_{\rm diag}=\bigoplus_i M_i\otimes\overline{M_i},
+ \qquad Z_{\rm diag}=\sum_i|\chi_i|^2.
+ \label{eq:full-diagonal}
+\end{equation}
+The twelve labels $i$ are the simple $U$-modules. They are
+self-dual in the present modular category, so charge conjugation
+does not change the displayed diagonal pairing. The diagonal
+Longo--Rehren construction applied to the completely rational net
+of Chapter~\ref{ch:unitarity} gives a unitary local full conformal
+net with this Hilbert space. This establishes an actual full theory;
+the modular-invariant sum alone would not supply the existence theorem.
+
+The selected Haagerup extension uses the canonical Lagrangian
+algebra of $\mathcal H_3$ transported into $\Rep(U)$. Its chiral
+state space is
+\[
+ H'\downarrow_U=\one\oplus b\oplus a^{\oplus2},
+ \qquad H'\cong V_{E_8}.
+\]
+The positive extension is the $E_8$ lattice theory, so its tensor
+product with the antiholomorphic theory gives the full CFT
+\begin{equation}
+ \HH_{E_8}=H'\otimes\overline{H'},\qquad
+ Z_{E_8}=|\chi_0+\chi_b+2\chi_a|^2
+        =\left|\frac{E_4}{\eta^8}\right|^2.
+ \label{eq:full-E8}
+\end{equation}
+This expression contains off-diagonal $U$-sector pairings. If
+$v=(1,1,2,0,\ldots,0)$ in the order $(0,b,a,c_0,\ldots)$, the
+coupling matrix is $Z_{ij}=v_iv_j$, whereas the diagonal theory
+has $Z_{ij}=\delta_{ij}$.
+For example, the diagonal $c_1\otimes\overline{c_1}$ sector supplies
+nine scalars of dimension $2/3$, whereas its coefficient in the
+extension partition function is zero. Conversely, the extension
+contains four copies of $a\otimes\bar a$: each chiral side has two
+independent copies of $a$. Changing the pairing changes actual state
+multiplicities, not just their names.
+
+Both theories have a unique vacuum and $(c_L,c_R)=(8,8)$.
+Holomorphicity of $H'$ means that it has only one simple module
+as a chiral algebra. It does not mean that the full theory has
+only one state, one local field, or no interesting defects
+preserving a smaller algebra. The extension changes which fields
+are regarded as chiral-algebra generators.
+
+\section{Reading a full spectrum from chiral grades}
+\index{scalar gap}\index{primary multiplicity}
+
+In the diagonal theory, left grade $n$ and right grade $m$ in
+sector $i$ give
+\begin{equation}
+ \begin{split}
+ (h,\bar h)&=(h_i+n,h_i+m),\\
+ \Delta&=2h_i+n+m,\qquad s_{\rm spin}=n-m,\\
+ d_{\rm states}&=a_i(n)a_i(m),\qquad
+ d_{\rm primary}=v_i(n)v_i(m).
+ \end{split}
+ \label{eq:full-grade-count}
+\end{equation}
+The last line counts fields primary under both Virasoro algebras.
+A product of left and right extended-algebra top states is
+automatically Virasoro primary; higher grades need descendant
+subtraction first.
+
+The scalar condition is $n=m$ in a diagonal sector. Consequently a
+positive grade raises a scalar dimension by at least two. Every
+relevant scalar, meaning $0<\Delta<2$, therefore comes from a
+chiral top with $h_i<1$. Squaring the corresponding top dimensions
+gives the complete list:
+\begin{center}
+\begin{tabular}{c|rrrrrrr}
+\toprule
+$\Delta$&$2/3$&$10/13$&$12/13$&$14/13$&$16/13$&$4/3$&$22/13$\\
+Multiplicity&9&25&49&169&196&729&1764\\
+\bottomrule
+\end{tabular}
+\end{center}
+Their total is $2941$. The number looks large relative to twelve
+extended sectors because each top space contains multiple local
+components. A module with $42$ chiral top states contributes
+$42^2=1764$ scalar components when paired diagonally.
+
+\begin{example}[A relevant spinning level]
+The $c_1$ module has $h=1/3$, three top states, and
+$243-3=240$ new Virasoro primaries at grade one. Pairing a grade-one
+primary with a top state gives
+\[
+ \Delta=\frac13+1+\frac13=\frac53,
+ \qquad s_{\rm spin}=\pm1,
+\]
+with $240\cdot3=720$ components for each sign. These fields are
+relevant by dimension but cannot appear alone as rotationally
+invariant scalar perturbations.
+\end{example}
+
+At dimension two the scalar primaries come from the tops of
+$b,a,c_0$ and from current bilinears in the vacuum sector:
+\begin{equation}
+ d_{\Delta=2,s=0}=80^2+81^2+81^2+6^2=19558.
+ \label{eq:full-diagonal-dim2}
+\end{equation}
+There are also $113$ chiral weight-two primaries at each spin
+$\pm2$. Thus the total primary count at dimension two is $19784$,
+while the state count is $19798$. The difference is exactly two
+stress tensors and twelve current derivatives.
+
+\section{Why the extension has no relevant scalar}
+
+The holomorphic $E_8$ algebra is integer graded. The only state of
+weight zero is its vacuum, and the first nontrivial states are the
+$248$ currents at weight one. A nonidentity full scalar must have
+equal positive left and right weights, so its dimension is at
+least two. The first scalar space is
+\[
+ (H')_1\otimes\overline{(H')_1},
+ \qquad\dim=248^2=61504.
+\]
+Every such current bilinear is a Virasoro primary. Chiral currents
+paired with the opposite vacuum have dimension one and spin
+$\pm1$, so the ordinary primary gap is one even though the scalar
+gap is two.
+
+The two theories can now be compared without ambiguity:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Quantity&Diagonal $U$&Selected $E_8$ theory\\
+\midrule
+Currents per chirality&6&248\\
+First nonidentity primary dimension&$2/3$&1\\
+First nonidentity scalar dimension&$2/3$&2\\
+Relevant scalar components&2941&0\\
+Dimension-two scalar components&19558&61504\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are exact consequences of the selected characters and full
+pairings. They do not identify a lattice Hamiltonian flowing to
+either theory.
+
+\section{Which symmetry is being preserved?}
+\index{invariant field}
+
+In the diagonal theory, the twelve chiral-algebra-preserving
+Verlinde lines form the fusion category underlying
+$\Rep(U)=Z(\mathcal H_3)$. The fully invariant bulk space is
+$U\otimes\overline U$. Its first nonidentity scalars are the
+$6\cdot6=36$ current bilinears of dimension two.
+
+The selected extension has a category of $U$-preserving bimodule
+defects equivalent to
+$\mathcal H_3\boxtimes\mathcal H_3^{\rm op}$.
+Choosing the first chiral factor as the Haagerup symmetry gives
+invariant space $U\otimes\overline{H'}$. Its dimension-two scalar
+multiplicity is $6\cdot248=1488$. Requiring invariance under both
+independent factors gives $U\otimes\overline U$ and multiplicity
+$36$. Both choices have invariant scalar gap two, but they are
+different symmetry requirements.
+
+This is why a bootstrap comparison must name the symmetry action,
+not only the ordinary partition function. Two actions on an
+isomorphic full CFT can organize local fields differently. The
+defect chapter derives the invariant spaces from explicit line
+and tube data.
+
+A dimension-two invariant scalar is only marginal by dimension.
+Whether a perturbation is exactly marginal depends on OPE
+coefficients, mixing, and higher-order compatibility. Commuting
+current constructions provide a standard source of exactly
+marginal directions, but the count of all current bilinears is
+not the dimension of a conformal manifold.
+
+\begin{example}[A dimension-two scalar that runs]
+\label{ex:full-nonabelian-running}
+\index{marginal perturbation!running coupling}
+Consider a unitary $\mathrm{SU}(2)_k$ current algebra, with
+$k$ a positive integer. Fix Cartesian current bases with
+\[
+ J^a(z)J^b(0)\sim\frac{k\delta^{ab}}{2z^2}
+             +\frac{i\varepsilon^{abc}J^c(0)}{z},
+ \qquad a,b,c=1,2,3.
+\]
+Use the same $+i\varepsilon^{abc}$ convention for the independent
+antiholomorphic currents. Repeated Lie algebra indices are summed.
+The rescaled currents $j^a=\sqrt{2/k}\,J^a$ then satisfy
+\[
+ j^a(z)j^b(0)\sim\frac{\delta^{ab}}{z^2}
+       +i\sqrt{\frac2k}\,
+                      \frac{\varepsilon^{abc}j^c(0)}{z}.
+\]
+The isotropic current bilinear
+\[
+ \mathcal O=\frac1{\sqrt3}\sum_{a=1}^3j^a\bar j^a
+\]
+has weights $(1,1)$ and is invariant under simultaneous
+$\mathrm{SU}(2)$ rotations of the two current triples.
+Its normalization follows directly from the double poles:
+\[
+ \langle\mathcal O(z,\bar z)\mathcal O(0)\rangle
+ =\frac1{3}\sum_{a,b}
+           \frac{\delta^{ab}\delta^{ab}}{z^2\bar z^2}
+ =\frac1{|z|^4}.
+\]
+
+To find its self-OPE coefficient, multiply the two simple poles.
+The factor $i^2=-1$ and the identity
+$\sum_{a,b}\varepsilon^{abc}\varepsilon^{abd}
+=2\delta^{cd}$ give
+\[
+ -\frac{2}{3k|z|^2}
+       \sum_{a,b,c,d}\varepsilon^{abc}\varepsilon^{abd}
+                  j^c\bar j^d
+ =-\frac{4}{3k|z|^2}\sum_cj^c\bar j^c
+ =-\frac{4}{\sqrt3\,k}\frac{\mathcal O}{|z|^2}.
+\]
+Thus
+\begin{equation}
+ \mathcal O(z,\bar z)\mathcal O(0)
+ =\frac{\one}{|z|^4}
+  +C_{\mathcal O\mathcal O\mathcal O}
+                          \frac{\mathcal O(0)}{|z|^2}
+  +\cdots,
+ \qquad
+ C_{\mathcal O\mathcal O\mathcal O}
+       =-\frac4{\sqrt3\,k}.
+ \label{eq:full-isotropic-OPE}
+\end{equation}
+Terms with one double pole and one simple pole vanish because
+$\delta^{ab}\varepsilon^{abc}=0$. The omitted terms include
+spinning fields and higher-dimension fields. In this invariant
+current sector, the only dimension-two scalar generated by the
+displayed collision is $\mathcal O$ itself.
+
+Now fix the action and scale conventions, since these determine
+the sign of the beta function. Use the Euclidean weight
+$e^{-S_g}$ with
+\[
+ S_g=S_0+g\int d^2x\,\mathcal O(x),\qquad
+ d^2x=dx_1\,dx_2.
+\]
+The velocity has been absorbed into the Euclidean time coordinate.
+There is no extra $1/(2\pi)$ in the definition of $g$.
+Let $a$ be the short-distance cutoff and increase the coarse-graining
+length by $e^{d\ell}$. The second-order term in $e^{-S_g}$ is
+proportional to $+g^2/2$. Its short-distance shell contribution is
+\begin{align*}
+ \frac{g^2}{2}\int d^2y
+       \int_{a<|r|<ae^{d\ell}}d^2r\,
+       \frac{C_{\mathcal O\mathcal O\mathcal O}}{|r|^2}
+                         \mathcal O(y)
+ &=
+ \pi C_{\mathcal O\mathcal O\mathcal O}g^2d\ell
+                         \int d^2y\,\mathcal O(y),\\
+ \int_{a<|r|<ae^{d\ell}}\frac{d^2r}{|r|^2}
+ &=2\pi\,d\ell.
+\end{align*}
+The factor $1/2$ prevents double counting the two integrated
+insertions. Matching the term linear in $\mathcal O$ to
+$-\bigl(g+dg\bigr)\int\mathcal O$ therefore gives
+\begin{equation}
+ \beta_{\rm length}(g):=\frac{dg}{d\ell}
+ =-\pi C_{\mathcal O\mathcal O\mathcal O}g^2+O(g^3)
+ =B_k g^2+O(g^3),
+ \qquad B_k=\frac{4\pi}{\sqrt3\,k}>0.
+ \label{eq:full-isotropic-beta}
+\end{equation}
+There is no linear term because $\Delta_{\mathcal O}=2$.
+The identity collision shifts the vacuum energy, while a circular
+shell averages the nonzero-spin terms to zero. A beta function
+defined using an inverse length $\mu$ has the opposite sign:
+$\mu\,dg/d\mu=-\beta_{\rm length}(g)$.
+
+Dropping the cubic and higher terms gives the leading running,
+\[
+ g(\ell)=\frac{g_0}{1-B_k g_0\ell},
+ \qquad \ell=\log(r/a).
+\]
+For $g_0<0$, the coupling approaches zero from below and is
+\emph{marginally irrelevant}. In the asymptotic regime,
+\[
+ g(r)=-\frac1{B_k\log(r/a)}
+       +O\!\left(\frac{\log\log(r/a)}{\log^2(r/a)}\right),
+\]
+where the first subleading terms also encode the initial coupling
+and higher-order beta function. A dimensionless observable with
+an expansion $Q(g)=Q_*+q_1g+O(g^2)$ consequently approaches its
+limit as $1/\log r$ when $q_1\ne0$. If that linear coefficient
+vanishes, its leading drift can be smaller; one should not fit
+every observable with the same logarithm.
+For $g_0>0$, the coupling grows and is marginally relevant.
+The leading solution indicates loss of weak-coupling control at
+a length of order $a\exp[1/(B_k g_0)]$. Its pole does not determine
+a physical infrared endpoint.
+
+Compare the unit-normalized Cartan scalar
+$\mathcal O_{\rm C}=j^3\bar j^3$. Since
+$\varepsilon^{33c}=0$, its self-OPE has no
+$\mathcal O_{\rm C}/|z|^2$ term, so this quadratic beta-function
+obstruction is absent. Exact marginality requires more than that
+one vanishing coefficient: the abelian current-current theorem,
+under its unitary commuting-current hypotheses, supplies the
+all-order local conformal family. The isotropic sum uses
+noncommuting currents and has the nonzero obstruction just
+computed. Both perturbing fields have dimension two at the
+starting CFT, but their renormalization-group behavior differs.
+\end{example}
+
+\begin{example}[The same running produces two different logarithms]
+\label{ex:full-current-logarithms}
+\index{logarithmic corrections}
+For a concrete comparison model, take the standalone diagonal
+$\mathrm{SU}(2)_1$ WZW theory and perturb it by the preceding
+isotropic scalar with $g_0<0$. Its spin-$(1/2,1/2)$ primary has
+$(h,\bar h)=(1/4,1/4)$. Under the diagonal global
+$\mathrm{SU}(2)$ its four components split into a singlet and
+a triplet, labelled by $J=0,1$. Both have unperturbed scaling
+dimension $\Delta_0=1/2$.
+These are internal $\mathrm{SU}(2)$ representation spins;
+all four components have conformal spin $h-\bar h=0$.
+
+The current Ward identities turn the simple poles with a primary
+into the left and right spin generators $t_L^a,t_R^a$.
+Before specializing the level, the coefficient of that primary
+in $\mathcal O(z,\bar z)\Phi_J(0)$ is
+\[
+ \mathcal O(z,\bar z)\Phi_J(0)
+ \sim\frac{q_J}{|z|^2}\Phi_J(0),\qquad
+ q_J=\frac{2}{\sqrt3\,k}\,t_L\cdot t_R
+     =\frac{J(J+1)-3/2}{\sqrt3\,k}.
+\]
+The last equality is ordinary angular-momentum addition:
+$2t_L\cdot t_R=(t_L+t_R)^2-t_L^2-t_R^2$, with
+$t_L^2=t_R^2=3/4$. The singlet and triplet diagonalize the
+first-order mixing.
+
+With the action convention above, first-order perturbation theory
+for $\langle\Phi_J(r)\Phi_J^\dagger(0)\rangle$ inserts
+$-g\int\mathcal O$. The two small neighborhoods of the external
+fields each contribute $2\pi q_J\log(r/a)$. Thus the correlator
+has relative correction $-4\pi gq_J\log(r/a)$.
+Comparing with
+$(r/a)^{-2(\Delta_0+\delta\Delta_J)}
+=(r/a)^{-2\Delta_0}
+ \bigl[1-2\delta\Delta_J\log(r/a)+\cdots\bigr]$
+gives
+\[
+ \delta\Delta_J=2\pi gq_J+O(g^2).
+\]
+Replacing $g$ by its running value resums the leading logarithms:
+\begin{align*}
+ G_J(r)&\propto r^{-2\Delta_0}
+  \exp\!\left[-4\pi q_J
+         \int_0^{\log(r/a)}g(\ell)\,d\ell\right]\\
+ &\propto r^{-2\Delta_0}
+     \bigl[1+B_k|g_0|\log(r/a)\bigr]^{4\pi q_J/B_k}.
+\end{align*}
+The amplitudes and the reference scale inside the logarithm
+depend on the normalization and initial coupling. The leading
+powers follow from the two coefficients already calculated:
+\[
+ \frac{4\pi q_J}{B_k}=J(J+1)-\frac32.
+\]
+At $k=1$ this gives, to leading logarithmic accuracy,
+\[
+ G_0(r)\propto\frac1{r[\log(r/a)]^{3/2}},
+ \qquad
+ G_1(r)\propto\frac{[\log(r/a)]^{1/2}}{r}.
+\]
+Two fields with the same limiting dimension can therefore drift
+in opposite directions and carry different multiplicative
+logarithms. This is a canonical WZW comparison calculation.
+Applying it to a particular lattice chain would require identifying
+its continuum currents, perturbation, and coupling sign. The
+calculation neither identifies the Haagerup chain nor fixes a
+gapped endpoint, and it does not transport Haagerup defect
+junctions along a deformation.
+\end{example}
+
+\section{Four explicit marginal directions and a radius example}
+\index{current-current deformation}\index{Zamolodchikov metric}\index{Narain moduli}
+
+We can say more than the general warning. The two Cartan currents
+in $U$ commute and can be normalized as
+\[
+ j^1=\frac{H_L}{\sqrt2},\qquad
+ j^2=\frac{H_R}{\sqrt{78}},\qquad
+ j^a(z)j^b(0)\sim\frac{\delta^{ab}}{z^2}.
+\]
+The subscripts on $H_L,H_R$ still label the two internal
+affine factors, both holomorphic. Introduce an independent
+antiholomorphic copy $\bar j^b$. The four fields
+\begin{equation}
+ \mathcal O_{ab}=j^a\bar j^b,\qquad a,b=1,2,
+ \label{eq:full-abelian-marginals}
+\end{equation}
+are scalar primaries of dimension two, with
+\[
+ \langle\mathcal O_{ab}(z,\bar z)\mathcal O_{cd}(0)\rangle
+ =\frac{\delta^{ac}\delta^{bd}}{|z|^4}.
+\]
+Thus their seed-point Zamolodchikov metric, the two-point metric
+on infinitesimal deformations in this normalization, is the
+identity matrix.
+
+The abelian current-current deformation theorem supplies a
+simultaneous local exactly marginal family in these four
+directions. Its hypotheses involve mutually commuting left
+currents and mutually commuting right currents with the
+positive current two-point forms. The vanishing structure
+constants explain the absence of the usual quadratic
+current-current beta-function obstruction; the theorem controls
+the all-order statement. One should not infer that statement
+from the vanishing of a single three-point coefficient alone.
+
+There is a useful geometric description. For $r$ commuting
+currents on each side, collect a state's abelian charges in
+$p=(p_L,p_R)\in\R^{r,r}$. The charge zero-mode contributions
+are $p_L^2/2$ and $p_R^2/2$. A general state also has
+Heisenberg oscillator levels and neutral-sector weights; these
+pieces stay fixed in the charge-boost description.
+An infinitesimal boost
+\begin{equation}
+ \delta p_L=\varepsilon p_R,\qquad
+ \delta p_R=\varepsilon^{\mathsf t}p_L,
+ \label{eq:full-charge-boost}
+\end{equation}
+preserves $p_L^2-p_R^2$ and therefore the spin contribution.
+It changes the total dimension by
+$\delta\Delta=2p_L^{\mathsf t}\varepsilon p_R$.
+Independent rotations of left and right current bases do not
+change the theory's charge geometry. The associated local
+deformation space is consequently
+\[
+ O(r,r)/(O(r)\times O(r)),
+ \qquad\dim=r^2.
+\]
+To see the count, an infinitesimal $O(r,r)$ transformation has blocks
+\[
+ X=\begin{pmatrix}A&B\\B^{\mathsf t}&D\end{pmatrix},
+ \qquad A^{\mathsf t}=-A,\quad D^{\mathsf t}=-D.
+\]
+The antisymmetric blocks rotate the two current bases. After removing
+them, the arbitrary real $r$-by-$r$ matrix $B$ supplies $r^2$ directions.
+For the chosen two Cartans this gives four local directions.
+This description does not assert that $U$ is a tensor product
+of two free bosons with a neutral algebra; the ambient theory
+can impose nontrivial charge-sector selection rules.
+Nor does it determine the global duality quotient.
+
+\begin{example}[An enhanced current leaves the chiral algebra]
+In the compact-boson convention of Chapter~\ref{ch:cft},
+let $R=\sqrt2e^t$. The state with $(m,n)=(1,1)$ has
+\[
+ p_L=\sqrt2\cosh t,\qquad p_R=-\sqrt2\sinh t,
+\]
+so
+\[
+ h=\cosh^2t,\qquad \bar h=\sinh^2t,\qquad
+ s_{\rm spin}=1,\qquad\Delta=\cosh(2t).
+\]
+At $t=0$ it is a holomorphic weight-one current. For $t\ne0$
+it is a nonchiral local field of the same integer spin, while
+the theory remains conformal with $c=1$. This is how an exactly
+marginal deformation can remove an enhanced chiral symmetry
+without destroying conformal invariance. In charge space,
+the radius change is the boost
+$p_L(t)=\cosh t\,p_L(0)-\sinh t\,p_R(0)$ and its
+right-moving counterpart.
+\end{example}
+
+For the ordinary full $E_{8,1}$ theory, the eight Cartans on each
+side give the familiar $64$ toroidal directions, locally
+$O(8,8)/(O(8)\times O(8))$. The special rational point has
+many more dimension-two current bilinears than these $64$
+unobstructed directions. The same distinction applies to the
+$36$ bilinears in the diagonal $U$ theory.
+
+The four fields in \eqref{eq:full-abelian-marginals} are
+categorical singlets at the rational point. Continuing a full
+system of topological lines along a deformation also requires
+transporting their junctions and checking locality with the
+deformed fields. Exact marginality by itself does not prove
+that the specified Haagerup category survives everywhere on
+the family. This is a question about the deformed symmetry
+data, separate from the existence of the ordinary conformal
+deformation.
+
+\section{Thermodynamics from the same spectrum}
+\index{thermal trace}\index{thermal tail bound}
+
+Let $t=\beta v/L$ and $b=2\pi t$. For either full theory,
+define the dimensionless energy
+$E=\Delta-2/3$, since $(c_L+c_R)/24=2/3$. Then
+\begin{equation}
+ Z(b)=\sum_{\Delta,s}d_{\Delta,s}e^{-bE},\qquad
+ H=\frac{2\pi v}{L}E.
+ \label{eq:full-thermal}
+\end{equation}
+The vacuum energy is $-4\pi v/(3L)$. Once $Z$ converges,
+\[
+ \langle E\rangle=-\partial_b\log Z,\qquad
+ C_V=b^2\bigl(\langle E^2\rangle-\langle E\rangle^2\bigr),
+ \qquad S=\log Z+b\langle E\rangle.
+\]
+A finite spectral truncation gives a lower bound on $Z$ because
+all degeneracies are nonnegative. To make it a quantitative
+approximation, one needs an upper bound on the omitted tail.
+
+\begin{proposition}[A modular tail bound]
+\label{prop:full-thermal-tail}
+Assume a convergent positive modular-invariant partition function
+$Z(b)=Z(4\pi^2/b)$. Suppose every state with $\Delta\le D$
+is known, where $D>2/3$. Write $Z=L_D+H_D$ for the known and
+omitted sums, and put $E_D=D-2/3$. If $b>2\pi$ and
+$b'=4\pi^2/b$, then
+\begin{equation}
+ 0\le H_D(b)\le
+ \frac{L_D(b)-L_D(b')}{e^{(b-b')E_D}-1}.
+ \label{eq:full-tail}
+\end{equation}
+At $b=2\pi$, provided the differentiated trace converges,
+$0\le H_D(b)\le L_D'(b)/E_D$.
+\end{proposition}
+\begin{proof}
+Every omitted state has $E>E_D>0$, so
+$H_D(b)\le rH_D(b')$ with
+$r=e^{-(b-b')E_D}<1$. Modular invariance gives
+$H_D(b')=H_D(b)+L_D(b)-L_D(b')$. Substitution and division by
+$1-r$ prove the first claim.
+At the fixed point, differentiating the modular identity gives
+$Z'(2\pi)=0$. Hence
+$L_D'=-H_D'\ge E_DH_D$.
+\end{proof}
+
+The estimate is an example of a global consistency relation
+controlling information beyond a finite table. It requires
+modular invariance and positivity as hypotheses; finite agreement
+of a few coefficients cannot establish either one.
+For moment tails choose $0<b_0<b$ and use
+\begin{equation}
+ \sum_{\Delta>D,s}d_{\Delta,s}E^ke^{-bE}
+ \le H_D(b_0)\sup_{E\ge E_D}E^ke^{-(b-b_0)E}.
+ \label{eq:full-moment-tail}
+\end{equation}
+For $k>0$, the supremum is at $E_D$ if
+$(b-b_0)E_D\ge k$, otherwise at $k/(b-b_0)$.
+Thus one can control the energy and heat capacity as well as
+the partition function.
+
+\begin{example}[A universal value at the modular fixed point]
+At $b=2\pi$, modular invariance gives
+$\langle E\rangle=0$. Therefore
+\[
+ \langle\Delta\rangle=\frac23,
+ \qquad S=\log Z
+\]
+at $t=1$ in either theory. The same mean dimension does not imply
+the same distribution, entropy, or heat capacity. The two spectra
+give different values of these other observables.
+\end{example}
+
+\section{What has and has not been reconstructed}
+
+We now know exact state counts, Virasoro-primary multiplicities,
+several symmetry-resolved gaps, and a way to obtain controlled
+thermal observables. These are much more than a central charge.
+They remain less than a complete list of local OPE constants.
+The next chapter computes actual chiral correlators in the lattice
+realization, including a normalized four-point function that can
+be expanded by hand. The sewing chapter will explain the additional
+data needed for nonvacuum bulk correlators of the diagonal theory.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:full-relevant}
+Reproduce the seven relevant scalar multiplicities and their sum
+$2941$. Then compute the spinning multiplicities at dimensions
+$23/13$ and $25/13$ using the $d_4$ and $d_1$ rows.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:full-relevant]{Solution on page~\pageref*{sol:ex:full-relevant}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:full-E8states}
+Show that the full $E_8$ theory has $69752$ states at dimension
+two. Separate them into scalar primaries, chiral primaries,
+current derivatives, and stresses.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:full-E8states]{Solution on page~\pageref*{sol:ex:full-E8states}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:full-tail}
+Derive \eqref{eq:full-moment-tail} and evaluate its supremum for
+$k=1,2$. Explain why a reliable heat-capacity error bound needs
+more than an error bound on $Z$ alone.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:full-tail]{Solution on page~\pageref*{sol:ex:full-tail}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:full-onevac}
+Suppose a proposed branching prescription gives
+$Z=6|\chi_0|^2+\cdots$ with all coefficients nonnegative and
+all omitted sectors of positive weight. Explain the vacuum
+problem. Why does dividing the expression by six not automatically
+produce a new local CFT?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:full-onevac]{Solution on page~\pageref*{sol:ex:full-onevac}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:full-symmetry}
+Explain the three different meanings of an invariant scalar count
+$36$, $1488$, or $61504$ in this chapter. Which of these numbers
+uses no symmetry restriction at all?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:full-symmetry]{Solution on page~\pageref*{sol:ex:full-symmetry}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:full-boost}
+Let $\eta=\diag(I_r,-I_r)$ and
+$X=\left(\begin{smallmatrix}0&\varepsilon\\
+\varepsilon^{\mathsf t}&0\end{smallmatrix}\right)$.
+Verify $X^{\mathsf t}\eta+\eta X=0$ and derive
+\eqref{eq:full-charge-boost}. For $r=1$, recover the radius
+example and show explicitly why a chiral current can acquire
+$\bar h>0$ without losing integer spin.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:full-boost]{Solution on page~\pageref*{sol:ex:full-boost}.}}\par
+\end{exercise}

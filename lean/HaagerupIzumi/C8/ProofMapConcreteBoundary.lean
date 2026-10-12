@@ -588,7 +588,7 @@ theorem autInvertible_arrow (R : Nodes) (B : BoundaryData ι κ)
   `𝟙, a, a*, x, ax, a*x`, which exhaust a ring of rank `≤ 6`, so `Dim 𝓕 = 6`).
 * Remaining inputs: none beyond the nodes.  (The concrete `noSignExtension` records `d_X ≠ 1`;
   that "`X` not invertible" gives `d_X ≠ 1` uses that an object of Frobenius–Perron dimension one
-  is invertible, which belongs to the external `L_noSign` side of the node.) -/
+  is invertible, the input `hfp` of `ProofMapConcreteBranching.noSign_arrow`.) -/
 theorem threeInvertibles_arrow (R : Nodes) (B : BoundaryData ι κ) :
     (boundaryNodes R B).invertiblesContainZ3 → (boundaryNodes R B).noSignExtension →
       (boundaryNodes R B).rankFork → (boundaryNodes R B).lagrangianCenter →

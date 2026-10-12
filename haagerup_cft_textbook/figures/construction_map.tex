@@ -1,0 +1,30 @@
+\begin{tikzpicture}[
+ box/.style={draw=MidnightBlue!65,rounded corners=2pt,
+ fill=MidnightBlue!3,text width=4.5cm,align=center,
+ minimum height=12mm,font=\small},
+ flow/.style={-{Stealth[length=2mm]},thick,MidnightBlue},
+ note/.style={font=\scriptsize,align=center,text width=3.8cm}
+]
+\node[box] (lattice) at (0,0)
+ {Explicit lattice fields\\inside $V_{E_6\oplus A_2}$};
+\node[box] (fusion) at (7.0,0)
+ {Unitary category $\mathcal H_3$\\and its associator};
+\node[box] (voa) at (0,-2.4)
+ {The generated VOA $U$\\proper, regular, $c=8$};
+\node[box] (chain) at (7.0,-2.4)
+ {Fusion-path Hamiltonian\\$H=-\sum_jP_j^\rho$};
+\node[box] (center) at (0,-4.8)
+ {$\Rep(U)\simeq Z(\mathcal H_3)$\\with a positive ribbon structure};
+\node[box] (finite) at (7.0,-4.8)
+ {Finite spectra and overlaps\\Tensor network evidence};
+\node[box] (full) at (0,-7.2)
+ {Diagonal full theory\\or a selected extension};
+\node[box] (limit) at (7.0,-7.2)
+ {Continuum identification\\A separate open problem};
+\draw[flow] (lattice)--node[note,left]{Finite identities\\and structural theorems}(voa);
+\draw[flow] (voa)--node[note,left]{Branching, indicators,\\and analytic positivity}(center);
+\draw[flow] (center)--node[note,left]{Choose the full-theory\\algebra and sewing}(full);
+\draw[flow] (fusion)--node[note,right]{Local projector\\construction}(chain);
+\draw[flow] (chain)--node[note,right]{Controlled finite\\calculations}(finite);
+\draw[flow,dashed] (finite)--node[note,right]{Requires a justified\\scaling limit}(limit);
+\end{tikzpicture}

@@ -1,0 +1,223 @@
+Independent hand audit of c02_finite_closure.tex
+Author: scope_lattice
+Scope: current chapter, hi_cft_c8_proof.tex finite-closure sections,
+the recursive strong certificate, the Gate5 Jacobi note, and selected
+completed certificate headers/records. Read-only; no builds, computations,
+certificate replays, imports, or live-source edits.
+
+Verdict: PASS on the abstract filtered Wick lemma, recursive theorem,
+and the order of the concrete positive-mode bootstrap. I found no missing
+generator-pair class or circular use of P3-by-P3 singular closure.
+Two small exposition/provenance improvements are proposed in section5;
+neither changes the theorem or requires a new finite calculation.
+
+1. Filtered Wick induction: c02:88–106
+
+The relevant ordering is total INPUT weight, not the weight of the
+eventual OPE coefficient. This is used consistently.
+
+Let w=wt(a)+wt(b)+wt(c) for [a_lambda :bc:]. Both normal factors b,c
+must have positive weight. Then [a_lambda b] and [a_lambda c] involve
+strictly smaller total input weights. By the lower-weight induction,
+their coefficients already belong to the homogeneous normal span.
+
+In the Wick integral, a coefficient a_(j)b has weight
+wt(a)+wt(b)-j-1. Thus its bracket with c has total input weight
+w-j-1 <= w-1, so the same induction applies after expressing that
+coefficient homogeneously in N. If its weight is zero, its known
+membership in N makes it a scalar vacuum; the bracket vanishes.
+Negative-weight coefficients cannot occur nontrivially in N.
+
+This remains valid if both inputs are composite. Skew symmetry first
+moves a selected composite to the right; the formal substitution
+-lambda-D only differentiates coefficients already known to be in N.
+For a derivative, sesquilinearity reduces the underlying pair's total
+weight and then restores only formal lambda factors or D on coefficients.
+The vacuum factor is harmless.
+
+There is therefore no hidden assumption that a_(j)b is itself a
+generator, or that a chosen normal-word list is independent. Arbitrary
+parenthesizations in the definition of N are doing useful work.
+
+2. Recursive theorem: c02:125–177
+
+The proof first establishes a_(0)N subset N for every a in A. This
+step needs only the stated generator memberships, the zero-mode
+derivation identity, a_(0)1=0, and [D,a_(0)]=0. It does not use general
+singular closure and is correctly placed before the pair induction.
+
+For a generator pair (s,t), put d=wt(s), e=wt(t). In the non-base
+case d>=3, recursive provenance replaces s by a_(0)b plus homogeneous
+normal remainders, with wt(b)=d-1. A remainder made from generators of
+weights <d cannot be a single undifferentiated generator of weight d.
+Every nonzero remainder is therefore a derivative or a positive-weight
+composite and is covered by the filtered lemma at total weight d+e.
+
+The Jacobi identity
+  (a_(0)b)_(n)t=a_(0)(b_(n)t)-b_(n)(a_(0)t)
+is valid for every n>=0, including n=0.
+- b_(n)t is a strictly lower-total-weight pair; a_(0) then preserves N.
+- a_(0)t is already a known element of N of weight e+1.
+- Derivative/composite terms in that expression again use only pairs
+  with smaller total input weight.
+- The only remaining term is a single generator of weight e+1.
+  Paired with b, it has the original total weight d+e but left weight
+  d-1, strictly earlier in the lexicographic order.
+- If e=h, no generator of weight h+1 exists, so only the reducible
+  normal terms remain.
+
+Thus the ordering (total input weight,left input weight) terminates.
+No unstated symmetry of the ordered generator pairs is needed.
+Left weights1 and2 are exactly the first hypothesis.
+
+For the actual h=4 list, the nontrivial cases can be seen explicitly:
+(3,3) can reach (2,4), which is a base case; (4,3) can reach (3,4),
+which is earlier; a right input of weight4 produces only normal
+expressions of weight5, since there is no fifth strong-generator space.
+All smaller-right-weight cases reduce in the same way.
+
+After generator closure is established, ordinary total-weight Wick
+induction handles all normal expressions. The negative-mode identity
+  x_(-r)y=:(D^(r-1)x)y:/(r-1)!
+has the correct factorial and sign, and closes the remaining modes.
+
+The finite-range statement at :179–183 is correct. Positive grading
+also bounds the otherwise displayed n>=0 range: for A with S_d,
+only n<=d+1 can be nonzero. At each fixed output weight the normal
+span has finitely many recipes in the finite positive-weight spaces.
+
+3. Concrete bootstrap and all required first-hypothesis products
+
+The logical order in the current chapter is sufficient:
+
+(a) Exact lower K/S2 products and actual S3 provenance are inputs,
+not consequences of properness. They give current products with S3.
+For example :355–357 is the correct n=1 current commutator.
+
+(b) Direct L1P4 and L2P4 controls are supplied BEFORE Gate4. Together
+with the lower identities these give L1W4 subset S3 and L2W4 subset S2.
+The source record explicitly distinguishes these six direct controls
+from the later gates.
+
+(c) Gate4 gives A_(0)S3 subset W4. The weight-two Virasoro formulas
+at :365–367 are correct for a general weight-two vector, including
+the L1a and L2a terms. Quasiprimary primitive multiplets have L1a=0
+by current-type exclusion. Consequently :383–385 gives all needed
+positive A modes on S3. The possible L2a scalar contributes no
+positive vacuum mode in these formulas.
+
+(d) The P4 provenance then gives K_(1)P4 subset S3. Current primarity
+and the direct Virasoro controls give K_(2)P4 subset S2 and
+K_(3)P4 subset K. The next mode is scalar. These are available
+before the argument concerning N5.
+
+(e) Applying L1,L2 to N5 uses exactly these known current products
+and the just-established A-positive products on S3. In particular
+(L2a)_(-1)p at :409 must be retained, and it is retained correctly.
+
+(f) Gate5 then supplies A_(0)P4 subset N5. The four formulas at
+:520–523 give A_(1),A_(2),A_(3),A_(4) on P4 in W4,S3,S2,K.
+The n=5 mode is scalar and later modes vanish. The missing-looking
+coefficient in the last line is indeed one: [L2,a_(2)]=a_(4)
+for a quasiprimary weight-two vector, up to the vanishing scalar
+(L2a)_(2).
+
+Current-normal and derivative parts of S2 need no independent primitive
+test. Filtered Wick reduces them to the established current products.
+At A(weight2)-by-P4(weight4), the relevant smaller total is at most5,
+so no primitive S3-by-S3 pair of total6 is presupposed.
+
+This covers K/A with every strong space K,S2,S3,P4. After Gate5,
+the recursive theorem genuinely has its all-singular-mode hypothesis.
+
+4. Full normal spaces, Gate5, and provenance
+
+The normal-space claims are mathematically valid. In particular,
+no S3-by-S3 singular product is needed to prove
+  A_(0)N4 subset N5 and (N3)_(0)S3 subset N5.
+The first follows termwise from zero-mode derivation:
+- K_(-1)S3 gives A_(-1)S3 and K_(-1)W4;
+- DS3 gives DW4;
+- A_(-1)A gives S3_(-1)A plus A_(-1)S3, with the reversed
+  product reordered using the already established A/S3 singular modes.
+For the second, (Da)_(0)=0 and the normal iterate at :428–430 is
+correct. Its first inner sequence is W4,S3,S2,K,C1; the second is
+S3,S2,K,C1. Higher negative outer modes reduce by translation.
+
+The bottom-witness Jacobi equation has the correct sign. Once the
+bottom product has been proved zero, current raising propagates that
+zero; the text correctly does NOT assume that the original weight
+exclusion holds at every raised input. The neutral step uses the
+charged conclusion only after it is available, and the charged-span
+input concerns the exact quotient P of dimension322.
+
+The source graph supports the chapter's distinction between finite
+construction inputs and their all-weight consequence:
+- hi_cft_20260923_next_structure_lower_closure.json:141–142,741–746:
+  3,970 tasks, complete, exact lower/quasiprimary identities passed.
+- hi_cft_20260923_next_structure_p4_controls.json:2:
+  exact actual triplet and lower controls passed. Its final scope
+  explicitly leaves the A0P3/A0P4 gates for later.
+- hi_cft_20260923_c8two_gate4_verified.json:4,689:
+  exact-seed/raising status and 2,898 implied A0P3 identities;
+  projected residual records include independent integer-zero checks.
+- hi_cft_20260923_c8two_gate5_verified.json:594 onward:
+  two specific bottom witnesses A3_zero_r3_000910 and
+  A6_zero_r3_000899, actual nonzero field coefficients and exact
+  residual-zero flags.
+- The same Gate5 record:849 onward authenticates Gate4 and the
+  charged-span certificate and explicitly derives all24 channels by
+  Jacobi; it does not claim24 newly evaluated grade-five lattice OPEs.
+- hi_cft_20260923_c8two_charged_span_verified.json records an exact
+  quotient dimension322, lowering-image rank294,28 independent
+  charged seeds, combined rank322, and checked current commutators.
+- c8_revision_20260927/gate4_replay.json and gate5_replay.json retain
+  the corresponding completed statuses in separate replay outputs.
+
+The early recursive/Jacobi planning notes themselves say that their
+gates were then conditional. The completed verifier records and the
+ledger in hi_cft_c8_proof.tex:1145–1206 supply the later finite inputs;
+the chapter is not silently treating those early plans as executions.
+This review read selected records, not the full sparse-vector certificate.
+It is a proof-logic/source-scope audit, not a fresh exact replay.
+
+5. Two focused optional improvements
+
+5a. c02:217–219 and :421–433: expose why N5 is the FULL relevant
+normal space at the point where that fact is used.
+
+The statement at :217 comes before the positive bootstrap. In logical
+use this causes no circle, because Gate4 only uses N4 and N5 is first
+used after the bootstrap. However, a careful reader may wonder what
+justifies the asserted exhaustion or the higher negative modes in
+:429–430. The manuscript supplies the short omitted bridge.
+
+Suggested insertion immediately before :421:
+  At this stage every normal word of weight five reduces to N5.
+  A leading derivative reduces to W4; a normal product splits into
+  weights1+4 or2+3, after reversing a split if necessary. The
+  reordering corrections are derivatives of K_(n)W4 or
+  (S2)_(n)S3, which have just been controlled. For higher negative
+  modes use
+    x_(-r)v=[D(x_(-(r-1))v)-x_(-(r-1))Dv]/(r-1), r>=2.
+  Thus no unproved S3-by-S3 singular closure is hidden in the
+  displayed normal-space containments.
+
+Correspondingly, :217 could say "These are the full displayed spans;
+their normal-space exhaustion is justified below", rather than sounding
+as though the N5 reordering has already been established before Gate4.
+This is an explanatory dependency repair, not a new hypothesis.
+
+5b. c02:504–511: finite inputs have sufficient mathematical scope,
+but a single precise provenance pointer would improve auditability.
+
+The current source guide r11:221–232 already names hi_cft_c8_proof.tex,
+so the chapter is not source-free. A short final sentence such as
+  "The certificate ledger of the construction manuscript lists the
+  lower-closure, actual-triplet, Gate4, charged-span, and Gate5 records."
+would make that route explicit without importing hashes or long filenames
+into the textbook proof. Alternatively list the three final gate/span
+JSON names only in the source guide.
+
+The completed-gates constructioninput should remain distinguished from
+the proved recursive theorem. The current prose does this correctly.

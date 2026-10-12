@@ -1,0 +1,183 @@
+% Final student-facing glossary/notation audit, scope_foundations.
+% Draft only: no live source edits. Clock read during audit:
+% 2026-10-05 20:56:26 UTC.
+%
+% The eight numbered recommendations below are ranked. They are small
+% first-use repairs or clarifications, not a proposal for a longer glossary.
+% Existing definitions of contragredients, pointed lattice categories,
+% simple currents, Smith normal form, regular path space, strong generation,
+% semiconformal stresses, and ordinary/admissible modules already suffice.
+%
+% 1. TWO DIFFERENT BOXED TENSOR PRODUCTS -- highest priority.
+% First category-product use: c03_factors.tex, immediately following
+% Rep(P) ~= Fib boxtimes C(Z/3,-r^2/3), currently around lines 144--146.
+% r02 has already defined boxtimes_V as fusion inside Rep(V), but neither
+% this category product nor their distinction appears in r09.
+
+Here $\boxtimes$ between two categories denotes their external
+tensor product: its simple objects are pairs $X\boxtimes Y$,
+and fusion and braiding act separately in the two factors.
+In particular, dimensions and twists multiply. This differs from
+$M\boxtimes_VN$, which fuses two modules inside the single category
+$\Rep(V)$.
+
+% Add one row in r09's Categories and modular data table; it is enough
+% to summarize the distinction there without repeating the explanation.
+
+$\mathcal C\boxtimes\mathcal D$, $M\boxtimes_VN$&
+The first is the external product of two categories, with pairs of
+simple labels. The second is the fusion product of two modules of
+one VOA $V$. Neither means the plain tensor product of the two
+underlying module vector spaces.\\
+
+% 2. ENERGY GAP VERSUS SCALAR SCALING GAP -- high priority.
+% l02_scaling.tex after eq:gap-dictionary, before the corrections paragraph.
+% The book carefully distinguishes these operationally, but never gives
+% a compact definition of "gapped" despite using it throughout Parts IV/V.
+
+An energy gap and a conformal scaling gap are different quantities.
+A gapped chain has a positive lower bound, independent of sufficiently
+large $L$, on excitation energies above its vacuum sector. With several
+pure vacua, that sector may be a cluster of nearly degenerate finite-volume
+states; their small internal splittings do not define the bulk gap.
+A CFT may have a positive lowest nonidentity scalar dimension
+$\Delta_{\min}$ while remaining gapless, since its corresponding energy
+difference is $2\pi v\Delta_{\min}/L$.
+
+% Short r09 glossary entry, if desired instead of duplicating the paragraph:
+
+\item[Gap.]An energy gap is an excitation-energy separation above the
+vacuum sector. A scalar scaling gap is the lowest nonidentity scalar
+dimension $\Delta$. A positive scaling gap in a CFT corresponds to
+energies of order $1/L$, not a nonzero infinite-volume energy gap.
+
+% 3. CONFORMAL BLOCK -- repair the existing r09 definition.
+% Current entry defines every block as one intermediate-representation
+% contribution. That is a useful description of a channel basis element,
+% but it excludes the selected linear combinations explicitly called
+% blocks in r06 and obscures multiplicity labels in r08.
+% Replace the existing entry, rather than adding another one.
+
+\item[Conformal block.]A chiral solution of the symmetry Ward identities
+for specified external representations. A factorization basis labels
+blocks by intermediate representations and junction multiplicities,
+and sums their descendants. A general block, including one selected
+by a lattice extension, may be a linear combination of that basis.
+Full correlators additionally specify how holomorphic and
+antiholomorphic blocks are paired.
+
+% 4. WEAK INTEGRALITY -- first used in c06_cosets.tex around lines 271--277.
+% No definition exists in the chapters or glossary. The construction
+% agent is already handling the full-faithfulness cross-reference needed
+% to apply the simple-object bound to a categorical action; do not replace
+% that premise check by this definition.
+% Suggested short first-use paragraph, or the glossary entry below.
+
+A fusion category is \emph{integral} if all simple
+Frobenius--Perron dimensions are integers, and \emph{weakly integral}
+if its global Frobenius--Perron dimension is an integer.
+In a weakly integral fusion category over $\C$, each simple object's
+Frobenius--Perron dimension has integer square. For example, the Ising dimensions
+$1,1,\sqrt2$ give global dimension four: this category is weakly
+integral but not integral. The square condition concerns simple
+objects; a reducible object's dimension is a sum of simple dimensions.
+
+% r09 entry could be just:
+
+\item[Weakly integral.]A fusion category whose global
+Frobenius--Perron dimension is an integer. Its simple Frobenius--Perron dimensions
+have integer squares, but need not themselves be integers;
+the Ising dimension $\sqrt2$ is the basic example.
+
+% 5. THE ROOT-OF-UNITY ARITHMETIC VOCABULARY -- c05_branching.tex.
+% Place before the first conductor-forty orbit estimate (currently ~917).
+% The reading guide assumes elementary algebra, not Galois theory.
+% f05 explains field automorphisms much later; the following is enough
+% to read the immediate orbit-averaging mechanism without a new chapter.
+
+Here is the arithmetic vocabulary used in this last step.
+A \emph{cyclotomic field} $\Q(\zeta_N)$ is generated by
+$\zeta_N=e^{2\pi i/N}$. Its automorphisms send
+$\zeta_N$ to $\zeta_N^a$ with $\gcd(a,N)=1$, preserving every
+rational polynomial relation. If a subfield $K$ is fixed, averaging
+over the automorphisms that fix $K$ lands in $K$.
+For example, averaging the two conjugates of $\zeta_3$ gives
+$(\zeta_3+\zeta_3^2)/2=-1/2$.
+The \emph{conductor} of the abelian number field considered here
+is the smallest $N$ for which it lies in $\Q(\zeta_N)$.
+
+A root of order exactly $N$ is called primitive. Summing all
+primitive $N$th roots gives the Ramanujan sum $\mu(N)$ used below.
+A quadratic Gauss sum instead weights roots by a quadratic
+character: modulo an odd prime $p$, this character is $1$ on
+nonzero squares, $-1$ on nonsquares, and $0$ at zero. Such weighted
+sums isolate the square-root part of the orbit average.
+
+% Optional r09 glossary cross-reference can be omitted; the first-use
+% paragraph is more useful than moving this explanation to the appendix.
+
+% 6. COMPLETELY POSITIVE -- l04_tensor_networks.tex around lines 238--244.
+% The first transfer-map formula is explicit, but the adjective has no
+% definition. Insert immediately after that formula.
+
+\emph{Completely positive} means that
+$\mathrm{id}_{M_r(\C)}\otimes\mathcal E$ preserves positive
+semidefinite matrices for every auxiliary dimension $r$.
+The displayed formula has this property because each summand
+acts as $Z\mapsto(1\otimes A^s)Z(1\otimes A^s)^\dagger$.
+A transfer map need not preserve the ordinary matrix trace.
+
+% r09 glossary entry, if wanted:
+
+\item[Completely positive map.]A linear map that preserves
+positive semidefinite matrices even after tensoring with the identity
+map on any finite auxiliary matrix space. The MPS transfer formula
+$\mathcal E(X)=\sum_sA^sX(A^s)^\dagger$ makes this property explicit;
+trace preservation is a separate condition.
+
+% 7. PERRON EIGENVECTOR -- after the Fibonacci eigenvalue example in f01,
+% or as a glossary-only entry. The many later "Perron" weights and
+% probabilities currently rely on terminology not explicitly explained.
+% This is the ordinary nonnegative-matrix theorem, not a substitute
+% for the separate completely-positive-map hypotheses in l04.
+
+This is an example of the Perron--Frobenius theorem.
+For a nonnegative matrix whose directed graph is strongly connected,
+the spectral radius $r=\max_\lambda|\lambda|$ is a simple eigenvalue
+with strictly positive left and right eigenvectors, unique up to scale.
+These are its \emph{Perron eigenvectors}. If some power of the matrix
+has every entry strictly positive, the matrix is primitive and every
+other eigenvalue has modulus less than $r$. The Fibonacci fusion
+matrix above has this property.
+
+% A short r09 entry can replace the chapter insertion if length is tight.
+
+\item[Perron eigenvector.]A positive eigenvector of a nonnegative
+matrix at its spectral radius. For a matrix with strongly connected
+directed graph it is unique up to scale; primitivity additionally
+excludes other eigenvalues of the same modulus. Such vectors supply
+the positive weights in fusion graphs and classical transfer matrices.
+
+% 8. PART-IV TRANSITION -- mild navigational clarification.
+% l01_chain.tex opening currently starts "The preceding categorical
+% constructions ...", immediately after c06's reduced-CFT construction.
+% The wider reading guide is already correct, and no theorem claims
+% an implication. Replace that opening phrase with the following two
+% sentences to make the change of construction track immediate.
+
+We now return to the six-object $\mathcal H_3$ fusion category and
+construct a microscopic quantum chain from it. The reduced CFTs of
+the preceding chapter are comparison theories, rather than the
+source of this Hamiltonian.
+
+% Continue with the existing "A quantum Hamiltonian needs one further
+% choice ..." paragraph.
+%
+% TRANSITION AUDIT OTHERWISE PASSES:
+% - Part I's modular target is distinguished from the Part II construction.
+% - c05 explicitly previews the complete-unitarity input supplied next
+%   by r04, and r03 follows that bridge in the actual reading order.
+% - r05/r06/r07/r08 distinguish full theories, chiral observables, defects,
+%   and sewing; the reading guide accurately describes this progression.
+% - Part V explicitly returns to construction of associators, with no
+%   claim that the noncyclic or extended-Haagerup examples construct CFTs.

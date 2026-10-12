@@ -1,0 +1,123 @@
+Fresh physics-reader pass: full theories and defects
+Reviewer: scope_lattice
+Date: 2026-10-05
+
+Scope
+Read the present r05_full_theories.tex and r07_defects.tex against
+their reorganized exercise solutions. No numerical jobs, new research,
+or edits of main chapters. The scientific distinctions and displayed
+normalizations pass this read. In particular:
+
+* The diagonal U theory and selected holomorphic E8 full theory really
+  have different Hilbert-space pairings. Neither is identified with the
+  physical chain.
+* Finite tube multiplicities, ordinary graded state degeneracies, and
+  quantum dimensions are kept separate.
+* Invariance uses the quantum-dimension eigenvalue, not eigenvalue one
+  for every line.
+* The four chosen Cartan deformations are justified by the abelian
+  current-current theorem, and transport of categorical junctions remains
+  a separate issue.
+* The annulus factors of two and four, opposite tensor order, and dual
+  boundary label are mutually consistent.
+
+Main-text suggestions for root review
+These are short teaching bridges, not corrections of false formulas.
+Line numbers refer to the versions read during this pass.
+
+1. r05:47-57, physical meaning of the extension pairing.
+   A concrete two-sentence bridge would prevent a reader from treating
+   extension as a relabelling of the diagonal theory's existing states:
+
+   "For example, the diagonal c_1 tensor bar(c_1) sector supplies nine
+   scalars of dimension 2/3, whereas its coefficient is zero in the
+   extension partition function. Conversely, the extended theory contains
+   four copies of a tensor bar(a), because there are two independent
+   copies of a on each chiral side."
+
+   The character coefficient v_i v_j already implies this; the point is
+   to exhibit actual states being selected and multiplied before the
+   reader enters the larger multiplicity tables.
+
+2. r05:237-244, why the local abelian family has r^2 parameters.
+   The boost exercise checks a chosen off-diagonal generator but the
+   quotient dimension is stated. Optional compact derivation:
+
+   "Writing an infinitesimal O(r,r) generator in blocks gives
+   X=(A,B;B^t,D), with A and D antisymmetric. A and D are independent
+   rotations of the two current bases; after quotienting these out the
+   arbitrary real r by r matrix B remains, giving r^2 directions."
+
+   This makes the parameter count follow from the same matrix algebra
+   as the exercise, without adding another theorem or global-moduli
+   assertion.
+
+3. r07:178-186, derive the annulus normalization rather than memorize it.
+   The formulas are correct. A short geometric explanation would help:
+
+   "The open interval can be unfolded to a chiral circle of length 2 ell,
+   which gives H_open=(pi v/ell)(L_0-c/24). In the closed channel the
+   spatial circle has circumference v beta, and propagation through
+   distance ell gives exp[-2 pi ell/(v beta)
+   (L_0+bar L_0-c/12)]. This is exactly the Ishibashi regulator above
+   with tilde q=exp[-4 pi ell/(v beta)]."
+
+   This supplies the otherwise implicit factor-of-two reasoning. It
+   also makes explicit why the open trace contains one character, not
+   an absolute square.
+
+4. r07:388-391, the finite tube factor versus physical state counting.
+   The existing distinction is excellent; one formula would make it
+   directly usable:
+
+   "At left grade k and right grade ell in a specified mu summand,
+   the state multiplicity is n_{x mu} a_mu(k) a_E8(ell).
+   Thus n_{1a}=2 and a_a(0)=81 give 162 holomorphic weight-one
+   states against the antiholomorphic vacuum."
+
+   This explicitly separates the small line matrices from a truncated
+   dynamical Hilbert space. The alpha-twist solution now gives the other
+   simple example 1 times 3 times 1 = 3.
+
+5. r07:481-492, a quick orientation consistency check.
+   Optional addition after the Hom-space argument:
+
+   "The identity multiplicity is dim Hom(x,y)=delta_{xy} for elementary
+   boundaries. For example, the alpha self-annulus uses
+   alpha^* alpha=1; omitting the dual would incorrectly use alpha^2
+   and lose the boundary identity."
+
+   This is a particularly useful check because the noninvertible
+   boundaries used in the worked example are self-dual and by
+   themselves cannot expose a mistaken missing dual.
+
+Solutions improved directly
+
+solutions/r05_full_theories.tex:
+* Relevant scalar completeness now uses equal-grade kinematics.
+* Grade-one primary subtraction is derived from the nonzero norm of
+  L_{-1}|h>, and the two spinning weight pairs are made explicit.
+* The E8 dimension-two count starts from the three possible pairs of
+  integer chiral weights, and subtracts descendants from 4124.
+* The invariant count explicitly removes the a and b multiplicity
+  blocks using alpha psi=psi and rho psi=d psi, leaving U.
+* The boost solution derives both the spin invariant and the change
+  in dimension, and restates what the matrix identity cannot prove
+  without the current-current deformation theorem.
+
+solutions/r07_defects.tex:
+* The invariant projector eigenvalue calculation is shown explicitly.
+* The generating relations are expanded into all noncommutative
+  products alpha^j r_i, r_i alpha^j, r_i r_j.
+* The twined-character calculation explicitly factors the trace over
+  the two-copy multiplicity space.
+* The alpha-twist count separates restriction multiplicity 1, chiral
+  top dimension 3, and antiholomorphic vacuum dimension 1. The absence
+  of a second exchanged-chirality contribution is stated.
+* The distinct-noninvertible-boundary calculation derives the dual,
+  the reversed exponent, the four c_1 copies, and the absence of a
+  boundary identity for distinct elementary boundaries. It also
+  distinguishes boundary weight h from bulk scalar dimension 2h.
+
+No primary multiplicities, normalized OPE constants, categorical data,
+or main-text claims were changed. Root controls typesetting checks.

@@ -1,0 +1,1356 @@
+{
+  "rows": [
+    {
+      "levels": [
+        1,
+        39
+      ],
+      "all_ground_supports_exist": true,
+      "grounds": [
+        {
+          "name": "d5",
+          "ground_weight": "7/13",
+          "target": [
+            13,
+            4,
+            40,
+            10,
+            4,
+            436
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 5,
+                "2": 4
+              },
+              "block_counts": {
+                "1": 1,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 23,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d6",
+          "ground_weight": "8/13",
+          "target": [
+            14,
+            2,
+            62,
+            1,
+            2,
+            1586
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 10,
+                "2": 2
+              },
+              "block_counts": {
+                "1": 1,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 62,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "c1",
+          "ground_weight": "1/3",
+          "target": [
+            3,
+            0,
+            4,
+            0,
+            0,
+            16
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 3,
+                "2": 0
+              },
+              "block_counts": {
+                "1": 1,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 9,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d1",
+          "ground_weight": "6/13",
+          "target": [
+            7,
+            0,
+            56,
+            0,
+            0,
+            1568
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 7,
+                "2": 0
+              },
+              "block_counts": {
+                "1": 1,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 31,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d4",
+          "ground_weight": "5/13",
+          "target": [
+            5,
+            0,
+            20,
+            0,
+            0,
+            272
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 5,
+                "2": 0
+              },
+              "block_counts": {
+                "1": 1,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 17,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "c2",
+          "ground_weight": "2/3",
+          "target": [
+            27,
+            6,
+            210,
+            35,
+            6,
+            7350
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 9,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 15,
+                "2": 6
+              },
+              "block_counts": {
+                "1": 1,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 184,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d2",
+          "ground_weight": "11/13",
+          "target": [
+            42,
+            10,
+            366,
+            85,
+            10,
+            13722
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 9,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 8,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 22,
+                "2": 10
+              },
+              "block_counts": {
+                "1": 1,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 533,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "a",
+          "ground_weight": "1",
+          "target": [
+            81,
+            18,
+            738,
+            129,
+            18,
+            32562
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 9,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 11,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 8,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 45,
+                "2": 18
+              },
+              "block_counts": {
+                "1": 6,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 8524,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "c0",
+          "ground_weight": "1",
+          "target": [
+            81,
+            18,
+            738,
+            129,
+            18,
+            32562
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 9,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 11,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 8,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 45,
+                "2": 18
+              },
+              "block_counts": {
+                "1": 6,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 8524,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal.",
+          "reused_identical_target": true
+        },
+        {
+          "name": "b",
+          "ground_weight": "1",
+          "target": [
+            80,
+            20,
+            860,
+            210,
+            20,
+            44372
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 9,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 11,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 10,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 40,
+                "2": 20
+              },
+              "block_counts": {
+                "1": 5,
+                "2": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 5797,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d3",
+          "ground_weight": "15/13",
+          "target": [
+            119,
+            30,
+            1350,
+            295,
+            30,
+            78558
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 9,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 13,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 8,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 10,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 59,
+                "2": 30
+              },
+              "block_counts": {
+                "1": 12,
+                "2": 2
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 41155,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        }
+      ]
+    },
+    {
+      "levels": [
+        3,
+        13
+      ],
+      "all_ground_supports_exist": true,
+      "grounds": [
+        {
+          "name": "d5",
+          "ground_weight": "7/13",
+          "target": [
+            13,
+            4,
+            40,
+            10,
+            4,
+            436
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 5,
+                "2": 4,
+                "3": 0,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 3,
+                "2": 2,
+                "3": 1,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 25,
+            "combinations": 2
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d6",
+          "ground_weight": "8/13",
+          "target": [
+            14,
+            8,
+            24,
+            10,
+            20,
+            180
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 1,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 3,
+                "2": 4,
+                "3": 1,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 2,
+                "2": 2,
+                "3": 1,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 19,
+            "combinations": 2
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "c1",
+          "ground_weight": "1/3",
+          "target": [
+            3,
+            0,
+            4,
+            0,
+            0,
+            16
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 3,
+                "2": 0,
+                "3": 0,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 2,
+                "2": 1,
+                "3": 1,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 11,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d1",
+          "ground_weight": "6/13",
+          "target": [
+            7,
+            2,
+            6,
+            1,
+            2,
+            18
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 3,
+                "2": 2,
+                "3": 0,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 2,
+                "2": 1,
+                "3": 1,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 13,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d4",
+          "ground_weight": "5/13",
+          "target": [
+            5,
+            2,
+            2,
+            1,
+            2,
+            2
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 1,
+                "2": 2,
+                "3": 0,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 1,
+                "2": 1,
+                "3": 1,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 8,
+            "combinations": 1
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "c2",
+          "ground_weight": "2/3",
+          "target": [
+            27,
+            18,
+            54,
+            27,
+            54,
+            486
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 3,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 6,
+                "2": 6,
+                "3": 3,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 4,
+                "2": 2,
+                "3": 2,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 41,
+            "combinations": 4
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d2",
+          "ground_weight": "11/13",
+          "target": [
+            42,
+            24,
+            128,
+            62,
+            60,
+            1916
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 3,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 9,
+                "2": 12,
+                "3": 3,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 7,
+                "2": 6,
+                "3": 2,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 94,
+            "combinations": 12
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "a",
+          "ground_weight": "1",
+          "target": [
+            81,
+            54,
+            270,
+            153,
+            162,
+            4482
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 1,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 5,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 18,
+                "2": 18,
+                "3": 9,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 27,
+                "2": 12,
+                "3": 6,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 352,
+            "combinations": 48
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "c0",
+          "ground_weight": "1",
+          "target": [
+            81,
+            54,
+            270,
+            153,
+            162,
+            4482
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 1,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 5,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 18,
+                "2": 18,
+                "3": 9,
+                "4": 0
+              },
+              "block_counts": {
+                "1": 27,
+                "2": 12,
+                "3": 6,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 352,
+            "combinations": 48
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal.",
+          "reused_identical_target": true
+        },
+        {
+          "name": "b",
+          "ground_weight": "1",
+          "target": [
+            80,
+            68,
+            236,
+            162,
+            308,
+            3188
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 4,
+              "right_dimension": 2,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 16,
+                "2": 16,
+                "3": 8,
+                "4": 2
+              },
+              "block_counts": {
+                "1": 21,
+                "2": 10,
+                "3": 5,
+                "4": 1
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 271,
+            "combinations": 40
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        },
+        {
+          "name": "d3",
+          "ground_weight": "15/13",
+          "target": [
+            119,
+            108,
+            408,
+            304,
+            528,
+            6528
+          ],
+          "support_found": true,
+          "support_witness": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 7,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 3,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 4,
+              "right_dimension": 4,
+              "multiplicity": 1
+            }
+          ],
+          "attempts": [
+            {
+              "left_dimensions": {
+                "1": 22,
+                "2": 24,
+                "3": 11,
+                "4": 4
+              },
+              "block_counts": {
+                "1": 52,
+                "2": 21,
+                "3": 10,
+                "4": 2
+              }
+            }
+          ],
+          "budget": {
+            "nodes": 715,
+            "combinations": 294
+          },
+          "scope": "One witness proves support only; all left splits and bounded right partitions are exhausted before a refusal."
+        }
+      ]
+    }
+  ],
+  "diagonal_simple_current_extension_premise": true,
+  "locality_condition": "Every affine ground irrep has n+m even; odd types are forbidden, not merely paired.",
+  "additional_affine_energy_filter": false,
+  "energy_premise": null,
+  "scope": "Necessary finite representation support under the stated S-extension premise; neither the extension premise nor VOA existence is proved by this arithmetic certificate.",
+  "selftest": {
+    "local_d5_controls": 2,
+    "nonlocal_refusal": true
+  },
+  "input_record": {
+    "path": "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_quartic_results.json",
+    "sha256": "62fe364e80909c367621aa110f4857c6fb5a140c4a12dba381cc7dba6966937c"
+  },
+  "producer_source_hashes": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_next_grade.py": "2a395249011e990a672adc1a8bf0088860fd8b94667156dbdec3c0ceac5a2cc4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_quartic_check.py": "d8998290ab757e167f7c2ab66b84a7254ef5513542e0fa6382320bd832f4f754",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_local_ground_check.py": "3e96662e825fd32832fc3f1f65dfd4690a108cc2bbb4f39515331186f85c5f32",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_joint_ground_check.py": "475302a0990c2654080d42cc1dc2876b8acc5d25d1abd975a3f9ed00e123f162",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_d6_check.py": "160d952a08239fbbfe968d8c888b9c7def6c7f572a5cb2b1330a8377a6643dfd",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_check.py": "dbe5bbdcdb507f00180e216cb86c7e0f4b071a1fbbd372115bab34a1c0654ac8",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_trace_check.py": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b"
+  },
+  "limits": {
+    "nodes_per_ground": 1000000,
+    "solutions_per_block": 10000,
+    "combined_nontrivial_blocks": 1000000
+  },
+  "seconds": 0.02159714000299573,
+  "peak_rss_KiB": 21312
+}

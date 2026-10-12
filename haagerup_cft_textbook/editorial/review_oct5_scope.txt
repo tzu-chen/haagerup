@@ -1,0 +1,67 @@
+Independent scope review of the integrated October 5 inputs
+Reviewer: scope_construction
+Timestamp: 2026-10-05 20:25:11 UTC (clock tool)
+
+Read-only. No imports, postprocessing, numerical execution, or chapter edits.
+Read l04:490-564, l06:1141-1204 and their surrounding definitions; compared
+the source audit with the completed status/handoffs, Ward interpretation,
+equal-energy and density interpretations, module interpretation, and the
+saved stationarity/coverage flags themselves.
+
+Scientific scope: PASS, with three small wording/notation repairs needed.
+
+1. l06_identification.tex:1167: W collides with the explicitly defined
+Potts continuum field W=sigma_1 sigma_2 sigma_3 at lines 1106-1111.
+These occur in adjacent sections, and the text is discussing a possible
+operator dictionary; reusing W could suggest the identification being
+tested has already been supplied. Rename the new microscopic sum
+V_{\rm diff} (or W_{\rm lat}). It is not subsequently used by symbol,
+so the one displayed rename suffices. Keep the earlier Potts W unchanged.
+
+2. l04_tensor_networks.tex:521-523: replace "an independent same-point
+check" by "a fresh uncached same-point check". The saved protocol is a
+fresh call to the same conditioned_gradient implementation at the identical
+accepted coordinates with perron_cache=None, in the same fixed coordinate
+frame. It is independent of the cached objective result, but is not an
+independent gradient implementation or gauge-invariant stationarity
+certificate. The existing later physical-error caveat is correct.
+
+3. l06_identification.tex:1177-1181: identify the equal-energy result as an
+aggregate diagnostic. Current "small decreasing deviations from
+proportionality" can be read as a claim about every fixed operator pair.
+The source explicitly distinguishes its small complete-catalog wedge from
+larger individual bare-operator discrepancies. Suggested concise wording:
+  "Separate equal-energy comparisons in the two charged families give
+  small decreasing catalog-wide rank-one diagnostics over L=9,12,15.
+  These aggregates do not bound every operator pair; nonzero individual
+  discrepancies remain in the record."
+The current next sentence denying an exact identity or limiting OPE
+normalization should remain.
+
+Editorial provenance status: oct5_lattice_update_audit.txt:3 still says
+"Drafts only; no live l04/l06 edits have been made." That accurately records
+the initial audit stage but is stale as the current integration status.
+Prefix it with "At the time of this source audit" or append an explicit
+integration-status line. Its substantive source scope is correct.
+
+No further corrections found in the requested scientific distinctions:
+- Rank144 is the later qualified continuation; rank156 remains excluded
+  despite lower energy. The 1e-6 coordinate gate is not promoted to global
+  optimality, a physical error estimate, or a single-scale CFT proof.
+- The entropy table and four-point value match the source audit, retain
+  the adjacent drift, and explicitly deny a selected plateau. Rank versus
+  full bond dimension is explained directly below the input.
+- L12 all four windows and L15 first three/widest truncated match the
+  saved empirical coverage flags. No certified ordering, omitted-spectrum
+  threshold, or all-state completeness is claimed.
+- Ward alignment and normalized source amplitude are kept distinct;
+  the passage attributes results to completed producers, not the unrun
+  intermediate reader.
+- Six floating minors support finite response nonproportionality only.
+  The text does not claim two infrared primaries or marginal couplings.
+- The 18/54 module trials are the qualified continued endpoints, not the
+  earlier failed growth attempts. Their direct physical correlations are
+  not promoted to an exact peripheral decomposition, infinite-distance
+  plateau, ground-vacuum count, or bulk gap.
+- No N18 density result, unrun offdiagonal contraction, or new continuum
+  identification has entered the textbook.

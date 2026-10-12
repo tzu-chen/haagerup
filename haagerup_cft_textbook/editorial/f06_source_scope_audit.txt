@@ -1,0 +1,94 @@
+f06 related-category chapter: source and claim-scope audit
+2026-10-05. Clock tool read 18:30:40 UTC during final drafting; this
+report records read-only inspection and hand algebra, no computation.
+
+Author-owned files:
+chapters/f06_related_categories.tex
+chapters/f_solutions.tex (six corresponding solutions appended)
+
+The chapter makes the following distinct claims.
+
+1. The determinant ansatz proves linear transport/rotation identities
+for reciprocal weights on finite-index Gamma subset 2Z^2. It does not
+solve nonlinear equations for arbitrary quotients. Chapter derives
+representative descent, exceptional axis, pair product, and Klein-four
+one-sheet example. Sources: hi_noncyclic_determinant_linear_proof.tex,
+hi_noncyclic_analytic_note.tex. There is no all-noncyclic existence claim.
+
+2. The known Z4 x Z2 category is published GIS Theorem 4.5. Independently
+verified primary arXiv HTML 1501.07324v1, theorem and proof. The exact
+gamma identification F2=lambda8^-3, F3/F1=lambda8^2 is local work:
+hi_noncyclic_gis_gamma_proof.tex reduces four cyclic quadratics by exact
+ideal-membership certificates, then positivity selects the real branch.
+The textbook imports the finite elimination and derives the branch
+selection by hand; it does not claim a new independent elimination run.
+The gamma convention was checked directly against
+hi_even_cyclic_analytic_proof.tex and hi_shintani_meromorphic.py:
+F_k=1/gamma(omega2+k)=Sin2(1+kD/(D+1);D,1).
+Sin2 is reciprocal gamma, so the chapter explicitly warns about the
+opposite sine-shift direction.
+
+3. The Z2 x Z6 algebraic existence/unitarity certificate is complete in
+current supplied sources; the proposed four gamma products remain open.
+Read hi_noncyclic_gamma_identification_status.md and
+hi_noncyclic_ansatz_z2xz6_exact.tex plus the two manifests. The chapter
+labels full 1,728 quadratic / 248,832 cubic residual reductions as recorded
+construction input and does not rerun them. It derives the finite-algebra
+method and conjugation-to-Hermitian implication. Six positive coefficient
+embeddings are not called six inequivalent categories. No novelty claim.
+
+4. Faithful reconstruction uses the algebraic free-product extension in
+hi_noncyclic_reconstruction_extension.tex. Chapter explains the finite
+function-algebra translation action, orthogonal-corner endomorphism,
+and why the intertwiner grading argument is needed; it does not assert
+that faithfulness establishes a positive adjoint. All finite abelian
+reconstruction assertions retain full eta=1 transpose-equation premise.
+
+5. Extended Haagerup existence, seed data, and moment reconstruction are
+published BMPS/GMPPS results, verified against primary sources
+https://arxiv.org/html/0909.4099v2 (Section 6 and Appendix A) and
+https://arxiv.org/pdf/1810.06076 (Lemma 5.4, Remark 5.6, Proposition 5.7).
+Textbook includes finite connected bipartite graph and faithful positive
+trace hypotheses. The moment-to-S^2=f calculation and projection split
+are derived on page. Jellyfish reduction remains published input.
+
+6. Word tensor orbit packaging and independent exact finite verification
+are local derived work, sourced from
+extended_haagerup_reconstruction_and_coefficients.tex and
+extended_haagerup_coefficients_results.json. The 21 seeds themselves are
+published. All 6,561 words are determined but the seed table is not fully
+reprinted. The 96-block audit is recorded, not rerun. The complete planar
+presentation is not called an enumerated skeletal F table. Low-depth 77
+F blocks and 90 scalar pentagons retain their limited diagnostic scope;
+general pentagons follow from reconstruction and basis overlaps.
+
+7. Field distinction verified against primary Morrison--Snyder,
+https://arxiv.org/html/1002.0168v2, Theorem 1.2. The chapter defines a
+split rational form and distinguishes generator coordinates from
+orthonormal-gauge square-root extensions. Its lambdaEH=i*sqrt(x-2)
+and the paper's parameter mu=-1/lambdaEH generate the same field:
+(x^2-6x+5)(x-2)=-5 follows from the index cubic.
+
+8. The Morita non-identification is a hand deduction from positive
+FP dimensions, not from possibly negative spherical dimensions. The
+EH dimension cubic is irreducible mod 2, whereas HI dimensions have
+degree 2. No categorical construction here is claimed to give a new VOA,
+sewn local CFT, or identification of the physical H3 chain limit.
+
+Read-only SHA256 snapshot of current supplied sources:
+29bbecc3665fcf552e4074e82323c86130e13418fff7a1777f19e6cbba44603c
+  hi_noncyclic_gamma_identification_status.md
+ac7dbe3e0638a762a390c80701c6bf5c63c9bd7ef53417accc7576fd688e58ca
+  hi_noncyclic_analytic_note.tex
+657264e922e60a1d591dd0bee268dc75c7729550c02ae347d613b47d2d807185
+  hi_noncyclic_gis_gamma_proof.tex
+fcd1bb3b13708b0ae80bddf66f2ba9f87d51aff9070d381b37f1e341546d83a4
+  hi_noncyclic_ansatz_z2xz6_certificate.json
+8804df8290b14a995902cebc3714ca2053497382a9cb735828df57b3f7e9ea04
+  hi_noncyclic_ansatz_z2xz6_unitary_certificate.json
+d47d258e184956a932bfd84d439db6e88122e2afbacf69732db1736ac1db9cc5
+  extended_haagerup_README.md
+470b74887374253881664903bce3ccc0e2c5e533bc31ea4cf9a77b8b3dad4d2f
+  extended_haagerup_reconstruction_and_coefficients.tex
+fc62d042a475d10dc6261bbb865e6e74a80bb8843379eaabe8576b1a92127600
+  extended_haagerup_coefficients_results.json

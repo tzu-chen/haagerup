@@ -1,0 +1,68 @@
+% Optional insertion after the Ising-tour paragraph in r00.
+% Draft only: no live chapter integration or layout verification.
+
+The following route begins with calculations a physics reader can
+carry through, then returns to the construction's existence proofs.
+The chapter references also make it possible to revisit a method when
+it is needed. Results imported from the construction retain the
+inputs and hypotheses stated there.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{@{}p{.29\textwidth}X@{}}
+\toprule
+Read & Calculation or skill to acquire\\
+\midrule
+Chapter~\ref{ch:cft}; the Ising example in
+Chapter~\ref{ch:scaling}
+&
+Compute $\|L_{-2}|0\rangle\|^2=c/2$ and extract $v=2J$,
+$c=1/2$ from the exactly solved periodic Ising chain.
+\\[3pt]
+Chapters~\ref{ch:fusion}, \ref{ch:haagerup},
+and \ref{ch:chain}
+&
+Turn an $F$-matrix into a local fusion projector and count
+the allowed periodic path states.
+\\[3pt]
+Chapters~\ref{ch:vertex_algebras} and
+\ref{ch:lattice_embedding}
+&
+Multiply two lattice exponentials, including their cocycle,
+and read a current level from the double pole.
+\\[3pt]
+Chapters~\ref{ch:centers}--\ref{ch:modular} and
+\ref{ch:finite_closure}--\ref{ch:unitarity}
+&
+Track what finite closure, positive stresses, branching,
+and complete unitarity each establish about the constructed algebra.
+\\[3pt]
+Chapters~\ref{ch:characters}--\ref{ch:sewing}
+&
+Remove Virasoro descendants from a character, count full scalar
+fields, and check the Ising four-point sewing example.
+\\[3pt]
+Chapter~\ref{ch:cosets}
+&
+Subtract commuting stresses and distinguish that calculation
+from constructing the reduced state space and its full CFT.
+\\[3pt]
+Chapters~\ref{ch:scaling}--\ref{ch:tensor_networks}
+&
+Derive a stress estimate of $c$, normalize a wavefunction
+overlap, and obtain an MPS truncation from Schmidt coefficients.
+\\[3pt]
+Chapters~\ref{ch:gapped}--\ref{ch:identification}
+&
+Compare a proven gapped parent with the physical Hamiltonian
+and state which spectral, OPE, and symmetry data a continuum
+identification still needs.
+\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Chapters~\ref{ch:arithmetic} and \ref{ch:related-categories}
+can then be read for the exact arithmetic and reconstruction
+methods behind further associator examples.

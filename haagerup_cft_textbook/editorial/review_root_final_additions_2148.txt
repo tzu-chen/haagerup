@@ -1,0 +1,21 @@
+Root review of the final teaching additions
+Date: 2026-10-05. Review recorded after the 21:41 PDF build and 21:48 font inspection.
+
+Mathematical integration
+- The fourteen core-top rows and the 17/10 trace certificate passed the independent exact checker under the canonical guard. Script, chapter-at-check and guard hashes remain in core_top_check_results.json. Its scope is printed arithmetic, not the underlying VOA embedding.
+- The E8 root count and new 27-by-3 glue example were checked by hand independently: 27=10+1+16, squared projection norms 2/3 and 4/3, the E6 Weyl orbit, and 248=78+8+81+81. These statements concern the finite current algebra and do not replace U-top irreducibility or the selected extension algebra.
+- The rational-orbifold argument uses the stated rationality/positivity assumptions, integer global dimension, Morita invariance and simplicity of the defect unit. The all-height W3 argument was separately reviewed for actual category/full-center algebra factorization. Its affine classifications and archived exact height-thirteen comparison remain identified as construction inputs.
+- The ramification example computes discriminant13 from the integral trace matrix [[2,1],[1,7]]. Its dimension field Q(zeta3444) has no ramification at13. The simple separable Frobenius algebra premise is explicit.
+- The double-semion example restores the associator factors in both half-braiding and tensor-product formulas. The positive pivotal signs give dimensions1 and twists1,1,i,-i. All four simple objects are self-dual; the anti-semion label does not denote the categorical dual. An independent hand derivation is preserved in review_lattice_twisted_Z2_center.txt.
+- The modular-rank example in Appendix C uses valid coefficient-ring specializations to F3 and F17. It separates rank loss, false modular span membership, and real positive definiteness. No numerical program was needed for these two-by-two calculations.
+- The F-index convention in the extended Haagerup overlap formula was corrected to left-channel row/right-channel column. The trace R*L, chapter1 recoupling projector and physical chain projector now use the same convention. The displayed real symmetric EH example was unchanged.
+- The order-eight solution now derives the supplied identity t r^3+2r=1 on the positive branch, using s^2+8s=1 and r^2-(5+s)r/2+1=0. The added algebra was checked independently by hand.
+
+Visual and navigation checks
+- Reviewed the 322-page PDF's physics route table, E8 glue example and rational-orbifold page. Fixed the new annulus figure's escaped line breaks and label placement after inspecting its first render.
+- Reviewed the 328-page PDF's double-semion page, corrected annulus diagram, ramification example and W3 factorization page. No overflow or clipped mathematics was seen. The TeX log contained no overfull or underfull boxes.
+- Reviewed the first and last pages of the new clickable worked-example list in the 332-page PDF. Its numbering, titles, mathematical notation, dots and page numbers are legible. The navigation audit resolves all93 worked-example targets and all151 solution anchors.
+- The 332-page PDF's 37 fonts were all embedded. pdf_font_audit.txt records that PDF identity; final compilation and packaging still follow the planned source cutoff.
+
+Scope
+This is editorial and hand-mathematical review of the book. No stopped chain continuation, large certificate replay, Lean rebuild, or scientific-source modification was performed. Current source recording is a separate bounded read-only step; historical execution hashes remain untouched.

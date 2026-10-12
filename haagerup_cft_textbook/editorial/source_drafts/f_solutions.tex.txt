@@ -1,0 +1,486 @@
+\section{Solutions to the fusion-space exercises}
+
+\paragraph{Exercise~\ref{ex:fib-count}.}
+Tensoring $m_L\one\oplus n_L\tau$ with $\tau$ gives
+\[
+ m_{L+1}=n_L,\qquad n_{L+1}=m_L+n_L.
+\]
+At $L=0$ the tensor product is the unit, so the pairs for
+$L=0,1,2,3,4,5$ are
+\[
+ (1,0),(0,1),(1,1),(1,2),(2,3),(3,5).
+\]
+The recursion matrix has eigenvalues $\varphi$ and
+$-\varphi^{-1}$.  Its powers have integer entries, but their dominant
+asymptotic growth is controlled by the irrational eigenvalue
+$\varphi$.  This is no different in principle from an integer
+recursion whose closed form involves cancelling irrational terms.
+
+\paragraph{Exercise~\ref{ex:gauge-cancel}.}
+The left fusion-tree vector is multiplied by
+$u_{ab}^{e}u_{ec}^{d}$, while the right tree with channel $f$ is
+multiplied by $u_{bc}^{f}u_{af}^{d}$.  Expressing the rescaled left
+vector in the rescaled right basis gives their ratio in
+\eqref{eq:F-gauge}.  When all six labels equal $\rho$, both
+products are $(u_{\rho\rho}^{\rho})^2$, so the ratio is one.
+For generic labels the ratio need not be one; changing a junction
+phase can change the entry without changing the category.
+
+\paragraph{Exercise~\ref{ex:projectors}.}
+For two channels $f,g$,
+\begin{align*}
+ (P^{(f)}P^{(g)})_{ee'}
+ &=\sum_k\overline{F_{ef}}F_{kf}
+           \overline{F_{kg}}F_{e'g}\\
+ &=\overline{F_{ef}}F_{e'g}\,\delta_{fg}
+ =\delta_{fg}(P^{(f)})_{ee'}.
+\end{align*}
+The sum over $k$ is column orthogonality.  Similarly,
+$\sum_f\overline{F_{ef}}F_{e'f}=\delta_{ee'}$ is row
+orthogonality.  Omitting the complex conjugates would give the
+wrong projector in a general unitary gauge, even though it would
+go unnoticed for the real Fibonacci and $\HH_3$ blocks displayed
+in the text.
+
+\paragraph{Exercise~\ref{ex:fib-pentagon}.}
+The identities $v^2=u$ and $u^2=1-u$ give
+\[
+ u^2-uv^2=0,\qquad uv+u^2v=v(u+u^2)=v,
+ \qquad v^2-u^3=u-u(1-u)=u^2.
+\]
+These are the only nontrivial entries in the two matrix products;
+the others match directly.  Dividing the $(1,3)$ equation by $v$
+uses $v\ne0$.  The other root of $u^2+u=1$ is negative, so the
+condition $v^2=u$ cannot hold with $v$ real.  This excludes that
+root from the stated positive real ansatz; it is not an argument
+that the algebraic fusion ring has only one categorification.
+
+\paragraph{Exercise~\ref{ex:dimension-not-state}.}
+The roots are $\varphi=(1+\sqrt5)/2$ and
+$-\varphi^{-1}=(1-\sqrt5)/2$. Since the complexified ring is
+$\C[t]/(t^2-t-1)$, evaluation at either root is a unital algebra
+homomorphism to $\C$, hence a one-dimensional representation of
+that algebra. The word ``one-dimensional'' describes the space
+on which the algebra acts, not the value of its generator.
+An ordinary finite-dimensional vector space has a nonnegative
+integer dimension. The positive root is irrational and the other
+root is negative, so neither is such a dimension. In particular,
+a tensor functor sending $\tau$ to an ordinary vector space would
+require an integer $N$ with $N^2=1+N$, which is impossible.
+The positive categorical dimension instead measures asymptotic
+fusion-space growth.
+
+\section{Solutions to the six-line exercises}
+
+\paragraph{Exercise~\ref{ex:H3-fusion}.}
+The relation $\rho\alpha^h=\alpha^{-h}\rho$ gives
+$R_gA_h=\alpha^{g-h}\rho$.  It also gives
+\[
+ R_gR_h=\alpha^{g-h}\rho^2
+ =A_{g-h}+\sum_kR_{g-h+k}
+ =A_{g-h}+\sum_kR_k.
+\]
+The other two products are immediate.  The only invertible product
+containing the unit is $A_gA_{-g}$, and $R_gR_h$ contains the unit
+exactly when $g=h$, proving the duality rule.  Finally,
+$\alpha\rho=R_1$ and $\rho\alpha=R_2$ are distinct simples.
+A braiding would make them isomorphic, so no braiding exists on
+this six-object category.
+
+\paragraph{Exercise~\ref{ex:H3-F}.}
+Put $r=\sqrt{13}$. From the radicals,
+\[
+ y_-+y_+=\frac{5-r}{6},\qquad
+ y_-y_+=\frac{(5-r)^2-6(1+r)}{144}
+          =\frac{2-r}{9}=\frac{x}{3}.
+\]
+Consequently
+\[
+ xy_-+y_-y_++y_+x
+ =\frac{(2-r)(7-r)}{18}
+ =\frac{3-r}{2}=-d^{-1}.
+\]
+Together with $x+y_-+y_+=-d^{-1}$, this gives
+$x^2+y_-^2+y_+^2=d^{-2}+2d^{-1}=1-d^{-1}$.
+The first row of the full matrix has norm squared
+$d^{-2}+3d^{-1}=1$. Its inner product with any lower row is
+$d^{-1/2}(d^{-1}+x+y_-+y_+)=0$. Each lower row has norm
+squared $d^{-1}+x^2+y_-^2+y_+^2=1$, and two distinct lower
+rows have inner product $d^{-1}+xy_-+y_-y_++y_+x=0$.
+Thus all rows are orthonormal. This checks the inverse of one
+recoupling map. The pentagon also compares compositions of
+different blocks, for every admissible choice of external labels;
+those equations have not been checked by this calculation.
+
+\paragraph{Exercise~\ref{ex:H3-P}.}
+Let $S_0=\sum_gY_{A_g}$ and $S_1=\sum_gY_{R_g}$.  Summing
+the fusion rules gives
+\[
+ S_0^2=3S_0,\quad S_0S_1=S_1S_0=3S_1,\quad
+ S_1^2=3S_0+9S_1.
+\]
+For $N=S_0+dS_1$, it follows that
+\[
+ N^2=3(1+d^2)S_0+(6d+9d^2)S_1=3sN,
+\]
+where $6d+9d^2=3sd$ follows from $d^2=1+3d$.
+Therefore $P_+=N/(3s)$ is idempotent.  Also
+\[
+ Y_\rho S_0=S_1,\qquad
+ Y_\rho S_1=S_0+3S_1,
+\]
+so $Y_\rho N=dS_0+(1+3d)S_1=dN$.
+No eigenvectors, associator entries, or numerical approximations
+are needed for this ring identity.
+
+\paragraph{Exercise~\ref{ex:H3-characteristic}.}
+The block-constant subspace gives characteristic polynomial
+$x^2-3x-1$.  On the two copies of the sum-zero subspace, the
+matrix exchanges the blocks, giving $+1$ and $-1$ each twice.
+Thus
+\[
+ \det(xI-N_\rho)=(x^2-3x-1)(x^2-1)^2.
+\]
+Taking traces of powers gives \eqref{eq:H3-path-count}.
+The recursion yields
+$C_2=11,C_3=36,C_4=119,C_5=393,C_6=1298$; adding the
+even-length contribution four gives $1302$ paths at $L=6$.
+
+\paragraph{Exercise~\ref{ex:H3-neutral}.}
+Take the direct sum of the specified scalar and two-dimensional
+matrix representations.  Its dimension is $3+2+4\cdot2=13$.
+The neutral projector $E$ has rank five, since it is the identity
+on both kinds of scalar representation and zero on every charged
+doublet.  The ranks of $P_+$, $P_-$, and $P_{\rm ch}$ are
+$3,2,8$, respectively.  There are five $\alpha$-neutral states
+but only three fully Haagerup-invariant states.  Neutrality under
+the invertible subgroup is therefore a strictly weaker condition.
+
+\section{Solutions to the center and tube exercises}
+
+\paragraph{Exercise~\ref{ex:Z3-halfbraid}.}
+The scalar $\sigma_1$ must obey $\sigma_1^3=1$, and
+$\sigma_h=\sigma_1^h$.  Its three choices are $\omega^k$,
+giving the labels $(g,k)$ for all nine pairs.  The twist is
+$\omega^{gk}$.  Five pairs have $gk=0$: the three with $g=0$
+and the two further pairs with $k=0$.  Two pairs have product one,
+and two have product two.  Hence the twist multiplicities are
+$5,2,2$ for $1,\omega,\omega^2$.
+
+\paragraph{Exercise~\ref{ex:Z3-tube}.}
+If $g\ne g'$, multiplication vanishes.  Otherwise set $t=h+h'$
+in the double sum:
+\begin{align*}
+ p_{g,k}p_{g,l}
+ &=\frac19\sum_{t,h'}\omega^{-k(t-h')-lh'}e_{g,t}\\
+ &=\frac19\sum_t\omega^{-kt}e_{g,t}
+             \sum_{h'}\omega^{(k-l)h'}
+ =\delta_{kl}p_{g,k}.
+\end{align*}
+Summing over $k$ kills every $h\ne0$, so
+$\sum_kp_{g,k}=e_{g,0}$.  Summing over $g$ gives the algebra
+unit.  Only $p_{0,k}$ occur in the untwisted sector.
+
+\paragraph{Exercise~\ref{ex:tube171}.}
+For a fixed invertible $c$, tensoring on either side permutes the
+six simples.  For each $a$ there is exactly one $b$ giving a
+one-dimensional morphism space, so these choices contribute
+$3\cdot6=18$ in total.
+
+Fix now $c=R_l$.  If $a,b$ are both invertible, there are three
+nonzero one-dimensional spaces.  If exactly one of $a,b$ is
+noninvertible, each of the nine pairs contributes one, giving
+nine in each orientation.  If both are noninvertible, the two
+products share all three noninvertible summands, contributing
+$9\cdot3=27$.  Their invertible summands agree for three of
+the nine pairs, adding three.  Thus each noninvertible $c$
+contributes $3+9+9+27+3=51$, and
+\[
+ \dim\operatorname{Tube}(\HH_3)=18+3\cdot51=171.
+\]
+This independently checks the matrix-block sum in
+\eqref{eq:H3-tube-Wedderburn}.
+
+\paragraph{Exercise~\ref{ex:forgetful-qdim}.}
+The forgetful functor preserves the positive categorical dimension.
+The images have dimensions
+$1$, $1+3d=d^2$, $2+3d=s$, and $3d$, respectively.
+For the center object $a$, its ordinary tube module has dimension
+$2+1+1+1=5$, while its categorical dimension is $2+3d$.
+The former counts summand multiplicities; the latter weights each
+noninvertible summand by its categorical dimension $d$.  They are
+different trace constructions and need not agree.
+
+\paragraph{Exercise~\ref{ex:all-local}.}
+For a right action $r_M:M\otimes A\to M$, locality is the extra
+equation
+\[
+ r_M\circ c_{A,M}\circ c_{M,A}=r_M.
+\]
+An ordinary module satisfies the associative action equations;
+it need not satisfy this double-braiding equation. If $A$ is
+Lagrangian in a modular category $\mathcal C$, then
+\[
+ \operatorname{Dim}(\mathcal C_A^0)
+   =\frac{\operatorname{Dim}(\mathcal C)}{\qdim(A)^2}=1,
+ \qquad
+ \operatorname{Dim}(\mathcal C_A)
+   =\frac{\operatorname{Dim}(\mathcal C)}{\qdim(A)}=\qdim(A).
+\]
+Thus the local category is $\mathrm{Vec}$, while the all-module
+category can be nontrivial. For the canonical algebra in
+$Z(\HH_3)$ these categories are respectively $\mathrm{Vec}$ and
+$\HH_3$. Holomorphicity concerns the first category.
+The decomposition $A=\bigoplus_i m_iX_i$ gives an object and its
+multiplicities. Multiplication still requires actual maps
+$\mu:A\otimes A\to A$ and a unit, satisfying associativity and
+commutativity with the specified associator and braiding. Those
+maps are not contained in the list of summands.
+
+\section{Solutions to the modular-data exercises}
+
+\paragraph{Exercise~\ref{ex:Z3-S-square}.}
+Summing over the intermediate label $(a,b)$ gives
+\begin{align*}
+ (S^2)_{(g,k),(h,l)}
+ &=\frac19\sum_{a,b}\omega^{-ka-bg-bh-la}\\
+ &=\left(\frac13\sum_a\omega^{-(k+l)a}\right)
+   \left(\frac13\sum_b\omega^{-(g+h)b}\right)\\
+ &=\delta_{l,-k}\delta_{h,-g}.
+\end{align*}
+For example $(1,0)$ is conjugate to $(2,0)$, rather than to
+itself.  Therefore charge conjugation is not the identity matrix.
+
+\paragraph{Exercise~\ref{ex:H3-S-square}.}
+The $4\times6$ block in $S^2$ is
+$uvJ_{4,6}-uvJ_{4,6}=0$, since the two rectangular blocks
+inside the lower-right $10\times10$ block are zero.
+The remaining mixed blocks vanish by the row sums derived in
+the chapter.  Direct arithmetic gives
+\[
+ AB=\frac1{36}-\frac1{52}=\frac1{117},\qquad
+ A^2+B^2=\frac1{18}+\frac1{26}=\frac{11}{117}.
+\]
+These identities also explain the small rational coefficients
+that appear in the explicit Verlinde calculation.
+
+\paragraph{Exercise~\ref{ex:Gauss13}.}
+The squares are $\{1,3,4,9,10,12\}$ and the nonsquares are
+$\{2,5,6,7,8,11\}$.  The list $6j^2$ for $j=1,\ldots,6$
+is $6,11,2,5,7,8$ modulo thirteen.  For the Gauss--Milgram
+calculation, $1+d^4+s^2=24d^2$, so
+\[
+ p^+=\frac{d^2}{2}(39-9\sqrt{13}).
+\]
+Using $d^2=(11+3\sqrt{13})/2$ and multiplying out gives
+$p^+=(39+9\sqrt{13})/2=3s$.
+
+\paragraph{Exercise~\ref{ex:Verlinde-d1}.}
+For $i=1$, $[2i]=2$, so the five residual terms are
+$d_1,d_3,d_4,d_5,d_6$.  For $i=4$, $[8]=5$, so they are
+$d_1,d_2,d_3,d_4,d_6$.  Each product also contains the vacuum,
+$a$, and all three $c_j$.  Both dimension sums equal
+$1+4s+15d=9+27d=9d^2$.
+
+\paragraph{Exercise~\ref{ex:modular-extension}.}
+The first two components of $Sm$ are each $A+B+2u=1$.
+The $a$ component is $2u+4/3=2$; each of the three $c_j$
+components is $2u-2/3=0$.  Every final component is $v-v=0$.
+Thus $Sm=m$.  Each nonzero entry of $m$ lies at twist one, so
+$\Theta m=m$.  Symmetry of $S$ gives
+$Smm^{\mathsf t}=mm^{\mathsf t}=mm^{\mathsf t}S$, and
+the analogous statement for $\Theta$ is immediate.
+To build a local CFT one still needs, among other things, actual
+chiral modules and vertex operators, a compatible algebra
+multiplication on the extension, and the appropriate positivity
+and sewing results.  A modular-invariant integer matrix contains
+none of those multiplication maps by itself.
+
+\paragraph{Exercise~\ref{ex:central-charge-scope}.}
+In the first statement, the \emph{braided chiral representation
+category} $\Rep(U)$ is a Drinfeld center. Its Gauss--Milgram phase
+is one, so the chiral central charge obeys
+$e^{2\pi ic_U/8}=1$. The value $c_U=8$ satisfies this constraint.
+In the second statement, $\HH_3$ is a fusion category of full-CFT
+symmetry lines. That does not identify the theory's entire chiral
+representation category with $Z(\HH_3)$. Its center organizes
+symmetry sectors, which is a different assertion. Hence a proposed
+nonchiral theory with $c_L=c_R=2$ has no contradiction with the
+first construction: its left-right gravitational anomaly vanishes,
+and the symmetry claim alone imposes no condition $c_L=0\bmod8$.
+This explains compatibility; it does not establish the proposed
+$c=2$ theory or an anyon-chain scaling limit.
+
+\section{Solutions to the arithmetic exercises}
+
+\paragraph{Exercise~\ref{ex:HI-periods}.}
+Dividing $d_n^2=nd_n+1$ by $d_n$ gives
+$d_n-d_n^{-1}=n$, hence the period difference.
+Expanding $(d_n+1)(1+d_n^{-1})$ gives
+$d_n+2+d_n^{-1}=\omega_1+\omega_2$; division by their
+product proves the reciprocal identity.  For nonzero integer
+$a$,
+\[
+ \sin(\pi a/\omega_1)
+ =\sin(\pi a-\pi a/\omega_2)
+ =(-1)^{a+1}\sin(\pi a/\omega_2).
+\]
+The denominator is nonzero because $\omega_2$ is irrational.
+At the origin the sine ratio tends instead to
+$\omega_2/\omega_1=d_n^{-1}$.
+
+\paragraph{Exercise~\ref{ex:HI-sign}.}
+For $1\leq a<n$, multiplication of the two sample formulas gives
+the sign exponent
+\[
+ \frac{a(a+n)+(n-a)(2n-a)}2=a(a-n)+n^2.
+\]
+Since $n$ is odd, $a$ and $a-n$ have opposite parity, so their
+product is even; $n^2$ is odd. The two initial minus signs cancel,
+the remaining sign is minus, and reflection gives
+$W_aW_{n-a}=-F(a)F(n-a)/d_n=-d_n^{-1}$.
+The integer exponent is not itself a function of the residue class:
+replacing $a$ by $a+n$ changes $a(a+n)/2$ by $n(a+n)$,
+which can be odd. For example at $n=3$, representatives $2$ and
+$5$ give exponents $5$ and $20$. One must state the chosen
+representatives and include the accompanying gamma-shift factor
+when changing them. The separately defined origin $W_0=-1$
+also cannot be obtained by the generic nonzero-sample rule.
+
+\paragraph{Exercise~\ref{ex:exact-rank}.}
+Take
+\[
+ M=\begin{pmatrix}1&1\\1&1+10^{-8}\end{pmatrix}.
+\]
+Its exact determinant is $10^{-8}$, while rounding to six decimal
+places produces two identical rows.  After clearing denominators,
+a nonzero determinant modulo a prime proves that the original
+integer determinant was nonzero.  A zero residue only says that
+the prime divides that determinant; the integer could still be
+nonzero.  Modular rank methods therefore give decisive lower
+bounds when they succeed and potentially inconclusive results
+when they fail.
+
+\paragraph{Exercise~\ref{ex:component-norm}.}
+The two evaluations of $1+t$ are $2$ and $0$, so their product
+is zero and the element is not invertible.  The two evaluations
+of $2+t$ are $3$ and $1$, so its product is three.  It is
+invertible, with inverse $(2-t)/3$.  Modulo five both conclusions
+remain valid: the relevant products are zero and three.
+
+\paragraph{Exercise~\ref{ex:unitarity-hierarchy}.}
+A field automorphism preserves a polynomial equality by preserving
+addition and multiplication.  Positivity is an order condition,
+and an adjoint involves complex conjugation, neither of which is
+part of that algebraic guarantee.  For example the two real
+embeddings of $\Q(\sqrt{13})$ send the positive number
+$\sqrt{13}$ to opposite signs.  Thus a transported algebraic
+solution must have its Hermitian and positivity properties
+checked separately.
+
+\section{Solutions to the related-category exercises}
+
+\paragraph{Exercise~\ref{ex:noncyclic-factorization}.}
+Choose nonzero $h\in H$ and $k\in K$. The reciprocal conditions
+on $(h,0)$ and $(0,k)$ read
+\[
+ U(h)U(-h)V(0)^2=\delta,\qquad
+ U(0)^2V(k)V(-k)=\delta.
+\]
+Since $U(0)^2V(0)^2=W(0,0)^2=1$, multiplying gives
+$U(h)U(-h)V(k)V(-k)=\delta^2$. The condition at $(h,k)$
+says that the same product equals $\delta$. Nonvanishing forces
+$\delta=1$. But $\delta^2=n\delta+1$ with $n>0$ does not
+permit $\delta=1$. Coupling the coordinates or changing the
+origin structure is therefore necessary; the direct product of
+independent reciprocal scalar functions cannot solve this ansatz.
+
+\paragraph{Exercise~\ref{ex:noncyclic-eight-branch}.}
+Put $s=t^2$. Dividing the second eliminant by $2tr^2$ gives
+$r^{-2}-r^2=(3-s)/(2t)>0$, hence $0<r<1$. Squaring and
+adding four yields
+\[
+ (r^2+r^{-2})^2
+ =\frac{(3-s)^2+16s}{4s}
+ =\frac{9+10s+s^2}{4s}
+ =\left(\frac{9+s}{2}\right)^2,
+\]
+where $s^2+8s-1=0$ reduces the last equality. Both sides
+before squaring the square roots are positive, so
+$r^2+r^{-2}=(9+s)/2$. Thus
+\[
+ (r+r^{-1})^2=(13+s)/2=((5+s)/2)^2,
+\]
+and positivity again gives $r+r^{-1}=(5+s)/2$.
+Solving the resulting quadratic and choosing the root below one
+gives $r=\lambda_8^2$. Multiplication of the first eliminant by
+$r$ gives $y^2r^3=tr^3+2r=1$. The positive sample $y$ is
+therefore $r^{-3/2}=\lambda_8^{-3}$. The signs of $r,y$ and
+the positive square-root choices are analytic branch information
+that the polynomial equations alone do not supply.
+
+\paragraph{Exercise~\ref{ex:noncyclic-smith}.}
+The matrix is
+\[
+ \begin{pmatrix}4&18\\2&6\end{pmatrix}.
+\]
+Its determinant is $24-36=-12$ and the gcd of its entries is
+$2$. For a full-rank two-by-two integer matrix, the first Smith
+invariant is that gcd and the product of the two invariants is
+the absolute determinant. They are therefore $2,6$. The
+quotient has $12$ elements, but every element has order dividing
+six. The cyclic group of order twelve has an element of order
+twelve, so the cardinality alone loses essential group data.
+
+\paragraph{Exercise~\ref{ex:EH-moment-projections}.}
+Let $Y=S^2-f$. The support condition gives
+\[
+ \operatorname{tr}(Y^*Y)
+ =\operatorname{tr}(S^4)-2\operatorname{tr}(S^2)
+   +\operatorname{tr}(f)=0.
+\]
+Faithful positivity implies $Y=0$. Expanding with $S^2=f$
+and $fS=S$ gives
+\[
+ \left(\frac{f\pm S}{2}\right)^2
+ =\frac{2f\pm2S}{4}=\frac{f\pm S}{2},\qquad
+ \frac{f+S}{2}\frac{f-S}{2}=0.
+\]
+They are self-adjoint and sum to $f$, and their traces are
+$\operatorname{tr}(f)/2$ because $\operatorname{tr}(S)=0$.
+For an indefinite pairing a nonzero $Y$ may have zero squared
+pairing, so the first inference to $Y=0$ fails.
+
+\paragraph{Exercise~\ref{ex:EH-word-tensor}.}
+If $L^kw=w$ with odd $k$, the rotation rule gives
+$p_w=p_{L^kw}=(-1)^kp_w=-p_w$, hence $p_w=0$ over $\C$.
+Every letter $2$ may be replaced by the sum of letters $0$ and
+$1$ with a minus sign, decreasing the number of $2$'s. This
+determines all coefficients from binary ones. Equivalently,
+the uniquely specified multilinear tensor evaluated at
+$u_2=-u_0-u_1$ performs every replacement at once; independence
+of the replacement order follows from multilinearity. In the
+given example,
+\[
+ p_{00000002}=-p_{00000000}-p_{00000001}
+ =-c_1=2\lambda^4+\lambda^2-9.
+\]
+
+\paragraph{Exercise~\ref{ex:EH-reflection-F}.}
+With $y=a+1$ and $z=a^2+a-1$,
+\[
+ v^Tv=\frac{a^2+y+z}{2ay}=1.
+\]
+The two requested entries are
+\[
+ -2v_1v_2=-\frac1{\sqrt y},\qquad
+ -2v_2v_3=\frac{\sqrt{z/y}}a.
+\]
+The other entries follow in the same way. Since $v^Tv=1$,
+$(I-2vv^T)^2=I-4vv^T+4v(v^Tv)v^T=I$.
+The matrix is real symmetric, hence orthogonal and unitary.
+Its eigenvalues are $-1,1,1$, so its determinant is $-1$.
+This proves a matrix identity. Identifying it as a particular
+category's associator additionally requires the specified
+trivalent bases and their planar evaluations; many unrelated
+orthogonal matrices satisfy the same unitarity equation.

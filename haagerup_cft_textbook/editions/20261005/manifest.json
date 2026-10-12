@@ -1,0 +1,847 @@
+{
+  "title": "Haagerup Symmetry and Conformal Field Theory",
+  "packaged_utc": "2026-10-05T22:35:39.376915+00:00",
+  "scope": "Self-contained typesetting sources and editorial checks; research datasets are not included",
+  "counts": {
+    "main_chapters": 26,
+    "worked_examples": 95,
+    "exercises": 151,
+    "exercises_with_dedicated_solutions": 151
+  },
+  "separate_pdf": {
+    "file": "haagerup_cft_textbook.pdf",
+    "sha256": "7335c4ec1250bdaa55203e0711bc4261a80a41083b3780d3daa3652ae2e4fb78",
+    "bytes": 2046234,
+    "pages": 337
+  },
+  "files": {
+    "README.txt": {
+      "sha256": "6597cb54f54a1a46e8c9c7b2ec1490a632fc8ce8ab19b1c9197ad610218a6116",
+      "bytes": 7983
+    },
+    "audit_document.py": {
+      "sha256": "82fe4c8ae60fa7f0a70faf2fc08915c0e413020d17bc4cc055dfd359d8a785a2",
+      "bytes": 5713
+    },
+    "audit_pdf.py": {
+      "sha256": "39d4002adce5cd6ae440d123884644eda9af3cdab84aea609036c73a569ddf2e",
+      "bytes": 5965
+    },
+    "build/build_record.json": {
+      "sha256": "5fb54ae320417734083c9e301f93e7630839ca048eb6b00d289e389ef0fab964",
+      "bytes": 8517
+    },
+    "build/haagerup_cft_textbook.log": {
+      "sha256": "101c86dc419b97456037aa3a49efbdde8c4ab6c0b08280c22eee9471553230a6",
+      "bytes": 47334
+    },
+    "build.py": {
+      "sha256": "bb48ef27def2a73e09a281784ee95a9d8501371608c9a8b82187074e144b9123",
+      "bytes": 6912
+    },
+    "chapters/c01_lattice_embedding.tex": {
+      "sha256": "ec756fbfd366aabf75b9fb493514d0d50060593689f69ac64a4434b66c02aff1",
+      "bytes": 26241
+    },
+    "chapters/c02_finite_closure.tex": {
+      "sha256": "c29f22e5af1be1664d18ea3ce2a937fc4999390856fe022a13a64713fe9d0d88",
+      "bytes": 27974
+    },
+    "chapters/c03_factors.tex": {
+      "sha256": "4846684cebe0e7c793ac3224fbbd23295cb4d51ce31f1ba243cbca883463ba61",
+      "bytes": 30022
+    },
+    "chapters/c04_regularity.tex": {
+      "sha256": "961607afdf7104e82d160bc90a4d2668fc4605d67ab096da88877f6551bb5aa7",
+      "bytes": 25103
+    },
+    "chapters/c05_branching.tex": {
+      "sha256": "610bf914ebeaeca763ebef7634aaca988b3d8509d9f55daae7e293cf51226e69",
+      "bytes": 48834
+    },
+    "chapters/c06_cosets.tex": {
+      "sha256": "be195d3bcc0998b6c3e8ca857b926774b0cd479a87ff86e2646d6b8f62eea565",
+      "bytes": 49320
+    },
+    "chapters/f01_fusion.tex": {
+      "sha256": "fed1dcc6859681332930b17b801d3dc611381639608e8de37ed43a97f49a2e80",
+      "bytes": 23182
+    },
+    "chapters/f02_haagerup.tex": {
+      "sha256": "86069e218358570b8eb0eefd82d1a7ca5887e1ae932fa61864b052d3ceee07e7",
+      "bytes": 19709
+    },
+    "chapters/f03_centers.tex": {
+      "sha256": "e1927114b7ed187b52c84372d1f9f50fbc704d1f08281278ca7be3fb4018df23",
+      "bytes": 36684
+    },
+    "chapters/f04_modular.tex": {
+      "sha256": "a99aae950a77bc592bb50c644306fce7a036d365c82ce19ffbe3de46edf2d422",
+      "bytes": 21366
+    },
+    "chapters/f05_arithmetic.tex": {
+      "sha256": "8a74df7931fc5f3a3755d5baca9053aff846d72c0c730cec009922c7714f3d60",
+      "bytes": 34911
+    },
+    "chapters/f06_related_categories.tex": {
+      "sha256": "0775292b7f339278aa30c8e6065767de903b119a93a15c0ea8905a2969a0ec4e",
+      "bytes": 40849
+    },
+    "chapters/l01_chain.tex": {
+      "sha256": "65bc766bec84485685782a8e758c5faecfc447e6b283101eb661ed78eb4debe2",
+      "bytes": 19628
+    },
+    "chapters/l02_scaling.tex": {
+      "sha256": "bd8e20003b75f95ed7cd76f2f890c3c376997401e21305d92df95eb7201f5fe0",
+      "bytes": 37765
+    },
+    "chapters/l03_overlaps.tex": {
+      "sha256": "c810048ac241fb0aaea8443126ae9f827c9698dedbfe32d01255c79c3d5dce48",
+      "bytes": 43583
+    },
+    "chapters/l04_tensor_networks.tex": {
+      "sha256": "cdf47a954017799cfbafa8bf2dfc9930fe063c56bab9c0ad35eefd38671a2e9a",
+      "bytes": 34316
+    },
+    "chapters/l05_gapped.tex": {
+      "sha256": "78c50db6bdd0d817add71e5d41c5afd70a777841feb5a6a67099014b4f2cf884",
+      "bytes": 31189
+    },
+    "chapters/l06_identification.tex": {
+      "sha256": "546a2a1a2723fe18c1d3353a55801d62a5009d8a97fdc8150837bfc327fca515",
+      "bytes": 77347
+    },
+    "chapters/r00_reading_guide.tex": {
+      "sha256": "e71255eba840cc87fd6494aadb2405796873c10b66a7455e05a173299ea765a8",
+      "bytes": 14602
+    },
+    "chapters/r01_cft.tex": {
+      "sha256": "67cfad01841cd8d979ebe31663c8c76d6de9227da1ef85817ceb1a4bcf74918c",
+      "bytes": 21215
+    },
+    "chapters/r02_vertex_algebras.tex": {
+      "sha256": "30ee38a60f1a73a831b21d13c13c1dd6b78c4095c9d4d6d6d536e162704a61d9",
+      "bytes": 34766
+    },
+    "chapters/r03_characters.tex": {
+      "sha256": "92e0101f6b82d2708e5c90fcf6367901d06d6e88835a273af5f9394b341b93ca",
+      "bytes": 20835
+    },
+    "chapters/r04_unitarity.tex": {
+      "sha256": "733e79262084ee2c0d4c9a5025648d65d8542fb79cc81364da2a104fa6725b61",
+      "bytes": 28800
+    },
+    "chapters/r05_full_theories.tex": {
+      "sha256": "083d0ed83ff51cc7e95ae18ffb03031fe212c2f731292e430bc789348efd8c08",
+      "bytes": 25925
+    },
+    "chapters/r06_correlators.tex": {
+      "sha256": "2f4c33d5a4c9ad93966fad92332b59cef8971d0d179af5ad041a5249c779e10a",
+      "bytes": 16916
+    },
+    "chapters/r07_defects.tex": {
+      "sha256": "8464879effdba20e8a5c6081a2b49c11cfc86baf5e7b7779d9141f44735fc538",
+      "bytes": 23405
+    },
+    "chapters/r08_sewing.tex": {
+      "sha256": "cc76f1f4e7acfec960df1d6257f5ade7624e369be53c6de26c4c7b0eec0e2079",
+      "bytes": 19318
+    },
+    "chapters/r09_notation.tex": {
+      "sha256": "7b27df9c3880530680795bbbc4210ff6d6afae6a4bfd98349e6c5bc80f5f83a9",
+      "bytes": 21985
+    },
+    "chapters/r10_verification.tex": {
+      "sha256": "200cc0478f59513000e326f738b1dcc1eaef4c10eaa16d8b84e857b28106f936",
+      "bytes": 14925
+    },
+    "chapters/r11_sources.tex": {
+      "sha256": "8f0653cd958fa54767bb954ef4d61f62e1c2b642e02ec99c52e8781ea589ce28",
+      "bytes": 14477
+    },
+    "check_core_tops.py": {
+      "sha256": "4418af14fd300ef2c50da761d4cb62ae660665aacad7b69bb87ecf905e2fee80",
+      "bytes": 6879
+    },
+    "check_examples.py": {
+      "sha256": "e6286bf3c0d9929975b66892183d34170ac0cec29c00bba9ff02432ef9d08cb2",
+      "bytes": 9039
+    },
+    "check_order_three.py": {
+      "sha256": "173782746df8a347c7bcdec1855318bd5857675566d4f8e9362d6279a6ef5e31",
+      "bytes": 5846
+    },
+    "editorial/E8_glue_minuscule_insertion.tex.txt": {
+      "sha256": "a50804b6e40f80497c6fa0146efc4c8ca1765215b79327f544784363f5d34596",
+      "bytes": 3422
+    },
+    "editorial/affine_parafermion_bridge_insertion.tex.txt": {
+      "sha256": "756862f866c198b4044736f07369a6497392b339f89454497a00048097dd9dbf",
+      "bytes": 7431
+    },
+    "editorial/archive_build_location.txt": {
+      "sha256": "6f1542262eef66a8311f40669369b6ac4834d15b71bc288af8995d38651ffaba",
+      "bytes": 59
+    },
+    "editorial/archive_rebuild_check.json": {
+      "sha256": "2ca5eb3a1dffe2d53e7d81099060429d10032037397241c7aaad1fd7511125dc",
+      "bytes": 9171
+    },
+    "editorial/audit_lattice_saved_values.txt": {
+      "sha256": "e26daba34ac2ae8e951e50c9bc1defc699b5aa2a33475124db451b6571147b6c",
+      "bytes": 19375
+    },
+    "editorial/authoring_plan.txt": {
+      "sha256": "8525947807c9df1289b880ebed804de922cc2771070b2f7facafa1c64751219f",
+      "bytes": 3085
+    },
+    "editorial/categorical_prerequisite_insertions.tex.txt": {
+      "sha256": "ac7fdc2907c24e626f2a1048bd8ecce94dbc53a5e4d307d771f89dfde30caf28",
+      "bytes": 7010
+    },
+    "editorial/checker_history/20261005_initial_check_examples.py": {
+      "sha256": "68e3c68042192acb3727999c098c627babd8f1e33792a750aae5fc57543e6a5e",
+      "bytes": 8938
+    },
+    "editorial/checker_history/20261005_initial_example_check_results.json": {
+      "sha256": "af79b41f88c69c4ae8a2cc937c7e7260c87a1b81728d8449c403d0bfdd0b44db",
+      "bytes": 730
+    },
+    "editorial/clean_typeset_check.json": {
+      "sha256": "089bf242cfb75b6eaf9b4cd2ebac1c1863458d157e28f7ab18de905c4deaf924",
+      "bytes": 25073
+    },
+    "editorial/clean_typeset_location.txt": {
+      "sha256": "f476e0b283e9564e2ad9f0fb917f3f19f964762892ec3b40fc340ff46697d0b2",
+      "bytes": 38
+    },
+    "editorial/construction_dependency_ledger.tex.txt": {
+      "sha256": "d957a42e3ddf56f2cd16230912a49127f862e06e3015f9d999bd747152aef96f",
+      "bytes": 3915
+    },
+    "editorial/continuum_dictionary_ending.tex.txt": {
+      "sha256": "09e9d26f8f4b84252a9d2842e9601ec2d3e9f385052dd001981df063a5c5b877",
+      "bytes": 2898
+    },
+    "editorial/core_top_check_execution.txt": {
+      "sha256": "b38c99976f60bc3857894a228dc6c088fd628f12baa52fcf2a60062ae3f20202",
+      "bytes": 1502
+    },
+    "editorial/core_top_check_results.json": {
+      "sha256": "64c1e21a8570f7c202cf7f0908861a5e140f58311c7f0982ffda2a1758f3efff",
+      "bytes": 6981
+    },
+    "editorial/critical_ising_chain_insertion.tex.txt": {
+      "sha256": "24b4b30740b06698d33e216aba1bdb8243a34bc8ed7c5ddf2c847d29b9acb673",
+      "bytes": 12366
+    },
+    "editorial/current_multiplet_insertion.tex.txt": {
+      "sha256": "7cf6ca25d63faaae30c88ed64af6a2d5839339dc3c7faf87132899c848e51cf0",
+      "bytes": 4522
+    },
+    "editorial/document_audit.json": {
+      "sha256": "b1c70ed87b2b0a06b95202e82a430f3e57a6115177397e0c99b7a78f92dcddab",
+      "bytes": 6980
+    },
+    "editorial/example_check_results.json": {
+      "sha256": "7a4f92bb1046c5686fee713830a8c17026e7b5deede9c030731d873e850aa012",
+      "bytes": 730
+    },
+    "editorial/f06_source_scope_audit.txt": {
+      "sha256": "8cbb985021b1d259750142d4a921f3fd53b70457608245b16af5eab9a670b0aa",
+      "bytes": 5275
+    },
+    "editorial/final_editorial_review.txt": {
+      "sha256": "30f5c61faef1dc60254919b10eb586cbd956565fed2613bad9db8e7d1f42051d",
+      "bytes": 3814
+    },
+    "editorial/final_pdf_fonts.txt": {
+      "sha256": "7e62a10cf240bcd71fce7ca527945ac68eb9392ec72f6fc4cf5c854bdd7136ac",
+      "bytes": 3666
+    },
+    "editorial/final_pdf_layout_font_audit.json": {
+      "sha256": "52818f0235b54eb25b6cfa70087a2c5328599a49cb73c4c5e3ec8847e30d4a16",
+      "bytes": 3466
+    },
+    "editorial/final_source_reconciliation_foundations.txt": {
+      "sha256": "ec4ecbe39acc853b7d20d391e4f88c2a17670de62e4eede0c9524d137d3b30aa",
+      "bytes": 4603
+    },
+    "editorial/final_source_reconciliation_lattice.txt": {
+      "sha256": "5d5cb78c0776f1352115efccf4d3de33ac327a0a1fd8204e3597ba88e7f80f7e",
+      "bytes": 5109
+    },
+    "editorial/final_source_snapshot_comparison.json": {
+      "sha256": "a2d3e7a585f6f4f6662689f9f6f0726e13176e26a46ba867fa2ff03d038fa8bd",
+      "bytes": 588
+    },
+    "editorial/glossary_final_additions.tex.txt": {
+      "sha256": "47a35e0b1694c3453af8930368f81653c72c408b341ddd60f63c3b4687c5ed74",
+      "bytes": 9666
+    },
+    "editorial/indicator_bridge_insertion.tex.txt": {
+      "sha256": "8b93c027fd7097db0a4800f31db0be085e5be47bcc3065ed18f8fab685baaea6",
+      "bytes": 5606
+    },
+    "editorial/ising_calibration_figure_insertion.tex.txt": {
+      "sha256": "fd10b5856ff1357be484a41461b173620f93475aa19c6be44b1a3c6c70ecf17e",
+      "bytes": 1000
+    },
+    "editorial/ising_calibration_plot_provenance.json": {
+      "sha256": "2ccecfa94f123595e8dac04070d4e7826628c46df293ddfb448fd4365f34a086",
+      "bytes": 3877
+    },
+    "editorial/ising_calibration_plot_review.txt": {
+      "sha256": "75b5696182c2126b0c4ba0cbb17ab904a7ef57586aa77537e286c4df05751472",
+      "bytes": 3586
+    },
+    "editorial/ising_coset_insertion.tex.txt": {
+      "sha256": "ee0abd416e705b8b1681c0180650e3cb60b750eda06839badbcbc8522f9b58b2",
+      "bytes": 3227
+    },
+    "editorial/jones_wenzl_figure.tex.txt": {
+      "sha256": "3d092d50a45f64ae415973d101198b7cb8e412dbbeaddc9642c8f5d8dd868952",
+      "bytes": 2630
+    },
+    "editorial/literal_joining_map_insertion.tex.txt": {
+      "sha256": "4128014420ecd59dacf7b09d9a111845577c2681a628a2b06d2bb7fc8639641b",
+      "bytes": 4812
+    },
+    "editorial/modules_intertwiners_insertion.tex.txt": {
+      "sha256": "e681e432bce8ac51caae655b281b08576d266fe872fd0075d6b8b6468461bc10",
+      "bytes": 6736
+    },
+    "editorial/n3_cubic_example_review.txt": {
+      "sha256": "69a5b19bea401e63d80c294afaced468e9db73376d43a7dc33e32055d3deebfc",
+      "bytes": 7243
+    },
+    "editorial/n3_cubic_insertion.tex.txt": {
+      "sha256": "cbdc4bd4eb9ed4b9efc828e18a1c6a0e105eb6ab4d546e43eed8432bd1b28f98",
+      "bytes": 4737
+    },
+    "editorial/nonabelian_marginal_insertion.tex.txt": {
+      "sha256": "cb66560e4a070185782e9cdbe9a6daac6e8ea2b700dbc30ccf7617ff72f26167",
+      "bytes": 8550
+    },
+    "editorial/noncompact_density_insertion.tex.txt": {
+      "sha256": "8eeb91755c381b91187024a272c047f7bb334fa415b0514839f4294b295a86ba",
+      "bytes": 4200
+    },
+    "editorial/oct5_l04_stationary_update.tex.txt": {
+      "sha256": "1dcce07a6b36608c9c8bc9f73b83e86bce8738011a40364a4187c63ada275516",
+      "bytes": 1845
+    },
+    "editorial/oct5_l06_inventory_update.tex.txt": {
+      "sha256": "ac5d9877881e7e9c8f56e715990e274d52c03e0ef07ddcf0084f76fd59694f6e",
+      "bytes": 2983
+    },
+    "editorial/oct5_lattice_update_audit.txt": {
+      "sha256": "da61187c1bb0515a456271bddfb050b534406e01ec69cd9b93c81954792e4a71",
+      "bytes": 8627
+    },
+    "editorial/order_three_check_results.json": {
+      "sha256": "cf608b47c5513396102f65aa8f19eb3393a62fc89158a05353e7fb4f49e8e129",
+      "bytes": 3851
+    },
+    "editorial/organize_solutions.py": {
+      "sha256": "80eb4e20c86e6d0a4c202e3a84b896f997d07e5063fe17737429e28eed18e3e8",
+      "bytes": 22272
+    },
+    "editorial/package_trial_location.txt": {
+      "sha256": "7da462a18b9a5cfbcd525a1f69a0418361b4d106c95a4c3dd7974372b1db1e5e",
+      "bytes": 59
+    },
+    "editorial/pdf_audit.json": {
+      "sha256": "0d96c92a347a97e7cc0612ced799ab4baa8d2a40b666599e5d22f9d49c0c7dd9",
+      "bytes": 14198
+    },
+    "editorial/pdf_font_audit.txt": {
+      "sha256": "242c32495c5f223673242790e43a77f1c8c6370cc1405debd0098389a19d3156",
+      "bytes": 3921
+    },
+    "editorial/pdf_layout_font_audit.json": {
+      "sha256": "228cb472c999cbf1d28ae112ba08702f9573cc0cd576eb0e5ed49217f08843fa",
+      "bytes": 3747
+    },
+    "editorial/physics_reading_route_table.tex.txt": {
+      "sha256": "25fdecafcd1c1a2f9bcc25b3c154c87d259761fe901f200e08c44eb00661ff26",
+      "bytes": 2294
+    },
+    "editorial/rank_one_c2_example.tex.txt": {
+      "sha256": "f83bdf3472593a28a3d8f0146703f44ef44aca163a3e982d198b0542cbeea5ce",
+      "bytes": 2563
+    },
+    "editorial/rational_obstruction_sources_insertion.tex.txt": {
+      "sha256": "042bc40d92540f6467bf6ce32b5c3db0aa0e9005194d1284554690d654c73d6c",
+      "bytes": 1297
+    },
+    "editorial/rational_orbifold_dimension_insertion.tex.txt": {
+      "sha256": "208ba0ab931cfb395b7678cec87013da6c8a1ffb3b3cf48de86fec600ab9f76e",
+      "bytes": 4398
+    },
+    "editorial/recorder_history/20261005_2223_record_sources.py": {
+      "sha256": "f7213e4288c889e50f18dfd799f906ea81acbc17e4f5233f4203e09dd9c4b497",
+      "bytes": 9097
+    },
+    "editorial/replica_entropy_insertion.tex.txt": {
+      "sha256": "b5e0bca006eae705b8456331d97de803c7c1fc096a88f0850e013e7c77a4dee8",
+      "bytes": 5098
+    },
+    "editorial/review_construction_E8_root_example.txt": {
+      "sha256": "b24d553e52a07e7ff22fd5b80051ed042df24fb19bf6cbe4869751c52b21a05a",
+      "bytes": 5099
+    },
+    "editorial/review_construction_beginner_sequence.txt": {
+      "sha256": "46ebbc7989291241cbfbc3db0183b343ae304429cb0726b4c04896b0cd0fd624",
+      "bytes": 11897
+    },
+    "editorial/review_construction_c06_targeted.txt": {
+      "sha256": "af03f3c1a2a4884b564e03a261e6227749321be4be3e2735b2b1405ec26ab0f0",
+      "bytes": 4788
+    },
+    "editorial/review_construction_candidate_obstructions_final.txt": {
+      "sha256": "e2c14fe3419c29f654d845639ea1e7e55203421b16721fb6517f9aec9ea5b54d",
+      "bytes": 11368
+    },
+    "editorial/review_construction_cosets_final.txt": {
+      "sha256": "1da5301824d6baf6f52496a718c9b6885aa3f24bca5fd3c79e38b7c637d75c90",
+      "bytes": 12436
+    },
+    "editorial/review_construction_explicit_transcription.txt": {
+      "sha256": "252834417b1cc264a6e77ea57714537dc54f75752fd5c27bd0cb9c8477f952f3",
+      "bytes": 9777
+    },
+    "editorial/review_construction_extension_conventions.txt": {
+      "sha256": "27e97d2b9abde503ec37522c4fca3280c4f3d8ffb0f92fbed185d03fcecd7881",
+      "bytes": 4727
+    },
+    "editorial/review_construction_gapped_parent_argument.txt": {
+      "sha256": "6b820ec2f46048ac2466154c03af62e8bb0ab9177cd0e33b1ad70361796d1423",
+      "bytes": 10329
+    },
+    "editorial/review_construction_indicators_1938.txt": {
+      "sha256": "a8bd87862b7540f617306ea86cd01b972e230ab0363318a74eab9cf5fe1d4912",
+      "bytes": 6095
+    },
+    "editorial/review_construction_on_lattice.txt": {
+      "sha256": "7ce68730ea2d6ff5da93454cced68f491718199ddcdca98f1fc0146684096995",
+      "bytes": 10209
+    },
+    "editorial/review_construction_on_new_examples.txt": {
+      "sha256": "8f01f8bf84138abe7c4928d27016bb405942a8b72c10e158012c9be68becc658",
+      "bytes": 13421
+    },
+    "editorial/review_construction_on_related_categories.txt": {
+      "sha256": "cc6c5361ad83d3f12155fcd07481576f4586c84102b12b5c82941bc943e8fc99",
+      "bytes": 9660
+    },
+    "editorial/review_construction_on_root.txt": {
+      "sha256": "5b0e0fd23e5ae55d091c893d8c52ffe05a1a096c1f761c44f1c88cddba0983e2",
+      "bytes": 12227
+    },
+    "editorial/review_construction_on_unitarity_final.txt": {
+      "sha256": "c7de4875cb2c30c4a77e2aa3f770d99071f15a21ddabb804ddecc1091cf1587b",
+      "bytes": 15908
+    },
+    "editorial/review_construction_ramification_example.txt": {
+      "sha256": "6113af4cc4a55d639750de7b47feebe7c4fc41e9b5460577904149a64dc4e2f8",
+      "bytes": 3424
+    },
+    "editorial/review_construction_regularity_core.txt": {
+      "sha256": "23e97af174a6bc83cd8e69dd06fb63527ab4f1d138379258f5b59005fc827f60",
+      "bytes": 9202
+    },
+    "editorial/review_construction_solutions_teaching.txt": {
+      "sha256": "ab411c66f584372b709f598a5bf2c76a2da71719bb4291116cda7de8ebeb0557",
+      "bytes": 3613
+    },
+    "editorial/review_construction_visual_1909.txt": {
+      "sha256": "d008cf2ae59c08edaef729a6d534cd41989916032a3086d6e7f75b562cf4c610",
+      "bytes": 2547
+    },
+    "editorial/review_foundations_beginner_sequence.txt": {
+      "sha256": "7f7ce550e5eefd15c6e37322c868ee380492090d54cd5d2f6df69e27d9d48fc8",
+      "bytes": 14504
+    },
+    "editorial/review_foundations_categorical_prerequisites.txt": {
+      "sha256": "329b724e7325a6fcc076f542da7e10b806c1fa43ffd22ae1b6b8d28ebde65eb2",
+      "bytes": 5434
+    },
+    "editorial/review_foundations_correlators_final.txt": {
+      "sha256": "17a0340d5317b4b727830695b99faa56909ceb7ae3a64820af5f70c0e2b0fd12",
+      "bytes": 10156
+    },
+    "editorial/review_foundations_full_theory_scope.txt": {
+      "sha256": "2559d66133c2cf4c85274121eef08aef27076dfb7b6dfbd0ba91c198667eefa8",
+      "bytes": 10213
+    },
+    "editorial/review_foundations_global_conventions_final.txt": {
+      "sha256": "c19c8769abbe9b3dab5aa60639f37c1f958eda1b3c3a9f69fcc7c4bc3d8a8779",
+      "bytes": 4789
+    },
+    "editorial/review_foundations_global_route.txt": {
+      "sha256": "ecd91a1b3c1fb2df6880f8346f94b19a9d76ca47a41bca157013a898f1410854",
+      "bytes": 14208
+    },
+    "editorial/review_foundations_literal_joining.txt": {
+      "sha256": "14960237dfa770ceecae1e463759635ed33c3c338562c2095c82fcf1a0432421",
+      "bytes": 3770
+    },
+    "editorial/review_foundations_on_candidates.txt": {
+      "sha256": "573319ee933ed010a2a1d0be318ba0a2b3f95db89edd305f5459b331e00f65b8",
+      "bytes": 16458
+    },
+    "editorial/review_foundations_on_construction.txt": {
+      "sha256": "22aacd48862b44712390487844fb9678f01c7f970f104ae04849b29598ea6388",
+      "bytes": 25915
+    },
+    "editorial/review_foundations_on_narain.txt": {
+      "sha256": "59f7303f89ce3efd2c955e0e7d933f00482fe0f38ff1354dd97c1d5d52065c16",
+      "bytes": 4693
+    },
+    "editorial/review_foundations_on_root_additions.txt": {
+      "sha256": "b71ae009bab535452387b6a5b8cf2c6fd82e2372fc1b33e71a8277ae38d99c19",
+      "bytes": 10502
+    },
+    "editorial/review_foundations_on_sewing.txt": {
+      "sha256": "9b34602aa0ebcd521e8bd9acef994889bfd8a9a45087e8d15a52615aa0785a5f",
+      "bytes": 20510
+    },
+    "editorial/review_foundations_order_three_verifier.txt": {
+      "sha256": "e053c74d1e4b64736c1c6bcbcfdb2f7d6ed9524c25d25107ec5b5fa8edf611dc",
+      "bytes": 5184
+    },
+    "editorial/review_foundations_packaging_metadata.txt": {
+      "sha256": "3e9bfed022568327a8193868b7faa693a7f6e9ccee9e71ada0faca00f0948213",
+      "bytes": 6914
+    },
+    "editorial/review_foundations_packaging_metadata_second.txt": {
+      "sha256": "2b2b8f67d1650512eff9f501855b2a22dc360d1c078cee6ceb4ae8fcc4a135a4",
+      "bytes": 6473
+    },
+    "editorial/review_foundations_rational_orbifold.txt": {
+      "sha256": "b3884697dad3e09349674a65031bb7b5a2a6849577b838458a30ca9370fae32d",
+      "bytes": 6173
+    },
+    "editorial/review_foundations_regularity_argument.txt": {
+      "sha256": "5bc2771e177939a6e32795c26ca485db28703cf9c5b00c4d763ff91b17c8385d",
+      "bytes": 9798
+    },
+    "editorial/review_foundations_rendered_pages.txt": {
+      "sha256": "29b1e400121bc9e973ee36e325f19367319a2a16cebd000080af6355f30c825a",
+      "bytes": 3180
+    },
+    "editorial/review_foundations_solutions.txt": {
+      "sha256": "108bc3790bf77ce6fb2b28ddd95517b0ca4c1d8415c02c72c74c937e04a7a3a8",
+      "bytes": 2694
+    },
+    "editorial/review_foundations_w3_all_heights.txt": {
+      "sha256": "e66a905fe090c3355ddabe65383518fcb584d88966e3c293f718a4839021daf5",
+      "bytes": 7889
+    },
+    "editorial/review_lattice_E8_glue_teaching.txt": {
+      "sha256": "557907ab6dc94df313dd34a920526ecbd7f32abfbc623c982d202e92d4a88eda",
+      "bytes": 3888
+    },
+    "editorial/review_lattice_canonical_examples_and_identification.txt": {
+      "sha256": "5bf9d529531bdc74413e32b6ea9f28579f9a75c965225139c7813c74953443cb",
+      "bytes": 12257
+    },
+    "editorial/review_lattice_core_top_checker_static.txt": {
+      "sha256": "f79e8b241a1defd99c0705feb6abb612b6ffb53c9037a2ead89f3a51f6b72c82",
+      "bytes": 7292
+    },
+    "editorial/review_lattice_cross_chapter_physics.txt": {
+      "sha256": "42f2d2da35ddd68ce844895b55de0994e720d843f1f11499c10f70c30276e9c7",
+      "bytes": 13215
+    },
+    "editorial/review_lattice_finite_closure_argument.txt": {
+      "sha256": "16cb969e4d23fae5ac9afa35d411bf321010bb9847ba72134b0db3eceda1e3cb",
+      "bytes": 11387
+    },
+    "editorial/review_lattice_full_theories_teaching.txt": {
+      "sha256": "a50f0327fb8ab571b2ae5aafd3aa554ee3d10fe13ad1531a84a0db1b748dd86f",
+      "bytes": 5885
+    },
+    "editorial/review_lattice_joining_and_revised_endings.txt": {
+      "sha256": "6a4d993697bb05bcb43ecc064d8979a00376e71b5a0aab33922bc004bf480d29",
+      "bytes": 5545
+    },
+    "editorial/review_lattice_narrative_final.txt": {
+      "sha256": "b02a50940e6169701c2c4a61d4aaabaf93cf78c6809cf4d813fa31595dc97635",
+      "bytes": 5892
+    },
+    "editorial/review_lattice_on_construction.txt": {
+      "sha256": "dfbacf90ad9d059272ad17a6e937b010abb89adbe4add8fcc91a9ce44af62ec5",
+      "bytes": 11318
+    },
+    "editorial/review_lattice_on_foundations.txt": {
+      "sha256": "ffe5d55605fe9ad803780e917a1667a38a0255d1d25b1fddda4360e9f84bf027",
+      "bytes": 10663
+    },
+    "editorial/review_lattice_on_related.txt": {
+      "sha256": "8b486e7b57bca22f0898cef628b95963e48efe3b68b4a4190900e234c0e8193c",
+      "bytes": 5527
+    },
+    "editorial/review_lattice_on_unitarity_readability.txt": {
+      "sha256": "3e870aa6e118da1a3e806c5dda88d86bfb6cf9215cd336637d880cff995c40ed",
+      "bytes": 5726
+    },
+    "editorial/review_lattice_reader_pass.txt": {
+      "sha256": "da39a52c383a15beaf4bcc1f0ec71db5543db94e5012309372295ad982053bf4",
+      "bytes": 6387
+    },
+    "editorial/review_lattice_reader_route_final.txt": {
+      "sha256": "551f32d5730f33f001a3f12dba1b805dad5f663669da430dee9f14ba8fea620a",
+      "bytes": 7343
+    },
+    "editorial/review_lattice_scaling_final.txt": {
+      "sha256": "8c6cd04be1a111bbdb24c881c02386b0565a8874c7b15faad4567960f51b8bbf",
+      "bytes": 13867
+    },
+    "editorial/review_lattice_self_scopes.txt": {
+      "sha256": "f235fea61775b0b393bafed5908aefcac35597a6d37be752fa52cba03dd7666c",
+      "bytes": 4187
+    },
+    "editorial/review_lattice_twisted_Z2_center.txt": {
+      "sha256": "119f588bd413853a9396daa863621a408cad5ca79bef1241dcf901d3748cfd79",
+      "bytes": 5746
+    },
+    "editorial/review_oct5_scope.txt": {
+      "sha256": "04fc65915185850a8e84494d525ffe10510cee8106e52bb9bd41f887ca784ec8",
+      "bytes": 3992
+    },
+    "editorial/review_replica_overlap_factors.txt": {
+      "sha256": "88227ffe5a75e2f97c9105c0ad55c9336a721876da4cc630291ee018bc5503a8",
+      "bytes": 8272
+    },
+    "editorial/review_root_clock_and_navigation_2158.txt": {
+      "sha256": "aec4cd9750420ad0b9065d52f03ba831ac4a8c0318234229f7e3eed625dca7cd",
+      "bytes": 2209
+    },
+    "editorial/review_root_dependency_and_c2.txt": {
+      "sha256": "7af68c1920bc56314ceced8d8ec6d1b061e108a3954cbf02f2e5acaf127353fd",
+      "bytes": 2754
+    },
+    "editorial/review_root_final_additions_2148.txt": {
+      "sha256": "b285beec13e551d8d5783eeca2bd6758e30dc63b7d28bcbf35d4b9c50a080238",
+      "bytes": 3595
+    },
+    "editorial/review_root_integration_2025.txt": {
+      "sha256": "ecf7dea6426447c3f92cb33bba0b3d67d5426678784e54638873f3861c1c4eff",
+      "bytes": 1978
+    },
+    "editorial/review_root_new_examples_2040.txt": {
+      "sha256": "5c479edff165e08314b15eb997e19f875be1f59ea495a00a26c75ab61cff9e8c",
+      "bytes": 3241
+    },
+    "editorial/review_root_new_pages_1943.txt": {
+      "sha256": "5e2e0bb0ca0bf0fd1f152df270f92b9d1a051063ccc50f9c6bf001993fe9202f",
+      "bytes": 564
+    },
+    "editorial/review_root_new_pages_2005.txt": {
+      "sha256": "af1216df0f3ffa31007d68c8276f5529e5c167b4408f0952da75b246d4f0477e",
+      "bytes": 649
+    },
+    "editorial/review_root_on_arithmetic.txt": {
+      "sha256": "2c39fcd74df287df72a3c6491a9f776accd221b9cda8750e44cde13039236309",
+      "bytes": 2255
+    },
+    "editorial/review_root_proof_bridges_2058.txt": {
+      "sha256": "c60251cd865de80b324e7567dc8179adeeb3bb79b40cad6c3f641919902e1e20",
+      "bytes": 3727
+    },
+    "editorial/scientific_source_preflight.json": {
+      "sha256": "c9a2ad0e5da78cbe86ec98f7cb0f1ced1663e291b2c5f763a018cf2fa930ff13",
+      "bytes": 35170
+    },
+    "editorial/scientific_source_snapshot.json": {
+      "sha256": "c69d8dad5ad9ae813e44b3d79a8fe3e42efdc9e568d5a919b280fd28d85993d0",
+      "bytes": 35170
+    },
+    "editorial/solution_reorganization_applied.json": {
+      "sha256": "7a341a84103a81fc7a3403357a4cbf8a60bdedec5a6c1647b1f310bc5a2966a0",
+      "bytes": 85104
+    },
+    "editorial/solution_reorganization_dry_run.json": {
+      "sha256": "febe717c4af35f1ff2905a4ff566088e3a1719141dec8fdc5a99a71cc97211ed",
+      "bytes": 85104
+    },
+    "editorial/source_drafts/c_solutions.tex.txt": {
+      "sha256": "3b3cf41fc41ae18202d6cc21e1f998ff2d9be0781de919845ebbac07d152c5af",
+      "bytes": 26012
+    },
+    "editorial/source_drafts/f_solutions.tex.txt": {
+      "sha256": "292d266c82e448939bd93c491c384a891185d8ae5e17cb79e73da7b7230e4db9",
+      "bytes": 19518
+    },
+    "editorial/source_drafts/l_solutions.tex.txt": {
+      "sha256": "54b0856366323526db83b08a7a30efaec9362dbaba6f62f35b1fb7c40da7a9d1",
+      "bytes": 25743
+    },
+    "editorial/source_drafts/r_solutions.tex.txt": {
+      "sha256": "9d056b7c0ab64932f177d5e43ccad9d99b48020a6996aefa6b1769abb35a8503",
+      "bytes": 21862
+    },
+    "editorial/source_recorder_limit_review.json": {
+      "sha256": "3109a60bdd5c03a4a86ea592333cd147d6799c3bece32510512c8c6f0d6cee98",
+      "bytes": 1420
+    },
+    "editorial/w3_dimension_scope_insertion.tex.txt": {
+      "sha256": "f0e786a10e20d22055d4cba6f53fe77303d36f0af487c6424b564cb19e036ef5",
+      "bytes": 11704
+    },
+    "figures/annulus_channels.tex": {
+      "sha256": "bd5ae4ed68693ea08d65168b69c6cd99de3297be1483be6ac20af5593fc45bef",
+      "bytes": 634
+    },
+    "figures/annulus_insertion.tex": {
+      "sha256": "efa47d628e1f72df465aba3d19c2f283eed23e773f9a986eab8ee3bd758ea9bc",
+      "bytes": 997
+    },
+    "figures/construction_map.tex": {
+      "sha256": "3d01be18ffa205a780c546cd91dad96b09b276863252dd0ded99d85eae895e13",
+      "bytes": 1517
+    },
+    "figures/ising_calibration.pdf": {
+      "sha256": "d237bb668ac4ecdf1e042190446076fa2b17b152e34a2fd043aaf57861ebd49c",
+      "bytes": 21962
+    },
+    "figures/ising_calibration.svg": {
+      "sha256": "29b024a344b8d9a545622964ef04d795d3dfe67a193186e47c8983c5d04e9d1d",
+      "bytes": 54806
+    },
+    "figures/jones_wenzl_two.tex": {
+      "sha256": "57bb25fa9c772f41c406660cf3622174f4daf0138e2fe73ef2e4d593c0379356",
+      "bytes": 2256
+    },
+    "figures/lattice_dynkin.tex": {
+      "sha256": "aa44211905c8fa8fe1eb044b9f00655666f19f7a64c2a88e488686f97fc0879d",
+      "bytes": 785
+    },
+    "haagerup_cft_textbook.tex": {
+      "sha256": "9b6450e27aaab907fdf5c3329a8e3fd5ea15c073608b9cdd370ce519af1fbe6b",
+      "bytes": 2602
+    },
+    "package.py": {
+      "sha256": "543a0121bb46d9d975602e0309a6d304740f4482b1b2bbc345d0a68b1a93ca8d",
+      "bytes": 7989
+    },
+    "plot_ising_calibration.py": {
+      "sha256": "5118158ec9570406a34c8d5338ef95a5bd425094c91891bab3f29a90690a3f40",
+      "bytes": 10463
+    },
+    "preamble.tex": {
+      "sha256": "c34b6719220fa7c8032ec050d2f2872b30c73da514f0c2594c0d6f2ede350ade",
+      "bytes": 3416
+    },
+    "record_sources.py": {
+      "sha256": "3d8a0b0df86ac7015ce2b46b583f54039a95744222400fb0287130af4f78e5dd",
+      "bytes": 10530
+    },
+    "solutions/c01_lattice_embedding.tex": {
+      "sha256": "27170a8f1051f098d32dd7ebfdc73eb5d9b1dbf264f870862f3ba0ff40bdb1b5",
+      "bytes": 4191
+    },
+    "solutions/c02_finite_closure.tex": {
+      "sha256": "c4b5b9072cc278f077c8570002323bba4ec999a271ada92d035c549680c5990d",
+      "bytes": 4251
+    },
+    "solutions/c03_factors.tex": {
+      "sha256": "d51412c8e45387dd38c7a323c2ed7ef2a26e08ed1e04ec67ead680d1978af22b",
+      "bytes": 4516
+    },
+    "solutions/c04_regularity.tex": {
+      "sha256": "165999497bc93528af6b4a86d044667c83bd98920dbfd8c26b0d79cb2db52468",
+      "bytes": 5125
+    },
+    "solutions/c05_branching.tex": {
+      "sha256": "5060780f495596ba183dd6097d6376bfa507541d50724d21660961a7e74bd6a0",
+      "bytes": 4953
+    },
+    "solutions/c06_cosets.tex": {
+      "sha256": "8b443e54d9554f5e7cf5077afdfa27e28ae7878a81a3c412c11033cae6ac88ef",
+      "bytes": 10320
+    },
+    "solutions/f01_fusion.tex": {
+      "sha256": "3bcff3b95f30e010f6ee223c69cd984cc8f786a6066c04f3ac9ddfe34eaca798",
+      "bytes": 3450
+    },
+    "solutions/f02_haagerup.tex": {
+      "sha256": "b4301b385cfef7305c859dd636d070c82b8d1a6e6965926f684a73ccfd6fa04c",
+      "bytes": 3765
+    },
+    "solutions/f03_centers.tex": {
+      "sha256": "959b646b41c4d40bc621c871a170c5f96beaf94dfefff91a19436c3af00f66da",
+      "bytes": 3746
+    },
+    "solutions/f04_modular.tex": {
+      "sha256": "397595fe0d06b348c7937a5712ed8725ff404df77117cf51f90524b040eb1776",
+      "bytes": 4185
+    },
+    "solutions/f05_arithmetic.tex": {
+      "sha256": "8678c1a316c256569cd4d6a7c772a41a0eb17e678f986528aeaacd8188e91626",
+      "bytes": 3746
+    },
+    "solutions/f06_related_categories.tex": {
+      "sha256": "18aac6f0b80a09d99654d4b91e1c549590feef745b92aabd49c24683bdfa032c",
+      "bytes": 5700
+    },
+    "solutions/l01_chain.tex": {
+      "sha256": "61abf747f700d404631feecc361f38c26fc16425c2ab93a884a6d5e788848c7e",
+      "bytes": 3278
+    },
+    "solutions/l02_scaling.tex": {
+      "sha256": "f26556adc0a6c9abcb59bee353ce19ea966cabab8c997c671bb33af2729ecb85",
+      "bytes": 4875
+    },
+    "solutions/l03_overlaps.tex": {
+      "sha256": "739aba9ff6c89f2d4b70d8fa1f949a7e9ed8feba41008c8be8f2157630debb0b",
+      "bytes": 5889
+    },
+    "solutions/l04_tensor_networks.tex": {
+      "sha256": "693084e2c5f945bfac45d14341540c569958595d7bc8fbcaaa179cc7e7e86cfd",
+      "bytes": 4337
+    },
+    "solutions/l05_gapped.tex": {
+      "sha256": "1a5eec578d60f4870b5a9fec02fdf86095a2452ca31fcc59e54fc3401c8dda68",
+      "bytes": 4019
+    },
+    "solutions/l06_identification.tex": {
+      "sha256": "c2e4251f8e0083be6e6a9962a71cc70b97bd2b27c962268ec19f7a2ef6f0e841",
+      "bytes": 7502
+    },
+    "solutions/r01_cft.tex": {
+      "sha256": "b241c552779ac1826cdd3a068bff43f805394177459bbdabe783ce4eb88bca74",
+      "bytes": 3525
+    },
+    "solutions/r02_vertex_algebras.tex": {
+      "sha256": "303ea1435a99bc12f888f3aeea99e861f4ddf85e027907ad41ceff64ef1f820c",
+      "bytes": 3623
+    },
+    "solutions/r03_characters.tex": {
+      "sha256": "35bc6b936840beaf7e427075ea9c2c8562a487acb4ed9738efbc0378cea8861a",
+      "bytes": 2584
+    },
+    "solutions/r04_unitarity.tex": {
+      "sha256": "e25904a082a96a5697bc7dd87e68be190f2c063949c51d01ed554bee329dde91",
+      "bytes": 2809
+    },
+    "solutions/r05_full_theories.tex": {
+      "sha256": "67cf727ed3284d431fcb786c917f96ad2433019be54e2265861aa1cb5d031d79",
+      "bytes": 5589
+    },
+    "solutions/r06_correlators.tex": {
+      "sha256": "569ce12943647d19615538105c8c711f5e4ce8921583d501e335c2e8de19eec2",
+      "bytes": 2713
+    },
+    "solutions/r07_defects.tex": {
+      "sha256": "722a65344f19a8b53935faa4c0d2c94d5c5ce111868d9102f53c3f0a22b28c9b",
+      "bytes": 4983
+    },
+    "solutions/r08_sewing.tex": {
+      "sha256": "d83f5763898a4419bf136b6e58c9116444848981f425b3b78beced67f06e5f65",
+      "bytes": 3254
+    }
+  }
+}

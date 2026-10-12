@@ -38,7 +38,7 @@ additive and linear whiskering, and finite-dimensional Hom spaces; `A` is a mono
   subcategory spanned by the three simples `S (a, -a)`.  Injectivity for `x = y` uses only
   that both spaces are one-dimensional and that free induction sends `𝟙` to `𝟙 ≠ 0`.  The
   extension to the additive closure (finite direct sums of the three simples), by additivity
-  of free induction, is not formalized.
+  of free induction, is `freeMap_bijective_Lminus_biproduct` (`Category/FreeModuleAdditive.lean`).
 
 Hypotheses (statements about `Rep(B)` and `H/B` that are not formalized here, all phrased as
 the structural facts used, none as the conclusion): `hSchur` (the invertible objects `S v`
@@ -47,25 +47,38 @@ the group law of the metric group `(ℤ/3)²` of the local `B`-modules), `hA` (`
 object of `Rep(B)`, is the sum of the invertibles in `L₊`).
 
 Related results: `Category/FreeModuleTensor.lean` (the tensorator `(X ⊗ A) ⊗_A (Y ⊗ A) ≅
-(X ⊗ Y) ⊗ A` on objects, its naturality, the unit isomorphism) and
-`Category/FreeModuleSeparable.lean` (every module is a retract of a free module).
+(X ⊗ Y) ⊗ A` on objects, the unit isomorphism), `Category/FreeModuleNaturality.lean`,
+`Category/FreeModuleMonoidal.lean`, `Category/FreeModuleMonoidalFunctor.lean` (naturality,
+coherence, free induction as a monoidal functor to `(Bimod A A, ⊗_A)`),
+`Category/FreeModuleSeparable.lean` (every module is a retract of a free module),
+`Category/FreeModuleAdditive.lean` (additivity), `Category/FreeModuleGraded.lean`
+(`ℓ ⊗ A ≅ A`), `Category/FreeModuleTwistedSeparable.lean` (the separability section of
+`H/B`), `Category/FreeModuleEssSurj.lean`, `Category/TwistedGroupAlgebraOfMul.lean`,
+`Category/FreeModuleEquivalence.lean` (induction from the additive closure of `L₋` is an
+equivalence of categories) and `Category/SimpleModulesLminus.lean` (the three simple
+modules).
 
-Not formalized (remaining steps of `L_untwisted`, manuscript lines 3335–3352):
-* the facts behind `hSchur`, `hfusion`, `hA` (structure of `Rep(B)` and of `H/B`), and the
-  semisimplicity of `Rep(B)`;
-* the existence of a `SeparabilitySection` for `H/B`;
-* the semisimplicity of `𝒞_A` (from separability), needed for "one-dimensional endomorphisms
-  ⇒ simple" and for "a retract of `⊕ xᵢ ⊗ A` is isomorphic to a sub-sum `⊕ xᵢ ⊗ A`";
-* additivity of free induction (extension of full faithfulness to the additive closure);
-* `ℓ ⊗ A ≅ A` as `A`-modules for `ℓ ∈ L₊`, hence "every free module is a direct sum of the
-  three simple modules" (its arithmetic part is `Weights.coset_Lplus_meets_Lminus_once`), and
-  hence essential surjectivity of induction onto `𝒞_A`;
-* the monoidal-functor coherence of the tensorator and a monoidal structure on `𝒞_A`;
-* the Tannakian/untwisted identification of the pointed category on `L₋` with
-  `Vec_{ℤ/3}` and its associator (symmetric with trivial twists:
-  `Weights.Lminus_symmetric_trivial_twists`);
-* the embedding into `Rep(U)` and `𝓕` by forgetting the locality condition for `B`, which
-  preserves `H`-module morphisms and relative tensor products (lines 3349–3352). -/
+Status of the remaining steps of `L_untwisted` (manuscript lines 3335–3352), 4 October 2026:
+* formalized in the companion files listed above: additivity of free induction and full
+  faithfulness on the additive closure of `L₋`; `ℓ ⊗ A ≅ A` for `ℓ ∈ L₊` and "every free
+  module is induced from `L₋`"; a separability section for `H/B` (from the hypothesis that its
+  multiplication is a twisted group algebra, `TwistedGroupAlgebra`, or from `hmul`);
+  essential surjectivity and the equivalence `freeLminus_isEquivalence` (of plain categories);
+  the three simple modules (`netCount_simple_modules`); the monoidal-functor coherence of the
+  tensorator (for `freeFunctor A ⋙ toBimod A` into `(Bimod A A, ⊗_A)`);
+* still hypotheses there: the facts behind `hSchur`, `hfusion`, `hA`; `hmul` (homogeneous
+  components of the multiplication of `H/B` are nonzero); `hss` and `hsplit` (semisimplicity
+  and Krull–Schmidt for `Rep(B)`).  Later files derive `hmul` from a connected unit and a
+  separability section (`TwistedGroupAlgebraOfUnit`, `NondegFromSeparable`) and `hsplit` from
+  `IsIdempotentComplete C` (`LminusSplitting`);
+* formalized in later files: the monoidal structure on `𝒞_A` (a monoidal full subcategory of
+  `(Bimod A A, ⊗_A)`) and the monoidal equivalence (`FreeModuleMonoidalEquivalence`,
+  `UntwistedFromSeparable`); the identification with the untwisted `Vec_{ℤ/3}`, given the
+  external trivial self-braidings `hθ` on `L₋` (`UntwistedVecEquivalence`); the algebraic core
+  of the embedding, `H`-modules over `B`-bimodules as `(H, B)`-bimodules with the comparison of
+  relative tensor products (`ModuleTower*`);
+* not formalized: that comparison packaged as a monoidal functor, and the embedding into
+  `Rep(U)` and `𝓕` by forgetting the locality condition for `B` (lines 3349–3352). -/
 
 namespace HaagerupIzumi.C8
 

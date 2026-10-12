@@ -1,0 +1,17 @@
+{
+  "scope": "Saved finite witness transcription; no mode or matrix replay.",
+  "files": {
+    "c8_reviewability_20260927/core_spectral_witnesses.tsv": {
+      "bytes": 7333,
+      "sha256": "f5485cc31ac4b3e2de9e6cbd059f411cc587f0f74c92a6d7e379b638b5da0cb5"
+    },
+    "c8_reviewability_20260927/current80_witness.json": {
+      "bytes": 964822,
+      "sha256": "7cf40b79b91d7ba019a619aed423b5b96a53df72a0dd317b47aab23d1d3677d2"
+    },
+    "hi_cft_20260923_next_81top_all.json": {
+      "bytes": 530536,
+      "sha256": "712ad1b040a350288f184f9d4f269a278f16a5581ceea7721596a4a479d4f793"
+    }
+  }
+}

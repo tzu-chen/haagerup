@@ -29,21 +29,23 @@ relative tensor product `⊗_A` of `Category/RelativeTensor.lean` (Mathlib's
   Its underlying morphism is `freeTensorXIso` followed by the associator
   (`freeTensorIso_hom_hom`), so its naturality in `X` and `Y` reduces to
   `freeTensorXIso_whiskerRight`, `freeTensorXIso_whiskerLeft` and naturality of the
-  associator; that last assembly step is not yet compiled (draft in
-  `lean/tools/category_drafts/FreeModuleTensor_naturality_draft.lean`).
+  associator; that assembly is `freeTensorIso_natural_left/right` in
+  `Category/FreeModuleNaturality.lean`.
 * `freeUnitIso A : 𝟙 ⊗ A ≅ A` as `A`-bimodules (the regular bimodule `Bimod.regular A`):
   the unit isomorphism.
 
 Hypotheses: those of `Category/RelativeTensor.lean`: `C` has coequalizers and `X ⊗ -`,
 `- ⊗ X` preserve them.  These hold in any rigid abelian (e.g. fusion) category (coequalizers
 exist, and `X ⊗ -`, `- ⊗ X` are left adjoints); for separable `A` the coequalizer defining
-`⊗_A` is moreover split.  Also the commutativity of `A`.  No external-theorem or certificate
+`⊗_A` is moreover split (`Category/SeparableCoequalizer.lean`).  Also the commutativity of `A`.  No external-theorem or certificate
 inputs.
 
-Not formalized: naturality of `freeTensorIso` itself (see above); the coherence of these
-isomorphisms with the associators and unitors (the monoidal-functor axioms); a monoidal structure on `𝒞_A = RightMod A` itself (here `⊗_A` is
-taken in Mathlib's bicategory of bimodules, `Bimod.monBicategory`); the restriction to the
-pointed subcategory on `L₋`. -/
+Continued in: `Category/FreeModuleNaturality.lean` (naturality of `freeTensorIso`),
+`Category/FreeModuleMonoidal.lean` (unit and associativity coherence) and
+`Category/FreeModuleMonoidalFunctor.lean` (`freeCoreMonoidal`: free induction is a monoidal
+functor `C ⥤ (Bimod A A, ⊗_A)`).  Not formalized: a monoidal structure on `𝒞_A = RightMod A`
+itself (here `⊗_A` is taken in Mathlib's bicategory of bimodules, `Bimod.monBicategory`); the
+restriction to the pointed subcategory on `L₋`. -/
 
 namespace HaagerupIzumi.C8
 

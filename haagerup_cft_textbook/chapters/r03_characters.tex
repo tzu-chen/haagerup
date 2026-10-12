@@ -1,0 +1,500 @@
+\chapter{Characters and the spectrum they determine}
+\label{ch:characters}
+
+A character is a remarkably efficient record of a chiral state space.
+It tells us how many states occur at every energy, but it suppresses
+their matrix elements and can even fail to distinguish inequivalent
+modules. In the present construction, characters become available
+after properness, regularity, and the modular data have been
+established. We will see how the six-current result selects the
+character vector and then turn its coefficients into physical primary
+counts.
+
+\section{Three different dimensions attached to a module}
+
+Let $M_i$ be a simple ordinary module, with lowest weight $h_i$.
+Write
+\begin{equation}
+ \chi_i(q)=q^{h_i-1/3}A_i(q),\qquad
+ A_i(q)=\sum_{n\ge0}a_i(n)q^n.
+ \label{eq:char-expansion}
+\end{equation}
+The shift $1/3$ is $c/24$ at $c=8$.
+The top dimension is $a_i(0)$, an ordinary positive integer.
+The categorical quantum dimension is
+$d_i=S_{0i}/S_{00}$, generally an irrational algebraic number.
+The number of Virasoro primary components at grade $n$ is a third
+quantity, obtained after removing descendants. None of these three
+numbers can be substituted for another.
+
+For example, the simple module $b$ has top dimension $80$ but
+quantum dimension $d^2$, where $d=(3+\sqrt{13})/2$.
+The vacuum module has top dimension one, six states at weight one,
+and $120$ states at weight two. Only $113$ of the last states are
+Virasoro primaries. The remaining seven are the stress tensor and
+the derivatives of the six currents.
+
+\section{A hand calculation of the ambient lattice characters}
+\index{theta series}\index{character!lattice}
+
+The rank-eight oscillator factor begins
+\begin{equation}
+ \prod_{m\ge1}(1-q^m)^{-8}
+ =1+8q+44q^2+192q^3+\cdots.
+ \label{eq:char-eight-oscillators}
+\end{equation}
+There are eight weight-one oscillators. At weight two there are
+eight single oscillators of frequency two and
+$\binom{9}{2}=36$ symmetric pairs of frequency-one oscillators.
+At weight three the possibilities are one frequency-three oscillator,
+one frequency-two and one frequency-one oscillator, or three
+frequency-one oscillators. Their counts are
+$8+8\cdot8+\binom{10}{3}=192$.
+
+The first theta coefficients of the root lattices are
+\[
+ \Theta_{E_6}=1+72q+270q^2+720q^3+\cdots,
+ \qquad
+ \Theta_{A_2}=1+6q+6q^3+\cdots.
+\]
+Their product is
+$1+78q+702q^2+2346q^3+\cdots$. Multiplying by
+\eqref{eq:char-eight-oscillators} gives
+\begin{equation}
+ \chi_B=q^{-1/3}(1+86q+1370q^2+11586q^3+\cdots).
+ \label{eq:char-B}
+\end{equation}
+For instance, the weight-two coefficient is
+$702+78\cdot8+44=1370$. Momentum states and oscillators both
+contribute, which is why counting roots alone stops working after
+weight one.
+
+For $E_8$, the theta series is the weight-four Eisenstein series
+\[
+ E_4(q)=1+240\sum_{n\ge1}\sigma_3(n)q^n
+       =1+240q+2160q^2+6720q^3+\cdots,
+\]
+where $\sigma_3(n)=\sum_{m\mid n}m^3$.
+This follows from the modularity of an even unimodular lattice theta
+series and the one-dimensionality of weight-four modular forms for
+$SL_2(\Z)$, together with the constant term one. Hence
+\begin{equation}
+ \chi_{E_8}=\frac{E_4}{\eta^8}
+ =q^{-1/3}(1+248q+4124q^2+34752q^3+\cdots).
+ \label{eq:char-E8}
+\end{equation}
+These short computations already supply useful checks on branching.
+They do not identify the unknown subalgebra by themselves.
+
+\begin{example}[Why the ambient theory has 248 currents]
+\label{ex:char-E8-root-count}
+\index{E8 lattice@$E_8$ lattice!root count}
+The first character coefficient can also be obtained without a modular
+form. In an orthonormal basis $e_1,\ldots,e_8$ of $\R^8$, use
+the standard lattice model
+\[
+ E_8=D_8\cup(D_8+s),\qquad
+ D_8=\{n\in\Z^8:\textstyle\sum_i n_i\in2\Z\},
+ \qquad s=\tfrac12(e_1+\cdots+e_8).
+\]
+A current comes from either one of the eight oscillator states or a
+momentum of squared norm two. The integer roots are
+$\pm e_i\pm e_j$ with $i<j$, giving $4\binom82=112$.
+A half-integer vector has squared norm at least $8/4=2$.
+Equality requires every coordinate to be $\pm1/2$, and membership
+in $D_8+s$ requires an even number of minus signs. Half of the
+$2^8$ sign choices have that parity, giving $128$ more roots.
+Thus there are $240$ roots and $8+240=248$ currents.
+
+The same model explains the $E_6\oplus A_2$ count. Choose the
+$A_2$ simple roots $\beta=e_7+e_8$ and $\gamma=e_6-e_7$;
+their Gram matrix has diagonal two and off-diagonal minus one.
+A root orthogonal to both obeys
+$x_6=x_7=-x_8$. Among integer roots, this forces all nonzero
+coordinates into the first five positions, giving
+$4\binom52=40$. Among half-integer roots the last three signs
+are either $(+,+,-)$ or $(-,-,+)$. In each case exactly $16$
+choices of the first five signs give even total parity. Hence the
+orthogonal subsystem has $40+32=72$ roots.
+
+To identify its type explicitly, take
+\[
+ \begin{gathered}
+ e_1-e_2,\quad e_2-e_3,\quad e_3-e_4,\quad
+ e_4-e_5,\quad e_4+e_5,\\
+ \tfrac12(-e_1-e_2-e_3-e_4-e_5+e_6+e_7-e_8).
+ \end{gathered}
+\]
+Their Gram matrix has diagonal entries two and the $E_6$ diagram: the third
+root meets the second, fourth, and fifth; the second meets the
+first, and the fifth meets the sixth. All other distinct pairings
+vanish. The six $A_2$ roots and the $72$ perpendicular roots
+therefore contribute $78$ momentum currents to $B$. Adding its
+eight oscillators gives $86=(72+6)+(6+2)$, the dimensions of
+$\mathfrak e_6\oplus\mathfrak{sl}_3$.
+
+There remain $240-72-6=162$ roots outside this root subsystem.
+The product lattice has determinant $3\cdot3=9$, hence index
+$\sqrt9=3$ in unimodular $E_8$. The remaining roots lie in the
+two nontrivial glue cosets. Negation exchanges those cosets, so each contributes
+$81$ currents. This recovers the two glue-top dimensions used
+in the branching argument directly from lattice geometry. The
+orthonormal coordinates here are for counting; the explicit
+generators in Chapter~\ref{ch:lattice_embedding} use their own
+simple-root coordinate basis.
+\end{example}
+
+\begin{example}[Why a glue top is $27\otimes3$]
+\label{ex:char-E8-glue-weights}
+The preceding count gives $81$ currents in each glue class.
+We can also see the finite representation carried by those currents,
+without a table of exceptional Lie-algebra representations.
+Keep $\beta=e_7+e_8$ and $\gamma=e_6-e_7$, and choose the
+$A_2$ fundamental weight
+\[
+ \nu=\frac{2\beta+\gamma}{3}
+     =\frac{e_6+e_7+2e_8}{3},
+ \qquad (\nu,\beta)=1,\quad(\nu,\gamma)=0,\quad \nu^2=\frac23.
+\]
+An $E_8$ root $r$ projects orthogonally to $\nu$ exactly when
+\[
+ r_6=r_7,\qquad r_7+r_8=1.
+\]
+Among the integer roots, the solutions are
+$e_8\pm e_i$ for $1\le i\le5$, together with $e_6+e_7$:
+eleven roots. Among the half-integer roots, the last three
+coordinates must all be $+1/2$. An even number of the first five
+signs must be negative, giving $16$ choices. There are therefore
+$11+16=27$ roots with this fixed $A_2$ projection.
+
+Their perpendicular components $w=r-\nu$ are $E_6$ weights, all
+of squared length
+\[
+ w^2=r^2-\nu^2=2-\frac23=\frac43.
+\]
+Each has multiplicity one, since a lattice momentum supplies one
+state. For $r=e_6+e_7$, the weight
+$w_0=\tfrac23(e_6+e_7-e_8)$ pairs to one with the sixth $E_6$
+simple root in the preceding example and to zero with the other
+five. It is a fundamental highest weight.
+
+Here is a direct check that these $27$ weights belong to one
+representation. Write
+\[
+ \eta=\tfrac12(-e_1-e_2-e_3-e_4-e_5+e_6+e_7-e_8).
+\]
+Reflection in $\eta$ sends $w_0$ to the weight with first five
+coordinates $+1/2$ and last three $(1/6,1/6,-1/6)$.
+The roots $\pm e_i\pm e_j$ in the first five coordinates generate
+permutations and even sign changes, producing all sixteen
+half-integer choices. Reflecting one with four minus signs in
+$\eta$ reaches one of the ten remaining weights; the same
+permutations and sign changes reach the other nine. Thus all
+$27$ form one Weyl orbit. The root zero modes connect their
+one-dimensional weight spaces. This is the irreducible
+\emph{minuscule} $27$: its weights form a single Weyl orbit,
+each with multiplicity one.
+
+The $A_2$ fundamental representation has the three weights
+\[
+ \nu,\qquad \nu-\beta,\qquad \nu-\beta-\gamma.
+\]
+Its Weyl transformations commute with those of $E_6$, so each
+of these three projections has the same $27$ perpendicular
+weights. They give $27\cdot3=81$ roots in one glue class.
+Negation gives the dual representations in the other class.
+Including the two adjoint current spaces, the finite branching is
+\[
+ \mathfrak e_8\big|_{\mathfrak e_6\oplus\mathfrak{sl}_3}
+ \cong(78,1)\oplus(1,8)\oplus(27,3)
+                         \oplus(\overline{27},\overline3),
+ \qquad 248=78+8+81+81.
+\]
+The choice of which $A_2$ fundamental is called $3$ fixes the
+conjugation labels. The two factors of a glue momentum have
+conformal weights $2/3$ and $1/3$, because lattice weight is half
+the squared length. Their sum is one, explaining why these are
+current tops without oscillator excitations.
+
+This is branching under the finite current algebra
+$\mathfrak e_6\oplus\mathfrak{sl}_3$. Restriction to the smaller
+algebra $U$ still needs the irreducibility argument of
+Chapter~\ref{ch:branching}. Neither this count nor equality of
+characters specifies the selected Haagerup extension algebra
+or its junctions.
+\end{example}
+
+\section{Why the principal part can determine the whole vector}
+\index{principal part}\index{vector-valued modular function}
+
+For a rational VOA, the characters form a vector-valued modular
+function. The $T$ matrix contains the phase
+$e^{2\pi i(h_i-c/24)}$, not merely the categorical twist
+$e^{2\pi ih_i}$. The difference matters when deciding whether a
+constant vector is modular invariant.
+
+The \emph{principal part} is the sum of all negative powers of
+$q$ in the character vector. In the Haagerup modular representation,
+strictly positive nonvacuum lowest weights leave only two possible
+polar terms:
+\[
+ q^{-1/3}\quad\text{in the vacuum coordinate},\qquad
+ \gamma q^{-7/39}\quad\text{in the $d_3$ coordinate}.
+\]
+The second exponent would arise from a lowest weight $2/13$.
+The integer $\gamma\ge0$ is its top dimension if that weight occurs;
+$\gamma=0$ means that this sector begins one or more grades later.
+
+\begin{proposition}[Uniqueness for the specified principal part]
+\label{prop:char-unique}
+For the Haagerup character representation at $c=8$, two character
+vectors with the same $\gamma$ agree in every coefficient.
+\end{proposition}
+\begin{proof}
+The modular representation has finite image, a consequence of the
+congruence theorem for the rational VOA modular data used here.
+Its kernel $\Gamma$ therefore has finite index in $SL_2(\Z)$.
+Subtract the two vectors. Every component of the difference is
+holomorphic at infinity and, by its modular transformation law,
+at all cusps of $\Gamma$. A cusp is a $\Gamma$-orbit of rational
+boundary points or infinity. The quotient
+$\Gamma\backslash\mathfrak H$ of the upper half-plane becomes a
+compact Riemann surface after adding these finitely many cusps.
+Each component is holomorphic on $\mathfrak H$, and the absence of
+negative powers in its local $q$-expansion at every cusp means that
+it extends holomorphically over the added points. The maximum
+principle then makes it constant on this compact modular curve.
+The resulting vector must be fixed by both $S$ and $T_{\rm ch}$.
+
+Only the coordinate with categorical twist $e^{2\pi i/3}$ is fixed
+by $T_{\rm ch}=e^{-2\pi i/3}\Theta$. But its $S$-image has a
+nonzero vacuum component, so no nonzero vector supported on that
+coordinate is also fixed by $S$. The constant difference is zero.
+\end{proof}
+
+Existence of the relevant vector-valued modular functions is a
+separate input. The Evans--Gannon construction supplies fundamental
+solutions $\Xi_{:,0}$ and $\Xi_{:,d_3}$ with the two allowed
+principal parts; the colon denotes the full twelve-component column.
+Their low coefficients give
+\begin{equation}
+ \boldsymbol\chi=\Xi_{:,0}+\gamma\Xi_{:,d_3},
+ \qquad \dim U_1=6+13\gamma.
+ \label{eq:char-gamma}
+\end{equation}
+The independently proved six-current result forces $\gamma=0$.
+Together with Proposition~\ref{prop:char-unique}, this selects the
+entire character vector. The logic uses much more than matching a
+few coefficients: modular covariance, the allowed poles, absence of
+invariant constants, and a proved dimension of $U_1$ all enter.
+
+This also clarifies the order of the construction. The first few
+vacuum dimensions $1,6,120,956$ are outputs of finite lattice
+closure. The subsequent coefficient $6010$ is supplied by the
+character theorem. Using that coefficient to prove the earlier
+closure statement would reverse the dependency.
+
+\section{The twelve characters at their first grades}
+\index{character!Haagerup sectors}
+
+The selected vector has the following initial data. Every row
+represents a simple extended-algebra module, and the grade is
+measured above its actual lowest weight.
+\begin{center}\small
+\begin{tabular}{c|c|rrrr}
+\toprule
+Module&$h_i$&$a_i(0)$&$a_i(1)$&$a_i(2)$&$a_i(3)$\\
+\midrule
+$0$&$0$&1&6&120&956\\
+$b$&$1$&80&1250&10630&65042\\
+$a$&$1$&81&1377&11583&71037\\
+$c_0$&$1$&81&1377&11583&71037\\
+$c_1$&$1/3$&3&243&2916&21870\\
+$c_2$&$2/3$&27&594&5967&39852\\
+$d_1$&$6/13$&7&292&3204&23010\\
+$d_2$&$11/13$&42&777&7147&45367\\
+$d_3$&$15/13$&119&1623&12996&76429\\
+$d_4$&$5/13$&5&229&2738&19942\\
+$d_5$&$7/13$&13&347&3804&26390\\
+$d_6$&$8/13$&14&441&4445&30329\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+There are two instructive features. First, $d_3$ has twist exponent
+$2/13$ but lowest energy $15/13$. Twists know energies only modulo
+one. Second, $a$ and $c_0$ are different simple modules with identical
+unflavoured characters. A trace of $q^{L_0-c/24}$ forgets enough
+structure to make this possible. Their defect eigenvalues and their
+categorical labels still distinguish them.
+
+\begin{example}[Branching checked grade by grade]
+The restriction $B\downarrow_U=U\oplus b$ implies
+$\chi_B=\chi_0+\chi_b$. Using the table gives
+\[
+ 86=6+80,\qquad1370=120+1250,\qquad
+ 11586=956+10630,
+\]
+in agreement with the independent lattice calculation.
+For the selected holomorphic extension,
+\begin{equation}
+ \chi_{E_8}=\chi_0+\chi_b+2\chi_a.
+ \label{eq:char-branch-E8}
+\end{equation}
+The first three nontrivial checks are
+\[
+ \begin{split}
+ 248&=6+80+2\cdot81,\\
+ 4124&=120+1250+2\cdot1377,\\
+ 34752&=956+10630+2\cdot11583.
+ \end{split}
+\]
+Replacing $a$ by $c_0$ leaves the scalar character identity unchanged.
+Thus the identity verifies graded dimensions once branching is known;
+it cannot select an extension algebra or prove its multiplication.
+\end{example}
+
+\section{Removing Virasoro descendants}
+\index{primary multiplicity}\index{descendant subtraction}
+
+Let $p(n)$ be the integer partition number. A positive-weight
+irreducible Virasoro Verma module has descendant generating function
+$\prod_{m\ge1}(1-q^m)^{-1}$. At $c=8$, every positive real highest
+weight has such an irreducible Verma module. Here is a useful check
+of this otherwise nontrivial statement.
+
+Parametrize $c=13-6(t+t^{-1})$. For $c=8$, $t$ lies on the unit
+circle with $t+t^{-1}=5/6$ and nonzero imaginary part. The Kac
+determinant is the general-level analogue of the Virasoro Gram
+determinant computed in Chapter~\ref{ch:cft}. Its possible singular
+weights are
+\[
+ h_{r,s}=\frac14\bigl((r^2-1)t+(s^2-1)t^{-1}-2rs+2\bigr),
+ \qquad r,s\in\Z_{>0}.
+\]
+Reality requires $r=s$. Then
+$h_{r,r}=-7(r^2-1)/24\le0$. No positive real highest weight is
+singular. At weight zero, the primitive vacuum null is
+$L_{-1}\one$, which has already been removed in the vacuum module.
+
+To turn this irreducible-Verma calculation into a count of actual
+primary components, use the strong-unitarity conclusion proved in
+Chapter~\ref{ch:unitarity}. In each finite-dimensional energy space,
+take the orthogonal complement of the descendants of lower-weight
+vectors. Repeating in increasing energy decomposes each module into
+Virasoro highest-weight summands. For the vacuum module, the needed
+positive form is already inherited from the lattice.
+
+Put $P(q)=\prod_{m\ge1}(1-q^m)$. Let $v_i(n)$ count Virasoro
+primary components of weight $h_i+n$, including the vacuum once.
+For nonvacuum modules,
+\begin{equation}
+ \sum_{n\ge0}v_i(n)q^n=P(q)A_i(q),\qquad i\ne0.
+ \label{eq:char-primary-nonvac}
+\end{equation}
+For the vacuum module the correct formula is
+\begin{equation}
+ \sum_{n\ge0}v_0(n)q^n=P(q)A_0(q)+q.
+ \label{eq:char-primary-vac}
+\end{equation}
+To understand the correction, the vacuum descendants contribute
+$(1-q)/P(q)$ rather than $1/P(q)$. If $B_0(q)$ counts all vacuum
+module primaries, then $A_0=(B_0-q)/P$, hence $B_0=PA_0+q$.
+
+\begin{example}[The first interacting primary space]
+Using
+$P(q)=1-q-q^2+O(q^5)$ and
+$A_0=1+6q+120q^2+956q^3+6010q^4+\cdots$, one obtains
+\[
+ \sum_nv_0(n)q^n
+ =1+6q+113q^2+830q^3+4934q^4+\cdots.
+\]
+At weight two the subtraction is
+$120-6-1=113$: six current derivatives and one stress.
+At weight three it is $956-120-6=830$. The generating-function
+method automatically accounts for descendants of descendants.
+For $c_1$, the first new grade-one primaries number
+$243-3=240$, since each of its three top states has one
+$L_{-1}$ descendant.
+\end{example}
+
+The same calculation for $E_8$ gives $248$ weight-one primaries and
+$4124-248-1=3875$ weight-two primaries. These are component counts,
+not counts of affine highest-weight multiplets. A whole multiplet
+can contribute many Virasoro primaries of the same weight.
+
+\section{Which deductions require more than a character}
+
+A character establishes a graded count once the module is known to
+exist. It does not give a preferred orthonormal basis, the action of
+the currents, the reduced matrix elements of an OPE, or a defect
+junction associator. In particular, the coefficient $113$ predicts
+the dimension of a space on which a three-point tensor can be
+computed. It does not specify that tensor.
+
+A finite truncation also has a precise coverage limit. If all
+characters are known through grade $N$ and all lowest weights are
+nonnegative, then the diagonal full spectrum is complete through
+total dimension $N$: every contributing grade is at most $N$.
+The rectangular product of those truncated series contains some
+states at larger dimensions, but is generally incomplete there.
+Reporting the larger partial rectangle as a complete spectrum would
+be an error even if every retained coefficient were exact.
+
+There is a useful division of labor. The lattice construction gives
+actual fields and products. The structural argument gives modules
+and modular data. The character theorem gives every unflavoured
+graded dimension. Descendant subtraction gives Virasoro-primary
+counts. Finally, a choice of full theory specifies how holomorphic
+and antiholomorphic pieces combine. We carry out that last step in
+Chapter~\ref{ch:full_theories}.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:char-oscillator}
+Derive the coefficient $726$ of $q^4$ in the rank-eight oscillator
+factor by classifying the partitions $4$, $3+1$, $2+2$, $2+1+1$,
+and $1+1+1+1$. Use it and $E_4$ to obtain the weight-four
+coefficient of $V_{E_8}$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:char-oscillator]{Solution on page~\pageref*{sol:ex:char-oscillator}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:char-primary}
+Compute the first three primary multiplicities above the top of
+the $b$ module and of the $d_4$ module. Reconstruct the corresponding
+character coefficients by convolving with partition numbers.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:char-primary]{Solution on page~\pageref*{sol:ex:char-primary}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:char-pole}
+Explain why the categorical twist $e^{4\pi i/13}$ alone permits
+lowest weights $2/13,15/13,28/13,\ldots$. Identify exactly which
+steps in this chapter select $15/13$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:char-pole]{Solution on page~\pageref*{sol:ex:char-pole}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:char-equal}
+Two distinct simple modules have equal unflavoured characters.
+Explain why this does not violate linear independence of simple
+objects in the Grothendieck group. Give two types of observables
+that could distinguish the modules.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:char-equal]{Solution on page~\pageref*{sol:ex:char-equal}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:char-uniqueness-scope}
+In Proposition~\ref{prop:char-unique}, replace the modular
+representation by one containing a trivial summand. Explain why
+the same principal part need no longer determine a unique function.
+What extra normalization would be required?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:char-uniqueness-scope]{Solution on page~\pageref*{sol:ex:char-uniqueness-scope}.}}\par
+\end{exercise}

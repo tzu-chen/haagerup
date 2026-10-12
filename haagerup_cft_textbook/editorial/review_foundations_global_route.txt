@@ -1,0 +1,268 @@
+GLOBAL CONCEPTUAL-CONSISTENCY REVIEW: CORE CFT ROUTE
+Reviewer: scope_foundations
+Time checked: 2026-10-05 18:45:52 UTC
+Scope: r00, r01, r02, c01--c05, r04 then r03, r05--r08;
+targeted consultation of f03/f04, r09 and the repository manuscript.
+Method: read-only source inspection and hand reasoning. No numerical
+jobs, symbolic jobs, builds, or independent finite-certificate reruns.
+
+Overall result
+--------------
+The route is conceptually consistent on its major distinctions. I found
+no new failure in the reviewed construction proofs. The change to put
+complete unitarity before characters is beneficial: positivity now
+precedes the orthogonal Virasoro decomposition used for primary counts.
+The most useful repairs are a label-transport clarification, an explicit
+module/intertwining-field prerequisite, and several short notation resets.
+No changes to the physics counts or displayed four-point functions are
+recommended by this pass.
+
+PRIORITIZED CONCRETE REPAIRS
+===========================
+
+1. Avoid silently identifying the original branching object Y with the
+   selected H3 algebra's object a.
+
+   Location: chapters/c05_branching.tex:742--744; compare
+   chapters/r04_unitarity.tex:532--539,
+   chapters/r05_full_theories.tex:33--39, and
+   chapters/r07_defects.tex:365--391.
+
+   c05 presently writes X=b and Y=a for the original H/U extension.
+   The later a label is fixed by the chosen center equivalence and
+   canonical H3 algebra, whose underlying object is 1+b+2a. The
+   text carefully does NOT identify the original H/U algebra with that
+   selected algebra. Label transport should respect the same caution.
+   The dimension of X makes its b label unambiguous. The two central
+   labels a,c0 have the same dimension, twist and scalar character;
+   those numerical facts do not identify the original Y with selected a.
+
+   Conservative repair:
+     "The unique central object of dimension d^2 is subsequently called
+      b, so X=b. The original object Y is one of the two twist-one
+      dimension-s labels a,c0 after choosing a center equivalence.
+      We retain Y for the original embedding; the label a in the
+      selected H3 extension refers to its canonical algebra."
+   It is also fine to give a proved simultaneous labeling convention,
+   but that requires an explanation. No later scalar character formula
+   changes because chi_a=chi_c0. This is a transport ambiguity, not a
+   claim that the two canonical algebra objects necessarily differ.
+
+   Source check: hi_cft_c8_manuscript_structure.tex:595--614 retains X,Y;
+   its character section:1539 introduces the Evans--Gannon labeling.
+   hi_cft_c8_manuscript_analytic.tex:967--975 explicitly declines to
+   identify selected A3 with the original embedded H/U algebra.
+
+2. Add the missing bridge from VOA representations to chiral fusion.
+
+   Locations: chapters/r02_vertex_algebras.tex:571--608 currently define
+   module grading conditions without defining a module action;
+   chapters/r04_unitarity.tex:7,35--41 use intertwining-operator spaces;
+   chapters/r06_correlators.tex:344--375 use lattice intertwiners;
+   chapters/r08_sewing.tex:16--20 use intertwiner multiplicities.
+
+   A short subsection in r02 (near the lattice-module discussion) would
+   make these chapters substantially easier for beginning PhD readers.
+   Suggested content, about one page:
+
+   * A V-module M carries Y_M(v,z), v in V, whose modes act on M and
+     obey the same vacuum, translation and Jacobi/OPE identities.
+     It need not contain a vacuum state or an internal state-field map
+     assigning an endomorphism-valued field to every m in M.
+   * A module homomorphism f:M->N is a linear map commuting with all
+     these V-modes. This is different from an intertwining FIELD of
+     type (P; M,N), assigning to u in M a field I(u,z):N->P{z}.
+     Its powers can be fractional; for three top states the leading
+     power is h_P-h_M-h_N when that channel coupling is nonzero.
+   * In the rational tensor category,
+       N_{MN}^P = dim I(P;M,N) = dim Hom(M tensor_fusion N,P).
+     Fusion is not the ordinary tensor product of the two infinite
+     state spaces. This directly connects f01's fusion spaces to r04.
+   * Lattice example: the leading exponential action is
+       V_alpha(z)|beta> = epsilon(alpha,beta)
+                         z^(alpha,beta)|alpha+beta> + ... .
+     With alpha,beta in the appropriate dual-lattice cosets this is
+     an intertwining field between sectors. The identity
+       (alpha+beta)^2/2-alpha^2/2-beta^2/2=(alpha,beta)
+     explains its exponent and its charge-addition fusion rule.
+   * One sentence on the contragredient M': the graded dual, with its
+     dual V-action, realizes the categorical dual; a bar on a full-CFT
+     factor denotes the antiholomorphic copy. The all-self-dual examples
+     later hide this distinction numerically, not conceptually.
+
+   This need not reproduce the full formal intertwiner Jacobi identity.
+   The type of each map and its simplest example are the missing steps.
+
+3. Update the construction roadmap to the actual chapter order.
+
+   Location: chapters/c01_lattice_embedding.tex:419--431.
+   The roadmap still places characters before positivity, although
+   the master, r00:145--148, and the now-valid r03:233--239 dependency
+   put unitarity before character-based primary decomposition.
+   Swap the two table rows. At c01:440 "This order" will then refer
+   to the actual order again. Character uniqueness itself need not
+   depend on complete unitarity; the ordering is pedagogical and also
+   supports the subsequent primary-count interpretation.
+
+4. Explicitly reset the meaning of a,b,c after the parafermion proof.
+
+   Location: chapters/c03_factors.tex:231 and :316.
+   The proof temporarily abbreviates a3,b4,d5 by a,b,d. Immediately
+   after that section, "Set v=a+b+c" returns to the lattice momenta.
+   Add "Return now to the lattice momenta a,b,c defining u in
+   [eq:c-u]. Set v=a+b+c." This is a one-sentence repair with a
+   disproportionately large benefit for a first reading.
+
+5. Define or eliminate the unexplained word "semiconformal."
+
+   Location: chapters/c04_regularity.tex:84--91.
+   The positive regular stress family is the central hypothesis of the
+   rationality argument, so every condition in its definition should
+   be available to the reader. "Semiconformal" has not been defined.
+
+   Either define the standard condition explicitly (the nonnegative
+   ambient Virasoro modes restrict on A_i to its intrinsic ones), or
+   state directly the actual needed hypotheses used here: the stress
+   is PCT-real and ambient quasiprimary of weight two, so its modes
+   have the displayed adjoints. The surrounding grading/translation
+   requirements are already stated. The choice should match the source
+   theorem's hypotheses; no stronger unproved property is needed just
+   to explain the adjoint identity.
+
+6. Mark internal Lie-algebra spin where the prose says "right spin."
+
+   Locations: chapters/r06_correlators.tex:172--184 and :358.
+   These are internal sl2 labels, not physical left/right chirality or
+   conformal spin. Although c01:164--166 and r05:196--198 explain this
+   convention correctly, r06's "right spin-two multiplet" is especially
+   easy to misread directly after the full-CFT spectrum chapter.
+   Suggested wording:
+     "The pairs below are dimensions for the two internal current
+      algebras, both holomorphic."
+     "an internal right sl2 spin-two multiplet (1,5)"
+     "the internal right Cartan charges ..."
+   Add an H_L,H_R / omega_L,omega_R row to r09 if useful. Current r09
+   explains A_L but does not explicitly record the main internal-L/R
+   convention.
+
+SECONDARY PRECISION AND NOTATION IMPROVEMENTS
+===========================================
+
+7. The lattice L_0 is named exactly like the ubiquitous energy operator.
+   c03:324--371 uses L_0 for the rank-two lattice, intentionally avoiding
+   the parafermion stress L, but thereby colliding with Virasoro L_0.
+   This is locally disambiguated by type, so it is not a mathematical
+   error. If undertaking a small notation cleanup, use Lambda_0 for
+   the lattice. The rename must also cover c06 and its corresponding
+   solutions, not only c03; root is currently splitting solution files.
+   A narrower repair is to explicitly point out the collision once.
+
+8. The lattice stress omega_L in c01:90--98 is later the internal affine
+   stress omega_L in c03:428ff. The first can be omega_{V_L} or omega_B
+   after specialization. K similarly denotes an affine VOA in c01 and
+   its six-dimensional weight-one space in c02:115,527. These are
+   manageable local redefinitions; a single sentence relating K_1 to
+   the current space would suffice. Avoid a large mechanical rewrite.
+
+9. r02:581 uses U direct-sum c1 before the label c1 has been introduced.
+   Replace it with a generic example of one integral-weight module and
+   one module of lowest weight 1/3, or add a clear forward reference.
+
+10. c03:379,412 identify BRAIDED categories using Fib and SO(3)_13.
+    The fusion-ring meaning is already familiar, but the braiding
+    choice should be stated once: the neutral Potts Fibonacci object
+    has lowest weight 2/5 and twist exp(4 pi i/5); SO(3)_13 is the
+    even-label braided subcategory of the standard SU(2)_13 category.
+    This makes clear why merely naming a fusion ring would not suffice.
+    The even labels are already given at :414--415, so this is short.
+
+11. c03:366 first uses "strongly rational" before its full definition
+    in c04:50--51. A forward reference suffices. This is lower priority
+    than defining modules/intertwining fields.
+
+POINTS CHECKED AND FOUND CONSISTENT
+=================================
+
+* Central charge: c=8 always means one chiral charge, with full
+  (c_L,c_R)=(8,8). r01 cylinder energies, r05 E=Delta-2/3, vacuum
+  energy -4 pi v/(3L), and the modular fixed-point mean Delta=2/3
+  agree. The boundary annulus uses the correct single chiral c/24.
+
+* Weight and dimension: chiral u has h=2; full scalars have h=bar h;
+  diagonal relevant scalars are top-top states with Delta=2h_i<2.
+  The tables distinguish state counts, Virasoro-primary component
+  counts, affine multiplets, and quantum dimensions. d3's actual
+  15/13 versus twist representative 2/13 is handled consistently.
+
+* Mode indices: a_(n) changes weight by wt(a)-n-1; L_n=omega_(n+1).
+  The strong-generation, partial-stress, annulus Laurent, and OPE
+  calculations use this same convention. A module zero-mode action is
+  not mistaken for an entire chiral field action in r05.
+
+* Positivity dependency: c04 proves regularity using inherited vacuum
+  positivity and a trace argument on arbitrary module tops; it does
+  not assume all modules unitary. c05 extracts the ring and twelve
+  center objects; r04 completes sector/fusion positivity before the
+  final unitary classification. r03 then uses actual positive forms
+  for orthogonal descendant subtraction. No circular use of the
+  selected character table to prove finite closure was found.
+
+* Original versus selected extension: apart from item 1's potential
+  label binding, the distinction H versus H' is maintained. r05 and
+  r07 consistently attach the canonical H3 action to H', not to an
+  automatically identified original lattice embedding.
+
+* Symmetry scopes: diagonal-U Verlinde lines are the twelve simples
+  of Rep(U)=Z(H3). The selected extension's six first-factor lines
+  form H3; all rational U-preserving bimodule defects form
+  H3 x H3^op and number 36. Local H' modules form Vec. Invariant
+  spaces U x bar U and U x bar H' give 36 and 1488 dimension-two
+  scalars respectively; unrestricted E8 gives 61504. These are
+  consistently separated and derived later, not conflated.
+
+* Opposite versus reverse: r07 reverses tensor ORDER in C^op using
+  T_{x,y}; r08 reverses BRAIDING in Rep(U)^rev. Boundary annuli retain
+  x* in x* tensor y when the six-object ring is noncommutative and
+  alpha is not self-dual. The twelve center labels' self-duality
+  justifies dropping conjugations in their Cardy/Verlinde examples.
+
+* Fourier/braiding sign: f03's positive half-braiding, its negative
+  Fourier S convention, f04's inverse-double-braiding orientation,
+  r02's lattice S and r07's Z3 condensation double braiding agree.
+  No sign repair is needed.
+
+* Correlators versus blocks: r06's chiral adjoint does not introduce
+  an antiholomorphic field. Its Gaussian u four-point function is an
+  actual meromorphic correlator; its light lattice sector functions
+  are selected channel combinations. r08 properly refuses to declare
+  their individual absolute squares the diagonal bulk correlator.
+  The Ising normalization, BPZ exponents, half-normalized epsilon
+  block, orthogonal F change, C_sigma_sigma_epsilon=1/2, and
+  branch-independent full correlator match each other.
+
+* Marginal deformations: r05 separates charge zero-mode energy from
+  oscillators/neutral energy, internal L/R from chirality, dimensional
+  marginality from exact marginality, and existence of an ordinary
+  conformal family from transport of full Haagerup junction data.
+
+REPETITION AND TEACHING FLOW
+===========================
+
+The book is long, but most repeated distinctions now appear at the
+moment they prevent a concrete false inference. I would not remove
+the local reminders about unitarity, selected H', or nonvacuum sewing.
+They serve different steps. The clearest opportunity for optional
+trimming is c01's initial lattice-VOA definition/root-current example:
+r02 already teaches that machinery in detail. c01 could refer back
+and retain the project-specific Gram/cocycle choices and embeddings.
+Conversely, do NOT trim the explicit c03 dependency order or c04
+noncommuting-stress argument; these fill genuine proof gaps for the
+target reader.
+
+An end-of-part summary could be a small object map, not another audit
+warning: U (six currents) -> original B/H branching -> abstract center
+identification -> selected H' -> its two full-theory choices. Existing
+roadmaps largely provide this already. The short label and module
+repairs above are higher value than adding another long overview.
+
+No textbook or solution source was edited during this review.

@@ -221,13 +221,15 @@ structure Inputs (N : Nodes) : Prop where
   (`VacuumLike.vacuumLike_section`; with `L_N(-1) = ω_(0)`:
   `VacuumProjective.omega_vacuumLike_section`, 2971–2978).  External: finite length from
   `C₂`-cofiniteness (Huang, Miyamoto).  Uses that `U` is a simple unitary VOA of CFT type
-  (lines 2933, 2956–2957: node `initialGrades`). -/
+  (lines 2933, 2956–2957: node `initialGrades`).  Proved for the concrete nodes in
+  `ProofMapConcreteVacuum.projectiveVacuum_arrow`. -/
   L_projectiveVacuum : N.positiveStress → N.c2Cofinite → N.initialGrades → N.projectiveVacuum
   /-- Lemma `lem:projective-unit` with McRae (Sections 2.3, 3: finite braided GV category)
   and Etingof–Penneys Theorem 1.1 (non-negligible objects of moderate growth are rigid).  Growth estimate formalized:
   `eventually_sq_mul_pow_lt_factorial` (Regularity/Energy).  Unitarity gives
   self-contragredience, i.e. dualizing object `V' = V` (lines 3024, 3028–3029: node
-  `initialGrades`). -/
+  `initialGrades`).  Proved for the concrete nodes (the step "every object is projective") in
+  `ProofMapConcreteRigid.rigid_arrow`. -/
   L_rigid : N.projectiveVacuum → N.c2Cofinite → N.initialGrades → N.rigidSemisimple
   /-- Theorem `thm:positive-stress-rationality`. -/
   L_rational : N.rigidSemisimple → N.c2Cofinite → N.initialGrades → N.stronglyRational
@@ -242,11 +244,13 @@ structure Inputs (N : Nodes) : Prop where
     N.initialGrades → N.topBound
   /-- Semisimple restriction with integer weights `0, 1` (from `h ≤ 17/10 < 2`, lines
   3213–3215); the `86 - 6 = 80` currents are irreducible (`Branching.integer_weight_le`,
-  `Branching.complement_currents`). -/
+  `Branching.complement_currents`).  Proved for the concrete nodes in
+  `ProofMapConcreteBranching.branchB_arrow`. -/
   L_branchB : N.stronglyRational → N.weightOne → N.certStructural → N.topBound →
     N.certDimensions → N.branchB
   /-- The four mixed lattice sectors start at weight 1 with irreducible 81-dimensional tops;
-  weight 2 is excluded by the top bound; `J↓U` is semisimple (lines 3231–3236). -/
+  weight 2 is excluded by the top bound; `J↓U` is semisimple (lines 3231–3236).  Proved for the
+  concrete nodes in `ProofMapConcreteBranchH.branchH_arrow`. -/
   L_branchH : N.branchB → N.topBound → N.certStructural → N.stronglyRational → N.branchH
   /-- External: Davydov–Müger–Nikshych–Ostrik Section 4 (holomorphic ⇒ Lagrangian ⇒
   `Rep(U) ≃ Z(𝓕)`), with positive spherical structure from character asymptotics
@@ -254,7 +258,8 @@ structure Inputs (N : Nodes) : Prop where
   `d_Y = s` from the discriminant form; lines 3250–3253). -/
   E_dmno : N.branchH → N.stronglyRational → N.projectiveVacuum → N.branchB →
     N.certDiscriminant → N.lagrangianCenter
-  /-- Adjunction: `rank 𝓕 = dim End(H) = ∑ mult² ∈ {4, 6}` (`Branching.rank_fork`). -/
+  /-- Adjunction: `rank 𝓕 = dim End(H) = ∑ mult² ∈ {4, 6}` (`Branching.rank_fork`).  Proved for
+  the concrete nodes in `ProofMapConcreteBranching.branchRankFork_arrow`. -/
   L_rankFork : N.lagrangianCenter → N.branchH → N.rankFork
   /-- Lemma `lem:automorphisms-invertibles` with Bischoff–Jones (Lemma 3.1, Corollary 3.4),
   applied to the order-three automorphisms of `H/B` (line 3295); these come from the lattice
@@ -267,7 +272,8 @@ structure Inputs (N : Nodes) : Prop where
   Formalized: the diagram automorphisms of `E₆` are `1` and the flip
   (`Branching.e6_diagram_automorphisms`), with at least four orbits
   (`Branching.e6_diagram_orbits`), and `Branching.toral_bound`.  `X` is the summand of
-  `B↓U = U ⊕ X`, an object of the tensor category `Rep(U)` (lines 3300–3307). -/
+  `B↓U = U ⊕ X`, an object of the tensor category `Rep(U)` (lines 3300–3307).  Proved for the
+  concrete nodes in `ProofMapConcreteBranching.noSign_arrow`. -/
   L_noSign : N.weightOne → N.branchB → N.stronglyRational → N.noSignExtension
   /-- Six invertibles would give `3s = 6`, `d_X = 1` (`Branching.six_invertibles_impossible`). -/
   L_threeInvertibles : N.invertiblesContainZ3 → N.noSignExtension → N.rankFork →
@@ -276,9 +282,14 @@ structure Inputs (N : Nodes) : Prop where
   isotropy arithmetic (`Weights.q3_eq_zero_iff`, `Weights.q3_decomposition`), trivial twists and
   double braiding on `L₋` (`Weights.Lminus_symmetric_trivial_twists`), cosets
   (`Weights.coset_Lplus_meets_Lminus_once`) and the Hom count `δ_{x,y}` of free induction
-  (`Weights.free_induction_hom_count`); the free-module adjunction, the Tannakian
-  identification and separability are external.  The embedding into `𝓕 = C_H` uses the
-  Lagrangian center and the module category of `U` (lines 3349–3352). -/
+  (`Weights.free_induction_hom_count`).  The free-module adjunction, separability and the
+  identification of all `H/B`-modules with the additive closure of `L₋` are formalized
+  (`HaagerupIzumi.C8.RightMod.freeLminus_isEquivalence`, Category/), and so is the monoidal
+  equivalence of the module category with the untwisted `Vec_{ℤ/3}`
+  (`HaagerupIzumi.C8.untwisted_vec_equivalence_of_separable`, given trivial self-braidings on
+  `L₋`); the Frobenius–Schur indicator is external.  The embedding into `𝓕 = C_H` uses the Lagrangian center and the module
+  category of `U` (lines 3349–3352).  Proved for the concrete nodes in
+  `ProofMapConcreteUntwisted.untwisted_arrow`, with `ν₃(a) = 1` an input. -/
   L_untwisted : N.threeInvertibles → N.certDiscriminant → N.lagrangianCenter →
     N.stronglyRational → N.untwistedPointed
   /-- Exclusion of rank four.  External: Larson Theorem 1.1 (`m ∈ {0,2,3,6}`),
@@ -295,12 +306,13 @@ structure Inputs (N : Nodes) : Prop where
   Ng–Schauenburg formula stated generally: `TwistTraces.neargroup_moments_of_trace`),
   `ModularLinearAlgebra.m6_projection`, `ModularLinearAlgebra.row_unique`, the four theta
   tables `m3First_table`, `m3Reverse_table`, `m6First_table`, `m6Reverse_table` with
-  `near_group_formulas_ne_six` (Theta/; the obstruction theorems are conditional on the applied
-  pole-cancellation identity `hcancel`), and `pole_cancellation`.  Also uses strict
+  `near_group_formulas_ne_six` (Theta/; the pole-cancellation identity is proved in
+  `Theta.ObstructionsOfVoa`, whose `*_obstruction_of_voa` theorems take the VOA-side data bundled
+  in `ProofMapConcreteRankFourVoa`), and `pole_cancellation`.  Also uses strict
   positivity of nonvacuum weights (`H'` of CFT type, lines 3371–3372, 3668–3669, 3728–3730),
   Lemma `lem:no-sign-extension` with `Dim 𝓕 = 3s`, `d_X = s - 1` and pseudo-unitarity
   (3364–3366), the extension algebra `1 + X` and `χ₁ + χ₆₄ = χ_B` (3482, 3647), HKL and `c = 8`
-  (3370–3371). -/
+  (3370–3371).  Proved for the concrete nodes in `ProofMapConcreteRankFour.notRankFour_arrow`. -/
   L_notRankFour : N.rankFork → N.threeInvertibles → N.untwistedPointed →
     N.weightOne → N.projectiveVacuum → N.noSignExtension → N.lagrangianCenter → N.branchB →
     N.stronglyRational → N.initialGrades → N.notRankFour
@@ -366,7 +378,8 @@ structure Inputs (N : Nodes) : Prop where
   `𝓕_net`; `eq_scalar_of_commute_of_separating`, `card_eq_three_or_six` (Analytic/NetCount).
   Assumes the algebraic branching and rank-six ring deductions (lines 4293–4294; `H↓U` with
   multiplicities `1, 1, 2` needs `Y ≅ Y*`), and re-derives untwistedness of `𝓕_net` from the
-  lattice-net discriminant form (lines 4383–4406). -/
+  lattice-net discriminant form (lines 4383–4406).  Proved for the concrete nodes (the rank-six
+  ring and indicator chain re-applied to `𝓕_net`) in `ProofMapConcreteNetCount.netCount_arrow`. -/
   L_netCount : N.netCompletelyRational → N.branchH → N.noSignExtension →
     N.rankSixRing → N.certDiscriminant → N.netCount
   /-- A3.  External: Henriques–Tener Theorems 8.9, 9.5, Corollary 9.7, Remark 9.8;

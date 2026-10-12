@@ -1,0 +1,1349 @@
+\chapter{Vertex algebras and the lattice laboratory}
+\label{ch:vertex_algebras}
+
+The preceding chapter described fields through their correlation
+functions and conformal transformations. A vertex algebra packages
+their operator products algebraically. A lattice vertex algebra is a
+particularly concrete example: its states are oscillator monomials
+attached to lattice momenta, and its products follow from one
+exponential formula. This is the setting in which the Haagerup
+construction becomes explicit.
+
+We begin with the space of chiral states and explain how a field acts
+on that space. The distinction between a state, a field, and one
+coefficient of a field is essential: they are three different kinds of
+mathematical object. Once their types and notation are clear, the
+vertex-algebra axioms express the vacuum, translation, and locality
+properties familiar from CFT. We then build a lattice example in which
+the states and the operators can both be written explicitly.
+
+\section{The state--field map and the mode dictionary}
+\index{vertex operator algebra}\index{modes!vertex-algebra convention}
+
+\subsection{States, formal fields, and coefficient operators}
+\index{state--field map}\index{formal Laurent series}
+
+Let $V$ be a complex vector space of chiral states. For the CFT-type
+examples below, it will be the algebraic direct sum of the finite
+energy spaces in the vacuum sector. An element of this direct sum has
+components in only finitely many energy spaces; a Hilbert-space completion
+is additional structure, introduced when we discuss unitarity.
+Write $\End_{\C}(V)$ for the space of linear maps $V\to V$.
+Its elements are operators on states.
+
+For now $z$ is a \emph{formal variable}. A series in $z$ means a
+specified list of coefficients, with algebraic rules for extracting,
+differentiating, and comparing them. It does not yet mean a function
+evaluated at a nonzero complex number. In particular, no convergence
+or boundedness of operators is assumed in the following definitions.
+We write
+\[
+ V[[z]]=\left\{\sum_{j\geq0}v_jz^j:v_j\in V\right\},
+ \qquad V((z))=\bigcup_{N\geq0}z^{-N}V[[z]].
+\]
+Thus $V((z))$ consists of vector-valued Laurent series with only
+finitely many negative powers, but possibly infinitely many positive
+powers. Neither space is the original state space $V$.
+
+A \emph{field on $V$} is an operator-valued formal series
+\[
+ A(z)=\sum_{n\in\Z}A_nz^{-n-1},\qquad A_n\in\End_{\C}(V),
+\]
+such that, for every $b\in V$, one has $A_nb=0$ for all sufficiently
+large $n$. This is \emph{lower truncation}: after acting on $b$, the
+series $A(z)b$ belongs to $V((z))$. The bound on $n$ can depend on
+$b$; there need not be a single bound for the operators $A_n$ on all
+of $V$. The indexing $-n-1$ is conventional. Large positive $n$
+correspond to large negative powers of $z$.
+
+Denote the vector space of such fields by $\mathcal F(V)$. The
+\emph{state--field map} is a linear map
+\begin{equation}
+ Y:V\longrightarrow\mathcal F(V),\qquad a\longmapsto Y(a,z).
+ \label{eq:voa-state-field-type}
+\end{equation}
+It is part of the vertex-algebra structure, just as multiplication
+is part of an associative algebra's structure. The vector space
+$V$ alone does not determine it. Equivalently, regarding a field
+as its action on an input state, one can write
+$Y:V\to\Hom_{\C}(V,V((z)))$.
+The common notation
+$Y(a,z)\in\End_{\C}(V)[[z,z^{-1}]]$ uses the vector space of
+doubly infinite formal distributions. It allows powers in both
+directions; the separate lower-truncation condition is still required.
+It does not authorize arbitrary products of two series at the same
+variable. The normal product below gives the relevant prescription.
+
+For a given state $a$, denote the coefficient \emph{operator} of
+$z^{-n-1}$ in its field by $a_{(n)}$, and call it the $n$th
+\emph{mode} of $a$. Thus
+\begin{equation}
+ Y(a,z)=\sum_{n\in\Z}a_{(n)}z^{-n-1},
+ \qquad a_{(n)}:V\longrightarrow V.
+ \label{eq:voa-mode-definition}
+\end{equation}
+The symbol $a_{(n)}$ is neither a scalar coordinate of $a$ nor
+another state. Applying it to a state produces a state:
+$a_{(n)}b\in V$. Linearity of $Y$ implies that the product
+$(a,b)\mapsto a_{(n)}b$ is bilinear for every fixed integer $n$.
+There is a whole family of these products, indexed by $n$.
+
+The types can be kept in view as follows:
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Object & Where it lives or what it does\\
+\midrule
+$a,b$ & States in $V$\\
+$Y$ & Linear map from states to fields\\
+$Y(a,z)$ & Formal series of operators on $V$\\
+$a_{(n)}$ & One linear operator $V\to V$\\
+$Y(a,z)b$ & Vector-valued series in $V((z))$\\
+$a_{(n)}b$ & One state in $V$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For example, writing out a field's action makes the index shift visible:
+\[
+ Y(a,z)b=\cdots+(a_{(1)}b)z^{-2}+(a_{(0)}b)z^{-1}
+                  +a_{(-1)}b+(a_{(-2)}b)z+\cdots.
+\]
+The negative-power tail on the left is finite for this particular
+$b$. The constant coefficient is $a_{(-1)}b$, whereas the residue
+is $a_{(0)}b$. In general,
+\[
+ a_{(n)}b=\operatorname{Res}_z\bigl(z^nY(a,z)b\bigr),
+\]
+where the \emph{formal residue} means the coefficient of $z^{-1}$.
+It can be computed without choosing a contour or proving convergence.
+
+\subsection{The vacuum, translation, and locality axioms}
+
+To make these fields into a vertex algebra, specify a distinguished
+nonzero state $\one\in V$, the \emph{vacuum}, and a linear
+operator $\mathsf T:V\to V$, the \emph{translation operator}.
+The vacuum and translation identities are
+\begin{align}
+ Y(\one,z)&=\mathrm{id},&
+ Y(a,z)\one&=e^{z\mathsf T}a,\\
+ \mathsf T\one&=0,&
+ [\mathsf T,Y(a,z)]&=Y(\mathsf Ta,z)=\partial_zY(a,z).
+ \label{eq:voa-vacuum-translation}
+\end{align}
+Here $\mathrm{id}$ is the identity \emph{operator} on $V$, while
+$\one$ is a \emph{state}. The exponential means the formal series
+$e^{z\mathsf T}a=\sum_{r\geq0}z^r\mathsf T^ra/r!$.
+The commutator $[A,B]=AB-BA$ uses composition of linear operators;
+the derivative on the right is taken coefficient by coefficient.
+Translation therefore differentiates a field's position variable,
+as it does in the physical state--operator correspondence.
+
+\begin{example}[Recovering a state from its field]
+\label{ex:voa-vacuum-modes}
+Compare coefficients in $Y(a,z)\one=e^{z\mathsf T}a$. There
+are no negative powers on the right, so
+\[
+ a_{(n)}\one=0\quad(n\geq0),\qquad
+ a_{(-r-1)}\one=\frac{\mathsf T^ra}{r!}\quad(r\geq0).
+\]
+In particular $a_{(-1)}\one=a$ and $a_{(-2)}\one=\mathsf Ta$.
+Thus the field determines its state: act on the vacuum and take
+the constant coefficient. If $Y(a,z)=0$, this procedure gives
+$a=0$, so $Y$ is injective. It need not map onto every formal
+field on $V$.
+
+For the vacuum field itself, $Y(\one,z)=\mathrm{id}$ has only
+one nonzero mode:
+\[
+ \one_{(-1)}=\mathrm{id},\qquad \one_{(n)}=0\quad(n\ne-1).
+\]
+This is why a vacuum state appearing as an OPE coefficient becomes
+an identity operator in the corresponding field formula.
+\end{example}
+
+Finally, locality says that for any $a,b$ there is an integer $N\geq0$
+such that
+\[
+ (z-w)^N[Y(a,z),Y(b,w)]=0
+\]
+as an operator-valued formal distribution in two variables.
+The same $N$ works on every input state for this pair of fields.
+Different expansions in $z/w$ and $w/z$ encode the two radial
+orderings; multiplication by $(z-w)^N$ removes the singularity
+that prevents these ordered expansions from agreeing. For example,
+the two formal expansions of a simple pole are
+\[
+ \left.\frac1{z-w}\right|_{|z|>|w|}
+   =\sum_{r\geq0}w^rz^{-r-1},\qquad
+ \left.\frac1{z-w}\right|_{|w|>|z|}
+   =-\sum_{r\geq0}z^rw^{-r-1}.
+\]
+The domain labels recall their analytic geometric-series meanings;
+here they specify which expansion to use. The two series differ,
+but multiplying either by $z-w$ gives one. Locality is therefore
+compatible with a nonzero commutator of the unmultiplied fields.
+
+These are the vacuum, translation, and locality requirements for
+the fields assigned by $Y$; an arbitrary assignment of formal
+fields to states need not satisfy them.
+
+\subsection{From state products to operator products}
+
+The connection to the OPE notation of Chapter~\ref{ch:cft} is
+\begin{equation}
+ Y(a,z)Y(b,w)\sim\sum_{n\geq0}
+       \frac{Y(a_{(n)}b,w)}{(z-w)^{n+1}}.
+ \label{eq:voa-state-product-ope}
+\end{equation}
+The symbol $\sim$ retains the singular terms at $z=w$ in the
+chosen radial ordering. Each numerator on the right is a
+\emph{field}; it is obtained by first forming the \emph{state}
+$a_{(n)}b$ and then applying $Y$. The sum of singular terms is
+finite by lower truncation. The regular terms also have meaning:
+the first one is the field of $a_{(-1)}b$, the normal product
+discussed in the next section.
+
+The combination of these axioms implies the Jacobi, or Borcherds,
+identity, which expresses compatibility of composing fields with
+taking their state products. One useful consequence is the mode
+commutator formula
+\begin{equation}
+ [a_{(m)},b_{(n)}]
+ =\sum_{j\ge0}\binom mj
+          (a_{(j)}b)_{(m+n-j)}.
+ \label{eq:voa-mode-commutator}
+\end{equation}
+Here $(a_{(j)}b)_{(m+n-j)}$ means a mode of the field assigned
+to the state $a_{(j)}b$; it does not mean a product of two mode
+operators. For $j\geq0$ the binomial coefficient is
+$\binom mj=m(m-1)\cdots(m-j+1)/j!$, with $\binom m0=1$;
+this definition also applies to negative $m$.
+The sum is finite because the singular products $a_{(j)}b$ vanish
+for large $j$. Thus knowledge of the singular OPE determines the
+commutators of all modes. It does not determine an arbitrary abstract
+vertex algebra unless the generators and their relations are also
+controlled.
+
+\subsection{Conformal grading and the physics mode convention}
+
+A \emph{conformal vector} is a distinguished state $\omega\in V$
+whose field is the stress tensor. Write that field as
+\[
+ Y(\omega,z)=T(z)=\sum_{m\in\Z}L_mz^{-m-2}.
+\]
+Comparing exponents with \eqref{eq:voa-mode-definition} defines
+$L_m=\omega_{(m+1)}$. To obtain a vertex operator algebra, or
+VOA, require these operators to satisfy the Virasoro relations,
+with $L_{-1}=\mathsf T$, and require $L_0$ to give an integer
+grading bounded below with finite-dimensional graded pieces.
+We mainly use VOAs of CFT type:
+\[
+ V=\bigoplus_{n\ge0}V_n,\qquad V_0=\C\one.
+\]
+Here $V_n=\{v\in V:L_0v=nv\}$, and a state in a single $V_n$
+is \emph{homogeneous}, of weight $\wt(v)=n$. In particular
+$\omega$ has weight two. The grading compatibility identity
+\[
+ [L_0,Y(a,z)]=Y(L_0a,z)+z\partial_zY(a,z)
+\]
+gives, for homogeneous $a$,
+$[L_0,a_{(n)}]=(\wt(a)-n-1)a_{(n)}$.
+Acting on a homogeneous state $b$ proves the weight rule
+\begin{equation}
+ \wt(a_{(n)}b)=\wt(a)+\wt(b)-n-1.
+ \label{eq:voa-mode-weight}
+\end{equation}
+The displayed weight is the weight of a nonzero output; if the
+corresponding graded space is zero, the product must vanish.
+This rule provides a quick consistency check on every claimed mode
+identity. Two weight-two states have a weight-two first product
+$a_{(1)}b$ and a weight-three zeroth product $a_{(0)}b$.
+
+Physics often writes a field of weight $h$ as
+$\phi(z)=\sum_m\phi_m z^{-m-h}$. The dictionaries agree when
+$\phi_m=a_{(m+h-1)}$. In particular, a current of weight one has
+$J_m=J_{(m)}$, while a stress of weight two has
+$L_m=\omega_{(m+1)}$. For a weight-$h$ state, the physics zero
+mode is $a_{(h-1)}$: it preserves conformal weight. The
+vertex-algebra zeroth product instead uses $a_{(0)}$, which
+changes weight by $h-1$. In particular, the stress has
+$\omega_{(0)}=L_{-1}$ and $\omega_{(1)}=L_0$.
+Keeping the convention explicit prevents a translation operator
+from being mistaken for an energy operator.
+
+\begin{example}[A current commutator from one OPE coefficient]
+Let $J\in V_1$ be a current state and write $J_m=J_{(m)}$.
+Suppose $J_{(1)}J=\one$ and $J_{(j)}J=0$ for $j\ne1$, $j\ge0$.
+Equation~\eqref{eq:voa-mode-commutator} gives
+\[
+ [J_m,J_n]=m\one_{(m+n-1)}=m\delta_{m+n,0}\,\mathrm{id},
+\]
+because $Y(\one,z)=\mathrm{id}$ has only the mode
+$\one_{(-1)}=\mathrm{id}$. This is the Heisenberg algebra.
+For clarity, $J$ here is a weight-one \emph{state},
+$J(z)=Y(J,z)$ is its field, and $J_m=J_{(m)}$ is an operator.
+The vacuum identities give $J_{-1}\one=J$ and $J_1\one=0$,
+so the commutator also yields the state calculation
+\[
+ J_1J=J_1J_{-1}\one
+     =[J_1,J_{-1}]\one+J_{-1}J_1\one=\one.
+\]
+The OPE coefficient $J_{(1)}J=\one$ and the central term
+$[J_1,J_{-1}]=\mathrm{id}$ express the same structure at the
+state and operator levels. More generally,
+$J_mJ_{-m}\one=m\one$ for every $m>0$. Thus $Y(J,z)$ acting
+on $J_{-m}\one$ has a pole of order $m+1$. This gives a concrete
+example of lower truncation with no uniform pole bound over all
+input states.
+\end{example}
+
+\section{Normal products, derivatives, and strong generation}
+\index{normal product}\index{strong generation}\index{skew symmetry}
+
+The constant term in the state series $Y(a,z)b$ is $a_{(-1)}b$.
+Its corresponding field is the \emph{normal product}:
+\[
+ Y(a_{(-1)}b,z)=:Y(a,z)Y(b,z):.
+\]
+To define the colons, split the first field into
+\[
+ Y(a,z)_-=\sum_{n<0}a_{(n)}z^{-n-1},\qquad
+ Y(a,z)_+=\sum_{n\ge0}a_{(n)}z^{-n-1},
+\]
+and put
+\[
+ :Y(a,z)Y(b,z):
+   =Y(a,z)_-Y(b,z)+Y(b,z)Y(a,z)_+.
+\]
+This places the creation part on the left and the part that
+annihilates the vacuum on the right. Individual modes need not
+annihilate every other state. Lower truncation makes each
+coefficient of the displayed expression well defined on an input
+state, even though the fields themselves are infinite series.
+The equality with $Y(a_{(-1)}b,z)$ is a vertex-algebra identity,
+linking this operator prescription to the state product.
+In particular,
+$\mathsf Ta=a_{(-2)}\one$. Differentiating the mode expansion gives
+\begin{equation}
+ (\mathsf Ta)_{(n)}=-n\,a_{(n-1)}.
+ \label{eq:voa-derivative-mode}
+\end{equation}
+Repeated negative modes can therefore be expressed using derivatives
+and normal products. They are not generally ordinary associative
+commutative products: changing parentheses or reversing factors adds
+terms governed by the singular OPE.
+
+Skew symmetry is the identity
+\begin{equation}
+ Y(a,z)b=e^{z\mathsf T}Y(b,-z)a.
+ \label{eq:voa-skew}
+\end{equation}
+For example, extracting the coefficient of $z^{-n-1}$ gives
+\[
+ a_{(n)}b=\sum_{j\ge0}\frac{(-1)^{n+j+1}}{j!}
+          \mathsf T^j(b_{(n+j)}a).
+\]
+The extra derivatives are precisely why a naive commutative algebra
+of OPE coefficients loses information.
+
+\begin{definition}
+A set $S\subset V$ \emph{generates} $V$ as a vertex algebra if all
+iterated modes of its elements, applied to the vacuum, span $V$.
+It \emph{strongly generates} $V$ if derivatives and iterated
+normal products of its elements span $V$.
+\end{definition}
+
+Strong generation is the more restrictive statement. A set can
+generate a new low-weight state through singular products of
+higher-weight composites. Knowing a few low graded pieces does not
+exclude this possibility. For the Haagerup construction, proving that
+six chosen currents remain all of $U_1$ requires an all-weight
+argument. The finite-closure chapter explains how a controlled set
+of identities supplies that argument.
+
+\begin{example}[Why a weight-one conclusion follows from strong generation]
+Suppose a CFT-type VOA is strongly generated by six weight-one
+currents and fields of weights at least two. Every derivative raises
+weight, and every normal product adds weights. Hence a weight-one
+state in their normal span can only be a linear combination of the
+six currents. Once strong generation is proved, the claim
+$\dim V_1\le6$ is immediate. Without strong generation, the same
+count is not justified.
+\end{example}
+
+\section{The Heisenberg Fock space}
+\index{Heisenberg algebra}\index{Fock space}
+
+Let $\mathfrak h$ be an $r$-dimensional complex vector space with a
+nondegenerate symmetric form $(\ ,\ )$, obtained by complexifying a
+real Euclidean space. For each $a\in\mathfrak h$ and $n\in\Z$,
+introduce a mode operator $a(n)$, linear in $a$. These oscillators obey
+\[
+ [a(m),b(n)]=m(a,b)\delta_{m+n,0}\,\mathrm{id}.
+\]
+The vacuum representation is generated from a vector $\one$ killed
+by $a(n)$ for $n\ge0$. Negative modes commute with one another
+and act freely as creation operators. Thus its state space is the
+symmetric-algebra Fock space
+\[
+ M(1)=S(\mathfrak h\otimes t^{-1}\C[t^{-1}]).
+\]
+Here $S(W)$ means the polynomial, or symmetric, algebra on a vector
+space $W$. The letter $t$ labels oscillator modes and is distinct
+from the field variable $z$. The symbol $a\otimes t^{-n}$, $n>0$,
+labels a creation mode $a(-n)$; a monomial represents a state
+$a_1(-n_1)\cdots a_s(-n_s)\one$.
+Positive modes act by commuting through these creation modes and
+then killing the vacuum. For example,
+$a(1)b(-1)\one=(a,b)\one$.
+
+For $a\in\mathfrak h$, the associated weight-one state is
+$a(-1)\one$, and its field is
+\[
+ Y(a(-1)\one,z)=\sum_{n\in\Z}a(n)z^{-n-1}.
+\]
+Thus $a(n)$ abbreviates $(a(-1)\one)_{(n)}$; the vector
+$a\in\mathfrak h$, the state $a(-1)\one\in M(1)$, and its
+mode operators have now been related explicitly.
+An oscillator $a(-n)$ contributes weight $n$. For an orthonormal
+basis $u_1,\ldots,u_r$, the conformal vector is
+\[
+ \omega=\frac12\sum_{j=1}^r u_j(-1)^2\one,
+\]
+and the central charge is $r$.
+
+The character is the graded trace
+$\ch_{M(1)}(q)=\Tr_{M(1)}q^{L_0-r/24}$.
+Its product formula follows from one geometric series for every
+oscillator species and frequency:
+\begin{equation}
+ \ch_{M(1)}(q)
+ =q^{-r/24}\prod_{n\ge1}(1-q^n)^{-r}
+ =\eta(\tau)^{-r}.
+ \label{eq:voa-oscillator-character}
+\end{equation}
+Here $q=e^{2\pi i\tau}$, with $\operatorname{Im}\tau>0$ for an
+analytic character, and
+$\eta(\tau)=q^{1/24}\prod_{n\ge1}(1-q^n)$ is the Dedekind eta
+function. One can also read the product coefficient by coefficient
+as a formal graded count. This $q$ records energy; it is not the
+insertion coordinate $z$ of a field.
+The Heisenberg algebra alone has a Fock module for every
+momentum in $\mathfrak h$; its natural representation theory is not
+finite. A positive even lattice supplies a mutually local discrete
+set of exponential fields and changes this situation substantially.
+
+\section{Even lattices and cocycles}
+\index{lattice vertex algebra}\index{cocycle}
+
+A lattice $L$ is a free abelian group of finite rank with a
+positive-definite integral form: $(\alpha,\beta)\in\Z$ for lattice
+vectors $\alpha,\beta$. Thus, after choosing a lattice basis, each
+vector is an integer linear combination of basis vectors. Write
+$\alpha^2=(\alpha,\alpha)$ and set
+$\mathfrak h=L\otimes_{\Z}\C$, so the Heisenberg space is the
+complexified lattice space.
+The lattice is \emph{even} when
+$(\alpha,\alpha)\in2\Z$ for every $\alpha\in L$.
+We will see how integrality and evenness enter the field construction
+after defining its states.
+
+\subsection{Momentum labels, states, and their fields}
+
+The Heisenberg vacuum space $M(1)$ describes oscillator excitations
+above a state of zero momentum. To include the momenta in $L$, we
+introduce one new \emph{basis symbol} $e^\alpha$ for each
+$\alpha\in L$ and form the vector space
+\[
+ \C_\epsilon[L]=\bigoplus_{\alpha\in L}\C e^\alpha.
+\]
+The subscript $\epsilon$ anticipates a multiplication to be defined
+below; it does not affect this vector-space definition. An element
+is a finite sum $\sum_\alpha c_\alpha e^\alpha$ with complex
+coefficients. The vector $\alpha$ belongs to the lattice, whereas
+$e^\alpha$ belongs to this new space of momentum labels. Here the
+notation names a basis vector; no power-series exponential of
+$\alpha$ is being taken.
+
+Attach a copy of the oscillator space to each momentum label. The
+resulting vector space of the lattice VOA is
+\begin{equation}
+ \begin{split}
+ V_L&=M(1)\otimes\C_\epsilon[L]\\
+    &=\bigoplus_{\alpha\in L}\bigl(M(1)\otimes\C e^\alpha\bigr).
+ \end{split}
+ \label{eq:voa-lattice-space}
+\end{equation}
+The ground state in the momentum-$\alpha$ summand is
+$|\alpha\rangle=\one\otimes e^\alpha$, with no oscillator
+excitations. We conventionally abbreviate this state to $e^\alpha$
+as well. The vacuum of $V_L$ is $\one\otimes e^0$, also denoted
+$\one$. Thus the symbol $e^0$ labels the zero-momentum basis vector;
+its tensor product with the oscillator vacuum gives the full vacuum.
+An arbitrary lattice state is a finite linear combination of
+\[
+ a_1(-n_1)\cdots a_s(-n_s)e^\alpha,
+ \qquad n_i>0,\quad \alpha\in L.
+\]
+
+The different summands have the same oscillator basis but different
+Heisenberg zero-mode actions. On the ground states,
+\begin{equation}
+ a(n)e^\alpha=0\quad(n>0),\qquad
+ a(0)e^\alpha=(a,\alpha)e^\alpha,
+ \qquad a\in\mathfrak h.
+ \label{eq:voa-momentum-ground-state}
+\end{equation}
+All zero modes commute with the creation modes, so every state in
+this summand has the same momentum $\alpha$. Positive modes act
+on oscillator excitations through the Heisenberg commutators, just
+as in $M(1)$. These are the several-boson versions of the charged
+Fock modules $F_p$ from Chapter~\ref{ch:cft}.
+
+The free-boson stress tensor determines the conformal grading.
+For an orthonormal basis $u_1,\ldots,u_r$ of $\mathfrak h$,
+its zero mode is
+\[
+ L_0=\frac12\sum_{j=1}^r u_j(0)^2
+       +\sum_{n>0}\sum_{j=1}^r u_j(-n)u_j(n).
+\]
+Only finitely many terms act nontrivially on any fixed oscillator
+monomial.
+On $e^\alpha$ the second sum vanishes, and the first gives
+$\tfrac12\sum_j(u_j,\alpha)^2=\alpha^2/2$. Since a creation
+mode $a(-n)$ adds weight $n$, a nonzero oscillator monomial has
+\[
+ \wt\bigl(a_1(-n_1)\cdots a_s(-n_s)e^\alpha\bigr)
+ =\frac{\alpha^2}{2}+n_1+\cdots+n_s.
+\]
+Now the role of evenness is visible: every momentum ground state has
+integer weight, so all conformal weights occurring in $V_L$ are integers.
+
+The exponential notation is motivated by the associated field
+$Y(e^\alpha,z)$, the lattice counterpart of the normal-ordered
+free-boson exponential from Chapter~\ref{ch:cft}, customarily written
+$:\!\exp(i\alpha\cdot X(z))\!:$ in physics notation.
+Here $X=(X_1,\ldots,X_r)$ is a collection of independent chiral
+bosons with $X_j(z)X_k(w)\sim-\delta_{jk}\log(z-w)$, and
+$\alpha\cdot X=\sum_j(u_j,\alpha)X_j$. In the lattice theory
+this notation includes the momentum-shift and cocycle factors
+described below. The state $e^\alpha$ is the input to the
+state--field map; $Y(e^\alpha,z)$ is the resulting operator-valued
+field, which takes momentum $\beta$ to momentum $\alpha+\beta$.
+
+\begin{example}[Momentum and oscillator excitations in rank one]
+\label{ex:voa-momentum-labels}
+Let $L=\Z\alpha$ with $\alpha^2=2$. Its momentum labels are
+$e^{m\alpha}$ for $m\in\Z$, with ground-state weights $m^2$.
+The first examples are
+\[
+\begin{array}{c|c|c}
+ \text{state}&\text{momentum}&\text{weight}\\ \hline
+ \one&0&0\\
+ e^\alpha,\ e^{-\alpha}&\alpha,\ -\alpha&1\\
+ \alpha(-1)\one&0&1\\
+ \alpha(-1)e^\alpha&\alpha&2.
+\end{array}
+\]
+Thus there are three independent weight-one states: two charged
+ground states and one neutral oscillator state. A superposition such
+as $e^\alpha+e^{-\alpha}$ is a sum of two different momentum
+states, whereas $e^{\alpha+(-\alpha)}=e^0$ labels the zero-momentum
+ground state. Keeping this distinction in mind prevents ordinary
+exponential manipulations from being applied to vector addition.
+\end{example}
+
+\subsection{Multiplying momentum labels and choosing a cocycle}
+
+Adding charges suggests the ordinary group-algebra multiplication
+$e^\alpha e^\beta=e^{\alpha+\beta}$. The lattice construction
+allows a scalar factor in that rule:
+\[
+ e^\alpha e^\beta=\epsilon(\alpha,\beta)e^{\alpha+\beta},
+ \qquad \epsilon:L\times L\longrightarrow\C^\times.
+\]
+Here $\C^\times$ denotes the nonzero complex numbers. We require
+$\epsilon(0,\alpha)=\epsilon(\alpha,0)=1$, so $e^0$ is the
+identity for this multiplication. The resulting algebra is called
+a \emph{twisted group algebra}. The concrete choice below takes
+values in $\{1,-1\}$.
+
+This multiplication records how a charged field shifts the momentum
+label. For example, multiplication by $e^\alpha$ sends the label
+$e^\beta$ to $\epsilon(\alpha,\beta)e^{\alpha+\beta}$.
+It supplies one ingredient of $Y(e^\alpha,z)$; oscillator operators
+and powers of $z$ supply the others. Consequently this auxiliary
+group-algebra product is different from the VOA product
+$e^\alpha_{(-1)}e^\beta$, which is a particular coefficient of
+the full field $Y(e^\alpha,z)e^\beta$.
+Associativity of this multiplication requires the two-cocycle
+identity
+\[
+ \epsilon(\alpha,\beta)\epsilon(\alpha+\beta,\gamma)
+ =\epsilon(\beta,\gamma)\epsilon(\alpha,\beta+\gamma).
+\]
+The two sides are the coefficients of $e^{\alpha+\beta+\gamma}$
+obtained by multiplying three basis labels in the two possible
+orders of association. A normalized function satisfying this identity
+is called a \emph{two-cocycle}.
+Locality of the exponentials also requires
+\begin{equation}
+ \frac{\epsilon(\alpha,\beta)}{\epsilon(\beta,\alpha)}
+ =(-1)^{(\alpha,\beta)}.
+ \label{eq:voa-cocycle-commutator}
+\end{equation}
+This sign compensates for interchanging the factor
+$(z-w)^{(\alpha,\beta)}$ in the Gaussian OPE. The cocycle is
+therefore part of a consistent choice of field phases, not an
+optional decoration.
+
+In the simply laced root bases used later, with Gram matrix $G$ and
+diagonal entries two, write $a=(a_i)$ and $b=(b_i)$ for the integer
+coordinate columns of two lattice vectors. The entry $G_{ij}$ is
+the pairing of the $i$th and $j$th basis vectors. One convenient
+cocycle is
+\begin{equation}
+ \epsilon(a,b)=(-1)^{\sum_i a_i b_i+
+                              \sum_{i>j}a_i b_jG_{ij}}.
+ \label{eq:voa-root-cocycle}
+\end{equation}
+Its exponent is bilinear modulo two, so the cocycle identity follows
+by expanding both sides. The difference between the exponents for
+$(a,b)$ and $(b,a)$ is $a^{\mathsf t}Gb$ modulo two, proving
+\eqref{eq:voa-cocycle-commutator}. Moreover,
+$\epsilon(a,-a)=(-1)^{a^2/2}$ in this convention.
+
+Rescaling the basis $e^\alpha\mapsto\lambda(\alpha)e^\alpha$,
+with $\lambda:L\to\C^\times$ and $\lambda(0)=1$, changes
+$\epsilon$ by the coboundary
+$\lambda(\alpha)\lambda(\beta)/\lambda(\alpha+\beta)$.
+The condition at zero keeps the vacuum fixed. A rescaling of unit
+modulus is a rephasing. The resulting VOA is isomorphic. A calculation that compares two
+tables of coefficients must first align these gauges.
+
+\section{The exponential formula and a root calculation}
+
+The full vertex operator contains creation oscillators, annihilation
+oscillators, and the charge-shift operator introduced above.
+On a pure momentum state $e^\beta$, the positive oscillators
+vanish and the zero modes measure $\beta$, as in
+\eqref{eq:voa-momentum-ground-state}.
+Acting on a state without oscillator excitations, the exponential
+field reduces to the particularly useful formula
+\begin{equation}
+ Y(e^\alpha,z)e^\beta
+ =\epsilon(\alpha,\beta)z^{(\alpha,\beta)}
+   \exp\!\left(\sum_{n>0}\frac{\alpha(-n)}n z^n\right)
+   e^{\alpha+\beta}.
+ \label{eq:voa-exponential-action}
+\end{equation}
+The prefactor $z^{(\alpha,\beta)}$ sets the first possible mode,
+and the exponential then generates the oscillator corrections.
+For an oscillator-excited input, the needed additional identity is
+\[
+ [a(m),Y(e^\alpha,z)]=(a,\alpha)z^mY(e^\alpha,z).
+\]
+For example, moving one creation mode past the field gives, for $r>0$,
+\[
+ Y(e^\alpha,z)b(-r)e^\beta
+ =\bigl(b(-r)-(b,\alpha)z^{-r}\bigr)Y(e^\alpha,z)e^\beta.
+\]
+Repeated use of this identity and the Heisenberg relations reduces
+an arbitrary Fock monomial to the displayed pure-momentum formula.
+At a prescribed output weight, only finitely many terms of the
+exponential can contribute. This supplies an exact finite procedure
+for each mode product.
+
+\begin{example}[The affine $\mathfrak{sl}_2$ inside $V_{A_1}$]
+\label{ex:voa-a1}
+Let $L=\Z\alpha$ with $\alpha^2=2$. In the cocycle convention
+above, $\epsilon(\alpha,-\alpha)=-1$, so
+\[
+ Y(e^\alpha,z)e^{-\alpha}
+ =-z^{-2}\left[\one+\alpha(-1)z+
+ \frac{\alpha(-1)^2+\alpha(-2)}2z^2+\cdots\right].
+\]
+Consequently
+\[
+ e^\alpha_{(1)}e^{-\alpha}=-\one,
+ \qquad e^\alpha_{(0)}e^{-\alpha}=-\alpha(-1)\one.
+\]
+Define the states $H=\alpha(-1)\one$, $E=e^\alpha$, and
+$F=-e^{-\alpha}$, and abbreviate their fields by
+$H(z)=Y(H,z)$, $E(z)=Y(E,z)$, and $F(z)=Y(F,z)$. Then
+\begin{align*}
+ H(z)H(w)&\sim\frac2{(z-w)^2},\\
+ H(z)E(w)&\sim\frac{2E(w)}{z-w},&
+ H(z)F(w)&\sim-\frac{2F(w)}{z-w},\\
+ E(z)F(w)&\sim\frac1{(z-w)^2}+\frac{H(w)}{z-w}.
+\end{align*}
+These are the affine $\mathfrak{sl}_2$ relations at level one.
+The minus sign in $F$ is forced by the chosen cocycle and ensures
+$[E_0,F_0]=H_0$.
+\end{example}
+
+At weight one, a positive even lattice contributes its rank from
+the oscillator states and one state for every lattice vector
+of squared norm two. Therefore
+\begin{equation}
+ \dim(V_L)_1=\rank L+\#\{\alpha\in L:\alpha^2=2\}.
+ \label{eq:voa-weight1-lattice}
+\end{equation}
+For $A_1$ this is $1+2=3$. For $E_8$ it is $8+240=248$.
+This elementary count will make the properness of the six-current
+subalgebra a physically visible statement.
+
+\section{Modules, fusion, and intertwining fields}
+\index{module!vertex algebra}\index{intertwining operator}
+
+A representation of a Lie algebra tells us how its generators act on
+another vector space. A representation of a vertex algebra does the
+same for all field modes at once. A \emph{$V$-module} $M$ carries a map
+\[
+ Y_M:V\longrightarrow\Hom_{\C}(M,M((z))),\qquad
+ v\longmapsto Y_M(v,z),
+\]
+with mode expansion
+\[
+ Y_M(v,z)=\sum_{n\in\Z}v^M_{(n)}z^{-n-1},\qquad v\in V,
+\]
+whose coefficients $v^M_{(n)}:M\to M$ act on the module.
+These fields obey the vacuum identity
+$Y_M(\one,z)=\mathrm{id}_M$, lower truncation, translation, and the
+same Jacobi or OPE compatibility identities as the fields of $V$.
+Here translation includes
+$Y_M(\mathsf Tv,z)=\partial_zY_M(v,z)$, where $\mathsf T$
+acts on the input $v\in V$.
+In particular, the conformal vector acts by Virasoro operators on $M$.
+The module need not contain a vacuum state. Nor does its definition
+assign an endomorphism-valued field to every vector of $M$: the inputs
+of $Y_M$ still belong to the vacuum algebra $V$.
+
+A module is \emph{simple} if it has no nonzero proper subspace
+invariant under all field modes. In the simple ordinary
+positive-energy modules used in the examples, $L_0^M$ is diagonalizable
+and
+\[
+ M=\bigoplus_{N\geq0}M_{h_M+N},\qquad
+ M_\lambda=\{u\in M:L_0^Mu=\lambda u\},
+\]
+with finite-dimensional eigenspaces and a lowest nonzero one
+$M_{h_M}$. This lowest space is the \emph{top}; a state in
+$M_{h_M+N}$ has \emph{grade} $N$ above it. Thus a module's top
+can contain several states even when the module is simple. The
+underlying module axioms alone do not impose this energy decomposition;
+the final section distinguishes the various grading assumptions.
+
+A \emph{module homomorphism} $f:M\to N$ is a linear map commuting
+with these actions:
+\[
+ fY_M(v,z)=Y_N(v,z)f\qquad(v\in V).
+\]
+This is the meaning of $\Hom_V(M,N)$. For simple ordinary modules
+with finite-dimensional energy eigenspaces, Schur's lemma makes it
+zero for inequivalent modules and one-dimensional for equivalent
+modules. For the scalar-endomorphism conclusion, restrict an
+endomorphism to a nonzero finite energy space and choose an eigenvalue;
+the kernel after subtracting that scalar is a nonzero submodule,
+so simplicity makes it the whole module.
+
+A \emph{chiral intertwining operator} is a different kind of object.
+Here we discuss ordinary modules, with diagonalizable conformal energy.
+An intertwiner of type $\binom{P}{M\ N}$ assigns to $u\in M$ a field
+\[
+ \mathcal Y(u,z):N\longrightarrow P\{z\}.
+\]
+For fixed $u$, its coefficient operators map $N$ to $P$, and its
+action on a vector of $N$ is a vector-valued formal series in
+$P\{z\}$. This notation permits the complex powers of $z$
+prescribed by the module weights; it does not denote evaluation
+of an analytic function. Generalized modules may require logarithmic
+intertwiners as well, which are outside these examples.
+The assignment is linear in $u$ and satisfies lower truncation, the
+translation identity
+$\mathcal Y(L_{-1}u,z)=\partial_z\mathcal Y(u,z)$, and compatibility
+with the $V$-actions on all three modules. In physical language, moving
+a chiral-algebra field past this insertion must agree with first using
+its OPE with the inserted state. Thus a charged field can change the
+sector on which it acts, even though every ordinary $V$ field preserves
+each $V$-module. Products of such charged fields supply the nonvacuum
+conformal blocks used later in the book.
+
+The energy commutator is a useful part of this definition:
+\[
+ L_0^P\mathcal Y(u,z)-\mathcal Y(u,z)L_0^N
+ =\mathcal Y(L_0^Mu,z)+z\partial_z\mathcal Y(u,z).
+\]
+If $u,v$ have weights $h_u,h_v$, a term $z^r w$ in
+$\mathcal Y(u,z)v$ must therefore satisfy
+\begin{equation}
+ r=h_w-h_u-h_v.
+ \label{eq:voa-intertwiner-power}
+\end{equation}
+For top states in three modules, the possible top-to-top power is
+$h_P-h_M-h_N$. Its coefficient can vanish for particular choices of
+top components. The first nonzero term then comes from a higher grade
+of the same intermediate module; it need not signal a different
+fusion channel.
+
+The \emph{contragredient module} $M'$ is the graded dual
+$\bigoplus_\lambda M_\lambda^*$ equipped with the dual
+vertex-algebra action. It uses the dual of each finite energy space,
+not the full algebraic dual of an infinite direct sum.
+The VOA is \emph{self-contragredient} when $V'\cong V$ as
+$V$-modules. This is one of the hypotheses in the next theorem.
+
+To identify these spaces with categorical fusion, we use the standard
+rational VOA tensor theorem under its usual hypotheses: simplicity,
+CFT type, self-contragredience, rationality, $C_2$-cofiniteness, and
+positive lowest weights for nonvacuum simple modules. The finiteness
+terms are explained at the end of this chapter. In this setting the
+ordinary modules form a semisimple rigid tensor category. Denote its
+fusion product by $\boxtimes_V$ to distinguish it from the ordinary
+tensor product of vector spaces. For simple modules,
+\begin{equation}
+ M\boxtimes_VN\cong\bigoplus_P N_{MN}^{\ P}\,P,
+ \qquad
+ N_{MN}^{\ P}
+ =\dim\mathcal I\binom{P}{M\ N}
+ =\dim\Hom_V(M\boxtimes_VN,P),
+ \label{eq:voa-intertwiner-fusion}
+\end{equation}
+where $\mathcal I\binom{P}{M\ N}$ is the space of chiral
+intertwiners of the indicated type. These are fusion maps
+$M\boxtimes_VN\to P$. Chapter~\ref{ch:fusion} uses the oppositely
+oriented splitting space $\Hom(P,M\boxtimes_VN)$; composition
+pairs the two spaces nondegenerately. In the unitary setting,
+adjoints convert orthonormal fusion bases to splitting bases.
+The infinite tower of descendant
+states belongs inside each module $P$; the finite integer
+$N_{MN}^{\ P}$ counts independent ways of coupling to that module.
+It does not count the dimension of $M\otimes_\C N$.
+
+The contragredient $M'$ supplies the categorical dual in this setting.
+A bar over a factor
+in a full-CFT Hilbert space instead indicates an antiholomorphic copy.
+The chosen right-moving pairing relates these notions; they are not
+the same notation for taking complex conjugates of coordinates.
+All twelve Haagerup center labels are self-dual, which will simplify
+the displayed diagonal pairings without eliminating the underlying
+duality convention.
+
+\section{Lattice modules and a rank-one example}
+\index{discriminant group}\index{quantum dimension!versus top multiplicity}
+
+The dual lattice is
+$L^*=\{x\in L\otimes\R:(x,L)\subset\Z\}$.
+For a positive even lattice, the simple modules are
+$V_{\lambda+L}$, indexed by $\lambda\in L^*/L$. Their conformal
+weight is the minimum of $x^2/2$ in the coset, and their twist is
+$e^{\pi i\lambda^2}$. Fusion is addition of cosets:
+\[
+ V_{\lambda+L}\boxtimes V_{\mu+L}
+ \cong V_{\lambda+\mu+L}.
+\]
+Every categorical dimension is one. The representation category is
+therefore pointed, even when some module tops have dimension greater
+than one because a coset has several shortest vectors.
+Concretely, $V_{\lambda+L}$ has the same oscillator monomials as
+$V_L$, but its momentum basis is labelled by $\lambda+L$.
+A vacuum-algebra field of momentum $\alpha\in L$ sends momentum
+$\beta\in\lambda+L$ to $\alpha+\beta$ in the same coset.
+This is how a charged lattice module can be preserved by every
+$V_L$ field while containing no vacuum state of its own.
+
+\begin{example}[A discriminant group one can compute by hand]
+Let $L=\Z\alpha$, $\alpha^2=2k$ with $k\in\Z_{>0}$. Then
+$L^*=\frac1{2k}\Z\alpha$, so $L^*/L\cong\Z/(2k)$.
+The module labelled by $m$ has weight modulo one
+\[
+ q(m)=\frac{m^2}{4k}\pmod1.
+\]
+Its actual lowest weight uses the representative of $m$ closest
+to zero modulo $2k$. The finite quadratic function $q$ records
+twists, while the shortest-vector problem determines the integer
+part of the energy. The distinction will reappear for the Haagerup
+module whose twist exponent is $2/13$ but whose lowest weight is
+$15/13$.
+\end{example}
+
+The character of a lattice module is
+\begin{equation}
+ \chi_{\lambda+L}(\tau)
+ =\frac{\Theta_{\lambda+L}(\tau)}{\eta(\tau)^r},
+ \qquad
+ \Theta_{\lambda+L}=\sum_{x\in\lambda+L}q^{x^2/2}.
+ \label{eq:voa-lattice-character}
+\end{equation}
+The numerator counts momenta and the denominator counts oscillators.
+Poisson summation produces the modular $S$ matrix
+\[
+ S_{\lambda\mu}=|L^*/L|^{-1/2}e^{-2\pi i(\lambda,\mu)}.
+\]
+Thus the finite discriminant form is a direct bridge between a
+Euclidean lattice and a modular tensor category.
+
+\begin{example}[Poisson summation and the two sectors of the root lattice]
+\label{ex:voa-poisson}
+For $L=\Z\alpha$, $\alpha^2=2k$, write the theta series as
+\[
+ \Theta_m(\tau)=\sum_{\ell\in\Z}
+ \exp\left(\frac{\pi i\tau}{2k}(2k\ell+m)^2\right),
+ \qquad m\in\Z/(2k).
+\]
+Poisson summation replaces a sum of Gaussian samples on a lattice
+by the Gaussian samples on its dual lattice. Applying the Gaussian
+Fourier transform to the arithmetic progression $m+2k\Z$ gives
+\[
+ \Theta_m(-1/\tau)=\sqrt{\frac{-i\tau}{2k}}
+ \sum_{r\in\Z}e^{\pi i rm/k}e^{\pi i\tau r^2/(2k)}.
+\]
+Here $\operatorname{Im}\tau>0$, and the analytic branch of
+$\sqrt{-i\tau}$ is chosen positive at $\tau=it$ for $t>0$.
+Positive definiteness of the lattice makes these theta sums
+convergent in this domain.
+Split the integer $r$ into its residue modulo $2k$ and an
+integer multiple of $2k$. Reindex the residue by its negative;
+$\Theta_{-n}=\Theta_n$ because reversing every momentum does
+not change its norm. The result is
+\begin{equation}
+ \Theta_m(-1/\tau)=
+ \sqrt{\frac{-i\tau}{2k}}
+ \sum_{n=0}^{2k-1}e^{-\pi i mn/k}\Theta_n(\tau).
+ \label{eq:voa-rankone-poisson}
+\end{equation}
+One can see both factors directly. The Fourier transform of the
+Gaussian supplies $\sqrt{-i\tau}$; the spacing $2k$ leaves the
+factor $(2k)^{-1/2}$. Splitting the dual sum into residue classes
+modulo $2k$ leaves the finite Fourier phase. The sign of that phase
+is the convention used here for $S$; reindexing $n\mapsto-n$
+does not change these unflavoured theta series. Dividing by
+$\eta(-1/\tau)=\sqrt{-i\tau}\eta(\tau)$ cancels the
+continuous Gaussian factor. The modular transform of the character
+is therefore an ordinary finite Fourier transform.
+
+At $k=1$, there are two sectors, $0$ and $1$, and
+\[
+ S=\frac1{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},
+ \qquad
+ T=e^{-\pi i/12}\begin{pmatrix}1&0\\0&i\end{pmatrix}.
+\]
+The common phase in $T$ comes from $c=1$; the relative phase
+$i$ comes from the nontrivial lowest weight $h=1/4$.
+Their characters begin
+\begin{align*}
+ \chi_0&=q^{-1/24}(1+3q+4q^2+\cdots),\\
+ \chi_1&=q^{5/24}(2+2q+6q^2+\cdots).
+\end{align*}
+The two lowest states in the second sector are
+$e^{\alpha/2}$ and $e^{-\alpha/2}$. Nevertheless,
+$S_{10}/S_{00}=1$, its quantum dimension. Its square fuses to
+the vacuum sector because adding its lattice coset to itself
+gives $L$.
+
+As a further check, the normalized twist sum is
+$(1+i)/\sqrt2=e^{2\pi i/8}$, the phase appropriate to central
+charge one. Chapter~\ref{ch:modular} explains this relation in
+general. A nontrivial twist therefore need not mean a nontrivial
+quantum dimension, just as a nontrivial top multiplicity need not.
+\end{example}
+
+\begin{example}[One fusion channel, two different leading powers]
+\label{ex:voa-half-charge}
+Let $L=\Z\alpha$ with $\alpha^2=2$, and put $V=V_L$.
+The nontrivial simple module is
+$M_1=V_{L+\alpha/2}$. Its top has basis
+\[
+ v_+=e^{\alpha/2},\qquad v_-=e^{-\alpha/2},
+ \qquad h_{M_1}=\frac14.
+\]
+Addition of lattice cosets gives
+$M_1\boxtimes_VM_1=V$, so there is exactly one vacuum-module
+intertwiner up to scale. This does not mean that the OPE of every
+pair of top components begins with the vacuum \emph{state}.
+
+Choose an intertwiner $\mathcal Y$ of type
+$\binom{V}{M_1\ M_1}$ and a branch for its fractional powers.
+The lattice exponential formula gives
+\begin{align}
+ \mathcal Y(v_+,z)v_-
+ &=\kappa_{+-}z^{-1/2}
+   \left(\one+\frac12\alpha(-1)\one\,z+O(z^2)\right),
+   \label{eq:voa-half-charge-neutral}\\
+ \mathcal Y(v_+,z)v_+
+ &=\kappa_{++}z^{1/2}
+   \left(e^\alpha+\frac12\alpha(-1)e^\alpha\,z+O(z^2)\right).
+   \label{eq:voa-half-charge-charged}
+\end{align}
+The nonzero phase coefficients $\kappa_{+-},\kappa_{++}$ depend on
+the chosen intertwiner, basis, and cocycle extension convention; they
+are not fixed merely by the cocycle on the original lattice $L$.
+With the usual unit exponential normalizations the common scale can
+be chosen so these coefficients have unit modulus. Their values are
+irrelevant to the leading-power distinction.
+
+In the first product the charges add to zero and
+$(\alpha/2,-\alpha/2)=-1/2$. Its vacuum coefficient is nonzero.
+In the second product the charges add to $\alpha$ and
+$(\alpha/2,\alpha/2)=1/2$. Charge conservation forbids a vacuum-state
+coefficient. The first output is instead the weight-one current
+$e^\alpha$ in the same vacuum module $V$. Equation~
+\eqref{eq:voa-intertwiner-power} verifies both exponents:
+\[
+ 0-\frac14-\frac14=-\frac12,
+ \qquad
+ 1-\frac14-\frac14=\frac12.
+\]
+The gap of one is an intermediate-module grade. It does not change
+the fusion rule or create a second independent intertwiner.
+
+For comparison, the inequivalent modules have no nonzero
+module homomorphism between them, whereas their charged field exists:
+\[
+ \Hom_V(M_1,V)=0,\qquad
+ \dim\mathcal I\binom{V}{M_1\ M_1}=1.
+\]
+A mode-preserving linear map between modules and a charged field
+joining three modules answer different representation-theoretic questions.
+\end{example}
+
+\section{Affine currents, Sugawara stresses, and commutants}
+\index{Sugawara construction}\index{commutant}
+
+For a simple Lie algebra $\mathfrak g$ with invariant form normalized
+so long roots have squared length two, choose a basis $t^a$.
+Its associated current states $J^a$ have weight one; write
+$J^a(z)=Y(J^a,z)$. The \emph{level} $k$ is the coefficient
+multiplying the invariant form in their double pole:
+\[
+ J^a(z)J^b(w)\sim\frac{k\kappa^{ab}}{(z-w)^2}
+                   +\frac{f^{ab}{}_cJ^c(w)}{z-w}.
+\]
+The structure constants and metric
+are defined by $[t^a,t^b]=f^{ab}{}_c t^c$ and
+$\kappa^{ab}=(t^a,t^b)$. The inverse metric $\kappa_{ab}$ defines
+the dual basis $t_a=\kappa_{ab}t^b$ and the currents
+$J_a=\kappa_{ab}J^b$; repeated indices are summed.
+At positive integer level $k$, write $L_k(\mathfrak g)$ for the
+simple integrable affine VOA. It is the simple quotient of the
+vacuum representation generated by these currents. Integrability
+requires the raising and lowering operators for affine simple roots
+to act locally nilpotently: repeated application to any fixed state
+eventually gives zero. For $\mathfrak{sl}_2$, one resulting relation is
+$(E_{(-1)})^{k+1}\one=0$. At level one this is precisely the
+relation $E_{(-1)}E=0$ visible in the root-lattice construction.
+Such relations are not imposed in the universal affine vacuum algebra.
+The Sugawara stress of the simple quotient is
+\[
+ T_{\mathfrak g,k}=\frac1{2(k+h^\vee)}
+       \sum_a:J^aJ_a:,
+ \qquad c_{\mathfrak g,k}=\frac{k\dim\mathfrak g}{k+h^\vee}.
+\]
+The dual Coxeter number $h^\vee$ is a constant of the simple Lie
+algebra: in this normalization the quadratic Casimir
+$\sum_a t^at_a$ acts on the adjoint representation by $2h^\vee$.
+It supplies the correction from the simple poles when the current
+bilinears are contracted. For $\mathfrak{sl}_2$, $h^\vee=2$ and
+$c=3k/(k+2)$.
+
+If an affine subalgebra $A$ is embedded in $V$, its Sugawara stress
+need not equal the ambient stress. Suppose the currents are ambient
+weight-one primaries, their level is positive integral, and the
+embedding respects the ambient unitary grading. Under these
+coset-embedding hypotheses, the difference
+$\omega_C=\omega_V-\omega_A$ is a commuting stress of charge
+$c_V-c_A$. The \emph{commutant}
+\begin{equation}
+ \Com(A,V)=\{v\in V:a_{(n)}v=0\text{ for all }a\in A,n\ge0\}
+ \label{eq:voa-commutant}
+\end{equation}
+is the algebra of fields whose OPE with $A$ has no singular part.
+Equivalently one can test a suitable generating set, with the
+appropriate closure justification.
+
+This is a chiral construction. A commuting pair of stresses does
+not by itself imply a tensor-product decomposition of $V$.
+The ambient states can form a nontrivial extension of the tensor
+product, and can branch with multiplicities. Nor does a commutant
+automatically supply a modular-invariant full theory. Those are
+separate questions about representations and sewing.
+
+An important example is the Cartan current in
+$L_k(\mathfrak{sl}_2)$, which generates a rank-one Heisenberg
+subalgebra $M(1)$. Its commutant is called the \emph{parafermion VOA}:
+\[
+ K(\mathfrak{sl}_2,k)=\Com(M(1),L_k(\mathfrak{sl}_2)).
+\]
+The Heisenberg stress has charge one, so this
+example supplies the subtraction requested in
+Exercise~\ref{ex:voa-coset}. Its states must satisfy the full
+commutant condition, not merely have zero Cartan charge.
+
+\begin{example}[The diagonal affine coset]
+Embed $\mathfrak{sl}_2$ diagonally in level $k$ and level one.
+The diagonal currents have level $k+1$, since their double poles
+add. The coset central charge is
+\[
+ \frac{3k}{k+2}+1-\frac{3(k+1)}{k+3}
+ =1-\frac6{(k+2)(k+3)}.
+\]
+At $k=1$ this is $1/2$, the Ising central charge. The equality of
+central charges alone would not identify the coset, but the full
+Goddard--Kent--Olive (GKO) construction identifies this family with the unitary Virasoro
+minimal models. At $k=39$ the charge is $286/287$, a value that
+will appear in the Haagerup stress analysis.
+\end{example}
+
+\begin{example}[The three Ising weights and a branching grade]
+\label{ex:voa-Ising-branching}
+Let $L_k(\lambda)$ denote the integrable affine
+$\mathfrak{sl}_2$ module of level $k$ and highest weight
+$\lambda\in\{0,\ldots,k\}$. Its top has spin
+$j=\lambda/2$. In the invariant-form normalization above, the
+quadratic Casimir acts by $2j(j+1)$. Dividing by $2(k+2)$
+in the Sugawara formula gives
+\[
+ h_k(\lambda)=\frac{j(j+1)}{k+2}
+             =\frac{\lambda(\lambda+2)}{4(k+2)}.
+\]
+Under the diagonal level-two algebra, write
+\[
+ L_1(\lambda)\otimes L_1(\mu)
+ =\bigoplus_{\nu=0}^2 L_2(\nu)\otimes B_{\lambda,\mu}^{\nu}.
+\]
+The spaces $B$ are coset modules. If their first diagonal
+highest vector occurs at numerator grade $N$, its coset weight is
+\begin{equation}
+ h_C=h_1(\lambda)+h_1(\mu)+N-h_2(\nu).
+ \label{eq:voa-coset-grade}
+\end{equation}
+Here $N$ is an integer excitation above the numerator's own
+lowest energy, and cannot be dropped from the formula.
+
+Only labels with $\lambda+\mu-\nu$ even are admissible:
+the diagonal $SU(2)$ center acts on the numerator by
+$(-1)^{\lambda+\mu}$ and on the denominator by $(-1)^\nu$.
+Affine current descendants preserve this parity. The diagonal
+GKO branching theorem supplies sufficiency and completeness in
+this example, and identifies
+\[
+ (\lambda,\mu;\nu)\sim(1-\lambda,1-\mu;2-\nu).
+\]
+This is an identification of coset modules, not of numerator
+modules. There are six admissible triples and three pairs, with
+no fixed triple. Representatives and their weights are
+\begin{center}
+\begin{tabular}{c|c|c|c}
+$(\lambda,\mu;\nu)$ & $N$ & $h_C$ & Ising sector\\
+\hline
+$(0,0;0)$ & $0$ & $0$ & $\one$\\
+$(1,0;1)$ & $0$ & $\frac14-\frac3{16}=\frac1{16}$ & $\sigma$\\
+$(1,1;0)$ & $0$ & $\frac14+\frac14=\frac12$ & $\epsilon$
+\end{tabular}
+\end{center}
+The last two grade-zero branches are visible in the finite
+$\mathfrak{sl}_2$ products: doublet times singlet is a doublet,
+and doublet times doublet contains a singlet.
+
+The equivalent label $(0,0;2)$ reveals the grade correction.
+Let $J_1^a,J_2^a$ be the two level-one currents and $\Omega$
+the product vacuum. The three nonzero states
+\[
+ w^a=(J_{1,(-1)}^a-J_{2,(-1)}^a)\Omega
+\]
+occur at numerator grade one. For $J_D^b=J_1^b+J_2^b$,
+the two equal central terms cancel, giving
+\[
+ J_{D,(n)}^b w^a=0\quad(n>0),\qquad
+ J_{D,(0)}^b w^a=f^{ba}{}_c w^c.
+\]
+Thus the $w^a$ form a diagonal affine spin-one top; its raising
+component is a highest vector with $\nu=2$. There is no such
+top at grade zero, whose space is only the vacuum. Consequently
+\[
+ h_C=0+0+1-h_2(2)=1-\frac12=\frac12,
+\]
+as required by $(0,0;2)\sim(1,1;0)$. The states $w^a$ carry
+diagonal charge; the coset sector is their multiplicity space.
+They are not themselves fields of the vacuum commutant.
+
+The GKO theorem identifies these branching modules with the
+three irreducible Ising Virasoro modules and the commutant with
+the Ising chiral algebra. Central charge subtraction alone had
+not established that statement: it contained no branching
+selection, identification, or lowest-grade information.
+\end{example}
+
+\section{Positive forms and a change of gauge}
+\index{PCT involution}\index{gauge!transported positive form}
+
+A lattice VOA has a canonical positive Hermitian form and an
+antilinear PCT involution $\theta$. PCT denotes the conjugation
+entering the radial-adjoint identity; it preserves the vacuum and
+conformal vector. The invariant
+bilinear form often used in purely algebraic VOA calculations is
+a different object. Taking complex conjugates of coordinates is
+not, by itself, the PCT operation in an arbitrary basis.
+
+An automorphism of a VOA is an invertible linear map $g:V\to V$
+with
+\[
+ g\one=\one,\qquad g\omega=\omega,\qquad
+ gY(a,z)g^{-1}=Y(ga,z).
+\]
+In a lattice VOA, scaling $e^\alpha$ by
+$\lambda(\alpha)\in\C^\times$ and fixing the oscillators gives
+such an automorphism when $\lambda$ is a lattice character:
+$\lambda(\alpha+\beta)=\lambda(\alpha)\lambda(\beta)$.
+This preserves the chosen cocycle. The earlier arbitrary rescaling
+instead changes the cocycle presentation and supplies an isomorphism
+between the corresponding presentations.
+
+Suppose such a VOA automorphism $g$ changes the normalization of
+the exponential states. Transport the positive form and involution
+together:
+\begin{equation}
+ \langle v,w\rangle_g=\langle g^{-1}v,g^{-1}w\rangle,
+ \qquad \theta_g=g\theta g^{-1}.
+ \label{eq:voa-gauge-transport}
+\end{equation}
+The new form is positive because $g$ is invertible. It may make a
+displayed basis nonorthonormal with unequal diagonal norms. If
+$v=\sum a_jv_j$ with orthogonal $v_j$, then
+$\norm v_g^2=\sum|a_j|^2\norm{v_j}_g^2$, not necessarily
+$\sum|a_j|^2$.
+
+A subalgebra stable under the transported PCT inherits vacuum
+unitarity. One must check stability; it is not automatic for a
+complex-generated subalgebra. Even after vacuum unitarity is known,
+positivity on all modules and on fusion spaces remains a further
+problem. The complete-unitarity chapter develops this hierarchy.
+
+\section{Three finiteness notions that will recur}
+\index{ordinary module}\index{regularity}\index{C2-cofiniteness@$C_2$-cofiniteness}
+
+An \emph{ordinary module} has diagonalizable $L_0$, finite-dimensional
+energy eigenspaces, and lower truncation in every integer-shift
+class: for each weight $\lambda$, the spaces of weights
+$\lambda-n$ vanish for sufficiently large integers $n$.
+A simple ordinary module in the positive-energy setting used here
+has spectrum contained in $h+\Z_{\ge0}$ for one lowest weight $h$.
+Finite direct sums may involve several such translates; for example,
+a direct sum of an integral-weight module and a module of lowest weight
+$1/3$ has both integer and $1/3$-shifted energies.
+A weak module need not have these grading
+properties. A generalized module can contain nontrivial Jordan
+blocks for $L_0$, producing logarithmic behavior in correlation
+functions.
+
+An \emph{admissible module} is a weak module with a compatible
+nonnegative integer grading $M=\bigoplus_{n\ge0}M(n)$:
+for homogeneous $a$,
+\[
+ a_{(m)}M(n)\subset M(n+\wt(a)-m-1),
+ \qquad M(j)=0\quad(j<0).
+\]
+This grading need not be the $L_0$ eigenspace grading, and its pieces
+are not required to be finite dimensional.
+\index{admissible module}
+
+The $C_2$ subspace and quotient are
+\begin{equation}
+ C_2(V)=\Span\{a_{(-2)}b:a,b\in V\},\qquad
+ R_V=V/C_2(V).
+ \label{eq:voa-c2}
+\end{equation}
+Here $[a]$ denotes the coset $a+C_2(V)$. The quotient has a
+commutative associative product
+$[a][b]=[a_{(-1)}b]$ and a Poisson bracket
+$\{[a],[b]\}=[a_{(0)}b]$. A Poisson bracket is a bilinear
+antisymmetric operation satisfying the Jacobi identity and a
+derivation rule for the commutative product. The vertex-algebra
+identities make these operations independent of the representatives
+$a,b$. Derivatives vanish in the quotient because
+$\mathsf Ta=a_{(-2)}\one$. The condition
+$\dim R_V<\infty$ is called $C_2$-cofiniteness. It controls a
+large amount of representation theory, but by itself does not
+exclude logarithmic nonsemisimple modules.
+
+Rationality asserts complete reducibility of admissible modules.
+Regularity is the stronger-looking
+statement that every weak module is a direct sum of ordinary simple
+modules. The standard theorem used here is precise: for a VOA of
+CFT type, rationality together with $C_2$-cofiniteness implies
+regularity. This is the Abe--Buhl--Dong implication. Thus the
+strong rationality established in Chapter~\ref{ch:regularity}
+supplies the weak-module decomposition needed in
+Chapter~\ref{ch:unitarity}. We still distinguish the definitions,
+since $C_2$-cofiniteness or a finite list of ordinary modules
+alone would not supply that implication.
+
+For the Haagerup algebra, the proof of finiteness is not a general
+principle that every subalgebra of a lattice VOA is rational.
+Heisenberg subalgebras already show why that would be false.
+Instead, an explicit positive identity among conformal vectors
+provides the needed control. Understanding why that identity works
+is one of the main tasks of Part II.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:voa-weight}
+For $a$ of weight three and $b$ of weight four, list the possible
+nonzero singular products $a_{(n)}b$ in a CFT-type VOA and their
+weights. Which coefficient is forced to be a scalar multiple of
+the vacuum? Which coefficient is a candidate weight-two field?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:voa-weight]{Solution on page~\pageref*{sol:ex:voa-weight}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:voa-cocycle}
+Prove the cocycle and commutator identities for
+\eqref{eq:voa-root-cocycle}. Then show directly that multiplying
+$\epsilon$ by a coboundary leaves the commutator ratio unchanged.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:voa-cocycle]{Solution on page~\pageref*{sol:ex:voa-cocycle}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:voa-rankone}
+For $L=\Z\alpha$, $\alpha^2=2$, compute the first three coefficients
+of $\Theta_L\prod_{n\ge1}(1-q^n)^{-1}$ and of the corresponding
+series for $L+\alpha/2$. Explain why the second module has a
+two-dimensional top but categorical dimension one.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:voa-rankone]{Solution on page~\pageref*{sol:ex:voa-rankone}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:voa-heisenberg-c2}
+Show that the rank-one Heisenberg VOA has $C_2$ quotient
+$\C[x]$, with $x$ represented by $J_{-1}\one$. Conclude that
+strong finite generation does not imply $C_2$-cofiniteness.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:voa-heisenberg-c2]{Solution on page~\pageref*{sol:ex:voa-heisenberg-c2}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:voa-coset}
+Derive the central charge of $K(\mathfrak{sl}_2,k)$ by removing
+the Cartan Heisenberg stress from $L_k(\mathfrak{sl}_2)$.
+Evaluate it at $k=3$ and $k=13$. Explain why this arithmetic alone
+does not identify a pair of unspecified weight-two fields with the
+two parafermion stresses.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:voa-coset]{Solution on page~\pageref*{sol:ex:voa-coset}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:voa-gauge}
+Suppose $g$ multiplies three orthonormal exponential states by
+$1/2,1/\sqrt{40},1/\sqrt{40}$. Compute the transported squared norm of
+$v=e^a+\frac{\sqrt{13}+3i\sqrt3}{20}e^b+
+\frac{\sqrt{13}-3i\sqrt3}{20}e^c$. Explain why the answer differs
+from the sum of the three squared coefficient magnitudes.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:voa-gauge]{Solution on page~\pageref*{sol:ex:voa-gauge}.}}\par
+\end{exercise}

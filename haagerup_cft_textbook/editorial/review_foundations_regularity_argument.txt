@@ -1,0 +1,170 @@
+Independent complete-argument review: c04_regularity.tex
+Reviewer: scope_foundations
+Clock read during review: 2026-10-05 20:44:15 UTC
+Scope: read-only source review and hand reasoning; no computation or build.
+Line references refer to the 484-line chapter read in this review.
+
+Disposition
+===========
+PASS. I found no missing mathematical hypothesis that prevents the stated
+regularity conclusion for U, and no circular use of rigidity, complete
+unitarity, or semisimplicity. The generic positive-regular-stress theorem
+also follows with the package of hypotheses explicitly printed at 74-90.
+The exact embedded-factor inputs remain construction inputs; this review
+checks the implications from them, rather than rechecking their finite
+lattice certificates.
+
+No required live repair. Two optional precision edits are listed last.
+
+1. Positive partial energies and C2 control: 59-158
+==================================================
+The compatible grading and ambient weight-two quasiprimary conditions have
+the correct distinct jobs. Compatibility makes the degree of each A_i mode
+agree in the intrinsic and ambient gradings. Ambient weight two gives
+[L0^V,L0^(e_i)]=0, so the partial operator preserves finite-dimensional V_n.
+PCT reality and L1^V e_i=0 give the mode adjoint formula from the invariant
+form. In particular L0^(e_i) is self-adjoint on V_n. The proof uses this
+finite-dimensional adjoint statement; it needs no unbounded-operator
+domain assertion or spectral theorem on the completed Hilbert space.
+
+Each component is of CFT type: its compatible nonnegative grading and
+vacuum sit inside V, and its degree-zero space is C1. Thus the CFT-type
+finiteness theorems used here have their required grading hypothesis.
+The regularity assumption supplies decomposition of the restriction of V
+as an algebraic direct sum of ordinary simple A_i-modules. An A_i-module
+map intertwines the actual intrinsic conformal mode, so multiplicity
+copies do not acquire free energy shifts. C2,A commutes with this direct
+sum. Finite module quotients and finitely many component simple types
+therefore really do give one bound D_i for the whole restriction.
+
+Primary check: Li proves regularity implies C2 finiteness; Abe--Buhl--Dong
+Proposition 5.2 supplies the needed module quotient for irreducible weak
+modules, not just the vacuum. Their Corollary 5.7 also supplies ordinaryness
+of irreducible weak modules under C2 finiteness.
+  https://arxiv.org/abs/math/9807077
+  https://arxiv.org/pdf/math/0204021
+
+For v in V_n orthogonal to C2(V), each partial-energy eigenvector of energy
+above D_i lies in C2(V), so its coefficient in v vanishes. This remains
+true without invariance of C2(V) under the partial energy. Applying the
+expectation bound separately for each i and summing with t_i>0 is valid.
+The proof never chooses a common eigenbasis. Ambient homogeneity of C2(V)
+then identifies its finite-grade orthogonal complements with quotient
+grades. No topological closure of C2(V) is being assumed.
+
+2. Tops and nonnegative module energies: 167-230
+================================================
+The condition on all negative-degree modes is essential and is correctly
+stated. For an ordinary simple component module, a higher-energy vector
+in Omega would generate, by mode reordering, a submodule with no vectors
+below that energy; simplicity excludes this. Consequently the highest
+space is the genuine lowest top, and restriction to the semisimple top
+algebra gives diagonalizable partial energies on the finite invariant E.
+
+No positive Hermitian form on an unknown V-module is used. The separate
+spectra are known component lowest weights. The equation
+h dim(E)=sum_i t_i Tr_E L0^(e_i) proves both reality and nonnegativity of h,
+even though the matrices need not commute. If h=0, diagonalizability and
+the nonnegative spectra force each matrix to vanish. The unique-zero-top
+condition identifies the relevant component summands with vacuum copies;
+their intrinsic L_{-1} kills the top. Adding the stress identity then
+kills the ambient L_{-1}. This is stronger than merely saying L0 is zero,
+and is exactly what the next lemma needs.
+
+3. Vacuum-like lemma and projectivity: 232-311
+================================================
+The translation induction is correctly indexed:
+L_{-1}a_{(n+1)}v=-(n+1)a_{(n)}v, and its coefficient is nonzero for every
+n>=0. Lower truncation begins the downward induction. The resulting
+creation-type condition supplies the V-module map a -> a_{(-1)}v by
+module associativity. The lemma concerns a weak module and requires no
+weight decomposition, positivity, or rationality of that module.
+
+The projectivity proof first establishes finite length and ordinary
+composition factors from the C2-cofinite module theory. This is before
+the argument about their weights and avoids assuming semisimplicity.
+Generalized weight spaces are exact: a map commuting with locally finite
+L0 sends each generalized eigenspace to its counterpart, and decomposing
+a preimage into its finitely many generalized components proves
+surjectivity on that eigenspace. Induction on length therefore gives
+real nonnegative weights in E, including the absence of any target for
+a negative-degree mode from E_[0]. It also gives E_[0] -> V_0 onto.
+
+Partial zero modes preserve E_[0] because their ambient degree is zero.
+Compatible-top semisimplicity applies on this finite space. Ambient L0
+is nilpotent there, so its trace is zero even before it is proved
+diagonalizable. Nonnegative component traces again force all partial
+energies to vanish. The vacuum-top argument kills their translations.
+The lifted vector therefore gives a section with pi(s(a))=a. This proves
+projectivity against every epimorphism in the specified category, not
+only extensions with a simple kernel.
+
+4. Categorical inputs and their availability: 314-334
+====================================================
+The chapter applies finite braided generalized-module theory after C2
+finiteness, with V simple and of CFT type. Its positive invariant form
+and PCT give self-contragredience; hence the dualizing object is V itself.
+The displayed representation of Hom(- tensor X,1) yields a nonzero
+evaluation from the identity of DX. It does not introduce a coevaluation
+or assume the snake identities. The distinction is correctly maintained.
+
+Primary check: McRae, Sections 2.3 and 3, gives the finite braided category
+and contragredient universal property before rigidity; the right-exact
+tensoring fact is HLZ3 Proposition 4.26, explicitly used there. Proposition
+2.11 identifies grading-restricted generalized modules with finitely
+generated weak modules in the N-graded C2-cofinite situation.
+  https://arxiv.org/html/2108.01898#S2.SS3
+  https://arxiv.org/html/2108.01898#S3
+
+5. Moderate growth, rigidity, and semisimplicity: 336-425
+=======================================================
+The source theorem is used with the correct hypotheses. Etingof--Penneys
+Theorem 1.1 requires a Cauchy-complete linear braided category with finite
+Hom spaces and scalar endomorphisms of the unit, and a non-negligible
+indecomposable whose nth tensor-power endomorphism space has dimension
+less than n! for some n. It does not assume an abelian category with
+biexact tensor product. The statement at 355-361 is therefore accurate.
+  https://arxiv.org/html/2412.17681v3#S1
+
+The underlying finite abelian category has a finite-dimensional algebra
+model and a regular projective generator P. The surjection from
+P^{oplus d0(Z)} onto Z is valid; right exactness alone preserves it after
+tensoring with X. Iterating the bound from Z=1 gives
+d0(X^n)<=d0(1) C_X^n. Faithfulness of the algebra model bounds End by the
+square of vector-space dimension. The factorial inequality thus follows
+without assuming exactness of tensoring or rigidity.
+
+For every nonzero indecomposable, its evaluation is a nonzero map onto
+the simple unit, hence an epimorphism. Projectivity of the unit splits
+this specific epimorphism, which is precisely non-negligibility in the
+primary theorem. Idempotent completeness and finite indecomposable
+decompositions are available in a finite abelian category. The theorem
+therefore makes each summand rigid, and finite direct sums are rigid.
+
+Only at this point does the proof use both tensor adjoints and exactness.
+The usual dual adjunction Hom(X,-)=Hom(1,- tensor X*) then makes every
+object projective. All short exact sequences split. There is no appeal
+to categorical quantum dimensions, nonzero categorical traces, or
+unitarity of the unknown module category in this passage.
+
+6. Optional precision edits, not proof obstructions
+===================================================
+(a) Lines 41-43 summarize ordinary modules as globally lower bounded.
+For consistency with r02's careful general definition, say instead:
+"An ordinary module has diagonal L0, finite-dimensional eigenspaces,
+and lower truncation in each integer translate of an eigenvalue. The
+simple modules used below have spectrum in one h+Z_{>=0}."
+This changes no argument here, which uses simple ordinary modules and
+the finite grading-restricted generalized category.
+
+(b) Lines 47-50 and 423-424 correctly invoke the standard equivalence
+between semisimplicity here and ordinary VOA rationality. If a final
+one-sentence mechanism is desired, without adding another prerequisite:
+"Under C2 cofiniteness every cyclic weak module belongs to this finite
+category; its semisimplicity makes every weak module a sum of ordinary
+simple submodules, and hence a direct sum."
+This follows from the finite-generation criterion cited above, since
+each vector belongs to its cyclic submodule. It even gives regularity.
+It is optional: the equivalence is already an explicitly imported fact.
+
+No chapter source was edited in this review.

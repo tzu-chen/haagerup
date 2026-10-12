@@ -1,0 +1,26 @@
+{
+  "labels": [
+    "Tr_W2(e1)",
+    "Tr_W2(e1 Hleft0^2/2)",
+    "Tr_W2(e1 Hright0^2/2)"
+  ],
+  "modular_predictions": [
+    "67200/1271",
+    "19900/1271",
+    "792900/1271"
+  ],
+  "explicit_spectral_sums": [
+    "67200/1271",
+    "19900/1271",
+    "792900/1271"
+  ],
+  "all_exact_equalities": true,
+  "field_dimensions": 120,
+  "scope": "The selected eigenvalues satisfy necessary traces exactly. This neither proves uniqueness of the selection nor exact OPE closure.",
+  "source_sha256": {
+    "hi_cft_third_host125_all_ground_moments_results.json": "145e0c03d597661a2dec0cdee73bf3f0d381a699e83ddfb4dfba75956efa962b",
+    "hi_cft_third_host125_stress_current_results.json": "97a88e4b6f539ac3263b6f3f2c954807fcff9ccc0a0253d61f6edf72cc2f1405",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_trace_certificate.py": "678ae23341e42bcd190c2d27feec7d5c773be8d9f0fe8c7a676462922d78e88e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_trace_check.py": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b"
+  }
+}

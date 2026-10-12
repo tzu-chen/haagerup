@@ -1,0 +1,934 @@
+{
+  "scope": "Selected source identities read for this textbook; not a complete repository or certificate audit",
+  "started_utc": "2026-10-05T22:35:12.001268+00:00",
+  "completed_utc": "2026-10-05T22:35:12.019144+00:00",
+  "project_root": "/home/tzuchen/Codes/haagerup",
+  "source_files": 148,
+  "source_bytes": 28893914,
+  "historical_provenance": "Historical run hashes and archived sources remain unchanged in their original records; current infrastructure hashes below do not replace them",
+  "execution_scope": "No research sources were imported or executed; no Lean build, numerical continuation, or certificate replay",
+  "editorial_limits": {
+    "address_space_bytes": 402653184,
+    "read_chunk_bytes": 65536,
+    "cpu_seconds": 30,
+    "cpus": 1
+  },
+  "baseline_process_memory": {
+    "VmPeak_bytes": 262844416,
+    "VmSize_bytes": 262844416,
+    "VmRSS_bytes": 21135360
+  },
+  "peak_rss_kib_before_snapshot_write": 20548,
+  "groups": {
+    "central_charge_eight": [
+      {
+        "path": "hi_cft_c8_proof.tex",
+        "sha256": "e67701657faa6a2993be42358f47585384979e7e43489312822c2d00189111f7",
+        "bytes": 63553,
+        "mtime_ns": 1790527234547805619
+      },
+      {
+        "path": "hi_cft_c8_manuscript_structure.tex",
+        "sha256": "474e4dd9074cb4d02135a6869340285daf0302336b5f64ec216dd7a79780d369",
+        "bytes": 69846,
+        "mtime_ns": 1790494372657771930
+      },
+      {
+        "path": "hi_cft_c8_manuscript_analytic.tex",
+        "sha256": "c87f5e1f57746fb60b33e894751f452c2699926a46af329a4417f66c12cd035f",
+        "bytes": 47958,
+        "mtime_ns": 1790495265311523196
+      },
+      {
+        "path": "hi_cft_c8_verification_guide.tex",
+        "sha256": "057592b29fcf11c0601c7907dce409189d30d56b792b30804384e01e9efdebc2",
+        "bytes": 15325,
+        "mtime_ns": 1790529427515633826
+      },
+      {
+        "path": "hi_cft_c8_explicitness_review_20260928.md",
+        "sha256": "0c0da9a540044de6771a3b25511fa46594cbd57e703a4ba81c7981c9db790a98",
+        "bytes": 24478,
+        "mtime_ns": 1790621754736308328
+      },
+      {
+        "path": "hi_cft_20260923_next_c6_lattice.md",
+        "sha256": "f11727a5cb85cf5c9e54705c4b83fab35dfdfe3ff6188b0c59784eb748773f08",
+        "bytes": 5775,
+        "mtime_ns": 1790154443377621342
+      },
+      {
+        "path": "hi_cft_20260923_next_structure_c6_coset_audit.md",
+        "sha256": "03fdc96d2dab0ae9f6e10df7cbbe3fa9dbf94440635ca48a056b3d6bf79687a2",
+        "bytes": 6577,
+        "mtime_ns": 1790154449930490712
+      },
+      {
+        "path": "hi_cft_20260923_next_coset_finite_index_net.md",
+        "sha256": "6cbb31ce40805ad7b4bdec758a98e06617c0e561f6803cfbb5ca4d8fe3d6b781",
+        "bytes": 13582,
+        "mtime_ns": 1790146896600185128
+      }
+    ],
+    "coefficient_and_related_category_constructions": [
+      {
+        "path": "hi_infinitude_expanded.tex",
+        "sha256": "61f09ac309cccfdb4133000640a41bf10e4f3dfd6125f5ce4b8d42689f221377",
+        "bytes": 4883,
+        "mtime_ns": 1789326197050168454
+      },
+      {
+        "path": "hi_infinitude_revised.tex",
+        "sha256": "20f74e460a893d60364cfa8b1f2191349d5738a2430976fe01b87046d8fe41c8",
+        "bytes": 6208,
+        "mtime_ns": 1788877601160862765
+      },
+      {
+        "path": "hi_noncyclic_analytic_note.tex",
+        "sha256": "ac7dbe3e0638a762a390c80701c6bf5c63c9bd7ef53417accc7576fd688e58ca",
+        "bytes": 11941,
+        "mtime_ns": 1789253960514859403
+      },
+      {
+        "path": "hi_noncyclic_determinant_linear_proof.tex",
+        "sha256": "91e8bdcd38d130cd67cae45124eec2ac173fc4628b5379d5d59ad7e910390e7f",
+        "bytes": 13459,
+        "mtime_ns": 1789253660398627025
+      },
+      {
+        "path": "hi_noncyclic_gis_gamma_proof.tex",
+        "sha256": "657264e922e60a1d591dd0bee268dc75c7729550c02ae347d613b47d2d807185",
+        "bytes": 4250,
+        "mtime_ns": 1789254018411132581
+      },
+      {
+        "path": "hi_noncyclic_gamma_identification_status.md",
+        "sha256": "29bbecc3665fcf552e4074e82323c86130e13418fff7a1777f19e6cbba44603c",
+        "bytes": 2220,
+        "mtime_ns": 1789254391525446598
+      },
+      {
+        "path": "hi_noncyclic_ansatz_z2xz6_exact.tex",
+        "sha256": "c6191c0c9326b28bae2a24e94e68bda028ffda5aa7dada774a19becd9ba2d842",
+        "bytes": 9150,
+        "mtime_ns": 1789254288853736942
+      },
+      {
+        "path": "hi_noncyclic_ansatz_z2xz6_certificate.json",
+        "sha256": "fcd1bb3b13708b0ae80bddf66f2ba9f87d51aff9070d381b37f1e341546d83a4",
+        "bytes": 1846,
+        "mtime_ns": 1789254289412286913
+      },
+      {
+        "path": "hi_noncyclic_ansatz_z2xz6_unitary_certificate.json",
+        "sha256": "8804df8290b14a995902cebc3714ca2053497382a9cb735828df57b3f7e9ea04",
+        "bytes": 472,
+        "mtime_ns": 1789253875266084829
+      },
+      {
+        "path": "hi_noncyclic_reconstruction_extension.tex",
+        "sha256": "e5e0b83c199094061c604a6f7ccdb5a0a0052e44e71c96c95f445fcecd5d27cb",
+        "bytes": 9281,
+        "mtime_ns": 1791080097296527662
+      },
+      {
+        "path": "hi_even_cyclic_analytic_proof.tex",
+        "sha256": "d05a4164991c81a5305248234fab2b06ae56d6fff208eff1376f7700f454bfd3",
+        "bytes": 7164,
+        "mtime_ns": 1789254391148451336
+      },
+      {
+        "path": "extended_haagerup_README.md",
+        "sha256": "d47d258e184956a932bfd84d439db6e88122e2afbacf69732db1736ac1db9cc5",
+        "bytes": 3039,
+        "mtime_ns": 1789254973887127671
+      },
+      {
+        "path": "extended_haagerup_reconstruction_and_coefficients.tex",
+        "sha256": "470b74887374253881664903bce3ccc0e2c5e533bc31ea4cf9a77b8b3dad4d2f",
+        "bytes": 32191,
+        "mtime_ns": 1789255097978568131
+      },
+      {
+        "path": "extended_haagerup_coefficients_results.json",
+        "sha256": "fc62d042a475d10dc6261bbb865e6e74a80bb8843379eaabe8576b1a92127600",
+        "bytes": 8692,
+        "mtime_ns": 1789254873467524423
+      }
+    ],
+    "formal_scope_and_selected_declarations": [
+      {
+        "path": "lean/README.md",
+        "sha256": "0f459382f1c88420a693e45bd684f7814fff8e0e0bb9c45dd6adcb8a64e954ee",
+        "bytes": 11634,
+        "mtime_ns": 1790738335832033920
+      },
+      {
+        "path": "lean/HaagerupIzumi/C8/TRUST_BOUNDARY.md",
+        "sha256": "f5eb3de20f2b5f9fdf4fe73db14babfef8e634d0dd4fc560a6b2c41b28b582cd",
+        "bytes": 103378,
+        "mtime_ns": 1791151614497501717
+      },
+      {
+        "path": "lean/HaagerupIzumi/Completion.lean",
+        "sha256": "fef5ce3c98921f7f23c6676d184103972554ab9c03c89c44bef065a6476f7d6a",
+        "bytes": 16997,
+        "mtime_ns": 1789364298354101740
+      },
+      {
+        "path": "lean/HaagerupIzumi/Analytic/GammaConstruction.lean",
+        "sha256": "7e077929597c1b0c4d1b682bbc97e305762fa073a34ec3763c6f0763e1c71f83",
+        "bytes": 2728,
+        "mtime_ns": 1789371180429063820
+      }
+    ],
+    "completed_chain_status_and_interpretations": [
+      {
+        "path": "hi_cft_20261001_status.md",
+        "sha256": "ccf7dcc571a070f07e5ff93c542e39a6521a3bf74a32182d99f09d3813546847",
+        "bytes": 22553,
+        "mtime_ns": 1790835916522861270
+      },
+      {
+        "path": "hi_cft_20261001_theory_handoff.md",
+        "sha256": "9b18316d5c2685c6d5f17daf8bce1e66062a06d9fffaff626b8eaf400fe94780",
+        "bytes": 9196,
+        "mtime_ns": 1790834958193325354
+      },
+      {
+        "path": "hi_cft_20261005_status.md",
+        "sha256": "c135e6e4445fb8fb1389fb5dd3e73d59dc7c2200a3257e8ba216303b6b864aef",
+        "bytes": 5218,
+        "mtime_ns": 1791226941950712984
+      },
+      {
+        "path": "hi_cft_20261005_chain_handoff.md",
+        "sha256": "f5fcac17eeb1a661a025a09460343b1bb930e1be1cd428ca953effdd313e47e9",
+        "bytes": 5134,
+        "mtime_ns": 1791226683993536993
+      },
+      {
+        "path": "hi_cft_20261005_theory_handoff.md",
+        "sha256": "30be80f9171e2ef12fed73ed13fcd853b689b8363255da22d521a7f972a395f1",
+        "bytes": 7005,
+        "mtime_ns": 1791226612154880434
+      },
+      {
+        "path": "hi_cft_20261005_independent_module_interpretation.md",
+        "sha256": "be8222ab5971998b2d0a150ee5b6420f97a239a940ec01d28c27426e84f5b24f",
+        "bytes": 15549,
+        "mtime_ns": 1791226817982031299
+      },
+      {
+        "path": "hi_cft_20261005_chain_ward_interpretation_scope.md",
+        "sha256": "112c2c7a84be29e169252eb5612d5fe82973eded729d67916c3b0ae08ec418ee",
+        "bytes": 20213,
+        "mtime_ns": 1791226444179001517
+      },
+      {
+        "path": "hi_cft_20261005_theory_density_interpretation.md",
+        "sha256": "c7c3f2e2a235e4cff0b2424f84c493045cc195baa1bb472b7f1c4fa4aaf13997",
+        "bytes": 4883,
+        "mtime_ns": 1791226612074881931
+      },
+      {
+        "path": "hi_cft_20261005_theory_equal_energy_interpretation.md",
+        "sha256": "68f05c8547a7adc3c31afc43a4b69cef9d4cb5130ca8f01dcf1972906124f183",
+        "bytes": 3387,
+        "mtime_ns": 1791226430484255561
+      },
+      {
+        "path": "hi_cft_20261001_theory_symmetric_parent.md",
+        "sha256": "14e5094bc12d29016f5b6c13ea0751e90724eb0386850dbc45527247f9486602",
+        "bytes": 10529,
+        "mtime_ns": 1790828027074856783
+      },
+      {
+        "path": "hi_cft_20261001_theory_short_anchor_scope.md",
+        "sha256": "61477858f79a315237496222e9f9df9df20d4360c56c93cd8c307a3016f0ab80",
+        "bytes": 6843,
+        "mtime_ns": 1790830776183392522
+      },
+      {
+        "path": "hi_cft_20261001_theory_gapped_vacuum_fingerprint.md",
+        "sha256": "6dd9df63fd9cf6594e1e472998a8ed5828071763b6743edd5ce80a2a3d7b70c3",
+        "bytes": 17939,
+        "mtime_ns": 1790826757013943318
+      },
+      {
+        "path": "hi_cft_20261001_independent_amplitude_ward_review.md",
+        "sha256": "c974e2321790e5eb76daa948c0ae95f39c57778022a0590cc3be838d678a2197",
+        "bytes": 8328,
+        "mtime_ns": 1790834449312660939
+      }
+    ],
+    "selected_completed_numerical_records": [
+      {
+        "path": "hi_cft_continuum_analysis_results.json",
+        "sha256": "0dc87b41283533686bbab2328e9469b2339a430e19f723f2a1452fb94b03ac0a",
+        "bytes": 30952,
+        "mtime_ns": 1789287532284346231
+      },
+      {
+        "path": "hi_cft_stress_analysis_results.json",
+        "sha256": "5ba67f7bbffcdf1dd0fb715926b31234f1fdd0034d5274fc8010b177087f2eec",
+        "bytes": 2829,
+        "mtime_ns": 1789280602292615623
+      },
+      {
+        "path": "hi_cft_20261001_independent_stress_lanczos_N18.json",
+        "sha256": "536dfd8451660d7bef6cc8cae70db401ce89d9900f1bd76d0eaa54205ce3742f",
+        "bytes": 128405,
+        "mtime_ns": 1790824445169508272
+      },
+      {
+        "path": "hi_cft_20261005_step0_r144_b1.json",
+        "sha256": "e6e15fc0037eb8a4bb499de682104dd039ea4fa54f60daf334133dc94d8b7722",
+        "bytes": 315162,
+        "mtime_ns": 1791219656123881382
+      },
+      {
+        "path": "hi_cft_20261005_step0_r156_b1.json",
+        "sha256": "97f8be76b3c4238b7926242947a9b8407153425b9493beae35f4581668bed56d",
+        "bytes": 375025,
+        "mtime_ns": 1791226274188590608
+      },
+      {
+        "path": "hi_cft_20261005_step0_scaling_r60_r144.json",
+        "sha256": "43e4989d9c6bc2e97ec1c95e01c9a51d041f420eb4053feb4ae87ee34401691a",
+        "bytes": 344299,
+        "mtime_ns": 1791221571979682853
+      },
+      {
+        "path": "hi_cft_20261005_chain_ward_window_v2_N12.json",
+        "sha256": "22e9fbfb6c924a49228011d20634c9f20bed348d51ade098a493edc1df335cc5",
+        "bytes": 6000967,
+        "mtime_ns": 1791221517591972869
+      },
+      {
+        "path": "hi_cft_20261005_chain_ward_window_v2_N15.json",
+        "sha256": "421bdb95ab19ff785c6a1aa037f35ce6622ee1e176aaec7a5cfa08684aa350b6",
+        "bytes": 6000258,
+        "mtime_ns": 1791222439533747245
+      },
+      {
+        "path": "hi_cft_20261005_chain_ward_intermediate_N15.json",
+        "sha256": "63c10618547cf1676c047dffa1417fe69e1ddf12489857a0a4890faa8796cfcf",
+        "bytes": 5214881,
+        "mtime_ns": 1791226509198169527
+      },
+      {
+        "path": "hi_cft_20261005_theory_density_rank_readout.json",
+        "sha256": "22433a5aee9f3e11948cea8a742cbe4cef6c349f6df63c28fe502f09a2935137",
+        "bytes": 179368,
+        "mtime_ns": 1791226435118169600
+      },
+      {
+        "path": "hi_cft_20261005_theory_equal_energy_readout.json",
+        "sha256": "b604ddb9900b9fb33034599015c354e8ef584895ffb717b9f0b75c4f7bc0fdcc",
+        "bytes": 6788645,
+        "mtime_ns": 1791226298696700285
+      },
+      {
+        "path": "hi_cft_20261005_independent_module_resume_r18.json",
+        "sha256": "6b13cdbaddacbb1c771bbdc7a9012f4308904b4d754b0cf89467e8e71672efe3",
+        "bytes": 845116,
+        "mtime_ns": 1791222566697902690
+      },
+      {
+        "path": "hi_cft_20261005_independent_module_correlations.json",
+        "sha256": "db1b51eb7e922b9c2ef6f92bd56fbebf519857e2629354f9ffaa75204cedc58b",
+        "bytes": 273723,
+        "mtime_ns": 1791226437731121128
+      }
+    ],
+    "rational_candidate_exclusions": [
+      {
+        "path": "hi_cft_20260923_next_c2_weak_integral_orbifold.md",
+        "sha256": "b35f3b37a594d24188fc0417900797964cacbc66b6fe4ccf59de81e74162afa8",
+        "bytes": 3906,
+        "mtime_ns": 1790159381853800621
+      },
+      {
+        "path": "hi_cft_20260923_c2two_w3_candidates.md",
+        "sha256": "eb42b6feb10562a32efe6e84c6b35692b7b3ee3a36b826071d1401908d52df6a",
+        "bytes": 19315,
+        "mtime_ns": 1790186731747348709
+      },
+      {
+        "path": "hi_cft_20260923_c2two_su3_13_exact.py",
+        "sha256": "dd230b812ffa5a9f640dd40c12c313ca0c3dcb8355483e3180554fb1541e0f5e",
+        "bytes": 5711,
+        "mtime_ns": 1790184523329920798
+      },
+      {
+        "path": "hi_cft_20260923_c2two_su3_13_exact.json",
+        "sha256": "13f31e3c47af40ae052afb7cf21510b3ea475d9b4a50fe6018da477bbd679b1e",
+        "bytes": 28250,
+        "mtime_ns": 1790184901397692909
+      },
+      {
+        "path": "hi_cft_20261001_theory_cardy_phase_obstruction.md",
+        "sha256": "86ce3e971ed09bd00e247942574cc90ed7a68e3b5a9fe1f18359f815074e179b",
+        "bytes": 6952,
+        "mtime_ns": 1790819127722817408
+      },
+      {
+        "path": "hi_cft_minimal_products_complete.md",
+        "sha256": "432a53f2e8c59c19eb251152b7af5e21a5e0d62773521895510b1a0f6e3c605e",
+        "bytes": 12919,
+        "mtime_ns": 1789313209755498384
+      },
+      {
+        "path": "hi_cft_w4_extension_audit.md",
+        "sha256": "e8e60e834295c9b280aa99abc539faecb07f4023e81dc7f9b36ed5699f9515cf",
+        "bytes": 12554,
+        "mtime_ns": 1789314922964651395
+      },
+      {
+        "path": "hi_cft_w6_extension_audit.md",
+        "sha256": "86512de51e4a14d104fd0f5cc1c8ef22fbb6205b2753dc0a72ec43e6e70d0e15",
+        "bytes": 9825,
+        "mtime_ns": 1789313835633088197
+      },
+      {
+        "path": "hi_cft_20260925_ident2_candidates_minimal_products.md",
+        "sha256": "461336f1c63d72c797b6da4b2a73044a88ee09e1ec534080144130b5bcc75edd",
+        "bytes": 5160,
+        "mtime_ns": 1790346087285035120
+      },
+      {
+        "path": "hi_cft_20261001_theory_rational_endpoint.md",
+        "sha256": "99b56536811fa052429a6429362d5cad059be0c3f8b0938ad8cf982642610838",
+        "bytes": 5458,
+        "mtime_ns": 1790821138276122683
+      }
+    ],
+    "exposition_c8_expanded_20260929": [
+      {
+        "path": "c8_expanded_20260929/README.md",
+        "sha256": "b5a36f974be11c9e2881de8e4d4abf532d93deb08934d56d2ffe85f80fe2e982",
+        "bytes": 6122,
+        "mtime_ns": 1790712756238635402
+      },
+      {
+        "path": "c8_expanded_20260929/bibliography.tex",
+        "sha256": "db1902a6b3f8607755a89562c112ae6ccedda86e79a71658ce0b0e81dd73ab4b",
+        "bytes": 11637,
+        "mtime_ns": 1790712548981815804
+      },
+      {
+        "path": "c8_expanded_20260929/coordinate_details.tex",
+        "sha256": "4a35e0afc0df255a57138115f85f7d51bfeb04278f0b17eb559c820826b78f65",
+        "bytes": 53200,
+        "mtime_ns": 1790712548994082219
+      },
+      {
+        "path": "c8_expanded_20260929/finite_details.tex",
+        "sha256": "747fba5919bff5db6ba9c05838ec7805a6fb5cf762078fa3fd28e662230624d2",
+        "bytes": 98982,
+        "mtime_ns": 1790712648152299352
+      },
+      {
+        "path": "c8_expanded_20260929/finite_final_review.md",
+        "sha256": "1f4d7ab8813059c72605a030795f7bff02a414f17bda94cd98afafeb2e0c2e9b",
+        "bytes": 6308,
+        "mtime_ns": 1790712431921955075
+      },
+      {
+        "path": "c8_expanded_20260929/finite_sources.md",
+        "sha256": "a0affba8269004fd1a861bcb4215486f4e622ed586d888ad48f2b919fedd7ee5",
+        "bytes": 6725,
+        "mtime_ns": 1790711915966907814
+      },
+      {
+        "path": "c8_expanded_20260929/haagerup_c8_expanded.tex",
+        "sha256": "c9d438d3757102c23623cae620a38a0db261b4044922438a876a9fdf821ea1b5",
+        "bytes": 249773,
+        "mtime_ns": 1790712548981691874
+      },
+      {
+        "path": "c8_expanded_20260929/lean_scope.tex",
+        "sha256": "4891b1ecc797048f4ad8a547def1111eed1a6073d37b96a9c1497609dc42f3b5",
+        "bytes": 56744,
+        "mtime_ns": 1790712548982732318
+      },
+      {
+        "path": "c8_expanded_20260929/physics_details.tex",
+        "sha256": "e85f05aa1f78ee543d794398ca8169ca18397606665d66c9b4c4a7c08e00865d",
+        "bytes": 41825,
+        "mtime_ns": 1790712648157175388
+      },
+      {
+        "path": "c8_expanded_20260929/physics_final_review.md",
+        "sha256": "f2678d5427bcc8d928dd0c85fc37536a0099ceabf7ceb68bb3e27fadc76fc7db",
+        "bytes": 9019,
+        "mtime_ns": 1790712399793150744
+      },
+      {
+        "path": "c8_expanded_20260929/physics_sources.md",
+        "sha256": "c418d34ecf2e9c90f82e4ff4485d0e0f0a647b21454cde4ffb545c9bd0ffd5d1",
+        "bytes": 1608,
+        "mtime_ns": 1790711880893865119
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/basis_dictionary.tex",
+        "sha256": "d40049f7c7af92b5ba9f496e94ec72d589e6adc8c3a9030d113baba1732947b3",
+        "bytes": 5100,
+        "mtime_ns": 1790711880870205322
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/blocks_PF13.tex",
+        "sha256": "ea62e00f91ebd15de5721f2120d4da5bc8b95e288e30f80f746a6815e011c824",
+        "bytes": 2173,
+        "mtime_ns": 1790711880891242884
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/blocks_Potts.tex",
+        "sha256": "cea34f04f219689b9e79f91a0c3a721e01692dd4ae65ded063482c8ac80eb1a4",
+        "bytes": 2006,
+        "mtime_ns": 1790711880891095260
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/blocks_u_equal_charge.tex",
+        "sha256": "33938ca053eed74e1a57f43d3d99930051fa9d06185315ac7fab0886a3021bd8",
+        "bytes": 1547,
+        "mtime_ns": 1790711880890940712
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/blocks_u_neutral.tex",
+        "sha256": "cdc6dab78b130c2d5d45feeba7afd167e84ca3d43008d34264c13ef13e9dbe04",
+        "bytes": 2030,
+        "mtime_ns": 1790711880890780034
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/blocks_unit_Cartan.tex",
+        "sha256": "b73d5f1e63943e1c4518225810876d5bdeb857417e62d7bf15ea9f51c9189173",
+        "bytes": 1427,
+        "mtime_ns": 1790711880891380560
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/blocks_unit_total_stress.tex",
+        "sha256": "a7c6e26236bfa6bf50d2e4f2fc0155276c48c84f977b0cc1d03afdbbfd7b3444",
+        "bytes": 1535,
+        "mtime_ns": 1790711880891523265
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/cardy_gaps.tex",
+        "sha256": "e87d049d5f2c5a27d56ee8d5b6d3fd9e1f19606c8f6a2883a1a2ee0a68b24e42",
+        "bytes": 5086,
+        "mtime_ns": 1790711880893133389
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/correlator_samples.tex",
+        "sha256": "ec4d9b8b324f0417f350a3d6000bf274aa6577b9c475f9912bc7855e22295e5a",
+        "bytes": 3353,
+        "mtime_ns": 1790711880891945029
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/coupling_support.tex",
+        "sha256": "e8d8ec022fb0f4594ec1a30cbff7e1f393e859548f99e8f8e39b29ce1089f124",
+        "bytes": 4479,
+        "mtime_ns": 1790711880888996387
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/e8_annuli.tex",
+        "sha256": "c536a8ff0ee91dc0799a87ee051c53835be6d934a25baab982e4499da7e2e0c3",
+        "bytes": 2269,
+        "mtime_ns": 1790711880893523594
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/fusion_complete.tex",
+        "sha256": "caf60e89e7df1fb304d9bc81e0c522fe660f4c31452672000ddb5229d4f2756f",
+        "bytes": 4446,
+        "mtime_ns": 1790711880892581072
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/h3_fusion.tex",
+        "sha256": "555785d27fde252625bf1a2509b3f3507ae3f4511436c9c913be9320ac3602ac",
+        "bytes": 2074,
+        "mtime_ns": 1790711880893405504
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/h3_twisted_gaps.tex",
+        "sha256": "436cb042ca56e72db03fb7e0795a2fa4fa8417a4739b044d0233791b10031375",
+        "bytes": 928,
+        "mtime_ns": 1790711880893659958
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/highest_norms.tex",
+        "sha256": "1001db9b6a7c4b2e219b0903faf09e9f1d7231ed8f01e6ee6fbeec8c8ace1e7d",
+        "bytes": 1225,
+        "mtime_ns": 1790711880869574028
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/lightest_blocks.tex",
+        "sha256": "71a324488dc9d27fbc623a041a4a2fafeb9721b2071ee684b3bfdd566ab3cb2a",
+        "bytes": 1296,
+        "mtime_ns": 1790711880891737704
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/reduced_coupling_atlas.tex",
+        "sha256": "e5dddf5924f1a52295c6489fd3e20ef842d92f0fff52d98ed649eebaa1c2463d",
+        "bytes": 21715,
+        "mtime_ns": 1790711880888578610
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/stress_ward.tex",
+        "sha256": "f0828aeced5e4c9e0f044d416e61345accf67d981e3c717a5c2e1bcd88b97838",
+        "bytes": 2705,
+        "mtime_ns": 1790711880889213671
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/surviving_gaussian_terms.tex",
+        "sha256": "4e6e4938a5ed8f6688a45df8717a79613584ebe2c46fc7c7095e37f683792308",
+        "bytes": 2076,
+        "mtime_ns": 1790711880891630715
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/tube_spaces.tex",
+        "sha256": "2b3344ae285bbb7437ac78fb00717e89b0b4c5052453d4dd44a3a0ee630ea53c",
+        "bytes": 1161,
+        "mtime_ns": 1790711880893743803
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/twisted_matrices.tex",
+        "sha256": "0968a7e02318c176987a0c319c96b337036c9a64fca77dceef1ed3c45cb8c44d",
+        "bytes": 6866,
+        "mtime_ns": 1790711880893313263
+      },
+      {
+        "path": "c8_expanded_20260929/physics_tables/u_pair_projections.tex",
+        "sha256": "e9d6876665cfbe0a09998e786e4d91cbf40452f55bf3bd7413b0957ed4980cab",
+        "bytes": 916,
+        "mtime_ns": 1790711880889381674
+      },
+      {
+        "path": "c8_expanded_20260929/reader_orientation.tex",
+        "sha256": "9d4df44e07f80f2366a1ae69622e4a93461ad7212c99493e229bbbc02a4294ef",
+        "bytes": 4607,
+        "mtime_ns": 1790712140970610267
+      },
+      {
+        "path": "c8_expanded_20260929/source_concordance.tex",
+        "sha256": "061af9f8cf7300b0312228c23607d4e750bf721844f0d1ed4afb4f40e7f1c9ad",
+        "bytes": 8433,
+        "mtime_ns": 1790711469910765399
+      },
+      {
+        "path": "c8_expanded_20260929/spectral_details.tex",
+        "sha256": "1df67fc38f51c25c538e2d9b3a077ba243559281b8355abbb105130d4f015923",
+        "bytes": 103123,
+        "mtime_ns": 1790712548987925934
+      },
+      {
+        "path": "c8_expanded_20260929/structure_details.tex",
+        "sha256": "b23d6a114030e2af9d9c97406d44e031db2baaf0d6a34f5005fa65b28a965dcc",
+        "bytes": 88522,
+        "mtime_ns": 1790712648152525432
+      },
+      {
+        "path": "c8_expanded_20260929/structure_sources.md",
+        "sha256": "58e561232c35b53aef868c87b13135e29ed33c78d234ce5d90e7d3760f007b17",
+        "bytes": 3517,
+        "mtime_ns": 1790712054696049562
+      },
+      {
+        "path": "c8_expanded_20260929/top_details.tex",
+        "sha256": "d543138a6a58744f2704b4bf66530c02315aef8dc0a74f330f7126841ae61793",
+        "bytes": 237979,
+        "mtime_ns": 1790712549027308853
+      },
+      {
+        "path": "c8_expanded_20260929/verification_guide.tex",
+        "sha256": "ca69ea1f8f103341d14f5b7c05e960209839620c5b9f5c56b20b6ccf96b8e400",
+        "bytes": 60515,
+        "mtime_ns": 1790712548982392657
+      }
+    ],
+    "exposition_c8_physics_20260927": [
+      {
+        "path": "c8_physics_20260927/README.md",
+        "sha256": "0cc8f985596ecc334c00672680178eabdff85ff8d610f1a0a0a43785df921a0e",
+        "bytes": 11137,
+        "mtime_ns": 1790738335953031376
+      },
+      {
+        "path": "c8_physics_20260927/bibliography_additions.tex",
+        "sha256": "9948a1668dcf26ab89eb4015dc305b5fd2897654b38dbd5e5e561a1b84621ca6",
+        "bytes": 860,
+        "mtime_ns": 1790525994775994982
+      },
+      {
+        "path": "c8_physics_20260927/bootstrap_sources.md",
+        "sha256": "a8126d9657c14c6bf6beca0f63cbf6756f54bdc3ab18fd6578833ac73579d782",
+        "bytes": 3681,
+        "mtime_ns": 1790526798968037919
+      },
+      {
+        "path": "c8_physics_20260927/correlators.tex",
+        "sha256": "b6d8edcc8bee55a91ca5cfcb6ba8ba82d23835cef08825d142563e761ea8dadf",
+        "bytes": 16012,
+        "mtime_ns": 1790526948649882063
+      },
+      {
+        "path": "c8_physics_20260927/correlators_notes.md",
+        "sha256": "4b0828fd198c0c9a9dd7ac1f11a677fe97ac66b50537c1f5756d4477a8b13789",
+        "bytes": 4121,
+        "mtime_ns": 1790526724872598298
+      },
+      {
+        "path": "c8_physics_20260927/couplings.tex",
+        "sha256": "685a58205dc2ece5314273d7ebdbf1929a1ab6102f94de0811fde4bacdfafe63",
+        "bytes": 7958,
+        "mtime_ns": 1790526775178538903
+      },
+      {
+        "path": "c8_physics_20260927/data/thermal_readable.tex",
+        "sha256": "d606d9b9a6601a0de280b7017fd34db6698e40850654675438981e3f41a087b9",
+        "bytes": 800,
+        "mtime_ns": 1790526439269177078
+      },
+      {
+        "path": "c8_physics_20260927/defects.tex",
+        "sha256": "ef644c75648ba0b8367e51ea90d3ee1773e1f8ebe4a3cace10e7b9c1e7d99088",
+        "bytes": 17535,
+        "mtime_ns": 1790527313449139447
+      },
+      {
+        "path": "c8_physics_20260927/defects_README.md",
+        "sha256": "721cc9f6491e61012da9dcdcd120b5367f5172ac13693ccb83bd956bd48451de",
+        "bytes": 4961,
+        "mtime_ns": 1790526409225245528
+      },
+      {
+        "path": "c8_physics_20260927/figures/haagerup_bootstrap_comparison.tex",
+        "sha256": "5e8f0ad4d671ed53162d074b75252ef5c2360b3fa29b3e377e206668e895311c",
+        "bytes": 2063,
+        "mtime_ns": 1790527503604410325
+      },
+      {
+        "path": "c8_physics_20260927/lean_assessment.tex",
+        "sha256": "3a6d53ac01ab0ef694fa4c4f10e94e4d4fe790013494357a0821678d6e33a55b",
+        "bytes": 20495,
+        "mtime_ns": 1790529544115239983
+      },
+      {
+        "path": "c8_physics_20260927/lean_baseline_assessment.tex",
+        "sha256": "4768c77a4270a7153ad679520153e4cc654d73703c6b86009e15b3126d4c285d",
+        "bytes": 36248,
+        "mtime_ns": 1790529295340399425
+      },
+      {
+        "path": "c8_physics_20260927/manuscript_refs.tex",
+        "sha256": "4b40cf19d01695f531b79b4c5cb7925e1cfaf4504481cd065e7eafcdc4261654",
+        "bytes": 654,
+        "mtime_ns": 1790529496480190829
+      },
+      {
+        "path": "c8_physics_20260927/physics_guide.tex",
+        "sha256": "57c19821d4f03fb873b3a9ec155b298310049abab24edb22b84982af07c6bde5",
+        "bytes": 7602,
+        "mtime_ns": 1790526923123423325
+      },
+      {
+        "path": "c8_physics_20260927/resource_review.md",
+        "sha256": "41ca9bb4a871533ed287e615baaabf87dd24c971802de98363dcb116f77d78b7",
+        "bytes": 3380,
+        "mtime_ns": 1790529334834573059
+      },
+      {
+        "path": "c8_physics_20260927/spectrum.tex",
+        "sha256": "8970cdae85bd851450c47f6c9524d05b5390900d9bce1f8404bb09ea8cd3e070",
+        "bytes": 17380,
+        "mtime_ns": 1790527660422810298
+      },
+      {
+        "path": "c8_physics_20260927/spectrum_notes.md",
+        "sha256": "d3837313c2bcedc901c6125551df7d63d7ec15192e4be7ec9702e3522bc61b3f",
+        "bytes": 5681,
+        "mtime_ns": 1790526239143827280
+      },
+      {
+        "path": "c8_physics_20260927/verification_anchor_inventory.md",
+        "sha256": "b9354ba4e5ab720c4b07cbb1f0a5269946f1876c03a92f6307a73a73ab375c90",
+        "bytes": 16988,
+        "mtime_ns": 1790529467474797730
+      },
+      {
+        "path": "c8_physics_20260927/verification_finite_inputs.tex",
+        "sha256": "045fb2b3fc8f7fe4f02d4748df5a643052f33fee31ed2ff3f4f812357be4b4d0",
+        "bytes": 21671,
+        "mtime_ns": 1790529427593632193
+      },
+      {
+        "path": "c8_physics_20260927/weight_two_static_review.md",
+        "sha256": "7e4f6d939ae293d2177e8cb3ba569a1e84aefccb94e61cecb9db8370dba92780",
+        "bytes": 10338,
+        "mtime_ns": 1790526948723880488
+      }
+    ],
+    "exposition_proof_expanded": [
+      {
+        "path": "proof_expanded/README.md",
+        "sha256": "2c2b69363cec00923eb8be515cad33a537f31bfc5c1aea648c0b76c26b503fee",
+        "bytes": 3001,
+        "mtime_ns": 1789326199412644708
+      },
+      {
+        "path": "proof_expanded/appendix.tex",
+        "sha256": "7bf022cc36c61991f21b1de8f376cda05d98345bfbcea23d79a638de139bd2d5",
+        "bytes": 3527,
+        "mtime_ns": 1789326004688191689
+      },
+      {
+        "path": "proof_expanded/ch10_reconstruction.tex",
+        "sha256": "33f29d31c9c427a30e20c337b5e148118370a3991f7a35d96825ffba58845643",
+        "bytes": 6368,
+        "mtime_ns": 1789326004687191702
+      },
+      {
+        "path": "proof_expanded/ch1_introduction.tex",
+        "sha256": "96aca673bb69eaea9aad49d4c5020c550ef9712138373bfd09e29f615ce28430",
+        "bytes": 12517,
+        "mtime_ns": 1789323754669666217
+      },
+      {
+        "path": "proof_expanded/ch2_background.tex",
+        "sha256": "ed1ebbbc8833281af5ea5066dbc473a1b868746b641ae2779c0c41ec6b1c2a8f",
+        "bytes": 21137,
+        "mtime_ns": 1789393831325018021
+      },
+      {
+        "path": "proof_expanded/ch3_coefficients.tex",
+        "sha256": "5fa4bdabcd72e373352f95d98e91be7334b753fa9009df6637f09f12647b1618",
+        "bytes": 18113,
+        "mtime_ns": 1789326150110452488
+      },
+      {
+        "path": "proof_expanded/ch4_column_fourier.tex",
+        "sha256": "bb476473d29075ebe08747808918d6876b3af8b016bdf712c41df492dbe602c3",
+        "bytes": 22717,
+        "mtime_ns": 1789393908337618110
+      },
+      {
+        "path": "proof_expanded/ch5_cubic_targets.tex",
+        "sha256": "4e3139247a3c83835ba5a04b225cbd7d1f1210f1dd465f488fe031eacfce96e5",
+        "bytes": 16232,
+        "mtime_ns": 1789326150110750322
+      },
+      {
+        "path": "proof_expanded/ch6_product_transforms.tex",
+        "sha256": "f7e8fd568e2f7ab8f5aab454e340e9dbf20de280f7fbb98f082b06e056f0f783",
+        "bytes": 29589,
+        "mtime_ns": 1789393908413617064
+      },
+      {
+        "path": "proof_expanded/ch7_four_gamma.tex",
+        "sha256": "df116e6e45bf08eb55fc148522abf59172bf27a168f9054015949ab53b2b1252",
+        "bytes": 22826,
+        "mtime_ns": 1789394039042657869
+      },
+      {
+        "path": "proof_expanded/ch8_restricted_vanishing.tex",
+        "sha256": "13fe139db10eec19991ef2de923099db12c458d8c8294ff496c5671d59d41602",
+        "bytes": 16272,
+        "mtime_ns": 1789326150111583581
+      },
+      {
+        "path": "proof_expanded/ch9_completion.tex",
+        "sha256": "d40975d127dce525b2042430bae5c59fa604e0b90e911b1238850c09cebd9319",
+        "bytes": 17006,
+        "mtime_ns": 1789326150111820883
+      }
+    ],
+    "exposition_proof_revised": [
+      {
+        "path": "proof_revised/README.md",
+        "sha256": "c96118dd1238e0228078b918805a7a6a74f879ab78a8498e610edf669f014ba5",
+        "bytes": 1901,
+        "mtime_ns": 1788877689585876399
+      },
+      {
+        "path": "proof_revised/analytic_setup.tex",
+        "sha256": "a3ce50a42fb8d72754039d740eadd22574e55df348e347f6684d11ba3d69c697",
+        "bytes": 8246,
+        "mtime_ns": 1788877420857074616
+      },
+      {
+        "path": "proof_revised/contour_cubics.tex",
+        "sha256": "b9723d44c2b0ae7b67da5382d85a41fa237093483cb362ac484a303b8b54d0e5",
+        "bytes": 18724,
+        "mtime_ns": 1788877420857293563
+      },
+      {
+        "path": "proof_revised/cubic_completion.tex",
+        "sha256": "b3bdf28efe5a078e197d37747c88f535a31aef1b4f895cb4b3202a8d354d6e69",
+        "bytes": 14734,
+        "mtime_ns": 1788877420856911913
+      },
+      {
+        "path": "proof_revised/equations.tex",
+        "sha256": "5ac7b3b7f1e7ae979fec7008e710fafe7b70a3057e5b00518070330ae1709e5e",
+        "bytes": 1376,
+        "mtime_ns": 1788877420856990529
+      },
+      {
+        "path": "proof_revised/formalization_review.md",
+        "sha256": "91aa540f48ed5d5cb7307726fa89b8e8ae5733b505ea2c16002c793d0edfb59a",
+        "bytes": 16688,
+        "mtime_ns": 1789397458210896395
+      },
+      {
+        "path": "proof_revised/introduction.tex",
+        "sha256": "12df5fb2b2072893c02a940eead19491590d15b62dc594ae729dfbb23b67bbca",
+        "bytes": 9312,
+        "mtime_ns": 1789014986448655792
+      },
+      {
+        "path": "proof_revised/introduction_bibitems.tex",
+        "sha256": "bb2b04ba8a554f4ee0033ce9939be8fa7400a0ce8d574de9ad4e49784b9a3851",
+        "bytes": 4544,
+        "mtime_ns": 1789014938245105461
+      },
+      {
+        "path": "proof_revised/reconstruction.tex",
+        "sha256": "757680e2d3e631a846c5330d0d969bd62f6f1e12fab91b783251285d169ec51a",
+        "bytes": 3534,
+        "mtime_ns": 1788877420857145648
+      },
+      {
+        "path": "proof_revised/transparent_tdl_presentation.md",
+        "sha256": "98363207f14a0fb9ddea399f4d72fbc22872a13e1407e26a35e79c760d58d080",
+        "bytes": 10402,
+        "mtime_ns": 1788883618693104226
+      }
+    ],
+    "current_infrastructure_separate_from_historical_runs": [
+      {
+        "path": "/home/tzuchen/.codex/AGENTS.md",
+        "sha256": "7c19f0237e3b799739e237d79acd79c49009e81463e6bc9e3946b986c1984f20",
+        "bytes": 4812,
+        "mtime_ns": 1790742364988006402
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "a3d38c2d724ea7a2612d90dcdb065b2165cbac9c74af23ef68626079245d611f",
+        "bytes": 2275,
+        "mtime_ns": 1790814384507487053
+      },
+      {
+        "path": "/home/tzuchen/.local/bin/research-safe-run",
+        "sha256": "09b9986966402a73bba8e078884a50b5762c4980485ea295e8cca2e02fc8ae63",
+        "bytes": 29146,
+        "mtime_ns": 1790742364982176323
+      },
+      {
+        "path": "hi_cft_safe_run.py",
+        "sha256": "e06f29f8c507f3355ab005e4bc1216dc2ef21226515fff5ce9bda7528c77517b",
+        "bytes": 1214,
+        "mtime_ns": 1790738539268756580
+      }
+    ]
+  }
+}

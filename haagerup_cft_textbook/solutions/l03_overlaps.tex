@@ -1,0 +1,160 @@
+\section{Solutions for Chapter~\ref{ch:overlaps}}
+
+\paragraph{Exercise~\ref{ex:overlap-phases}.}
+\phantomsection
+\label{sol:ex:overlap-phases}
+The phase of $\lambda^3$ is
+$3\theta_\phi+3\theta_\chi-3\theta_\psi$. Multiplication by
+$c_\psi$ and division by $c_\phi c_\chi$ cancel it. The same
+bookkeeping for $\nu^3$ gives
+$3\theta_\phi+3\theta_\psi+3\theta_\eta$, exactly the
+denominator phase. For $\kappa^3c_\eta$ it gives
+$3\theta_\chi+3\theta_\psi-3\theta_\eta+3\theta_\eta$,
+again exactly the denominator phase. The definitions also give
+\[
+ \frac{I_\nu I_\kappa}{I_\lambda}
+ =\frac{\nu^3\kappa^3}{\lambda^3c_\psi^3}=J^3.
+\]
+All these ratios require their displayed denominators to be nonzero.
+If a symmetry maps each field to a unit phase times its adjoint,
+it conjugates each three-point coefficient. All unit phases
+cancel in $I_\lambda$, so invariance says
+$I_\lambda=\overline{I_\lambda}$. No claim that individual
+coefficients are real was required.
+
+
+
+\paragraph{Exercise~\ref{ex:overlap-descendant}.}
+\phantomsection
+\label{sol:ex:overlap-descendant}
+The commutator identity
+\[
+ L_1L_{-1}^n|h\rangle
+ =n(2h+n-1)L_{-1}^{n-1}|h\rangle
+\]
+follows by commuting $L_1$ past the $n$ lowering operators.
+The sum of their $2L_0$ terms is
+$2\sum_{j=0}^{n-1}(h+j)=n(2h+n-1)$.
+Writing $N_n=\|L_{-1}^n|h\rangle\|^2$ therefore gives
+$N_n=n(2h+n-1)N_{n-1}$, with $N_0=1$, and hence
+$N_n=n!(2h)_n$. The first three
+terms of the scalar vacuum-source series are
+\[
+ 1+\Delta^2+
+ \left[\frac{\Delta(\Delta+1)}2\right]^2+\cdots.
+\]
+The equal-time integral near coincidence contains
+$\int_0^\varepsilon\theta^{-2\Delta}\,d\theta$, finite
+precisely for $2\Delta<1$. At the endpoint it diverges
+logarithmically.
+
+
+
+\paragraph{Exercise~\ref{ex:overlap-cumulant}.}
+\phantomsection
+\label{sol:ex:overlap-cumulant}
+Treat the normalized overlaps as a linear moment functional
+with $\langle1\rangle=1$, and set $\widetilde X_i=X_i-m_i$.
+Then
+\[
+ B_{ij}=\langle\widetilde X_i\widetilde X_j\rangle,
+ \qquad K=\langle\widetilde X_1\widetilde X_2\widetilde X_3\rangle.
+\]
+After $X_i\mapsto u_iX_i+v_i$, the new centered variable is
+$u_i\widetilde X_i$. Multilinearity proves the factors
+$u_iu_j$ and $u_1u_2u_3$, including for complex data. The
+third leg's $u_3$ denotes its amplitude factor after converting
+the outgoing ket change into a bra change.
+
+A physical branch insertion does not invalidate these affine
+identities. It changes the moment functional itself, replacing
+three-point moments by normalized four-point correlators.
+Their connected part contains extra OPE data. Thus it invalidates
+the inference that the invariant equals the original three-field
+coefficient, unless an additional Ward or selection argument
+removes that branch contribution.
+
+
+
+\paragraph{Exercise~\ref{ex:overlap-filter}.}
+\phantomsection
+\label{sol:ex:overlap-filter}
+Each retained-state summand is nonnegative. For every omitted
+state, its exponential factor is at most
+$e^{-2\tau(E_{\rm cut}-E_\phi)}$. Factoring this out of the
+omitted sum proves the bound. To see why residuals do not provide
+the cutoff, take a diagonal Hamiltonian with energies $0,1,2$
+and retain the exact eigenvectors at $0$ and $2$. Both residuals
+vanish, but the omitted state has energy $1<2$. A source with
+weight on all three detects the failure of using the largest
+retained energy as an omitted-state threshold.
+
+
+
+\paragraph{Exercise~\ref{ex:overlap-response}.}
+\phantomsection
+\label{sol:ex:overlap-response}
+For $H(\theta)=H+\theta V$, Hellmann--Feynman gives
+$d_a=\partial_\theta g_a=\langle a|V|a\rangle-\langle0|V|0\rangle$
+along the chosen differentiable eigenstate branch. The quotient rule gives
+\[
+ \partial_\theta\!\left(\frac{g_a}{g_b}\right)
+ =\frac{d_ag_b-g_ad_b}{g_b^2}.
+\]
+In a degenerate space one must first choose the branches by diagonalizing
+the perturbation there. Under $V\mapsto V+a1+bH$, the gap derivatives
+become $d_a+bg_a$, so the added numerator is
+$bg_ag_b-bg_ag_b=0$. A coupling reparametrization multiplies
+every coordinate derivative by the same Jacobian. Comparing
+its direction with size drift assumes the perturbation probes
+the same running continuum coupling and that other corrections
+are negligible. The algebraic cancellation of energy rescaling
+does not prove either premise.
+
+
+
+\paragraph{Exercise~\ref{ex:overlap-current}.}
+\phantomsection
+\label{sol:ex:overlap-current}
+Write $u'_i=\sum_k u_kU_{ki}$ and
+$v'_j=\sum_l v_lV_{lj}$. The gluing amplitude is linear in
+both incoming kets, giving $M'=U^TMV$. Both $U^T$ and $V$
+are unitary, so $M'^\dagger M'$ is unitarily conjugate to
+$M^\dagger M$ and has the same eigenvalues.
+
+For normalized pairs, the tensor-product difference satisfies
+\[
+ \|u\otimes v-u'\otimes v'\|
+ \leq\|(u-u')\otimes v\|+
+      \|u'\otimes(v-v')\|\leq\delta_1+\delta_2.
+\]
+Taking an inner product with a unit parent cannot increase that
+norm. Divide by $|A_{000}|$, subtract the continuum gluing error
+$\eta$, and use $|x^TMy|\leq\|M\|_2$ for normalized coefficient
+vectors. This proves the stated bound. A small denominator
+amplifies an absolute vector error; cancellation of a parent's
+overall normalization is not cancellation of its directional
+state error.
+
+
+
+\paragraph{Exercise~\ref{ex:overlap-branch}.}
+\phantomsection
+\label{sol:ex:overlap-branch}
+Expanding either side gives
+$2b^4-4b^3+6b^2-4b+2$. Consequently
+\[
+ \sum_{i<j}\frac{\delta B_{ij}}{B_{ij}}
+ =\frac{2N_\Lambda}{c}
+   \frac{1+(b-1)^4+b^4}{b^4(b-1)^4}
+ =2\frac{\delta K}{K}.
+\]
+This is exactly the cancellation in the logarithmic variation
+of the estimator. Multiplying the identity in $q,r$ by
+$b^4(b-1)^4$ reduces it to the same polynomial identity.
+The quadratic variation is a bilinear Hessian $H(v_b,v_b)$;
+differentiation controls $H(v_b,\partial_bv_b)$. It supplies
+no identity for $H(v_b,v_{b'})$ at independent $b,b'$, so two
+separately regulated singularities require another calculation.
+
+

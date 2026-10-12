@@ -1,0 +1,65 @@
+Hand review: c06 ex:coset-ramification and the integrated W3 reference
+Reviewer: scope_construction
+Timestamp: 2026-10-05 21:27:56 UTC
+Read-only chapters; no jobs, builds, or certificate replay.
+
+Pass, with one concise premise clarification
+--------------------------------------------
+c06_cosets.tex:400--404 should say "For any simple separable Frobenius
+sewing algebra A..." Simplicity here is as an A--A bimodule. It ensures
+the bimodule category is a fusion category with simple unit and supports
+the displayed normalized FP-dimension formula. An arbitrary decomposable
+separable algebra instead gives a multifusion category, for which a
+single uniform ratio is not the usual fusion-category normalization.
+The integrated W3 text already states the simple-bimodule premise at
+l06_identification.tex:1030--1032, and the orbifold proof spells it out
+at lines803--805. No stronger exclusion or new mathematical topic is
+needed.
+
+Arithmetic checked by hand
+-------------------------
+c06:375--388: trace and integral-basis discriminant definitions are
+correct. For xi=(1+sqrt13)/2, xi^2=xi+3; the traces of 1,xi,xi^2 are
+2,1,7, giving 2*7-1=13. Since13 is squarefree and13=1 mod4, 1,xi
+is the full ring-of-integers basis, not merely an order with a larger
+discriminant. d=1+xi is correct.
+
+c06:393--398: the M(41,42) positive dimensions are products of sine
+quotients at denominators41 and42. Each sine quotient is a Laurent
+polynomial in the corresponding exp(pi i/m), so they lie in
+Q(zeta82,zeta84). Its compositum is Q(zeta_lcm(82,84)) =
+Q(zeta3444), and3444=4*3*7*41. The pointed norm-twenty lattice adds
+only dimensions1, so prime5 in its discriminant need not enter this
+DIMENSION field. These statements do not assert the same restricted
+field for all twists, matrix entries, or associator coefficients.
+The nonramification of13 and ramification in Q(sqrt13) exclude the
+quadratic subfield and hence d.
+
+c06:400--409: after the stated simple-algebra clarification, ratios
+of underlying-object dimensions and their direct sums remain in K.
+This excludes dimension d for reducible as well as simple defects in
+the specified rational-algebra-preserving bimodule category. It does
+not require the c06 Haagerup full-faithfulness proposition to exclude
+reducible images, nor an analytic-sector comparison for the separate
+charge-six algebra C6.
+
+Cross-reference and scope
+------------------------
+c06:411 points to the unique live sec:identification-W3 label at
+l06:1020. It is a forward application reference, not a forward premise
+needed to prove the c06 example. The W3 paragraph explicitly restricts
+to rational sewing over the stated algebra and explains that its
+central charges approach2 from below. Its divisor condition13|p(p+1)
+is necessary only, as stated; the later category/full-center reduction
+closes the remaining heights. Neither passage upgrades this to an
+obstruction for stress-only defects or every CFT at a nearby charge.
+
+Source-guide proposal
+---------------------
+editorial/rational_obstruction_sources_insertion.tex.txt contains one
+short paragraph with four links: DRX orbifold dimensions, ENO Morita/
+weak integrality, BG W3 modular matrices, and EMG affine module
+categories. It distinguishes those public inputs from the repository's
+finite height13 comparison and the explained category/algebra transfer.
+Article titles and arXiv URLs were checked directly; no live source
+guide was edited.

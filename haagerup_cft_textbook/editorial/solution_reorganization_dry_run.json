@@ -1,0 +1,2587 @@
+{
+  "scope": "Text-only solution reorganization; no mathematics or body wording changed",
+  "main_chapter_order": [
+    "f01_fusion",
+    "r01_cft",
+    "r02_vertex_algebras",
+    "f02_haagerup",
+    "f03_centers",
+    "f04_modular",
+    "c01_lattice_embedding",
+    "c02_finite_closure",
+    "c03_factors",
+    "c04_regularity",
+    "c05_branching",
+    "r04_unitarity",
+    "r03_characters",
+    "r05_full_theories",
+    "r06_correlators",
+    "r07_defects",
+    "r08_sewing",
+    "c06_cosets",
+    "l01_chain",
+    "l02_scaling",
+    "l03_overlaps",
+    "l04_tensor_networks",
+    "l05_gapped",
+    "l06_identification",
+    "f05_arithmetic",
+    "f06_related_categories"
+  ],
+  "exercise_count": 151,
+  "solution_block_count": 150,
+  "solution_file_count": 26,
+  "shared_solution_blocks": [
+    {
+      "chapter": "l05_gapped",
+      "labels": [
+        "ex:gapped-parent",
+        "ex:gapped-short"
+      ],
+      "placement": "earliest covered exercise",
+      "consecutive": false
+    }
+  ],
+  "removed_grouping_headings": {
+    "chapters/r_solutions.tex": [
+      "Solutions on conformal fields and vertex algebras",
+      "Solutions on characters and unitarity",
+      "Solutions on full spectra and correlation functions",
+      "Solutions on defects and sewing"
+    ],
+    "chapters/f_solutions.tex": [
+      "Solutions to the fusion-space exercises",
+      "Solutions to the six-line exercises",
+      "Solutions to the center and tube exercises",
+      "Solutions to the modular-data exercises",
+      "Solutions to the arithmetic exercises",
+      "Solutions to the related-category exercises"
+    ],
+    "chapters/c_solutions.tex": [
+      "Solutions for the lattice and construction chapters",
+      "Further construction solutions"
+    ],
+    "chapters/l_solutions.tex": [
+      "Fusion paths and operators",
+      "Finite-size scaling",
+      "Fields, descendants, and overlaps",
+      "Tensor networks",
+      "Gapped vacua and parent Hamiltonians",
+      "Candidate tests"
+    ]
+  },
+  "solutions": [
+    {
+      "exercise_labels": [
+        "ex:fib-count"
+      ],
+      "chapter": "f01_fusion",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 3,
+      "source_heading": "Exercise~\\ref{ex:fib-count}.",
+      "target": "solutions/f01_fusion.tex",
+      "body_sha256": "ba1dc10a8106a0d4544c62a9205fcec1d4f76ecdd3f546631d59d98ce88a15c2",
+      "body_characters": 529,
+      "target_body_span_characters": [
+        130,
+        659
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:gauge-cancel"
+      ],
+      "chapter": "f01_fusion",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 19,
+      "source_heading": "Exercise~\\ref{ex:gauge-cancel}.",
+      "target": "solutions/f01_fusion.tex",
+      "body_sha256": "75b1c56a38ce7ea06626611fefaa9ae41dbf2021917afbfe663d62c445abd17e",
+      "body_characters": 481,
+      "target_body_span_characters": [
+        748,
+        1229
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:projectors"
+      ],
+      "chapter": "f01_fusion",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 29,
+      "source_heading": "Exercise~\\ref{ex:projectors}.",
+      "target": "solutions/f01_fusion.tex",
+      "body_sha256": "78c340d493f2951f59c4b739753d5d80b6f471ca397a45275f6aa70ea1a564ec",
+      "body_characters": 533,
+      "target_body_span_characters": [
+        1314,
+        1847
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:fib-pentagon"
+      ],
+      "chapter": "f01_fusion",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 45,
+      "source_heading": "Exercise~\\ref{ex:fib-pentagon}.",
+      "target": "solutions/f01_fusion.tex",
+      "body_sha256": "4183d45a71d0b4ffdae9305298ab5a67f1168f46c8b4f9b129a4c54c444db916",
+      "body_characters": 505,
+      "target_body_span_characters": [
+        1936,
+        2441
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:dimension-not-state"
+      ],
+      "chapter": "f01_fusion",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 58,
+      "source_heading": "Exercise~\\ref{ex:dimension-not-state}.",
+      "target": "solutions/f01_fusion.tex",
+      "body_sha256": "b54ca0f2d3cbb2c883a7878eefd3f310d9e2df009bf72963e7a6f9b3826afe7b",
+      "body_characters": 757,
+      "target_body_span_characters": [
+        2544,
+        3301
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:cft-level1"
+      ],
+      "chapter": "r01_cft",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 3,
+      "source_heading": "Exercise~\\ref{ex:cft-level1}.",
+      "target": "solutions/r01_cft.tex",
+      "body_sha256": "474bff2e4bd0ae9f4cd6b5cb0cd26526981256fa6ab8c949d7507d72a9777847",
+      "body_characters": 597,
+      "target_body_span_characters": [
+        129,
+        726
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:cft-null"
+      ],
+      "chapter": "r01_cft",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 22,
+      "source_heading": "Exercise~\\ref{ex:cft-null}.",
+      "target": "solutions/r01_cft.tex",
+      "body_sha256": "63ecbe66047dfa5ee1a74cfc58e9d838fdf851106fa9ffd51d862dc53ae3fbe0",
+      "body_characters": 419,
+      "target_body_span_characters": [
+        807,
+        1226
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:cft-compact"
+      ],
+      "chapter": "r01_cft",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 35,
+      "source_heading": "Exercise~\\ref{ex:cft-compact}.",
+      "target": "solutions/r01_cft.tex",
+      "body_sha256": "03c967ae07b6026f124fd2dea5ecf4f2d8eb4cd7528b0c93cc2cb25b5c1f2ba8",
+      "body_characters": 327,
+      "target_body_span_characters": [
+        1313,
+        1640
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:cft-stress-combination"
+      ],
+      "chapter": "r01_cft",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 43,
+      "source_heading": "Exercise~\\ref{ex:cft-stress-combination}.",
+      "target": "solutions/r01_cft.tex",
+      "body_sha256": "d6bde18b80a4c367403235ec04eb7aaee58af55e4f942264f7522d4e72665d83",
+      "body_characters": 446,
+      "target_body_span_characters": [
+        1749,
+        2195
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:cft-thermal"
+      ],
+      "chapter": "r01_cft",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 57,
+      "source_heading": "Exercise~\\ref{ex:cft-thermal}.",
+      "target": "solutions/r01_cft.tex",
+      "body_sha256": "ed17349fb615f5daccec5fc000dcdb7791bf8703a6b876133ba95c286b080ddf",
+      "body_characters": 522,
+      "target_body_span_characters": [
+        2282,
+        2804
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:cft-marginality"
+      ],
+      "chapter": "r01_cft",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 71,
+      "source_heading": "Exercise~\\ref{ex:cft-marginality}.",
+      "target": "solutions/r01_cft.tex",
+      "body_sha256": "2aa6a03e36436184fb673c0a3fba5ebf242ec76b031b7ec108c814d69594d159",
+      "body_characters": 433,
+      "target_body_span_characters": [
+        2899,
+        3332
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:voa-weight"
+      ],
+      "chapter": "r02_vertex_algebras",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 80,
+      "source_heading": "Exercise~\\ref{ex:voa-weight}.",
+      "target": "solutions/r02_vertex_algebras.tex",
+      "body_sha256": "5275c6bc60bfdaa7ddd8f16f433bff0bdcb699bf6a16c3ea7bcc205ea4071147",
+      "body_characters": 364,
+      "target_body_span_characters": [
+        141,
+        505
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:voa-cocycle"
+      ],
+      "chapter": "r02_vertex_algebras",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 88,
+      "source_heading": "Exercise~\\ref{ex:voa-cocycle}.",
+      "target": "solutions/r02_vertex_algebras.tex",
+      "body_sha256": "11f6977e494755204e72d96dd019b3926059b727deefe6ecef4ab8989125b481",
+      "body_characters": 498,
+      "target_body_span_characters": [
+        592,
+        1090
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:voa-rankone"
+      ],
+      "chapter": "r02_vertex_algebras",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 103,
+      "source_heading": "Exercise~\\ref{ex:voa-rankone}.",
+      "target": "solutions/r02_vertex_algebras.tex",
+      "body_sha256": "973c14fa1f888bff0c9772012c2d4c07cc37e26fb9f6c08ed7dd93cc2d2b178d",
+      "body_characters": 603,
+      "target_body_span_characters": [
+        1177,
+        1780
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:voa-heisenberg-c2"
+      ],
+      "chapter": "r02_vertex_algebras",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 121,
+      "source_heading": "Exercise~\\ref{ex:voa-heisenberg-c2}.",
+      "target": "solutions/r02_vertex_algebras.tex",
+      "body_sha256": "ec9fe8ccc781f87dca0847919f765e25e71c92e8d2c5ecb089eca0050106c0d2",
+      "body_characters": 533,
+      "target_body_span_characters": [
+        1879,
+        2412
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:voa-coset"
+      ],
+      "chapter": "r02_vertex_algebras",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 132,
+      "source_heading": "Exercise~\\ref{ex:voa-coset}.",
+      "target": "solutions/r02_vertex_algebras.tex",
+      "body_sha256": "6f73528a4ac7146639fb483300b32fbb2685ea1a253e6dc093832756fe42f0df",
+      "body_characters": 345,
+      "target_body_span_characters": [
+        2495,
+        2840
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:voa-gauge"
+      ],
+      "chapter": "r02_vertex_algebras",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 143,
+      "source_heading": "Exercise~\\ref{ex:voa-gauge}.",
+      "target": "solutions/r02_vertex_algebras.tex",
+      "body_sha256": "881379a30410a8dd615259f90ee65003d8b5f47585ab8941c35aab80e91e9c13",
+      "body_characters": 353,
+      "target_body_span_characters": [
+        2923,
+        3276
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:H3-fusion"
+      ],
+      "chapter": "f02_haagerup",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 75,
+      "source_heading": "Exercise~\\ref{ex:H3-fusion}.",
+      "target": "solutions/f02_haagerup.tex",
+      "body_sha256": "cd27e06cf8280b0d762a2131ceecf842492d8e9645251401faba5362edec14e4",
+      "body_characters": 514,
+      "target_body_span_characters": [
+        132,
+        646
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:H3-F"
+      ],
+      "chapter": "f02_haagerup",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 90,
+      "source_heading": "Exercise~\\ref{ex:H3-F}.",
+      "target": "solutions/f02_haagerup.tex",
+      "body_sha256": "2313303dd78520ee753f999b60205f2d23604fad11c6e074400711191ff67579",
+      "body_characters": 848,
+      "target_body_span_characters": [
+        719,
+        1567
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:H3-P"
+      ],
+      "chapter": "f02_haagerup",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 115,
+      "source_heading": "Exercise~\\ref{ex:H3-P}.",
+      "target": "solutions/f02_haagerup.tex",
+      "body_sha256": "745c0bef45b12ee100078cb828f8e587b42240a591110d8a08fa68753fe121ba",
+      "body_characters": 498,
+      "target_body_span_characters": [
+        1640,
+        2138
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:H3-characteristic"
+      ],
+      "chapter": "f02_haagerup",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 136,
+      "source_heading": "Exercise~\\ref{ex:H3-characteristic}.",
+      "target": "solutions/f02_haagerup.tex",
+      "body_sha256": "ade888ef92743a834e7f9b21109503b29ce3467f1825e497c2c3435a505b317f",
+      "body_characters": 423,
+      "target_body_span_characters": [
+        2237,
+        2660
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:H3-neutral"
+      ],
+      "chapter": "f02_haagerup",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 149,
+      "source_heading": "Exercise~\\ref{ex:H3-neutral}.",
+      "target": "solutions/f02_haagerup.tex",
+      "body_sha256": "435cf6833f8b17c90944beab76802939d40acd1491c82ae0e1fddea3d9d9d982",
+      "body_characters": 510,
+      "target_body_span_characters": [
+        2745,
+        3255
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:Z3-halfbraid"
+      ],
+      "chapter": "f03_centers",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 161,
+      "source_heading": "Exercise~\\ref{ex:Z3-halfbraid}.",
+      "target": "solutions/f03_centers.tex",
+      "body_sha256": "1f84533d0c09f0dbcbc0b9a3551de9a143af1fd841de521951a29da0a5f7e8ee",
+      "body_characters": 395,
+      "target_body_span_characters": [
+        137,
+        532
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:Z3-tube"
+      ],
+      "chapter": "f03_centers",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 170,
+      "source_heading": "Exercise~\\ref{ex:Z3-tube}.",
+      "target": "solutions/f03_centers.tex",
+      "body_sha256": "cfe051b86e1d7f48b86b1f138d4063303d7bb6fb6e8070d2b3c741a4efecc80b",
+      "body_characters": 432,
+      "target_body_span_characters": [
+        611,
+        1043
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:tube171"
+      ],
+      "chapter": "f03_centers",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 184,
+      "source_heading": "Exercise~\\ref{ex:tube171}.",
+      "target": "solutions/f03_centers.tex",
+      "body_sha256": "20be851c821246b3d42f824aa6c99b5ab5847e2cedb924a2552290c4fe10e606",
+      "body_characters": 811,
+      "target_body_span_characters": [
+        1122,
+        1933
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:forgetful-qdim"
+      ],
+      "chapter": "f03_centers",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 204,
+      "source_heading": "Exercise~\\ref{ex:forgetful-qdim}.",
+      "target": "solutions/f03_centers.tex",
+      "body_sha256": "54c3f2bf27b106fa3b51c96afb0b6a7e2ec180d76f3038c7180cf16586d87a85",
+      "body_characters": 452,
+      "target_body_span_characters": [
+        2026,
+        2478
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:all-local"
+      ],
+      "chapter": "f03_centers",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 214,
+      "source_heading": "Exercise~\\ref{ex:all-local}.",
+      "target": "solutions/f03_centers.tex",
+      "body_sha256": "67875071fc079113539b2afbc052944ba557eb395e2b3295ce9ac756ee78c38d",
+      "body_characters": 1032,
+      "target_body_span_characters": [
+        2561,
+        3593
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:Z3-S-square"
+      ],
+      "chapter": "f04_modular",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 242,
+      "source_heading": "Exercise~\\ref{ex:Z3-S-square}.",
+      "target": "solutions/f04_modular.tex",
+      "body_sha256": "66d797dd59dcb003770106739848d26eee4b47564ecd91ec417c0d0d6a6729df",
+      "body_characters": 396,
+      "target_body_span_characters": [
+        135,
+        531
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:H3-S-square"
+      ],
+      "chapter": "f04_modular",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 254,
+      "source_heading": "Exercise~\\ref{ex:H3-S-square}.",
+      "target": "solutions/f04_modular.tex",
+      "body_sha256": "3dd78a64f4154ec5937119aee006f7aecf0f9372ef10775a2df1b2e5a0f7cd0e",
+      "body_characters": 454,
+      "target_body_span_characters": [
+        618,
+        1072
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:Gauss13"
+      ],
+      "chapter": "f04_modular",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 267,
+      "source_heading": "Exercise~\\ref{ex:Gauss13}.",
+      "target": "solutions/f04_modular.tex",
+      "body_sha256": "2ff6bdcf4b1f0357f82f1bbb46a86515c42abe666ad0126f3eac48763279560c",
+      "body_characters": 336,
+      "target_body_span_characters": [
+        1151,
+        1487
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:Verlinde-d1"
+      ],
+      "chapter": "f04_modular",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 278,
+      "source_heading": "Exercise~\\ref{ex:Verlinde-d1}.",
+      "target": "solutions/f04_modular.tex",
+      "body_sha256": "1808a0afb556d718e4f97a851a5c033f685a01b1766cd49a481de8bf48c03001",
+      "body_characters": 249,
+      "target_body_span_characters": [
+        1574,
+        1823
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:modular-extension"
+      ],
+      "chapter": "f04_modular",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 285,
+      "source_heading": "Exercise~\\ref{ex:modular-extension}.",
+      "target": "solutions/f04_modular.tex",
+      "body_sha256": "f36fa627f12a96d3560e48ec03a191640822804c4b5ad6c8b7d2387fa7868a4b",
+      "body_characters": 675,
+      "target_body_span_characters": [
+        1922,
+        2597
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:central-charge-scope"
+      ],
+      "chapter": "f04_modular",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 299,
+      "source_heading": "Exercise~\\ref{ex:central-charge-scope}.",
+      "target": "solutions/f04_modular.tex",
+      "body_sha256": "274cf227dc7a3c298a2686a344738a5224cc42ad6273d4fd6516518d6ceba297",
+      "body_characters": 809,
+      "target_body_span_characters": [
+        2702,
+        3511
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-lattice-1"
+      ],
+      "chapter": "c01_lattice_embedding",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 3,
+      "source_heading": "Exercise~\\ref{ex:c-lattice-1}: cocycle signs",
+      "target": "solutions/c01_lattice_embedding.tex",
+      "body_sha256": "ec2c98691be5760e174980afb287139591053195397ef97b2386cde3b4f79983",
+      "body_characters": 605,
+      "target_body_span_characters": [
+        160,
+        765
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-lattice-2"
+      ],
+      "chapter": "c01_lattice_embedding",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 17,
+      "source_heading": "Exercise~\\ref{ex:c-lattice-2}: a norm-four exponential",
+      "target": "solutions/c01_lattice_embedding.tex",
+      "body_sha256": "70231a6577588ecf025cf080ac07f023db10a8b42e331f4b38983389f7839bf0",
+      "body_characters": 584,
+      "target_body_span_characters": [
+        877,
+        1461
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-lattice-3"
+      ],
+      "chapter": "c01_lattice_embedding",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 30,
+      "source_heading": "Exercise~\\ref{ex:c-lattice-3}: the affine share of $u$",
+      "target": "solutions/c01_lattice_embedding.tex",
+      "body_sha256": "64305bcd03becefda6a1160c3522bde0894ebc12811edab7112c4caba85a5a0b",
+      "body_characters": 374,
+      "target_body_span_characters": [
+        1573,
+        1947
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-lattice-4"
+      ],
+      "chapter": "c01_lattice_embedding",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 42,
+      "source_heading": "Exercise~\\ref{ex:c-lattice-4}: transport preserves unitarity",
+      "target": "solutions/c01_lattice_embedding.tex",
+      "body_sha256": "285f28655e363de2bb10837fb1f2fea55ec59aefbe564ca8358263ccefad312e",
+      "body_characters": 548,
+      "target_body_span_characters": [
+        2065,
+        2613
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-lattice-5"
+      ],
+      "chapter": "c01_lattice_embedding",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 54,
+      "source_heading": "Exercise~\\ref{ex:c-lattice-5}: determinant and index",
+      "target": "solutions/c01_lattice_embedding.tex",
+      "body_sha256": "2dd635db99b6d43e4a9ba70da5bf44941b4b8dce1e97989731001980dc126428",
+      "body_characters": 413,
+      "target_body_span_characters": [
+        2723,
+        3136
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-closure-1"
+      ],
+      "chapter": "c02_finite_closure",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 63,
+      "source_heading": "Exercise~\\ref{ex:c-closure-1}: all negative modes",
+      "target": "solutions/c02_finite_closure.tex",
+      "body_sha256": "c7942978ba3b8afcda8e06cde5d91d86ae88883d32dbbe3d978f058ce7c3c343",
+      "body_characters": 333,
+      "target_body_span_characters": [
+        162,
+        495
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-closure-2"
+      ],
+      "chapter": "c02_finite_closure",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 71,
+      "source_heading": "Exercise~\\ref{ex:c-closure-2}: the missing lowest line",
+      "target": "solutions/c02_finite_closure.tex",
+      "body_sha256": "fee2512c71e3316646d8c9f40bca4622a210848af071ad204742891642e56d22",
+      "body_characters": 432,
+      "target_body_span_characters": [
+        607,
+        1039
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-closure-3"
+      ],
+      "chapter": "c02_finite_closure",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 274,
+      "source_heading": "Exercise~\\ref{ex:c-closure-3}: counting the raising quotient",
+      "target": "solutions/c02_finite_closure.tex",
+      "body_sha256": "0f674e747cbafc3d4aab35309e452275f50d7f24d26a734b8fce60e65fe885a1",
+      "body_characters": 639,
+      "target_body_span_characters": [
+        1157,
+        1796
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-closure-4"
+      ],
+      "chapter": "c02_finite_closure",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 80,
+      "source_heading": "Exercise~\\ref{ex:c-closure-4}: specialization can lose rank",
+      "target": "solutions/c02_finite_closure.tex",
+      "body_sha256": "a5dee3390514a87cc7f9a91b45eb20282f284123917ce27e5b041f54816980fd",
+      "body_characters": 445,
+      "target_body_span_characters": [
+        1913,
+        2358
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-closure-5"
+      ],
+      "chapter": "c02_finite_closure",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 292,
+      "source_heading": "Exercise~\\ref{ex:c-closure-5}: the positive-mode bootstrap",
+      "target": "solutions/c02_finite_closure.tex",
+      "body_sha256": "51ba9f19896f9bc6f69649ce585735a6b1471da073f7dc9c6665bc0aab70f0ad",
+      "body_characters": 636,
+      "target_body_span_characters": [
+        2474,
+        3110
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-closure-6"
+      ],
+      "chapter": "c02_finite_closure",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 89,
+      "source_heading": "Exercise~\\ref{ex:c-closure-6}: why one induction index fails",
+      "target": "solutions/c02_finite_closure.tex",
+      "body_sha256": "2accdbd38afcb11edf002a2335aa3e2493c3a5abc7f4758d27df1364434a802a",
+      "body_characters": 441,
+      "target_body_span_characters": [
+        3228,
+        3669
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-factors-1"
+      ],
+      "chapter": "c03_factors",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 98,
+      "source_heading": "Exercise~\\ref{ex:c-factors-1}: parafermion charges",
+      "target": "solutions/c03_factors.tex",
+      "body_sha256": "9cffa5ec3f5ce904ed51a6c1852c9c35deb1603ec6856ec8b773a13f755a2eaf",
+      "body_characters": 322,
+      "target_body_span_characters": [
+        156,
+        478
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-factors-2"
+      ],
+      "chapter": "c03_factors",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 311,
+      "source_heading": "Exercise~\\ref{ex:c-factors-2}: three opposite momentum pairs",
+      "target": "solutions/c03_factors.tex",
+      "body_sha256": "7e49475a6126e2dc019e44b09391402d331723243072ee7fa920fef0ac824244",
+      "body_characters": 850,
+      "target_body_span_characters": [
+        596,
+        1446
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-factors-3"
+      ],
+      "chapter": "c03_factors",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 106,
+      "source_heading": "Exercise~\\ref{ex:c-factors-3}: the spin-three simple pole",
+      "target": "solutions/c03_factors.tex",
+      "body_sha256": "f1655b9d69a8dd991f86c02474b3ffe386b2e3dcf19b1ca47b47abf7174a6b26",
+      "body_characters": 352,
+      "target_body_span_characters": [
+        1561,
+        1913
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-factors-4"
+      ],
+      "chapter": "c03_factors",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 118,
+      "source_heading": "Exercise~\\ref{ex:c-factors-4}: the two isotropic lines",
+      "target": "solutions/c03_factors.tex",
+      "body_sha256": "df3728d831f4d92cf87ca797e902d6f4f2f6f01d061e2b650a65e9fd4dbf1dea",
+      "body_characters": 355,
+      "target_body_span_characters": [
+        2025,
+        2380
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-factors-5"
+      ],
+      "chapter": "c03_factors",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 338,
+      "source_heading": "Exercise~\\ref{ex:c-factors-5}: coefficients of the stress identity",
+      "target": "solutions/c03_factors.tex",
+      "body_sha256": "66bdf928f5ab77ecaf1fd115a6e83b45c96ec7b69e7b9de9c6bb65aa1fa8623a",
+      "body_characters": 733,
+      "target_body_span_characters": [
+        2504,
+        3237
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-factors-6"
+      ],
+      "chapter": "c03_factors",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 356,
+      "source_heading": "Exercise~\\ref{ex:c-factors-6}: positivity without commutativity",
+      "target": "solutions/c03_factors.tex",
+      "body_sha256": "cb1f2eb3fe47fde4ef2beedc884e416706963d5dab45877e89931950ec1e0a38",
+      "body_characters": 710,
+      "target_body_span_characters": [
+        3358,
+        4068
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-regular-1"
+      ],
+      "chapter": "c04_regularity",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 126,
+      "source_heading": "Exercise~\\ref{ex:c-regular-1}: the graded quotient",
+      "target": "solutions/c04_regularity.tex",
+      "body_sha256": "ce7de6332e10897261eeb0b629a7b2dcba210b8f77742a469344e7f11a3c5b21",
+      "body_characters": 407,
+      "target_body_span_characters": [
+        159,
+        566
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-regular-2"
+      ],
+      "chapter": "c04_regularity",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 136,
+      "source_heading": "Exercise~\\ref{ex:c-regular-2}: the trace step",
+      "target": "solutions/c04_regularity.tex",
+      "body_sha256": "f1b554c134ab658b8eb11da77b4700dad19402a6c5ab510315b3c780bec4fad0",
+      "body_characters": 448,
+      "target_body_span_characters": [
+        669,
+        1117
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-regular-3"
+      ],
+      "chapter": "c04_regularity",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 376,
+      "source_heading": "Exercise~\\ref{ex:c-regular-3}: downward induction to the vacuum condition",
+      "target": "solutions/c04_regularity.tex",
+      "body_sha256": "3ebb07f8f191dcfa596f60d3e8f8fb64c596145da444d05281a370176c323224",
+      "body_characters": 599,
+      "target_body_span_characters": [
+        1248,
+        1847
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-regular-4"
+      ],
+      "chapter": "c04_regularity",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 145,
+      "source_heading": "Exercise~\\ref{ex:c-regular-4}: a nonsplit extension",
+      "target": "solutions/c04_regularity.tex",
+      "body_sha256": "34b726f83561f00dd9efda50a84e5915d54871ba8bfe943e0d6e0a61ed1541b9",
+      "body_characters": 524,
+      "target_body_span_characters": [
+        1956,
+        2480
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-regular-5"
+      ],
+      "chapter": "c04_regularity",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 157,
+      "source_heading": "Exercise~\\ref{ex:c-regular-5}: factorial versus exponential",
+      "target": "solutions/c04_regularity.tex",
+      "body_sha256": "20e02bab8b8f654669d8f69027c185a4c13ef15406c4eadc7e52289dc5c55190",
+      "body_characters": 287,
+      "target_body_span_characters": [
+        2597,
+        2884
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-regular-6"
+      ],
+      "chapter": "c04_regularity",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 392,
+      "source_heading": "Exercise~\\ref{ex:c-regular-6}: the logical uses of the hypotheses",
+      "target": "solutions/c04_regularity.tex",
+      "body_sha256": "ffa9ec33fb3554cc5deea5c250aff5e3046e68cf2c4ca8577e927285e51278c1",
+      "body_characters": 1610,
+      "target_body_span_characters": [
+        3007,
+        4617
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-branch-1"
+      ],
+      "chapter": "c05_branching",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 164,
+      "source_heading": "Exercise~\\ref{ex:c-branch-1}: the $x_4$ top",
+      "target": "solutions/c05_branching.tex",
+      "body_sha256": "9bb1eda96876886f65f9175a7da53701212c95ecfc3967cf0ec9688d96b66414",
+      "body_characters": 293,
+      "target_body_span_characters": [
+        150,
+        443
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-branch-2"
+      ],
+      "chapter": "c05_branching",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 422,
+      "source_heading": "Exercise~\\ref{ex:c-branch-2}: checking the top certificate",
+      "target": "solutions/c05_branching.tex",
+      "body_sha256": "7564c16b8a0dea560bace1f0e0002c04057521980ab9a7df144ab4924c42f08c",
+      "body_characters": 936,
+      "target_body_span_characters": [
+        558,
+        1494
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-branch-3"
+      ],
+      "chapter": "c05_branching",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 172,
+      "source_heading": "Exercise~\\ref{ex:c-branch-3}: multiplicities are squared",
+      "target": "solutions/c05_branching.tex",
+      "body_sha256": "879f6ba5bfbc3a0d3a343fe567e40f3c263ba8179360d051a863075c9282145a",
+      "body_characters": 285,
+      "target_body_span_characters": [
+        1607,
+        1892
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-branch-4"
+      ],
+      "chapter": "c05_branching",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 179,
+      "source_heading": "Exercise~\\ref{ex:c-branch-4}: the complex fusion algebra",
+      "target": "solutions/c05_branching.tex",
+      "body_sha256": "444bd753e28bf93c7adec3327a3fc4c3a780eaff7dc0fff49e7dedb1687fbb7e",
+      "body_characters": 553,
+      "target_body_span_characters": [
+        2005,
+        2558
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-branch-5"
+      ],
+      "chapter": "c05_branching",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 446,
+      "source_heading": "Exercise~\\ref{ex:c-branch-5}: the arithmetic exclusion",
+      "target": "solutions/c05_branching.tex",
+      "body_sha256": "0efa7e5a366c1ef5b495e63fb00390c90f9689ed5737e0b964986d2fef3c37d0",
+      "body_characters": 828,
+      "target_body_span_characters": [
+        2669,
+        3497
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-branch-6"
+      ],
+      "chapter": "c05_branching",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 193,
+      "source_heading": "Exercise~\\ref{ex:c-branch-6}: center global dimension",
+      "target": "solutions/c05_branching.tex",
+      "body_sha256": "b7c9ebe9f40d2abdd92a113c2efd10269098d26e9ef39d38649a3fb73eb162a3",
+      "body_characters": 393,
+      "target_body_span_characters": [
+        3607,
+        4000
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:unitarity-damping"
+      ],
+      "chapter": "r04_unitarity",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 216,
+      "source_heading": "Exercise~\\ref{ex:unitarity-damping}.",
+      "target": "solutions/r04_unitarity.tex",
+      "body_sha256": "8bb4f464fb987d5123eb6bbdbeb07ecee3f7e7fe457af7d3a7e014d04fee9fa3",
+      "body_characters": 422,
+      "target_body_span_characters": [
+        149,
+        571
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:unitarity-projector"
+      ],
+      "chapter": "r04_unitarity",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 232,
+      "source_heading": "Exercise~\\ref{ex:unitarity-projector}.",
+      "target": "solutions/r04_unitarity.tex",
+      "body_sha256": "735253431510f377ef7b4ea7e18fb1b0465f0bae838651ef5360bd0f0d4a4fc4",
+      "body_characters": 429,
+      "target_body_span_characters": [
+        674,
+        1103
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:unitarity-counting"
+      ],
+      "chapter": "r04_unitarity",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 242,
+      "source_heading": "Exercise~\\ref{ex:unitarity-counting}.",
+      "target": "solutions/r04_unitarity.tex",
+      "body_sha256": "68c4cabc5c67428a017a0b04c4f9b36d010e5d28d18d733e37227a85f40a2b88",
+      "body_characters": 566,
+      "target_body_span_characters": [
+        1204,
+        1770
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:unitarity-deck"
+      ],
+      "chapter": "r04_unitarity",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 254,
+      "source_heading": "Exercise~\\ref{ex:unitarity-deck}.",
+      "target": "solutions/r04_unitarity.tex",
+      "body_sha256": "71a1d111095b707fc6d4c1b86d01210f7903f743fc434884de931000414c78f7",
+      "body_characters": 426,
+      "target_body_span_characters": [
+        1863,
+        2289
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:unitarity-end"
+      ],
+      "chapter": "r04_unitarity",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 265,
+      "source_heading": "Exercise~\\ref{ex:unitarity-end}.",
+      "target": "solutions/r04_unitarity.tex",
+      "body_sha256": "fbee210773eb489e009e21db690fa29049d3cba9470a82c0f2466310947a802d",
+      "body_characters": 427,
+      "target_body_span_characters": [
+        2380,
+        2807
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:char-oscillator"
+      ],
+      "chapter": "r03_characters",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 156,
+      "source_heading": "Exercise~\\ref{ex:char-oscillator}.",
+      "target": "solutions/r03_characters.tex",
+      "body_sha256": "60051a61e4bae8a663146f14eb71ae025e3858d342914eac344e5f956d79f09f",
+      "body_characters": 368,
+      "target_body_span_characters": [
+        146,
+        514
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:char-primary"
+      ],
+      "chapter": "r03_characters",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 170,
+      "source_heading": "Exercise~\\ref{ex:char-primary}.",
+      "target": "solutions/r03_characters.tex",
+      "body_sha256": "fceeeb66c6e37b5ef7cf658d1361687af585dee104f0d695a64981e0742bf39c",
+      "body_characters": 413,
+      "target_body_span_characters": [
+        603,
+        1016
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:char-pole"
+      ],
+      "chapter": "r03_characters",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 188,
+      "source_heading": "Exercise~\\ref{ex:char-pole}.",
+      "target": "solutions/r03_characters.tex",
+      "body_sha256": "b698281ab8bc55d624d85b3c406d8e301f0eb11bf9992041688aaa88912f169c",
+      "body_characters": 524,
+      "target_body_span_characters": [
+        1099,
+        1623
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:char-equal"
+      ],
+      "chapter": "r03_characters",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 199,
+      "source_heading": "Exercise~\\ref{ex:char-equal}.",
+      "target": "solutions/r03_characters.tex",
+      "body_sha256": "d798340bba195542207048d37d46ad04825630dcde5b8cf40f059c5ec5ea99b6",
+      "body_characters": 408,
+      "target_body_span_characters": [
+        1708,
+        2116
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:char-uniqueness-scope"
+      ],
+      "chapter": "r03_characters",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 208,
+      "source_heading": "Exercise~\\ref{ex:char-uniqueness-scope}.",
+      "target": "solutions/r03_characters.tex",
+      "body_sha256": "731cf32a8f474214dd0667c25f5e01d4768aaf28220b6c6d44075ce58524a79a",
+      "body_characters": 359,
+      "target_body_span_characters": [
+        2223,
+        2582
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:full-relevant"
+      ],
+      "chapter": "r05_full_theories",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 277,
+      "source_heading": "Exercise~\\ref{ex:full-relevant}.",
+      "target": "solutions/r05_full_theories.tex",
+      "body_sha256": "d0336dae27b9e4a39e23fe46668011098d270e5afb42321b217f55923fbb17f3",
+      "body_characters": 367,
+      "target_body_span_characters": [
+        145,
+        512
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:full-E8states"
+      ],
+      "chapter": "r05_full_theories",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 289,
+      "source_heading": "Exercise~\\ref{ex:full-E8states}.",
+      "target": "solutions/r05_full_theories.tex",
+      "body_sha256": "acdf60d928ecf5910a7543d00d77966d9258b25d8d95a2d8aa56249870c09ee9",
+      "body_characters": 314,
+      "target_body_span_characters": [
+        603,
+        917
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:full-tail"
+      ],
+      "chapter": "r05_full_theories",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 300,
+      "source_heading": "Exercise~\\ref{ex:full-tail}.",
+      "target": "solutions/r05_full_theories.tex",
+      "body_sha256": "33142bc65093a04bb5c3cff9c49ef1128e07bab48e3a54780b69b0d55debc540",
+      "body_characters": 654,
+      "target_body_span_characters": [
+        1000,
+        1654
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:full-onevac"
+      ],
+      "chapter": "r05_full_theories",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 323,
+      "source_heading": "Exercise~\\ref{ex:full-onevac}.",
+      "target": "solutions/r05_full_theories.tex",
+      "body_sha256": "63f6853508bb17c823596232433b1beb50d32130d7c109700851e34543e10e99",
+      "body_characters": 364,
+      "target_body_span_characters": [
+        1741,
+        2105
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:full-symmetry"
+      ],
+      "chapter": "r05_full_theories",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 332,
+      "source_heading": "Exercise~\\ref{ex:full-symmetry}.",
+      "target": "solutions/r05_full_theories.tex",
+      "body_sha256": "93b1eea6fed7defe515958e22a24d8849d945a4aacd9cde6e4fc2fad4665829c",
+      "body_characters": 425,
+      "target_body_span_characters": [
+        2196,
+        2621
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:full-boost"
+      ],
+      "chapter": "r05_full_theories",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 341,
+      "source_heading": "Exercise~\\ref{ex:full-boost}.",
+      "target": "solutions/r05_full_theories.tex",
+      "body_sha256": "1a0d0740b609ae9a2bc92cc7601cda70aafd1230ff5a06d33477d2661c9dc2e3",
+      "body_characters": 587,
+      "target_body_span_characters": [
+        2706,
+        3293
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:corr-fifteen"
+      ],
+      "chapter": "r06_correlators",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 360,
+      "source_heading": "Exercise~\\ref{ex:corr-fifteen}.",
+      "target": "solutions/r06_correlators.tex",
+      "body_sha256": "0a7bf8ac03ac650e2358a9c62c8e08dde26c005e03831f1e7d56300fad101726",
+      "body_characters": 494,
+      "target_body_span_characters": [
+        141,
+        635
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:corr-blocks"
+      ],
+      "chapter": "r06_correlators",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 375,
+      "source_heading": "Exercise~\\ref{ex:corr-blocks}.",
+      "target": "solutions/r06_correlators.tex",
+      "body_sha256": "d1c77ed8642d81f7216ec43c8d1fdc384c30a4a8a00110f74da86c9a1f24f0df",
+      "body_characters": 496,
+      "target_body_span_characters": [
+        722,
+        1218
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:corr-stress"
+      ],
+      "chapter": "r06_correlators",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 389,
+      "source_heading": "Exercise~\\ref{ex:corr-stress}.",
+      "target": "solutions/r06_correlators.tex",
+      "body_sha256": "45e74edecf2fa84c812522628311725a80af78ad0b0bd62c461cc2aaff822e0f",
+      "body_characters": 486,
+      "target_body_span_characters": [
+        1305,
+        1791
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:corr-spin3"
+      ],
+      "chapter": "r06_correlators",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 404,
+      "source_heading": "Exercise~\\ref{ex:corr-spin3}.",
+      "target": "solutions/r06_correlators.tex",
+      "body_sha256": "9aed0e4cdc1cffdc2c9e7948be04196f8593b43586f32136c2ae6ea3c3c07417",
+      "body_characters": 295,
+      "target_body_span_characters": [
+        1876,
+        2171
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:corr-lightgram"
+      ],
+      "chapter": "r06_correlators",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 414,
+      "source_heading": "Exercise~\\ref{ex:corr-lightgram}.",
+      "target": "solutions/r06_correlators.tex",
+      "body_sha256": "aa3b9284a5a7d8fd72689cea0f3a0198d3f83de0ce974b349c5fa0e28dde836e",
+      "body_characters": 397,
+      "target_body_span_characters": [
+        2264,
+        2661
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:defect-projector"
+      ],
+      "chapter": "r07_defects",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 432,
+      "source_heading": "Exercise~\\ref{ex:defect-projector}.",
+      "target": "solutions/r07_defects.tex",
+      "body_sha256": "b5de5987f4acfd76e11e38cf0125e2fe6cc159311e986ae8aef5d9892c75f0c5",
+      "body_characters": 397,
+      "target_body_span_characters": [
+        145,
+        542
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:defect-twined"
+      ],
+      "chapter": "r07_defects",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 441,
+      "source_heading": "Exercise~\\ref{ex:defect-twined}.",
+      "target": "solutions/r07_defects.tex",
+      "body_sha256": "57bba91c00eeb9716eac9f194db820ab903d60dc53da36168322e80810b1a930",
+      "body_characters": 577,
+      "target_body_span_characters": [
+        633,
+        1210
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:defect-alpha"
+      ],
+      "chapter": "r07_defects",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 455,
+      "source_heading": "Exercise~\\ref{ex:defect-alpha}.",
+      "target": "solutions/r07_defects.tex",
+      "body_sha256": "836c37d2b2bfe820fb90c2c4386b213559b54dd459ba6ef75e7e12854972505e",
+      "body_characters": 412,
+      "target_body_span_characters": [
+        1299,
+        1711
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:defect-between"
+      ],
+      "chapter": "r07_defects",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 465,
+      "source_heading": "Exercise~\\ref{ex:defect-between}.",
+      "target": "solutions/r07_defects.tex",
+      "body_sha256": "4eb31e0d55bada2f3b5954012b767504f3d8632208d32f1558b80fd4eb324f6c",
+      "body_characters": 366,
+      "target_body_span_characters": [
+        1804,
+        2170
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:defect-categories"
+      ],
+      "chapter": "r07_defects",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 475,
+      "source_heading": "Exercise~\\ref{ex:defect-categories}.",
+      "target": "solutions/r07_defects.tex",
+      "body_sha256": "f1be536483ac2bb113bdaacb28c319d01e1300eafc35ab6a1c32777f2a7f04b0",
+      "body_characters": 594,
+      "target_body_span_characters": [
+        2269,
+        2863
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:sewing-Ising"
+      ],
+      "chapter": "r08_sewing",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 487,
+      "source_heading": "Exercise~\\ref{ex:sewing-Ising}.",
+      "target": "solutions/r08_sewing.tex",
+      "body_sha256": "7ee3ea5cd067a7f414c83a4f5d5ff40db4477589f32e9327324d881687df0ba7",
+      "body_characters": 444,
+      "target_body_span_characters": [
+        136,
+        580
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:sewing-pairing"
+      ],
+      "chapter": "r08_sewing",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 500,
+      "source_heading": "Exercise~\\ref{ex:sewing-pairing}.",
+      "target": "solutions/r08_sewing.tex",
+      "body_sha256": "1d7ced2ef0fd47656a7886fe3b28b73c15c2b81cab1d3697751b89d402e006da",
+      "body_characters": 623,
+      "target_body_span_characters": [
+        673,
+        1296
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:sewing-object"
+      ],
+      "chapter": "r08_sewing",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 513,
+      "source_heading": "Exercise~\\ref{ex:sewing-object}.",
+      "target": "solutions/r08_sewing.tex",
+      "body_sha256": "d8498429ed14f82a6fb6f2accd882f63672743205341ad8485fae16cb9d60274",
+      "body_characters": 762,
+      "target_body_span_characters": [
+        1387,
+        2149
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:sewing-coset"
+      ],
+      "chapter": "r08_sewing",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 528,
+      "source_heading": "Exercise~\\ref{ex:sewing-coset}.",
+      "target": "solutions/r08_sewing.tex",
+      "body_sha256": "85510191598c065acb1d54ab2d0be867a91c9a2a2b6ae826466ca3010dd883b6",
+      "body_characters": 364,
+      "target_body_span_characters": [
+        2238,
+        2602
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:sewing-descent"
+      ],
+      "chapter": "r08_sewing",
+      "source": "chapters/r_solutions.tex",
+      "source_line": 536,
+      "source_heading": "Exercise~\\ref{ex:sewing-descent}.",
+      "target": "solutions/r08_sewing.tex",
+      "body_sha256": "1326418eaeba8cd17d67f0df5d7d917fc18053374519fee4742e8c76a45f191b",
+      "body_characters": 557,
+      "target_body_span_characters": [
+        2695,
+        3252
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-1"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 472,
+      "source_heading": "Exercise~\\ref{ex:c-coset-1}: the perpendicular lattice",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "fd4be5865970018c29272f95f062984e5ac6074face2584c1fbd769ead6e41af",
+      "body_characters": 880,
+      "target_body_span_characters": [
+        157,
+        1037
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-2"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 493,
+      "source_heading": "Exercise~\\ref{ex:c-coset-2}: why branching multiplicities square",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "eb68c4678eff3fed9c9d000acbca9e6022b225feee79481a89580267da7e3ca8",
+      "body_characters": 1015,
+      "target_body_span_characters": [
+        1157,
+        2172
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-3"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 512,
+      "source_heading": "Exercise~\\ref{ex:c-coset-3}: exact near-two charges",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "71e8e64f8268c2981c4188ddebd4d3ac6964c1bf07b0551c3257efdd5fe4ec0a",
+      "body_characters": 613,
+      "target_body_span_characters": [
+        2279,
+        2892
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-4"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 205,
+      "source_heading": "Exercise~\\ref{ex:c-coset-4}: solving for a Virasoro axis",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "8347a76f37c45228b1405c4b72e1fe9f04c96a664001a663d7edb2d854c5d917",
+      "body_characters": 507,
+      "target_body_span_characters": [
+        3004,
+        3511
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-5"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 218,
+      "source_heading": "Exercise~\\ref{ex:c-coset-5}: the vacuum grade-four Gram matrix",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "d82d3f9eb5ab99c9c79b0ec7693434808c1d7b26978dbe2b0e7626471a5d80a6",
+      "body_characters": 392,
+      "target_body_span_characters": [
+        3629,
+        4021
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-6"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 528,
+      "source_heading": "Exercise~\\ref{ex:c-coset-6}: the trivial grading",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "f70b9a4c7a4b2dafbf2fc0a96df80b2fc137557e55916814fc253bb12257083d",
+      "body_characters": 858,
+      "target_body_span_characters": [
+        4125,
+        4983
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-7"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 230,
+      "source_heading": "Exercise~\\ref{ex:c-coset-7}: bounded projected energy",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "6b7981a063e8024ad1b185ca054e389c8ec7be808964740675d1a78c0a0d06fd",
+      "body_characters": 563,
+      "target_body_span_characters": [
+        5092,
+        5655
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-8"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 241,
+      "source_heading": "Exercise~\\ref{ex:c-coset-8}: a sum and its diagonal square",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "8905bf8a97ba71c66afa51b65c69b9d27708692170cf89f7bc7649b935c09a09",
+      "body_characters": 636,
+      "target_body_span_characters": [
+        5769,
+        6405
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-9"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 547,
+      "source_heading": "Exercise~\\ref{ex:c-coset-9}: independent temperatures",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "aba82b89322b9f4ff739acd3dfb4e7788d74dd2f7209955ed58dd0062f642d03",
+      "body_characters": 998,
+      "target_body_span_characters": [
+        6514,
+        7512
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:c-coset-10"
+      ],
+      "chapter": "c06_cosets",
+      "source": "chapters/c_solutions.tex",
+      "source_line": 255,
+      "source_heading": "Exercise~\\ref{ex:c-coset-10}: the dimension threshold",
+      "target": "solutions/c06_cosets.tex",
+      "body_sha256": "824103a15af16d4577e61b3ad1d45ab8f27efa7d923492bbb6d936c9c3d4f3ad",
+      "body_characters": 795,
+      "target_body_span_characters": [
+        7622,
+        8417
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:chain-dimension"
+      ],
+      "chapter": "l01_chain",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 3,
+      "source_heading": "Exercise~\\ref{ex:chain-dimension}",
+      "target": "solutions/l01_chain.tex",
+      "body_sha256": "e6980deda98a7a5e0cd716cccc332197dda910c00138088d6ce9df31b97cf042",
+      "body_characters": 454,
+      "target_body_span_characters": [
+        141,
+        595
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:chain-projector"
+      ],
+      "chapter": "l01_chain",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 15,
+      "source_heading": "Exercise~\\ref{ex:chain-projector}",
+      "target": "solutions/l01_chain.tex",
+      "body_sha256": "c171f8282bdabd3666b215772ccc8c5da9220277f23489e2c5fa882bb3bbc3c3",
+      "body_characters": 486,
+      "target_body_span_characters": [
+        690,
+        1176
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:chain-orbit"
+      ],
+      "chapter": "l01_chain",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 25,
+      "source_heading": "Exercise~\\ref{ex:chain-orbit}",
+      "target": "solutions/l01_chain.tex",
+      "body_sha256": "0bc4c2944ce43a867a74425d974f9ec55a37eb4db140fba9b77a74bd6670fba1",
+      "body_characters": 511,
+      "target_body_span_characters": [
+        1263,
+        1774
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:chain-noninvertible"
+      ],
+      "chapter": "l01_chain",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 38,
+      "source_heading": "Exercise~\\ref{ex:chain-noninvertible}",
+      "target": "solutions/l01_chain.tex",
+      "body_sha256": "5d3223daffa38caf29aee59ad16914202aa5fbe82335469960b27f2436970c77",
+      "body_characters": 453,
+      "target_body_span_characters": [
+        1877,
+        2330
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:chain-boundary"
+      ],
+      "chapter": "l01_chain",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 51,
+      "source_heading": "Exercise~\\ref{ex:chain-boundary}",
+      "target": "solutions/l01_chain.tex",
+      "body_sha256": "5e8b2bc1775ff6b05e479507686d17409f66d8f0a063511d9781c0182ad27cdb",
+      "body_characters": 566,
+      "target_body_span_characters": [
+        2423,
+        2989
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:scaling-residual"
+      ],
+      "chapter": "l02_scaling",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 64,
+      "source_heading": "Exercise~\\ref{ex:scaling-residual}",
+      "target": "solutions/l02_scaling.tex",
+      "body_sha256": "1943d628843ce6e213428d2229c79194d3ba7e55feddb99a60bd351cd9164cbc",
+      "body_characters": 434,
+      "target_body_span_characters": [
+        145,
+        579
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:scaling-stress"
+      ],
+      "chapter": "l02_scaling",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 74,
+      "source_heading": "Exercise~\\ref{ex:scaling-stress}",
+      "target": "solutions/l02_scaling.tex",
+      "body_sha256": "e29b1512b5281abe04c51dc201dc937895a00ba2bf62fc680ecb54800bc9d7e7",
+      "body_characters": 459,
+      "target_body_span_characters": [
+        672,
+        1131
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:scaling-improvement"
+      ],
+      "chapter": "l02_scaling",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 88,
+      "source_heading": "Exercise~\\ref{ex:scaling-improvement}",
+      "target": "solutions/l02_scaling.tex",
+      "body_sha256": "40e441994f3776dd6176d93b453b0e4c4a6950a0f36f892b4bb1796d404a25f4",
+      "body_characters": 1024,
+      "target_body_span_characters": [
+        1234,
+        2258
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:scaling-casimir"
+      ],
+      "chapter": "l02_scaling",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 112,
+      "source_heading": "Exercise~\\ref{ex:scaling-casimir}",
+      "target": "solutions/l02_scaling.tex",
+      "body_sha256": "6f6ef5452ba07806da110ec3ba704149b31e05faa157694d4b75cbf8260e4b4b",
+      "body_characters": 517,
+      "target_body_span_characters": [
+        2353,
+        2870
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:scaling-fraction"
+      ],
+      "chapter": "l02_scaling",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 129,
+      "source_heading": "Exercise~\\ref{ex:scaling-fraction}",
+      "target": "solutions/l02_scaling.tex",
+      "body_sha256": "a91331651ab16491368accdd092bf13979baa063dd2aeb2df25de48c8f5710b5",
+      "body_characters": 419,
+      "target_body_span_characters": [
+        2967,
+        3386
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:scaling-modular"
+      ],
+      "chapter": "l02_scaling",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 139,
+      "source_heading": "Exercise~\\ref{ex:scaling-modular}",
+      "target": "solutions/l02_scaling.tex",
+      "body_sha256": "442febe068b6953a4b4b539904451f01148b991646e3ad354ba4174de951e8b3",
+      "body_characters": 997,
+      "target_body_span_characters": [
+        3481,
+        4478
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:overlap-phases"
+      ],
+      "chapter": "l03_overlaps",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 166,
+      "source_heading": "Exercise~\\ref{ex:overlap-phases}",
+      "target": "solutions/l03_overlaps.tex",
+      "body_sha256": "792cf7ea5bcecde1517c6f5af1e9d9492a2fbcb88ae586ba97ff2cc01f6093f0",
+      "body_characters": 535,
+      "target_body_span_characters": [
+        142,
+        677
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:overlap-descendant"
+      ],
+      "chapter": "l03_overlaps",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 178,
+      "source_heading": "Exercise~\\ref{ex:overlap-descendant}",
+      "target": "solutions/l03_overlaps.tex",
+      "body_sha256": "ce7cdda43480d3a45f13c4e06140b0f820aec15e094975d19738d98d788eb0d4",
+      "body_characters": 500,
+      "target_body_span_characters": [
+        778,
+        1278
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:overlap-cumulant"
+      ],
+      "chapter": "l03_overlaps",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 196,
+      "source_heading": "Exercise~\\ref{ex:overlap-cumulant}",
+      "target": "solutions/l03_overlaps.tex",
+      "body_sha256": "908bb7d41534b9c0538e51740bbf1ecbdd5c9e133addefc3f2d83df8991fb939",
+      "body_characters": 942,
+      "target_body_span_characters": [
+        1375,
+        2317
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:overlap-filter"
+      ],
+      "chapter": "l03_overlaps",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 218,
+      "source_heading": "Exercise~\\ref{ex:overlap-filter}",
+      "target": "solutions/l03_overlaps.tex",
+      "body_sha256": "95f1e66c67ea5bfefe0f40c0f99bc29a8830ef9c9c52cdfbda71ffd32226a016",
+      "body_characters": 528,
+      "target_body_span_characters": [
+        2410,
+        2938
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:overlap-response"
+      ],
+      "chapter": "l03_overlaps",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 229,
+      "source_heading": "Exercise~\\ref{ex:overlap-response}",
+      "target": "solutions/l03_overlaps.tex",
+      "body_sha256": "a09b6745524dbe18d53b0cc5b33172921d9ff242d1c1c0c3b29256288b8a67c3",
+      "body_characters": 503,
+      "target_body_span_characters": [
+        3035,
+        3538
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:overlap-current"
+      ],
+      "chapter": "l03_overlaps",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 240,
+      "source_heading": "Exercise~\\ref{ex:overlap-current}",
+      "target": "solutions/l03_overlaps.tex",
+      "body_sha256": "34a4735c2b1fe8e38b39f4821ee35599e12fcfef01ef4dfeaa09d8c2a01231c2",
+      "body_characters": 816,
+      "target_body_span_characters": [
+        3633,
+        4449
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:overlap-branch"
+      ],
+      "chapter": "l03_overlaps",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 261,
+      "source_heading": "Exercise~\\ref{ex:overlap-branch}",
+      "target": "solutions/l03_overlaps.tex",
+      "body_sha256": "8a7f42739db613e5139d284ebf8ed848127ef05e86b4fb86b162b1f01fe5cef7",
+      "body_characters": 615,
+      "target_body_span_characters": [
+        4542,
+        5157
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:MPS-schmidt"
+      ],
+      "chapter": "l04_tensor_networks",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 280,
+      "source_heading": "Exercise~\\ref{ex:MPS-schmidt}",
+      "target": "solutions/l04_tensor_networks.tex",
+      "body_sha256": "51e82c20775b798aa60fbb40695a697ea669e32fcc09faffd85c1fad7a7ab67b",
+      "body_characters": 571,
+      "target_body_span_characters": [
+        143,
+        714
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:MPS-edge"
+      ],
+      "chapter": "l04_tensor_networks",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 295,
+      "source_heading": "Exercise~\\ref{ex:MPS-edge}",
+      "target": "solutions/l04_tensor_networks.tex",
+      "body_sha256": "81458f1ac42214e79fe35ad4afc9656a69bfe6d15e5920b20cc212a0a01292d8",
+      "body_characters": 583,
+      "target_body_span_characters": [
+        795,
+        1378
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:MPS-correlation"
+      ],
+      "chapter": "l04_tensor_networks",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 307,
+      "source_heading": "Exercise~\\ref{ex:MPS-correlation}",
+      "target": "solutions/l04_tensor_networks.tex",
+      "body_sha256": "391b812e5498cbbea7737e25f3eed921aa748f5db84d685c2bdd8e42cb0d4bcb",
+      "body_characters": 600,
+      "target_body_span_characters": [
+        1473,
+        2073
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:MPS-cat"
+      ],
+      "chapter": "l04_tensor_networks",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 322,
+      "source_heading": "Exercise~\\ref{ex:MPS-cat}",
+      "target": "solutions/l04_tensor_networks.tex",
+      "body_sha256": "8c0d16dab161b329eed4625d374983086ca705e3e73c79ade80dfd8792edd97b",
+      "body_characters": 459,
+      "target_body_span_characters": [
+        2152,
+        2611
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:MPS-resolvent"
+      ],
+      "chapter": "l04_tensor_networks",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 332,
+      "source_heading": "Exercise~\\ref{ex:MPS-resolvent}",
+      "target": "solutions/l04_tensor_networks.tex",
+      "body_sha256": "6615cb3081585f29b096664076e506c72b3dc743116f10c715f2a4dd891e3df4",
+      "body_characters": 862,
+      "target_body_span_characters": [
+        2702,
+        3564
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:MPS-scaling"
+      ],
+      "chapter": "l04_tensor_networks",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 352,
+      "source_heading": "Exercise~\\ref{ex:MPS-scaling}",
+      "target": "solutions/l04_tensor_networks.tex",
+      "body_sha256": "44850a23aa703ff35fe1ab65e6f25cee034ba8c0900d8f43014c740aa4c797da",
+      "body_characters": 589,
+      "target_body_span_characters": [
+        3651,
+        4240
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:gapped-PF"
+      ],
+      "chapter": "l05_gapped",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 370,
+      "source_heading": "Exercise~\\ref{ex:gapped-PF}",
+      "target": "solutions/l05_gapped.tex",
+      "body_sha256": "151046f0109826ed69fe77de348b6ab92a84a9ff95f0e20abdd7cdeb3052b619",
+      "body_characters": 795,
+      "target_body_span_characters": [
+        130,
+        925
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:gapped-cubics"
+      ],
+      "chapter": "l05_gapped",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 388,
+      "source_heading": "Exercise~\\ref{ex:gapped-cubics}",
+      "target": "solutions/l05_gapped.tex",
+      "body_sha256": "c90d0fde6f50b8a84b2f8ab84aac75a838021b1c90f86aa30cbc18d858779c6e",
+      "body_characters": 592,
+      "target_body_span_characters": [
+        1016,
+        1608
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:gapped-parent",
+        "ex:gapped-short"
+      ],
+      "chapter": "l05_gapped",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 407,
+      "source_heading": "Exercises~\\ref{ex:gapped-parent} and \\ref{ex:gapped-short}",
+      "target": "solutions/l05_gapped.tex",
+      "body_sha256": "2ec8a1e8b3c9f6cbfa68b89a7d61bf7cf09cb5b180e5286c213fed0f91cb48a0",
+      "body_characters": 956,
+      "target_body_span_characters": [
+        1754,
+        2710
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:gapped-filter"
+      ],
+      "chapter": "l05_gapped",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 426,
+      "source_heading": "Exercise~\\ref{ex:gapped-filter}",
+      "target": "solutions/l05_gapped.tex",
+      "body_sha256": "4cd0251a506aae660b5d0742cbe48c35983197f7c5151d6c792f622044108630",
+      "body_characters": 601,
+      "target_body_span_characters": [
+        2801,
+        3402
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:identification-product"
+      ],
+      "chapter": "l06_identification",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 444,
+      "source_heading": "Exercise~\\ref{ex:identification-product}",
+      "target": "solutions/l06_identification.tex",
+      "body_sha256": "af50b8c701da05bbbd53744687ad5ccef7f5b1010dafb7caaa3eba17aa60c241",
+      "body_characters": 524,
+      "target_body_span_characters": [
+        164,
+        688
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:identification-Narain"
+      ],
+      "chapter": "l06_identification",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 455,
+      "source_heading": "Exercise~\\ref{ex:identification-Narain}",
+      "target": "solutions/l06_identification.tex",
+      "body_sha256": "6e8593cd34571b44ddc0a8f98c78da54aaeab44c773bdc6748a9c8dc8ba6b922",
+      "body_characters": 468,
+      "target_body_span_characters": [
+        795,
+        1263
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:identification-triad"
+      ],
+      "chapter": "l06_identification",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 465,
+      "source_heading": "Exercise~\\ref{ex:identification-triad}",
+      "target": "solutions/l06_identification.tex",
+      "body_sha256": "db092c966a8ae86596a4319979cf0417f1f2a305ac6d7993e5294fba9d304c3e",
+      "body_characters": 399,
+      "target_body_span_characters": [
+        1368,
+        1767
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:identification-crossing"
+      ],
+      "chapter": "l06_identification",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 474,
+      "source_heading": "Exercise~\\ref{ex:identification-crossing}",
+      "target": "solutions/l06_identification.tex",
+      "body_sha256": "deed01c150b6f5ab3b6199d63227c4309b7d0f2cfc2dda076b74589888ba5e8d",
+      "body_characters": 1967,
+      "target_body_span_characters": [
+        1878,
+        3845
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:identification-orbifold"
+      ],
+      "chapter": "l06_identification",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 525,
+      "source_heading": "Exercise~\\ref{ex:identification-orbifold}",
+      "target": "solutions/l06_identification.tex",
+      "body_sha256": "8a9848b2c8042a4cbb16f294814c1c7bf89343edcdd2ebe67a0aa6ee6c505f10",
+      "body_characters": 815,
+      "target_body_span_characters": [
+        3956,
+        4771
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:identification-Potts"
+      ],
+      "chapter": "l06_identification",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 544,
+      "source_heading": "Exercise~\\ref{ex:identification-Potts}",
+      "target": "solutions/l06_identification.tex",
+      "body_sha256": "d8c3cd24893d60eb8493c851dc28fa13d5aed09febcc686b6b9feddbd6cab00d",
+      "body_characters": 546,
+      "target_body_span_characters": [
+        4876,
+        5422
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:identification-norm"
+      ],
+      "chapter": "l06_identification",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 556,
+      "source_heading": "Exercise~\\ref{ex:identification-norm}",
+      "target": "solutions/l06_identification.tex",
+      "body_sha256": "819dc96b6b5dd33a8e8b699a3ed89148d02d0aca39946959e6021b5475df4119",
+      "body_characters": 802,
+      "target_body_span_characters": [
+        5525,
+        6327
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:identification-residues"
+      ],
+      "chapter": "l06_identification",
+      "source": "chapters/l_solutions.tex",
+      "source_line": 576,
+      "source_heading": "Exercise~\\ref{ex:identification-residues}",
+      "target": "solutions/l06_identification.tex",
+      "body_sha256": "d814426134bb44a72cd1355532190eb1ce53c2979eb01570dd7d6c8a6319ab43",
+      "body_characters": 900,
+      "target_body_span_characters": [
+        6438,
+        7338
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:HI-periods"
+      ],
+      "chapter": "f05_arithmetic",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 316,
+      "source_heading": "Exercise~\\ref{ex:HI-periods}.",
+      "target": "solutions/f05_arithmetic.tex",
+      "body_sha256": "eedc40aad5b2502ef1e9c60d98301ab2ead6a545de85f9379e25a3e487b24e52",
+      "body_characters": 474,
+      "target_body_span_characters": [
+        136,
+        610
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:HI-sign"
+      ],
+      "chapter": "f05_arithmetic",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 332,
+      "source_heading": "Exercise~\\ref{ex:HI-sign}.",
+      "target": "solutions/f05_arithmetic.tex",
+      "body_sha256": "01a53312bb2df38c78265bc3c7b417f7078a54be3d1d3dfa58a1d420d08c998c",
+      "body_characters": 780,
+      "target_body_span_characters": [
+        689,
+        1469
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:exact-rank"
+      ],
+      "chapter": "f05_arithmetic",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 350,
+      "source_heading": "Exercise~\\ref{ex:exact-rank}.",
+      "target": "solutions/f05_arithmetic.tex",
+      "body_sha256": "a316f1c4cd08404c3e6a4e8734724c30d9c742d97294d5006ee575dad9a6eb44",
+      "body_characters": 522,
+      "target_body_span_characters": [
+        1554,
+        2076
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:component-norm"
+      ],
+      "chapter": "f05_arithmetic",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 364,
+      "source_heading": "Exercise~\\ref{ex:component-norm}.",
+      "target": "solutions/f05_arithmetic.tex",
+      "body_sha256": "cf00549f39aed0cf9c5f4ffc449f00ce3eb8c6f5778422c86622c7ecc7e3ff68",
+      "body_characters": 309,
+      "target_body_span_characters": [
+        2169,
+        2478
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:unitarity-hierarchy"
+      ],
+      "chapter": "f05_arithmetic",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 371,
+      "source_heading": "Exercise~\\ref{ex:unitarity-hierarchy}.",
+      "target": "solutions/f05_arithmetic.tex",
+      "body_sha256": "0515b80e9471319d4f0bfd9de353362ee51fb95ce9d68e560340ed1afebcbf19",
+      "body_characters": 453,
+      "target_body_span_characters": [
+        2581,
+        3034
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:noncyclic-factorization"
+      ],
+      "chapter": "f06_related_categories",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 383,
+      "source_heading": "Exercise~\\ref{ex:noncyclic-factorization}.",
+      "target": "solutions/f06_related_categories.tex",
+      "body_sha256": "adfdc0a3c99017cc16118fc2e8db0da47ca88029849181f3ae94f75386bf1b71",
+      "body_characters": 573,
+      "target_body_span_characters": [
+        170,
+        743
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:noncyclic-eight-branch"
+      ],
+      "chapter": "f06_related_categories",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 398,
+      "source_heading": "Exercise~\\ref{ex:noncyclic-eight-branch}.",
+      "target": "solutions/f06_related_categories.tex",
+      "body_sha256": "202516488b7bc79be8c0bf5912551918fe2c8ec19d996b0de6c352440b376719",
+      "body_characters": 822,
+      "target_body_span_characters": [
+        852,
+        1674
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:noncyclic-smith"
+      ],
+      "chapter": "f06_related_categories",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 422,
+      "source_heading": "Exercise~\\ref{ex:noncyclic-smith}.",
+      "target": "solutions/f06_related_categories.tex",
+      "body_sha256": "777b50abb0ca5e51a1f9919d06d517336b1d478d0f4d9a3a85cfab9972f9dc9d",
+      "body_characters": 494,
+      "target_body_span_characters": [
+        1769,
+        2263
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:EH-moment-projections"
+      ],
+      "chapter": "f06_related_categories",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 435,
+      "source_heading": "Exercise~\\ref{ex:EH-moment-projections}.",
+      "target": "solutions/f06_related_categories.tex",
+      "body_sha256": "8c506ba8123a57aee27acd7fe7eac40b33bb1b4f1f109b4eeaf373ce584d87d5",
+      "body_characters": 570,
+      "target_body_span_characters": [
+        2370,
+        2940
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:EH-word-tensor"
+      ],
+      "chapter": "f06_related_categories",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 454,
+      "source_heading": "Exercise~\\ref{ex:EH-word-tensor}.",
+      "target": "solutions/f06_related_categories.tex",
+      "body_sha256": "67baa1e7d4c366fdaff7432225a1c04a4dbee599d79fb8bd46ca6a2fe8d38bf0",
+      "body_characters": 564,
+      "target_body_span_characters": [
+        3033,
+        3597
+      ]
+    },
+    {
+      "exercise_labels": [
+        "ex:EH-reflection-F"
+      ],
+      "chapter": "f06_related_categories",
+      "source": "chapters/f_solutions.tex",
+      "source_line": 469,
+      "source_heading": "Exercise~\\ref{ex:EH-reflection-F}.",
+      "target": "solutions/f06_related_categories.tex",
+      "body_sha256": "1a21e9cd417e8596bd16387e8b4a19bf1c9a1770ee639df12efca9acb89d6090",
+      "body_characters": 617,
+      "target_body_span_characters": [
+        3692,
+        4309
+      ]
+    }
+  ],
+  "source_sha256": {
+    "haagerup_cft_textbook.tex": "4cc8e4af12216bf07ced0001437311edf552ddc61d10140b98a1b0767e9b67ca",
+    "chapters/f01_fusion.tex": "c11f71e92c92a4c86db3ac904ce29743fd216546c397bcbd46d9d988e0d43f7b",
+    "chapters/r01_cft.tex": "5e3948ce8665dad38ddb40b6d4a6f2629e2ca99fe2005c256ed9344dce04886c",
+    "chapters/r02_vertex_algebras.tex": "73b858acc62e08db6b53704d4631728bb60e2dce5b7002de5f7c6b5a7b45e823",
+    "chapters/f02_haagerup.tex": "cfe26e733cad39420af19918b0b9b49be630753389d5bd6332a774c176fe4fb2",
+    "chapters/f03_centers.tex": "430b84cbb083c3712e2c1122a168bad8cd0a395a063f36e6edc2004ab2f157e6",
+    "chapters/f04_modular.tex": "f4250d096c311f8473a3e903fc7019bab7018f88a2240301d7b9b9ef0b0ecfc2",
+    "chapters/c01_lattice_embedding.tex": "0ded77e127f0331e8a181b47fc74a9f49ba4b8ed815ff469465a904e6ae45ce4",
+    "chapters/c02_finite_closure.tex": "bc5428d9ebb8898aa6a9c61bf9b4813c3fe74af68d447fdcd325e208712bd7d5",
+    "chapters/c03_factors.tex": "c28a6e2a6a2afb13da62529c02e31004b44c8a44b3e245f332b0e6efe177833e",
+    "chapters/c04_regularity.tex": "babaede85956c8a52e7f15391a0a1d4c163fb7da3c75662d31fc18c7ae5f38df",
+    "chapters/c05_branching.tex": "93dfde466e3098c8dd9f1e27ba591c2a2b70f7d13a42734721ec2dda21b279c2",
+    "chapters/r04_unitarity.tex": "a9bb1a08a0205f61963070a5631d2454f7547f0c7fef1085a9044c8506d2dcf3",
+    "chapters/r03_characters.tex": "3eab529177baf9a21d83c8a701b2b1963fcf7856fd31fb38cddb2b5c89fb4223",
+    "chapters/r05_full_theories.tex": "a6c2f08c9b5427dab876b7b99485dc866b332b7f6a2f6aaa03f4727d43795b15",
+    "chapters/r06_correlators.tex": "289fa9dafdb169abcafddf29f3182e40e275ecbc6cd17e4a1137aea962ebab05",
+    "chapters/r07_defects.tex": "1b5d5319c56a4eba4cf85b09ac022aa980a2f16d00576a216edbc3f14a4abbcf",
+    "chapters/r08_sewing.tex": "072c9a77716d763d08d2cafe1af8bf433553e5fd2b4964125adcd79cb07c01e4",
+    "chapters/c06_cosets.tex": "adead92089e2ad775d073cc74900a4d8c0f12357e431fcf18f037bb60dc43015",
+    "chapters/l01_chain.tex": "68af20e5c3e056ee24f93f1043063b15dfe7c2de606907059cacceb177d24655",
+    "chapters/l02_scaling.tex": "95ecd698b370f75bb150310d26a1853b704660c50b213c7d8114c1c0113eecd4",
+    "chapters/l03_overlaps.tex": "9169b8c8bd2160866d6dbcbb6204170beb281f5bd07d7162b51e097ac15fc661",
+    "chapters/l04_tensor_networks.tex": "bc64d2ebdf0af9775cf6fea32394c3fd2ccdb2dfcacc71a8866efd51383459d5",
+    "chapters/l05_gapped.tex": "95be039e91a50b9fc6e1d7f095eff31ae82e27c17285a86e71a6757eb8e43085",
+    "chapters/l06_identification.tex": "87bd5ca27163716191aec3b93150e3a9583961426fd5d297151484e6e1849cc9",
+    "chapters/f05_arithmetic.tex": "333f4282d84fff8f94e929d170d016451ca606bad2c58b1adee445a1acfa326b",
+    "chapters/f06_related_categories.tex": "4a0a87d059f346ef041b18740234d9c1f267b9d649b23b81945b6f34ba3c35f0",
+    "chapters/r_solutions.tex": "9d056b7c0ab64932f177d5e43ccad9d99b48020a6996aefa6b1769abb35a8503",
+    "chapters/f_solutions.tex": "292d266c82e448939bd93c491c384a891185d8ae5e17cb79e73da7b7230e4db9",
+    "chapters/c_solutions.tex": "3b3cf41fc41ae18202d6cc21e1f998ff2d9be0781de919845ebbac07d152c5af",
+    "chapters/l_solutions.tex": "54b0856366323526db83b08a7a30efaec9362dbaba6f62f35b1fb7c40da7a9d1"
+  },
+  "output_sha256": {
+    "editorial/source_drafts/r_solutions.tex.txt": "9d056b7c0ab64932f177d5e43ccad9d99b48020a6996aefa6b1769abb35a8503",
+    "editorial/source_drafts/f_solutions.tex.txt": "292d266c82e448939bd93c491c384a891185d8ae5e17cb79e73da7b7230e4db9",
+    "editorial/source_drafts/c_solutions.tex.txt": "3b3cf41fc41ae18202d6cc21e1f998ff2d9be0781de919845ebbac07d152c5af",
+    "editorial/source_drafts/l_solutions.tex.txt": "54b0856366323526db83b08a7a30efaec9362dbaba6f62f35b1fb7c40da7a9d1",
+    "solutions/f01_fusion.tex": "2d9f9a27c7001f5e9c266c31e9f430323d4156453f716ce50ca4adae9babbb41",
+    "chapters/f01_fusion.tex": "36a48db936466b3e64b39ee442d9e2fe9718a9fb9e62dd57976e73888f14faef",
+    "solutions/r01_cft.tex": "473677db013612ce4b3bdfcf7296587b9f658703b649c1ed1bf0a838671b0a83",
+    "chapters/r01_cft.tex": "8d574424f469b8a6e6c023a3c804cad0b82f1159682b8f9eee7ef8e60494a85b",
+    "solutions/r02_vertex_algebras.tex": "9b6d11008a134a3873f98b5e252a8cb544509492b8127655989c92635597439e",
+    "chapters/r02_vertex_algebras.tex": "460cb129f79b1157b4dae02eb9bfde5e0d67016a613a0e0efa3814051d872827",
+    "solutions/f02_haagerup.tex": "2f8ad4b6c041edc66546bc2def477984cd2023fe05e934af86aa53ec123bf690",
+    "chapters/f02_haagerup.tex": "c2d264a3395d709ecf31a8fa6181fae918a1dce53b19e45e246e38e8c2668f3e",
+    "solutions/f03_centers.tex": "f8a7a22afc97cfe370a6a5827328e29dd80a43c2c6f00e62e22e9eaca47b96a2",
+    "chapters/f03_centers.tex": "ec8700c52356087cc1f4bde8805d5c8ca17d578c1ad8c47a40b77cd6995f318f",
+    "solutions/f04_modular.tex": "7796762d265d4fc0aefe8d3049c5e763de195db829663f7f016dda458915e53c",
+    "chapters/f04_modular.tex": "22318d4b4b3a6735be23304190cde962d0dab3a7e001157b78011ad4783482f9",
+    "solutions/c01_lattice_embedding.tex": "c5d3e97a286a518eab3071c107616c0e7acc5e5942e2d2bb5c5cf5801afc2c72",
+    "chapters/c01_lattice_embedding.tex": "38cc138c79062a58304c112d6e0f15cf5760823b7d8f197f81a0ee84d684b8fa",
+    "solutions/c02_finite_closure.tex": "c0db392e5402d157cf7e572022e494ec6f246be8da7638dcb034dc345566b0fe",
+    "chapters/c02_finite_closure.tex": "f3809d0ca901279f0bdac236a90eaec8cce7056595d8477237d2145a32c45e4f",
+    "solutions/c03_factors.tex": "468618008613af65ad0af860d128494b15f8ed28c680a7d36908c0ca2ecd1f43",
+    "chapters/c03_factors.tex": "5900a3d43a49749dabc010bb274657e882a1cd0b5c1f6ec682c69cf56527cce1",
+    "solutions/c04_regularity.tex": "8a0d0a7ac3ee81e762463525f492bf72d289b94a79e29526ebb86f5f21cfec3c",
+    "chapters/c04_regularity.tex": "0508b903eece14e5017afe940a1e7d38480e251f0ac15f75abe0a3326f7f9d9d",
+    "solutions/c05_branching.tex": "0d5fa6381361858061f66776a4c7cdc9f600f3a46d8e1cf6b1f3e0ff5b630b85",
+    "chapters/c05_branching.tex": "65e0962f5530ff11bb01f596cb505fa26452e927759443a7cd9a27e85ac55392",
+    "solutions/r04_unitarity.tex": "e25904a082a96a5697bc7dd87e68be190f2c063949c51d01ed554bee329dde91",
+    "chapters/r04_unitarity.tex": "0b4092efc11c801436985ad764160317596089c890a4a7e623c1d0b12fdaf9e1",
+    "solutions/r03_characters.tex": "35bc6b936840beaf7e427075ea9c2c8562a487acb4ed9738efbc0378cea8861a",
+    "chapters/r03_characters.tex": "b99395299867eb124783d0a8202f7be5400b8c0b50179af5105d711295eb78f0",
+    "solutions/r05_full_theories.tex": "b5e460699f7478995b97c5ee27efdd4d688d5e70be324bcd3979ccb9da0695ac",
+    "chapters/r05_full_theories.tex": "59ce37071364ed5cfea2bdfdff75d14d7d3ac67d3895f0e9898a3b55e8ea6178",
+    "solutions/r06_correlators.tex": "011288ecb0530c7c1f16e5f04fa09b627cacd532df4210964b36b67d9445a89b",
+    "chapters/r06_correlators.tex": "7f7edc5287d64b2729427c87dd50315fd0e9e0a609e3d5fdee3e85fa92bb6ca6",
+    "solutions/r07_defects.tex": "7e02a369dba64c6282dde3c6861cb4826ead526fcd94634c1ad4e3478560f19b",
+    "chapters/r07_defects.tex": "8f0e99408a0d017a2fd949519810d6ada5e6a29edab539ae161ade88c30b1788",
+    "solutions/r08_sewing.tex": "d83f5763898a4419bf136b6e58c9116444848981f425b3b78beced67f06e5f65",
+    "chapters/r08_sewing.tex": "5ef3e7c1a91531b7bf0b17b8848bd7570d1ad82b9a0aedd4117bf1e075acfbe0",
+    "solutions/c06_cosets.tex": "5400dce2d3dfacd759bc83e3440716ae1006d4ec0cdc508f45293d1e1b02d1b0",
+    "chapters/c06_cosets.tex": "8554e7d03702a07767cc8db14c3db41985f0b85577740f48276e184760fa4e82",
+    "solutions/l01_chain.tex": "b9a6c2334f0c5754645b6c98b70e40f4a6407852759f90e3f7a4bd68f6d932fe",
+    "chapters/l01_chain.tex": "9de2a9684c7cc1ff446562265eb92342304f2a752fc1aa16157103eb0162653f",
+    "solutions/l02_scaling.tex": "126115300a55ad095ae08b13b7da2a4e9bbea69d0f6352fa6bf8fa00a6bb6c54",
+    "chapters/l02_scaling.tex": "ad4b6475588d5655a55d869b02fb3058e7551d4345468a0ce6f155137c589f22",
+    "solutions/l03_overlaps.tex": "5974cd42a06b7d467dba1e8220f745ab4f228bc87d85825e92f66ef7cd7d73ba",
+    "chapters/l03_overlaps.tex": "eacea731c165b3a5378603baa2c651e42c4c606eb0ff8fc27ceac5f7bd6947f6",
+    "solutions/l04_tensor_networks.tex": "d881768b01a6d31a8fbb9918012a97862af5d299b0c9966db25d7bcabde8e065",
+    "chapters/l04_tensor_networks.tex": "b0aa0b3003e876543a7fda3bbdf1fbfe29f6f91e11b3f80886ff395a53191193",
+    "solutions/l05_gapped.tex": "06eb3ca19a86bbcff58bc380e0c9b740e96cdc6491c2399ab5d1005320895f12",
+    "chapters/l05_gapped.tex": "fa392736a472d4b2d3544fb6114d439880bf08ddaaa90f5289f92dadfa80f243",
+    "solutions/l06_identification.tex": "f64271e04cb9c395d0643605b5dc621b2abc78cd46f61cf0a2255b311e126620",
+    "chapters/l06_identification.tex": "b6d1276e909b479511dfec5cd1863de9559dac79b30db699ff1f4622cf66e617",
+    "solutions/f05_arithmetic.tex": "64d62564d98b9159b20dd2241fd5319d60a6d27a71ac45c8de7343c2abc71ba8",
+    "chapters/f05_arithmetic.tex": "f7de0ac71bb358d9d00bb73cba05831fa5e3777c8a6a716302a0722938272f8b",
+    "solutions/f06_related_categories.tex": "4b263557eaa26f32e770b33c496ae2db6dbcc0c0f23789ad83a5ce8450547433",
+    "chapters/f06_related_categories.tex": "c0eb404c17d26c3ee104a36b8b30835a78966aac6914135417e4f7c64a01ce60",
+    "haagerup_cft_textbook.tex": "a1adc81a9722763b4b0e2d8a298337b476fb71a3a682f5e12545dbefbc2e0afc"
+  },
+  "delete_after_archiving": [
+    "chapters/r_solutions.tex",
+    "chapters/f_solutions.tex",
+    "chapters/c_solutions.tex",
+    "chapters/l_solutions.tex"
+  ],
+  "script_sha256": "80eb4e20c86e6d0a4c202e3a84b896f997d07e5063fe17737429e28eed18e3e8",
+  "checks": {
+    "complete_exercise_coverage": true,
+    "unique_solutions": true,
+    "no_unmatched_text": true,
+    "same_chapter_shared_blocks": true,
+    "solution_bodies_preserved_verbatim": true,
+    "chapter_changes_are_only_solution_links": true,
+    "new_solution_anchors_unique_and_complete": true
+  },
+  "plan_sha256": "dcb64d83801e26499d20463fd4f9ad754940ddc69dd3d7a43d3a7679ee9b18e1",
+  "mode": "dry-run",
+  "timestamp_utc": "2026-10-05T18:48:29+00:00"
+}

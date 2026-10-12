@@ -1,0 +1,70 @@
+{
+  "arithmetic": "Q(sqrt(13),sqrt(-3))",
+  "u_Potts_weight": "2/3",
+  "u_Heisenberg_weight": "4/3",
+  "lattice_basis": [
+    [
+      -1,
+      -2,
+      -3,
+      -2,
+      -1,
+      -2,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      1,
+      -3,
+      1,
+      1
+    ]
+  ],
+  "lattice_Gram": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      24
+    ]
+  ],
+  "lattice_determinant": 39,
+  "u_minus3_u_terms": 3,
+  "u_minus5_u_minus3_u_coefficient": [
+    "-3/5",
+    "0",
+    "0",
+    "0"
+  ],
+  "triple_product_momentum": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    -3,
+    1,
+    1
+  ],
+  "extension_group": "Z3",
+  "extension_sectors": "(V_L x Potts_0) + (V_(L+r) x psi) + (V_(L+2r) x psi^2)",
+  "core_central_charge": "14/5",
+  "complement_central_charge": "26/5",
+  "discriminant_group": "Z39",
+  "discriminant_generator_weight": "1/39",
+  "remaining_order13_quadratic_form": "q(j)=3*j^2/13 mod 1",
+  "core_category_global_dimension": "13*(5+sqrt(5))/2",
+  "scope": "Exact lattice data and fields for a finite simple-current extension of a rational lattice x Potts VOA. Its containing algebra U is not thereby proved rational.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_rational_core.py": "6f97c95a48834dab652c37400ad55a482bddd281d723c18725cc8767485a201c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact.py": "e9816e9b3cd30d092b45d6ce85297f49ec8431f2f6081d862dd2b41c17ebc865",
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d",
+    "hi_cft_20260923_proof_potts.py": "8898824489584e6460bb685ef5ea1ef235bebb941b57b2fd6e06b992458cf6a1"
+  }
+}

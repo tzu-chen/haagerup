@@ -1,0 +1,82 @@
+\section{Solutions for Chapter~\ref{ch:characters}}
+
+\paragraph{Exercise~\ref{ex:char-oscillator}.}
+\phantomsection
+\label{sol:ex:char-oscillator}
+The five partitions give, respectively,
+\[
+ 8,\quad8^2,\quad\binom92,\quad
+ 8\binom92,\quad\binom{11}{4}.
+\]
+Their sum is $8+64+36+288+330=726$.
+The $E_8$ theta coefficients through weight four are
+$1,240,2160,6720,17520$. Hence the VOA coefficient is
+\[
+ 17520+6720(8)+2160(44)+240(192)+726=213126.
+\]
+This separates momentum degeneracy from oscillator degeneracy.
+
+
+
+\paragraph{Exercise~\ref{ex:char-primary}.}
+\phantomsection
+\label{sol:ex:char-primary}
+Through grade three, multiplication by
+$P(q)=1-q-q^2+\cdots$ gives
+\[
+\begin{array}{c|rrrr}
+ &v(0)&v(1)&v(2)&v(3)\\\hline
+ b&80&1170&9300&53162\\
+ d_4&5&224&2504&16975
+\end{array}
+\]
+For example, $v_b(3)=65042-10630-1250=53162$.
+Convolution with $1/P(q)=1+q+2q^2+3q^3+\cdots$
+returns
+$a(1)=v(1)+v(0)$,
+$a(2)=v(2)+v(1)+2v(0)$, and
+$a(3)=v(3)+v(2)+2v(1)+3v(0)$.
+These recover all the displayed character entries.
+
+
+
+\paragraph{Exercise~\ref{ex:char-pole}.}
+\phantomsection
+\label{sol:ex:char-pole}
+A twist determines $h$ modulo one, so the three stated
+weights have the same twist. The possible $2/13$ top would
+produce a pole with coefficient $\gamma$. Existence of the
+specified fundamental modular solutions, together with
+$\dim U_1=6+13\gamma$ and the independent six-current theorem,
+forces $\gamma=0$. The uniquely selected fundamental solution
+then has its first nonzero $d_3$ coefficient at $15/13$.
+Excluding $2/13$ by itself would not exclude $28/13$;
+that final selection uses the known fundamental solution.
+
+
+
+\paragraph{Exercise~\ref{ex:char-equal}.}
+\phantomsection
+\label{sol:ex:char-equal}
+The Grothendieck group is free on the isomorphism classes
+of simples. Taking a character is a linear map from that group
+to a space of functions, and the map need not be injective.
+Defect insertions, including tube projectors, can distinguish
+equal unflavoured characters. Flavoured traces or matrix
+elements of specified current zero modes can also distinguish
+modules when the associated actions differ.
+
+
+
+\paragraph{Exercise~\ref{ex:char-uniqueness-scope}.}
+\phantomsection
+\label{sol:ex:char-uniqueness-scope}
+If $v$ is a modular-invariant constant vector, adding $tv$
+does not change any negative-power coefficient. The compact
+modular-curve argument then proves uniqueness only modulo
+such invariant constants. One must prescribe the projection
+of the constant coefficient onto the invariant subspace,
+or an equivalent value normalization, to remove the ambiguity.
+
+
+

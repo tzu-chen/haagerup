@@ -1,0 +1,1274 @@
+[
+  {
+    "number": 1,
+    "abelian_rank": 5,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 372,
+        "host_abelian_rank": 4,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "abelian_rank": 4,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 372,
+        "host_abelian_rank": 4,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 379,
+        "host_abelian_rank": 2,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "34/5",
+        "host_residual_c": "6/5",
+        "Sugawara_difference_c": "4/5",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=5",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 496,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 617,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "abelian_rank": 4,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 617,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 70,
+    "abelian_rank": 4,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 372,
+        "host_abelian_rank": 4,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 72,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 617,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 74,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 617,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 86,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 93,
+    "abelian_rank": 4,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 372,
+        "host_abelian_rank": 4,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 97,
+    "abelian_rank": 3,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 379,
+        "host_abelian_rank": 2,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "34/5",
+        "host_residual_c": "6/5",
+        "Sugawara_difference_c": "4/5",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=5",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 496,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 137,
+    "abelian_rank": 3,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 138,
+    "abelian_rank": 3,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 372,
+        "host_abelian_rank": 4,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 496,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 146,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 197,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 379,
+        "host_abelian_rank": 2,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "34/5",
+        "host_residual_c": "6/5",
+        "Sugawara_difference_c": "4/5",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=5",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 496,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 282,
+    "abelian_rank": 3,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 285,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 379,
+        "host_abelian_rank": 2,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "34/5",
+        "host_residual_c": "6/5",
+        "Sugawara_difference_c": "4/5",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=5",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 496,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 305,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 617,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 340,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 358,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 360,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 372,
+    "abelian_rank": 3,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 372,
+        "host_abelian_rank": 4,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 401,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 404,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 411,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 419,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 426,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 617,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 467,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 483,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 496,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 496,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": true,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 514,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 579,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 613,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": true,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 887,
+    "abelian_rank": 3,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 892,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 496,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 915,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 959,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 991,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 496,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 514,
+        "host_abelian_rank": 1,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 1018,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 1045,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 613,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 1058,
+    "abelian_rank": 2,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 1064,
+    "abelian_rank": 1,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 1150,
+    "abelian_rank": 0,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 600,
+        "host_abelian_rank": 0,
+        "host_total_rank": 5,
+        "host_current_Sugawara_c": "13/2",
+        "host_residual_c": "3/2",
+        "Sugawara_difference_c": "1/2",
+        "Sugawara_difference_Virasoro_class": "unitary_minimal_m=3",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  },
+  {
+    "number": 0,
+    "abelian_rank": 6,
+    "hosts": [
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 372,
+        "host_abelian_rank": 4,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": true
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 483,
+        "host_abelian_rank": 3,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": true
+      },
+      {
+        "W1_dimension": 19,
+        "host_semisimple_database_number": 579,
+        "host_abelian_rank": 2,
+        "host_total_rank": 7,
+        "host_current_Sugawara_c": "7",
+        "host_residual_c": "1",
+        "Sugawara_difference_c": "1",
+        "Sugawara_difference_Virasoro_class": "c>=1",
+        "is_all_current_denominator": false,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": true
+      },
+      {
+        "W1_dimension": 6,
+        "host_semisimple_database_number": 0,
+        "host_abelian_rank": 6,
+        "host_total_rank": 6,
+        "host_current_Sugawara_c": "6",
+        "host_residual_c": "2",
+        "Sugawara_difference_c": "0",
+        "Sugawara_difference_Virasoro_class": "zero",
+        "is_all_current_denominator": true,
+        "pure_Cartan6_rank1_current_obstruction_if_no_joint_neutral_current": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,177 @@
+Independent mathematical review of l01--l05 and l_solutions
+Reviewer: scope_construction. Source snapshot: 2026-10-05, approximately
+17:45--18:15 UTC. Read-only review; no numerical jobs or l-file edits.
+
+Conclusion
+----------
+The finite-size dictionaries, overlap normalizations, transfer formulas,
+and distinctions among an exact MPS, a short frustration-free anchor, and
+a longer gapped parent are sound under the stated assumptions. The new
+solutions checked below agree with the chapter conventions. In particular,
+I found no unwarranted claim that the short missing-channel Hamiltonian
+is gapped or has exactly four ground states. The standard long-parent
+conclusion depends on the actual module relations, eventual block
+injectivity, the local open-line intertwining statement, and the usual
+one-dimensional parent theorem, all of which the chapter distinguishes.
+
+Repairs and precision suggestions
+--------------------------------
+1. l03_overlaps.tex:647--655. REPAIRED during this review by the author.
+The previous unconditional 1/16 lower bound followed a generic x,y split
+formula. It required equal asymptotic halves and matching vacuum shape.
+The current general RHS G(x;1) exp[-c(f(x)-f(y))/2], followed by its
+equal-halves specialization, is correct. No further action needed.
+
+2. l03_overlaps.tex:465--470. Small missing premise. State that the
+identical normalized scalar is Hermitian/self-conjugate and has a nonzero
+two-point normalization, or specify a compatible conjugate-label version.
+A charged order-three field can have C_XXX nonzero but <XX>=0. In that
+case all three identical-label pair cumulants vanish, so the printed
+quotient is undefined. The intended real neutral scalar obeys the needed
+premise. Suggested first words: "For identical normalized Hermitian
+scalar primaries in an ideal pants geometry...".
+
+3. l04_tensor_networks.tex:129--146. Clarify which infinite-chain state
+is meant. A simple positive leading eigenvalue does not alone exclude
+other peripheral roots, so it does not ensure convergence of arbitrary
+periodic-ring states to a unique clustering limit. The displayed formulas
+are valid for the stationary state defined by the selected compatible
+fixed metrics. To mean the unique clustering periodic-chain limit, assume
+the primitive/injective component described immediately below. A short
+sentence distinguishing these interpretations suffices; the later
+primitivity, cat, and reduced-resolvent discussion is already correct.
+
+4. l_solutions.tex:185--189. The cat entropy log 3 and nondecaying order
+correlator are correct, but "the state has a finite-dimensional vacuum
+degeneracy" attributes a Hamiltonian property to a state by itself.
+Suggested replacement: "The state has three ordered product components
+and a nondecaying order correlator; its standard symmetry-breaking parent
+has a finite ground-state degeneracy." The final conclusion about absence
+of logarithmic interval growth remains unchanged.
+
+5. l04_tensor_networks.tex:428--431 and the associated solution. Optional
+precision: say t is real. Otherwise the norm transfer uses |t|^2, rather
+than t^2, and t=-1 versus general phases need a separate interpretation.
+All displayed real-family special cases are correct.
+
+Independent hand checks: finite chains and scaling
+--------------------------------------------------
+* N_rho=[[0,I],[I,J]] has eigenvalues d,-1/d,1,1,-1,-1.
+  The recurrence t_L=3t_(L-1)+t_(L-2), with t_0=2,t_1=3,
+  gives t_4=119,t_6=1298,t_8=14159,t_9=46764. Adding the
+  parity correction gives dimensions 123,1302,14163,46764.
+* With old ket e = sum_f F[e,f] new ket f, the rank-one projector
+  is conjugate(F[e',rho]) F[e,rho], as printed. Translation of
+  H_m=sum_j exp(-ikj) h_j gives U H_m U^-1=exp(ik) H_m.
+* In the neutral topological sector Y_rho^2=1+3Y_rho,
+  (Y_rho-2)^2=5-Y_rho. The filter is invertible on both neutral
+  eigenvalues, and its denominator is bounded below by 5-d.
+* The stress-source estimator 8|M|^2/g^2 uses norm c/2 and
+  stress gap 2 omega_L consistently. A reference highest weight
+  h_0 changes the norm to 4h_0+c/2, giving apparent c+8h_0.
+  The cigar example k=4 therefore gives c=5 and estimator 6,
+  despite effective charge 2. The improvement phase e^(ik)-1
+  also has the printed sign.
+* The thermal equations follow from Z=exp(beta a) sum exp(-beta g),
+  with a fixed while differentiating. At beta=b and a=mu,
+  Z^(j)/Z=(-1)^j m_j. The Stirling coefficients in D^3 and D^5
+  are respectively (1,3,1) and (1,15,25,10,1). The third and
+  fifth central-moment conditions and the projected-sector warning
+  follow. The two-size Casimir solution has the correct sign.
+
+Independent hand checks: overlaps and branch insertions
+------------------------------------------------------
+* The Gram example G_ii=1,G_12=.2,b=(.6,.6) gives G^-1 b=(.5,.5),
+  b^dagger G^-1 b=.6, normalized coefficients (5/6,5/6), norm5/3,
+  and target fraction3/5. Phase invariants I_lambda,I_nu,I_kappa,J
+  have cancelling external phases and the stated cubic relation.
+* Vacuum-source scalar descendants contribute (Delta)_n/n!, while
+  the excited-source scalar descendant coefficient is
+  C (h)_n^2/[n!(2h)_n]. Thus the first daughter is C Delta/4.
+  The Gauss sum and Delta<1/2 convergence condition are correct.
+* The inverse pants map gives Schwarzian -3x(1-x) exp(2H(x));
+  after division by sqrt(c/2), the scalar stress shift is
+  B sqrt(c/8), with B=1 at equal halves. The connected stress
+  cumulant formula then returns c.
+* For Lambda=L_-2^2 1-(3/5)L_-4 1, L_1 Lambda=L_4 Lambda=0,
+  L_2 Lambda=(5c+22)T/5, and N_Lambda=c(5c+22)/10.
+  The Ward calculation yields delta K =
+  2 N_Lambda (b^2-b+1)^2/[b^4(b-1)^4]. The identity
+  1+(b-1)^4+b^4=2(b^2-b+1)^2 exactly cancels the first
+  variation of the central-charge ratio. The solution properly
+  refuses to infer an independent two-branch Hessian cancellation.
+* For the c=2 bare T branch at b=1/2, m=(16t,16t,t),
+  B_01=1+32t-256t^2, B_0infty=B_1infty=1+8t-16t^2, and
+  K=2+48t-288t^2+512t^3. The pair product and K^2/4 agree
+  through t^2 but have cubic coefficients -3328 and -6400.
+  Consequently the estimator is 2+6144t^3+O(t^4), as printed.
+* For raw shifted stress, the unperturbed triple is
+  c(64+30c-c^2)/64 and its linear variation is 24 times itself.
+  At t=-1/24 the pair ratios give K_12=-3-6/c and
+  K_13=K_23=3/2-24/c, hence K_13=4K_12+27/2.
+* M transforms as U^T M V, preserving singular values. A pair
+  of normalized tensor-product approximants differs by norm at
+  most delta_1+delta_2, explaining the division by |A_000|.
+  The current criterion needs the gluing and subspace errors;
+  the text correctly treats the displayed deficits as finite evidence.
+* The spin-one primary norms under the two Koo--Saleur directions
+  are omega_L^2(Delta+/-1); nonprimary contributions are additional
+  positive orthogonal terms. The ratio derivative and cancellation
+  of identity/overall-H perturbations in the Hellmann--Feynman
+  diagnostic are correct.
+
+Independent hand checks: MPS and exact gapped states
+---------------------------------------------------
+* The block-row tensor realizes the cyclic ordinary fiber trace even
+  for rectangular edge maps. Its inserted transfer has the printed
+  order A^t X A^{s dagger}; sigma=sqrt(l) r sqrt(l) has the
+  normalized Schmidt spectrum. For real scalar t, the norm transfer
+  is (t^2-1)I+J, with eigenvalues t^2+2,t^2-1,t^2-1.
+* The entropy slopes at n=1,2,infinity are c/6,c/8,c/12. The
+  finite-entanglement secant for a x+b+u/x is a-u/(x_a x_b).
+  The centered resolvent and its failure on residual peripheral
+  directions are stated correctly. For h=-P, h^2=-h gives the
+  coincident variance -e-e^2, consistent with the sign convention.
+* The Q-block norm identity uses zeta^2-v^2=1 and
+  w^2=d-1-v^2 to give 1+2d. The free-module decomposition
+  rho Q = Q plus alpha^2 Q plus M_f has the correct multiplicities.
+  The all-length module trace is an ordinary trace; no extra
+  quantum-dimension factor belongs in that chosen closure.
+* The scalar fixed-module t_0 satisfies t_0^2+t_0=1/d.
+  Its norm transfer is primitive. The variational energy formula
+  follows by contracting three equal-color and six unequal-color
+  cases against the asymptotic J/3 environment.
+* In the ordered blocks det W=-u zeta is nonzero. In the fixed
+  block det W=B^3(t_0+2)(t_0-1)^2 is nonzero. The color-isolating
+  words and invertible endpoint rows give full Mat_3 spans.
+  The complete local range, not merely four periodic vectors, is
+  used for the open-line symmetry argument. Adjoints make the
+  local range reducing and allow its orthogonal projector.
+* The three-height missing-channel kernel counts are 3+6+6+9+12=36.
+  At four heights dim H_open=168 and each of the two missing-channel
+  projectors has rank51, so their common kernel has dimension at
+  least66>36. This correctly blocks the simplest claim that the
+  short terms already equal the longer MPS parent constraints.
+* The four-vacuum rho matrix splits into [[1,sqrt3],[sqrt3,2]]
+  on neutral states and -P on the charged plane. With
+  b=(sqrt13-1)/2, b^2+b=3 and PF amplitudes b:1:1:1.
+  Ordered probability p=3/(b^2+3), cubics p^-1/2,b/sqrt3,
+  and -1/sqrt3, and the pointwise multiplication identities all pass.
+  These are finite vacuum-algebra form factors, not automatically
+  CFT structure constants; the text explicitly respects that scope.
+* Var(Y_rho)<=13/4 and the covariance estimate yield an energy
+  density difference O(L^-1/2) if Var(H_L)=O(L). A cat whose
+  components have different energy densities instead has the
+  displayed L^2 contribution. The distinction is necessary and
+  is present.
+
+Solution coverage
+-----------------
+Checked all l01--l05 solution arithmetic, including the new boundary,
+thermal, cumulant, current, branch, block-edge, resolvent, scaling,
+Perron--Frobenius, and short-parent solutions. The only wording issue
+found is the cat-state/Hamiltonian distinction above. I also checked
+the immediately adjacent l06 solution arithmetic (triad 2/sqrt3,
+algebraic norm 64^2*5^3/9, product invariant, five twist residues, and
+the positive crossing sum .0118155); this was not a full independent
+review of the l06 global exclusion hypotheses.

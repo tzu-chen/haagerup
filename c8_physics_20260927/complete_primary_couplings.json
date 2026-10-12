@@ -1,0 +1,4395 @@
+{
+  "status": "PASS",
+  "basis_dimension": 96,
+  "ordered_tensor_entries": 884736,
+  "nonzero_entries": 15079,
+  "zero_entries": 869657,
+  "encoding": "Sparse TSV: omitted triples are exactly zero within this projected96-primary tensor.",
+  "coefficient_convention": "C_ij^k=<v_k,(v_i)_1 v_j>/sqrt(N_i N_j N_k)",
+  "field_basis": "1,s,t,st with s^2=13,t^2=-3; s positive, t=i sqrt3",
+  "all_current_raising_lowering_Ward_checks": 36864,
+  "all_primary_skew_symmetry_pair_checks": 9216,
+  "direct_additional_lattice_probes": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      13,
+      16
+    ],
+    [
+      15,
+      19
+    ],
+    [
+      18,
+      20
+    ],
+    [
+      22,
+      28
+    ],
+    [
+      24,
+      39
+    ],
+    [
+      29,
+      32
+    ],
+    [
+      35,
+      61
+    ],
+    [
+      37,
+      62
+    ],
+    [
+      38,
+      55
+    ],
+    [
+      39,
+      56
+    ],
+    [
+      41,
+      64
+    ],
+    [
+      46,
+      75
+    ],
+    [
+      51,
+      77
+    ],
+    [
+      53,
+      1
+    ],
+    [
+      60,
+      16
+    ],
+    [
+      67,
+      23
+    ],
+    [
+      69,
+      66
+    ],
+    [
+      82,
+      35
+    ],
+    [
+      95,
+      72
+    ]
+  ],
+  "direct_seed_nonzero_entries": 1049,
+  "derivation": "P(Fi,j)=F P(i,j)-P(i,Fj); orthogonal projection commutes with current zero modes.",
+  "scope": "Complete three-point tensor within the selected96-dimensional weight-two primary space; other17 weight-two primaries and nonvacuum bulk OPE coefficients are not included.",
+  "source_sha256": {
+    "c8_physics_20260927/complete_couplings.py": "52b7eccb0fb334ef467c004a9f1ae1c7bebcc1f1268d059cf14f39b91c565f86",
+    "c8_physics_20260927/low_weight_couplings.json": "7e9711fcc2074d7940c923d59f0e2a4de6ccb2b04659a1a3c730313d9b1999d5",
+    "c8_physics_20260927/low_weight_basis.json": "cddd8ffa203c63425a3d645c68107efbe412a17f6bf4e60f58133f9c93ec081f"
+  },
+  "output_sha256": "b96bb964d9f439a5cdbd94fc93f414ffcd57758605f640cf7e1d60f7428fa10b",
+  "selected_examples": [
+    {
+      "indices": [
+        0,
+        0,
+        5
+      ],
+      "names": [
+        "v0_0_0",
+        "v0_0_0",
+        "v1_0_0"
+      ],
+      "multiplets": [
+        0,
+        0,
+        1
+      ],
+      "abs_C_squared": [
+        "3971/2808",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        0,
+        0,
+        14
+      ],
+      "names": [
+        "v0_0_0",
+        "v0_0_0",
+        "v2_0_0"
+      ],
+      "multiplets": [
+        0,
+        0,
+        2
+      ],
+      "abs_C_squared": [
+        "361/1560",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        0,
+        2,
+        0
+      ],
+      "names": [
+        "v0_0_0",
+        "v0_0_2",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        0,
+        0,
+        0
+      ],
+      "abs_C_squared": [
+        "4356/8645",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        0,
+        5,
+        23
+      ],
+      "names": [
+        "v0_0_0",
+        "v1_0_0",
+        "v3_0_0"
+      ],
+      "multiplets": [
+        0,
+        1,
+        3
+      ],
+      "abs_C_squared": [
+        "665/858",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        0,
+        7,
+        5
+      ],
+      "names": [
+        "v0_0_0",
+        "v1_0_2",
+        "v1_0_0"
+      ],
+      "multiplets": [
+        0,
+        1,
+        1
+      ],
+      "abs_C_squared": [
+        "39605/717288",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 15
+    },
+    {
+      "indices": [
+        0,
+        7,
+        14
+      ],
+      "names": [
+        "v0_0_0",
+        "v1_0_2",
+        "v2_0_0"
+      ],
+      "multiplets": [
+        0,
+        1,
+        2
+      ],
+      "abs_C_squared": [
+        "57/1144",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        0,
+        12,
+        3
+      ],
+      "names": [
+        "v0_0_0",
+        "v1_0_7",
+        "v0_0_3"
+      ],
+      "multiplets": [
+        0,
+        1,
+        0
+      ],
+      "abs_C_squared": [
+        "3971/5616",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        0,
+        15,
+        24
+      ],
+      "names": [
+        "v0_0_0",
+        "v2_0_1",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        0,
+        2,
+        3
+      ],
+      "abs_C_squared": [
+        "19/91",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        0,
+        16,
+        5
+      ],
+      "names": [
+        "v0_0_0",
+        "v2_0_2",
+        "v1_0_0"
+      ],
+      "multiplets": [
+        0,
+        2,
+        1
+      ],
+      "abs_C_squared": [
+        "57/1144",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        0,
+        16,
+        14
+      ],
+      "names": [
+        "v0_0_0",
+        "v2_0_2",
+        "v2_0_0"
+      ],
+      "multiplets": [
+        0,
+        2,
+        2
+      ],
+      "abs_C_squared": [
+        "39/760",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        0,
+        20,
+        2
+      ],
+      "names": [
+        "v0_0_0",
+        "v2_0_6",
+        "v0_0_2"
+      ],
+      "multiplets": [
+        0,
+        2,
+        0
+      ],
+      "abs_C_squared": [
+        "361/7280",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        2,
+        24,
+        24
+      ],
+      "names": [
+        "v0_0_2",
+        "v3_0_1",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        0,
+        3,
+        3
+      ],
+      "abs_C_squared": [
+        "80/1729",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        0,
+        35,
+        13
+      ],
+      "names": [
+        "v0_0_0",
+        "v3_0_12",
+        "v1_0_8"
+      ],
+      "multiplets": [
+        0,
+        3,
+        1
+      ],
+      "abs_C_squared": [
+        "665/858",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        0,
+        34,
+        21
+      ],
+      "names": [
+        "v0_0_0",
+        "v3_0_11",
+        "v2_0_7"
+      ],
+      "multiplets": [
+        0,
+        3,
+        2
+      ],
+      "abs_C_squared": [
+        "19/91",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        0,
+        36,
+        40
+      ],
+      "names": [
+        "v0_0_0",
+        "v4_0_0",
+        "v5_0_0"
+      ],
+      "multiplets": [
+        0,
+        4,
+        5
+      ],
+      "abs_C_squared": [
+        "19/78",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        1,
+        43,
+        55
+      ],
+      "names": [
+        "v0_0_1",
+        "v5_0_3",
+        "v6_0_3"
+      ],
+      "multiplets": [
+        0,
+        5,
+        6
+      ],
+      "abs_C_squared": [
+        "836/4095",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        1,
+        42,
+        41
+      ],
+      "names": [
+        "v0_0_1",
+        "v5_0_2",
+        "v5_0_1"
+      ],
+      "multiplets": [
+        0,
+        5,
+        5
+      ],
+      "abs_C_squared": [
+        "1815/84721",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 13
+    },
+    {
+      "indices": [
+        0,
+        45,
+        37
+      ],
+      "names": [
+        "v0_0_0",
+        "v5_0_5",
+        "v4_0_1"
+      ],
+      "multiplets": [
+        0,
+        5,
+        4
+      ],
+      "abs_C_squared": [
+        "19/78",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        2,
+        52,
+        52
+      ],
+      "names": [
+        "v0_0_2",
+        "v6_0_0",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        0,
+        6,
+        6
+      ],
+      "abs_C_squared": [
+        "208/5985",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        1,
+        56,
+        42
+      ],
+      "names": [
+        "v0_0_1",
+        "v6_0_4",
+        "v5_0_2"
+      ],
+      "multiplets": [
+        0,
+        6,
+        5
+      ],
+      "abs_C_squared": [
+        "836/4095",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        0,
+        70,
+        68
+      ],
+      "names": [
+        "v0_0_0",
+        "v7_0_2",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        0,
+        7,
+        7
+      ],
+      "abs_C_squared": [
+        "5/133",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        5,
+        0,
+        23
+      ],
+      "names": [
+        "v1_0_0",
+        "v0_0_0",
+        "v3_0_0"
+      ],
+      "multiplets": [
+        1,
+        0,
+        3
+      ],
+      "abs_C_squared": [
+        "665/858",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        5,
+        4,
+        7
+      ],
+      "names": [
+        "v1_0_0",
+        "v0_0_4",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        1,
+        0,
+        1
+      ],
+      "abs_C_squared": [
+        "39605/717288",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 15
+    },
+    {
+      "indices": [
+        5,
+        2,
+        14
+      ],
+      "names": [
+        "v1_0_0",
+        "v0_0_2",
+        "v2_0_0"
+      ],
+      "multiplets": [
+        1,
+        0,
+        2
+      ],
+      "abs_C_squared": [
+        "133/572",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        5,
+        4,
+        0
+      ],
+      "names": [
+        "v1_0_0",
+        "v0_0_4",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        1,
+        0,
+        0
+      ],
+      "abs_C_squared": [
+        "3971/2808",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        5,
+        7,
+        23
+      ],
+      "names": [
+        "v1_0_0",
+        "v1_0_2",
+        "v3_0_0"
+      ],
+      "multiplets": [
+        1,
+        1,
+        3
+      ],
+      "abs_C_squared": [
+        "11767/37752",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 14
+    },
+    {
+      "indices": [
+        7,
+        9,
+        7
+      ],
+      "names": [
+        "v1_0_2",
+        "v1_0_4",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        1,
+        1,
+        1
+      ],
+      "abs_C_squared": [
+        "5041/960960",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 14
+    },
+    {
+      "indices": [
+        7,
+        9,
+        16
+      ],
+      "names": [
+        "v1_0_2",
+        "v1_0_4",
+        "v2_0_2"
+      ],
+      "multiplets": [
+        1,
+        1,
+        2
+      ],
+      "abs_C_squared": [
+        "25/17472",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        5,
+        11,
+        0
+      ],
+      "names": [
+        "v1_0_0",
+        "v1_0_6",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        1,
+        1,
+        0
+      ],
+      "abs_C_squared": [
+        "39605/717288",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 15
+    },
+    {
+      "indices": [
+        7,
+        20,
+        29
+      ],
+      "names": [
+        "v1_0_2",
+        "v2_0_6",
+        "v3_0_6"
+      ],
+      "multiplets": [
+        1,
+        2,
+        3
+      ],
+      "abs_C_squared": [
+        "35/416",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        7,
+        18,
+        7
+      ],
+      "names": [
+        "v1_0_2",
+        "v2_0_4",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        1,
+        2,
+        1
+      ],
+      "abs_C_squared": [
+        "25/17472",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        6,
+        19,
+        16
+      ],
+      "names": [
+        "v1_0_1",
+        "v2_0_5",
+        "v2_0_2"
+      ],
+      "multiplets": [
+        1,
+        2,
+        2
+      ],
+      "abs_C_squared": [
+        "75/4576",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        5,
+        20,
+        0
+      ],
+      "names": [
+        "v1_0_0",
+        "v2_0_6",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        1,
+        2,
+        0
+      ],
+      "abs_C_squared": [
+        "57/1144",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        7,
+        26,
+        24
+      ],
+      "names": [
+        "v1_0_2",
+        "v3_0_3",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        1,
+        3,
+        3
+      ],
+      "abs_C_squared": [
+        "70/1573",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        5,
+        34,
+        10
+      ],
+      "names": [
+        "v1_0_0",
+        "v3_0_11",
+        "v1_0_5"
+      ],
+      "multiplets": [
+        1,
+        3,
+        1
+      ],
+      "abs_C_squared": [
+        "11767/25168",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 14
+    },
+    {
+      "indices": [
+        7,
+        29,
+        16
+      ],
+      "names": [
+        "v1_0_2",
+        "v3_0_6",
+        "v2_0_2"
+      ],
+      "multiplets": [
+        1,
+        3,
+        2
+      ],
+      "abs_C_squared": [
+        "35/416",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        5,
+        35,
+        4
+      ],
+      "names": [
+        "v1_0_0",
+        "v3_0_12",
+        "v0_0_4"
+      ],
+      "multiplets": [
+        1,
+        3,
+        0
+      ],
+      "abs_C_squared": [
+        "665/858",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        6,
+        36,
+        52
+      ],
+      "names": [
+        "v1_0_1",
+        "v4_0_0",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        1,
+        4,
+        6
+      ],
+      "abs_C_squared": [
+        "49/585",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        5,
+        40,
+        68
+      ],
+      "names": [
+        "v1_0_0",
+        "v5_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        1,
+        5,
+        7
+      ],
+      "abs_C_squared": [
+        "9/770",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        6,
+        43,
+        53
+      ],
+      "names": [
+        "v1_0_1",
+        "v5_0_3",
+        "v6_0_1"
+      ],
+      "multiplets": [
+        1,
+        5,
+        6
+      ],
+      "abs_C_squared": [
+        "5/3146",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        5,
+        44,
+        40
+      ],
+      "names": [
+        "v1_0_0",
+        "v5_0_4",
+        "v5_0_0"
+      ],
+      "multiplets": [
+        1,
+        5,
+        5
+      ],
+      "abs_C_squared": [
+        "11/1560",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        6,
+        52,
+        68
+      ],
+      "names": [
+        "v1_0_1",
+        "v6_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        1,
+        6,
+        7
+      ],
+      "abs_C_squared": [
+        "125/363",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        5,
+        57,
+        53
+      ],
+      "names": [
+        "v1_0_0",
+        "v6_0_5",
+        "v6_0_1"
+      ],
+      "multiplets": [
+        1,
+        6,
+        6
+      ],
+      "abs_C_squared": [
+        "416/1331",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        6,
+        58,
+        42
+      ],
+      "names": [
+        "v1_0_1",
+        "v6_0_6",
+        "v5_0_2"
+      ],
+      "multiplets": [
+        1,
+        6,
+        5
+      ],
+      "abs_C_squared": [
+        "5/3146",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        6,
+        59,
+        37
+      ],
+      "names": [
+        "v1_0_1",
+        "v6_0_7",
+        "v4_0_1"
+      ],
+      "multiplets": [
+        1,
+        6,
+        4
+      ],
+      "abs_C_squared": [
+        "49/585",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        8,
+        69,
+        68
+      ],
+      "names": [
+        "v1_0_3",
+        "v7_0_1",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        1,
+        7,
+        7
+      ],
+      "abs_C_squared": [
+        "21/44",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        6,
+        81,
+        59
+      ],
+      "names": [
+        "v1_0_1",
+        "v7_0_13",
+        "v6_0_7"
+      ],
+      "multiplets": [
+        1,
+        7,
+        6
+      ],
+      "abs_C_squared": [
+        "125/363",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        5,
+        81,
+        45
+      ],
+      "names": [
+        "v1_0_0",
+        "v7_0_13",
+        "v5_0_5"
+      ],
+      "multiplets": [
+        1,
+        7,
+        5
+      ],
+      "abs_C_squared": [
+        "9/770",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        15,
+        0,
+        24
+      ],
+      "names": [
+        "v2_0_1",
+        "v0_0_0",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        2,
+        0,
+        3
+      ],
+      "abs_C_squared": [
+        "19/91",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        14,
+        2,
+        5
+      ],
+      "names": [
+        "v2_0_0",
+        "v0_0_2",
+        "v1_0_0"
+      ],
+      "multiplets": [
+        2,
+        0,
+        1
+      ],
+      "abs_C_squared": [
+        "133/572",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        14,
+        2,
+        14
+      ],
+      "names": [
+        "v2_0_0",
+        "v0_0_2",
+        "v2_0_0"
+      ],
+      "multiplets": [
+        2,
+        0,
+        2
+      ],
+      "abs_C_squared": [
+        "91/380",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        14,
+        4,
+        0
+      ],
+      "names": [
+        "v2_0_0",
+        "v0_0_4",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        2,
+        0,
+        0
+      ],
+      "abs_C_squared": [
+        "361/1560",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        16,
+        11,
+        29
+      ],
+      "names": [
+        "v2_0_2",
+        "v1_0_6",
+        "v3_0_6"
+      ],
+      "multiplets": [
+        2,
+        1,
+        3
+      ],
+      "abs_C_squared": [
+        "35/416",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        16,
+        9,
+        7
+      ],
+      "names": [
+        "v2_0_2",
+        "v1_0_4",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        2,
+        1,
+        1
+      ],
+      "abs_C_squared": [
+        "25/17472",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        15,
+        10,
+        16
+      ],
+      "names": [
+        "v2_0_1",
+        "v1_0_5",
+        "v2_0_2"
+      ],
+      "multiplets": [
+        2,
+        1,
+        2
+      ],
+      "abs_C_squared": [
+        "75/4576",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        14,
+        11,
+        0
+      ],
+      "names": [
+        "v2_0_0",
+        "v1_0_6",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        2,
+        1,
+        0
+      ],
+      "abs_C_squared": [
+        "57/1144",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        14,
+        16,
+        23
+      ],
+      "names": [
+        "v2_0_0",
+        "v2_0_2",
+        "v3_0_0"
+      ],
+      "multiplets": [
+        2,
+        2,
+        3
+      ],
+      "abs_C_squared": [
+        "3/728",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        15,
+        19,
+        7
+      ],
+      "names": [
+        "v2_0_1",
+        "v2_0_5",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        2,
+        2,
+        1
+      ],
+      "abs_C_squared": [
+        "75/4576",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        16,
+        19,
+        17
+      ],
+      "names": [
+        "v2_0_2",
+        "v2_0_5",
+        "v2_0_3"
+      ],
+      "multiplets": [
+        2,
+        2,
+        2
+      ],
+      "abs_C_squared": [
+        "21/520",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        14,
+        20,
+        0
+      ],
+      "names": [
+        "v2_0_0",
+        "v2_0_6",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        2,
+        2,
+        0
+      ],
+      "abs_C_squared": [
+        "39/760",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        16,
+        29,
+        27
+      ],
+      "names": [
+        "v2_0_2",
+        "v3_0_6",
+        "v3_0_4"
+      ],
+      "multiplets": [
+        2,
+        3,
+        3
+      ],
+      "abs_C_squared": [
+        "9/104",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        16,
+        29,
+        7
+      ],
+      "names": [
+        "v2_0_2",
+        "v3_0_6",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        2,
+        3,
+        1
+      ],
+      "abs_C_squared": [
+        "35/416",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        14,
+        35,
+        20
+      ],
+      "names": [
+        "v2_0_0",
+        "v3_0_12",
+        "v2_0_6"
+      ],
+      "multiplets": [
+        2,
+        3,
+        2
+      ],
+      "abs_C_squared": [
+        "3/728",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        15,
+        34,
+        4
+      ],
+      "names": [
+        "v2_0_1",
+        "v3_0_11",
+        "v0_0_4"
+      ],
+      "multiplets": [
+        2,
+        3,
+        0
+      ],
+      "abs_C_squared": [
+        "19/91",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        17,
+        37,
+        55
+      ],
+      "names": [
+        "v2_0_3",
+        "v4_0_1",
+        "v6_0_3"
+      ],
+      "multiplets": [
+        2,
+        4,
+        6
+      ],
+      "abs_C_squared": [
+        "11/65",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        14,
+        40,
+        68
+      ],
+      "names": [
+        "v2_0_0",
+        "v5_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        2,
+        5,
+        7
+      ],
+      "abs_C_squared": [
+        "9/14",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        15,
+        44,
+        54
+      ],
+      "names": [
+        "v2_0_1",
+        "v5_0_4",
+        "v6_0_2"
+      ],
+      "multiplets": [
+        2,
+        5,
+        6
+      ],
+      "abs_C_squared": [
+        "27/143",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        14,
+        44,
+        40
+      ],
+      "names": [
+        "v2_0_0",
+        "v5_0_4",
+        "v5_0_0"
+      ],
+      "multiplets": [
+        2,
+        5,
+        5
+      ],
+      "abs_C_squared": [
+        "1573/1176",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        15,
+        52,
+        68
+      ],
+      "names": [
+        "v2_0_1",
+        "v6_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        2,
+        6,
+        7
+      ],
+      "abs_C_squared": [
+        "3/11",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        18,
+        52,
+        52
+      ],
+      "names": [
+        "v2_0_4",
+        "v6_0_0",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        2,
+        6,
+        6
+      ],
+      "abs_C_squared": [
+        "832/63525",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        15,
+        57,
+        41
+      ],
+      "names": [
+        "v2_0_1",
+        "v6_0_5",
+        "v5_0_1"
+      ],
+      "multiplets": [
+        2,
+        6,
+        5
+      ],
+      "abs_C_squared": [
+        "27/143",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        17,
+        56,
+        36
+      ],
+      "names": [
+        "v2_0_3",
+        "v6_0_4",
+        "v4_0_0"
+      ],
+      "multiplets": [
+        2,
+        6,
+        4
+      ],
+      "abs_C_squared": [
+        "11/65",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        17,
+        69,
+        68
+      ],
+      "names": [
+        "v2_0_3",
+        "v7_0_1",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        2,
+        7,
+        7
+      ],
+      "abs_C_squared": [
+        "5/84",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        15,
+        76,
+        54
+      ],
+      "names": [
+        "v2_0_1",
+        "v7_0_8",
+        "v6_0_2"
+      ],
+      "multiplets": [
+        2,
+        7,
+        6
+      ],
+      "abs_C_squared": [
+        "9/91",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        14,
+        81,
+        45
+      ],
+      "names": [
+        "v2_0_0",
+        "v7_0_13",
+        "v5_0_5"
+      ],
+      "multiplets": [
+        2,
+        7,
+        5
+      ],
+      "abs_C_squared": [
+        "9/14",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        24,
+        2,
+        24
+      ],
+      "names": [
+        "v3_0_1",
+        "v0_0_2",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        3,
+        0,
+        3
+      ],
+      "abs_C_squared": [
+        "80/1729",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        23,
+        4,
+        5
+      ],
+      "names": [
+        "v3_0_0",
+        "v0_0_4",
+        "v1_0_0"
+      ],
+      "multiplets": [
+        3,
+        0,
+        1
+      ],
+      "abs_C_squared": [
+        "665/858",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        24,
+        4,
+        15
+      ],
+      "names": [
+        "v3_0_1",
+        "v0_0_4",
+        "v2_0_1"
+      ],
+      "multiplets": [
+        3,
+        0,
+        2
+      ],
+      "abs_C_squared": [
+        "19/91",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        24,
+        9,
+        24
+      ],
+      "names": [
+        "v3_0_1",
+        "v1_0_4",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        3,
+        1,
+        3
+      ],
+      "abs_C_squared": [
+        "35/1716",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        23,
+        11,
+        5
+      ],
+      "names": [
+        "v3_0_0",
+        "v1_0_6",
+        "v1_0_0"
+      ],
+      "multiplets": [
+        3,
+        1,
+        1
+      ],
+      "abs_C_squared": [
+        "11767/37752",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 14
+    },
+    {
+      "indices": [
+        29,
+        7,
+        16
+      ],
+      "names": [
+        "v3_0_6",
+        "v1_0_2",
+        "v2_0_2"
+      ],
+      "multiplets": [
+        3,
+        1,
+        2
+      ],
+      "abs_C_squared": [
+        "35/416",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        23,
+        13,
+        0
+      ],
+      "names": [
+        "v3_0_0",
+        "v1_0_8",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        3,
+        1,
+        0
+      ],
+      "abs_C_squared": [
+        "665/858",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        27,
+        20,
+        29
+      ],
+      "names": [
+        "v3_0_4",
+        "v2_0_6",
+        "v3_0_6"
+      ],
+      "multiplets": [
+        3,
+        2,
+        3
+      ],
+      "abs_C_squared": [
+        "9/104",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        29,
+        16,
+        7
+      ],
+      "names": [
+        "v3_0_6",
+        "v2_0_2",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        3,
+        2,
+        1
+      ],
+      "abs_C_squared": [
+        "35/416",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        23,
+        20,
+        14
+      ],
+      "names": [
+        "v3_0_0",
+        "v2_0_6",
+        "v2_0_0"
+      ],
+      "multiplets": [
+        3,
+        2,
+        2
+      ],
+      "abs_C_squared": [
+        "3/728",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        24,
+        21,
+        0
+      ],
+      "names": [
+        "v3_0_1",
+        "v2_0_7",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        3,
+        2,
+        0
+      ],
+      "abs_C_squared": [
+        "19/91",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        23,
+        30,
+        24
+      ],
+      "names": [
+        "v3_0_0",
+        "v3_0_7",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        3,
+        3,
+        3
+      ],
+      "abs_C_squared": [
+        "9/143",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        24,
+        32,
+        7
+      ],
+      "names": [
+        "v3_0_1",
+        "v3_0_9",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        3,
+        3,
+        1
+      ],
+      "abs_C_squared": [
+        "70/1573",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        27,
+        29,
+        16
+      ],
+      "names": [
+        "v3_0_4",
+        "v3_0_6",
+        "v2_0_2"
+      ],
+      "multiplets": [
+        3,
+        3,
+        2
+      ],
+      "abs_C_squared": [
+        "9/104",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        24,
+        34,
+        2
+      ],
+      "names": [
+        "v3_0_1",
+        "v3_0_11",
+        "v0_0_2"
+      ],
+      "multiplets": [
+        3,
+        3,
+        0
+      ],
+      "abs_C_squared": [
+        "80/1729",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        23,
+        36,
+        68
+      ],
+      "names": [
+        "v3_0_0",
+        "v4_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        3,
+        4,
+        7
+      ],
+      "abs_C_squared": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        23,
+        42,
+        68
+      ],
+      "names": [
+        "v3_0_0",
+        "v5_0_2",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        3,
+        5,
+        7
+      ],
+      "abs_C_squared": [
+        "1/7",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        24,
+        45,
+        53
+      ],
+      "names": [
+        "v3_0_1",
+        "v5_0_5",
+        "v6_0_1"
+      ],
+      "multiplets": [
+        3,
+        5,
+        6
+      ],
+      "abs_C_squared": [
+        "128/429",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        23,
+        55,
+        68
+      ],
+      "names": [
+        "v3_0_0",
+        "v6_0_3",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        3,
+        6,
+        7
+      ],
+      "abs_C_squared": [
+        "24/77",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        25,
+        57,
+        53
+      ],
+      "names": [
+        "v3_0_2",
+        "v6_0_5",
+        "v6_0_1"
+      ],
+      "multiplets": [
+        3,
+        6,
+        6
+      ],
+      "abs_C_squared": [
+        "5776/51909",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 13
+    },
+    {
+      "indices": [
+        24,
+        58,
+        40
+      ],
+      "names": [
+        "v3_0_1",
+        "v6_0_6",
+        "v5_0_0"
+      ],
+      "multiplets": [
+        3,
+        6,
+        5
+      ],
+      "abs_C_squared": [
+        "128/429",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        23,
+        74,
+        68
+      ],
+      "names": [
+        "v3_0_0",
+        "v7_0_6",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        3,
+        7,
+        7
+      ],
+      "abs_C_squared": [
+        "1/22",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        23,
+        81,
+        56
+      ],
+      "names": [
+        "v3_0_0",
+        "v7_0_13",
+        "v6_0_4"
+      ],
+      "multiplets": [
+        3,
+        7,
+        6
+      ],
+      "abs_C_squared": [
+        "24/77",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        23,
+        81,
+        43
+      ],
+      "names": [
+        "v3_0_0",
+        "v7_0_13",
+        "v5_0_3"
+      ],
+      "multiplets": [
+        3,
+        7,
+        5
+      ],
+      "abs_C_squared": [
+        "1/7",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        23,
+        81,
+        37
+      ],
+      "names": [
+        "v3_0_0",
+        "v7_0_13",
+        "v4_0_1"
+      ],
+      "multiplets": [
+        3,
+        7,
+        4
+      ],
+      "abs_C_squared": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        36,
+        0,
+        40
+      ],
+      "names": [
+        "v4_0_0",
+        "v0_0_0",
+        "v5_0_0"
+      ],
+      "multiplets": [
+        4,
+        0,
+        5
+      ],
+      "abs_C_squared": [
+        "19/78",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        36,
+        6,
+        52
+      ],
+      "names": [
+        "v4_0_0",
+        "v1_0_1",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        4,
+        1,
+        6
+      ],
+      "abs_C_squared": [
+        "49/585",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        36,
+        19,
+        56
+      ],
+      "names": [
+        "v4_0_0",
+        "v2_0_5",
+        "v6_0_4"
+      ],
+      "multiplets": [
+        4,
+        2,
+        6
+      ],
+      "abs_C_squared": [
+        "11/65",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        36,
+        23,
+        68
+      ],
+      "names": [
+        "v4_0_0",
+        "v3_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        4,
+        3,
+        7
+      ],
+      "abs_C_squared": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        36,
+        51,
+        4
+      ],
+      "names": [
+        "v4_0_0",
+        "v5_1_5",
+        "v0_0_4"
+      ],
+      "multiplets": [
+        4,
+        5,
+        0
+      ],
+      "abs_C_squared": [
+        "19/78",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        36,
+        62,
+        7
+      ],
+      "names": [
+        "v4_0_0",
+        "v6_1_2",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        4,
+        6,
+        1
+      ],
+      "abs_C_squared": [
+        "98/195",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        36,
+        63,
+        17
+      ],
+      "names": [
+        "v4_0_0",
+        "v6_1_3",
+        "v2_0_3"
+      ],
+      "multiplets": [
+        4,
+        6,
+        2
+      ],
+      "abs_C_squared": [
+        "11/65",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        36,
+        95,
+        35
+      ],
+      "names": [
+        "v4_0_0",
+        "v7_1_13",
+        "v3_0_12"
+      ],
+      "multiplets": [
+        4,
+        7,
+        3
+      ],
+      "abs_C_squared": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        41,
+        2,
+        54
+      ],
+      "names": [
+        "v5_0_1",
+        "v0_0_2",
+        "v6_0_2"
+      ],
+      "multiplets": [
+        5,
+        0,
+        6
+      ],
+      "abs_C_squared": [
+        "836/4459",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        41,
+        2,
+        41
+      ],
+      "names": [
+        "v5_0_1",
+        "v0_0_2",
+        "v5_0_1"
+      ],
+      "multiplets": [
+        5,
+        0,
+        5
+      ],
+      "abs_C_squared": [
+        "605/338884",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 13
+    },
+    {
+      "indices": [
+        40,
+        4,
+        36
+      ],
+      "names": [
+        "v5_0_0",
+        "v0_0_4",
+        "v4_0_0"
+      ],
+      "multiplets": [
+        5,
+        0,
+        4
+      ],
+      "abs_C_squared": [
+        "19/78",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        40,
+        5,
+        68
+      ],
+      "names": [
+        "v5_0_0",
+        "v1_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        5,
+        1,
+        7
+      ],
+      "abs_C_squared": [
+        "9/770",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        41,
+        8,
+        53
+      ],
+      "names": [
+        "v5_0_1",
+        "v1_0_3",
+        "v6_0_1"
+      ],
+      "multiplets": [
+        5,
+        1,
+        6
+      ],
+      "abs_C_squared": [
+        "65/847",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        40,
+        10,
+        41
+      ],
+      "names": [
+        "v5_0_0",
+        "v1_0_5",
+        "v5_0_1"
+      ],
+      "multiplets": [
+        5,
+        1,
+        5
+      ],
+      "abs_C_squared": [
+        "11/5460",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        40,
+        14,
+        68
+      ],
+      "names": [
+        "v5_0_0",
+        "v2_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        5,
+        2,
+        7
+      ],
+      "abs_C_squared": [
+        "9/14",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        41,
+        21,
+        57
+      ],
+      "names": [
+        "v5_0_1",
+        "v2_0_7",
+        "v6_0_5"
+      ],
+      "multiplets": [
+        5,
+        2,
+        6
+      ],
+      "abs_C_squared": [
+        "27/143",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        40,
+        19,
+        41
+      ],
+      "names": [
+        "v5_0_0",
+        "v2_0_5",
+        "v5_0_1"
+      ],
+      "multiplets": [
+        5,
+        2,
+        5
+      ],
+      "abs_C_squared": [
+        "1573/4116",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        42,
+        23,
+        68
+      ],
+      "names": [
+        "v5_0_2",
+        "v3_0_0",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        5,
+        3,
+        7
+      ],
+      "abs_C_squared": [
+        "1/7",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        40,
+        30,
+        54
+      ],
+      "names": [
+        "v5_0_0",
+        "v3_0_7",
+        "v6_0_2"
+      ],
+      "multiplets": [
+        5,
+        3,
+        6
+      ],
+      "abs_C_squared": [
+        "64/4719",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        40,
+        39,
+        0
+      ],
+      "names": [
+        "v5_0_0",
+        "v4_1_1",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        5,
+        4,
+        0
+      ],
+      "abs_C_squared": [
+        "19/78",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        40,
+        47,
+        5
+      ],
+      "names": [
+        "v5_0_0",
+        "v5_1_1",
+        "v1_0_0"
+      ],
+      "multiplets": [
+        5,
+        5,
+        1
+      ],
+      "abs_C_squared": [
+        "11/1560",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        40,
+        47,
+        14
+      ],
+      "names": [
+        "v5_0_0",
+        "v5_1_1",
+        "v2_0_0"
+      ],
+      "multiplets": [
+        5,
+        5,
+        2
+      ],
+      "abs_C_squared": [
+        "1573/1176",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        41,
+        49,
+        1
+      ],
+      "names": [
+        "v5_0_1",
+        "v5_1_3",
+        "v0_0_1"
+      ],
+      "multiplets": [
+        5,
+        5,
+        0
+      ],
+      "abs_C_squared": [
+        "1815/84721",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 13
+    },
+    {
+      "indices": [
+        40,
+        61,
+        24
+      ],
+      "names": [
+        "v5_0_0",
+        "v6_1_1",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        5,
+        6,
+        3
+      ],
+      "abs_C_squared": [
+        "128/429",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        41,
+        66,
+        10
+      ],
+      "names": [
+        "v5_0_1",
+        "v6_1_6",
+        "v1_0_5"
+      ],
+      "multiplets": [
+        5,
+        6,
+        1
+      ],
+      "abs_C_squared": [
+        "65/847",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        41,
+        62,
+        15
+      ],
+      "names": [
+        "v5_0_1",
+        "v6_1_2",
+        "v2_0_1"
+      ],
+      "multiplets": [
+        5,
+        6,
+        2
+      ],
+      "abs_C_squared": [
+        "27/143",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        41,
+        65,
+        2
+      ],
+      "names": [
+        "v5_0_1",
+        "v6_1_5",
+        "v0_0_2"
+      ],
+      "multiplets": [
+        5,
+        6,
+        0
+      ],
+      "abs_C_squared": [
+        "836/4459",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        42,
+        95,
+        35
+      ],
+      "names": [
+        "v5_0_2",
+        "v7_1_13",
+        "v3_0_12"
+      ],
+      "multiplets": [
+        5,
+        7,
+        3
+      ],
+      "abs_C_squared": [
+        "1/7",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        40,
+        93,
+        11
+      ],
+      "names": [
+        "v5_0_0",
+        "v7_1_11",
+        "v1_0_6"
+      ],
+      "multiplets": [
+        5,
+        7,
+        1
+      ],
+      "abs_C_squared": [
+        "3/715",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        40,
+        93,
+        20
+      ],
+      "names": [
+        "v5_0_0",
+        "v7_1_11",
+        "v2_0_6"
+      ],
+      "multiplets": [
+        5,
+        7,
+        2
+      ],
+      "abs_C_squared": [
+        "3/13",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        52,
+        2,
+        52
+      ],
+      "names": [
+        "v6_0_0",
+        "v0_0_2",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        6,
+        0,
+        6
+      ],
+      "abs_C_squared": [
+        "208/5985",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        54,
+        2,
+        41
+      ],
+      "names": [
+        "v6_0_2",
+        "v0_0_2",
+        "v5_0_1"
+      ],
+      "multiplets": [
+        6,
+        0,
+        5
+      ],
+      "abs_C_squared": [
+        "836/4459",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        52,
+        6,
+        68
+      ],
+      "names": [
+        "v6_0_0",
+        "v1_0_1",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        6,
+        1,
+        7
+      ],
+      "abs_C_squared": [
+        "125/363",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        52,
+        10,
+        53
+      ],
+      "names": [
+        "v6_0_0",
+        "v1_0_5",
+        "v6_0_1"
+      ],
+      "multiplets": [
+        6,
+        1,
+        6
+      ],
+      "abs_C_squared": [
+        "832/3993",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        53,
+        10,
+        41
+      ],
+      "names": [
+        "v6_0_1",
+        "v1_0_5",
+        "v5_0_1"
+      ],
+      "multiplets": [
+        6,
+        1,
+        5
+      ],
+      "abs_C_squared": [
+        "65/847",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        52,
+        12,
+        36
+      ],
+      "names": [
+        "v6_0_0",
+        "v1_0_7",
+        "v4_0_0"
+      ],
+      "multiplets": [
+        6,
+        1,
+        4
+      ],
+      "abs_C_squared": [
+        "49/585",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        52,
+        15,
+        68
+      ],
+      "names": [
+        "v6_0_0",
+        "v2_0_1",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        6,
+        2,
+        7
+      ],
+      "abs_C_squared": [
+        "3/11",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        52,
+        18,
+        52
+      ],
+      "names": [
+        "v6_0_0",
+        "v2_0_4",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        6,
+        2,
+        6
+      ],
+      "abs_C_squared": [
+        "832/63525",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        54,
+        21,
+        44
+      ],
+      "names": [
+        "v6_0_2",
+        "v2_0_7",
+        "v5_0_4"
+      ],
+      "multiplets": [
+        6,
+        2,
+        5
+      ],
+      "abs_C_squared": [
+        "27/143",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        55,
+        19,
+        37
+      ],
+      "names": [
+        "v6_0_3",
+        "v2_0_5",
+        "v4_0_1"
+      ],
+      "multiplets": [
+        6,
+        2,
+        4
+      ],
+      "abs_C_squared": [
+        "11/65",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        52,
+        26,
+        68
+      ],
+      "names": [
+        "v6_0_0",
+        "v3_0_3",
+        "v7_0_0"
+      ],
+      "multiplets": [
+        6,
+        3,
+        7
+      ],
+      "abs_C_squared": [
+        "6/121",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        53,
+        33,
+        57
+      ],
+      "names": [
+        "v6_0_1",
+        "v3_0_10",
+        "v6_0_5"
+      ],
+      "multiplets": [
+        6,
+        3,
+        6
+      ],
+      "abs_C_squared": [
+        "5776/51909",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 13
+    },
+    {
+      "indices": [
+        53,
+        34,
+        45
+      ],
+      "names": [
+        "v6_0_1",
+        "v3_0_11",
+        "v5_0_5"
+      ],
+      "multiplets": [
+        6,
+        3,
+        5
+      ],
+      "abs_C_squared": [
+        "128/429",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        52,
+        39,
+        6
+      ],
+      "names": [
+        "v6_0_0",
+        "v4_1_1",
+        "v1_0_1"
+      ],
+      "multiplets": [
+        6,
+        4,
+        1
+      ],
+      "abs_C_squared": [
+        "49/585",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        55,
+        38,
+        17
+      ],
+      "names": [
+        "v6_0_3",
+        "v4_1_0",
+        "v2_0_3"
+      ],
+      "multiplets": [
+        6,
+        4,
+        2
+      ],
+      "abs_C_squared": [
+        "11/65",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        53,
+        46,
+        24
+      ],
+      "names": [
+        "v6_0_1",
+        "v5_1_0",
+        "v3_0_1"
+      ],
+      "multiplets": [
+        6,
+        5,
+        3
+      ],
+      "abs_C_squared": [
+        "128/429",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        53,
+        48,
+        6
+      ],
+      "names": [
+        "v6_0_1",
+        "v5_1_2",
+        "v1_0_1"
+      ],
+      "multiplets": [
+        6,
+        5,
+        1
+      ],
+      "abs_C_squared": [
+        "5/3146",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        54,
+        47,
+        15
+      ],
+      "names": [
+        "v6_0_2",
+        "v5_1_1",
+        "v2_0_1"
+      ],
+      "multiplets": [
+        6,
+        5,
+        2
+      ],
+      "abs_C_squared": [
+        "27/143",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 9
+    },
+    {
+      "indices": [
+        54,
+        50,
+        2
+      ],
+      "names": [
+        "v6_0_2",
+        "v5_1_4",
+        "v0_0_2"
+      ],
+      "multiplets": [
+        6,
+        5,
+        0
+      ],
+      "abs_C_squared": [
+        "836/4459",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        53,
+        62,
+        25
+      ],
+      "names": [
+        "v6_0_1",
+        "v6_1_2",
+        "v3_0_2"
+      ],
+      "multiplets": [
+        6,
+        6,
+        3
+      ],
+      "abs_C_squared": [
+        "5776/51909",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 13
+    },
+    {
+      "indices": [
+        52,
+        65,
+        7
+      ],
+      "names": [
+        "v6_0_0",
+        "v6_1_5",
+        "v1_0_2"
+      ],
+      "multiplets": [
+        6,
+        6,
+        1
+      ],
+      "abs_C_squared": [
+        "416/1331",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        52,
+        67,
+        18
+      ],
+      "names": [
+        "v6_0_0",
+        "v6_1_7",
+        "v2_0_4"
+      ],
+      "multiplets": [
+        6,
+        6,
+        2
+      ],
+      "abs_C_squared": [
+        "832/63525",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 12
+    },
+    {
+      "indices": [
+        52,
+        67,
+        2
+      ],
+      "names": [
+        "v6_0_0",
+        "v6_1_7",
+        "v0_0_2"
+      ],
+      "multiplets": [
+        6,
+        6,
+        0
+      ],
+      "abs_C_squared": [
+        "208/5985",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 11
+    },
+    {
+      "indices": [
+        52,
+        95,
+        32
+      ],
+      "names": [
+        "v6_0_0",
+        "v7_1_13",
+        "v3_0_9"
+      ],
+      "multiplets": [
+        6,
+        7,
+        3
+      ],
+      "abs_C_squared": [
+        "6/121",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        52,
+        95,
+        12
+      ],
+      "names": [
+        "v6_0_0",
+        "v7_1_13",
+        "v1_0_7"
+      ],
+      "multiplets": [
+        6,
+        7,
+        1
+      ],
+      "abs_C_squared": [
+        "125/363",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        52,
+        95,
+        21
+      ],
+      "names": [
+        "v6_0_0",
+        "v7_1_13",
+        "v2_0_7"
+      ],
+      "multiplets": [
+        6,
+        7,
+        2
+      ],
+      "abs_C_squared": [
+        "3/11",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        4,
+        70
+      ],
+      "names": [
+        "v7_0_0",
+        "v0_0_4",
+        "v7_0_2"
+      ],
+      "multiplets": [
+        7,
+        0,
+        7
+      ],
+      "abs_C_squared": [
+        "5/133",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        68,
+        10,
+        69
+      ],
+      "names": [
+        "v7_0_0",
+        "v1_0_5",
+        "v7_0_1"
+      ],
+      "multiplets": [
+        7,
+        1,
+        7
+      ],
+      "abs_C_squared": [
+        "21/44",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        68,
+        12,
+        52
+      ],
+      "names": [
+        "v7_0_0",
+        "v1_0_7",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        7,
+        1,
+        6
+      ],
+      "abs_C_squared": [
+        "125/363",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        68,
+        13,
+        40
+      ],
+      "names": [
+        "v7_0_0",
+        "v1_0_8",
+        "v5_0_0"
+      ],
+      "multiplets": [
+        7,
+        1,
+        5
+      ],
+      "abs_C_squared": [
+        "9/770",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        68,
+        19,
+        69
+      ],
+      "names": [
+        "v7_0_0",
+        "v2_0_5",
+        "v7_0_1"
+      ],
+      "multiplets": [
+        7,
+        2,
+        7
+      ],
+      "abs_C_squared": [
+        "5/84",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        21,
+        52
+      ],
+      "names": [
+        "v7_0_0",
+        "v2_0_7",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        7,
+        2,
+        6
+      ],
+      "abs_C_squared": [
+        "3/11",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        22,
+        40
+      ],
+      "names": [
+        "v7_0_0",
+        "v2_0_8",
+        "v5_0_0"
+      ],
+      "multiplets": [
+        7,
+        2,
+        5
+      ],
+      "abs_C_squared": [
+        "9/14",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        30,
+        69
+      ],
+      "names": [
+        "v7_0_0",
+        "v3_0_7",
+        "v7_0_1"
+      ],
+      "multiplets": [
+        7,
+        3,
+        7
+      ],
+      "abs_C_squared": [
+        "3/11",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        32,
+        52
+      ],
+      "names": [
+        "v7_0_0",
+        "v3_0_9",
+        "v6_0_0"
+      ],
+      "multiplets": [
+        7,
+        3,
+        6
+      ],
+      "abs_C_squared": [
+        "6/121",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        68,
+        35,
+        42
+      ],
+      "names": [
+        "v7_0_0",
+        "v3_0_12",
+        "v5_0_2"
+      ],
+      "multiplets": [
+        7,
+        3,
+        5
+      ],
+      "abs_C_squared": [
+        "1/7",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        68,
+        35,
+        36
+      ],
+      "names": [
+        "v7_0_0",
+        "v3_0_12",
+        "v4_0_0"
+      ],
+      "multiplets": [
+        7,
+        3,
+        4
+      ],
+      "abs_C_squared": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        68,
+        39,
+        23
+      ],
+      "names": [
+        "v7_0_0",
+        "v4_1_1",
+        "v3_0_0"
+      ],
+      "multiplets": [
+        7,
+        4,
+        3
+      ],
+      "abs_C_squared": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        68,
+        49,
+        23
+      ],
+      "names": [
+        "v7_0_0",
+        "v5_1_3",
+        "v3_0_0"
+      ],
+      "multiplets": [
+        7,
+        5,
+        3
+      ],
+      "abs_C_squared": [
+        "1/7",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 6
+    },
+    {
+      "indices": [
+        68,
+        51,
+        5
+      ],
+      "names": [
+        "v7_0_0",
+        "v5_1_5",
+        "v1_0_0"
+      ],
+      "multiplets": [
+        7,
+        5,
+        1
+      ],
+      "abs_C_squared": [
+        "9/770",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        68,
+        51,
+        14
+      ],
+      "names": [
+        "v7_0_0",
+        "v5_1_5",
+        "v2_0_0"
+      ],
+      "multiplets": [
+        7,
+        5,
+        2
+      ],
+      "abs_C_squared": [
+        "9/14",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        64,
+        23
+      ],
+      "names": [
+        "v7_0_0",
+        "v6_1_4",
+        "v3_0_0"
+      ],
+      "multiplets": [
+        7,
+        6,
+        3
+      ],
+      "abs_C_squared": [
+        "24/77",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        68,
+        67,
+        6
+      ],
+      "names": [
+        "v7_0_0",
+        "v6_1_7",
+        "v1_0_1"
+      ],
+      "multiplets": [
+        7,
+        6,
+        1
+      ],
+      "abs_C_squared": [
+        "125/363",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 10
+    },
+    {
+      "indices": [
+        68,
+        67,
+        15
+      ],
+      "names": [
+        "v7_0_0",
+        "v6_1_7",
+        "v2_0_1"
+      ],
+      "multiplets": [
+        7,
+        6,
+        2
+      ],
+      "abs_C_squared": [
+        "3/11",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        89,
+        23
+      ],
+      "names": [
+        "v7_0_0",
+        "v7_1_7",
+        "v3_0_0"
+      ],
+      "multiplets": [
+        7,
+        7,
+        3
+      ],
+      "abs_C_squared": [
+        "1/22",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        94,
+        8
+      ],
+      "names": [
+        "v7_0_0",
+        "v7_1_12",
+        "v1_0_3"
+      ],
+      "multiplets": [
+        7,
+        7,
+        1
+      ],
+      "abs_C_squared": [
+        "21/44",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    },
+    {
+      "indices": [
+        68,
+        94,
+        17
+      ],
+      "names": [
+        "v7_0_0",
+        "v7_1_12",
+        "v2_0_3"
+      ],
+      "multiplets": [
+        7,
+        7,
+        2
+      ],
+      "abs_C_squared": [
+        "5/84",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 7
+    },
+    {
+      "indices": [
+        68,
+        93,
+        0
+      ],
+      "names": [
+        "v7_0_0",
+        "v7_1_11",
+        "v0_0_0"
+      ],
+      "multiplets": [
+        7,
+        7,
+        0
+      ],
+      "abs_C_squared": [
+        "5/133",
+        "0",
+        "0",
+        "0"
+      ],
+      "complexity": 8
+    }
+  ],
+  "elapsed_seconds": 4.703984252992086,
+  "peak_RSS_KiB": 49724
+}

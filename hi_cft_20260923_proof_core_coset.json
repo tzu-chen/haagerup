@@ -1,0 +1,11 @@
+{
+  "numerical_commutant_S2_dimension": 4,
+  "numerical_commutant_S3_dimension": 15,
+  "Heisenberg_commutant_S3_dimension": 34,
+  "core_central_charge": "14/5",
+  "coset_central_charge": "26/5",
+  "p1_kernel_residual": 7.664918685085657e-11,
+  "seconds": 12.223962745047174,
+  "peak_rss_KiB": 118680,
+  "scope": "Dimensions inside the certified S2 and finite product span S3, not all-weight coset characters."
+}

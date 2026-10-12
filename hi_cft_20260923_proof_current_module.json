@@ -1,0 +1,37 @@
+{
+  "arithmetic": "Q(sqrt(13),sqrt(-3))",
+  "current_complement_dimension": 80,
+  "exact_invariance_under_K0_u1_e1": true,
+  "exact_generator_lowering_annihilation": true,
+  "highest_seed_cyclicity": [
+    {
+      "highest_weight": [
+        1,
+        9
+      ],
+      "cyclic_dimension": 77
+    },
+    {
+      "highest_weight": [
+        0,
+        4
+      ],
+      "cyclic_dimension": 77
+    },
+    {
+      "highest_weight": [
+        0,
+        10
+      ],
+      "cyclic_dimension": 77
+    }
+  ],
+  "seconds": 0.4281571420142427,
+  "peak_rss_KiB": 22284,
+  "scope": "Finite current-space calculation; cyclicity is not by itself irreducibility or an all-weight module decomposition.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_current_module.py": "be4bffbea113ed964055f94d98a10f2908613d84d3de0b5f42aebba65442a95d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact.py": "e9816e9b3cd30d092b45d6ce85297f49ec8431f2f6081d862dd2b41c17ebc865",
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d"
+  }
+}

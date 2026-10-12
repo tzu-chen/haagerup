@@ -1,0 +1,100 @@
+\section{Solutions for Chapter~\ref{ch:arithmetic}}
+
+\paragraph{Exercise~\ref{ex:HI-periods}.}
+\phantomsection
+\label{sol:ex:HI-periods}
+Dividing $d_n^2=nd_n+1$ by $d_n$ gives
+$d_n-d_n^{-1}=n$, hence the period difference.
+Expanding $(d_n+1)(1+d_n^{-1})$ gives
+$d_n+2+d_n^{-1}=\omega_1+\omega_2$; division by their
+product proves the reciprocal identity.  For nonzero integer
+$a$,
+\[
+ \sin(\pi a/\omega_1)
+ =\sin(\pi a-\pi a/\omega_2)
+ =(-1)^{a+1}\sin(\pi a/\omega_2).
+\]
+The denominator is nonzero because $\omega_2$ is irrational.
+Substituting this sine ratio into
+$F(a+n)/F(a)=\sin(\pi a/\omega_1)/\sin(\pi a/\omega_2)$
+gives $F(a+n)=(-1)^{a+1}F(a)$.
+At the origin the sine ratio tends instead to
+$\omega_2/\omega_1=d_n^{-1}$.
+
+
+
+\paragraph{Exercise~\ref{ex:HI-sign}.}
+\phantomsection
+\label{sol:ex:HI-sign}
+For $1\leq a<n$, multiplication of the two sample formulas gives
+the sign exponent
+\[
+ \frac{a(a+n)+(n-a)(2n-a)}2=a(a-n)+n^2.
+\]
+Since $n$ is odd, $a$ and $a-n$ have opposite parity, so their
+product is even; $n^2$ is odd. The two initial minus signs cancel,
+the remaining sign is minus, and reflection gives
+$W_aW_{n-a}=-F(a)F(n-a)/d_n=-d_n^{-1}$.
+The integer exponent is not itself a function of the residue class:
+replacing $a$ by $a+n$ changes $a(a+n)/2$ by $n(a+n)$,
+which can be odd. For example at $n=3$, representatives $2$ and
+$5$ give exponents $5$ and $20$. One must state the chosen
+representatives and include the accompanying gamma-shift factor
+when changing them. The separately defined origin $W_0=-1$
+also cannot be obtained by the generic nonzero-sample rule.
+
+
+
+\paragraph{Exercise~\ref{ex:exact-rank}.}
+\phantomsection
+\label{sol:ex:exact-rank}
+Take
+\[
+ M=\begin{pmatrix}1&1\\1&1+10^{-8}\end{pmatrix}.
+\]
+Its exact determinant is $10^{-8}$, while rounding to six decimal
+places produces two identical rows.  After clearing denominators,
+a nonzero determinant modulo a prime proves that the original
+integer determinant was nonzero.  A zero residue only says that
+the prime divides that determinant; the integer could still be
+nonzero.  Modular rank methods therefore give decisive lower
+bounds when they succeed and potentially inconclusive results
+when they fail.
+For an explicit failure at a prime with no denominator problem,
+$\operatorname{diag}(1,7)$ has exact determinant seven but
+determinant zero modulo seven. A nonzero $r\times r$ minor
+modulo a permitted prime proves rank at least $r$ over $\Q$;
+proving an upper bound still requires showing the larger minors
+vanish exactly.
+
+
+
+\paragraph{Exercise~\ref{ex:component-norm}.}
+\phantomsection
+\label{sol:ex:component-norm}
+The two evaluations of $1+t$ are $2$ and $0$, so their product
+is zero and the element is not invertible.  The two evaluations
+of $2+t$ are $3$ and $1$, so its product is three.  It is
+invertible, with inverse $(2-t)/3$.  Modulo five both conclusions
+remain valid: the relevant products are zero and three.
+The distinction is visible in the algebra itself:
+$(1+t)(1-t)=0$ with $1-t\ne0$, whereas
+$(2+t)(2-t)=4-t^2=3$. Since two and three remain invertible
+modulo five, the algebra still splits into its $t=1$ and $t=-1$
+components, and the second inverse reduces to $4-2t$.
+
+
+
+\paragraph{Exercise~\ref{ex:unitarity-hierarchy}.}
+\phantomsection
+\label{sol:ex:unitarity-hierarchy}
+A field automorphism preserves a polynomial equality by preserving
+addition and multiplication.  Positivity is an order condition,
+and an adjoint involves complex conjugation, neither of which is
+part of that algebraic guarantee.  For example the two real
+embeddings of $\Q(\sqrt{13})$ send the positive number
+$\sqrt{13}$ to opposite signs.  Thus a transported algebraic
+solution must have its Hermitian and positivity properties
+checked separately.
+
+

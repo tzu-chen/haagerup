@@ -1,0 +1,63 @@
+Prepared for root review and guarded admission; NOT executed by scope_lattice.
+
+Script: haagerup_cft_textbook/plot_ising_calibration.py
+Draft wrapper: editorial/ising_calibration_figure_insertion.tex.txt
+
+Suggested command from haagerup_cft_textbook:
+  ~/.local/bin/research-safe-run --limit-mib 1024 --memory-mib 512 \
+      --threads 1 -- timeout 90s python3 plot_ising_calibration.py
+
+Peak allocation estimate (unmeasured):
+- Python, NumPy/Matplotlib and shared-library mappings: 160 MiB resident.
+- Font discovery/cache, vector renderer, output and allocator headroom:
+  another 80 MiB.
+- Explicit data and optional Agg pixel buffer: below 4 MiB.
+- Expected resident peak below 256 MiB; 512 MiB whole-job reservation
+  covers additional charged file cache. The 1024 MiB address-space cap
+  gives mapping headroom. Canonical guard remains admission authority.
+
+Execution constraints:
+- Requires the same RESEARCH_SAFE_RUN_ACTIVE marker as check_examples.py.
+- Requires one-CPU affinity and sets compute-library thread variables to one.
+- Sets Agg and MPLCONFIGDIR inside build/tmp before importing Matplotlib.
+- No direct NumPy import, eigensolver, fit, worker, detached child or TeX.
+- A Python audit hook refuses process creation. Optional fontconfig calls
+  receive FileNotFoundError, which Matplotlib font discovery handles by
+  falling back to in-process font-directory scanning.
+- 512 points per continuous curve and 15 discrete even sizes L=4,...,32.
+  A plotted 512-by-2 coordinate array has 1024 scalar entries. Internal
+  font/rendering buffers are separately included in the estimate above.
+
+Hand-algebra checks:
+Write z=pi/(2L), t=1/L^2. With v=2J, g_epsilon=8J sin(z) and
+g_T=16J sin(z) cos(z)^2, the two dimensions and velocity ratio are
+sin(z)/z, sec(z)^2, and [sin(z)/z]cos(z)^2 respectively.
+All have continuous limit one at t=0. For 0<z<=pi/8,
+sin(z)/z<1, sec(z)^2>1, and [sin(z)/z]cos(z)^2<1.
+No parity-resolved Hamiltonian or spectrum is recomputed.
+
+Expected outputs after root's run:
+- figures/ising_calibration.pdf (vector, embedded font)
+- figures/ising_calibration.svg (vector, portable glyph paths)
+- editorial/ising_calibration_plot_provenance.json (formulas, 15 rows,
+  chapter/script/guard/output hashes, versions and observed self-RSS)
+
+The script and TeX wrapper have been read statically only. No Python import,
+compilation, test, numerical run, or rendering was performed by this agent.
+Root should inspect actual output before integrating the draft wrapper.
+
+Root integration and completed guarded run, 2026-10-05:
+- Inspected actual host MemAvailable: 51,335,312 KiB; all applicable
+  ancestor memory.max entries were max. The central guard admitted slot 1/2.
+- Command used --wait --limit-mib 1024 --memory-mib 512 --threads 1 and
+  timeout 90s, from the textbook project directory. Exit status 0.
+- Plot self peak RSS: 97.5 MiB; elapsed generation: 2.08 seconds.
+- Central guard sampled whole-scope memory: 432.5 MiB, below 512 MiB.
+  This includes charges beyond process RSS, as anticipated in the estimate.
+- Root rendered and visually inspected the vector PDF: labels are legible,
+  all curves and markers fit, and the two opposite approaches to one are clear.
+- Wrapper integrated into l02 after the worked example. Its source hash
+  therefore differs from the pre-caption chapter hash preserved in the plot
+  provenance. The plotted formulas are unchanged; historical hashes retained.
+- Build freshness checks now include figure PDFs; packaging includes PDF/SVG
+  assets and the reproduction script. No eigensolver or research dataset used.

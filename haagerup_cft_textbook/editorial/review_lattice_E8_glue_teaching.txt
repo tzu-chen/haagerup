@@ -1,0 +1,80 @@
+Final pedagogical review: E8 root count and the two glue tops
+Reviewer: scope_lattice
+Read-only inspection and hand algebra; no jobs, imports, or live edits.
+
+ASSESSMENT
+
+The existing statements are correct and already sufficient to establish
+the ordinary dimension 81 of each actual E8 glue top:
+
+- c01_lattice_embedding.tex:118-138 introduces squared lengths 4/3
+  and 2/3, the isotropic order-three glue, and the current spaces
+  (27,3) and their dual, with dimensions 81 each.
+- r03_characters.tex:89-145 now counts 240 E8 roots, the 72+6 roots
+  of E6+A2, and the remaining 162 roots. The two nontrivial glue
+  classes are exchanged by negation, hence each contributes 81.
+- c05_branching.tex:249-272 distinguishes all four mixed B-module
+  sectors from the two chosen E8 glue sectors and separately invokes
+  the finite U-zero-mode irreducibility input.
+
+What remains asserted rather than derived is why the label 27 appears,
+and why the two ordinary finite representations are tensor products
+with the A2 fundamental 3. An optional compact worked-example extension
+would therefore add a new method rather than repeat a dimension count.
+I drafted it as editorial/E8_glue_minuscule_insertion.tex.txt, intended
+after the current E8 root-count example. It uses only that example's
+coordinate model and root reflections.
+
+HAND CHECK OF THE DRAFT
+
+With beta=e7+e8 and gamma=e6-e7,
+nu=(2beta+gamma)/3=(e6+e7+2e8)/3 satisfies
+(nu,beta)=1, (nu,gamma)=0, nu^2=2/3. A root r has A2 projection nu
+exactly when r6=r7 and r7+r8=1.
+
+The integer roots satisfying this are e8+/-ei for i=1,...,5
+(ten roots), and e6+e7 (one root). The half-integer roots have
+last three coordinates all +1/2; the first five signs have even
+minus parity, giving sixteen roots. Thus there are 27 projections
+onto the E6 complement, each of squared norm 2-2/3=4/3.
+
+For r=e6+e7, the E6 projection w0=(2/3)(e6+e7-e8) pairs to one
+with the sixth E6 simple root in the preceding example and to zero
+with the other five. It is the endpoint fundamental weight.
+
+Let eta=(-e1-e2-e3-e4-e5+e6+e7-e8)/2. Then (w0,eta)=1 and
+s_eta(w0) has first five coordinates +1/2 and last three
+(1/6,1/6,-1/6). The D5 reflections in the first five coordinates
+give all sixteen even-minus choices. Reflecting a choice with four
+first-coordinate minus signs in eta gives one of the ten weights
+of the form +/-ei-(e6+e7-e8)/3, and the D5 reflections give all ten.
+This connects all 27 weights in one E6 Weyl orbit. Distinct lattice
+momenta give one-dimensional weight lines; the root zero modes
+connect them, so this is the minuscule irreducible 27.
+
+The A2 orbit {nu,nu-beta,nu-beta-gamma} has three elements.
+Its Weyl action commutes with E6, gives three copies of the 27
+weight set, and preserves the glue class. Negating the roots
+produces the dual 81-dimensional class. The earlier 162-root
+count ensures these two sets exhaust the roots outside E6+A2.
+Therefore, with this choice of fundamental versus dual labels,
+  248 = (78,1)+(1,8)+(27,3)+(27bar,3bar).
+Reversing the A2 fundamental-label convention swaps 3 and 3bar;
+this is just relabeling, not a different dimension statement.
+
+The conformal weights of the two factors are (4/3)/2=2/3 and
+(2/3)/2=1/3, so these tensors already sit at total weight one.
+There is no oscillator contribution to a nontrivial glue top at
+that weight. The six-plus-two Cartan oscillators belong to the
+adjoint summands, making their dimensions 72+6=78 and 6+2=8.
+
+SCOPE
+
+The draft calls this finite branching under e6+sl3 and explicitly
+distinguishes it from restriction to U. It does not infer simple
+U-modules, Haagerup junctions, or a selected extension algebra from
+an equality of characters. The c05 finite irreducibility and
+extension-algebra inputs remain separate.
+
+No change is required for correctness. The draft is useful if one
+additional short worked example fits the final pedagogical scope.

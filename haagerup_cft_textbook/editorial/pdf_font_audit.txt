@@ -1,0 +1,44 @@
+Checked UTC: 2026-10-05T21:48:58.291332+00:00
+PDF SHA256: 45ab59ab9591a1af914b16b6a5efe099043463982c136f35d7c934feb7e57101
+Scope: font embedding in this PDF identity; no claim about later builds.
+
+PDF font embedding audit of the edition read at this step
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+QEIYKG+LMRoman17-Regular             Type 1            Custom           yes yes yes     10  0
+UAPLPF+LMRoman12-Regular             Type 1            Custom           yes yes yes     11  0
+WNLEZG+LMRoman12-Bold                Type 1            Custom           yes yes yes     18  0
+JRVIRR+LMRoman10-Regular             Type 1            Custom           yes yes yes     19  0
+ITCIPT+LMMathItalic10-Regular        Type 1            Custom           yes yes yes     20  0
+QZXIFZ+LMRoman8-Regular              Type 1            Custom           yes yes yes     21  0
+JRVIRR+LMRoman10-Regular             Type 1            Custom           yes yes yes     22  0
+ROSOAW+LMRoman10-Bold                Type 1            Custom           yes yes yes     23  0
+QHYYFZ+LMMathSymbols10-Regular       Type 1            Custom           yes yes yes     24  0
+XMURSD+LMMathItalic8-Regular         Type 1            Custom           yes yes yes     25  0
+LZVRFF+LMRoman6-Regular              Type 1            Custom           yes yes yes     26  0
+VJAYYS+LMMathSymbols8-Regular        Type 1            Custom           yes yes yes     27  0
+NVFISC+LMRoman10-Italic              Type 1            Custom           yes yes yes     28  0
+FIWWTS+LMMathExtension10-Regular     Type 1            Custom           yes yes yes     34  0
+DURRCC+LMMathItalic7-Regular         Type 1            Custom           yes yes yes     45  0
+ONFPYG+LMRoman5-Regular              Type 1            Custom           yes yes yes     46  0
+ESBRAY+LMMathSymbols7-Regular        Type 1            Custom           yes yes yes     47  0
+YKGMYR+LMRoman7-Regular              Type 1            Custom           yes yes yes     48  0
+QZXIFZ+LMRoman8-Regular              Type 1            Custom           yes yes yes     49  0
+NPZWQG+MSBM10                        Type 1            Builtin          yes yes yes    116  0
+ROSOAW+LMRoman10-Bold                Type 1            Custom           yes yes yes    177  0
+BADSIV+EUFM10                        Type 1            Builtin          yes yes yes    332  0
+UWUEFC+LMMathSymbols6-Regular        Type 1            Custom           yes yes yes   1114  0
+GDHIHA+LMRoman8-Bold                 Type 1            Custom           yes yes yes   1116  0
+SLFGAG+LMSans8-Regular               Type 1            Custom           yes yes yes   1123  0
+HHKIPE+LMMathItalic6-Regular         Type 1            Custom           yes yes yes   1124  0
+HYPCVD+LMRoman9-Regular              Type 1            Custom           yes yes yes   1171  0
+EEMFTK+LMSans10-Regular              Type 1            Custom           yes yes yes   1255  0
+NEQGXK+MSAM10                        Type 1            Builtin          yes yes yes   1294  0
+UAPLPF+LMRoman12-Regular             Type 1            Custom           yes yes yes   1364  0
+GDLXJM+LMMathItalic12-Regular        Type 1            Custom           yes yes yes   1658  0
+OKVPWT+LMMathItalic10-Bold           Type 1            Custom           yes yes yes   2193  0
+GCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes   2736  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes   2737  0
+GYKUUQ+STIXSizeTwoSym-Regular        CID TrueType      Identity-H       yes yes yes   2738  0
+JRVIRR+LMRoman10-Regular             Type 1            Custom           yes yes yes   3130  0
+NGMEYH+LMMono10-Regular              Type 1            Custom           yes yes yes   3327  0

@@ -13,9 +13,12 @@ project sources in dependency order and do not edit prerequisites during a run.
 Modern `module` headers let Lake select necessary import artifacts rather than
 loading every private part. Do not use raw Lean without its generated setup.
 
-Observed peak group RSS for the gamma modules is approximately 2.5 GiB. The
-same 6 GiB address-space cap, 8 GiB group watchdog, and 32 GiB host reserve apply
-to every invocation, including preflight and the small runtime-helper build.
+Observed peak group RSS for the gamma modules is approximately 2.5 GiB;
+that is not an allocation estimate for other modules. The installed shared
+research-safe-run guard and ~/.codex/AGENTS.md define current resource
+policy, including preflight and the small runtime-helper build. Queue jobs
+must declare a reviewed memory estimate; an exhausted budget requires
+review before another attempt.
 """
 
 from pathlib import Path

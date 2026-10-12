@@ -1,0 +1,188 @@
+Independent hand review of f06_related_categories and six solutions
+Reviewer: scope_construction
+Timestamp: 2026-10-05 18:34:56 UTC (clock__curr_time).
+Read-only chapter review; no numerical processes or builds.
+
+Conclusion
+----------
+The displayed hand algebra and categorical scope distinctions pass.
+Two small teaching repairs were sent to the author and have already
+been implemented: distinguish Jones--Wenzl turnbacks from all-boundary
+uncappability, and define zero-box closure separately from the scalar
+positive Perron--Frobenius trace. The author also made the reciprocal
+gamma normalization and even-cyclic analytic import explicit. There is
+no remaining substantive repair from this audit.
+
+This verifies the short derivations, not the large supplied polynomial,
+graph-block, or special-function certificates. Those remain construction
+inputs exactly as the chapter labels them.
+
+1. Noncyclic lift and sign algebra
+----------------------------------
+f06:58--198, at the opening snapshot.
+
+The monodromy is consistent under successive allowed shifts. The
+extra term from the first shift is even. A zero-class lift has W=-1;
+the reciprocal product at that class is therefore 1, not delta.
+
+For p -> p+2z, the combined determinant/weight sign is
+(-1)^[det(z,q)+q^T M z]=(-1)^[z^T M q]. For q -> q+2z it is
+(-1)^[det(p,z)+p^T M z]=(-1)^[z^T M p]. The relevant D_g
+factor has the same sign in each case, so A descends. The correction
+term has those signs as well. A shift of g contributes an even sum
+of four exponents. This independently checks the descent mechanism.
+
+All three axis values agree. At q=0 and p nonzero, -delta+tau=-1;
+at the origin tau-1=delta-2. D_g is one on the axes. The sum
+1-n/(delta-1)=-1/delta uses exactly delta^2=n delta+1.
+Off the axes, determinant phases and D_g squares cancel in
+A_g(p,q) A_g(q,p), leaving delta/(delta-1)^2.
+
+The Klein-four matrix's -it phases check, including the D_g sign
+for p=(1,0),q=(1,1). The normalization numerator is
+(delta-2)^2+3=8 and its denominator 2(delta+1), giving
+1-delta^-1=5-delta. The positive and negative roots have the
+different stated Hermitian behavior. For odd m, the three order-two
+weights square to -delta, character gauge fixes two signs, and the
+remaining non-order-two residues form 2m-2 inverse pairs.
+
+2. Order eight and order twelve hand reductions
+------------------------------------------------
+The current normalization F_k=gamma(omega_2+k)^-1 is explicit
+and agrees with the double-sine period rescaling. The newly added
+even-column/odd-column Fourier bridge correctly separates imported
+even-cyclic equations from the preceding odd-cyclic theorem.
+
+For order eight, division of the second eliminant gives
+r^-2-r^2=(3-s)/(2t), s=t^2. Squaring and using s^2+8s-1=0
+gives r^2+r^-2=(9+s)/2, then r+r^-1=(5+s)/2. Positivity
+selects both square roots and r<1. The displayed radical and
+tr^3=1-2r then give y^2 r^3=1 and y=lambda_8^-3. This
+does require the stated elimination input; the book does not claim
+to derive that ideal certificate from the short branch calculation.
+
+For order twelve, 2/7<t<3/10 gives a negative cubic value at u=3,
+a positive value at u=4, and positive derivative throughout (3,4).
+Substitution u=C-C^-1 and multiplication by C^3 gives exactly
+the displayed sextic, including its -t(74+6t^2) C^3 term.
+The monic degree-four then monic degree-six reductions give a
+24-dimensional rational algebra without needing irreducibility.
+The distinction between a unit certificate and merely nonzero
+evaluation of a denominator is correct.
+
+The unitarity step separately uses the unit-circle and conjugation
+certificate. Once |W|^2=delta_+ is known, the off-axis quotient has
+|A|^2=delta_+/(delta_+-1)^2. Together with the transpose product
+identity this proves Hermitian symmetry. The axis is already real.
+The index 1+delta_+=7+sqrt(37) is the dimension of the Q-system,
+not the category's global dimension. Multiple embeddings are not
+counted as inequivalent categories.
+
+The proposed gamma products immediately imply
+z_0 z_2+z_1^2 z_3=0, but the text correctly leaves their complete
+identification conjectural. The algebraic category construction does
+not depend on that identification.
+
+3. Quadratic orders and the free-product reconstruction
+-------------------------------------------------------
+Multiplication by D-1 in the (1,omega) basis gives
+2[[m-1,m^2],[1,m]]. Its entry gcd is 2 and determinant -4m,
+so the invariant factors are 2,2m. At m=3 this is
+[[4,18],[2,6]], determinant -12. Imposing D=1 in its own
+quadratic order instead gives the cyclic quotient of order 4m.
+The different additive groups have not been identified as rings.
+
+The Leavitt corner formula for rho(f_2) is multiplicative and
+unital because the cross-corner products vanish and the corner
+idempotents sum to one. Opposite translations on the two D factors
+give the required covariance. Faithfulness comes from D_1 itself.
+The full rho-squared relation and the no-new-intertwiners statement
+are appropriately attributed to the supplied reconstruction proof.
+The explanation of the latter uses a positive-degree left-invertible
+element to rule out finite-dimensional invariant left-coefficient
+spaces; it is consistent with the actual graded free-product lemma.
+No positive adjoint or analytic completion is claimed from this
+algebraic enlargement.
+
+4. Extended-Haagerup dimensions and moment argument
+---------------------------------------------------
+The index substitution x=2-lambda^2 gives
+lambda^6+2lambda^4-3lambda^2-5=0, with conjugation lambda -> -lambda.
+The cubic for x is irreducible modulo two. Since Q(x) is real at
+the chosen embedding and lambda is nonreal with square in Q(x),
+the coefficient field has degree six as stated.
+
+An independent hand reduction of D=125x^2-450x+145 gives
+D^2=73125x^2-264875x+83525. Reducing D^3 then verifies
+D^3-585D^2+8450D-21125=0 exactly. Its reduction modulo two
+is u^3+u^2+1, irreducible. Thus the degree-three versus degree-two
+Morita obstruction is valid, including for a nonunitary category
+having the generalized Haagerup ring, since it uses FP dimension.
+
+The f^(2) idempotent calculation and trace x-1 are correct. The
+author's repair now calls its annihilation condition a TL turnback
+condition, avoiding confusion with S's stronger uncappability.
+The theorem now explicitly assumes a finite connected bipartite
+graph with the specified norm. All four moments are zero-box scalar
+identities, and tr_0 and the faithful positive scalar trace are
+distinguished.
+
+From fS=S=Sf, the squared norm of S^2-f is exactly
+[9]-2[9]+[9]. Faithful positivity, rather than formal moment
+matching, forces S^2=f. The two spectral projections are orthogonal
+with trace [9]/2. Their simplicity is rightly assigned to the
+reconstructed principal graph, not inferred from being projections.
+
+The primary moment and reconstruction mechanism agrees with
+[BMPS](https://arxiv.org/html/0909.4099), Definition of Haagerup
+moments and the relations-from-moments argument. The graph-independent
+form is separately attributed to GMPPS. The full jellyfish reduction
+remains an imported theorem, as it should.
+
+5. Word tensor, field wording, and associator extraction
+--------------------------------------------------------
+The seed example gives p_00000012=c_1-c_2, with ascending coefficient
+vector (9,-3,-1,1,-2,1). The minus sign from one left rotation is
+essential and is present. The tensor vectors sum to zero, so each
+slot relation follows and gives a unique ternary extension. For a
+binary word, M_b is the exact delta function; ordinary stabilizer
+counting and seed compatibility justify the orbit denominator.
+The field conjugation in reflected terms has the correct sign.
+
+The distinction between an arbitrary rational presentation and a
+split rational form is accurate. The necessity/sufficiency field
+statement for the two original even parts agrees with
+[Morrison--Snyder](https://arxiv.org/html/1002.0168), Theorem 1.2.
+Their parameter is -1/lambda in the book's normalization, so the
+field is unchanged. Positive square roots introduced by an
+orthonormal gauge need not be intrinsic fields of definition.
+
+The normalization d_c^-1 tr(x_i^*x_j) makes H the correct scalar
+Gram matrix on Hom(c,a tensor b); multiplication by H^-1/2 gives
+isometries. Completeness across all simple channels is needed and
+stated. R^*L/d_d is then the change-of-basis matrix. Inserting
+complete tree bases proves the pentagon in the strictly associative
+planar category; it is not extrapolated from finitely many tested
+scalar equations.
+
+For the small F block, a=x-2, y=a+1, z=a^2+a-1 give
+a^2+y+z=2ay. Every entry of I-2vv^T equals the displayed matrix:
+in particular its lower-right numerator is ay-z=1, and its
+off-diagonal (2,3) entry is sqrt(z/y)/a. Orthogonality, determinant
+-1, and eigenvalues (-1,1,1) follow. Its identification as an actual
+recoupling still uses the specified TL diagrams and gauge, as stated.
+
+The four-member Morita-class statement is supported by
+[GMPPS](https://arxiv.org/abs/1810.06076). The chapter never turns
+this categorical classification into an EH VOA or a continuum limit.
+
+6. All six solutions
+---------------------
+Each solution passes independently:
+* factorized reciprocal weights force delta^2=delta and hence delta=1;
+* the order-eight branch calculation retains every positivity choice;
+* the Smith factors are 2,6, with the correct noncyclic distinction;
+* faithful moment positivity yields S^2=f and the projection traces;
+* odd rotation stabilizers force zero, and p_00000002=-c_1;
+* the reflection has determinant -1, and unitarity alone does not
+  identify it as a category's associator.

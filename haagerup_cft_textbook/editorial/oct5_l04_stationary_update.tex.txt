@@ -1,0 +1,37 @@
+% Draft only. Replace l04's constructioninput "The present stationary sequence".
+\begin{constructioninput}[The present stationary sequence]
+At the completed October 5 cutoff, the largest checkpoint qualified
+by the unchanged stationarity test has rank parameter $144$,
+energy density approximately $-.84533646847$, and component
+transfer length approximately $154.8613$ sites.
+Three consecutive accepted coordinate gradients and an independent
+same-point check pass the threshold $10^{-6}$; the latter gives
+$7.67\times10^{-7}$. The rank-$156$ trial reaches the lower energy
+$-.84533724589$, but its gradient $6.27\times10^{-5}$ fails the
+same criterion and it is excluded from the qualified sequence.
+
+The newest adjacent conditional entropy estimates are
+\[
+ \begin{array}{c|ccc}
+ \text{rank pair}&c_1&c_2&c_\infty\\ \hline
+ 120\text{--}132&2.75608&2.65579&2.35197\\
+ 132\text{--}144&1.55824&1.59321&1.47876
+ \end{array}
+\]
+A fit through the four checkpoints of ranks $108,120,132,144$
+gives $c_1=2.09890$. Its proximity to two does not make the
+strongly varying adjacent slopes a plateau. Stationarity
+qualifies the variational data for comparison; it does not
+establish the single-scale conformal assumptions of
+\eqref{eq:FES} or a continuum error bound.
+\end{constructioninput}
+
+% Optional tiny consistency change immediately after this input:
+% use rank 144 as the illustrative saved parameter in the unchanged
+% paragraph explaining the height-fiber dimensions.
+Here the saved rank parameter $r$ labels height-fiber dimensions
+$D_{I_j}=r$ and $D_{X_j}=3r$. The cyclic implementation further
+splits them into three phase blocks of dimensions $r/3$ and $r$.
+Thus rank parameter $144$ does not mean that the full ordinary
+embedding has bond dimension $144$; its block structure is part
+of the tensor definition and of the resource estimate.

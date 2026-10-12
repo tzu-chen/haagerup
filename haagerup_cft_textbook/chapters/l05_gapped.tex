@@ -1,0 +1,722 @@
+\chapter{Module categories, exact MPS, and gapped alternatives}
+\label{ch:gapped}
+
+An unusual noninvertible symmetry can restrict the possible vacuum
+structure without forcing a gapless theory. To see this concretely, we
+construct finite-bond states from a Haagerup algebra object and explain
+why a sufficiently long-range parent Hamiltonian is gapped and symmetric
+on the same physical-rho path space as the target chain. We then derive
+the corresponding finite-dimensional vacuum form factors. These are
+valuable alternatives against which to compare the chain data, but they
+are not assertions that the target Hamiltonian realizes that phase.
+The needed categorical ideas are algebra objects, their modules, and
+the compatibility of an action with reassociation.
+The matrix-product notation comes from Chapter~\ref{ch:tensor_networks};
+the relation between algebra modules and physical defects was introduced
+in Chapter~\ref{ch:defects}.
+
+\section{Why several vacua can be required}
+\index{module category!gapped vacua}
+
+For an ordinary finite symmetry group, a symmetry-broken gapped phase
+has a finite set of pure vacua permuted by the group. A noninvertible
+line can send one vacuum to a sum of vacua. Its multiplicities form
+nonnegative integer matrices satisfying the fusion rules. These matrices
+are often called a nonnegative integer matrix representation, or NIMrep.
+
+The matrices are not all the data. There must also be consistent
+associativity maps describing how line junctions act on interfaces
+between vacua. Those maps make the vacua into a module category over
+the symmetry category. A representation of the abstract fusion ring on
+a Hilbert space need not lift to such a positive semisimple vacuum
+module. This distinction prevents a small matrix trick from proving the
+existence of a physical phase.
+
+An invariant finite-volume ground state can be a cat of several pure
+vacua. Its one-point functions can vanish even when each component is
+ordered. In an ordinary gapped tunneling picture, several finite-volume
+levels collapse toward a common vacuum energy while a separate bulk gap
+remains positive. Their splittings may be exponentially small at large
+circumference. A broad crossover can make those splittings look like
+$1/L$ before the asymptotic regime is reached.
+
+\begin{example}[A gapped ordered chain on compatible and frustrated rings]
+\label{ex:gapped-clock-frustration}
+\index{clock model!period-three order}\index{domain wall}
+Consider an ordinary three-state clock at each site, with orthonormal
+basis $|s_j\rangle$, $s_j\in\Z/3\Z$. Define a diagonal Hamiltonian
+by its energy on each product configuration:
+\[
+ H_{\rm clock}|s_1,\ldots,s_L\rangle
+ =J\sum_{j=1}^L\bigl(1-\delta_{s_{j+1},\,s_j+1}\bigr)
+       |s_1,\ldots,s_L\rangle,
+ \qquad s_{L+1}=s_1,\quad J>0.
+\]
+Take $L\ge3$. All color arithmetic is modulo three. The local
+terms are commuting projections times $J$: a satisfied bond
+advances the color by one, while an unsatisfied bond costs $J$.
+The three zero-defect configurations on the infinite chain are
+$s_j=a+j$, with $a\in\Z/3\Z$. These are period-three pure bulk
+vacua, cycled by one-site translation or a global color shift.
+
+The finite spectrum follows from the defect residues
+\[
+ r_j=s_{j+1}-s_j-1\in\Z/3\Z,
+ \qquad \sum_{j=1}^L r_j=-L\pmod3.
+\]
+Their nonzero entries count the energy in units of $J$.
+Conversely, any residue sequence satisfying this sum, together
+with one initial color, reconstructs a unique periodic configuration.
+When $3\mid L$, all $r_j=0$ is allowed and gives exactly three
+ground states of energy zero. One nonzero residue cannot have
+sum zero. Two residues $+1,-1$ can, so the first excited energy
+is exactly $2J$. With energies ordered from $E_0$ and counted
+with multiplicity,
+\[
+ E_0=E_1=E_2=0,\qquad E_3-E_0=2J
+ \quad(3\mid L).
+\]
+There is a vacuum cluster and a size-independent gap above it.
+
+If $3\nmid L$, at least one defect is forced. One residue
+$r_j=-L$ satisfies the constraint; there are $L$ choices of
+its bond and three choices of initial color. Hence the ground
+energy is $J$ with degeneracy $3L$. In particular $E_3-E_0=0$
+along these sizes. This does not diagnose a critical bulk:
+the incompatible ring contains a domain wall whose position
+costs no energy in this exactly diagonal model.
+The staggered variable $t_j=s_j-j$ makes the mechanism transparent.
+In the bulk the Hamiltonian is the ferromagnetic clock projector
+onto unequal neighboring $t$ values; the ring closes with
+$t_{L+1}=t_1-L$, a nontrivial color twist precisely when
+$3\nmid L$.
+
+The distinction between a pure vacuum and a cat is equally explicit.
+Let $Z_j|s_j\rangle=\omega^{s_j}|s_j\rangle$, with
+$\omega=e^{2\pi i/3}$. In each product vacuum connected
+correlations between distinct sites vanish. On a compatible ring,
+the equal superposition of the three product vacua instead has
+\[
+ \langle Z_j\rangle=0,\qquad
+ \langle Z_i^\dagger Z_j\rangle=\omega^{j-i}.
+\]
+Its nondecaying order correlation coexists with the gap $2J$.
+This elementary clock model illustrates the finite-volume issues;
+it makes no assertion about the phase of the Haagerup Hamiltonian.
+\end{example}
+
+The physical $\mathcal H_3$ category has indecomposable vacuum module possibilities
+of ranks two, four, and six. Translation can also permute equivalent
+components. Thus the word ``symmetric'' need not mean a unique pure
+vacuum. A finite collection of vacua can carry the full symmetry
+consistently.
+
+\section{An algebra object is a multiplication with \texorpdfstring{$F$}{F}-moves}
+\index{Q-system!Haagerup module algebra}
+
+An algebra object consists of an object $Q$, a unit
+$\eta:1\to Q$, and a multiplication $m:Q\otimes Q\to Q$ satisfying
+unit and associativity equations. Associativity compares
+$m(m\otimes1)$ with $m(1\otimes m)$ after applying the category's
+associator. In a fusion basis it is a system of polynomial equations
+whose coefficients are the $F$-symbols.
+
+For a unitary separable Frobenius algebra, the adjoint $m^\dagger$
+is compatible with multiplication, and a normalization can make
+\[
+ mm^\dagger=\qdim(Q)\,1_Q.
+\]
+The Frobenius identities are not decorative. They are what lets
+multiplication and comultiplication pass through one another in a
+positive tensor construction. A connected algebra has
+$\dim\Hom(1,Q)=1$.
+
+\begin{example}[The associator can forbid an apparent algebra]
+One might try $Q'=1+\rho$, since its summands look simple and its
+fusion products contain the needed output channels. Normalize the
+unit and write
+$u=m(\rho,\rho;1)$, $v=m(\rho,\rho;\rho)$. In the physical $\mathcal H_3$
+associator, the two forbidden noninvertible output channels in the
+three-rho associativity equation require
+\[
+ \frac u{\sqrt d}+y_1v^2=0,\qquad
+ \frac u{\sqrt d}+y_2v^2=0,
+\]
+where $y_1\ne y_2$. Hence $u=v=0$. The remaining multiplication is
+a square-zero extension; its pairing through the tensor-unit channel
+is degenerate, so it is not a connected separable unitary algebra.
+Fusion-ring closure alone therefore fails to construct $1+\rho$ as
+a Q-system for this associator.
+\end{example}
+
+This local calculation also distinguishes the physical rank-four
+$\mathcal H_3$ module from a superficially similar $\mathcal H_2$ module. A category name
+or a shared fusion graph is not a substitute for checking its
+associativity equations.
+
+\begin{constructioninput}[The physical Haagerup algebra]
+In the specified real $\mathcal H_3$ gauge, the repository constructs
+\[
+ Q=1+\rho+\alpha\rho
+\]
+with unit, associativity, Frobenius, and specialness identities
+checked exactly in its algebraic coefficient field. It also constructs
+the four simple right modules and their action coefficients. The
+following MPS and parent arguments take these finite algebraic
+identities as input; they do not infer them from numerical
+optimization.
+\end{constructioninput}
+
+The finite input can be made quite explicit. Put $r=\rho$ and
+$s=\alpha\rho$, and define real core constants
+\[
+ x=\frac{2-\sqrt{13}}3,\qquad
+ y_{1,2}=\frac{5-\sqrt{13}\mp\sqrt{6(1+\sqrt{13})}}{12},
+ \qquad z=\frac{1+\sqrt{13}}6.
+\]
+Here the minus sign defines $y_1$. Set
+\[
+ D=\sqrt{z^2-y_1^2},\quad u=\sqrt d,\quad
+ v=-y_1/D,\quad\zeta=z/D,\quad
+ w=\sqrt{d-1-v^2},\quad t=-\frac{y_2}{z}w,
+\]
+with positive square roots. The unit coefficients are one, and the
+remaining nonzero multiplication coefficients are
+\begin{align*}
+ m(r,r;1)&=m(s,s;1)=u,\\
+ m(r,r;r)&=v,\\
+ m(r,r;s)&=m(r,s;r)=m(s,r;r)=w,\\
+ m(s,s;r)&=m(r,s;s)=m(s,r;s)=\zeta,\\
+ m(s,s;s)&=t.
+\end{align*}
+These are coefficients on normalized trivalent fusion vertices, not
+the multiplication table of an ordinary three-dimensional vector
+space with a trivial associator. Every unlisted coefficient is zero.
+
+\begin{example}[Two specialness blocks]
+On the tensor-unit output, $mm^\dagger$ is the sum of the squares
+of $m(1,1;1)$, $m(r,r;1)$, and $m(s,s;1)$, namely
+$1+2u^2=1+2d=\qdim(Q)$. On the $r$ output, it is
+\[
+ 2+v^2+2w^2+\zeta^2.
+\]
+The radical definitions give $\zeta^2-v^2=1$ and
+$w^2=d-1-v^2$, reducing the expression to the same $1+2d$.
+These checks illustrate how the coefficients are normalized. They
+do not replace the associativity equations, including forbidden
+channels, or the separate Frobenius checks.
+\end{example}
+
+In the convention of \eqref{eq:chain-F-convention}, a full
+associativity component has the concrete form
+\[
+ \sum_e m(a,b;e)m(e,c;T)F^{abc}_T[e,f]
+       =m(b,c;f)m(a,f;T).
+\]
+All allowed $f$ and all simple totals $T$, including those outside
+$Q$, enter the test. This is a small enough example to see exactly
+what an algebra-object construction claims while still using a
+nontrivial Haagerup associator.
+
+A right module is an object $M$ with action
+$\mu_M:M\otimes Q\to M$ satisfying the analogous unit and
+associativity equations. The category acts on modules from the left:
+$c\otimes M$ inherits a right action by reassociation. Decomposing
+this induced module into simples gives the vacuum fusion matrices.
+Here $Q$ belongs to the nonbraided line category $\mathcal H_3$.
+Its right modules form the category of vacua on which the lines act;
+the argument requires no independent tensor product of two vacua.
+
+\section{The four right modules and their physical tensors}
+
+Three modules are $\alpha^jQ$, with underlying supports
+\[
+ \alpha^j+\alpha^j\rho+\alpha^{j+1}\rho.
+\]
+The fourth, denoted $M_{\rm fix}$, has underlying object
+$\rho+\alpha\rho+\alpha^2\rho$ and is fixed by the alpha action
+up to module isomorphism. Its existence can be seen from the free
+module $\rho\otimes Q$ after removing two known simple summands.
+
+The multiplicity vector of $\rho Q$ in the ordered six-object list
+is $(1,0,1,3,2,2)$. It decomposes as
+\[
+ \rho Q\cong Q\oplus\alpha^2Q\oplus M_{\rm fix}.
+\]
+The exact action coefficients provide orthogonal coisometries onto
+the first two summands; their orthogonal complement gives the last
+one. The endomorphism dimension
+$\dim\End_Q(\rho Q)=\dim\Hom(\rho,\rho Q)=3$ then shows that the
+nonzero complement is simple, once the first two distinct simple
+summands have been identified.
+
+Restrict the physical algebra input of a module action to the
+$\rho$ summand of $Q$. In the multiplicity-free modules here, this
+gives scalar edge weights
+\[
+ W_M(a,b)=\mu_M(a,\rho;b).
+\]
+The periodic state is
+\begin{equation}
+ \Psi_M(a_0,\ldots,a_{L-1})
+ =\prod_iW_M(a_i,a_{i+1}).
+ \label{eq:module-edge-state}
+\end{equation}
+More generally one takes an ordinary trace over multiplicity fibers.
+Forbidden fusion edges vanish, so this is an exactly admissible
+physical-rho state.
+
+\subsection{Why the categorical line has the expected action}
+
+Apply the $F$-product operator $Y_c$ from
+\eqref{eq:topological-line-product} to \eqref{eq:module-edge-state}.
+At each output height, summing the internal input height is precisely
+the induced right action on $c\otimes M$. A heightwise module
+decomposition turns this action into a direct sum of simple module
+actions. The changes of basis cancel on consecutive edges and inside
+the final cyclic trace. Therefore
+\begin{equation}
+ Y_c\Psi_M=\sum_NN_{c,M}^{N}\Psi_N.
+ \label{eq:module-line-closure}
+\end{equation}
+No quantum-dimension prefactor appears. The closure uses ordinary
+cyclic traces in the orthonormal fusion coordinates; a categorical
+pivotal trace would be a different contraction.
+
+The finite constructor checked this statement literally on every
+periodic path at lengths three and four, as well as checking the
+module equations from which it follows generally. Those small-ring
+checks validate the implementation and normalization. The all-length
+argument is the telescoping module decomposition, not an extrapolation
+from two rings.
+
+After a cyclic relabeling of the three ordered modules, the rho
+multiplicity matrix is
+\begin{equation}
+ R=\begin{pmatrix}
+ 1&1&1&1\\
+ 1&0&1&1\\
+ 1&1&1&0\\
+ 1&1&0&1
+ \end{pmatrix}.
+ \label{eq:H3-rank4-R}
+\end{equation}
+Alpha fixes the first state and cycles the last three. Its triplet
+block is $J-P$, where $P$ fixes one color and exchanges the other
+two. This is the category-correct rank-four $\mathcal H_3$ action. In
+\eqref{eq:module-line-closure} it acts on the canonical, generally
+unnormalized finite-ring module tensors. Those tensors need not be
+orthogonal at finite circumference. In the gapped vacuum description
+below, the same symmetric matrix acts on an orthonormal basis of
+simple vacua. These are distinct normalization statements; independently
+normalizing four finite-ring vectors would insert ratios of their norms
+into the matrix elements.
+
+\section{A scalar-edge family that can be solved by hand}
+
+For the alpha-fixed module, a real height gauge makes all diagonal
+weights equal and all off-diagonal weights equal. After an overall
+normalization, consider the larger one-parameter family
+\[
+ W_t(i,j)=\begin{cases}t,&i=j,\\1,&i\ne j,\end{cases}
+ \qquad i,j\in\Z/3\Z,\quad t\in\R.
+\]
+Its norm transfer is
+\[
+ K_t=(t^2-1)I+J.
+\]
+The leading eigenvalue is $t^2+2$ and the two other eigenvalues are
+$t^2-1$. The leading probability on colors is uniform. Even at $t=0$
+the transfer is primitive: a complete graph on three vertices without
+loops has both two-step and three-step returns and hence period one.
+For nonzero $t$, the positive diagonal makes aperiodicity immediate.
+
+The module point is a particular negative solution
+\[
+ t_0^2+t_0=1/d.
+\]
+The nonzero amplitudes on all three colors show how an alpha-invariant
+primitive state can live entirely on noninvertible heights. There is
+no requirement that every height appear with nonzero probability in
+every allowed physical state.
+
+The energy of this entire family is also a small local contraction.
+Write $x,y_1,y_2,z$ for the relevant rho-projector column entries in
+the physical $F$ gauge. For equal endpoint colors, the two-edge
+amplitude vector is $(t^2,1,1)$ and its rho-channel component is
+$xt^2+y_1+y_2$. For unequal endpoint colors it is a permutation of
+$(t,t,1)$ and its component is $(y_1+y_2)t+z$. The transfer Perron
+normalization gives
+\begin{equation}
+ e(t)=-\frac{(xt^2+y_1+y_2)^2+
+                   2((y_1+y_2)t+z)^2}{(t^2+2)^2}.
+ \label{eq:scalar-edge-energy}
+\end{equation}
+This is an exact infinite-state variational energy, not a finite-size
+fit. At the exact negative module point it is only about $-.065$,
+far above the optimized physical-chain energy density near $-.845$.
+The construction supplies a controlled state and a symmetry example,
+not a competitive ground-state approximation by itself.
+
+Module associativity gives another exact property. Recoupling two
+adjacent physical rho legs into a channel $f$ produces
+\[
+ m(\rho,\rho;f)\,\mu_M(a,f;b).
+\]
+Since $\alpha^2\rho$ is absent from $Q$, its coefficient vanishes.
+Every constructed module state is therefore annihilated by every
+$P_i^{(\alpha^2\rho)}$. It is a frustration-free state of the
+different Hamiltonian $+\sum_iP_i^{(\alpha^2\rho)}$. It has not
+thereby been shown that this short Hamiltonian has no other ground
+states or has a positive thermodynamic gap.
+
+\section{A gapped parent on the same constrained path space}
+\index{parent Hamiltonian}
+
+We now explain the stronger long-range parent construction. Its
+input is the four exact tensors, and its conclusion concerns a
+particular sufficiently long interaction range. It does not change
+the physical object per site.
+
+For an ordered block $Q$, in the support order $(1,\rho,\alpha\rho)$,
+the weight matrix has the form
+\[
+ W_Q=\begin{pmatrix}0&1&0\\u&v&w\\0&w&\zeta\end{pmatrix},
+ \qquad u,v,w,\zeta>0.
+\]
+It is invertible because $\det W_Q=-u\zeta$. Its norm graph has
+links $I\leftrightarrow R\leftrightarrow S$ and loops on $R,S$,
+so it is primitive. In the real height gauge, the fixed block is
+$W_f=B_f[(t_0-1)I+J]$, where $B_f>0$ is its common off-diagonal
+weight. It is also invertible:
+\[
+ \det W_f=B_f^3(t_0+2)(t_0-1)^2\ne0.
+\]
+Neither $t_0=-2$ nor $t_0=1$ solves $t_0^2+t_0=1/d$.
+
+Embed each block as an ordinary three-dimensional virtual tensor
+\[
+ A_M^a=|a\rangle\operatorname{row}_a(W_M),
+\]
+with zero tensor when $a$ is outside the support. A physical word
+then yields
+\[
+ A_M^{a_0}\cdots A_M^{a_{\ell-1}}
+ =\left[\prod_{j=0}^{\ell-2}W_M(a_j,a_{j+1})\right]
+ |a_0\rangle\operatorname{row}_{a_{\ell-1}}(W_M).
+\]
+The products of words span the virtual matrix algebra once enough
+words distinguish the blocks and vary their endpoints.
+
+\begin{proposition}[An explicit block-injectivity witness]
+Five-site words span the direct sum of the four $3\times3$ virtual
+matrix algebras of these module tensors.
+\end{proposition}
+\begin{proof}
+In ordered block $j$, choose a word
+$a,R_j,I_j,R_j,b$ with arbitrary supported endpoints. Every edge
+has nonzero weight. The unique invertible height $I_j$ excludes
+the other three modules. Varying $a,b$, and using invertibility of
+$W_j$, spans all nine matrix units in that block.
+
+For the fixed block, choose an all-noninvertible five-site word with
+any prescribed endpoints that visits all three colors. Every edge
+is nonzero. No ordered module supports all three colors, so it
+isolates the fixed block. Again the endpoint matrices span all
+nine matrix units.\end{proof}
+
+Block injectivity is stronger than merely finding a primitive
+transfer spectrum separately in each block. It also separates the
+blocks by physical words. It is the appropriate input for a
+finite-family MPS parent theorem.
+Equivalently, after blocking, every virtual matrix can be detected
+by a suitable physical word within its chosen block. This is the
+linear-algebra meaning of \emph{injectivity} being used here.
+
+For an interval of length $\ell$, define the local range
+\[
+ S_\ell=\Span\{|v^M_{ab}\rangle:M,a,b\},
+\]
+where $|v^M_{ab}\rangle$ sums all internal height words with fixed
+endpoints $a,b$, weighted by the product of the $W_M$ edges. Because
+$W_M$ is invertible, this is precisely the ordinary MPS range with
+arbitrary virtual boundary matrices. Different endpoint pairs have
+orthogonal physical support. Its orthogonal projector $\Pi_\ell$
+therefore preserves both endpoint heights and maps admissible
+interiors to admissible interiors.
+
+The parent term $h_\ell=1-\Pi_\ell$ preserves the global constrained
+path space. In the unconstrained six-state embedding, forbidden
+interior words are penalized. Restricting to the path space is a
+reducing restriction of the operator, not a change in its intended
+low-energy state family.
+
+\subsection{Why the local parent respects the categorical lines}
+
+Closure of the four periodic states under $Y_c$ would not by itself
+prove that every local parent term commutes with $Y_c$. The needed
+statement is local. Fix the endpoints of an interval and all outside
+MPO indices. Acting with the open $F$-product line on an interval
+module vector is the induced module $c\otimes M$ on that interval.
+The same module decomposition used in
+\eqref{eq:module-line-closure} telescopes at every internal height,
+leaving only boundary intertwiners. Hence it sends the whole local
+range $S_\ell$ into itself.
+
+Thus the subspace with this interval in $S_\ell$ and arbitrary
+compatible outside data is invariant under every closed $Y_c$ and
+under $Y_c^\dagger=Y_{c^*}$. It is therefore reducing. Its
+orthogonal projector commutes with the closed line on the full
+compatible chain, giving $[h_\ell,Y_c]=0$.
+
+For a sufficiently long fixed interval, the standard block-injective
+MPS parent theorem gives a thermodynamic gap and four periodic
+ground states on sufficiently large rings. All four MPS lie in the
+admissible path space. Restricting the positive parent to this
+reducing subspace keeps those ground states and cannot create
+eigenvalues below its gap. The same local term can
+be placed at every site, preserving one-site translation. The
+five-site word argument is a proof device, not a requirement to
+break physical translation to a five-site cell.
+
+\begin{theorem}[Conditional on the exact module input]
+The physical one-rho-per-site path Hilbert space admits a finite-range,
+one-site-translation-invariant gapped Hamiltonian commuting with the
+actual $\mathcal H_3$ categorical lines and realizing the rank-four module
+of vacua.
+\end{theorem}
+
+No minimal interaction range or numerical gap bound is asserted.
+In particular, this theorem does not prove a gap for the short
+missing-channel anchor. Its open kernels exceed the module ranges
+already at small lengths. Nor does it determine the phase of
+$-\sum P_\rho$. It rules out a proposed kinematic argument that
+these symmetries and this object per cell force every compatible
+Hamiltonian to be gapless.
+
+\begin{example}[A local kernel does not determine the longer parent]
+The distinction can be checked by exact dimensions. On three height
+sites, the four-module range is in fact the entire kernel of the
+single $P_{\alpha^2\rho}$ term. At equal noninvertible endpoints,
+there are four middle heights and a rank-one constraint. The three
+available module vectors are independent: one has an invertible
+middle height unavailable to the others; after removing it, the
+fixed module has a third-color middle height unavailable to the
+remaining ordered module. At unequal noninvertible endpoints, the
+middle space has dimension three and the two module vectors are
+independent, since only the fixed module reaches the third color.
+
+The other endpoints contribute one dimension whenever they belong
+to an ordered module. Summing equal invertible, mixed, equal
+noninvertible, and unequal noninvertible endpoint sectors gives
+\[
+ \dim S_3=3+6+6+9+12=36.
+\]
+Thus three-site words already separate the four virtual blocks;
+the five-site witness above was a simpler sufficient proof. The
+sum of the physical tensors is the invertible direct sum of their
+$W_M$ matrices, so full spanning persists at every larger word
+length. In particular $\dim S_4=36$.
+
+Now let $D_\ell$ count admissible open words of $\ell$ heights,
+including all endpoints. Unlike the periodic count, it is the sum
+of all entries of $N_\rho^{\ell-1}$. The color-independent
+two-by-two block gives $D_1=6$, $D_2=15$ and
+$D_{\ell+2}=3D_{\ell+1}+D_\ell$, hence
+\[
+ D_3=51,\qquad D_4=168.
+\]
+Each of the two missing-channel projectors on four heights has
+rank $51$: fusing the selected pair into $\alpha^2\rho$ reduces
+the edge count by one, and its alpha permutation disappears when
+all endpoints are summed. Rank subadditivity therefore gives
+\[
+ \dim\bigl(\ker P_1\cap\ker P_2\bigr)
+ \geq168-51-51=66>36=\dim S_4.
+\]
+No commutativity assumption is used. The equality of one local
+kernel with an MPS range has already failed to propagate at the
+next length. This is why a parent-gap theorem must use its actual
+intersection hypotheses, rather than only the existence of several
+annihilated MPS.
+\end{example}
+
+\section{The rank-four vacuum algebra and its exact form factors}
+\index{vacuum algebra}
+
+We can derive a sharp low-energy alternative if the target chain
+eventually approaches this gapped vacuum structure. Let $|f\rangle$
+be the fixed pure vacuum and $|o_j\rangle$ the ordered three-cycle.
+Put
+\[
+ b=d-2=\frac{\sqrt{13}-1}2,\qquad b^2=3-b.
+\]
+Choose the vacuum in the trivial categorical sector,
+$Y_\alpha=1$ and $Y_\rho=d$. The four-dimensional ground space
+alone does not make this choice; alpha invariance still leaves a
+two-dimensional neutral space. The Perron eigenvector of
+\eqref{eq:H3-rank4-R} with eigenvalue
+$d$ is
+\[
+ |0\rangle=\frac{b|f\rangle+|o_0\rangle+|o_1\rangle+|o_2\rangle}
+                  {\sqrt{b^2+3}}.
+\]
+The ordered total probability is $p=3/(b^2+3)$. The symmetric
+finite-volume vacuum is therefore not an equal mixture of four
+vacua.
+
+There is a useful distinction between state normalization and
+idempotent normalization here. Let $v_f,v_j$ be the local primitive
+idempotents, which multiply as $v_i v_j=\delta_{ij}v_i$, and let
+$\theta_i=\langle v_i,v_i\rangle$ in the positive Frobenius
+inner product. The line action on these idempotents is
+\[
+ Y_\rho v_j=(J-P)v_j+b^{-1}v_f,
+ \qquad Y_\rho v_f=v_f+b\sum_jv_j.
+\]
+Self-adjointness gives $\theta_f=b^2\theta_o$, with the three
+ordered norms equal. Passing to $|i\rangle=v_i/\sqrt{\theta_i}$
+produces the symmetric integer matrix
+\eqref{eq:H3-rank4-R}. Thus the unequal Perron probabilities are
+fixed by the positive vacuum metric; an equal-weight statistical
+mixture would calculate different form factors.
+
+In the diagonal algebra of functions on these four vacua, define
+\[
+ \Phi(o_j)=p^{-1/2}\omega^j,\quad \Phi(f)=0,
+ \qquad E(o_j)=b/\sqrt3,\quad E(f)=-\sqrt3/b.
+\]
+Direct averaging in $|0\rangle$ gives
+$\langle E\rangle=0$ and
+$\langle E^2\rangle=\langle\Phi^\dagger\Phi\rangle=1$.
+The cubic and mixed form factors are
+\begin{align}
+ C_{\Phi\Phi\Phi}&=p^{-1/2}
+       =\sqrt{\frac{13-\sqrt{13}}6},\label{eq:rank4-charged}\\
+ g=C_{\Phi\Phi^\dagger E}&=b/\sqrt3,
+ \qquad C_{EEE}=-1/\sqrt3.\label{eq:rank4-neutral}
+\end{align}
+For instance, $\Phi^3$ is $p^{-3/2}$ on the ordered vacua, so its
+mean is $p^{-1/2}$. The neutral cubic follows by adding the ordered
+and fixed contributions with their unequal probabilities.
+
+The algebra closes:
+\begin{equation}
+ \Phi^\dagger\Phi=1+gE,\qquad
+ E^2=1+C_{EEE}E,\qquad
+ |C_{\Phi\Phi\Phi}|^2=1+g^2,
+ \quad C_{EEE}=\frac{g^2-1}{g}.
+ \label{eq:rank4-vacuum-identities}
+\end{equation}
+These are ordinary multiplication identities in a finite-dimensional
+vacuum algebra. They do not use conformal invariance. A microscopic
+operator ratio approaches them only if its source and selected states
+converge to the stated vacuum projections.
+
+The physical $\mathcal H_3$ predictions are approximately $1.25$ for the
+charged cubic and $.75$ for the mixed neutral coefficient. The
+values about $1.66$ and $1.33$ arise from the different rank-four
+$\mathcal H_2$ action. The finite-chain values near $1.59$ and $1.30$ differ
+from the $\mathcal H_3$ targets, but do not alone exclude a late gapped
+crossover: vacuum projection and a finite bulk correlation length
+have not been established at these sizes.
+
+\section{Other vacuum modules and a symmetry filter}
+
+In the rank-two module, alpha is trivial and
+$R=\left(\begin{smallmatrix}0&1\\1&3\end{smallmatrix}\right)$.
+Its Perron amplitudes are proportional to $(1,d)$. The centered
+unit neutral field has values $d,-d^{-1}$ and cubic
+$d-d^{-1}=3$. There is no charged order field in this vacuum
+algebra.
+
+The regular rank-six module has two alpha triplets, with Perron
+amplitudes $(1,1,1,d,d,d)$. It has two charged pairs rather than
+one, and a neutral cubic of $3$. Its charged cubic depends on the
+chosen linear combination of the two pairs. Under an additional
+closed-pair condition for the rho line, its upper possible magnitude
+is close to $1.5895$. Matching that one number is not an
+identification: the extra charged pair and the distinct neutral
+predictions must also occur.
+
+For the rank-four module, let
+$|s\rangle=(|o_0\rangle+|o_1\rangle+|o_2\rangle)/\sqrt3$.
+On $(f,s)$,
+\[
+ Y_\rho=\begin{pmatrix}1&\sqrt3\\\sqrt3&2\end{pmatrix},
+ \qquad (Y_\rho-2)|s\rangle=\sqrt3|f\rangle.
+\]
+This suggests extracting the missing fixed vacuum from an ordered
+cat. On the whole alpha-neutral Hilbert space, however,
+$B=Y_\rho-2$ is invertible, not a projection, and
+$B^\dagger B=5-Y_\rho$. For a generic normalized state $s$,
+\[
+ \|Bs\|^2=5-\langle Y_\rho\rangle.
+\]
+Dividing by $\sqrt3$ is correct only for the exact module cat with
+$\langle Y_\rho\rangle=2$.
+
+Since $[H,Y_\rho]=0$, the normalized filtered energy obeys
+\[
+ E_B-E=-\frac{\langle HY_\rho\rangle-E\langle Y_\rho\rangle}
+                 {5-\langle Y_\rho\rangle}.
+\]
+If $\operatorname{Var}(H_L)=O(L)$, its energy-density difference
+vanishes at least as $L^{-1/2}$ by Cauchy--Schwarz. Equal limiting
+energy densities after this symmetry filter are therefore a general
+variance consequence, not proof of a new pure vacuum.
+
+A coherent tensor subtraction must retain mixed overlaps. Taking
+separate Perron limits of $Y_\rho s$ and $s$ before subtracting can
+destroy the cancellation. At finite bond dimension, two close but
+inequivalent injective tensors can become orthogonal as the ring
+length tends to infinity. A failed finite-bond extraction therefore
+does not refute the rank-four phase, while small charged means do
+not prove primitivity.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:gapped-PF}
+Verify the fusion relation for \eqref{eq:H3-rank4-R} together with
+the alpha cycle. Find its eigenvalues on the neutral two-plane and
+its action on the charged complement.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:gapped-PF]{Solution on page~\pageref*{sol:ex:gapped-PF}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:gapped-cubics}
+Derive all three coefficients in
+\eqref{eq:rank4-charged}--\eqref{eq:rank4-neutral} and the identities
+\eqref{eq:rank4-vacuum-identities} by averaging functions on four
+points with the Perron probabilities.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:gapped-cubics]{Solution on page~\pageref*{sol:ex:gapped-cubics}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:gapped-parent}
+Explain why invariance of the four periodic MPS under a closed line
+does not by itself imply symmetry of each local parent projector.
+Identify the stronger open-interval property used in the proof.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:gapped-parent]{Solution on page~\pageref*{sol:ex:gapped-parent}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:gapped-filter}
+Derive the filtered-energy identity and its $O(L^{-1/2})$ density
+bound when $\operatorname{Var}(H_L)=O(L)$. Give an example of a
+cat of states with different energy densities for which the variance
+is instead of order $L^2$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:gapped-filter]{Solution on page~\pageref*{sol:ex:gapped-filter}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:gapped-short}
+Suppose several MPS are annihilated by every term of a short
+frustration-free Hamiltonian. List the two additional conclusions
+needed before one can claim this Hamiltonian has exactly those
+ground states and a thermodynamic gap. Why does a gapped longer
+parent not supply them automatically?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:gapped-short]{Solution on page~\pageref*{sol:ex:gapped-short}.}}\par
+\end{exercise}

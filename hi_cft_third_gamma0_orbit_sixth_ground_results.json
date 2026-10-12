@@ -1,0 +1,1438 @@
+{
+  "rows": [
+    {
+      "levels": [
+        1,
+        39
+      ],
+      "all_ground_supports_exist": true,
+      "grounds": [
+        {
+          "name": "d5",
+          "target": [
+            13,
+            4,
+            40,
+            10,
+            4,
+            436,
+            4,
+            10,
+            82,
+            5620
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 5,
+            "2": 4
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 1,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 23,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d6",
+          "target": [
+            14,
+            2,
+            62,
+            1,
+            2,
+            1586,
+            2,
+            1,
+            1,
+            50882
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 10,
+            "2": 2
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 1,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 62,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "c1",
+          "target": [
+            3,
+            0,
+            4,
+            0,
+            0,
+            16,
+            0,
+            0,
+            0,
+            64
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 3,
+            "2": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 1,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 9,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d1",
+          "target": [
+            7,
+            0,
+            56,
+            0,
+            0,
+            1568,
+            0,
+            0,
+            0,
+            50816
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 7,
+            "2": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 1,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 31,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d4",
+          "target": [
+            5,
+            0,
+            20,
+            0,
+            0,
+            272,
+            0,
+            0,
+            0,
+            4160
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 5,
+            "2": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 1,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 17,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "c2",
+          "target": [
+            27,
+            6,
+            210,
+            35,
+            6,
+            7350,
+            6,
+            35,
+            707,
+            349830
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 15,
+            "2": 6
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 1,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 9,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 1,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 184,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d2",
+          "target": [
+            42,
+            10,
+            366,
+            85,
+            10,
+            13722,
+            10,
+            85,
+            3109,
+            635946
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 22,
+            "2": 10
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 1,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 9,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 8,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 1,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 533,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "a",
+          "target": [
+            81,
+            18,
+            738,
+            129,
+            18,
+            32562,
+            18,
+            129,
+            3897,
+            2034018
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 45,
+            "2": 18
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 9,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 11,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 8,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 4,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 8283,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "c0",
+          "target": [
+            81,
+            18,
+            738,
+            129,
+            18,
+            32562,
+            18,
+            129,
+            3897,
+            2034018
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 45,
+            "2": 18
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 9,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 11,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 8,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 4,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 8283,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness.",
+          "reused_identical_target": true
+        },
+        {
+          "name": "b",
+          "target": [
+            80,
+            20,
+            860,
+            210,
+            20,
+            44372,
+            20,
+            210,
+            10458,
+            3050180
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 40,
+            "2": 20
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 9,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 11,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 10,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 2,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 5275,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d3",
+          "target": [
+            119,
+            30,
+            1350,
+            295,
+            30,
+            78558,
+            30,
+            295,
+            13567,
+            6667950
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 59,
+            "2": 30
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 1,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 9,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 13,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 8,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 10,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 10,
+            "2": 1
+          },
+          "budget": {
+            "nodes": 38065,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        }
+      ]
+    },
+    {
+      "levels": [
+        3,
+        13
+      ],
+      "all_ground_supports_exist": true,
+      "grounds": [
+        {
+          "name": "d5",
+          "target": [
+            13,
+            4,
+            40,
+            10,
+            4,
+            436,
+            4,
+            10,
+            82,
+            5620
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 5,
+            "2": 4,
+            "3": 0,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 3,
+            "2": 2,
+            "3": 1,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 25,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d6",
+          "target": [
+            14,
+            8,
+            24,
+            10,
+            20,
+            180,
+            68,
+            10,
+            82,
+            1524
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 3,
+            "2": 4,
+            "3": 1,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 1,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 2,
+            "2": 2,
+            "3": 1,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 19,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "c1",
+          "target": [
+            3,
+            0,
+            4,
+            0,
+            0,
+            16,
+            0,
+            0,
+            0,
+            64
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 3,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 2,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 11,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d1",
+          "target": [
+            7,
+            2,
+            6,
+            1,
+            2,
+            18,
+            2,
+            1,
+            1,
+            66
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 3,
+            "2": 2,
+            "3": 0,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 2,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 13,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d4",
+          "target": [
+            5,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            2
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 1,
+            "2": 2,
+            "3": 0,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 1,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 8,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "c2",
+          "target": [
+            27,
+            18,
+            54,
+            27,
+            54,
+            486,
+            198,
+            75,
+            147,
+            5814
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 6,
+            "2": 6,
+            "3": 3,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 1,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 3,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 4,
+            "2": 2,
+            "3": 2,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 41,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d2",
+          "target": [
+            42,
+            24,
+            128,
+            62,
+            60,
+            1916,
+            204,
+            110,
+            854,
+            38588
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 9,
+            "2": 12,
+            "3": 3,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 1,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 3,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 6,
+            "2": 6,
+            "3": 2,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 85,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "a",
+          "target": [
+            81,
+            54,
+            270,
+            153,
+            162,
+            4482,
+            594,
+            441,
+            2025,
+            103410
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 18,
+            "2": 18,
+            "3": 9,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 1,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 5,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 27,
+            "2": 11,
+            "3": 6,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 338,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "c0",
+          "target": [
+            81,
+            54,
+            270,
+            153,
+            162,
+            4482,
+            594,
+            441,
+            2025,
+            103410
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 18,
+            "2": 18,
+            "3": 9,
+            "4": 0
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 1,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 5,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 27,
+            "2": 11,
+            "3": 6,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 338,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness.",
+          "reused_identical_target": true
+        },
+        {
+          "name": "b",
+          "target": [
+            80,
+            68,
+            236,
+            162,
+            308,
+            3188,
+            1988,
+            522,
+            2034,
+            56756
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 16,
+            "2": 16,
+            "3": 8,
+            "4": 2
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 4,
+                "right_dimension": 2,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 20,
+            "2": 8,
+            "3": 5,
+            "4": 1
+          },
+          "budget": {
+            "nodes": 250,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        },
+        {
+          "name": "d3",
+          "target": [
+            119,
+            108,
+            408,
+            304,
+            528,
+            6528,
+            3648,
+            1360,
+            3616,
+            143328
+          ],
+          "left_multiplicity_dimensions": {
+            "1": 22,
+            "2": 24,
+            "3": 11,
+            "4": 4
+          },
+          "support_found": true,
+          "support_count": 1,
+          "unique_support": true,
+          "all_support_witnesses": [
+            [
+              {
+                "left_dimension": 1,
+                "right_dimension": 1,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 3,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 5,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 1,
+                "right_dimension": 7,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 2,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 4,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 2,
+                "right_dimension": 6,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 3,
+                "multiplicity": 2
+              },
+              {
+                "left_dimension": 3,
+                "right_dimension": 5,
+                "multiplicity": 1
+              },
+              {
+                "left_dimension": 4,
+                "right_dimension": 4,
+                "multiplicity": 1
+              }
+            ]
+          ],
+          "block_counts": {
+            "1": 41,
+            "2": 19,
+            "3": 8,
+            "4": 2
+          },
+          "budget": {
+            "nodes": 582,
+            "combinations": 2
+          },
+          "scope": "Every feasible representation in this finite moment/orbit relaxation is retained; passing is not OPE existence. Resource caps abort rather than certify exclusion or uniqueness."
+        }
+      ]
+    }
+  ],
+  "scope": "Necessary ten-moment finite support under the actual E8/unique W2 premises and retained bosonic affine H+ extension. No nonvacuum affine-energy positivity is assumed. Passing is not OPE or VOA existence.",
+  "orbit_condition": "n+m even; Delta=(k+l)/4-(n+m-2)/2 >=0, with equal partner multiplicities at Delta=0.",
+  "selftest": {
+    "known_d5_cases": 2,
+    "paired_boundary": true,
+    "unpaired_boundary_refused": true,
+    "negative_shift_refused": true
+  },
+  "input_records": [
+    {
+      "path": "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_factored_results.json",
+      "sha256": "cd582883ee38b08b88de9991fdc28a44fb824483124f6109114fe7a8ecd72efb"
+    },
+    {
+      "path": "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_moments_results.json",
+      "sha256": "dc75bd0c91b0b982aed415cf395f189f4ac5d738f3c6c04f6a13a7aad1a1e60a"
+    },
+    {
+      "path": "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_quartic_results.json",
+      "sha256": "62fe364e80909c367621aa110f4857c6fb5a140c4a12dba381cc7dba6966937c"
+    },
+    {
+      "path": "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_sixth_results.json",
+      "sha256": "0f55b8bddb8e1c5613eba8594af6cac05e110f44f0dc7145a5d4a5ab96d5337c"
+    }
+  ],
+  "producer_source_hashes": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_check.py": "dbe5bbdcdb507f00180e216cb86c7e0f4b071a1fbbd372115bab34a1c0654ac8",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_joint_ground_check.py": "475302a0990c2654080d42cc1dc2876b8acc5d25d1abd975a3f9ed00e123f162",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_d6_check.py": "160d952a08239fbbfe968d8c888b9c7def6c7f572a5cb2b1330a8377a6643dfd",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_sixth_check.py": "bb1343f763c47c292834d46ff6c89dc902829020860514c22f2765862410d823",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_orbit_sixth_ground.py": "44c201da9d412996001077764c424887d984c91cd08e6fdd602481346e6f87a1",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_next_grade.py": "2a395249011e990a672adc1a8bf0088860fd8b94667156dbdec3c0ceac5a2cc4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_factored.py": "6416b68b738deefe8428f02e35172b2b5d50c26d1de455ecd796de6473ee19a4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_quartic_check.py": "d8998290ab757e167f7c2ab66b84a7254ef5513542e0fa6382320bd832f4f754",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_trace_check.py": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b"
+  },
+  "limits": {
+    "nodes_per_ground": 1000000,
+    "partitions_per_block": 10000,
+    "joins_per_ground": 1000000,
+    "representations_per_pair": 2000
+  },
+  "seconds": 0.026794182020239532,
+  "peak_rss_KiB": 22068
+}

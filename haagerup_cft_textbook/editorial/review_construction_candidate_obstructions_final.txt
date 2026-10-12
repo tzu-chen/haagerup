@@ -1,0 +1,199 @@
+Read-only review of rational-candidate obstruction arguments
+Reviewer: scope_construction
+Timestamp: 2026-10-05 21:10:36 UTC
+Scope: l06_identification.tex, relevant c06 comparisons, and existing
+exact source records. Hand algebra/source reading only. No calculation,
+certificate rerun, import, build, or live-chapter edit was performed.
+
+Result
+------
+No substantive error found in the existing candidate exclusions. The
+retained-algebra, physical-sewing, and limiting-spectrum qualifications
+are preserved. One premise should be stated explicitly; two missing
+families are useful possible additions, not errors in claims already made.
+
+Needed concise clarification
+---------------------------
+l06_identification.tex:794--802. Explicitly require the internal part S
+of translation to have order three. Faithfulness and commuting with the
+Haagerup action do not themselves imply that order. Suggested opening:
+"Suppose the ordinary internal part S of translation has order three,
+survives faithfully, and commutes with the full Haagerup action."
+The displayed alpha/rho argument then correctly proves that S is not
+alpha or alpha^2, and commuting independent order-three generators give
+Z3^2. This is a continuum symmetry premise, not a consequence of finite
+translation alone. The subsequent original-versus-gauged dictionary and
+possible Z9 qualification are appropriate.
+
+Confirmed live scope and arguments
+---------------------------------
+1. Finite Narain orbifolds: l06:295--332, 334 onward, 500--565.
+The kernel orbifold is another Narain theory under the stated consistent,
+effective gauging assumptions. The charge-character surjectivity and
+covolume proof do not assume a geometric shift. Normalized K-supported
+correlators enter by an isometric subgroup lift; no extra square-root of
+the group order belongs in the cubic. Current-preserving and enhanced
+finite-group cases remain distinct; the latter correctly imports its
+bounded-order spectral lemmas. The finite-size numerical values and
+full-shell isolation are not promoted to continuum proofs. No claim to
+classify all compact c=2 CFTs or generalized categorical orbifolds is made.
+
+2. Canonical Cardy test: l06:727--769.
+The maximal chiral algebras are recovered using strictly positive
+nonvacuum lowest weights, so arbitrary internal symmetries preserve them
+setwise. The scalar-ground multiplicity n_i^2 and the real-doublet
+argument are correct under the isolated full-shell hypothesis. The
+spatial-parity conclusion is restricted to the canonical identity-algebra
+sewing and the stated mixed data. It does not follow just from a torus
+partition function, and the text explicitly avoids that inference.
+
+3. Rational extension/internal-symmetry strategy: l06:782--842.
+Unique vacuum, unitarity, rationality, completeness and physical sewing
+are on the page. Passing to actual maximal chiral algebras and their
+graph full-center algebra justifies the multiplicity-one pairing and
+all nonzero fusion-channel phase equations. A formal matrix commuting
+with S and T alone would not suffice; the text says so. Total positivity
+of extension constituents is used only as a necessary filter, not an
+existence criterion.
+
+4. Minimal products: l06:844--931.
+The hand classification at 21/10 gives exactly M4^3 and M3 M5^2.
+The tricritical symmetry-kernel norm is 64^2*5^3/9, correctly nonintegral.
+It is used on the original-algebra-preserving kernel, not on every
+symmetry indiscriminately. For the Potts-pair case, T separates Ising
+blocks because Potts residues have denominator fifteen; the nonzero
+Ising S vacuum row forces all blocks equal. The Ising spin scalar at
+1/8 is unique since nonvacuum Potts h>=1/15>1/16. An odd-order internal
+symmetry fixes its one-dimensional real space. The contradiction still
+requires a true limiting jointly neutral scalar gap above 1/8.
+
+5. Principal W candidates: l06:933--1015.
+The c(N,k) interval reduction correctly leaves W4(8,9) and W6(8,9).
+The W4 sine-sign example and 113 modulo 16 and 18 are consistent; the
+common-field automorphism is legitimate. The extension analysis includes
+the exceptional SO(15)_1 branch, so it is not only a simple-current check.
+W6 has a possible single order-three symmetry; the stated conclusion is
+absence of an order-nine subgroup, not absence of every three-cycle.
+The finite label tables/classifications are explicitly construction
+inputs. Their full numerical enumerations were not repeated here.
+
+These symmetry restrictions concern compulsory invertible internal
+symmetries and the maximal chiral algebra. They do not separately assume
+the noninvertible Haagerup line preserves the originally retained W
+algebra. This differs from the dimension-field tests below, for which
+preservation by the proposed noninvertible defect is essential.
+
+6. Exceptional E6: l06:1017--1069.
+The partial and fully condensed categorical branches stay conditional on
+their specified algebra transfer; they are not asserted to exhaust all
+intermediate VOAs. The Ising_5/2 notation identifies modular data, not a
+c=1/2 VOA tensor factor. The twist arithmetic in the fully condensed
+branch gives exactly the possible scalar residues listed. A pairing can
+omit entries but cannot add an absent residue. No general exclusion of
+every c=21/10 theory is asserted.
+
+7. Pointed lattices, ramification and ordinary W3: c06:364--369,
+474--494, 890--925.
+The near-two M(41,42) times norm-twenty lattice algebra has dimension
+field ramified only at 2,3,7,41: the lattice simple dimensions are all
+one, so its charge discriminant does not add prime five to the dimension
+field. A-bimodule dimensions are ratios of dimensions of underlying
+objects and therefore remain in the same field. This excludes sqrt(13)
+only for defects preserving that rational algebra, as stated.
+The irrational factor's low-grade result excludes an additional ordinary
+spin-three generator; it neither proves Virasoro generation at every
+weight nor excludes every stress-preserving CFT at that central charge.
+The weak-integral lattice argument now properly invokes the proved
+Haagerup full-faithfulness result so that rho remains simple.
+
+Useful omissions, not live proof gaps
+------------------------------------
+A. Rational finite-orbifold weak integrality is a genuinely broader test
+than the pointed-lattice observation: twisted sectors need not be
+pointed, yet their global dimension is still integral. It needs no
+extrapolated gap or OPE datum. The draft
+  editorial/rational_orbifold_dimension_insertion.tex.txt
+states fixed-algebra rationality/C2, positive twisted lowest weights,
+physical rational sewing, and preservation of that fixed algebra.
+It proves the obstruction from Morita invariance and the theorem that a
+simple object in a weakly integral fusion category has integer squared
+dimension, explains the reducible-image issue using c06's proposition,
+and works Z(Vec S3) by hand. Foundations independently checked the draft
+and reported that its premises, simple-unit issue, arithmetic and scope
+all pass. Suggested placement: after Cardy, before the nearby-rational
+inventory. It should not replace the different stress-only orbifold
+spectral tests.
+
+B. The complete ordinary unitary W3(p,p+1) obstruction is absent from the
+live chapter. A compact treatment is useful: this is a canonical family
+approaching c=2, and its conductor filter illustrates why matching c is
+weak. A full reproduction would be disproportionate here. The optional
+draft editorial/w3_dimension_scope_insertion.tex.txt gives the hand field
+test and states the all-height completion as a construction input, with
+its actual categorical and finite exceptional dependencies visible.
+The exact scope is every rational full-CFT sewing algebra over the
+specified W3 minimal category, for W3-preserving defects. It says nothing
+about Virasoro-only defects of those theories or all theories at the
+same central charge. The first conductor-compatible height is p=12,
+c=24/13; the divisibility filter alone leaves infinitely many heights.
+
+The saved source proves the completed result by actual coset-category
+factorization, factorization of Lagrangian full centers AS ALGEBRAS,
+affine SU3 module-category classification, dimension gaps and a saved
+exact 66-label height-13 comparison at the exceptional pair (12,13).
+This is materially stronger than factorization/classification of modular
+invariant matrices. The primary generic classification needs Remark 1.2
+to extend Theorem 1.1's displayed N,k>=4 statement to SU3; the source
+already cites it. The only conductor-compatible exceptional affine
+height is twelve. I read this argument and its stated exact inputs but
+did not independently rerun the finite certificate.
+
+Read-only source record
+-----------------------
+hi_cft_20260923_next_c2_weak_integral_orbifold.md
+hi_cft_20260923_c2two_w3_candidates.md
+hi_cft_20261001_theory_cardy_phase_obstruction.md
+hi_cft_minimal_products_complete.md
+hi_cft_w4_extension_audit.md
+hi_cft_w6_extension_audit.md
+hi_cft_20260925_ident2_candidates_minimal_products.md
+hi_cft_20261001_theory_rational_endpoint.md
+Earlier Narain hand review: editorial/review_construction_on_new_examples.txt.
+
+Primary statements checked directly for the optional additions:
+Dong--Ren--Xu, https://arxiv.org/html/1507.03306, V1--V4 and Lemma4.7.
+Etingof--Nikshych--Ostrik, https://arxiv.org/pdf/math/0203060,
+Corollary8.14 and Proposition8.27.
+Edie-Michell--Gannon, https://arxiv.org/html/2408.02794,
+Theorem1.1, Remark1.2 and the small-rank classification scope.
+
+Follow-up at 2026-10-05 21:21:52 UTC
+-----------------------------------
+At root's request the W3 draft now contains the actual all-height
+reduction rather than only the dependency list. Direct primary checks
+also covered Arakawa--Creutzig--Linshaw1801.03822 Thms12.1/12.3;
+FFRS math/0309465 Def7.2, Thm7.6 and Lemma7.8; DNO1109.5558 Cor3.3
+and Thm3.6; and Beltaos--Gannon1004.1205 Thm3.3. The local proof checks
+the needed Q-haploidity via the denominator-vacuum branch, reconstructs
+the diagonal order-three graph algebra, and obtains an actual monoidal
+factor by induction plus dimension exhaustion. The full-center graph
+intersection is genuinely étale/Lagrangian, so the DNO product theorem
+forces multiplication to factor; there is no outstanding assumption
+that a factorized matrix automatically has factorized multiplication.
+
+The expanded draft teaches the sine-monotonicity dimension gap,
+stabilizer dimension normalization and fixed-point bound, the generic
+module-category cases, and the sole surviving exceptional pair (12,13).
+It describes the archived finite input as 66 exact cyclotomic labels:
+three degree-one invertibles, 63 degree-six dimensions, no rational
+multiple of d. It includes D13(1,2)=1+z+z^{-1} as a hand-checkable
+degree-six example. The certificate was read, not rerun. "Both
+exceptional types" now refers to modular-invariant types, not a claim
+that a matrix uniquely specifies a sewing multiplication.
+
+Independent expanded-draft review completed at 2026-10-05 21:23:34 UTC:
+scope_foundations checked all displayed inequalities, the fixed-point
+normalization, triality, associator and full-center arguments, and the
+exceptional field/reducible-object logic, including the same primary
+FFRS and DNO statements. No required repair was found. Its suggested
+charge-conjugation convention clause for the graph labels was added.

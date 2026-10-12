@@ -1,0 +1,259 @@
+{
+  "status": "pass",
+  "arithmetic": "stdlib fractions.Fraction; no research engine imports",
+  "current_products_checked": 72,
+  "gram_matrix": [
+    [
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -1,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      2
+    ]
+  ],
+  "u_momentum_rows": [
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1,
+        1
+      ],
+      "norm_squared": 4,
+      "left_charge": 1,
+      "right_charge": 13,
+      "gauge_norm": "4",
+      "coefficient_norm": "1"
+    },
+    {
+      "momentum": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        -1,
+        0,
+        0
+      ],
+      "norm_squared": 4,
+      "left_charge": 1,
+      "right_charge": 13,
+      "gauge_norm": "40",
+      "coefficient_norm": "1/10"
+    },
+    {
+      "momentum": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "norm_squared": 4,
+      "left_charge": 1,
+      "right_charge": 13,
+      "gauge_norm": "40",
+      "coefficient_norm": "1/10"
+    }
+  ],
+  "u_norm_squared": "12",
+  "stress_axis_order": [
+    "omegaL",
+    "omegaR",
+    "e",
+    "f"
+  ],
+  "stress_norms": [
+    "1/2",
+    "117/82",
+    "1200/1271",
+    "35/31"
+  ],
+  "factor_order": [
+    "p",
+    "z"
+  ],
+  "stress_overlaps": [
+    [
+      "0",
+      "13/205",
+      "108/1271",
+      "39/155"
+    ],
+    [
+      "0",
+      "21/205",
+      "780/1271",
+      "13/155"
+    ]
+  ],
+  "stress_projections": [
+    [
+      "0",
+      "2/45",
+      "9/100",
+      "39/175"
+    ],
+    [
+      "0",
+      "14/195",
+      "13/20",
+      "13/175"
+    ]
+  ],
+  "positive_identity_full_vector": true,
+  "primary_energy_rows": [
+    {
+      "dimensions": [
+        1,
+        5
+      ],
+      "e_weight": "798/1271",
+      "f_weight": "38/31"
+    },
+    {
+      "dimensions": [
+        1,
+        9
+      ],
+      "e_weight": "200/1271",
+      "f_weight": "42/31"
+    },
+    {
+      "dimensions": [
+        1,
+        9
+      ],
+      "e_weight": "1512/1271",
+      "f_weight": "10/31"
+    },
+    {
+      "dimensions": [
+        1,
+        13
+      ],
+      "e_weight": "420/1271",
+      "f_weight": "20/31"
+    },
+    {
+      "dimensions": [
+        2,
+        2
+      ],
+      "e_weight": "192/1271",
+      "f_weight": "49/31"
+    },
+    {
+      "dimensions": [
+        2,
+        6
+      ],
+      "e_weight": "1830/1271",
+      "f_weight": "3/31"
+    },
+    {
+      "dimensions": [
+        2,
+        8
+      ],
+      "e_weight": "752/1271",
+      "f_weight": "24/31"
+    },
+    {
+      "dimensions": [
+        2,
+        14
+      ],
+      "e_weight": "180/1271",
+      "f_weight": "13/31"
+    }
+  ],
+  "compact_Potts_formulas_match_saved_fields": true,
+  "source_sha256": {
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d",
+    "hi_cft_20260923_proof_potts_exact.json": "e77f28fb51ac4f990a001ffd9af2fd15a36877eb726f10a7489bdceaaa46ec16",
+    "hi_cft_20260923_proof_pf13_exact.json": "e39ade557fcca58488c21760382c1cbc54457500f1dc5503e126aa7f0b6b4b92"
+  },
+  "scope": "Full current singular products, u highest/primary conditions, compact Potts field formulas, grade-two Fock pairings and projected stress identity only. No Virasoro OPE, membership, invariant-space exhaustion, rationality, higher gate or category theorem is inferred."
+}

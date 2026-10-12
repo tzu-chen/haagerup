@@ -1,0 +1,128 @@
+% Proposed insertion immediately before ``Twist moments force multiplicity one''
+% in c05_branching.tex. Hand derivation; not integrated.
+% Primary checks: Ng--Schauenburg, math/0503167, definition and Theorem 5.1;
+% Ng--Schauenburg, math/0601012v3, Theorem 4.1 (PDF p.10).
+\subsection{Indicators: rotating a junction without braiding}
+\label{sec:c-indicator-bridge}
+\index{Frobenius--Schur indicators!definition}
+
+Let $\mathcal C$ be a spherical fusion category over $\C$, with a
+fixed pivotal identification $j_X:X\to X^{**}$. In the unitary
+categories used here we take the canonical positive spherical
+structure. For $n\ge1$, consider the finite-dimensional junction space
+$\Hom(\one,X^{\otimes n})$. Bend its first outgoing strand around
+the junction and return it as the last strand, using evaluation,
+coevaluation, and $j_X^{-1}$. With the required reassociations this
+defines the \emph{pivotal cyclic rotation} $R_{X,n}$.
+It uses no crossing and requires no braiding on $\mathcal C$.
+The $n$th Frobenius--Schur indicator is the ordinary linear trace
+\begin{equation}\label{eq:c-indicator-definition}
+ \nu_n(X)=\Tr_{\Hom(\one,X^{\otimes n})}(R_{X,n}).
+\end{equation}
+Pivotal coherence gives $R_{X,n}^{\,n}=1$. For simple $X$, this
+immediately explains two values used below:
+\[
+ \nu_1(X)=\delta_{X,\one},\qquad
+ \nu_2(X)=
+ \begin{cases}
+ 0,&X\not\simeq X^*,\\
+ +1\text{ or }-1,&X\simeq X^*.
+ \end{cases}
+\]
+Indeed, $\Hom(\one,X^{\otimes2})\simeq\Hom(X^*,X)$ is zero or
+one-dimensional, and its rotation squares to the identity. The sign
+measures the symmetry of the chosen self-duality under pivotal
+transpose; it is not fixed merely by the equation $X\simeq X^*$.
+
+\begin{example}[The group formula from an invariant projector]
+Take $\mathcal C=\Rep(G)$ for a finite group, with its usual tensor
+product and positive spherical structure. For a representation
+$D:G\to\operatorname{GL}(V)$, the junction space is
+$(V^{\otimes n})^G$. Pivotal rotation is the cyclic permutation
+\[
+ C(v_1\otimes\cdots\otimes v_n)
+   =v_2\otimes\cdots\otimes v_n\otimes v_1.
+\]
+The projector onto invariants is
+$P=|G|^{-1}\sum_{g\in G}D(g)^{\otimes n}$, and $C$ commutes with
+$P$. Therefore its trace on invariants equals $\Tr(CP)$ on the
+whole tensor power. For any matrix $A$, expansion in a tensor basis
+gives
+\[
+ \Tr(CA^{\otimes n})
+ =\sum_{i_1,\ldots,i_n}
+    A_{i_1i_2}A_{i_2i_3}\cdots A_{i_ni_1}
+ =\Tr(A^n).
+\]
+Thus, writing $\chi_V(g)=\Tr D(g)$, we obtain the classical formula
+\begin{equation}\label{eq:c-group-indicator}
+ \nu_n(V)=\frac1{|G|}\sum_{g\in G}\chi_V(g^n).
+\end{equation}
+For $G=\Z_3=\langle t\rangle$ and the one-dimensional character
+$\chi(t)=\zeta_3=e^{2\pi i/3}$, this becomes
+\[
+ \nu_n(\chi)=\frac{1+\zeta_3^n+\zeta_3^{2n}}3
+ =\begin{cases}1,&3\mid n,\\0,&3\nmid n.\end{cases}
+\]
+In particular $\nu_3(\chi)=1$, although $\nu_1(\chi)=\nu_2(\chi)=0$.
+The invariant projector and the cyclic trace identity explain this
+without any modular data.
+\end{example}
+
+The bridge to modular data is the following structural theorem.
+Let $F:Z(\mathcal C)\to\mathcal C$ be forgetful and $I$ its
+two-sided adjoint. Equip the center with the ribbon twist induced
+by the same spherical structure. Then, for every object $X$ and
+positive integer $n$,
+\begin{equation}\label{eq:c-indicator-center}
+ \nu_n(X)
+ =\frac{\Tr_{\mathrm{cat}}(\theta_{I(X)}^{\,n})}
+        {\operatorname{Dim}(\mathcal C)},\qquad
+ \operatorname{Dim}(\mathcal C)=\sum_{a\text{ simple}}d_a^2.
+\end{equation}
+This is the center-induction theorem of Ng--Schauenburg. Here the
+numerator is a \emph{categorical} trace: if
+$I(X)=\bigoplus_Z b_ZZ$, then it is
+$\sum_Z b_Zd_Z\theta_Z^n$. The twist is $\theta_Z$, without the
+common central-charge phase of a VOA's modular $T$ matrix.
+
+\begin{example}[Checking the normalization in the pointed center]
+For $\mathcal C=\operatorname{Vec}_{\Z_3}$ with trivial associator
+and positive spherical structure, let $\alpha$ be the simple object
+of degree one. The center simples from Chapter~\ref{ch:centers}
+are $(g,k)$, with $d_{(g,k)}=1$, twist $\zeta_3^{gk}$, and
+$F(g,k)=g$. Adjunction gives
+\[
+ I(\alpha)=(1,0)\oplus(1,1)\oplus(1,2),\qquad
+ \frac{\Tr_{\mathrm{cat}}(\theta_{I(\alpha)}^{\,n})}{3}
+ =\frac{1+\zeta_3^n+\zeta_3^{2n}}3.
+\]
+Directly, $\Hom(\one,\alpha^{\otimes n})$ is zero unless $3\mid n$;
+when nonzero it is one-dimensional and the untwisted pivotal rotation
+is the identity. This verifies both sides of
+\eqref{eq:c-indicator-center}. The fusion relation $\alpha^3=\one$
+alone would not prove $\nu_3(\alpha)=1$: a nontrivial associator
+can give a nontrivial rotation phase on that same one-dimensional
+junction space.
+\end{example}
+
+For the rank-six fusion ring below, the simple dimensions are
+$1,1,1,d_m,d_m,d_m$. Put $s_m=1+d_m^2$. Its global dimension is
+$3s_m$, so the theorem says exactly
+\[
+ \Tr_{\mathrm{cat}}(\theta_{I(\rho)}^{\,n})
+   =3s_m\nu_n(\rho).
+\]
+The first moment is therefore zero, and the second is
+$3s_m\varepsilon$ with $\varepsilon=\nu_2(\rho)\in\{1,-1\}$.
+There is no extra dimension factor $d_m$ on the right. On the left,
+an induced summand $Z_j$ of multiplicity $n_j$ and dimension
+$3d_mn_j$ contributes $3d_mn_j^2\theta_j^n$. This is the source
+of both the normalization and the squared multiplicities in the
+following argument.
+
+% Suggested short source note for the chapter's existing source paragraph:
+% The pivotal rotation and its order are defined in Ng--Schauenburg,
+% https://arxiv.org/abs/math/0503167, with the order statement in Theorem 5.1.
+% The precise center trace formula is Theorem 4.1 of
+% https://arxiv.org/abs/math/0601012 (version 3).

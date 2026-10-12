@@ -1,0 +1,344 @@
+Static audit of saved lattice values and candidate thresholds
+scope_lattice, 2026-10-05, completed-record cutoff October 1.
+
+Scope: chapters/l01_chain.tex, l02_scaling.tex, l03_overlaps.tex,
+l04_tensor_networks.tex, l06_identification.tex. This is source transcription
+and qualifier checking, not a rerun of the research or a fresh error estimate.
+No numerical jobs, symbolic programs, or builds were run. The active October 5
+continuation was not used to replace historical results. Paths below are
+relative to /home/tzuchen/Codes/haagerup, except chapter paths.
+
+Findings and authorized repairs
+
+1. l02:626-629, open-chain entropy comparison: source labels are S^z=0 and
+   S^z=1 magnetization sectors, not assertions of total spin zero and one.
+   The number .00764 is correctly copied. Confirmed in
+   hi_cft_bmw_continuum_dmrg.md:139-153: midpoint entropies 1.432733 and
+   1.440373 for N48/N96 in S^z=1, compared with the larger S^z=0 growth.
+   Root authorized the wording repair; applied S^z=0 / S^z=1 in l02.
+
+2. l06:567-571 called Delta_phi~.134 a 'working finite number'. It is a
+   comparison/extrapolation hypothesis, not the directly quoted N18
+   stress-normalized dimension. The actual latter is
+   .14223595348064608 in
+   hi_cft_20261001_independent_stress_scales_with_phi18.json:2133.
+   The formal dimension intercepts are .132450,.132659,.132830,.133135
+   for the explicitly different prescriptions in
+   hi_cft_20261001_chain_fingerprint.md:348-355.
+   The orbifold source itself treats .134 as a working comparison,
+   hi_cft_20261001_theory_asymmetric_orbifold_doublet.md:225-233.
+   Root authorized repair; l06 now explicitly calls .134 an illustrative
+   continuum hypothesis, and conditions a limiting cubic near the finite
+   estimate on being established.
+
+3. l03:187 had a minor literal interval-rounding error. The stored matched
+   range-4/5 chi-insertion real extrema are
+     minimum 1.114433875687539,
+     maximum 1.1193303886477732,
+   hi_cft_20261001_chain_ope_readout_v3.json:45819-45823.
+   Nearest rounding to [1.114434,1.119330] rounds both endpoints inward.
+   Root authorized outward rounding: changed to [1.114433,1.119331].
+   The imaginary extrema are
+     minimum -.20327260456940308,
+     maximum -.1998513138534019,
+   same JSON:45825-45828. The existing displayed [-.203273,-.199851]
+   already rounds outward and remains unchanged.
+   This is deterministic recipe variation, not a continuum confidence
+   interval; the surrounding qualification is correct.
+
+4. l04:514-525 correctly states rank132's historical qualification and
+   rank144's nonqualification, and correctly copies the two older entropy
+   secants. However, it omits the completed 120->132 endpoint secant after
+   naming rank132 as the largest qualified point. These source values are
+     c_1        2.7560800172711177,
+     c_2        2.6557860747135846,
+     c_infinity 2.3519664134401914,
+   in hi_cft_20261001_step0_scaling_r60_r132.json:3422-3461.
+   The all-height order exponent is .22537726431195337 at :3475.
+   The source explicitly discusses this increased drift and retaining every
+   window: hi_cft_20261001_chain_fingerprint.md:377-396.
+   This is an omission, not an incorrect number. Root will reconcile the
+   latest-rank paragraph at the final October 5 cutoff. No l04 edit made.
+
+All other inspected quoted values below agree with the completed records at
+their displayed precision. Necessary distinctions between finite results,
+conditional CFT normalizations, exact algebraic bounds, and hypothetical
+continuum inputs are preserved, subject to the repaired item 2.
+
+Chapter l01: exact finite data
+
+- Path dimensions 36,123,1302,46764 at L=3,4,6,9 agree with the stated
+  adjacency recurrence and with hi_cft_rho_chain_results.json for L3/6/9.
+  They are exact counts, not numerical CFT estimates.
+- Tr(H2^2)-Tr(H3^2)=16/(3d) in l01:211-220 matches the exact calculation
+  hi_cft_20260929_theory_h2_h3_equivalence.md:44-99, especially :92-94.
+  The source fixes the same regular periodic L4 space, physical rho, and
+  unit rho-projector coupling. The textbook keeps that scope. The source's
+  approximate individual traces 293.56319694130195 and 291.94839354006467
+  are not mistakenly substituted for a continuum distinction.
+
+Chapter l02: ground energies and entropy calibration
+
+- E0(3)=-3, E0(6)=-5.271980047610, E0(9)=-7.737524752482:
+  hi_cft_rho_chain_results.json, low_eigenvalues at :70 and :144 for L6/9;
+  the exact L3 result and all three rows also appear in
+  hi_cft_rho_chain.md:82-89. The last displayed digits are correctly rounded.
+- The two-energy vc=2.34379137903 is recorded as 2.3437913790283513 in
+  hi_cft_rho_chain_results.json:215. l02 correctly calls it the product vc,
+  not a separate central-charge determination.
+- S6(3)=2.258824289079 and S9(4)=2.529902677312 match
+  hi_cft_rho_chain_results.json:110 and :185. The ordinary height-embedding
+  convention is explicitly named at :5 and in hi_cft_rho_chain.md:107-113.
+- The midpoint chord-length estimate c=2.08438313923 is stored as
+  2.0843831392306473 at hi_cft_rho_chain_results.json:214.
+  The within-size cut fits 3.3880 and 2.7302 match :128 and :205
+  (3.3880173537707416, 2.730175680944743). The textbook preserves the
+  two-point nature of the L6 fit and the finite-cut caveats.
+- The open H2 example's .00764 is supported by the magnetization-sector
+  source listed in finding 1. Its category and boundary scope are preserved.
+
+Chapter l02: stress-state table and fit sensitivity
+
+The consolidated completed record hi_cft_stress_analysis_results.json:6-45
+contains all four rows copied in l02:490-493:
+  L6  gap 1.2719800476097936, weight 1.1599491833954776,
+      c 5.735461284212666;
+  L9  gap 1.1533089599137778, weight .516954434464991,
+      c 3.1092161869727732;
+  L12 gap .9509087276876276, weight .2935693611268414,
+      c 2.597305575142754;
+  L15 gap .7938412469051794, weight .1893230991889815,
+      c 2.4034011861215667.
+Its producers are hi_cft_stress_spectrum_results.json and
+hi_cft_stress_spectrum_L15_results.json, named at :2-4. Every textbook
+entry rounds correctly; |M|^2 is the selected state's weight, not the sum
+over all retained low states or the full ultraviolet source norm.
+
+- The L18 continuation uses
+  hi_cft_20261001_independent_stress_lanczos_N18.json:
+  residual 3.8295765591043466e-14 at :4351,
+  source fraction .9544420537569703 at :4354,
+  gap .6768446828683299 at :4366,
+  conditional c=2.3076818446086467 at :4400.
+  The textbook's residual order 4e-14 and .95444/2.30768 are appropriate.
+- Illustrative intercepts 1.989673,2.058682,2.125928 are stored as
+  1.9896726429472202,2.0586822723061218,2.125927731944727 in
+  hi_cft_stress_analysis_results.json:61,76,93 (also the nearby coefficient
+  arrays). The original table hi_cft_stress_spectrum.md:127-138 gives fit
+  degrees of freedom 1,0,0. The text correctly says two are exact
+  interpolations and refuses to interpret their spread as a confidence bound.
+- The invariant momentum-one values 2.800,2.846,2.884 match
+  hi_cft_continuum_analysis_results.json:20,64,108:
+  2.7998142246949196,2.8464808283765177,2.883817858044005.
+  hi_cft_noncompact_ground_audit.md:81-91 specifies full Haagerup-invariant
+  sector, rather than merely alpha-neutral. l02 keeps that distinction and
+  uses the data only against the specified threshold-highest-weight picture.
+
+Chapter l02: thermal moments
+
+- Effective c6=2.31250,c9=2.24215,c12=2.19799 are the roots near velocity one,
+  not the other roots of the same finite third-moment equation.
+  hi_cft_modular_temperature_results.json:
+    :1063-1091, L6 complete 1302-state spectrum,
+      v=1.108558603284362, c=2.3124957670250486;
+    :2427-2434, L9, v=.9606613535249572, c=2.242145828682129;
+    :4150-4157, L12, v=.9618298092733933, c=2.197993852602467.
+- The completed source note hi_cft_overlap_followup.md:278-285 says L9/12
+  use 64 low states per ordinary sector; fifth derivatives are unsatisfied.
+  The textbook accurately distinguishes completeness at L6, finite cutoffs
+  above L6, and the need to control moment tails. It does not promote the
+  small partition tail to a small fifth-moment tail.
+
+Chapter l02: low shells, gap ratios, and scalar dimensions
+
+- The census sector counts 27,36,45 match
+  hi_cft_20261001_chain_sector_census_v2.json:544,5848,12484.
+  The adjacent shells objects contain expected/matched counts for
+  phi2,chi2,psi/eta4,epsilon1; the completed summary is
+  hi_cft_20261001_status.md:22. The textbook correctly calls these finite
+  multiplicities and does not infer limiting shell completeness.
+- All nine velocity-free ratios match
+  hi_cft_20261001_chain_vacuum_fraction.json:109166-109201:
+  L12: 1.7747475076770896,1.9608765906769086,.9050786347877375;
+  L15: 1.7842350824788418,1.9665768439478,.9072796153223708;
+  L18: 1.7908599125653697,1.9700694298568908,.9090339078534206.
+  Minor last-bit differences in independent gap reconstruction do not affect
+  any displayed digit. The three L18 gaps .048135824413041206,
+  .08620451829960096,.0948309161570915 are at :109193-109196 and separately
+  in the phi/chi/vacuum producer records at :4823/:4654/:473 respectively.
+- The singlet dimensions 2.29254,2.22221,2.18339 match
+  hi_cft_20261001_chain_singlet_scales.json:966,996,1026:
+  2.292536470669065,2.22221174771177,2.183390694437233.
+  The intercept range 2.09353784--2.09719002 summarized in
+  hi_cft_20261001_chain_fingerprint.md:572-578 supports the shorthand
+  'near 2.095'. The amplitude estimates 2.030,2.053,2.082 come from
+  hi_cft_20261001_independent_amplitude_ward.json:912,928,944:
+  2.0299295371911183,2.053313941866035,2.081934140137085.
+  The textbook distinguishes the different scales and does not call the
+  near-two field exactly marginal.
+
+Chapter l03: local-source and mixed-OPE data
+
+- |lambda|~1.420--1.432 is the correctly rounded combined range of the three
+  range-4/5 insertions at L15. Exact extrema include
+  1.4199946137539892 and 1.4319737230934528 in
+  hi_cft_20261001_chain_ope_readout_v3.json, summarized in
+  hi_cft_20261001_chain_fingerprint.md:25-44.
+  The matched-recipe permutation differences .26--.68 percent come from
+  .0025809392733418942--.0067938230579219425, for example JSON:48108-48109.
+  The book retains both the prescribed range restriction and the fact that
+  this agreement is not a continuum error bar.
+- The triangle invariant's exact real/imaginary extrema and outward-rounding
+  repair are finding 3 above. They belong to matched range-4/5 chi insertions,
+  not all evaluable recipes or another insertion. Source:
+  hi_cft_20261001_chain_ope_readout_v3.json:45819-45840.
+- The Gamma-fraction benchmarks .95865,.79759,.84008 and measured
+  approximations .985,.962,.969 match the explicitly conditional N18
+  comparison in hi_cft_20261001_chain_fingerprint.md:513-543:
+  CFT fractions .958654,.797593,.840077 at the same-size stress dimensions,
+  versus measured range-five ranges .984838--.985712,
+  .962064--.962226,.968683--.969098.
+  The source and book both explain signed contact corrections and refuse
+  to convert high vacuum-source purity into an excited-state OPE bound.
+- The two-candidate Ward span comparison .9870 versus .2418 is
+  hi_cft_20261001_chain_singlet_scales.json:3474-3476:
+  projected/complete=.24175544857000297 and
+  projected/conditional-ideal=.987015244422767.
+  The bare .098, trained .07609--.07749, and conditional phi dimension
+  .1463745297 are summarized in hi_cft_20261001_chain_fingerprint.md:580-586
+  and detailed in hi_cft_20261001_independent_amplitude_ward.json.
+  These are two different denominator norms, correctly separated in l03.
+
+Chapter l03: pants overlaps, Ward controls, and current test
+
+- A000(9+9)=.4306101916422253 and its two-size c=2.0955399664049246:
+  hi_cft_20261001_independent_overlap_9plus9.json:247-258.
+  The earlier A000(6+6)=.47886168385663636:
+  hi_cft_overlap_ed_results.json:217.
+  The former record specifies normalized real height embeddings, the parent
+  bra, both cut seams, and the same amplitude convention as the textbook.
+- Scalar connected estimates 1.12049321 and 1.12397612:
+  hi_cft_20261001_independent_overlap_cumulants.json:404-405,576-577,
+  exact saved values 1.1204932147161546 and 1.1239761204313374.
+  Local epsilon |C|=.93242--.93755 is supported by
+  hi_cft_20261001_chain_epsilon_N18.json:5594,5768,
+  .937547751713073 and .9324229023820683 (the later duplicates agree).
+  The book correctly presents their disagreement, not an average.
+- The favorable input/output stress c=2.07127 and wrong-sign K12=-4.21244:
+  hi_cft_overlap_theory_audit_results.json:71,75,87:
+  -4.212435185751461, K13=-6.724743979943008,
+  c13=2.0712660563953147.
+  Connected estimates -6.43646,-43.18719:
+  hi_cft_stress_crossratio_results.json:258,321,
+  -6.4364567523317096,-43.18719276561.
+  The branch-model prediction -3.34974 versus observed -6.7247 is recorded
+  in hi_cft_overlap_theory_audit.md:420-421. The book correctly calls these
+  failed finite Ward estimators, not negative physical central charges.
+- Ising connected controls .49938,.49955:
+  hi_cft_overlap_stress_ising_controls.json:102-110,200-208:
+  .49937779554783457 at 6+6 and .499545697735143 at 6+7.
+  These are connected pants controls, not the Casimir estimator in l02.
+- Current reference .06162 is .06162150153153946 at
+  hi_cft_overlap_theory_checks_results.json:76, with c=2 and the stated
+  different-shape denominator. The singular values .01034,.01977,.03395,
+  .05437,.05584 for 1,2,3,4,6 retained states agree with
+  hi_cft_overlap_theory_audit.md:668-675 and its linked
+  hi_cft_overlap_current_results.json (e.g. :1195,:1204).
+  The descendant-subtracted .03454 is the separate operation documented in
+  hi_cft_overlap_followup.md:334-340. Enlarging the span does not prove the
+  added states are currents; the textbook preserves the qualification.
+- The Hellmann--Feynman response (.37336,.00731) and log-size secant
+  (.03634,.01916) match hi_cft_20261001_theory_p1_response_N18.json:
+  :3124,.3733553595640769; :3132,.007306026701931993;
+  :3251-3252,.03633596710192802,.019156187419270193.
+  The compared observable coordinates and sign V=+sum P1 are consistent.
+
+Chapter l04: historical qualification and entropy slopes
+
+- Rank132 energy -.8453355238285251:
+  hi_cft_20261001_step0_r132_b6.json:1109.
+  Coordinate gradient 8.693721603072927e-7 at :1110, threshold 1e-6 and
+  three-consecutive/fresh-check protocol at :1101-1106, explicit stationary
+  status true at :3810. Connected length142.68165446851134 at :2013.
+  The book's energy and rounded length142.68165 are exact transcriptions.
+- Rank144 energy -.8453364684185947 and gradient2.151924999469954e-6:
+  hi_cft_20261001_step0_r144_b6short.json:1857-1858.
+  Same threshold at :1849-1854, stationary false at :4784.
+  Thus the lower energy does not qualify this historical point for the
+  same stationary scaling sequence. The book's distinction is correct.
+- The quoted 108->120 diagnostics are
+  2.153043499839197,2.172062930261268,1.9744801758640746 in
+  hi_cft_20261001_step0_scaling_r60_r132.json:3251-3290.
+  The preceding 96->108 c1=1.6761138382273286 is :2984-2999.
+  All quoted rounding is correct. The omitted 120->132 endpoint values
+  are supplied in finding 4; root will handle the final reconciliation.
+- The old 47.18GiB D51 workspace figure agrees with the canonical machine
+  policy and allocation audit; it is historical peak-allocation provenance,
+  not an authorized present compute budget. The textbook treats it as such.
+
+Chapter l06: exact candidate thresholds and their premises
+
+- Unequal scalar shells below 1/2, |C(A,B,C)|<=1, and the Hermitian
+  sqrt(2/3) / charged2/sqrt(3) equal-shell factors agree with the Gaussian
+  proof and hi_cft_20260929_theory_orbifold_doublet.md:28-43,64-81.
+  Strict dimension inequalities and the complete isolated real-doublet
+  premise are preserved.
+- The geometric point-group extension uses Delta<2/9, as in
+  hi_cft_20260929_theory_orbifold_doublet.md:209-240.
+- The larger current-preserving asymmetric result uses Delta<5/36, as in
+  hi_cft_20261001_theory_asymmetric_orbifold_doublet.md:9-31.
+  Its rotation table :130-147 has exactly the textbook's lower bounds:
+  nu(1-nu)>=5/36, 1/4,2/9,1/4,35/144. These are scalar lower bounds,
+  not sums of arbitrary unequal chiral vacuum weights or saturation claims.
+- The enhanced-parent inventory's narrower interval is exactly
+  13/100<Delta<61/450:
+  hi_cft_20261001_theory_narain_case_inventory.md:9-33.
+  Component intervals are (1/8,9/50), (13/100,5/36), and below5/36,
+  with the sign-fixing-kernel qualification at :41-49.
+  The book imports the additional classification lemmas explicitly and
+  excludes the endpoint61/450. It does not expand the result to all c=2 CFTs.
+- Crossing positivity ranges 0<D<=.16 and D>=1.75, and rational constants
+  .012780875,.007752,.0118155, exactly match
+  hi_cft_20260929_theory_crossing_gap.md:80-130.
+  The input tuple (.134,.263,1.584,1.3) is explicitly a continuum hypothesis
+  in both source and worked example, not a measured confidence box.
+  The full exact nominal result is positive in
+  hi_cft_20261001_theory_crossing_exact.json:39-43.
+  The wider attempted interval box is NOT certified (:67-71); the textbook
+  does not claim it is. The narrower separate hand-certified box has its
+  own premises (:73-85), also not silently promoted to measurement errors.
+- The already-visible higher charged field around Delta=.731 and |C|~.45
+  agrees with the saved epsilon-scale L15 value .730852 and coefficient
+  range .443047--.456389 in hi_cft_20261001_chain_fingerprint.md:97-105.
+  The same note :118-130 records the finite functional sign change after
+  adding this channel; the textbook properly avoids calling a partial
+  negative sum either a crossing solution or a violation.
+- Retained-algebra no-go table:
+  M4^3 and M3*M5^2 at c21/10:
+    hi_cft_minimal_products_complete.md:7-21,42-57;
+    hi_cft_tricritical_nondiagonal.md:160-189 for the norm obstruction.
+  W6(8,9),c25/12,no order-nine subgroup:
+    hi_cft_w6_extension_audit.md:5-20.
+  W4(8,9),c13/6,no order-three symmetry:
+    hi_cft_w4_extension_audit.md:6-17; Galois113 at :82-92.
+  W(E8)(35,36),c44/21,no order-three symmetry:
+    hi_cft_e8_extension_audit.md:6-23 and its extension sign audit.
+  All are bosonic unitary rational retained-algebra statements including
+  the stated extensions/pairings; none is a universal exclusion by c alone.
+- Exceptional E6 partial-extension thresholds minimum7/45 and forbidden
+  (9/40,2/5) match hi_cft_e6_extension_status.md:288-310.
+  The necessary residue list, Ising residues0,1/2,5/16, and conditional
+  commutant-algebra transfer are preserved. The text does not identify
+  Ising_{5/2} with the ordinary Ising CFT.
+- Irrational chiral c*=2.025004294 is correctly rounded from
+  2.025004294351766... in
+  hi_cft_20261001_theory_full_cft_frontier.md:12-17.
+  The book retains the separate missing full-CFT and defect-descent tasks.
+
+Closing status
+
+The three small authorized repairs in findings 1-3 are applied. No other
+live chapter was changed. The historical rank132/144 facts remain valid
+at the stated completed cutoff; current October 5 research is intentionally
+reserved for root's final reconciliation. The audit found no decimal-copy
+error that changes a physical conclusion or candidate threshold.

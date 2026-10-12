@@ -1,0 +1,45 @@
+Final construction ledger and rank-one C2 example
+Review date: 2026-10-05, after the 22:14 UTC PDF inspection
+
+The Appendix C dependency ledger was drafted by scope_construction,
+independently checked by scope_foundations, and integrated by root.
+It distinguishes finite closure, embedded-factor identities, rationality,
+algebraic branching, complete unitarity, the selected H' extension, and
+full-theory existence. The diagonal-net branch does not assume the later
+fusion-positivity argument. The original H boundary may be H2 or H3;
+selecting H' does not assert that its embedding necessarily differs from H.
+All displayed theorem and equation targets resolve in the live document.
+
+The new rank-one lattice C2 example was proposed and derived by root,
+drafted and independently checked by scope_foundations, and independently
+checked by scope_construction. Its mathematical argument is entirely hand
+algebra. No research job or finite enumeration was launched.
+
+For V_A1=L1(sl2), the lattice relation E_(-1)E=0 and the F0 derivation
+produce e^2=eh=0, h^2=2ef, hf=f^2=0 in V/C2(V). Strong generation
+therefore gives the spanning set 1,e,h,f,ef. Degree-zero and degree-one
+independence are immediate. At degree two C2 is D V1, which is orthogonal
+to the conformal vector. Its positive squared norm is 1/2, and Sugawara
+gives [omega]=ef/2=h^2/4, so ef survives. The quotient has dimension five
+and graded dimension 1+3t+t^2. The text distinguishes this conclusion
+from rationality and from the two simple modules of the known lattice VOA.
+
+A wording pass following this check replaced ambiguous uses of norm by
+squared norm where the displayed quantity was an inner product, a Gram
+quadratic form, an MPS double-layer partition function, or a squared lattice
+length. The corresponding exercise prompts and solution wording were
+updated consistently; no formulas or numerical values were changed.
+The older Ward fractions .9870 and .2418 are fractions of squared norms,
+as confirmed in hi_cft_20261001_independent_amplitude_ward_review.md.
+
+PDF inspection: the quotient example spans printed pages 83-84 and
+the ledger printed pages 308-309 in the 336-page edition with SHA256
+0251ad78acb5fa3b53df81ddb8733167dc72d6f844e32d053c725efced4c1716.
+Both render cleanly. The ledger uses ragged-right columns to avoid stretched
+word spacing. The final source/PDF audits report 95 examples and 151
+exercises with 151 linked solution anchors, and no unresolved targets.
+
+A clean three-pass typesetting run without saved auxiliary files reproduced
+the same paginated text, contents, example list, index, and auxiliary data.
+Its exact scope and source identities are in clean_typeset_check.json.
+The complete PDF font/boundary check is in pdf_layout_font_audit.json.

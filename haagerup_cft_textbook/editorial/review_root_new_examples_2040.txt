@@ -1,0 +1,55 @@
+Root verification and visual review, 2026-10-05 around 20:40 UTC
+
+Order-three example
+- Construction agent gave a complete hand reduction of all 81 cubics to
+  four 3-by-3 tables, using the dimension relation, p+q=1, and pq=delta.
+- Root integrated all four C tables, three worked cancellations, the
+  symmetry reduction, and the separation of algebraic verification,
+  gamma-sample identification, and unitary reconstruction.
+- Foundations independently reviewed the integer normal-form checker.
+  Root added its requested rejection of Python optimization before running.
+- Actual host MemAvailable before admission: 53,553,176 KiB; all applicable
+  ancestor memory.max limits were max. Central admission and watchdogs
+  remained authoritative; no admission bypass was used.
+- Guard command: --wait --limit-mib 128 --memory-mib 128 --threads 1 --
+  timeout 30s python3 check_order_three.py, from textbook directory.
+- All nine rotation triples, one axis sum, nine quadratics and 81 cubics
+  passed exactly. Self-reported peak RSS: 15.723 MiB. Arithmetic time:
+  .00165 s. The guard's sampled scope peak was 0.0 MiB because the job
+  finished between samples; this is not a measurement of its true peak.
+- Construction then compared every one of the 36 displayed C-table entries
+  against the stored normal forms and hand proof. No discrepancy found.
+
+Existing checker safety change
+- Original check_examples.py and its result are preserved byte-for-byte
+  under editorial/checker_history/; the archived source SHA256 is
+  68e3c68042192acb3727999c098c627babd8f1e33792a750aae5fc57543e6a5e.
+- The current script refuses optimized Python before checking assertions.
+  The mathematical checks are unchanged. A fresh central-guard run used
+  256 MiB address/memory limits and one CPU, completing in .467 s with
+  16.184 MiB self peak RSS and 7.5 MiB sampled whole-scope usage.
+- Current checker SHA256:
+  e6286bf3c0d9929975b66892183d34170ac0cec29c00bba9ff02432ef9d08cb2.
+- Both checks recorded guard SHA256:
+  09b9986966402a73bba8e078884a50b5762c4980485ea295e8cca2e02fc8ae63.
+- Packaging validates current and archived checker source/result pairs,
+  and the plot script/asset generation hashes. Historical results are not
+  silently assigned to revised code.
+
+PDF visual review
+- PDF f222722c8bbac72981cb24ce4fabafc431d4ff379dcf561a70c9802724dd99ab,
+  314 pages, passed the navigation audit (1266 internal links,
+  351 bookmarks, all 151 exercise solution anchors).
+- Root visually inspected PDF pages 248 and 249: the complete order-three
+  example, all four matrices and scope paragraph are legible and fit.
+- Page 260: native Jones-Wenzl figure has correct bottom-to-top cup-cap
+  composition, explicit closed loop, and clear normalized Jones-projection
+  distinction. Labels and caption fit.
+- Pages 212 and 238: updated October 5 stationary sequence and final
+  inventory fit cleanly. Root subsequently changed approximate saved-data
+  boxes from Construction input to Numerical record, keeping the shared
+  counter and all mathematical quantities unchanged.
+- Source guide and Appendix C now describe completed records and the
+  finite scopes of these independent small checks.
+
+No scientific repository sources or checkpoints were edited.

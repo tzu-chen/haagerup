@@ -1,0 +1,23 @@
+{
+  "window_id": "20260915T170457Z_6h",
+  "deadline_utc": "2026-09-15T23:04:57Z",
+  "start_utc": "2026-09-15T21:15:56.744488+00:00",
+  "finish_utc": "2026-09-15T21:15:56.847336+00:00",
+  "command": [
+    "python",
+    "hi_cft_third_gamma0_rank3_check.py",
+    "--output",
+    "hi_cft_third_gamma0_rank3_results.json"
+  ],
+  "address_mib": 128,
+  "estimated_peak_mib": 64,
+  "rss_watchdog_mib": 128,
+  "sampled_peak_rss_mib": 1.9375,
+  "launch_memavailable_mib": 47246.078125,
+  "launch_cgroup_headroom_mib": null,
+  "estimate_note": null,
+  "profile_sha256": "07242f40879444dd8bff8d1032f0755a87681787763a589120cf48aa78cb6fb3",
+  "reason_stopped": null,
+  "child_returncode": 0,
+  "permanent_defaults_changed": false
+}

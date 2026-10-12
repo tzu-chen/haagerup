@@ -1,0 +1,119 @@
+\section{Solutions for Chapter~\ref{ch:cft}}
+
+\paragraph{Exercise~\ref{ex:cft-level1}.}
+\phantomsection
+\label{sol:ex:cft-level1}
+The commutator $[L_1,L_{-1}]=2L_0$ gives, by induction,
+\[
+ L_1L_{-1}^n|h\rangle
+ =n(2h+n-1)L_{-1}^{n-1}|h\rangle.
+\]
+Taking an inner product and using $L_{-1}^\dagger=L_1$
+therefore multiplies the previous norm by $n(2h+n-1)$.
+Starting with a unit primary gives $n!(2h)_n$.
+For equal external weights, the primary three-point function has
+$\langle\phi(\infty)\phi(1)\mathcal O_p(t)\rangle
+=C(1-t)^{-p}$. Differentiating $n$ times at $t=0$ inserts
+$L_{-1}^n\mathcal O_p$ and gives $C(p)_n$.
+Each three-point descendant coefficient is therefore $(p)_n$
+relative to the primary coupling.
+Writing $x$ for the cross-ratio as in the chapter, the block in the
+reduced correlator $x^{2h}G(x)$ is consequently
+\[
+ x^p\sum_{n\ge0}\frac{(p)_n^2}{n!(2p)_n}x^n
+ =x^p\left(1+\frac p2x+
+       \frac{p(p+1)^2}{4(2p+1)}x^2+\cdots\right).
+\]
+Multiplying by $x^{-2h}$ restores the block of the unreduced
+correlator displayed in the chapter.
+The identity block is treated separately at $p=0$.
+
+
+
+\paragraph{Exercise~\ref{ex:cft-null}.}
+\phantomsection
+\label{sol:ex:cft-null}
+Let $v=(L_{-2}+aL_{-1}^2)|h\rangle$. Acting with $L_1$
+gives $[3+a(4h+2)]L_{-1}|h\rangle$, so at $h=1/16$
+we need $a=-4/3$. The $L_2$ action is
+$4h+c/2+6ah$. At $c=1/2,h=1/16$ it equals
+$1/4+1/4-1/2=0$. Thus
+\[
+ \left(L_{-2}-\frac43L_{-1}^2\right)|1/16\rangle
+\]
+is the null vector. Higher positive modes annihilate it by
+grading. Its vanishing is the input for the Ising differential
+equation in the sewing chapter.
+
+
+
+\paragraph{Exercise~\ref{ex:cft-compact}.}
+\phantomsection
+\label{sol:ex:cft-compact}
+For $(m,n)=(1,1)$, $\bar h=0$ requires $R^{-1}-R/2=0$,
+hence $R=\sqrt2$. Then $p_L=\sqrt2$ and $h=p_L^2/2=1$.
+Under $(R,m,n)\mapsto(2/R,n,m)$, $p_L$ is unchanged
+and $p_R$ changes sign. Both conformal weights are unchanged.
+The holomorphic current at the fixed radius is the exponential
+current of the $A_1$ lattice example.
+
+
+
+\paragraph{Exercise~\ref{ex:cft-stress-combination}.}
+\phantomsection
+\label{sol:ex:cft-stress-combination}
+The fourth-order pole of $(T_1+T_2)(z)
+(c_2T_1-c_1T_2)(0)$ is
+$(c_2c_1-c_1c_2)/2=0$, and the remaining singular poles
+are $2A/z^2+\partial A/z$. Thus $A$ is primary for the
+total stress. Orthogonality of the two stress states gives
+\[
+ \norm A^2=\frac12c_1c_2(c_1+c_2)>0.
+\]
+Its self-OPE has second-order coefficient
+$2(c_2^2T_1+c_1^2T_2)$. Equality with $2A$ would require
+$c_2^2=c_2$ and $c_1^2=-c_1$. The second condition is impossible
+for $c_1>0$, so $A$ is not a stress tensor in this normalization.
+A primary of weight two is therefore not automatically a
+Virasoro stress.
+
+
+
+\paragraph{Exercise~\ref{ex:cft-thermal}.}
+\phantomsection
+\label{sol:ex:cft-thermal}
+Put $t=v\beta/L$. The vacuum contribution to $Z(it)$ at large
+$t$ is $e^{\pi ct/6}$, because the cylinder vacuum energy
+uses $c_L+c_R=2c$. Modular invariance replaces $t$ by $1/t$.
+As $\beta\to0$,
+\[
+ \log Z\sim\frac{\pi c}{6t}=\frac{\pi cL}{6v\beta}.
+\]
+If the vacuum is not normalizable, the low-temperature trace is
+controlled by the actual spectral threshold and its measure.
+One cannot insert a unit-degeneracy vacuum term; this is where
+effective central charge and possible power or logarithmic
+prefactors enter.
+
+
+
+\paragraph{Exercise~\ref{ex:cft-marginality}.}
+\phantomsection
+\label{sol:ex:cft-marginality}
+One needs normalized OPE coefficients controlling quadratic beta
+functions; higher-order integrated correlators, including local
+contributions when insertion points coincide, controlling further
+obstructions; and an analysis of which couplings describe inequivalent
+theories while preserving the specified symmetry.
+The coincident-point contributions are called \emph{contact terms}.
+Couplings removable by a field redefinition or a symmetry
+transformation are \emph{redundant directions} and must not be
+counted as independent parameters. One must also check whether a
+putative marginal field becomes a descendant when a current ceases
+to be conserved; this is one mechanism of \emph{multiplet
+recombination}. These are additional tasks, not data supplied by
+the character count.
+Vanishing beta functions must hold on a locus of couplings after
+these identifications. A count of thirty-six dimension-two
+primaries alone supplies none of those conclusions.
+

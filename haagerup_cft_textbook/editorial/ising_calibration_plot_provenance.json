@@ -1,0 +1,169 @@
+{
+  "scope": "Canonical critical Ising comparison; no Haagerup-chain data.",
+  "hamiltonian": "H=-J sum_j(sigma_x[j] sigma_x[j+1]+sigma_z[j]); J>0",
+  "conventions": "Periodic spin chain; even L>=4; spacing=1; v=2J.",
+  "source": {
+    "file": "chapters/l02_scaling.tex",
+    "example": "ex:scaling-Ising-calibration",
+    "equation_labels": [
+      "eq:scaling-Ising-epsilon-v",
+      "eq:scaling-Ising-stress-gap",
+      "eq:scaling-Ising-epsilon-stress"
+    ],
+    "sha256": "5185c792243033725dd6bb12d1d2608243b1df968df3291b02c6f0f5996550f7"
+  },
+  "formulas": {
+    "t": "1/L^2",
+    "z": "(pi/2)*sqrt(t)",
+    "delta_known_v": "sin(z)/z",
+    "delta_stress_calibrated": "1/cos(z)^2",
+    "stress_velocity_over_2J": "(sin(z)/z)*cos(z)^2",
+    "t_zero": "All three quantities have continuous value 1."
+  },
+  "smooth_grid": {
+    "samples": 512,
+    "t_min": 0.0,
+    "t_max": 0.0625,
+    "meaning": "Smooth continuation of exact formulas; not a fit."
+  },
+  "data_columns": [
+    "L",
+    "1/L^2",
+    "delta_known_v",
+    "delta_stress_calibrated",
+    "stress_velocity_over_2J"
+  ],
+  "data": [
+    [
+      4,
+      0.0625,
+      0.9744953584044327,
+      1.17157287525381,
+      0.831783817283511
+    ],
+    [
+      6,
+      0.027777777777777776,
+      0.9886159294653692,
+      1.0717967697244908,
+      0.922391219484172
+    ],
+    [
+      8,
+      0.015625,
+      0.9935868511442058,
+      1.0395661298965801,
+      0.955770703344338
+    ],
+    [
+      10,
+      0.01,
+      0.9958927352435614,
+      1.0250856309369165,
+      0.9715215053139773
+    ],
+    [
+      12,
+      0.006944444444444444,
+      0.9971466573496369,
+      1.0173323801209992,
+      0.9801581831407337
+    ],
+    [
+      14,
+      0.00510204081632653,
+      0.9979031900620069,
+      1.012695191385734,
+      0.9853934318543704
+    ],
+    [
+      16,
+      0.00390625,
+      0.9983943930356184,
+      1.0097005565352635,
+      0.9888024588810354
+    ],
+    [
+      18,
+      0.0030864197530864196,
+      0.9987312439537492,
+      1.0076542662455523,
+      0.9911447580874643
+    ],
+    [
+      20,
+      0.0025,
+      0.9989722332485385,
+      1.0061939586571083,
+      0.9928227303032031
+    ],
+    [
+      22,
+      0.002066115702479339,
+      0.9991505605220585,
+      1.005115312311363,
+      0.9940656044970723
+    ],
+    [
+      24,
+      0.001736111111111111,
+      0.9992862058229085,
+      1.0042959455178126,
+      0.9950116898138814
+    ],
+    [
+      26,
+      0.0014792899408284023,
+      0.999391777406681,
+      1.003658901707479,
+      0.9957484317694602
+    ],
+    [
+      28,
+      0.0012755102040816326,
+      0.9994755499873065,
+      1.0031538103019864,
+      0.9963333037497285
+    ],
+    [
+      30,
+      0.0011111111111111111,
+      0.999543136500678,
+      1.00274657532938,
+      0.9968053355578405
+    ],
+    [
+      32,
+      0.0009765625,
+      0.9995984531496791,
+      1.0024134473682718,
+      0.9971917832646967
+    ]
+  ],
+  "execution": {
+    "script_sha256": "5118158ec9570406a34c8d5338ef95a5bd425094c91891bab3f29a90690a3f40",
+    "guard_sha256": "09b9986966402a73bba8e078884a50b5762c4980485ea295e8cca2e02fc8ae63",
+    "guard_unit": "research-guard-2184890-9201f11ebe064783.scope",
+    "matplotlib_version": "3.10.8",
+    "config_directory": "build/tmp/matplotlib_ising",
+    "smooth_samples": 512,
+    "cpu_affinity": [
+      0
+    ],
+    "max_rss_kib_linux": 99864,
+    "elapsed_seconds": 2.0752831490244716,
+    "estimated_peak_resident_mib": 256,
+    "suggested_guard_address_space_mib": 1024,
+    "suggested_guard_memory_reservation_mib": 512
+  },
+  "outputs": [
+    {
+      "path": "figures/ising_calibration.pdf",
+      "sha256": "d237bb668ac4ecdf1e042190446076fa2b17b152e34a2fd043aaf57861ebd49c"
+    },
+    {
+      "path": "figures/ising_calibration.svg",
+      "sha256": "29b024a344b8d9a545622964ef04d795d3dfe67a193186e47c8983c5d04e9d1d"
+    }
+  ]
+}

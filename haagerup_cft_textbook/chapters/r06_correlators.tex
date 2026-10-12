@@ -1,0 +1,430 @@
+\chapter{Worked operator products and correlation functions}
+\label{ch:correlators}
+
+Characters count states. Correlation functions tell us how those
+states interact. The lattice realization is particularly valuable
+because it supplies actual fields, positive norms, and exact mode
+products. This chapter develops several calculations small enough
+to reproduce by hand and explains how symmetry organizes the larger
+weight-two three-point tensor.
+
+The correlators below are chiral. Their adjoints are chiral radial
+adjoints, not additional antiholomorphic fields. Products with
+antiholomorphic counterparts give full vacuum-sector observables.
+Generic nonvacuum bulk correlators of the diagonal theory require
+the additional sewing data discussed in Chapter~\ref{ch:sewing}.
+
+\section{Normalize before comparing coefficients}
+\index{OPE coefficient!normalization}
+
+For orthogonal states $v_i$ with positive norms
+$N_i=\langle v_i,v_i\rangle$, write
+$\widehat v_i=v_i/\sqrt{N_i}$, taking the positive square root.
+For three weight-two primaries, the coefficient of the weight-two
+field in their singular OPE is
+\begin{equation}
+ C_{ij}^{\ k}=
+ \frac{\langle v_k,(v_i)_{(1)}v_j\rangle}
+      {\sqrt{N_iN_jN_k}}.
+ \label{eq:corr-normalization}
+\end{equation}
+The Hermitian form is antilinear in the first slot. Thus this
+coefficient is the correlator with $\widehat v_k^\dagger$ at
+infinity. Exact algebraic numerators and positive square roots of
+norm products keep both the magnitude and phase of the answer.
+
+The six currents split into affine levels one and thirty-nine.
+For their Cartans,
+\[
+ H_L(z)H_L(0)\sim2z^{-2},\qquad
+ H_R(z)H_R(0)\sim78z^{-2},\qquad H_L(z)H_R(0)\sim0.
+\]
+The defining field $u$ has weight two, charges $(1,13)$, and
+transported norm squared twelve. Consequently
+$\widehat u=u/\sqrt{12}$ has unit two-point coefficient.
+The squared couplings to the unit Cartan currents are
+\begin{equation}
+ \frac{1^2}{2}=\frac12,
+ \qquad \frac{13^2}{78}=\frac{13}{6}.
+ \label{eq:corr-current-couplings}
+\end{equation}
+The unit total stress is $T/2$ at $c=8$, and its coupling to
+$\widehat u,\widehat u^\dagger$ is one by the Ward identity.
+These numbers provide independent checks on the first terms of
+the four-point function.
+
+\section{Fifteen Gaussian terms give a complete four-point function}
+\index{four-point function!lattice example}
+
+In the positive unitary exponential basis, the normalized field is
+\begin{equation}
+ \widehat u=\frac1{\sqrt3}
+   \left(e^{a_1}+\zeta e^{a_2}+\bar\zeta e^{a_3}\right),
+ \qquad
+ \zeta=\frac{\sqrt{13}+3i\sqrt3}{\sqrt{40}},
+ \quad |\zeta|=1.
+ \label{eq:corr-u-unitary}
+\end{equation}
+Its three momenta satisfy
+\[
+ a_i^2=4,\qquad(a_i,a_j)=2\quad(i\ne j).
+\]
+These inner products, the cocycle convention, and charge
+conservation are enough for the calculation. The raw torus-gauge
+coefficients in the construction chapter are different because
+their exponential basis has squared norms $4,40,40$.
+
+Consider
+\[
+ G_0(x)=\langle\widehat u^\dagger(\infty)\widehat u(1)
+                   \widehat u^\dagger(x)\widehat u(0)\rangle.
+\]
+Expanding the four sums gives $3^4=81$ assignments. The Gram matrix
+of the three momenta has eigenvalues $8,2,2$, so they are linearly
+independent. Charge conservation therefore says exactly that
+the two positive charges and the two negative charges have the
+same multiset. There are three assignments using
+one momentum four times and twelve using two distinct momenta.
+In the fixed adjoint and cocycle convention, each surviving term
+has coefficient $1/9$.
+
+The fifteen terms fall into three groups. The three identical-charge
+assignments contribute
+$1/[3x^4(1-x)^4]$. The two possible pairing patterns for distinct
+charges contribute six terms each, giving
+\[
+ G_0(x)=\frac1{3x^4(1-x)^4}
+       +\frac2{3x^2(1-x)^4}
+       +\frac2{3x^4(1-x)^2}.
+\]
+Putting these over a common denominator yields
+\begin{equation}
+ G_0(x)=\frac{3-4x+4x^2}{3x^4(1-x)^4}.
+ \label{eq:corr-u-neutral}
+\end{equation}
+This is the full meromorphic chiral correlator, not a truncated
+series or a fitted ansatz.
+
+The equal-charge ordering similarly gives
+\begin{equation}
+ G_+(x)=\langle\widehat u^\dagger(\infty)
+    \widehat u^\dagger(1)\widehat u(x)\widehat u(0)\rangle
+ =\frac{x^2(4-4x+3x^2)}{3(1-x)^4}.
+ \label{eq:corr-u-charged}
+\end{equation}
+The identities $G_0(1-x)=G_0(x)$ and
+$G_+(x)=x^{-4}G_0(1/x)$ are exact crossing checks.
+At $x=1/2$, for instance,
+$G_0=512/3$ and $G_+=11/3$.
+
+\begin{example}[The first equal-charge exchanged state]
+The sum of two distinct momenta has squared norm twelve, so its
+exponential has weight six. Equal momenta instead give weight
+eight. Hence the leading equal-charge OPE has weight six and
+starts at $x^{6-2-2}=x^2$.
+The three distinct sums each occur twice in the product of
+\eqref{eq:corr-u-unitary}; their coefficients have magnitude
+$2/3$. The resulting state has squared norm
+$3(2/3)^2=4/3$. It is a weight-six primary, and its normalized
+leading coupling can be chosen as $2/\sqrt3$. This reproduces
+the leading coefficient of \eqref{eq:corr-u-charged}.
+\end{example}
+
+\section{Extracting global blocks by a triangular subtraction}
+\index{conformal block!global}
+
+For external weight two, expand the neutral channel in global
+conformal blocks:
+\begin{equation}
+ x^4G_0(x)=A_0+\sum_{n\ge1}A_nx^n
+                         {}_2F_1(n,n;2n;x).
+ \label{eq:corr-global}
+\end{equation}
+Each block begins with $x^n$, so its coefficient can be found by
+subtracting all lower blocks from the power series. The first
+terms of the reduced correlator are
+\[
+ x^4G_0=1+\frac83x+6x^2+12x^3+\frac{65}3x^4+\cdots.
+\]
+Thus $A_0=1$, $A_1=8/3$. The weight-one global block is
+$x+x^2/2+x^3/3+x^4/4+\cdots$. It contributes $4/3$ at order
+$x^2$, leaving $A_2=6-4/3=14/3$. At the next order the known
+contributions are $8/9+14/3$, leaving $A_3=58/9$.
+Continuing one more step gives
+\begin{equation}
+ (A_0,A_1,A_2,A_3,A_4)
+ =\left(1,\frac83,\frac{14}3,\frac{58}9,\frac{107}{15}\right).
+ \label{eq:corr-global-coefficients}
+\end{equation}
+
+The first coefficient equals $1/2+13/6$, exactly the two Cartan
+exchanges in \eqref{eq:corr-current-couplings}. At weight two,
+the total stress contributes one. The other $11/3$ is the sum
+of squared couplings to the weight-two Virasoro primaries.
+A global coefficient is a sum over orthonormal quasiprimaries;
+it is not generally one OPE coefficient or one Virasoro-block
+coefficient. This distinction is essential when comparing a
+four-point expansion with a table of individual couplings.
+
+\section{Resolving the weight-two space}
+\index{weight-two primary tensor}
+
+The $113$ Virasoro primaries consist of $96$ fields in eight
+current multiplets and seventeen additional fields. The eight
+types are written as dimensions of the two internal left and right
+$\mathfrak{sl}_2$ representations. Both current algebras act on
+holomorphic fields; these labels do not denote physical chirality.
+The types are
+\[
+ (1,5),(1,9),(1,9),(1,13),(2,2),(2,6),(2,8),(2,14).
+\]
+Their dimensions sum to
+$5+9+9+13+4+12+16+28=96$.
+The extra fields comprise an internal right spin-two multiplet $(1,5)$,
+a mixed-current multiplet $(3,3)$, and three stress differences.
+At internal left affine level one the candidate $(5,1)$ multiplet is null,
+so it does not add another five states.
+
+There are four mutually commuting stresses
+$(T_L,T_R,T_e,T_f)$ with central charges
+\begin{equation}
+ \left(1,\frac{117}{41},\frac{2400}{1271},\frac{70}{31}\right).
+ \label{eq:corr-four-stresses}
+\end{equation}
+Their sum is the total stress. A combination $A=\sum_i a_iT_i$
+is a total-Virasoro primary precisely when
+$\sum_i a_ic_i=0$: this cancels the fourth-order pole in its
+OPE with the total stress, while the remaining poles give weight
+two and translation. Since the stress space has dimension four,
+there are three independent such differences.
+
+\begin{example}[A normalized three-point coefficient from two stresses]
+\label{ex:corr-stress-cubic}
+Take two commuting stresses and set $A=c_2T_1-c_1T_2$.
+Their orthogonal norms give
+$N_A=c_1c_2(c_1+c_2)/2$.
+The first product is
+$A_{(1)}A=2c_2^2T_1+2c_1^2T_2$, so
+\[
+ \langle A,A_{(1)}A\rangle=2N_A(c_2-c_1).
+\]
+Consequently
+\begin{equation}
+ |C_{AAA}|^2
+ =\frac{8(c_2-c_1)^2}{c_1c_2(c_1+c_2)}.
+ \label{eq:corr-stress-cubic}
+\end{equation}
+At $c_1=1,c_2=117/41$, this is $23104/9243$.
+The calculation checks a nontrivial entry of the large lattice
+coupling tensor using only the Virasoro OPE.
+\end{example}
+
+Current zero modes act as derivations. If $P$ projects orthogonally
+onto the primary space and $F$ is a lowering zero mode, then
+\begin{equation}
+ P\bigl((Fv_i)_{(1)}v_j\bigr)
+ =F P\bigl((v_i)_{(1)}v_j\bigr)
+          -P\bigl((v_i)_{(1)}Fv_j\bigr).
+ \label{eq:corr-ward-completion}
+\end{equation}
+The projection commutes with the current action because current
+zero modes commute with the total Virasoro algebra and the compact
+form acts unitarily. Thus a set of highest-weight seed products
+determines all lowered components. In a conventional finite
+$\mathfrak{sl}_2$ basis $v_p=F^pv_0$ of dimension $n$,
+$Ev_p=p(n-p)v_{p-1}$. Raw torus-gauge norms must still be
+transported consistently when using this recursion.
+
+The recorded exact calculation fills the complete $113^3$ tensor,
+with $18365$ nonzero ordered entries. The important mathematical
+content is the specified primary basis, exact seed products,
+equivariant completion, and normalized positive form. A sparse
+table is complete only when its unlisted entries have been proved
+zero in that defined space. This tensor concerns weight-two
+vacuum-module fields; it is not a claim to have computed every
+nonvacuum bulk OPE.
+
+\section{Spin-three fields and a null-channel test}
+\index{null channel}\index{parafermion algebra!weight-four field}
+
+The Potts and level-thirteen parafermion factors contain a
+canonical weight-three field $a$ with intrinsic central charge
+$c_0$. To avoid confusion, $c_0$ here denotes a number, not the
+central simple-object label used elsewhere. Set
+\[
+ N=\frac{c_0}{3},\quad b=a_{(1)}a,\quad
+ A=31-16\lambda(c_0+2),\quad B=NA.
+\]
+The parameter pairs are
+$(c_0,\lambda)=(4/5,4/13)$ for Potts and
+$(8/5,14/473)$ for the parafermion factor.
+In the canonical positive normalization, the singular OPE is
+\begin{equation}
+ a(z)a(0)\sim\frac{N}{z^6}+\frac{2T_0}{z^4}
+ +\frac{\partial T_0}{z^3}+\frac b{z^2}
+ +\frac{\frac12\partial b-\frac1{12}\partial^3T_0}{z},
+ \label{eq:corr-spin3-ope}
+\end{equation}
+with $a_{(3)}b=Aa$ and $\norm b^2=B$.
+
+One can reconstruct the whole four-point function from these
+poles. Define the unnormalized function
+$F(x)=\langle a(\infty)a(1)a(x)a(0)\rangle$.
+The Ward identity gives
+$\langle a(\infty)a(1)T_0(0)\rangle=3N$.
+Its first and third derivatives at the last insertion give
+$6N$ and $72N$. The corresponding $b$ coefficient and first
+derivative are $B$ and $4B$. Therefore the poles at zero have
+coefficients $N^2,2c_0,2c_0,B,2B-2c_0$ at orders
+$6,4,3,2,1$. Crossing determines the poles at one, and the
+identity channel fixes the constant at infinity. Hence
+\begin{align}
+ F(x)={}&N^2\bigl[1+x^{-6}+(1-x)^{-6}\bigr]\notag\\
+ &+2c_0\bigl[x^{-4}+(1-x)^{-4}+x^{-3}+(1-x)^{-3}\bigr]\notag\\
+ &+B\bigl[x^{-2}+(1-x)^{-2}\bigr]
+ +(2B-2c_0)\bigl[x^{-1}+(1-x)^{-1}\bigr].
+ \label{eq:corr-spin3-four}
+\end{align}
+Subtracting this rational function from the actual correlator
+leaves a holomorphic function on the sphere vanishing at infinity,
+so the difference is zero. Divide by $N^2$ for unit external fields.
+
+The weight-four quasiprimary descendant of the intrinsic stress is
+\[
+ \Lambda=:T_0T_0:-\frac3{10}\partial^2T_0,
+ \qquad \norm\Lambda^2=\frac{c_0(5c_0+22)}{10}.
+\]
+Removing it and the derivative from $b$ gives
+$W_4=b-\frac{32}{5c_0+22}\Lambda-\frac3{10}\partial^2T_0$.
+This subtraction can be checked entirely with Virasoro Gram
+products. Put $Q=5c_0+22$. Then
+\[
+ \norm{\partial^2T_0}^2=20c_0,\qquad
+ \langle\Lambda,\partial^2T_0\rangle=0,\qquad
+ \norm{\Lambda}^2=\frac{c_0Q}{10}.
+\]
+Since $W_4$ is orthogonal to these descendants,
+\[
+ \norm{W_4}^2
+ =B-\left(\frac3{10}\right)^2 20c_0
+   -\left(\frac{32}{Q}\right)^2\frac{c_0Q}{10}
+ =B-\frac{9c_0}{5}-\frac{512c_0}{5Q}.
+\]
+The squared coupling to the new intrinsic weight-four primary is
+$\norm{W_4}^2/N^2$. Substituting $B=(c_0/3)
+[31-16\lambda(c_0+2)]$ and simplifying gives
+\begin{equation}
+ \gamma_4^2=
+ \frac{48(c_0+2)\{8-\lambda(5c_0+22)\}}
+      {c_0(5c_0+22)}
+ =\begin{cases}
+ 0,&\text{Potts},\\
+ 60552/2365,&\text{level-thirteen parafermion}.
+ \end{cases}
+ \label{eq:corr-spin4-test}
+\end{equation}
+For the parafermion point, $Q=30$ and
+$8-\lambda Q=3364/473$, while
+$48(c_0+2)/(c_0Q)=18/5$. Their product is the displayed
+$60552/2365$. At the Potts point, $Q=26$ and $\lambda Q=8$,
+so the same formula vanishes exactly.
+In the Potts case this channel is null. In the parafermion case
+it is a positive new channel. The test is with respect to the
+intrinsic Virasoro algebra of the factor; a field's decomposition
+under the total $c=8$ Virasoro algebra is a different question.
+
+\section{A nonvacuum block with fractional powers}
+\index{nonvacuum correlator}\index{Gram matrix!light sector}
+
+The lightest $U$-module $c_1$ can be seen by restricting either
+fundamental $A_2$ lattice sector. Choose its three weights
+\[
+ \beta_0=(2/3,1/3),\quad\beta_1=(-1/3,1/3),\quad
+ \beta_2=(-1/3,-2/3),
+ \qquad(\beta_i,\beta_j)=\delta_{ij}-\frac13.
+\]
+Each exponential has weight $1/3$. Paired lattice intertwiners
+with unit vacuum coefficient give, on $0<x<1$,
+\begin{equation}
+ \mathcal F_{ij}(x)=
+ \langle V_{-\beta_i}(\infty)V_{\beta_i}(1)
+              V_{-\beta_j}(x)V_{\beta_j}(0)\rangle
+ =x^{-2/3}(1-x)^{-(\beta_i,\beta_j)}.
+ \label{eq:corr-light-block}
+\end{equation}
+The diagonal blocks are $[x(1-x)]^{-2/3}$ and the off-diagonal
+ones are $x^{-2/3}(1-x)^{1/3}$. Analytic continuation requires
+a path because these are chiral blocks with fractional powers.
+
+The intermediate lattice vacuum restricts to $U\oplus b$.
+Here $b$ again denotes the simple module in the modular table,
+rather than the preceding weight-four field $a_{(1)}a$.
+The internal right Cartan $H_R$ charges are $q_i=(2,0,-2)$.
+These form an internal spin-one triplet, whose chiral conformal
+weight is $1/3$. The first reduced-block coefficient splits as
+\[
+ (\beta_i,\beta_j)=\frac{q_iq_j}{78}
+       +\left[(\beta_i,\beta_j)-\frac{q_iq_j}{78}\right].
+\]
+The first term is $U$-current exchange and the second is exchange
+through the $b$ top. At $i=j=0$ these are $2/39$ and $8/13$,
+whose sum is $2/3$. The matrix of the second terms has
+eigenvalues $0,1,35/39$, consistent with positivity.
+
+Restriction of a lattice intertwiner is a genuine $U$ intertwiner.
+Thus these are actual nonvacuum chiral data. They are selected
+linear combinations of channels determined by the ambient
+extension. They do not form a complete channel basis and do not
+by themselves determine the diagonal theory's lightest-scalar
+bulk four-point function. Multiplying one selected block by its
+complex conjugate would be a proposed sewing choice, which still
+needs justification.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:corr-fifteen}
+Enumerate the three groups of surviving charge assignments in
+the neutral $u$ four-point function and derive their powers of
+$x$ and $1-x$ from pairwise momentum inner products.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:corr-fifteen]{Solution on page~\pageref*{sol:ex:corr-fifteen}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:corr-blocks}
+Complete the triangular subtraction leading to $A_4=107/15$.
+Use the leading power in the charged channel to determine its
+first global-block coefficient.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:corr-blocks]{Solution on page~\pageref*{sol:ex:corr-blocks}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:corr-stress}
+Derive \eqref{eq:corr-stress-cubic} without using a four-point
+function. What happens when $c_1=c_2$, and why does that not make
+the field $A$ null?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:corr-stress]{Solution on page~\pageref*{sol:ex:corr-stress}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:corr-spin3}
+Verify the Potts zero in \eqref{eq:corr-spin4-test}. Derive the
+coefficient of the simple pole in \eqref{eq:corr-spin3-four}
+directly from the last term of \eqref{eq:corr-spin3-ope}.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:corr-spin3]{Solution on page~\pageref*{sol:ex:corr-spin3}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:corr-lightgram}
+Write the $3\times3$ matrix
+$K_{ij}=\delta_{ij}-1/3-q_iq_j/78$ explicitly. Find its
+eigenvectors and eigenvalues without a numerical diagonalization.
+Explain why an off-diagonal negative entry is compatible with
+positivity of $K$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:corr-lightgram]{Solution on page~\pageref*{sol:ex:corr-lightgram}.}}\par
+\end{exercise}

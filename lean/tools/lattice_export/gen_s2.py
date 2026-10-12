@@ -12,12 +12,12 @@ writes (in lean/HaagerupIzumi/C8/Lattice/)
     S2Pivots.lean        the triangularity of the basis at its pivots (independence)
     S2MinGen.lean        membership of every r_k in the closure space (generated proofs)
 
-Status (1 Oct 2026, end of session): S2Data.lean is built (exit 0); the generated S2Rel*.lean,
-S2Pivots.lean, S2MinGen.lean and the hand-written S2Core.lean, S2Link.lean were moved to
-lean/tools/lattice_export/drafts/ because the compile queue was blocked before they could be
-checked (S2Pilot.lean, with relations 0, 6, 42, 43 and the heaviest 352, passed).  Move them back
-to lean/HaagerupIzumi/C8/Lattice/ and build in the order S2Core, S2Pivots, S2Rel00..43, S2MinGen,
-S2Link.
+Status (4 Oct 2026): everything is built in lean/HaagerupIzumi/C8/Lattice/.  The generated
+S2Pivots.lean is NOT used: as one file it exhausted 4 GiB; it was replaced by hand-split files
+(S2Coeff, S2PivotsA-F, S2Tri00-32, assembly S2Echelon; see Lattice/Benchmark.md section 5), and
+S2MinGen.lean now imports S2Echelon and has a hand fix in s2u_rel_mem.  Do not re-run this
+generator into the tree without porting that layout (it would overwrite S2MinGen.lean and write
+the monolithic S2Pivots.lean again).
 
 Vectors over Q(s, t) are written as four rational components (`Vec4`, `decVec4`), each a list
 of term rows [zz num, den, zz m0, ..., zz m7, codes...] sorted like `LatticeVOA.stateCmp`;

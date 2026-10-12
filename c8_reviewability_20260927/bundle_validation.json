@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "archive": "hi_cft_c8_reviewability_bundle.zip",
+  "members": 73,
+  "uncompressed_bytes": 17925478,
+  "archive_bytes": 4729766,
+  "sha256": "62d3bbc86db20ff621d4a7cb253af78979df858361996128509a066d8c932740",
+  "all_zip_members_equal_manifest_sources": true
+}

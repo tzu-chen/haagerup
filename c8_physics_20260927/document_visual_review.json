@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "manuscript_pages": 78,
+  "Lean_assessment_pages": 17,
+  "manuscript_rendered_and_inspected_pages": [1, 4, 7, 10, 12, 14, 18, 19, 21, 25, 27],
+  "assessment_rendered_and_inspected_pages": [11, 12, 16, 17],
+  "review": "Root and three independent agents checked representative formulas, tables, figures, captions and scope statements. No clipping or overlap remained. One historical-assessment wording ambiguity was clarified in a presentation copy, preserving the original fragment.",
+  "bootstrap_overlay": "Original vector panels and red model points independently inspected before and after manuscript placement; markers at(8,2) are below both curves. Attribution retained.",
+  "scope": "Presentation review of the listed pages, plus clean full-document TeX diagnostics; not an external expert validation of the CFT construction."
+}

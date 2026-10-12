@@ -1,0 +1,306 @@
+Final dependency and teaching review of r04_unitarity.tex
+Reviewer: scope_construction
+Review timestamp: 2026-10-05 18:30:03 UTC (clock__curr_time).
+Read-only. No numerical jobs, builds, or chapter edits.
+
+Conclusion
+----------
+The overall argument remains sound conditional on the declared finite
+construction inputs and the stated structural/analytic theorems. It does
+not import a tensor comparison through the counting argument, infer a
+concrete extension from an abstract vacuum-net isomorphism, or erase a
+charged-sector deck transformation by a vacuum scalar. The completed
+construction record supplies the missing details identified below.
+
+Status at the timestamp above: root has implemented the requested repairs.
+Items below preserve the original audit findings and their earlier line
+references. The follow-up verification at the end records the revised text.
+
+The requested improvements are short premise restorations and definitions,
+not a need for an additional large chapter or another example atlas.
+Two specific statements should be corrected; several compressed steps
+should name their hypotheses to make this self-contained at textbook level.
+
+1. Restore the rationality-to-regularity bridge
+----------------------------------------------
+r04:114--119 and253 use regularity of U, whereas c04's final theorem
+concludes strong rationality. r02:520--528 carefully distinguishes
+rationality from regularity but does not state the implication used here.
+
+Add one sentence, preferably at the end of c04's theorem:
+
+  For a VOA of CFT type, rationality together with C2-cofiniteness
+  implies regularity; hence every weak U-module is a direct sum of
+  ordinary simple modules.
+
+This is the Abe--Buhl--Dong implication, with all its hypotheses already
+proved for U. It is needed for the bounded-energy weak module in r04,
+not merely for semisimplicity of ordinary modules.
+Primary statement checked:
+[Abe--Buhl--Dong](https://arxiv.org/abs/math/0204021).
+
+2. Make the common-core premise explicit in both applications
+------------------------------------------------------------
+r04:162--173 and240--270.
+The abstract closure lemma is correct. Its applications need one
+explicit statement that the domains being used really are cores:
+
+* For the lattice branching, finite-energy vectors form a core for the
+  inherited smeared fields, by the energy bounds and spectral cutoffs.
+* For reverse reconstruction, the reconstructed smeared operator is
+  defined as the closure of its restriction to M. Thus M is its core.
+
+The primary reconstruction theorem agrees with the chapter's use:
+Definition9.4 gives this closure convention; Remark9.8 allows the
+bounded-energy domain without finite multiplicities or discrete spectrum.
+Theorem9.5 identifies the closed represented fields. The Virasoro
+identification comes from localized stress smearing and a partition of
+unity, as in Corollary9.6.
+[Henriques--Tener, Section9](https://arxiv.org/html/2507.20735v3#S9).
+
+At269, retain the good wording "as a Hilbert-space equality".
+A smeared field need not map M back into M. Mode commutation and
+boundedness of P justify the convergent sum; only then does the core
+lemma justify closure and adjoint commutation.
+
+For a beginner, define "core" in one sentence before the lemma:
+D is a core for T when D is dense in D(T) for the graph norm
+(||xi||^2+||T xi||^2)^(1/2). This also explains the approximating
+sequence used in145--149. No extra theorem is required.
+
+3. Actually verify the hypothesis of the annulus-domain lemma
+------------------------------------------------------------
+r04:326--354.
+The conditional lemma is correct, and its proof already proves the
+stronger assertion M^fin subset Ran A. The chapter then applies it to
+arbitrary annulus pairs without yet explaining why AC=lambda r^L0
+exists for the chosen geometric system or why A,C are injective with
+dense range. The expanded source provides precisely this verification.
+
+Minimal repair:
+State that the chosen incoming annulus has inner Jordan domain
+containing0. Put a small round disc rD inside that domain and take C
+to be the intervening annulus, with matching boundary parametrizations.
+Sewing gives the round annulus; choosing its central lift gives
+AC=lambda r^L0. The geometric annulus injectivity/dense-range theorem
+supplies the remaining assumptions. The outgoing adjoint uses the same
+construction.
+
+Also put BOTH conclusions in the lemma statement:
+M^fin subset Ran A and A^-1 M^fin=C M^fin is dense.
+The range assertion is an actual requirement of an incoming generalized
+annulus, not only an intermediate proof line. The inverse is used only
+on its range; the existing oscillator example already explains why
+there is no everywhere-defined bounded inverse.
+
+4. Specify holomorphy and the insertion domain before continuing
+---------------------------------------------------------------
+r04:342--371 and403--407.
+The finite-Laurent argument and the component-coverage argument are
+correct. The chapter should explicitly name the other function to
+which the identity theorem is being applied:
+
+  The geometric point-insertion theorem supplies a bounded operator
+  G_v(z), weakly holomorphic on Omega_ins subset C^times.
+
+The Laurent matrix coefficient is then holomorphic on the same
+punctured domain. Without these words, only one side's analyticity has
+been explained. The statements about all components and uniqueness on
+dense test domains are otherwise sufficient; no graph-core assertion
+for D_A or D_(B*) is needed.
+
+It would also help to define the prescribed insertion interior as
+the union over geometric representatives of the same operator pair.
+The existing instruction to repeat the argument then visibly covers
+all its points. Empty-interior pairs are already handled correctly
+by the BA identity.
+
+5. Give "bounded localized vertex operators" its actual role
+------------------------------------------------------------
+r04:114--119,295--309,423--428.
+The final positivity result does not follow from strong unitarity
+and the displayed pair identity alone for an arbitrary VOA.
+Its premises include a simple regular unitary VOA with bounded
+localized vertex operators, and the corresponding representation
+condition for every ordinary module.
+
+This property is available here by inheritance from the lattice
+theory, but it is not explicitly defined or named in the textbook's
+first step. Boundedness for each fixed state v is weaker than the
+standard bounded-insertion condition: for a fixed allowed insertion,
+one permits an additional s^L0 damping in the state variable so the
+bilinear map on two Hilbert spaces is bounded. The generated local
+algebras must then commute at disjoint intervals.
+
+A concise definition before the bounded-insertion subnet discussion,
+and a sentence at423 listing simple + regular + unitary + bounded
+localized vertex operators, would close this presentation gap.
+The annulus identity then supplies exactly the module-representation
+condition, and finite sums cover all ordinary modules by regularity.
+This agrees with
+[Tener, Definition2.18 and Corollary4.6](https://arxiv.org/html/1910.08257v3).
+It does not require importing an unproved charged-intertwiner locality
+theorem or assuming a tensorator for the preceding linear functor.
+
+6. Correct the scalar-deck statement for reducible modules
+---------------------------------------------------------
+r04:376--381.
+Replace "a module of lowest weight h" by "a simple ordinary module
+of lowest weight h" (or "a module with spectrum in h+Z").
+For a general ordinary direct sum with several integer-shift classes,
+having a lowest weight h does not imply exp(2pi i L0)=exp(2pi i h).
+For example U plus a1/3-weight module has two deck phases.
+The paired cancellation remains correct for arbitrary finite sums,
+because every U-mode still commutes with the deck operator.
+This is a one-word correction, consistent with r02's improved
+ordinary-module definition.
+
+7. One useful concrete formula for the paired lift
+--------------------------------------------------
+r04:384--395.
+The cancellation is right, but "localizing both with one common
+diffeomorphism" is the chapter's most compressed technical notion.
+The following single display would make the operation reviewable:
+
+ A_M=U_M(delta_tilde)^* pi_M(U(delta) A_U),
+ B_M=pi_M(B_U U(delta)^*) U_M(delta_tilde).
+
+Explain that the common localizer delta is chosen so that the
+operators inside pi_M belong to the interval algebra, and the same
+lift delta_tilde is used twice. This makes the opposite deck factors
+and the locality of BA visible. The geometric transport theorem
+justifies this display. The actual source also matches the incoming
+semigroup/framing normalization; if omitted here, name that matching
+as part of the comparison theorem being invoked.
+
+This is a pedagogical recommendation, not a demand for the full
+semigroup proof. The current text's pairwise scope is already correct.
+
+8. Small definitions that support the operator-algebra argument
+--------------------------------------------------------------
+r04:181--189:
+Define I' as the interior complementary interval, and explain
+"separating": x Omega=0 for x in N_H(I) implies x=0.
+The reason is locality and cyclicity of Omega for the complementary
+interval: x kills every y Omega with y in N_H(I'), a dense set.
+This makes the local-irreducibility proof accessible without an
+operator-algebra prerequisite chapter.
+
+r04:194--217:
+Explicitly recall that center induction identifies
+dim End(A_net) with the number of boundary simples and its
+composition algebra with the complex fusion algebra. This is
+proved earlier in c05; a cross-reference is enough. Otherwise
+the rank-six inference is easy to miss.
+
+Write the intermediate index as [N_H:N_B]=3, or say that [H:B]
+there denotes the actual net index. It is the lattice fixed-Z3
+extension's index, not a Hilbert-space dimension ratio and not an
+index transferred through the earlier abstract net isomorphism.
+
+r04:448--450:
+"Holomorphic strongly rational unitary VOA of central charge8"
+makes the classification hypotheses explicit. Strong rationality
+comes from the finite positive extension of the established U.
+
+9. Checks that passed and should remain unchanged
+------------------------------------------------
+* The core lemma needs no separate assertion that D is a core for T*.
+  Complementary projections give an actual direct-sum decomposition
+  of the closed operator, and then of its adjoint and polar data.
+* The actual branching and local irreducibility precede the actual
+  inclusion's index argument. Complete rationality is first transferred
+  only as an isomorphism-invariant property.
+* Strong additivity and locality really do make a local relative-
+  commutant element commute with the whole represented subnet.
+  The common rotation and unique ambient zero-energy vector then
+  complete the scalar-relative-commutant argument.
+* The no-sign exclusion uses the actual index-two intermediate
+  extension and the VOA/net automorphism and fixed-point comparison.
+  It does not assume the full stabilizer Aut(B/U) is trivial.
+* The positive net boundary category supplies its own rank-six
+  and indicator calculation. No VOA S matrix is assigned to it
+  through an unavailable tensor equivalence.
+* The projection onto one ordinary summand maps every bounded-energy
+  space into finitely many of that summand's finite grades. This
+  removes, rather than assumes away, infinite sector multiplicities.
+* The proof comparing invariant forms before claiming boundedness
+  of an algebraic module isomorphism is correct.
+* Twelve-to-twelve exhaustion proves strong unitarity and a linear
+  star-comparison. The chapter explicitly postpones fusion positivity.
+* On annulus test vectors, only n=p+k-q-1 contributes for fixed
+  input/output energies; hence the scalar coefficient is finite
+  Laurent. Coverage of every component and all representatives
+  is needed and is already stated.
+* Locality plus Haag duality gives equality of the concrete vacuum
+  algebras only after the inclusion has been established on their
+  common vacuum Hilbert space.
+* The final H2/H3 ambiguity for the original embedding is retained.
+  Transport of a chosen H3 Lagrangian algebra changes the specified
+  embedding, even when the ambient holomorphic VOA is again E8.
+
+10. New c01 dependency table
+----------------------------
+c01_lattice_embedding.tex:385--390 at this snapshot has a premature
+categorical identification. The row "The center is the Haagerup center"
+attributes the boundary H2/H3 classification and chiral center
+identification to c05 before complete unitarity. c05 itself explicitly
+delays that unitary classification to r04.
+
+Suggested row: "Boundary fusion and twists are determined."
+State that c05 obtains the Haagerup ring, dimensions, and twist data;
+the final H2/H3 and unitary-center identification uses ch:unitarity.
+The later full-theory row should continue to distinguish the selected
+H3 extension from the original H2/H3 fork. The remaining table rows
+are helpful and have the correct scope.
+
+11. Follow-up verification of the repairs
+-----------------------------------------
+Verified against the revised text after the 18:30:03 UTC clock read.
+No further substantive repair was identified.
+
+* r02 now states the CFT-type rational plus C2-cofinite implication
+  to regularity, and both uses have the appropriate bridge.
+* r04 explicitly identifies the finite-energy and reconstructed
+  bounded-energy domains as cores for the relevant closed fields.
+  The abstract lemma still does not assume a core for the adjoint.
+* The actual incoming geometry, round subdisc, complementary annulus,
+  central scalar, and injectivity/dense-range theorem now verify the
+  range lemma's hypotheses. Its statement includes both range and
+  inverse-domain density.
+* The bounded geometric insertion is weakly holomorphic on the
+  punctured insertion region before the finite-Laurent continuation
+  is used. All components and all representatives are covered.
+* Bounded localized vertex operators are inherited explicitly and
+  included among the final fusion-positivity hypotheses. Root correctly
+  uses Tener Definition 2.16's bounded operator from the Hilbert tensor
+  product of the two vacuum Hilbert spaces into the vacuum Hilbert
+  space. This is stronger than merely bounded bilinearity; Definition
+  2.19 uses a bilinear formulation for general intertwiners. The earlier
+  shorthand in item 5 should be read with this distinction.
+* The localizer formulas use a single paired lift, whose opposite
+  charged deck factors cancel. The scalar deck-phase statement is
+  restricted to a simple ordinary module.
+* The actual net index, separating-vacuum argument, center-induction
+  count, and strongly rational holomorphic classification hypotheses
+  are now explicit.
+* The c01 dependency table now separates the c05 ring/twist result
+  from the r04 unitary H2/H3 classification and center identification.
+
+12. New introductory hand examples
+----------------------------------
+c01_lattice_embedding.tex:267--295:
+All three displayed Gram products are correct. Each squared norm is
+four, each pairwise pairing is two, and the charges are (1,13).
+The sole negative simple-root pairing occurs at node 5, which is
+absent from E_R. Each exponential is separately killed by both raising
+zero modes, so the example correctly explains why highest-weight
+conditions alone do not select the relative coefficients of u.
+
+r02_vertex_algebras.tex:344--403:
+The arithmetic-progression Poisson factor, Fourier phase, eta
+cancellation, k=1 S and T matrices, both character expansions through
+q^2, and normalized twist sum all check. Replacing the dual residue
+by its negative is valid for unflavoured theta series; the paragraph
+states this limitation. The example correctly separates the nontrivial
+sector's two-dimensional top from its quantum dimension one.

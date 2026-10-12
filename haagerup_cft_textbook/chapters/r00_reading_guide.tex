@@ -1,0 +1,306 @@
+\chapter{What this book constructs}
+
+A topological symmetry line in two dimensions can be deformed without
+changing a correlation function, provided that it does not cross an
+operator insertion. For an ordinary finite-group symmetry, every such
+line has an inverse. The Haagerup example asks us to take a more general
+possibility seriously: two lines can fuse into a direct sum of lines.
+The simplest characteristic relation is
+\[
+ \rho^2=\one+\rho+\alpha\rho+\alpha^2\rho,
+ \qquad \alpha^3=\one.
+\]
+The coefficient of the identity is one, but the product is not the
+identity. There is no inverse line that undoes $\rho$. Nevertheless,
+the line has well-defined junctions, acts on states, and imposes precise
+constraints on local physics. Its quantum dimension is
+\[
+ d=\frac{3+\sqrt{13}}2,
+ \qquad d^2=1+3d.
+\]
+Understanding how this small piece of algebra becomes a conformal field
+theory is the organizing question of the book.
+
+There are several construction problems hidden in that question. One
+can construct a fusion category that describes line junctions. One can
+construct a chiral algebra whose representations have a prescribed
+braiding and fusion. One can combine left- and right-moving fields into
+a local theory. One can construct a microscopic Hamiltonian with the
+line symmetry and investigate its long-distance limit. Each is a
+substantial achievement, and each requires different data. A useful
+education in the subject consists partly in learning to pass between
+these descriptions and partly in learning when a proposed passage has
+not yet been justified.
+
+The central example in this book begins with a positive-definite lattice
+and its vertex operators. Inside the lattice vertex algebra
+\[
+ B=V_{E_6\oplus A_2}\subset V_{E_8}
+\]
+one specifies six currents, a conformal vector, and a weight-two field
+$u$. Their generated vertex algebra $U$ has central charge eight.
+Associativity of its products comes from the ambient lattice theory.
+The difficult questions are whether this generated algebra is proper,
+whether it is rational, what its representations are, and whether all
+the positivity and analytic conditions needed for a unitary full CFT
+hold. The research construction studied here answers these questions
+under an explicit set of finite lattice identities and stated
+structural and analytic inputs. We turn that argument into a sequence
+of definitions, calculations, and implications that a beginning
+graduate student can follow.
+
+This is a textbook exposition of a research construction. It is not an
+independent verification of every large finite lattice computation,
+and it does not treat every claim in a research manuscript as an
+established classification theorem. Model-specific algebraic identities
+and structural facts are identified as \emph{construction inputs};
+deductions from them state their assumptions. Saved numerical findings
+are presented as \emph{numerical records} with their finite scope.
+Many of the small examples are proved
+in full on the page. This distinction makes the book usable both for
+learning the mathematics and for locating where a further verification
+would strengthen the construction.
+
+\section*{The two full theories and the chain}
+\addcontentsline{toc}{section}{The two full theories and the chain}
+
+Even after the chiral algebra $U$ has been identified, there is more
+than one natural full theory. The diagonal theory has Hilbert space
+\[
+ \HH_{\rm diag}=\bigoplus_i M_i\otimes\overline{M_i},
+\]
+where $M_i$ runs over the twelve simple $U$-modules. A selected
+holomorphic extension gives another theory with Hilbert space
+\[
+ \HH_{E_8}=V_{E_8}\otimes\overline{V_{E_8}}.
+\]
+The selected extension includes an algebra structure and a specified
+Haagerup action; an equality of unflavoured characters alone would
+not choose those data. Both theories have $c_L=c_R=8$, conventionally
+reported as $c=8$. The diagonal theory has scalar primaries beginning
+at scaling dimension $2/3$, whereas the holomorphic extension's
+nonidentity scalar primaries begin at dimension two. Thus they answer
+different physical questions despite their shared central charge.
+
+The regular Haagerup chain is a third object. Its local Hilbert space
+is encoded by fusion paths, and its Hamiltonian is
+\[
+ H=-\sum_jP_j^\rho,
+\]
+with projectors built from the actual unitary $\mathcal H_3$
+associator. Numerical studies motivate a long-distance theory with
+central charge near two. The completed research record used in this
+book does not identify that continuum theory, establish its exact
+central charge, or rule out a sufficiently long crossover to a gapped
+phase. We therefore teach both the evidence and the tests that remain
+necessary. A correct finite matrix calculation and a controlled
+continuum conclusion are different kinds of statement.
+
+There is no contradiction between central charge eight in the chiral
+construction and central charge near two in the chain investigation.
+The modular representation category of the chiral algebra is the
+\emph{center} of a Haagerup fusion category. Having Haagerup lines in
+a full theory is a different requirement. In particular, the
+vanishing chiral anomaly of a center does not constrain every full
+CFT carrying those lines to have central charge divisible by eight.
+This distinction will become concrete in the chapters on centers,
+modular transformations, and defects.
+
+\begin{figure}[htbp]
+\centering
+\input{figures/construction_map}
+\caption{Two construction tracks studied in this book. The left
+track is the central-charge-eight research construction under its
+stated finite and structural inputs. The right track constructs
+the physical chain exactly but requires further work to identify
+its continuum limit. Sharing Haagerup data does not supply an
+arrow equating the two full theories.}
+\label{fig:reading-map}
+\end{figure}
+
+\section*{Prerequisites and a route through the book}
+\addcontentsline{toc}{section}{Prerequisites and a route through the book}
+
+We assume linear algebra, elementary group representations, complex
+analysis through residues and Laurent series, and the basic language
+of Hilbert spaces. Familiarity with either quantum mechanics or
+abstract algebra is helpful; neither a previous CFT course nor a
+previous course in tensor categories is required. Some later proofs
+use results from operator algebras and vertex-algebra representation
+theory that cannot be developed from first principles in a single
+textbook. Before each such use, we explain the relevant objects and
+state the particular implication being imported.
+
+The first part builds a common language. Fusion spaces and changes of
+association give a concrete entrance to categories. Radial quantization
+and Ward identities give a concrete entrance to CFT. Lattice vertex
+operators then provide a model in which many abstract formulas become
+ordinary oscillator and exponential calculations. The Haagerup fusion
+ring, its center, and its modular data are introduced only after these
+examples have supplied a reason to care about them.
+
+The second part follows the central-charge-eight construction. It
+starts with an explicit field in an explicit lattice. It then explains
+why finite low-weight calculations can support an all-weight
+strong-generation argument, why positive stress identities control
+representations, and how branching constrains the boundary fusion
+category. The passage from vacuum positivity to complete unitarity
+closes the structural argument. Characters then turn that structure
+into explicit graded state spaces. Their coefficients are consequences
+of the constructed algebra and its representation theory.
+
+The third part turns the construction into observables. It derives
+the spectra of the two full theories, works out normalized three- and
+four-point functions, and computes defect and boundary quantities.
+The chapter on sewing explains exactly which data a torus partition
+function leaves undetermined. The fourth part examines cosets and
+stress splittings before returning to the physical chain. It develops
+finite-size scaling, overlap methods, tensor networks, and exact
+gapped comparison states. These tools explain what would count as an
+identification of the chain and why several attractive guesses remain
+conditional or fail specified tests.
+
+The final mathematical part returns to the construction of the
+associators themselves. It explains how hyperbolic gamma functions
+solve finite coefficient equations, how exact algebra and positivity
+enter the noncyclic examples, and how planar diagrams reconstruct
+extended Haagerup. These comparisons clarify which methods generalize
+and which additional steps are still needed to obtain a CFT.
+
+A reader mainly interested in physics can first study the CFT and
+lattice chapters, the explicit construction, characters, full theories,
+correlators, and the chain. The category chapters can be read alongside
+the first appearance of a defect or extension. A reader mainly
+interested in mathematics can first follow fusion categories, lattice
+vertex algebras, finite closure, rationality, branching, and unitarity,
+then use the physical chapters to see which information these
+structures actually predict. Both routes benefit from doing the small
+worked examples rather than treating them as illustrations.
+
+A compact first tour can follow the Ising model across the book.
+Derive its null vector in Exercise~\ref{ex:cft-null}, obtain its
+three chiral weights from the affine coset in Worked
+example~\ref{ex:voa-Ising-branching}, and construct its full four-point
+function in Section~\ref{sec:sewing-Ising}. Worked
+example~\ref{ex:defect-Ising-boundaries} supplies its fixed and free
+boundaries, while Worked example~\ref{ex:scaling-Ising-calibration}
+derives its continuum spectrum from a periodic spin chain.
+Together these give a small complete comparison theory for the
+different stages of the Haagerup problem.
+
+The following route begins with calculations a physics reader can
+carry through, then returns to the construction's existence proofs.
+The chapter references also make it possible to revisit a method when
+it is needed. Results imported from the construction retain the
+inputs and hypotheses stated there.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{@{}p{.29\textwidth}X@{}}
+\toprule
+Read & Calculation or skill to acquire\\
+\midrule
+Chapter~\ref{ch:cft}; the Ising example in
+Chapter~\ref{ch:scaling}
+&
+Compute $\|L_{-2}|0\rangle\|^2=c/2$ and extract $v=2J$,
+$c=1/2$ from the exactly solved periodic Ising chain.
+\\[3pt]
+Chapters~\ref{ch:fusion}, \ref{ch:haagerup},
+and \ref{ch:chain}
+&
+Turn an $F$-matrix into a local fusion projector and count
+the allowed periodic path states.
+\\[3pt]
+Chapters~\ref{ch:vertex_algebras} and
+\ref{ch:lattice_embedding}
+&
+Multiply two lattice exponentials, including their cocycle,
+and read a current level from the double pole.
+\\[3pt]
+Chapters~\ref{ch:centers}--\ref{ch:modular} and
+\ref{ch:finite_closure}--\ref{ch:unitarity}
+&
+Track what finite closure, positive stresses, branching,
+and complete unitarity each establish about the constructed algebra.
+\\[3pt]
+Chapters~\ref{ch:characters}--\ref{ch:sewing}
+&
+Remove Virasoro descendants from a character, count full scalar
+fields, and check the Ising four-point sewing example.
+\\[3pt]
+Chapter~\ref{ch:cosets}
+&
+Subtract commuting stresses and distinguish that calculation
+from constructing the reduced state space and its full CFT.
+\\[3pt]
+Chapters~\ref{ch:scaling}--\ref{ch:tensor_networks}
+&
+Derive a stress estimate of $c$, normalize a wavefunction
+overlap, and obtain an MPS truncation from Schmidt coefficients.
+\\[3pt]
+Chapters~\ref{ch:gapped}--\ref{ch:identification}
+&
+Compare a proven gapped parent with the physical Hamiltonian
+and state which spectral, OPE, and symmetry data a continuum
+identification still needs.
+\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Chapters~\ref{ch:arithmetic} and \ref{ch:related-categories}
+can then be read for the exact arithmetic and reconstruction
+methods behind further associator examples.
+
+\section*{How to use the examples and exercises}
+\addcontentsline{toc}{section}{How to use the examples and exercises}
+
+The clickable list after the contents gives the title and page of
+every worked example. It is useful for following one calculation
+across the different parts of the book or for choosing a short
+first reading.
+
+The examples are chosen to expose mechanisms that recur in the hard
+construction. Diagonalizing a fusion matrix explains quantum
+dimensions and the exponential growth of a path Hilbert space.
+Multiplying two lattice exponentials explains both a current bracket
+and the origin of a cocycle sign. Subtracting descendants from a
+character explains why a large coefficient is not a count of new
+primary fields. A stress-tensor norm determines a finite-size estimator
+of $c$. A small vacuum algebra shows why a symmetric Hamiltonian can
+have several pure vacua. Each calculation should leave the reader
+with a method that can be used elsewhere.
+
+Exercises include short checks, derivations that complete an argument,
+and problems that ask which hypothesis a tempting inference is
+missing. Worked solutions to every exercise are collected in
+Appendix~\ref{app:solutions}. The exercises
+do not require reproducing large research computations. Where saved
+numerical values are used, the point is to analyze what those values
+mean, not to launch a larger diagonalization.
+
+We use a small set of conventions consistently. Vertex operators are
+expanded as
+\[
+ Y(a,z)=\sum_{n\in\Z}a_{(n)}z^{-n-1},
+ \qquad L_n=\omega_{(n+1)}.
+\]
+Thus $a_{(n)}b$ has weight $\wt(a)+\wt(b)-n-1$.
+For a full field, $\Delta=h+\bar h$ is its scaling dimension and
+$s_{\rm spin}=h-\bar h$ its spin. We reserve $d$ for the noninvertible
+Haagerup quantum dimension and often write $s=1+d^2=2+3d$ in
+categorical formulas. Appendix~\ref{app:notation} records other potentially
+confusing uses, including the difference between a central simple
+object labelled $a$ and the invertible Haagerup object $\alpha$.
+
+References are deliberately selective. The main exposition should be
+readable without opening a paper or a program. A short source guide
+records the principal literature and the repository constructions
+behind the book, while a verification appendix describes the scope
+of exact computations and formal proofs. Its dependency ledger in
+Section~\ref{sec:verification-construction-ledger} collects the
+inputs and conclusions of the central-charge-eight proof.
+The purpose is to make the
+mathematics understandable and its logical dependencies inspectable.

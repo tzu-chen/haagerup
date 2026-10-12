@@ -1,0 +1,160 @@
+{
+  "checked_utc": "2026-10-05T22:32:11.156882+00:00",
+  "scope": "Extracted word boxes within physical page bounds and font embedding. Does not detect every overlap or verify mathematics.",
+  "pdf_sha256": "7335c4ec1250bdaa55203e0711bc4261a80a41083b3780d3daa3652ae2e4fb78",
+  "pages": 337,
+  "extracted_word_boxes": 175073,
+  "off_page_word_boxes": [],
+  "fonts": [
+    {
+      "name": "QEIYKG+LMRoman17-Regular",
+      "embedded": true
+    },
+    {
+      "name": "UAPLPF+LMRoman12-Regular",
+      "embedded": true
+    },
+    {
+      "name": "WNLEZG+LMRoman12-Bold",
+      "embedded": true
+    },
+    {
+      "name": "JRVIRR+LMRoman10-Regular",
+      "embedded": true
+    },
+    {
+      "name": "ITCIPT+LMMathItalic10-Regular",
+      "embedded": true
+    },
+    {
+      "name": "QZXIFZ+LMRoman8-Regular",
+      "embedded": true
+    },
+    {
+      "name": "JRVIRR+LMRoman10-Regular",
+      "embedded": true
+    },
+    {
+      "name": "ROSOAW+LMRoman10-Bold",
+      "embedded": true
+    },
+    {
+      "name": "QHYYFZ+LMMathSymbols10-Regular",
+      "embedded": true
+    },
+    {
+      "name": "HUIBJR+LMMathItalic8-Regular",
+      "embedded": true
+    },
+    {
+      "name": "LZVRFF+LMRoman6-Regular",
+      "embedded": true
+    },
+    {
+      "name": "VJAYYS+LMMathSymbols8-Regular",
+      "embedded": true
+    },
+    {
+      "name": "NVFISC+LMRoman10-Italic",
+      "embedded": true
+    },
+    {
+      "name": "FIWWTS+LMMathExtension10-Regular",
+      "embedded": true
+    },
+    {
+      "name": "DPCUWU+LMMathItalic7-Regular",
+      "embedded": true
+    },
+    {
+      "name": "PZOCWO+LMRoman5-Regular",
+      "embedded": true
+    },
+    {
+      "name": "IUTKVF+LMMathSymbols7-Regular",
+      "embedded": true
+    },
+    {
+      "name": "YKGMYR+LMRoman7-Regular",
+      "embedded": true
+    },
+    {
+      "name": "QZXIFZ+LMRoman8-Regular",
+      "embedded": true
+    },
+    {
+      "name": "NPZWQG+MSBM10",
+      "embedded": true
+    },
+    {
+      "name": "ROSOAW+LMRoman10-Bold",
+      "embedded": true
+    },
+    {
+      "name": "BADSIV+EUFM10",
+      "embedded": true
+    },
+    {
+      "name": "UWUEFC+LMMathSymbols6-Regular",
+      "embedded": true
+    },
+    {
+      "name": "GDHIHA+LMRoman8-Bold",
+      "embedded": true
+    },
+    {
+      "name": "SLFGAG+LMSans8-Regular",
+      "embedded": true
+    },
+    {
+      "name": "HHKIPE+LMMathItalic6-Regular",
+      "embedded": true
+    },
+    {
+      "name": "HYPCVD+LMRoman9-Regular",
+      "embedded": true
+    },
+    {
+      "name": "EEMFTK+LMSans10-Regular",
+      "embedded": true
+    },
+    {
+      "name": "NEQGXK+MSAM10",
+      "embedded": true
+    },
+    {
+      "name": "UAPLPF+LMRoman12-Regular",
+      "embedded": true
+    },
+    {
+      "name": "GDLXJM+LMMathItalic12-Regular",
+      "embedded": true
+    },
+    {
+      "name": "OKVPWT+LMMathItalic10-Bold",
+      "embedded": true
+    },
+    {
+      "name": "GCWXDV+DejaVuSans-Oblique",
+      "embedded": true
+    },
+    {
+      "name": "BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "name": "GYKUUQ+STIXSizeTwoSym-Regular",
+      "embedded": true
+    },
+    {
+      "name": "JRVIRR+LMRoman10-Regular",
+      "embedded": true
+    },
+    {
+      "name": "NGMEYH+LMMono10-Regular",
+      "embedded": true
+    }
+  ],
+  "all_fonts_embedded": true,
+  "extraction_note": "Coordinate attributes parsed directly because some math glyphs produce XML-invalid control codes in Poppler text extraction; not a defect in TeX source bytes."
+}

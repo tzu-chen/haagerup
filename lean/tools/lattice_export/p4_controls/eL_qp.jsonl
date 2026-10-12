@@ -1,0 +1,8 @@
+{"control": "eL_qp", "current": 1, "mode": 0, "input": "P4_plus", "expected": null, "states_per_chunk": 600, "chunks": 6, "p4_sha256": "50360a2f5a1c41719e1f72460f2f561225a4ae920caaed1a5d70d3d396763059"}
+{"index": 0, "data_chunk": 0, "sub": 0, "first": [[-1, -1, -1, 1, 1, 0, 1, 1], []], "last": [[0, 0, 0, 0, 0, 0, 0, 1], [4, 15]], "n_states": 600, "image": []}
+{"index": 1, "data_chunk": 0, "sub": 1, "first": [[0, 0, 0, 0, 0, 0, 0, 1], [6, 6, 6]], "last": [[0, 0, 0, 0, 0, 0, 0, 1], [23]], "n_states": 25, "image": []}
+{"index": 2, "data_chunk": 1, "sub": 0, "first": [[0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 0]], "last": [[0, 0, 1, 0, 0, 0, 0, 0], [2, 14]], "n_states": 600, "image": []}
+{"index": 3, "data_chunk": 1, "sub": 1, "first": [[0, 0, 1, 0, 0, 0, 0, 0], [2, 15]], "last": [[0, 0, 1, 0, 0, 0, 0, 0], [23]], "n_states": 56, "image": []}
+{"index": 4, "data_chunk": 2, "sub": 0, "first": [[0, 0, 1, 0, 0, 0, 1, -1], []], "last": [[1, 0, 0, 0, -1, 0, 1, 0], [7]], "n_states": 580, "image": []}
+{"index": 5, "data_chunk": 3, "sub": 0, "first": [[1, 0, 0, 0, 0, 0, -1, 1], []], "last": [[2, 1, 0, 0, 0, 0, -1, -1], []], "n_states": 452, "image": []}
+{"total_terms": 0, "matches_expected": true, "total": null}

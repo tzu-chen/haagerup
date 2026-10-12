@@ -1,0 +1,185 @@
+Independent review of the exact module-MPS and gapped parent argument
+Reviewer: scope_construction
+Timestamp: 2026-10-05 20:46:21 UTC (clock tool)
+Scope: source reading and hand algebra only. No numerical execution,
+imports, builds, certificate reruns, or live chapter edits.
+
+Conclusion
+----------
+The central argument passes. The exact right-module input yields the
+ordinary-trace physical-rho MPS, the complete four-block tensor is
+eventually block-injective, the actual local range is invariant under
+the categorical lines with arbitrary compatible outside data, and the
+ordinary finite-family parent theorem can be restricted to the reducing
+path subspace. This establishes a sufficiently long-range symmetric
+gapped parent, not a gap or ground-space completeness for the short
+missing-channel Hamiltonian. I found no arithmetic error in the displayed
+dimension counts, specialness checks, or vacuum form factors.
+
+Two concise repairs
+-------------------
+1. chapters/l05_gapped.tex:324--328. B in det W_f is undefined, and W_f
+has not yet been explicitly identified with the fixed-module weight
+matrix. Insert before the determinant:
+  "In the real height gauge of the fixed module, write
+   W_f=B_f[(t_0-1)I+J], where B_f>0 is its common off-diagonal
+   weight."
+Use B_f^3 in the determinant. This is precisely the normalization in
+the symmetric-parent source, not a new assumption. It also makes clear
+why every fixed-module edge used in the next proof is nonzero:
+B_f>0 and t_0^2+t_0=1/d imply t_0 is nonzero.
+
+2. chapters/l05_gapped.tex:476--491. Make the selected finite-volume
+vacuum sector explicit. The source fingerprint note says to CHOOSE the
+unique rho-eigenvalue-d vector. Four ground states of the exact parent
+alone do not select a cat, and alpha invariance alone leaves a neutral
+two-plane. Suggested addition before the Perron vector:
+  "Choose the symmetric vacuum in the trivial categorical sector,
+   Y_alpha=1 and Y_rho=d."
+Then the printed vector and its probabilities follow. The closing
+microscopic-projection condition at lines537--539 is correct and should
+remain. This repair prevents a finite-volume ground-state selection
+assumption from being hidden in the word 'symmetric'.
+
+Optional short clarifications
+-----------------------------
+3. chapters/l05_gapped.tex:399--402. The reducing-range conclusion is
+correct via the GLOBAL range of the interval projector. To avoid making
+it sound as though a closed-line adjoint identity automatically proves
+an adjoint relation for each separately fixed open MPO component, say:
+  "Thus the subspace with this interval in S_ell and arbitrary
+   compatible outside data is invariant under every closed Y_c and
+   under Y_c^dagger=Y_(c dual). It is therefore reducing."
+The preceding endpoint argument is exactly what proves this global
+invariance. No separate componentwise open-adjoint formula is needed.
+
+4. chapters/l05_gapped.tex:404--416. One useful bridge after the ordinary
+parent theorem would be:
+  "All four periodic ground-state MPS lie in the admissible path
+   space. Restricting the positive parent to this reducing subspace
+   keeps those ground states and cannot create eigenvalues below its
+   gap."
+The ingredients are already stated at lines373--385; this just makes
+the spectral implication explicit for a beginner.
+
+5. chapters/l05_gapped.tex:254--261. Write t in R in the one-parameter
+family. The real-gauge context indicates this intention, but it is the
+premise for K_t=(t^2-1)I+J rather than the complex-|t|^2 version.
+
+Detailed checks
+---------------
+MODULE TYPING. mu_M:M tensor Q -> M is a right action. The left
+category action is c tensor M with induced action
+(id_c tensor mu_M) a_(c,M,Q). It does not require a braiding or a
+tensor product of two Q-modules. The module coefficient with input
+simple height a, physical algebra label rho and output height b is
+therefore of the stated type. The support list and free-module
+decomposition rho Q=Q+alpha^2 Q+M_fix give exactly the multiplicities
+(1,0,1,3,2,2) in (1,alpha,alpha^2,rho,alpha rho,alpha^2 rho).
+Frobenius reciprocity gives End_Q(rho Q) dimension3. After two distinct
+simple summands, its nonzero orthogonal complement must be simple.
+The exact module input is substantive: neither object supports nor
+fusion-ring matrices alone would prove these action equations.
+
+SPECIALNESS. The unit-output block is 1+2d. For the rho output,
+2+v^2+2w^2+zeta^2=2+v^2+2(d-1-v^2)+(1+v^2)=1+2d.
+This uses precisely the two identities printed in the example. It
+does not substitute for the imported Frobenius or associativity checks.
+
+ORDINARY TRACE. The local induced-action fiber is
+direct_sum_a Hom(b,c tensor a) tensor M_a. Heightwise module
+isomorphisms cancel between consecutive edges, leaving ordinary
+cyclic traces on finite multiplicity fibers. Hence each copy of a
+simple module contributes one ordinary trace, with no qdim factor.
+All four modules here have one-dimensional supported fibers, so the
+physical amplitudes reduce literally to products of scalar W weights.
+The finite-ring length3/4 checks are normalization controls, while the
+telescoping proof is the all-length argument. The distinction between
+canonical finite-ring tensor normalization and orthonormal limiting
+vacua at lines242--248 is correct and important.
+
+BLOCK INJECTIVITY. For an ordered block the word
+a,R_j,I_j,R_j,b has nonzero amplitude for every supported endpoint
+pair. Its unique invertible height excludes the other modules.
+Invertibility of W_j turns the three endpoint rows into a basis,
+giving nine independent virtual matrices. For the fixed block an
+all-noninvertible five-site word can visit all three colors with any
+prescribed endpoints; this excludes every ordered block. Its nonzero
+edges and invertible W_f give the other nine matrices. Thus the
+direct-sum span is all four Mat_3 blocks, stronger than four separate
+primitive norm graphs. W_Q has determinant -u*zeta. W_f has eigenvalues
+B_f(t_0+2), B_f(t_0-1), B_f(t_0-1), and neither excluded t_0 value solves
+t_0^2+t_0=1/d.
+
+LOCAL RANGE AND CONSTRAINTS. For arbitrary virtual boundary matrix X,
+the endpoint coefficient is sum_c W_M(b,c) X(c,a). Invertibility makes
+these coefficients arbitrary, proving that the printed endpoint-vector
+span is the full ordinary MPS range. Distinct physical endpoint pairs
+are orthogonal. Therefore Pi_ell fixes the endpoints and acts within
+admissible interiors; adjoining the outside path cannot create a bad
+boundary edge. This is a reducing restriction of the full six-state
+operator. The line proof uses the full interval range with boundary
+coefficients, not only four periodic vectors. Closure under all simple
+lines and their duals supplies the reducing global range, as explained
+in clarification3 above.
+
+PARENT-THEOREM SCOPE. The source invokes the finite-family/block-injective
+MPS theorem for sufficiently long fixed interaction range, with the
+actual local range/intersection construction. The finite block span
+separates the states, and their primitive transfers exclude a hidden
+periodic-block obstruction. One-site translation follows by placing
+the same term at every site; the five-site word witness is not a
+physical unit-cell change. No minimal range or gap constant is claimed.
+The four periodic MPS are admissible, so restriction leaves all four
+ground states and inherits the full parent gap. The construction is
+independent of the target negative-rho projector Hamiltonian.
+
+SHORT-ANCHOR COUNTS. At three heights: equal invertible endpoints give
+3 dimensions; invertible/noninvertible and reversed endpoints give6
+each; equal noninvertible endpoints give3*(4-1)=9; unequal ones give
+6*(3-1)=12. Thus dim S3=36. The support argument establishes independence
+in every sector, not only a total-dimension count. The sum over physical
+tensors is the invertible block diagonal W, so a full word span at one
+length remains full at all larger lengths. Thus dim S4=36 as claimed.
+Open admissible-word counts satisfy D1=6,D2=15 and
+D_(ell+2)=3D_(ell+1)+D_ell, giving51 and168. Each missing-channel
+projector at four heights has rank51 after recoupling; the color
+permutation disappears in the all-endpoint sum. Hence the joint kernel
+has dimension at least168-51-51=66>36, without commutativity. This is
+an exact obstruction to identifying the short anchor with this local
+longer parent. It is not a proof that the short anchor is gapless.
+
+VACUUM FORM FACTORS. With b=d-2, b^2+b=3, the neutral rho matrix is
+[[1,sqrt3],[sqrt3,2]]. Its d eigenvector has amplitudes b:1:1:1 in
+the four orthonormal vacua. The idempotent action and self-adjointness
+give theta_f=b^2 theta_o, consistent with that normalization. With
+p=3/(b^2+3), the displayed functions have zero means (where required),
+unit two-point norms and cubics p^(-1/2),b/sqrt3,-1/sqrt3. The radical
+identity p^(-1)=(13-sqrt13)/6 and all pointwise vacuum-algebra closure
+identities pass. Rank-two and rank-six neutral cubics d-d^(-1)=3 also
+pass. The rank-six charged magnitude is expressly conditional on a
+closed charged pair; it is not asserted to be universal. The text
+properly distinguishes these gapped form factors from CFT OPE data.
+
+FILTER. On the alpha-neutral Hilbert space, Y_rho^2=1+3Y_rho gives
+(Y_rho-2)^2=5-Y_rho. Since the two rho eigenvalues are d and -1/d,
+the denominator is at least5-d>0 and the filter is invertible. The
+covariance identity and O(L^(-1/2)) density bound under Var(H_L)=O(L)
+therefore hold. Dividing by sqrt3 is restricted to the exact ordered
+cat, and equal limiting energies alone do not prove a new pure vacuum.
+
+Sources actually read
+---------------------
+chapters/l05_gapped.tex and solutions/l05_gapped.tex;
+chapters/l01_chain.tex, line convention and neutral-sector passage;
+hi_cft_20261001_theory_module_mps_review.md;
+hi_cft_20261001_theory_module_mps.py (source only, relevant action checks);
+hi_cft_20261001_theory_qsystem_review.md;
+hi_cft_20261001_theory_symmetric_parent.md;
+hi_cft_20261001_theory_short_anchor_scope.md;
+hi_cft_20261001_theory_gapped_vacuum_fingerprint.md;
+editorial/review_construction_on_lattice.txt (prior review as comparison).
+
+No exact certificate, numerical spectrum, or external theorem was rerun
+or independently machine-verified in this review. Imported finite module
+identities and the standard parent theorem remain the stated inputs.

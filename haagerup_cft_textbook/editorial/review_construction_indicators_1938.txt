@@ -1,0 +1,117 @@
+Indicator bridge and rank-six twist-moment review
+2026-10-05 19:38:20 UTC
+Read-only review of integrated c05, the draft insertion, primary theorem
+statements, and repository rank-six audit. Hand algebra; no numerical
+jobs, TeX edits, or typesetting.
+
+Conclusion: the integrated bridge and all displayed indicator/arithmetic
+formulas pass. No complete-unitarity assumption enters the argument.
+Two compressed proof handoffs should be made explicit; they are omitted
+explanations of valid deductions, not counterexamples to the conclusion.
+
+1. Main repair: c05:750--774 hides the derivation of the three C_j.
+
+The third indicator alone forces cubic twists; it does not by itself
+force one copy of each cubic root or equal C_j dimensions. The existing
+phrase 'nu3(alpha)=1, which fixes the latter cubic twists' should name
+nu1(alpha)=0 as well. A short self-contained derivation can use:
+
+  R=rho+alpha rho+alpha²rho;
+  FI(alpha)=FI(alpha²)=3alpha+3alpha²+3mR.
+
+Adjunction gives squared norms and mutual inner product3 for I(alpha)
+and I(alpha²). Thus they are the same multiplicity-free sum of three
+simples C_j, disjoint from I(1). Centrality makes the multiplicities
+of the three noninvertibles in each F(C_j) equal, while adjunction
+gives one copy of each alpha and alpha²:
+
+  F(C_j)=alpha+alpha²+b_jR,  sum b_j=3m,
+  dim(C_j)=2+3b_j d_m.
+
+The positive-dimensional nu3 trace is a sum of unit complex numbers
+with positive weights attaining its maximal real value. Therefore
+theta_j³=1 for each j. Now nu1 gives
+sum_j(2+3b_j d_m)theta_j=0. The real quadratic field Q(d_m) and
+Q(zeta3) have intersection Q, so this splits into sum theta_j=0
+and sum b_j theta_j=0. Three cubic roots summing to zero occur once
+each; the second equation then forces all b_j=m. This proves the
+claimed twists AND equal dimensions s_m. It also explains why all
+remaining simples forget to n_j R: all invertible-containing central
+summands have been exhausted by the three induction objects.
+
+The existing I(1)=1+X+2Y branching, Dim(F)=3s_m, and positive spherical
+structure are sufficient here; no prior H3 identification is needed.
+
+2. Useful precision: c05:842--850, the conductor-forty equality lemma.
+
+Its statement correctly includes the crucial hypothesis that the
+squared-root sum lies in Q(sqrt10). Keep it. The present two-sentence
+proof mechanism omits why rational and irrational contributions have
+disjoint costs and why equality determines the ORIGINAL second sum.
+Either label this explicitly as a stated arithmetic lemma, or add:
+
+  Galois-average the entire multiset over a common cyclotomic field
+  fixing Q(sqrt10), taking its union over the group rather than
+  assuming the original multiplicities are orbit-constant. Primitive
+  orders not divisible by40 have rational Ramanujan orbit sums. Orders
+  divisible by40 have zero rational orbit sum and quadratic orbit sums
+  zero or ±sqrt10, each nonzero one costing at least8 roots. Equality
+  therefore permits only {-1} and the negative primitive40 orbit.
+  The latter's squares run once through primitive20 roots, whose sum
+  is mu(20)=0. Averaging multiplies the original squared sum by the
+  group order precisely because it lies in Q(sqrt10).
+
+This is the complete mechanism in the repository source
+hi_cft_20260923_next_structure_rank6_indicators.md, Section5, independently
+recorded in hi_cft_20260923_next_rank6_root_audit.md. Its imprimitive
+Gauss-sum input is stated there explicitly. Nothing is numerically fitted.
+
+3. Bridge conventions and premises, c05:611--743: pass.
+
+The book uses the left center, with half-braiding z tensor x -> x tensor z
+(f03:377); positive theta powers in the formula match that convention.
+The pivotal rotation moves the first strand to the last and uses j^-1.
+Ng--Schauenburg math/0503167, Definition3.1/Lemma3.4 and Theorem5.1,
+confirm the rotation and R^n=id:
+https://arxiv.org/html/math/0503167
+Their math/0601012 Theorem4.1 states the positive-power center trace
+formula for spherical fusion categories, with theta=u^-1 j:
+https://arxiv.org/html/math/0601012
+No C*-structure is a premise. For the later triangle inequalities the
+positive spherical dimensions come from the chapter's earlier
+pseudo-unitarity argument (c05:289--293), not complete unitarity.
+A sentence recalling that application-specific positive structure would
+help connect the general theorem to the subsequent estimates.
+
+The invariant-projector trace proof, Z3 character example, untwisted
+Vec(Z3) center check, and Q8 example all pass. In Q8 the two central
+elements square to1 and contribute4; the six other squares contribute
+-12, giving nu2=-1. A positive Hermitian form does not turn its
+alternating invariant bilinear form into a symmetric one.
+
+4. Remaining twist deduction, checked line by line: pass.
+
+c05:777--802: global dimension, I(rho) multiplicities, and both moments
+are correct. Each residual summand contributes n_j times its dimension
+3d_m n_j, explaining n_j²; no extra d_m belongs on the right side.
+
+c05:804--840: nonsquareness, D=1 mod3, exclusion of7, doubling of the
+root multiset, all prime-factor minima, and the cleared squared
+difference are correct. Larson Theorem1.3 applies after doubling the
+half-integral coefficients; the theorem was checked directly at
+https://arxiv.org/html/1401.1879
+
+c05:852--865: parity forces m,t even in D=10; the m>=4 bound is strict;
+m=t=2 requires squared sum+2 but permits only -2 or -2-4sqrt10.
+
+c05:891--936: the primitive-order Gauss/Ramanujan estimate allows
+fractional averaged multiplicities and correctly forces all six roots
+to negative-extremum orders13 or26. Their rational coefficients then
+force order13 alone. The cyclotomic-polynomial independence argument
+gives each nonresidue once, n_j=1, and the second moment forces nu2=+1.
+This last sign is derived, not assumed from unitarity.
+
+No unresolved mathematical gap was found once the stated structural
+induction/indicator and cyclotomic estimates are admitted. The two
+recommended expansions above expose the actual steps that a beginning
+reader cannot infer from the current compressed wording.

@@ -1,0 +1,474 @@
+\section{Finite closure: identities that a reader can inspect}
+\label{sec:reader-finite}
+
+The finite closure argument in Sections 2--6 of the
+\href{hi_cft_c8_proof.pdf}{manuscript} has three different kinds of
+evidence.  A sparse identity gives an equality of actual vectors.  A
+nonzero minor proves a positive rank assertion.  A file hash identifies
+the source of either witness.  Only the first two supply mathematical
+information; the third prevents a change of input from going unnoticed.
+This section makes the distinction concrete and prints the small
+identities responsible for the final Jacobi step.
+
+\subsection{How to read a coefficient and a row}
+
+Put $F=\QQ(s,t)$, where $s^2=13$ and $t^2=-3$.  The four rational
+strings $[a,b,c,d]$ in a record mean
+\[
+                  a+bs+ct+dst.
+\]
+The order is significant.  For example, the coefficient
+$[0,-54087/138650,20899/138650,0]$ is
+$(-54087s+20899t)/138650$.  Multiplication can be checked using
+only rational arithmetic: if $x=(x_0,x_1,x_2,x_3)$ and
+$y=(y_0,y_1,y_2,y_3)$, the product has coordinates
+\begin{align*}
+z_0&=x_0y_0+13x_1y_1-3x_2y_2-39x_3y_3,\\
+z_1&=x_0y_1+x_1y_0-3(x_2y_3+x_3y_2),\\
+z_2&=x_0y_2+x_2y_0+13(x_1y_3+x_3y_1),\\
+z_3&=x_0y_3+x_3y_0+x_1y_2+x_2y_1.
+\end{align*}
+In particular, zero testing requires four rational zero tests; it
+does not involve a numerical tolerance or a choice of decimal roots.
+
+A vector is a finite list of triples
+\[
+       [\,\lambda,\ \mathcal O,\ [a,b,c,d]\,].
+\]
+Here $\lambda\in\ZZ^8$ gives the momentum in the ordered simple-root
+basis, and a nonnegative integer $8(n-1)+i$ in the oscillator list
+$\mathcal O$ means $\alpha_i(-n)$, with $0\leq i<8$.
+The triple denotes the corresponding oscillator monomial applied to
+$e^\lambda$, with coefficient $a+bs+ct+dst$.
+Thus the assertion $v=\sum_jc_jw_j$ means that, for every momentum
+and oscillator monomial, all four coordinates of
+$v-\sum_jc_jw_j$ vanish.  Checking a pivot coordinate alone is
+insufficient.
+
+The grade-three checkpoint also records how its normalized vectors
+were made.  If a row has recipe $v$, elimination list
+$[(d_1,r_1),\ldots,(d_m,r_m)]$, and scale $\gamma$, its meaning is
+\begin{equation}\label{eq:reader-row-recipe}
+       r=\gamma\left(v-\sum_{j=1}^m d_jr_j\right).
+\end{equation}
+The subtraction precedes the scaling.  All referenced rows are earlier
+rows.  The leading coefficient of $r$ is one, and its leading state
+is different from those already inserted in the same Cartan block.
+These data give both a construction by actual modes and an exact
+linear-independence witness.  The recipes are not merely names for
+vectors obtained by approximate diagonalization.
+
+\subsection{The short generators really produce the saved fields}
+
+Let $K_{\rm cur}$ denote the six-dimensional current space, and let
+$u$ be the displayed three-vertex field in the preceding section.
+There is a small, deterministic calculation connecting the definition
+$U=\langle K_{\rm cur},\omega_B,u\rangle$ to the much larger saved
+presentation.  Start with the span of
+\[
+ \{x_{-2}\one,\ x_{-1}y:x,y\in K_{\rm cur}\}
+                   \cup\{\omega_B,u\}.
+\]
+Its exact dimension is $24$.  Keep a queue of newly accepted independent
+vectors.  For each vector $v$ removed from the queue, insert the five
+vectors
+\[
+       (E_L)_0v,\quad(F_L)_0v,\quad(E_R)_0v,\quad(F_R)_0v,
+                          \quad u_1v
+\]
+by exact sparse elimination, adding a new queue entry only when the
+remainder is nonzero.  The queue empties after $120$ accepted vectors
+have been processed.  Every operation preserves membership in the
+already defined VOA $U$, so the resulting space lies in $U_2$.
+Its dimension is $120$, and direct exact reduction puts every saved
+highest vector and the retained neutral stress in this span.
+
+Independently, the saved $S_2$ has the decomposition by current types
+\[
+ \dim S_2=22+2+(5+9+9+13+4+12+16+28)=120.
+\]
+The $22$ affine vacuum descendants, the two neutral fields, and the
+eight indicated multiplets are all in the queue-generated space;
+dimension comparison identifies that space with $S_2$.
+This establishes $S_2\subset U_2$ before finite closure is used.
+It does not yet assert $S_2=U_2$; that conclusion uses the later
+strong-generation argument.
+
+The complete short algorithm is
+\artifact{hi_cft_20260923_c8_minimal_generators.py}, and its fresh
+exact replay is
+\artifact{c8_revision_20260927/minimal_generators_replay.json}.
+The new witness
+\artifact{c8_reviewability_20260927/minimal_generation_witness.json}
+records all $120$ accepted raw vectors, their $120$ normalized
+remainders, every elimination and scale, and the expansions of
+the normalized vectors in the raw vectors.  It also records the
+eight highest fields, the retained neutral stress, and $\omega_B$
+in both bases.  The adjacent
+\artifact{minimal_generation_witness.recipes.tsv} and
+\artifact{minimal_generation_witness.target_coefficients.tsv}
+give readable recipe and coordinate tables.  There were $644$
+candidate insertions and $8386$ retained sparse entries in the
+generation rows; the verifier counts $8442$ after including the
+input-field coordinates.
+
+The independent verification record
+\artifact{c8_reviewability_20260927/minimal_generation_checked.json}
+checks $120$ unit-triangular normalization identities, $120$
+expansions in the raw vectors, and all $20$ target-coordinate
+identities.  It also checks the six current formulas, the ambient
+stress and $u$, the earlier-parent condition in the recipe graph,
+and the source bindings.  Thus the coefficient identities and
+the rank-$120$ witness are available explicitly.  The exporter
+recomputed the mode products in $1.81$ seconds; the independent
+coordinate verifier took $1.02$ seconds, with peak RSS $35900$ KiB.
+The latter does not recompute a raw vector from its named mode
+recipe.  That remaining interpretation is supplied by the
+exporter's actual mode calculation and the lattice-mode engine.
+
+\subsection{Gate 4: twelve projected residuals and a finite rank argument}
+
+Write $P=S_3/N_3$.  The constructed spaces have exact dimensions
+\[
+           \dim S_3=956,\qquad \dim N_3=634,
+                   \qquad \dim P=322.
+\]
+The Gate 4 conclusion is $(S_2)_0S_3\subset W_4=N_4+P_4$.
+It is reduced to nine highest left inputs, each with $322$ right
+inputs.  There are $2145$ original exact seed relations and $118$
+additional direct relations.  The last twelve targets have weight
+$(0,0)$ and are the following.  The integer in the first column is
+the primary key in the projected exact database.
+\begin{center}
+\begin{tabular}{rcl@{\qquad}rcl}
+\toprule
+ID&Left&Right&ID&Left&Right\\
+\midrule
+0&$a_0$&\texttt{r3\_000950}&6&$a_4$&\texttt{r3\_000873}\\
+1&$a_1$&\texttt{r3\_000916}&7&$a_5$&\texttt{r3\_000879}\\
+2&$a_1$&\texttt{r3\_000920}&8&$a_5$&\texttt{r3\_000897}\\
+3&$a_2$&\texttt{r3\_000916}&9&$a_6$&\texttt{r3\_000882}\\
+4&$a_2$&\texttt{r3\_000920}&10&$a_6$&\texttt{r3\_000898}\\
+5&$a_3$&\texttt{r3\_000922}&11&$a_7$&\texttt{r3\_000902}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The fields $a_0,\ldots,a_7$ are the eight charged highest vectors in
+their saved order.  In $(a_i)_0p$, the first subscript labels a field
+and the second denotes its mode.
+
+Here is the projector used in all twelve records, with every
+denominator exposed:
+\begin{align*}
+ \Pi={}&\left(1-\frac{F_LE_L}{2}\right)
+         \left(1-\frac{F_LE_L}{6}\right)
+         \prod_{d\in D}\left(1-\frac{F_RE_R}{d}\right),\\
+ D={}&\{2,6,12,20,30,42,56,72,90,110,132,156\}.
+\end{align*}
+The symbols in this formula are current zero modes.  On the
+weight-zero line of a highest-weight-$j$ $\mathfrak{sl}_2$ module,
+$FE$ acts by $j(j+2)/4$.  The current bounds at grade four are
+$j_L\leq4$, $j_R\leq24$, so this polynomial kills every nontrivial
+joint type in the weight-$(0,0)$ subspace and is one on the joint
+singlets.
+
+For each target $t$, a record supplies rational quadruples
+$c_0,\ldots,c_{20}$, with unused coefficients omitted, and asserts
+\begin{equation}\label{eq:reader-projected-residual}
+           \Pi t-\sum_{j=0}^{20}c_j\Pi n_j=0,
+                         \qquad n_j\in N_4.
+\end{equation}
+The $n_j$ are actual normal words.  Their allowed recipes are
+$x_{-1}p$, $Tp$, or $a_{-1}b$, followed if necessary by current
+lowering.  For example, the database recipe
+\texttt{normal\_descendant}, with current index $i<6$ and input $p$,
+means $(x_i)_{-1}p$; current index $6$ means $(\omega_B)_0p=Tp$.
+A \texttt{current\_lowering} recipe points to an earlier normal
+column and applies $(F_L)_0$ or $(F_R)_0$.
+
+The new packet
+\artifact{c8_reviewability_20260927/finite_witnesses.json}
+prints the coefficient list of each of the twelve equations, the
+correspondence from projected columns to original normal columns,
+and the recursive normal-word recipes.  In the original exact
+database, projected target $i$ is stored as \texttt{target:$i$};
+projected normal column $j$ is stored as \texttt{grade5:$j$}.
+The latter is a historical storage prefix: these vectors have
+conformal weight \emph{four}.
+
+Four small entries of target $11$ illustrate the complete convention.
+The target is $t=(a_7)_0\texttt{r3\_000902}$, and its recorded
+coefficient $c_j$ multiplies $\Pi n_j$ as follows:
+\begin{center}
+\begin{tabular}{rll}
+\toprule
+$j$&Actual normal word $n_j$&Coefficient $c_j$\\
+\midrule
+2&$(H_L)_{-1}\texttt{r3\_000022}$&$(169-3st)/2240$\\
+3&$(H_L)_{-1}\texttt{r3\_000023}$&$(-129s+117t)/5600$\\
+14&$T\texttt{r3\_000536}$&$197/6720+st/560$\\
+15&$T\texttt{r3\_000537}$&$-s/1400-39t/2800$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are four entries of the $21$-term relation, not a replacement
+for its other terms.  The packet retains all coefficients, including
+the longer fractions; the checker uses the entire relation.
+
+The independent reader
+\artifact{c8_reviewability_20260927/finite_witnesses.py}
+uses Python's standard-library rational arithmetic to recalculate
+all four coordinates of every residual in
+\eqref{eq:reader-projected-residual}.  It imports neither the field
+engine nor a vertex-mode routine from the research scripts.  This
+is a full replay of these twelve \emph{saved-vector equalities}.
+The recorded run passed in $21.15$ seconds with peak process RSS
+$39512$ KiB.
+The construction of the saved vectors by applying $\Pi$, their
+normal-word membership, and the separate raising premises remain
+inputs from the authenticated producer records.  In particular,
+this reader does not turn a stored projected vector into a fresh
+calculation of its ambient vertex modes.
+
+The $33$ projected vectors are also exported as a portable text
+packet, \artifact{c8_reviewability_20260927/gate4_vectors.jsonl.gz}:
+twelve targets followed by the $21$ normal columns.  Every line
+contains its name, exact rational coefficients, and the digest
+of its original vector record.  A header binds the separate
+relation packet and records the original source hashes.
+The packet contains $66610$ sparse state terms and is approximately
+$2.45$ MB compressed.
+The standalone verifier
+\artifact{c8_reviewability_20260927/check_gate4_packet.py}
+reads only this compressed text packet and
+\artifact{c8_reviewability_20260927/finite_witnesses.json}.
+It repeats all twelve full residual checks without opening an
+original SQLite database.  Its output is
+\artifact{c8_reviewability_20260927/gate4_packet_checked.json}.
+All twelve residuals passed in $20.28$ seconds with peak RSS
+$35380$ KiB.
+This makes the residual arithmetic independently reproducible
+from the companion bundle while preserving the preceding
+boundary concerning the interpretation of the projected vectors.
+
+The mathematical recovery step is short enough to verify directly.
+The earlier exact raising controls give $E_Lt,E_Rt\in W_4$.
+Since $W_4$ is stable under all current zero modes,
+$[\Pi t]=[t]$ in $B_4/W_4$.  Since $N_4$ is current-stable,
+the right side of \eqref{eq:reader-projected-residual} lies in
+$N_4\subset W_4$.  Thus $t\in W_4$.  Neither this inference nor
+the residual equality requires the $21$ chosen columns to span
+the entire normal space.
+
+To finish Gate 4, the saved matrices of $E_L,E_R$ on $P$ provide
+$644$ columns, of rank $294$.  For each of the nine highest left
+fields, append its certified seed columns; the augmented rank is
+$322$.  The prime used to exhibit this full rank is
+\[
+ p=1000003,\qquad s\longmapsto231543,\qquad
+                         t\longmapsto1000.
+\]
+Both defining quadratic equations hold modulo $p$, and all
+denominators in a specialized column must be invertible.  A reader
+can make the witness completely explicit by retaining the accepted
+column indices and nonzero pivot factors during elimination: their
+product, with the row-swap sign, is the determinant of the selected
+minor.  The existing verifier recomputes the elimination; the new
+packet does not claim to export or recheck these $322\times322$
+minors.
+
+The direction of the rank argument matters.  A nonzero minor after
+specialization proves that its characteristic-zero determinant is
+nonzero.  More precisely, the reduction is a ring homomorphism on
+$\ZZ[D^{-1},s,t]\subset F$, where $D$ contains the finitely many
+denominators used and $p\nmid D$; it is not a homomorphism from the
+whole characteristic-zero field to $\mathbb F_p$.  Because $P$
+already has exact dimension $322$, the nonzero minor proves
+spanning of $P$.  It supplies no characteristic-zero upper bound
+for an otherwise unknown space.  If $C_a$ is the kernel of
+$[p]\mapsto[(a)_0p]$, the resulting equality is
+$P=E_LP+E_RP+C_a$.  The kernel is raising-stable.  Cartan weights
+on $P$ satisfy $|m_L|\leq3$, $|m_R|\leq21$; every raising step
+increases $m_L+m_R$ by two.  Thus every raising word of length
+$25$ vanishes.  Iterating the spanning equality in $P/C_a$ gives
+$P/C_a=0$.  This is the finite step that recovers all $2898$
+highest-left identities from the smaller collection of witnesses.
+
+\subsection{Gate 5: the entire small scalar calculation}
+
+Assume the already proved normal controls
+$(S_2)_0N_4\subset N_5$ and $(N_3)_0S_3\subset N_5$.
+If $P_4\subset N_4$, Gate 5 follows immediately.  Otherwise
+$Q=W_4/N_4$ is the triplet with weights $(0,-2),(0,0),(0,2)$.
+For its lowest vector $q_-$, define
+\[
+ \beta(a,p)=[a_0p]\in Q,\qquad
+ F(a,q)=[a_0\widetilde q]\in B_5/N_5.
+\]
+The normal controls make $F$ well defined.  The two saved bottom
+relations are
+\begin{align*}
+ \beta(a_3,p_3)&=c_3q_-,& p_3&=\texttt{r3\_000910},\\
+ \beta(a_6,p_6)&=c_6q_-,& p_6&=\texttt{r3\_000899},\\
+ c_3&=\frac{-593619+1349829s+1399567t-1072149st}{9831968},\\
+ c_6&=-\frac{57967}{42018}+\frac{22295}{798342}st.
+\end{align*}
+Their input weights are $(0,-14)$ and $(-1,-9)$, respectively.
+The vector $q_-$ is the image of the actual stored field
+\texttt{P4\_minus}; this specifies its normalization.  Both
+$c_3$ and $c_6$ are visibly nonzero, since $1,s,t,st$ are a
+$\QQ$-basis and their rational coordinates are nonzero.
+The equations are quotient identities: the full records also
+give the normal-space terms that were suppressed here.
+
+The lower-closure database reduces eight brackets.  Seven are
+exactly zero as vectors in $S_3$:
+\begin{equation}\label{eq:reader-seven-zeros}
+ (a_0)_0a_3=(a_1)_0a_3=(a_2)_0a_3=(a_3)_0a_6
+          =(a_5)_0a_3=(a_6)_0a_3=(a_7)_0a_3=0.
+\end{equation}
+There is one nonzero normal-product identity.  Define
+\begin{align*}
+ R_1&=\frac{1+4st}{25}(E_L)_{-1}a_1,\\
+ R_2&=\frac{81-15st}{71}
+           \left((E_L)_{-1}a_2-\frac{-7+3st}{20}R_1\right).
+\end{align*}
+Then the identity, with its denominators cleared, is
+\begin{equation}\label{eq:reader-small-bracket}
+ 554600(a_4)_0a_6
+       =(-216348s+83596t)R_1+(34265s+103895t)R_2.
+\end{equation}
+Both $R_1,R_2$ belong to $N_3=K_{{\rm cur},-1}S_2+TS_2$.
+Their saved row names are \texttt{r3\_000141} and
+\texttt{r3\_000150}.  Their definitions follow directly from
+the two checkpoint recipes and the normalization rule
+\eqref{eq:reader-row-recipe}; thus the displayed normal terms can
+be understood without treating a row identifier as an unexplained
+new field.
+
+The precise lower records and weight exclusions are:
+\begin{center}
+\begin{tabular}{ccrcl}
+\toprule
+$i$&$j$&Lower record&$\operatorname{wt}((a_i)_0p_j)$&Bracket\\
+\midrule
+0&3&537&$(0,-10)$&zero\\
+1&3&777&$(0,-6)$&zero\\
+2&3&1017&$(0,-6)$&zero\\
+3&6&1286&$(-1,3)$&zero\\
+4&6&1526&$(0,-8)$&equation \eqref{eq:reader-small-bracket}\\
+5&3&1737&$(1,-9)$&zero\\
+6&3&1977&$(1,-7)$&zero\\
+7&3&2217&$(1,-1)$&zero\\
+\bottomrule
+\end{tabular}
+\end{center}
+For direct comparison with those database rows, the primitive
+right inputs have the one-term expansions
+\[
+ a_3=\frac{6+2s-4t+st}{14}\,\texttt{r2\_000047},
+ \qquad
+ a_6=\frac{307+297st}{1880}\,\texttt{r2\_000076}.
+\]
+For example, row $1526$ records the mode
+$(a_4)_0\texttt{r2\_000076}$.  Multiplying its coordinates by
+$(307+297st)/1880$ gives exactly
+\eqref{eq:reader-small-bracket}.  The reader script independently
+performs this rational recombination for all eight rows.  It
+also checks their stored residuals and the two bottom records,
+but does not recalculate these eight ambient mode products.
+
+Every weight in the table is outside $Q$, so
+$\beta(a_i,p_j)=0$.  The zero-mode Jacobi identity and the normal
+controls give
+\[
+ F(a_i,\beta(a_j,p_j))=F(a_j,\beta(a_i,p_j))=0.
+\]
+The displayed nonzero scalars imply $F(a_i,q_-)=0$ for all eight
+charged highest fields.  Raise this \emph{proved zero identity},
+holding the left highest vector fixed, to obtain the remaining
+right triplet inputs; then use current covariance for the left
+descendants.  No assertion is made that the weight exclusion
+continues to hold after raising $p_j$.
+
+The retained neutral field requires one additional input: actual
+charged brackets span $P$ as a current module.  Its certificate
+uses $28$ charged seeds and $644$ lowering columns of rank $294$;
+the augmented rank is $322$.  The same finite nilpotent argument
+therefore gives the full current span.  Writing $e_0a_3$, modulo
+$N_3$, as a sum of those charged brackets and applying Jacobi
+twice proves the neutral bottom identity.  The other neutral
+field follows by subtracting the affine stresses and $e$ from
+$\omega_B$.  This completes the $24$ independent highest channels
+as consequences of lower identities; it does not require $24$
+separate new grade-five mode calculations.
+
+\subsection{Exact location and scope of the witnesses}
+
+The compact packet retains every coefficient in the twelve
+projected identities and in the eight small lower combinations.
+For comparison with the frozen sources, the following names are
+unambiguous:
+\begin{itemize}
+\item The twelve full projected vectors and relation records are in
+\artifact{hi_cft_20260923_c8two_h4_singlet_exact.sqlite}.
+Their selected-column recipes are in
+\artifact{hi_cft_20260923_c8two_h4_singlet_prime.sqlite}; the
+underlying normal-word recipes are in
+\artifact{hi_cft_20260923_next_n4_strong_skip_v2.sqlite}.
+\item The separate raising premise is
+\artifact{hi_cft_20260923_c8two_h4_singlet_premise_verified.json}.
+All seed references, quotient coordinates and saturation inputs
+are in
+\artifact{hi_cft_20260923_c8two_structure_saturation.json}.
+The completed mathematical reduction is recorded by
+\artifact{hi_cft_20260923_c8two_gate4_verified.json}.
+\item The eight rows in the table are primary keys of
+\texttt{identities} in
+\artifact{hi_cft_20260923_next_structure_lower_closure.sqlite}.
+The two bottom relations are named
+\texttt{A3\_zero\_r3\_000910} and
+\texttt{A6\_zero\_r3\_000899} in
+\artifact{hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_m2.sqlite}.
+\item The charged-span verifier output is
+\artifact{hi_cft_20260923_c8two_charged_span_verified.json}.
+The Gate 5 coefficient summary is
+\artifact{hi_cft_20260923_c8two_gate5_verified.json}.
+When replaying its original checker, the \texttt{--charged-span}
+argument takes the producer
+\artifact{hi_cft_20260923_c8two_structure_charged_span.json},
+whose schema contains the actual matrices and seeds.
+\end{itemize}
+
+The independent reader's complete invocation is
+\begin{verbatim}
+python hi_cft_safe_run.py --limit-mib 1024 -- \
+  python c8_reviewability_20260927/finite_witnesses.py \
+  --output c8_reviewability_20260927/finite_witnesses_review.json
+\end{verbatim}
+For a bundle-only Gate 4 replay, the invocation is
+\begin{verbatim}
+python hi_cft_safe_run.py --limit-mib 1024 -- \
+  python c8_reviewability_20260927/check_gate4_packet.py \
+  --packet c8_reviewability_20260927/gate4_vectors.jsonl.gz \
+  --relations c8_reviewability_20260927/finite_witnesses.json \
+  --output /tmp/c8-gate4-packet-review.json
+\end{verbatim}
+Both checkers refuse to overwrite an output; choose another fresh name
+if a review output already exists.  The SQLite reader requires its
+output to remain inside the repository, whereas the portable checker
+accepts the displayed temporary path.  They must be run by the coordinating
+agent when the numerical slot is free.  Their allocation reviews bound
+individual decoded records and retain only one target residual and
+one source vector at a time.  The permanent launcher supplies the
+desktop memory reserve, process-group watchdog, and two-CPU limit.
+
+The source ledger and the small reader have complementary scopes.
+The ledger authenticates the unchanged construction files and
+fresh replay outputs.  The reader exposes selected mathematical
+content and repeats a specified set of exact equalities.  The
+finite-to-all-weights theorem still uses the proved filtered Wick
+and recursive zero-product argument, together with the full lower
+controls and Gates 4--5.  Printing a sample scalar relation would
+not replace that theorem, just as hashing all its inputs would
+not prove a residual identity.

@@ -1,0 +1,1123 @@
+\chapter{From finite tops to the Haagerup boundary ring}
+\label{ch:branching}
+
+We now know that $U$ is proper and strongly rational. These two facts
+still leave many possible representation categories. The next step
+uses information already visible near the bottom of the lattice
+theory: six retained currents, eighty complementary currents, and
+the two eighty-one-dimensional glue spaces. A universal bound on
+lowest module weights makes that small information exhaustive.
+
+The chapter follows a chain of implications. Fourteen modules of a
+known core bound all $U$-module tops. That bound fixes the branching
+of $B$ and $H$. The extension algebra then limits the boundary category
+to rank four or rank six. Character and indicator arguments select the
+Haagerup fusion ring. The final tensor-category identification still
+needs unitarity and classification, so we keep it separate from the
+ring calculation.
+
+\section{Lowest weights of the fourteen core modules}
+
+The regular subalgebra $A_L\subset U$ has category
+$\mathrm{Fib}\boxtimes SO(3)_{13}$. Label its fourteen simple modules
+by $x_a=(1,a)$ and $y_a=(\tau,a)$ for $0\leq a\leq6$; the actual
+even affine label is $2a$.
+
+Their top spaces can be calculated from a small lattice minimization.
+The six Potts modules in Example~\ref{ex:c-potts-six-modules} give,
+for an integer charge $m$,
+\[
+ p_1(m)=\begin{cases}0&3\mid m,\\2/3&3\nmid m,\end{cases}
+ \qquad
+ p_\tau(m)=\begin{cases}2/5&3\mid m,\\1/15&3\nmid m.\end{cases}
+\]
+The actual lowest lattice--Potts weight in charge $j$ is
+\begin{equation}\label{eq:c-T-top}
+ h_{\mathcal T}(\epsilon,j)=
+ \min_{m\equiv j\ (13)}
+ \left(\frac{m^2}{156}+\frac{\mathbf1_{m\text{ odd}}}{4}
+                                      +p_\epsilon(m)\right).
+\end{equation}
+The parity term is the left level-one affine contribution. Even $m$
+gives a left singlet and odd $m$ a doublet. The right Cartan charge
+is $m$.
+
+For $-6\leq k\leq6$, the grade calculation of
+Section~\ref{sec:c-pf-grade} gives the parafermion lowest weight
+\begin{equation}\label{eq:c-PF-top}
+ h_{\mathrm{PF}}(a,k)=\frac{a(a+1)}{15}-\frac{k^2}{13}
+                                      +\max(0,|k|-a).
+\end{equation}
+The last term is important. When the required Cartan charge lies
+outside the finite affine highest-weight representation, it first
+appears at a positive affine grade. A twist calculation modulo one
+would lose precisely this integer correction.
+
+To find an $A_L$ top, minimize the sum of
+\eqref{eq:c-T-top} and \eqref{eq:c-PF-top} over the extension
+charges, with $k=-5j$ modulo thirteen. This is genuinely finite.
+For $h_{\mathcal T}$ in each charge class, taking $|m|\leq6$
+supplies a candidate at energy at most $14/13$, whereas
+$|m|\geq13$ already exceeds that bound from its quadratic term
+alone. The parafermion contribution is fixed within the charge
+class. Hence $-12\leq m\leq12$ contains every minimizer.
+
+\begin{example}[Two top weights]
+For $x_1$, the neutral charge gives zero lattice--Potts energy and
+parafermion energy $1\cdot2/15=2/15$. To prove that it is the
+minimum, first consider $|k|\geq2$. The parafermion contribution is
+\[
+ \frac2{15}-\frac{k^2}{13}+|k|-1>\frac2{15}
+ \qquad(2\leq |k|\leq6),
+\]
+as follows by checking the minimum of the concave quadratic on this
+integer interval at its endpoints. The remaining $k=\pm1$ require
+$j=\pm5$. Their lattice--Potts minimum is $14/13$, already larger
+than $2/15$. The neutral candidate therefore wins, and its top is
+one dimensional.
+
+For $y_3$, choose $m=2$, hence $j=2$ and $k=3$. The two parts are
+\[
+ \frac4{156}+\frac1{15}=\frac6{65},\qquad
+ \frac{12}{15}-\frac9{13}=\frac7{65}.
+\]
+Their sum is $1/5$. The conjugate charge $m=-2$ is also a minimizer,
+giving a two-dimensional top. This multiplicity has a concrete charge
+origin; it is not its quantum dimension.
+\end{example}
+
+\section{\texorpdfstring{Energy traces and the universal $17/10$ bound}{Energy traces and the universal 17/10 bound}}
+\index{lowest-weight bound!seventeen tenths}
+
+Let $E$ be the lowest space of any simple ordinary $U$-module, of
+weight $h$ and dimension $D$. The compatible-top lemma says that
+$E$ is a direct sum of complete $A_L$ top representations. Let $x_a$
+and $y_a$ now also denote their nonnegative integer multiplicities.
+The meaning is unambiguous when they occur in sums of dimensions.
+
+On a core top let $L,P,Z$ be the traces of the left affine, Potts,
+and PF$_{13}$ energy operators, and let $Q=\Tr H_R(0)^2$.
+Define the additive bookkeeping quantity
+\begin{equation}\label{eq:c-top-W}
+ W=L+\frac{83}{6084}Q+\frac{25}{6}P+\frac{25}{26}Z.
+\end{equation}
+Why is the coefficient of $Q$ correct? In a complete right
+$\mathfrak{sl}_2$ representation of highest weight $r$,
+\[
+ \frac{\Tr H_R(0)^2}{\dim}=\frac{r(r+2)}3,
+ \qquad L^{A_{1,39}}_0=\frac{r(r+2)}{164}.
+\]
+Thus the Sugawara trace on the complete space $E$ equals $3Q/164$.
+Multiplying by the
+positive-stress coefficient $3403/4563$ gives $83Q/6084$.
+An individual core top need not be a complete right
+$\mathfrak{sl}_2$ representation. Its table entry $W$ is therefore
+not asserted to be an ambient-energy trace on that core top, or an
+energy eigenvalue times its dimension. Only after all core tops are
+assembled into the actual $E$ does their sum satisfy
+$W_{\rm total}=\Tr_E L_0=hD$. This distinction is why an isolated
+row can have $W/\dim$ greater than the final universal bound.
+
+The finite minimization gives the following complete table:
+\[
+\begin{array}{c|r|c|r@{\qquad}c|r|c|r}
+ &\dim&h_{A_L}&4680W&&\dim&h_{A_L}&4680W\\\hline
+ x_0&1&0&0&y_0&1&2/5&7800\\
+ x_1&1&2/15&600&y_1&7&8/15&36960\\
+ x_2&5&2/5&10440&y_2&15&4/5&110880\\
+ x_3&9&4/5&56640&y_3&2&1/5&4080\\
+ x_4&2&1/3&5520&y_4&14&11/15&81480\\
+ x_5&14&1&148560&y_5&6&2/5&18240\\
+ x_6&6&4/5&54240&y_6&2&1/5&4920
+\end{array}
+\]
+This table is a finite arithmetic input obtained from the actual
+core realization. It can be reconstructed from the two minimization
+formulas and charge multiplicities; it does not assert any list of
+$U$-modules in advance.
+
+It is instructive to recover the charges that are hidden by the
+three numerical columns. In the following table, an entry lists all
+minimizing absolute charge classes $|j|$; both signs are included
+when $j\ne0$:
+\[
+\begin{array}{c|l@{\qquad}c|l}
+x_0&0&y_0&0\\
+x_1&0&y_1&0,5\\
+x_2&0,3&y_2&0,2,3,5\\
+x_3&0,2,3,6&y_3&2\\
+x_4&6&y_4&1,2,4,6\\
+x_5&1,4,6&y_5&1,4\\
+x_6&4&y_6&4
+\end{array}
+\]
+One must keep tied representatives of a charge class. For
+$\epsilon=1$ the ties at $j=1,4,5$ are respectively
+$m=1,-12$, $m=4,-9$, and $m=5,-8$. For $\epsilon=\tau$,
+the ties at $j=3,5,6$ are $m=3,-10$, $m=5,-8$, and $m=6,-7$.
+Negative $j$ gives the opposite charges. An odd $m$ contributes
+a left doublet, so it contributes two states at that right charge.
+
+For example, the $j=\pm1$ ties of $x_5$ supply charges
+$\pm1$ with multiplicity two and $\pm12$ with multiplicity one.
+Its $j=\pm4$ ties supply charges $\pm4$ with multiplicity one
+and $\pm9$ with multiplicity two. The $j=\pm6$ contribution
+supplies one state at each of $\pm6$. The total is
+$2(2+1+1+2+1)=14$, reproducing the dimension column.
+
+Completeness of the right current representations imposes two further
+inequalities,
+\begin{equation}\label{eq:c-top-inequalities}
+ y_2\geq x_5,\qquad y_4\geq x_5+x_6.
+\end{equation}
+The minimizers just listed give, for the whole space $E$,
+\[
+ \operatorname{mult}(12)=x_5,\quad
+ \operatorname{mult}(10)=y_2,\quad
+ \operatorname{mult}(9)=2(x_5+x_6),\quad
+ \operatorname{mult}(7)=2y_4.
+\]
+In a finite $\mathfrak{sl}_2$ representation the multiplicity of
+a nonnegative weight cannot increase as the weight increases by
+two. Comparing $10$ with $12$ and $7$ with $9$ gives exactly
+\eqref{eq:c-top-inequalities}. The factors of two in the odd
+charges are the left doublets. A right-current representation cannot
+be assembled from isolated Cartan eigenlines while omitting its
+required lower-weight companions.
+
+The following nonnegative certificate packages the entire bound:
+\begin{align}\label{eq:c-top-certificate}
+4680\left(\frac{17}{10}D-W_{\rm total}\right)
+={}&8460(y_2-x_5)+28716(y_4-x_5-x_6)\notag\\
+ &+7956x_0+7356x_1+29340x_2+14964x_3+10392x_4\notag\\
+ &+22212x_6+156y_0+18732y_1+11832y_3\notag\\
+ &+1188y_4+29496y_5+10992y_6\geq0.
+\end{align}
+Each coefficient can be checked directly from the table. For example,
+the $y_0$ coefficient is $4680(17/10)-7800=156$.
+For $x_5$, the right side contributes
+$-8460-28716=-37176$, agreeing with
+$4680(17/10)\cdot14-148560$.
+This is a small linear-programming dual certificate written as an
+identity. The two representation constraints absorb the troublesome
+negative coefficient, and every remaining term is visibly
+nonnegative. No optimization program is needed to verify it.
+
+\begin{proposition}[Every simple top lies below weight two]
+Every simple ordinary $U$-module has lowest weight
+\[
+ 0\leq h\leq\frac{17}{10}<2.
+\]
+\end{proposition}
+\begin{proof}
+The preceding chapter gives $h\geq0$. Trace the positive-stress
+identity on $E$: compact averaging preserves trace, so
+$W_{\rm total}=hD$. Equations \eqref{eq:c-top-inequalities} and
+\eqref{eq:c-top-certificate} give the upper bound.
+\end{proof}
+
+The bound need not be optimal. Its decisive feature is being less
+than two. That excludes a new integer-graded summand that first
+appears at weight two or later.
+
+\section{\texorpdfstring{Why eighty currents determine the whole $B$ branching}{Why eighty currents determine the whole B branching}}
+\index{branching!lattice extension}
+
+Since $U$ is strongly rational, its restriction inside $B$ is
+semisimple. Every summand has integer lowest weight, because $B$ is
+integer graded. The universal bound therefore permits only weights
+zero and one. The weight-zero summand is the vacuum, occurring once.
+
+There are $86-6=80$ remaining currents in $B_1$. The finite
+construction provides an irreducibility certificate for their
+zero-mode action. Its logic is elementary and valuable.
+
+\begin{lemma}[A cyclic one-dimensional eigenline]
+Let a finite-dimensional positive Hermitian space carry a
+star-closed algebra of operators containing commuting self-adjoint
+Cartan operators. If one joint Cartan eigenspace is one dimensional
+and a nonzero vector on that line is cyclic, the representation is
+irreducible.
+\end{lemma}
+\begin{proof}
+An invariant subspace has an invariant orthogonal complement because
+the algebra is star closed. Both are Cartan invariant. The
+one-dimensional joint eigenspace must lie entirely in one of them.
+Cyclicity makes that summand the entire space.
+\end{proof}
+
+\begin{constructioninput}[Five irreducible finite tops]
+On the eighty-dimensional current complement, the known $U$ zero
+modes are star closed and a vector in the one-dimensional Cartan
+weight $(0,10)$ line is cyclic. In each of the four mixed nontrivial
+$E_6\oplus A_2$ lattice sectors of lowest weight one, the analogous
+star-closure, one-dimensional eigenline, and cyclicity tests prove
+irreducibility of its eighty-one-dimensional top.
+\end{constructioninput}
+
+There are four mixed sectors because both $\Z/3$ discriminant
+coordinates are nonzero. The $E_8$ extension chooses two of these
+$B$-module sectors as its glue sectors.
+The bound rules out any summand invisible in these tops. Hence
+\begin{equation}\label{eq:c-B-branching}
+ B\downarrow_U=U\oplus X,
+ \qquad h_X=1,\quad\dim X_1=80.
+\end{equation}
+The two actual glue sectors in $H/B$ restrict to simple modules $Y,Y^*$
+with $81$-dimensional tops, giving
+\begin{equation}\label{eq:c-H-branching}
+ H\downarrow_U=\one\oplus X\oplus Y\oplus Y^*.
+\end{equation}
+The notation $Y^*$ means the contragredient. It does not yet say
+whether $Y$ and $Y^*$ are isomorphic.
+
+\section{The extension algebra remembers a boundary category}
+
+Let $\mathcal C=\Rep(U)$ and regard $H$ as its commutative extension
+algebra. Because $H$ is holomorphic, this algebra is Lagrangian:
+its local-module category is trivial and its dimension is the square
+root of the global dimension of $\mathcal C$.
+Let
+\[
+ \mathcal F=\mathcal C_H
+\]
+be the category of \emph{all} right $H$-modules. Local modules and
+all modules must not be confused: the former are trivial here, while
+the latter will be the desired nontrivial boundary category.
+Theorem~\ref{thm:lagrangian-reconstruction} gives
+$\mathcal C\simeq Z(\mathcal F)$.
+
+Temporarily write $\sigma=\FPdim_{\mathcal C}B$. Extension
+dimension identities give
+\[
+ \qdim X=\sigma-1,\qquad\qdim Y=\sigma,
+ \qquad\operatorname{Dim}\mathcal C=9\sigma^2,
+ \quad\operatorname{Dim}\mathcal F=3\sigma.
+\]
+Here $\operatorname{Dim}$ means global dimension, the sum of squared
+simple quantum dimensions. Positivity of the nonvacuum conformal
+weights gives the positive spherical structure through character
+asymptotics. At this stage pseudo-unitarity is sufficient; a
+categorical $C^*$ structure is supplied later.
+
+For center induction $I$ and forgetful functor $F$, the canonical
+algebra is $I(\one)$. The induction identity
+$FI(\one)=\bigoplus_z z\otimes z^*$, over the simple boundary
+objects $z$, implies
+\[
+ \operatorname{rank}\mathcal F
+ =\dim\End_{\mathcal C}(H)
+ =\begin{cases}4&Y\not\cong Y^*,\\6&Y\cong Y^*.\end{cases}
+\]
+Indeed, the endomorphism dimension of a semisimple object is the sum
+of the squares of its multiplicities. Four distinct summands give
+$1+1+1+1=4$; identifying the two glue summands gives $1+1+2^2=6$.
+
+Why should an automorphism of an extension say anything about a
+boundary particle? The canonical-algebra theorem gives a useful
+answer that does not yet require a unitary tensor category.
+
+\begin{lemma}[Extension automorphisms and invertible boundary objects]
+\label{lem:c-auto-invertible}
+For a pseudo-unitary fusion category $\mathcal F$, the algebra
+automorphism group of $I(\one)\in Z(\mathcal F)$ injects into
+the group of invertible objects of $\mathcal F$.
+\end{lemma}
+\begin{proof}
+The canonical algebra has a normalized special Frobenius structure
+with multiplication $m$, comultiplication $\Delta$, and
+$m\Delta=\mathrm{id}$. Besides composition, its endomorphisms carry
+the convolution product
+$f*g=m(f\otimes g)\Delta$.
+The standard two-product description identifies composition with
+multiplication in $K_0(\mathcal F)\otimes\C$, while the primitive
+convolution idempotents are $d_z[z]$, with $d_z>0$ the simple
+dimensions.
+
+An algebra automorphism obeys $f*f=f$, and its composition inverse
+does too. Consequently their fusion-algebra expansions have
+coefficients either zero or $d_z$. Their fusion product is
+$[\one]$. Nonnegative fusion coefficients prevent cancellation,
+so every pair of objects in their supports must multiply only to
+copies of the unit. Rigidity implies that such a pair consists of
+inverse invertible simples. Both supports are therefore singletons,
+with dimension one. Composition respects the assignment, proving
+the group injection.
+\end{proof}
+
+The actual order-three automorphisms of $H/B$ therefore supply three
+invertible objects in $\mathcal F$. More is known than their fusion group:
+their associator is untwisted. The discriminant form of $B$ is
+\[
+ q(a,b)=\frac{2a^2+b^2}{3},\qquad(a,b)\in(\Z/3)^2.
+\]
+Its diagonal and antidiagonal isotropic lines are complementary.
+Induction from the latter across the extension selected by the former
+gives a full tensor copy of $\mathrm{Vec}_{\Z/3}$ in $\mathcal F$.
+Knowing only that there are three invertible objects would not rule
+out a nontrivial associator class.
+
+\section{Excluding a sign extension and the rank-four fork}
+\index{rank-four obstruction}
+
+First, $X$ cannot be invertible. Otherwise the extension $B=U\oplus X$
+would have an order-two grading and a sign automorphism $g$ with
+$B^g=U$. Its fixed current Lie algebra would be
+$\mathfrak{sl}_2\oplus\mathfrak{sl}_2$, of rank two.
+But every finite-order automorphism of $E_6$ fixes a toral subalgebra
+of dimension at least four, and every such automorphism of $A_2$
+fixes one of dimension at least one. The nonisomorphic ideals cannot
+be exchanged. The fixed rank is therefore at least five, a
+contradiction. This also excludes the possibility that all six
+boundary simples are invertible.
+
+At rank four there are three invertibles and one noninvertible, with
+near-group ring
+\[
+ \alpha^3=1,\quad\alpha\rho=\rho\alpha=\rho,
+ \qquad\rho^2=1+\alpha+\alpha^2+m\rho.
+\]
+The relevant pseudo-unitary near-group theorem restricts $m$ to
+$0,2,3,6$. This is a specialized categorical theorem, not a consequence
+of associativity of the displayed ring alone.
+
+The case $m=0$ makes the extension $B/U$ have dimension two, so $X$
+would be invertible. For $m=2$, the categorical reduction gives a
+possibly twisted $A_4$ double and a holomorphic charge-eight extension
+whose $A_4$ fixed algebra is $U$. The holomorphic extension is $E_8$.
+An elementary current estimate then excludes it. The adjoint traces
+of nontrivial order-two and order-three automorphisms of $E_8$ are
+bounded below by $-8$ and $-4$, respectively. Since $A_4$ has three
+involutions and eight elements of order three,
+\[
+ \dim(E_8^{A_4})\geq
+ \frac{248+3(-8)+8(-4)}{12}=16>6.
+\]
+
+The remaining two cases are excluded by the following specialized
+lemma from the construction's modular-character argument. We state
+its hypotheses because the conclusion is not a general restriction
+on arbitrary near-group categories.
+
+\begin{lemma}[Rank-four character obstruction]\label{lem:c-rank4-character}
+Suppose a strongly rational charge-eight VOA has positive nonvacuum
+lowest weights, an extension $B=V_{E_6\oplus A_2}$ with branching
+$B=U\oplus X$, and the rank-four pseudo-unitary near-group center
+obtained above, with its untwisted order-three subgroup and the
+specified lattice extension. For multiplicities $m=3,6$, its current
+dimension must have one of the following forms:
+\[
+\begin{array}{c|l}
+ m&\text{necessary number of currents}\\\hline
+ 3&15+A+10B\quad\text{or}\quad14+42A\\
+ 6&8+A\quad\text{or}\quad5+12P
+\end{array}
+\qquad A,B,P\in\Z_{\geq0}.
+\]
+The letters $A,B,P$ in this table are weighted dimensions of polar
+module tops, not the previously named vertex algebras.
+\end{lemma}
+
+The integers are nonnegative because they count actual top states.
+None of the displayed forms equals six. We explain the mechanism of
+the specialized lemma next; the assertion includes the finite
+theta-coefficient calculation rather than treating its entries as
+new lattice construction assumptions.
+
+The mechanism deserves explanation even without reproducing a theta
+atlas. A \emph{polar} character term is a negative power of $q$,
+equivalently a state of weight below $c/24$; the cusp is $q=0$,
+or $\tau\to i\infty$. Center induction determines a finite modular
+representation
+for a suitable difference of branching characters. Multiplication by
+$\eta^8$ makes it a weight-four theta-type function. The allowed polar
+data, before that multiplication, are specified by the nonnegative
+module-top dimensions above. Once those are prescribed, principal-part cancellation determines the
+function; its vacuum coefficient yields the displayed restrictions.
+One keeps the factor of two between the vacuum character and the
+sum/difference branching coordinates. Dropping it changes the current
+obstruction. This is an application of modular functions to a finite
+categorical alternative, not an assumption that the desired character
+vector was known from the start.
+
+\subsection{A complete theta cancellation in one rank-four alternative}
+
+We work the first $m=3$ orientation in detail. This demonstrates
+where the integers $15$ and $10$ come from, and lets us check
+the potentially dangerous vacuum factor of two.
+
+The categorical projection in this orientation is indexed like the
+six integrable $G_{2,3}$ modules, whose finite-dimensional labels
+are $1,7,27,77,14,64$, tensored with the three $A_{2,1}$
+labels. For each pointed $A_2$ charge, retain the four-component
+difference vector
+\[
+ v=(\chi_1-\chi_{64},-\chi_{77},-\chi_{14},-\chi_7).
+\]
+Here the labels describe the modular projection fixed by the
+rank-four induction argument; they do not assert that the unknown
+VOA is already an affine algebra. The known lattice extension
+gives $\chi_1+\chi_{64}=\chi_B$ in the pointed vacuum charge.
+Since $\chi_1=\chi_U$, a difference between two solutions of
+this extension problem obeys
+\[
+ \delta v_{0,0}=2\,\delta\chi_U.
+\]
+The lattice character is fixed, so the plus and minus coordinates
+cannot vary independently.
+
+After multiplication by $\eta^8$, the projected modular
+representation is the even Weil representation on
+$(r,s)\in(\Z/7)\times(\Z/3)$, even in each coordinate.
+Representatives are $0\leq r\leq3$ and $s=0,1$. Its $T$
+phases are $\exp(2\pi i(r^2/7+s^2/3))$. One convenient
+normalization of $S$ is the tensor product of
+\[
+\begin{gathered}
+ S^{(7)}_{00}=-1/\sqrt7,\qquad
+ S^{(7)}_{0r}=-2/\sqrt7,\qquad
+ S^{(7)}_{r0}=-1/\sqrt7,\\
+ S^{(7)}_{rs}=-2\cos(4\pi rs/7)/\sqrt7
+ \quad(r,s>0)
+\end{gathered}
+\]
+with the even order-three Fourier matrix
+$3^{-1/2}\left(\begin{smallmatrix}1&2\\1&-1\end{smallmatrix}\right)$.
+The unbalanced first row and column simply record that a nonzero
+even coordinate represents two finite-group elements.
+
+We construct weight-four forms for this representation using the
+rank-four lattice $L_7\oplus A_2$, where
+\[
+ \operatorname{Gram}(L_7)=
+ \begin{pmatrix}2&1\\1&4\end{pmatrix}.
+\]
+Let $u,v$ be its displayed basis and put $w=v-u/2$, so
+$u\perp w$, $u^2=2$, $w^2=7/2$. Write a vector in its
+real plane as $pu+tw$, and put
+\[
+ a=p^2,\qquad b=7t^2/4,\qquad c=(y,y)/2
+ \quad(y\in A_2\otimes\R).
+\]
+These lowercase letters are temporary quadratic coordinates.
+Both $H_1=a-b$ and $H_2=a+b-c$ are harmonic homogeneous
+quadratics. The two coordinates in each plane contribute equal
+Laplacians, which cancel in these differences. Poisson summation
+therefore makes the coset theta sums
+\[
+ \Theta_{H,\lambda}(\tau)
+    =\sum_{x\in L+\lambda}H(x)q^{(x,x)/2}
+\]
+vector-valued modular forms of weight $4/2+2=4$.
+
+Only three small coefficients are needed:
+\[
+\begin{array}{c|c|r|r}
+ (r,s)&q\text{-power}&\Theta_{H_1}&\Theta_{H_2}\\\hline
+ (1,0)&1/7&-1/7&1/7\\
+ (3,0)&2/7&3/7&4/7\\
+ (0,0)&1&2&-4
+\end{array}
+\]
+Each entry can be counted by hand. The first coset has shortest
+vector $2w/7$, giving $a=0,b=1/7$. In the second there are
+two shortest vectors with $a=1/4,b=1/28$, each of energy
+$2/7$; hence their total $H_1$ value is $3/7$ and their
+total $H_2$ value is $4/7$. In the vacuum coset, the two
+$L_7$ roots contribute $2$ to both forms. The six $A_2$
+roots contribute zero to $H_1$ and $-6$ to $H_2$.
+
+The only allowed nonvacuum polar top dimensions are $A$ at
+weight $2/7$ and $B$ at weight $1/7$. Either can be zero
+if the actual module begins an integer grade higher. Use
+$G_{2,3}\otimes A_{2,1}$ as a reference solution of the same
+modular projection and lattice-extension problem. Its central
+charge is $3\cdot14/(3+4)+2=8$, its currents number
+$14+8=22$, and its polar dimensions are $A=7,B=0$.
+The fundamental seven-dimensional $G_2$ representation has
+quadratic Casimir two in this normalization, so its Sugawara
+weight is $2/(3+4)=2/7$.
+Thus the polar coefficients of $\eta^8\delta v$ are
+$7-A$ at $(3,0)$ and $-B$ at $(1,0)$.
+
+Matching them against
+$\lambda\Theta_{H_1}+\mu\Theta_{H_2}$ gives two linear
+equations,
+\[
+ \frac{-\lambda+\mu}{7}=-B,\qquad
+ \frac{3\lambda+4\mu}{7}=7-A.
+\]
+Their solution is
+$\lambda=7-A+4B$, $\mu=7-A-3B$.
+After division by $\eta^8$, the unmatched remainder has no
+poles at the cusp. The finite-image modular representation
+makes it a holomorphic vector of modular functions on a compact
+finite cover, so it is constant. Its only possible $T$-fixed
+coordinate is $(r,s)=(0,1)$, and the displayed Fourier $S$
+matrix does not preserve that line. Hence the constant is zero:
+the matched theta expression is the whole difference, not merely
+its first few coefficients.
+
+Finally the vacuum coefficient of the theta expression is
+$2\lambda-4\mu$. By the vacuum factor of two above it is also
+$2(\dim U_1-22)$; the leading vacuum terms canceled before
+multiplication by $\eta^8$, so no further eta coefficient
+enters this difference. We obtain
+\[
+ 2(\dim U_1-22)
+ =2(7-A+4B)-4(7-A-3B),
+ \qquad \dim U_1=15+A+10B.
+\]
+Since $A,B$ are nonnegative integers, six currents are impossible.
+The other three alternatives in Lemma~\ref{lem:c-rank4-character}
+are the corresponding specialized theta cancellations for the reverse
+orientation and the $m=6$ projected representation. The complete
+calculation here explains the method and fixes its normalization;
+the remaining coefficient formulas are retained as the stated
+specialized lemma.
+
+\section{Deriving the six-object fusion ring}
+
+Rank four is excluded, so
+$H=\one\oplus X\oplus2Y$. Its endomorphism algebra is
+\[
+ \End_{\mathcal C}(H)\cong\C\oplus\C\oplus M_2(\C).
+\]
+The two-product description of the canonical center algebra identifies
+this composition algebra with the complexified boundary fusion algebra.
+In particular the fusion ring is noncommutative.
+
+The group of three invertibles acts on the three noninvertibles. An
+order-three permutation is either trivial or transitive. The trivial
+case would split off the two nontrivial characters of $\C[\Z/3]$
+as one-dimensional ideals, leaving an $M_2(\C)$ ideal on which the
+dimension character is nonzero. A matrix algebra has no nonzero
+one-dimensional representation, so this is impossible.
+
+Choose a noninvertible $\rho$ and label the orbit by
+$\rho,\alpha\rho,\alpha^2\rho$. Duality conjugates the left and
+right actions of the invertible group, so the right action is
+transitive too. It commutes with the left action and hence is the
+same three-cycle or its inverse; the identity permutation has now
+been excluded. The same cycle
+would make the algebra generated by $\alpha,\rho$ commutative. Thus
+$\rho\alpha=\alpha^2\rho$. To see the self-duality explicitly, write
+$\rho^*=\alpha^k\rho$. Then
+$(\alpha^i\rho)^*=\alpha^{i+k}\rho$; applying duality twice gives
+$2k=0$ modulo three. Hence $k=0$, and all three noninvertibles
+are self-dual. Frobenius reciprocity gives exactly one invertible in
+$\rho^2$, namely the unit; commuting with $\alpha$ equates the remaining
+three coefficients. Therefore
+\begin{equation}\label{eq:c-HI-m}
+ \alpha^3=1,\quad\rho\alpha=\alpha^2\rho,
+ \qquad\rho^2=1+m(\rho+\alpha\rho+\alpha^2\rho),\quad m\geq1.
+\end{equation}
+There is still a multiplicity $m$ to determine. Recognizing the shape
+of the Haagerup ring is not enough to set it to one.
+
+\section{Indicators: rotating a junction without braiding}
+\label{sec:c-indicator-bridge}
+\index{Frobenius--Schur indicators!definition}
+
+Let $\mathcal C$ be a spherical fusion category over $\C$, with a
+fixed pivotal identification $j_X:X\to X^{**}$. A unitary fusion
+category has a canonical positive spherical structure. The theorem
+used here needs the spherical structure, without assuming the
+complete unitarity proved later in Chapter~\ref{ch:unitarity}.
+For $n\ge1$, consider the finite-dimensional junction space
+$\Hom(\one,X^{\otimes n})$. Bend its first outgoing strand around
+the junction and return it as the last strand, using evaluation,
+coevaluation, and $j_X^{-1}$. With the required reassociations this
+defines the \emph{pivotal cyclic rotation} $R_{X,n}$.
+It uses no crossing and requires no braiding on $\mathcal C$.
+In formulas, put $Y=X^{\otimes(n-1)}$ and let
+$f:\one\to X\otimes Y$. The two stages are
+\begin{align*}
+ \widetilde f&=(\operatorname{ev}_X\otimes1_Y)
+                    (1_{X^*}\otimes f):X^*\to Y,
+ \\
+ R_{X,n}(f)&=(\widetilde f\otimes j_X^{-1})
+                    \operatorname{coev}_{X^*}:\one\to Y\otimes X,
+\end{align*}
+with the same associators understood as in the cup and cap identities.
+The $n$th Frobenius--Schur indicator is the ordinary linear trace
+\begin{equation}\label{eq:c-indicator-definition}
+ \nu_n(X)=\Tr_{\Hom(\one,X^{\otimes n})}(R_{X,n}).
+\end{equation}
+Pivotal coherence gives $R_{X,n}^{\,n}=1$. For simple $X$, this
+immediately explains two values used below:
+\[
+ \nu_1(X)=\delta_{X,\one},\qquad
+ \nu_2(X)=
+ \begin{cases}
+ 0,&X\not\simeq X^*,\\
+ +1\text{ or }-1,&X\simeq X^*.
+ \end{cases}
+\]
+Indeed, $\Hom(\one,X^{\otimes2})\simeq\Hom(X^*,X)$ is zero or
+one-dimensional, and its rotation squares to the identity. The sign
+measures the symmetry of the chosen self-duality under pivotal
+transpose; it is not fixed merely by the equation $X\simeq X^*$.
+
+\begin{example}[The group formula from an invariant projector]
+Take $\mathcal C=\Rep(G)$ for a finite group, with its usual tensor
+product and positive spherical structure. For a representation
+$D:G\to\operatorname{GL}(V)$, the junction space is
+$(V^{\otimes n})^G$. Pivotal rotation is the cyclic permutation
+\[
+ C(v_1\otimes\cdots\otimes v_n)
+   =v_2\otimes\cdots\otimes v_n\otimes v_1.
+\]
+The projector onto invariants is
+$P=|G|^{-1}\sum_{g\in G}D(g)^{\otimes n}$, and $C$ commutes with
+$P$. Therefore its trace on invariants equals $\Tr(CP)$ on the
+whole tensor power. For any matrix $A$, expansion in a tensor basis
+gives
+\[
+ \Tr(CA^{\otimes n})
+ =\sum_{i_1,\ldots,i_n}
+    A_{i_1i_2}A_{i_2i_3}\cdots A_{i_ni_1}
+ =\Tr(A^n).
+\]
+Thus, writing $\chi_V(g)=\Tr D(g)$, we obtain the classical formula
+\begin{equation}\label{eq:c-group-indicator}
+ \nu_n(V)=\frac1{|G|}\sum_{g\in G}\chi_V(g^n).
+\end{equation}
+For $G=\Z_3=\langle t\rangle$ and the one-dimensional character
+$\chi(t)=\zeta_3=e^{2\pi i/3}$, this becomes
+\[
+ \nu_n(\chi)=\frac{1+\zeta_3^n+\zeta_3^{2n}}3
+ =\begin{cases}1,&3\mid n,\\0,&3\nmid n.\end{cases}
+\]
+In particular $\nu_3(\chi)=1$, although $\nu_1(\chi)=\nu_2(\chi)=0$.
+The invariant projector and the cyclic trace identity explain this
+without any modular data.
+\end{example}
+
+\begin{example}[A unitary self-dual object with negative second indicator]
+The quaternion group $Q_8=\{1,-1,\pm i,\pm j,\pm k\}$ has a
+unitary irreducible representation $V$ of dimension two, with character
+$\chi_V(1)=2$, $\chi_V(-1)=-2$, and zero on the other six elements.
+It is self-dual: its character is real. The two central elements
+square to $1$, while the other six square to $-1$. Thus
+\[
+ \nu_2(V)=\frac{2\cdot2+6\cdot(-2)}8=-1.
+\]
+The invariant bilinear pairing is alternating rather than symmetric.
+Its sign does not conflict with the positive Hermitian inner product
+that makes the representation unitary; these are different pairings.
+Consequently even a positive unitary setting does not allow us to
+replace the sign $\varepsilon=\nu_2(\rho)$ below by $+1$ without
+an argument.
+\end{example}
+
+The bridge to modular data is the following structural theorem.
+Let $F:Z(\mathcal C)\to\mathcal C$ be forgetful and $I$ its
+two-sided adjoint. Equip the center with the ribbon twist induced
+by the same spherical structure. Then, for every object $X$ and
+positive integer $n$,
+\begin{equation}\label{eq:c-indicator-center}
+ \nu_n(X)
+ =\frac{\Tr_{\mathrm{cat}}(\theta_{I(X)}^{\,n})}
+        {\operatorname{Dim}(\mathcal C)},\qquad
+ \operatorname{Dim}(\mathcal C)=\sum_{a\text{ simple}}d_a^2.
+\end{equation}
+This is the center-induction theorem of Ng--Schauenburg. Here the
+numerator is a \emph{categorical} trace: if
+$I(X)=\bigoplus_Z b_ZZ$, then it is
+$\sum_Z b_Zd_Z\theta_Z^n$. The twist is $\theta_Z$, without the
+common central-charge phase of a VOA's modular $T$ matrix.
+
+\begin{example}[Checking the normalization in the pointed center]
+For $\mathcal C=\operatorname{Vec}_{\Z_3}$ with trivial associator
+and positive spherical structure, let $\alpha$ be the simple object
+of degree one. The center simples from Chapter~\ref{ch:centers}
+are $(g,k)$, with $d_{(g,k)}=1$, twist $\zeta_3^{gk}$, and
+$F(g,k)=g$. Adjunction gives
+\[
+ I(\alpha)=(1,0)\oplus(1,1)\oplus(1,2),\qquad
+ \frac{\Tr_{\mathrm{cat}}(\theta_{I(\alpha)}^{\,n})}{3}
+ =\frac{1+\zeta_3^n+\zeta_3^{2n}}3.
+\]
+Directly, $\Hom(\one,\alpha^{\otimes n})$ is zero unless $3\mid n$;
+when nonzero it is one-dimensional and the untwisted pivotal rotation
+is the identity. This verifies both sides of
+\eqref{eq:c-indicator-center}. The fusion relation $\alpha^3=\one$
+alone would not prove $\nu_3(\alpha)=1$: a nontrivial associator
+can give a nontrivial rotation phase on that same one-dimensional
+junction space.
+\end{example}
+
+For the rank-six fusion ring just derived, let $d_m$ be the positive
+solution of $d_m^2=1+3md_m$. The simple dimensions are
+$1,1,1,d_m,d_m,d_m$. Put $s_m=1+d_m^2$. Its global dimension is
+$3s_m$, so the theorem says exactly
+\[
+ \Tr_{\mathrm{cat}}(\theta_{I(\rho)}^{\,n})
+   =3s_m\nu_n(\rho).
+\]
+The first moment is therefore zero, and the second is
+$3s_m\varepsilon$ with $\varepsilon=\nu_2(\rho)\in\{1,-1\}$.
+There is no extra dimension factor $d_m$ on the right. On the left,
+a residual induced summand $Z_j$ of multiplicity $n_j$, dimension
+$3d_mn_j$, and twist $\theta_j$ contributes $3d_mn_j^2\theta_j^n$.
+This is the source
+of both the normalization and the squared multiplicities in the
+following argument.
+
+\section{Twist moments force multiplicity one}
+\index{Frobenius--Schur indicators!twist moments}
+
+Put $d_m=(3m+\sqrt{9m^2+4})/2$, so
+$d_m^2=1+3md_m$, and put $s_m=1+d_m^2$.
+We use the positive spherical structure already obtained above from
+character asymptotics. No categorical adjoint is needed for the
+following positive-dimension trace argument.
+
+First derive the part of center induction that contains invertibles.
+Write $R=\rho+\alpha\rho+\alpha^2\rho$. The underlying-object formula
+$FI(x)=\bigoplus_z z\otimes x\otimes z^*$ and the fusion ring give
+\[
+ FI(\alpha)=FI(\alpha^2)=3\alpha+3\alpha^2+3mR.
+\]
+For example, the three invertible $z$ contribute $3\alpha$ to
+$FI(\alpha)$; the three self-dual noninvertibles each contribute
+$\alpha^2+mR$. By adjunction,
+\[
+ \dim\End I(\alpha)=\dim\End I(\alpha^2)
+ =\dim\Hom(I(\alpha),I(\alpha^2))=3.
+\]
+An endomorphism dimension of three is a sum of squared nonnegative
+integral multiplicities, so each induction object is a multiplicity-free
+sum of three simples. Their mutual inner product three makes them
+the same sum, say $C_0+C_1+C_2$. They are disjoint from $I(\one)$.
+Adjunction gives one copy of each $\alpha,\alpha^2$ in $F(C_j)$.
+Centrality makes its three noninvertible multiplicities equal. Hence
+\[
+ F(C_j)=\alpha+\alpha^2+b_jR,\qquad
+ \sum_jb_j=3m,\qquad d_{C_j}=2+3b_jd_m.
+\]
+
+The pointed subcategory has trivial associator in this construction,
+so $\nu_3(\alpha)=1$. The third twist trace therefore says
+\[
+ \sum_j d_{C_j}\theta_{C_j}^3
+   =3s_m=\sum_jd_{C_j}.
+\]
+The twists have modulus one and the dimensions are positive. Equality
+in the triangle inequality forces each $\theta_{C_j}^3=1$.
+This does not yet say that all three cubic roots occur.
+The additional identity $\nu_1(\alpha)=0$ gives
+\[
+ 2\sum_j\theta_{C_j}+3d_m\sum_jb_j\theta_{C_j}=0.
+\]
+The number $d_m$ is a real quadratic irrational, while the twists now
+lie in $\Q(\zeta_3)$. These two quadratic fields intersect in $\Q$,
+so both sums vanish separately. Three cubic roots summing to zero
+must be $1,\zeta_3,\zeta_3^2$, once each. The weighted sum then
+forces $b_0=b_1=b_2=m$. Thus all three $C_j$ have dimension $s_m$.
+
+Together with $I(\one)=\one+X+2Y$, this supplies six central
+simples of dimensions $1,d_m^2$ and four copies of $s_m$, with
+twists $1,1,1,1,\zeta_3,\zeta_3^2$. All central summands whose
+forgetful object contains an invertible have now been exhausted.
+Every remaining central simple $Z_j$ has twist $\theta_j$ and forgets
+to $n_jR$, with $n_j$ a positive integer; centrality again equates its
+three
+noninvertible multiplicities.
+The global-dimension identity and the first two Frobenius--Schur
+indicator identities give
+\begin{align}
+ \sum_jn_j^2&=4m^2+2,\label{eq:c-indicator-count}\\
+ \sum_jn_j^2\theta_j&=-\frac{m^2+m\sqrt{9m^2+4}}2,
+ \label{eq:c-indicator-first}\\
+ \sum_jn_j^2\theta_j^2&=\frac{-m^2+(2\varepsilon-m)
+                            \sqrt{9m^2+4}}2,
+ \qquad\varepsilon\in\{1,-1\}.
+ \label{eq:c-indicator-second}
+\end{align}
+The roots of unity in these sums are counted with multiplicity
+$n_j^2$. Distinctness is not assumed.
+
+Here is how the normalizations enter. Denote the known nontrivial
+summands of $I(\one)$ by $X,Y$, of dimensions $d_m^2,s_m$, and
+the three summands of $I(\alpha)$ by $C_0,C_1,C_2$, each of
+dimension $s_m$. Their twists are respectively $1,1$ and
+$1,\zeta_3,\zeta_3^2$, as just derived using both the first and third
+indicators. The center's global dimension is the square
+of $3s_m$. Therefore
+\[
+ 9s_m^2=1+d_m^4+4s_m^2+9d_m^2\sum_jn_j^2.
+\]
+Using $d_m-d_m^{-1}=3m$ reduces this to
+$\sum_jn_j^2=4m^2+2$.
+
+Adjunction gives the induction decomposition
+\[
+ I(\rho)=mX+mY+m(C_0+C_1+C_2)+\sum_jn_jZ_j.
+\]
+The first indicator of a nonunit simple is zero. Thus the first
+twist trace of this object is
+\[
+ 0=m(d_m^2+s_m)+3d_m\sum_jn_j^2\theta_j,
+\]
+because the three $C_j$ contributions cancel. This yields
+$-(m/3)(2d_m+d_m^{-1})$ for the sum, which is the first moment
+in \eqref{eq:c-indicator-first}. The second twist trace equals
+$3s_m\varepsilon$, where $\varepsilon=\nu_2(\rho)$ is $1$ or
+$-1$ for a self-dual simple. Again the $C_j$ contributions cancel:
+\[
+ 3s_m\varepsilon
+   =m(d_m^2+s_m)+3d_m\sum_jn_j^2\theta_j^2.
+\]
+Subtract the first equation and use
+$s_m/d_m=d_m+d_m^{-1}=\sqrt{9m^2+4}$ to obtain
+\eqref{eq:c-indicator-second}.
+
+Here is the arithmetic force of the equations. Write
+$9m^2+4=t^2D$ with $D$ squarefree. The allowed squareclasses have
+strong restrictions. Since
+$(3m)^2<9m^2+4<(3m+1)^2$, one has $D>1$.
+Reduction modulo three shows that $3\nmid t$ and $D\equiv1\pmod3$.
+Also $7\nmid D$: divisibility by seven would require
+$m^2\equiv5\pmod7$, which is impossible.
+
+Here $\varphi(n)$ is Euler's totient, the number of residues modulo $n$
+that are coprime to $n$.
+Larson's root-sum bound is a theorem about expressing a quadratic
+irrationality as a sum of roots of unity; it is stronger than the
+triangle inequality. Applying it to two copies of the root multiset
+clears the half-integral coefficients in
+\eqref{eq:c-indicator-first} and gives
+\[
+ 4m^2+2\geq\frac{mt}{2}\varphi(2D).
+\]
+For precisely these squareclasses, except $D=10$, elementary
+prime-factor estimates give
+$\varphi(2D)/\sqrt D\geq12/\sqrt{13}$.
+For odd $D$, this ratio is the product of
+$(p-1)/\sqrt p$ over its distinct prime factors. A single allowed
+prime is at least thirteen; two distinct prime factors contribute
+at least $40/\sqrt{55}$, from five and eleven, which already
+exceeds $12/\sqrt{13}$. Every additional factor is greater than one.
+For even $D$, an additional factor $\sqrt2$ occurs. The smallest
+single odd prime is five, giving the exception $D=10$; otherwise
+it is at least eleven, and two odd factors give an even larger bound.
+These restrictions matter: the inequality is false for arbitrary
+squarefree numbers such as two or five. Consequently
+\[
+ 4m^2+2\geq\frac{6m\sqrt{9m^2+4}}{\sqrt{13}}.
+\]
+For $m>1$ this contradicts
+\[
+ 36m^2(9m^2+4)-13(4m^2+2)^2
+                   =4(m^2-1)(29m^2+13)>0.
+\]
+
+For the exceptional case we need a little field arithmetic.
+A cyclotomic field $\Q(\zeta_N)$ is generated by
+$\zeta_N=e^{2\pi i/N}$. Its automorphisms send $\zeta_N$ to
+$\zeta_N^a$ with $\gcd(a,N)=1$, preserving rational polynomial
+relations. Averaging over the automorphisms that fix a subfield $K$
+lands in $K$. For example, the two conjugates of $\zeta_3$ have
+average $(\zeta_3+\zeta_3^2)/2=-1/2$.
+The conductor of an abelian number field is the smallest $N$ for
+which it lies in $\Q(\zeta_N)$. A root of order exactly $N$ is
+primitive. A Ramanujan sum adds primitive roots without weights;
+a quadratic Gauss sum weights roots by a quadratic character,
+which modulo an odd prime is $1$ on nonzero squares, $-1$ on
+nonsquares, and $0$ at zero. The weighted sums isolate the
+square-root part of the average below.
+
+The exceptional squareclass cannot simply be ignored. For a sum of
+$N$ roots of unity equal to $-a-b\sqrt{10}$, with nonnegative
+integers $a,b$, the conductor-forty orbit estimate gives
+$N\geq a+8b$. Equality, when the squared-root sum also lies in
+$\Q(\sqrt{10})$, forces that second sum to be $a$.
+
+Here is the orbit mechanism behind this specialized arithmetic lemma.
+Take a common cyclotomic field and form the union of all Galois images
+of the root multiset under automorphisms fixing $\Q(\sqrt{10})$.
+This gives an orbit-constant multiset without assuming that the
+original multiplicities were constant on orbits. The imprimitive
+quadratic Gauss-sum formulas separate two costs. Primitive orders
+not divisible by forty contribute rational Ramanujan sums. Orders
+divisible by forty have zero rational part, with nonzero quadratic
+orbit sums $\pm\sqrt{10}$ costing at least eight roots each.
+Thus a negative rational contribution of size $a$ costs at least
+$a$ roots, independently of the $8b$ cost of the quadratic part.
+Equality allows only copies of $-1$ and the negative quadratic orbit
+of primitive fortieth roots. Squaring those eight roots runs once
+through the primitive twentieth roots, whose sum is $\mu(20)=0$.
+Here $\mu$ is the M\"obius function: it vanishes when its argument has
+a squared prime factor, and otherwise is $(-1)^r$ for $r$ distinct
+prime factors. Squaring $-1$ contributes one. Finally, Galois averaging
+multiplies
+the original second sum by the group order precisely because that
+sum lies in $\Q(\sqrt{10})$. Dividing by that order gives $a$.
+
+When $9m^2+4=10t^2$, reduction modulo two first makes $m$ even;
+reduction modulo four then makes $t$ even. The conductor-forty
+bound reads
+\[
+ 4m^2+2\geq\frac{m^2}{2}+4mt.
+\]
+For $m\geq4$,
+$t/m=\sqrt{(9+4/m^2)/10}>\sqrt{9/10}>15/16$, so the
+right side is greater than $17m^2/4>4m^2+2$, a contradiction.
+The only remaining positive possibility below four is $m=t=2$,
+where the first-moment bound is an
+equality and requires second sum $2$. But
+\eqref{eq:c-indicator-second} gives $-2$ or $-2-4\sqrt{10}$.
+Thus $m=1$.
+
+\begin{proposition}[The resulting dimensions and twists]
+The boundary fusion ring is the Haagerup ring, with
+\[
+ d=\frac{3+\sqrt{13}}2,\qquad s=1+d^2=2+3d.
+\]
+Its center has twelve simple objects, with quantum dimensions
+\[
+ 1,\quad d^2,\quad s\text{ four times},\quad3d\text{ six times}.
+\]
+The six residual twists have exponents
+$2,5,6,7,8,11$ modulo thirteen, divided by thirteen.
+\end{proposition}
+
+The constituent $X$ is the unique dimension-$d^2$ central
+simple, later called $b$. Retain the name $Y$ for the original
+embedded extension's dimension-$s$ constituent. The later
+choice of a center equivalence and the canonical $\HH_3$
+extension uses $a$ for that selected algebra's constituent.
+The two twist-one dimension-$s$ simples, $a$ and $c_0$, have
+the same unflavoured characters; the original $Y$ cannot be
+identified with the selected $a$ from branching counts alone.
+None of these central labels denotes the boundary invertible
+object $\alpha$.
+
+For $m=1$, the first moment is $(-1-\sqrt{13})/2$ and has exactly
+six roots available. Average each root over a cyclotomic Galois
+group fixing $\sqrt{13}$. The quadratic Gauss-sum estimate bounds
+the absolute value of its $\sqrt{13}$ coefficient by $1/12$,
+with equality only for primitive orders thirteen or twenty-six.
+Thus the required coefficient $-1/2$ exhausts all six roots, each
+at its negative extremum. This argument allows the fractional
+orbit multiplicities that averaging may produce. The corresponding
+six-root negative quadratic periods are, respectively,
+\[
+ \frac{-1-\sqrt{13}}2,\qquad
+\frac{1-\sqrt{13}}2.
+\]
+Here the per-root estimate can be seen directly from the conductor.
+For a primitive root of order $N$, the average over the subgroup
+fixing $\sqrt{13}$ is rational unless $13$ divides $N$.
+When it does, insert the quadratic character modulo thirteen
+into the ordinary cyclotomic average. The untwisted numerator
+is the Ramanujan sum $\mu(N)$, where $\mu$ is the M\"obius
+function. The twisted numerator vanishes unless
+$N=13m$, with $m$ squarefree and coprime to thirteen: a
+redundant prime-power factor cancels by a geometric sum.
+In the remaining case the Chinese remainder theorem reduces
+the twisted numerator to $\pm\sqrt{13}$, using the quadratic
+Gauss sum modulo thirteen. Division by
+$\varphi(N)=12\varphi(m)$ gives an irrational coefficient of
+absolute value $1/[12\varphi(m)]$. Equality with $1/12$
+requires $m=1$ or $2$, giving exactly the two orders above.
+Their rational coefficients are respectively $-1/12$ and
+$1/12$. This explains both the six-root budget and the sign
+test without assuming that the original multiset was itself
+a union of Galois orbits.
+
+The entire root budget is already needed for the irrational
+coefficient, so there is no room for rational-only orbits or
+cancellation. The prescribed rational part therefore selects order
+thirteen. All original roots are among the six nonresidue roots.
+These are linearly independent over $\Q$: a relation would give
+a polynomial of degree at most twelve, with zero constant term,
+divisible by $\Phi_{13}(t)=1+t+\cdots+t^{12}$, hence the zero
+polynomial. Comparison with the quadratic period forces each root
+to occur once. Since every simple was repeated $n_j^2$ times,
+there are six such simples and each has $n_j=1$.
+Multiplication by two
+interchanges residues and nonresidues, so the second moment is
+$(-1+\sqrt{13})/2$, giving $\varepsilon=1$.
+This is why conductor thirteen appears in the center even though the
+original lattice extension had order three.
+
+\section{A ring is not yet a unitary tensor category}
+
+The ring and twists determine the standard Haagerup modular-data target
+in this setting, but modular data alone do not identify a braided
+category in general. The later analytic argument proves complete
+unitarity, allowing the extension algebra to be treated as a
+commutative Q-system and its all-module category as a unitary fusion
+category. The unitary classification of the untwisted six-object ring
+then leaves two possibilities, $\HH_2$ and $\HH_3$.
+
+These categories are Morita equivalent, so their centers are equivalent.
+Consequently the chiral representation category is the Haagerup center
+$Z(\HH_3)$. The original embedded $H/U$ all-module category is still
+only identified as $\HH_2$ or $\HH_3$. To obtain an extension with
+the specifically chosen $\HH_3$ boundary category, one transports its
+canonical Lagrangian algebra through the center equivalence. The
+resulting holomorphic VOA is again isomorphic to $V_{E_8}$, but the
+embedding and its chosen boundary realization need not be the original
+ones.
+
+Keeping these last distinctions visible prevents a common shortcut:
+``the numbers look Haagerup'' is not a tensor-category proof, and
+``the center is Haagerup'' does not select a particular Morita
+representative as the boundary category.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:c-branch-1}
+Using $m=6$ and the neutral Fibonacci label, verify the top weight
+$1/3$ for $x_4$. Compute the two summands separately.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-branch-1]{Solution on page~\pageref*{sol:ex:c-branch-1}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-branch-2}
+Check the coefficients of $x_0$, $x_5$, and $y_4$ in
+\eqref{eq:c-top-certificate}. Explain why a positive bound for each
+individual ratio $W/\dim$ would be weaker than using the current
+character inequalities.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-branch-2]{Solution on page~\pageref*{sol:ex:c-branch-2}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-branch-3}
+If a semisimple object decomposes as $\bigoplus_i m_iX_i$ with
+pairwise nonisomorphic simples, prove
+$\dim\End(\bigoplus_i m_iX_i)=\sum_i m_i^2$.
+Apply this to both branching alternatives for $H$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-branch-3]{Solution on page~\pageref*{sol:ex:c-branch-3}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-branch-4}
+Show that the ring \eqref{eq:c-HI-m} has two one-dimensional
+representations and one two-dimensional representation over $\C$.
+Write the matrices in the two-dimensional representation and check
+all defining relations.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-branch-4]{Solution on page~\pageref*{sol:ex:c-branch-4}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-branch-5}
+Verify the difference-of-squares factorization excluding $m>1$ outside
+the exceptional squareclass. For $m=2$, compute both possible second
+moments and compare them with the equality-case requirement.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-branch-5]{Solution on page~\pageref*{sol:ex:c-branch-5}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-branch-6}
+Use $d^2=1+3d$ to check that the squared dimensions of the twelve
+central simples sum to $[3(1+d^2)]^2$. Distinguish this global
+dimension from the total quantum dimension and from the rank twelve.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-branch-6]{Solution on page~\pageref*{sol:ex:c-branch-6}.}}\par
+\end{exercise}

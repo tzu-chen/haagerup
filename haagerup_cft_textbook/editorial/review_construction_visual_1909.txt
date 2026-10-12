@@ -1,0 +1,48 @@
+Rendered-page review
+2026-10-05 19:09:46 UTC
+Used view_image on the six root-supplied PNGs; no TeX edits, rendering,
+typesetting, or numerical processes during this pass.
+
+Result: all six pages are legible. No clipped glyphs, overlapping text,
+broken references, unexpected blank areas, or serious pagination defects
+were visible. The mathematical displays fit the text area.
+
+PDF71 / printed57: the definition/finite-input material and roadmap
+opening are clear. The longtable starts with its heading plus two
+complete rows, so the page break is acceptable. Optional minor polish:
+ragged-right formatting in the first column would avoid the stretched
+spacing and con-trolled hyphenation in 'All modules are controlled.'
+This is cosmetic, not a necessary repair. The next table page was not
+among the rendered samples.
+
+PDF93 / printed79: the nonnegative-top trace, vacuum-like lemma, and
+projectivity opening are readable. The lemma has its complete short
+proof on the page. The next proposition's proof continues normally;
+the trace equation near the bottom does not collide with the footer.
+
+PDF113 / printed99: sector exhaustion and the annulus introduction
+are comfortably readable. The spectral-projection display, annulus
+insertion formula, and oscillator norm example fit. The statement that
+counting simples does not construct a tensorator is visibly separated
+from the next analytic stage and is easy to notice.
+
+PDF152 / printed138: the C6 category and transported-algebra discussion
+fit, including the two-line bimodule formula. The original H2/H3 fork
+is explicit on the same page. The diagonal Hilbert-space formula sits
+at the bottom without clipping; its sector-count/physical-scope
+discussion continues on the following page, which was not supplied.
+No visual repair is needed on the inspected page.
+
+PDF254 / printed240: AppendixB title and first chapter's solution
+heading are clear. The blue chapter/exercise reference numbers visibly
+provide the expected navigation affordance. The matrix solution at
+the bottom has adequate separation from the footer.
+
+PDF255 / printed241: the continuation of Exercise1.4, Exercise1.5,
+and Chapter2 solution heading are orderly. Paragraph exercise headings
+are visually distinct while remaining compact. Long null-vector and
+conformal-block calculations remain within the text block.
+
+Navigation scope: the PNGs show rendered reference numbers and their
+link coloring, not clickable PDF annotations. The textual link-target
+audit passed separately; this visual pass did not exercise clicks.

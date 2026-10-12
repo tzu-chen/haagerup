@@ -1,0 +1,30 @@
+Root integration review, 2026-10-05 around 20:25 UTC
+
+- Read the construction and foundations beginner-sequence reports and
+  authorized their short definition/typing repairs. Read the changed
+  c05 indicator transition, c06 lattice and coset paragraphs, f04 duality
+  clarification, and r03 compact modular-curve argument. Their formulas
+  and stated proof strengths are preserved.
+- Added a categorical-dual versus Hermitian-adjoint glossary row.
+- Standardized category names in l01/l02/l05/l06 to calligraphic H_2/H_3.
+  The energy Fourier mode H_2 and c05 harmonic-polynomial H_i are distinct
+  quantities and retain their original notation.
+- Integrated completed October 5 l04/l06 inputs, using the source audit
+  in oct5_lattice_update_audit.txt. The six response minors are explicitly
+  described as stored floating-point data, not exact rank certificates.
+  All 28 contiguous entropy windows are acknowledged. Rank144 qualification
+  belongs to the later tensor, and failed rank156 remains excluded.
+- Marked the earlier two-candidate Ward calculation as historical and
+  updated the source guide from an active continuation to completed records.
+- Expanded Appendix C's description of the small exact checker and Ising
+  illustration without upgrading them to full-construction verification.
+- Visually inspected PDF 8d11a27556b43b83872c9843e8613522f2aae4e53f7a522cce561ef892a71243
+  pages 48,183,210: new subfactor definitions, embedded Ising figure, and
+  replica/cat formulas fit cleanly. That PDF predates later text additions.
+- Build freshness now tracks the vector figure; source auditing now checks
+  included graphic paths; package freshness checks both source audit and
+  build source hashes. The manifest records the actual PDF page count.
+
+No large scientific computations, checkpoint changes, or research-source
+edits were performed in these editorial integrations. The separate plot
+run and its measured limits are recorded in its own provenance files.

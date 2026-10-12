@@ -1,0 +1,57 @@
+{
+  "checked_at_utc": "2026-10-12T03:34:04.923307+00:00",
+  "python_syntax": {
+    "files": 256,
+    "errors": []
+  },
+  "queue_and_build_mock_tests": {
+    "passed": 11,
+    "log": "queue_tests.log"
+  },
+  "resource_guard_migration_mock_tests": {
+    "passed": 8,
+    "log": "guard_migration_tests.log"
+  },
+  "trust_boundary_references": {
+    "checked": 253,
+    "mismatches": 0,
+    "command": "python lean/tools/trust_boundary/tb_check.py"
+  },
+  "c8_dependency_dry_run": {
+    "modules": 1256,
+    "missing_imports": 0,
+    "note": "Dependency enumeration only; not a compilation."
+  },
+  "lean_cache_check": {
+    "target": "HaagerupIzumi.C8Axioms",
+    "command": "lake build --no-build HaagerupIzumi.C8Axioms",
+    "exit_code": 0,
+    "result": "All targets up-to-date (5202 jobs).",
+    "axiom_reports": 320,
+    "scope_memory_peak_mib": 1424.3,
+    "memory_reservation_mib": 1536,
+    "address_limit_mib": 6144,
+    "threads": 1,
+    "log": "lean_cache_check.log",
+    "note": "Lake checked the existing build cache and replayed saved diagnostics, including linter warnings from prerequisites; this was not a fresh full rebuild.",
+    "c8_axiom_diagnostic_lines": 320
+  },
+  "scientific_scope": "No lattice, rank, VOA, or categorical certificates were rerun for this commit. Formalization hypotheses remain as described in lean/HaagerupIzumi/C8/TRUST_BOUNDARY.md.",
+  "current_resource_guard": {
+    "path": "~/.local/bin/research-safe-run",
+    "sha256": "f50bceb44ba6c1a543ac71dd748aa74fac1e93f1a06c6b215a302276a78a33e5",
+    "installation_required": true,
+    "historical_records": "resource_guard_history/ is preserved unchanged; historical policies and hashes do not authorize current runs."
+  },
+  "staged_whitespace": {
+    "command": "git diff --cached --check",
+    "exit_code": 2,
+    "issues": {
+      "trailing whitespace": 45896,
+      "new blank line at EOF": 31
+    },
+    "affected_files": 68,
+    "unexpected": [],
+    "decision": "Preserve the selected scientific sources, generated witnesses and historical evidence byte-for-byte. Report existing cosmetic whitespace rather than rewriting data authenticated by historical manifests."
+  }
+}

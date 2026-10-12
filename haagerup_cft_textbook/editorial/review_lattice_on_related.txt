@@ -1,0 +1,111 @@
+Independent review of f06, first half, and the first three matching solutions
+Reviewer: lattice author; October 5, 2026.
+Method: source reading and hand algebra only. No symbolic, numerical, or
+typesetting job was run. References below use the current line numbering
+before any implementation of this report.
+
+Files read
+----------
+chapters/f06_related_categories.tex, lines 1--468; related exercises;
+chapters/f_solutions.tex, first three related-category solutions;
+hi_noncyclic_analytic_note.tex;
+hi_noncyclic_determinant_linear_proof.tex;
+hi_noncyclic_gis_gamma_proof.tex;
+hi_noncyclic_ansatz_z2xz6_exact.tex;
+hi_noncyclic_gamma_identification_status.md;
+hi_even_reconstruction_proof.tex;
+hi_noncyclic_reconstruction_extension.tex.
+
+Outcome
+-------
+No mathematical error found in the reviewed formulas or deductions.
+The revised gamma normalization is explicit and consistent with the
+source. The chapter carefully distinguishes category existence, exact
+special-function identification, Hermitian positivity, and a numerical
+agreement. In particular, it does not promote the unfinished order-twelve
+gamma identification into an exact theorem.
+
+Checks passed by hand
+--------------------
+1. The generalized fusion ring, dimension equation and global dimension
+   have the correct dependence on the group order. The comparison with
+   near-group rules is useful and prevents a common confusion.
+
+2. The determinant and endpoint signs cancel correctly on changing p,
+   q or g lifts. For example, under q -> q+2z the first kernel summand
+   has exponent det(p,z)+(q-p)^T Mz-q^T Mz = z^T Mp modulo two.
+   The exceptional term acquires that same exponent, and the endpoint
+   signs cancel it. The zero-class reciprocity is 1 rather than delta,
+   precisely as required by the correction term.
+
+3. The three axis values, axis sum and off-axis pair product are correct.
+   Pairwise reciprocity is expressly separated from the summed quadratic
+   and cubic equations, and the general lattice statement has the correct
+   linear-only scope.
+
+4. The Klein-four matrix agrees with the determinant ansatz, including
+   the -i phase for p=(0,1), q=(1,0). Its first-column square sum reduces
+   to 4/(delta+1)=5-delta=1-1/delta. Positive and negative embeddings are
+   distinguished correctly. The odd-m inverse-pair count is 2m-2, and
+   character normalization removes two of the three involution signs.
+
+5. The order-eight eliminants imply the two positive square-root
+   identities. With s=t^2 and s^2+8s-1=0,
+       (9+10s+s^2)/(4s) = ((9+s)/2)^2,
+       (13+s)/2 = ((5+s)/2)^2.
+   The selected reciprocal root is the stated lambda_8^2. The displayed
+   quartic and eliminant indeed imply tr^3=1-2r, so y^2 r^3=1.
+   The exercise explicitly supplies the latter identity; its solution
+   does not silently assume an unassigned elimination.
+
+6. For order twelve, the cubic has the claimed unique root in (3,4).
+   The bounds 2/7<t<3/10 suffice for endpoint signs and a positive
+   derivative. Substituting u=C-C^{-1} produces the stated sextic:
+   C^3 u^3=C^6-3C^4+3C^2-1 supplies the easily missed 3 terms.
+   The monic iterated quotient is a 24-dimensional rational algebra
+   regardless of irreducibility. Requiring denominator units rather than
+   mere nonvanishing at one real embedding is the right condition for
+   transporting the certificate to every positive embedding.
+
+7. At t=i sqrt(delta_+), conjugation t -> -t, C -> C^{-1} and the
+   norm identities imply the claimed Hermitian coefficient relation.
+   The pointwise coefficient product is nonzero off the axes; the
+   diagonal and zero row/column are real. The Q-system index is
+   1+delta_+=7+sqrt(37), and six coefficient embeddings are not
+   mislabeled as six inequivalent categories.
+
+8. Multiplication by D-1 on (1,omega) has columns
+   (2m-2,2) and (2m^2,2m). Its determinant is -4m and entry gcd is 2.
+   Hence the Smith factors are 2 and 2m. The order-three example and
+   all three exercise solutions are correct.
+
+9. The newly added free-product mechanism agrees with the supplied
+   reconstruction source: opposite translations on D_1,D_2; orthogonal
+   Leavitt corners define the extension; covariance reindexes g+2h;
+   the positive-degree, left-invertible intertwiner lemma removes new
+   free-product letters. Algebraic faithfulness is correctly separated
+   from positive analytic reconstruction.
+
+One small pedagogical repair suggested
+-------------------------------------
+f06:294--295 and 328--329:
+The text introduces z_j only as "normalized weights" and later infers
+that every nonzero W has squared modulus delta_+. Readers cannot see
+that last implication without the structural form of the weight table.
+It would be enough to add:
+  "In the prescribed representative table, the nonzero-residue entries
+   are t, t z_j, and signed reciprocals t/z_j."
+The full degree-five polynomial formula for the z_j need not be printed.
+This makes the displayed norm implication self-contained while preserving
+the intended finite-certificate input.
+
+Optional, if more connective prose is wanted
+-------------------------------------------
+f06:430--454:
+The free-product intertwiner explanation assumes a grading without saying
+which one. A brief parenthesis deg(s)=2, deg(t_g)=1 and opposite degrees
+for primed generators would exhibit the concrete positive-degree element
+s. This would connect the general graded-algebra explanation to the
+displayed Leavitt relations without adding a proof of the whole lemma.
+
+No edits to foundation files were made.

@@ -1,0 +1,153 @@
+% Proposed insertion A: immediately before the existing lattice-modules
+% section of r02. This file is an editorial draft, not an input file.
+
+\section{Modules, fusion, and intertwining fields}
+\index{module!vertex algebra}\index{intertwining operator}
+
+A representation of a Lie algebra tells us how its generators act on
+another vector space. A representation of a vertex algebra does the
+same for all field modes at once. A \emph{$V$-module} $M$ carries a map
+\[
+ Y_M(v,z)=\sum_{n\in\Z}v^M_{(n)}z^{-n-1},\qquad v\in V,
+\]
+whose coefficients act on $M$. These fields obey the vacuum identity
+$Y_M(\one,z)=\mathrm{id}_M$, lower truncation, translation, and the
+same Jacobi or OPE compatibility identities as the fields of $V$.
+In particular, the conformal vector acts by Virasoro operators on $M$.
+The module need not contain a vacuum state. Nor does its definition
+assign an endomorphism-valued field to every vector of $M$: the inputs
+of $Y_M$ still belong to the vacuum algebra $V$.
+
+A \emph{module homomorphism} $f:M\to N$ is a linear map commuting
+with these actions:
+\[
+ fY_M(v,z)=Y_N(v,z)f\qquad(v\in V).
+\]
+This is the meaning of $\Hom_V(M,N)$. For simple modules in the
+semisimple complex setting, it is zero for inequivalent modules and
+one-dimensional for equivalent modules.
+
+A \emph{chiral intertwining operator} is a different kind of object.
+An intertwiner of type $\binom{P}{M\ N}$ assigns to $u\in M$ a field
+\[
+ \mathcal Y(u,z):N\longrightarrow P\{z\}.
+\]
+Here $P\{z\}$ permits the complex powers of $z$ prescribed by the
+module weights. The assignment satisfies lower truncation, the
+translation identity
+$\mathcal Y(L_{-1}u,z)=\partial_z\mathcal Y(u,z)$, and compatibility
+with the $V$-actions on all three modules. In physical language, moving
+a chiral-algebra field past this insertion must agree with first using
+its OPE with the inserted state. Thus a charged field can change the
+sector on which it acts, even though every ordinary $V$ field preserves
+each $V$-module. Products of such charged fields supply the nonvacuum
+conformal blocks used later in the book.
+
+The energy commutator is a useful part of this definition:
+\[
+ L_0^P\mathcal Y(u,z)-\mathcal Y(u,z)L_0^N
+ =\mathcal Y(L_0^Mu,z)+z\partial_z\mathcal Y(u,z).
+\]
+If $u,v$ have weights $h_u,h_v$, a term $z^r w$ in
+$\mathcal Y(u,z)v$ must therefore satisfy
+\begin{equation}
+ r=h_w-h_u-h_v.
+ \label{eq:voa-intertwiner-power}
+\end{equation}
+For top states in three modules, the possible top-to-top power is
+$h_P-h_M-h_N$. Its coefficient can vanish for particular choices of
+top components. The first nonzero term then comes from a higher grade
+of the same intermediate module; it need not signal a different
+fusion channel.
+
+To identify these spaces with categorical fusion, we use the standard
+rational VOA tensor theorem under its usual hypotheses: simplicity,
+CFT type, self-contragredience, rationality, $C_2$-cofiniteness, and
+positive lowest weights for nonvacuum simple modules. The finiteness
+terms are explained at the end of this chapter. In this setting the
+ordinary modules form a semisimple rigid tensor category. Denote its
+fusion product by $\boxtimes_V$ to distinguish it from the ordinary
+tensor product of vector spaces. For simple modules,
+\begin{equation}
+ M\boxtimes_VN\cong\bigoplus_P N_{MN}^{\ P}\,P,
+ \qquad
+ N_{MN}^{\ P}
+ =\dim\mathcal I\binom{P}{M\ N}
+ =\dim\Hom_V(M\boxtimes_VN,P),
+ \label{eq:voa-intertwiner-fusion}
+\end{equation}
+where $\mathcal I\binom{P}{M\ N}$ is the space of chiral
+intertwiners of the indicated type. Its basis is the fusion-space
+basis of Chapter~\ref{ch:fusion}. The infinite tower of descendant
+states belongs inside each module $P$; the finite integer
+$N_{MN}^{\ P}$ counts independent ways of coupling to that module.
+It does not count the dimension of $M\otimes_\C N$.
+
+The \emph{contragredient module} $M'$ is the graded dual
+$\bigoplus_h M_h^*$ equipped with the dual vertex-algebra action.
+It supplies the categorical dual in this setting. A bar over a factor
+in a full-CFT Hilbert space instead indicates an antiholomorphic copy.
+The chosen right-moving pairing relates these notions; they are not
+the same notation for taking complex conjugates of coordinates.
+All twelve Haagerup center labels are self-dual, which will simplify
+the displayed diagonal pairings without eliminating the underlying
+duality convention.
+
+% Proposed insertion B: after the existing rank-one/Poisson example.
+% V denotes the rank-one lattice VOA here, not the Haagerup algebra U.
+
+\begin{example}[One fusion channel, two different leading powers]
+\label{ex:voa-half-charge}
+Let $L=\Z\alpha$ with $\alpha^2=2$, and put $V=V_L$.
+The nontrivial simple module is
+$M_1=V_{L+\alpha/2}$. Its top has basis
+\[
+ v_+=e^{\alpha/2},\qquad v_-=e^{-\alpha/2},
+ \qquad h_{M_1}=\frac14.
+\]
+Addition of lattice cosets gives
+$M_1\boxtimes_VM_1=V$, so there is exactly one vacuum-module
+intertwiner up to scale. This does not mean that the OPE of every
+pair of top components begins with the vacuum \emph{state}.
+
+Choose an intertwiner $\mathcal Y$ of type
+$\binom{V}{M_1\ M_1}$ and a branch for its fractional powers.
+The lattice exponential formula gives
+\begin{align}
+ \mathcal Y(v_+,z)v_-
+ &=\kappa_{+-}z^{-1/2}
+   \left(\one+\frac12\alpha(-1)\one\,z+O(z^2)\right),
+   \label{eq:voa-half-charge-neutral}\\
+ \mathcal Y(v_+,z)v_+
+ &=\kappa_{++}z^{1/2}
+   \left(e^\alpha+\frac12\alpha(-1)e^\alpha\,z+O(z^2)\right).
+   \label{eq:voa-half-charge-charged}
+\end{align}
+The nonzero phase coefficients $\kappa_{+-},\kappa_{++}$ depend on
+the chosen intertwiner, basis, and cocycle extension convention; they
+are not fixed merely by the cocycle on the original lattice $L$.
+With the usual unit exponential normalizations the common scale can
+be chosen so these coefficients have unit modulus. Their values are
+irrelevant to the leading-power distinction.
+
+In the first product the charges add to zero and
+$(\alpha/2,-\alpha/2)=-1/2$. Its vacuum coefficient is nonzero.
+In the second product the charges add to $\alpha$ and
+$(\alpha/2,\alpha/2)=1/2$. Charge conservation forbids a vacuum-state
+coefficient. The first output is instead the weight-one current
+$e^\alpha$ in the same vacuum module $V$. Equation~
+\eqref{eq:voa-intertwiner-power} verifies both exponents:
+\[
+ 0-\frac14-\frac14=-\frac12,
+ \qquad
+ 1-\frac14-\frac14=\frac12.
+\]
+The gap of one is an intermediate-module grade. It does not change
+the fusion rule or create a second independent intertwiner.
+
+For comparison, $\Hom_V(M_1,V)=0$ because the modules are
+inequivalent, while
+$\dim\mathcal I\binom{V}{M_1\ M_1}=1$. A mode-preserving linear
+map between modules and a charged field joining three modules answer
+different representation-theoretic questions.
+\end{example}

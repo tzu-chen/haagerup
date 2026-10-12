@@ -1,0 +1,118 @@
+Second static packaging review after byte-pinning repairs
+Reviewer: scope_foundations
+Time: 2026-10-05 21:28:24 UTC (clock tool)
+
+Scope
+-----
+Read current package.py, record_sources.py, and the core-top checker's
+guard and result-writing code. No reviewed script was imported/executed;
+no jobs, builds, hashes, or scientific proof revalidation were run. This
+review writes only this report. Line numbers refer to package.py as read.
+
+Repairs that pass
+----------------
+* checked_bytes pins the exact hash and length of read JSON bytes. The
+  audit, build, navigation, checker, plot, and source-snapshot records
+  therefore cannot silently change between parsing and ZIP inclusion.
+* Lines 35-44 connect the source_hashes map to both audit/build records,
+  then pin every source byte string against that map. This closes the
+  earlier content-change interval before manifest construction.
+* PDF comparisons now all go through the same pinned identity, as do
+  checker scripts and figure assets. Lengths in the manifest come from
+  those byte strings rather than a separate later stat call.
+* The selected scientific-source snapshot is mandatory and is checked
+  as a dated inventory. Its recorded external hashes are not replayed
+  against the current research tree; that is the correct historical
+  scope, not a missing scientific verification step.
+* The added core-top source/result pair is treated like the two earlier
+  checkers. Its result is written only after the assertions complete,
+  and its source rejects optimized Python. Its chapter-at-check and
+  guard-at-check hashes remain historical identities.
+* record_sources.py sets sys.dont_write_bytecode before importing build,
+  closing the local __pycache__ write side effect. Exclusive snapshot
+  creation and the original historical-provenance protections remain.
+
+Two remaining concrete integrity gaps
+------------------------------------
+1. Fresh path discovery can omit a file that already passed a gate.
+
+   At lines 86-98 the package list is reconstructed by globbing. Suppose
+   a chapter is validated/pinned at 42-44 and then removed before its
+   directory is globbed. It will not appear in paths, so there is no
+   later checked_bytes call for it and the ZIP can succeed without a
+   source listed in its included build record. The same applies to a
+   checker or JSON record, including the supposedly required snapshot,
+   if deleted after its validation and before discovery.
+
+   Minimal repair: seed paths with the initially validated required
+   files, then union the discovered extras. Retain their logical names;
+   the separately delivered PDF is the one deliberate exclusion from
+   ZIP payloads. The existing is_file and payload checks then reject
+   deletion. This does not require rescanning external scientific files.
+
+2. The generated manifest is not pinned to the bytes just constructed.
+
+   Line 118 writes serialized manifest content, but line 131 is the
+   first checked_bytes call for manifest.json. Its special case at 132
+   also skips the ordinary expected-payload comparison. If the manifest
+   is edited between creation and ZIP read, the modified content becomes
+   its first accepted identity and can enter the ZIP even though the
+   source checks used the original in-memory manifest dictionary.
+
+   Minimal repair: serialize to one bytes value, establish its expected
+   hash/length from that value BEFORE any reread, and write those exact
+   bytes. The existing checked_bytes call then catches any later edit.
+   Alternatively use the in-memory payload for the ZIP and also verify
+   that the delivered standalone manifest still contains those bytes.
+   There is no need for a self-referential manifest hash entry.
+
+Minor failure-publication ordering
+---------------------------------
+The last PDF recheck occurs at line 148, after the temporary archive
+has replaced the final archive at 143. A PDF change after manifest
+construction is detected, but the run then fails after publishing its
+ZIP. Move that existing final PDF recheck before temporary.replace and
+print the already validated expected hash afterward. This is not a
+silent-success bug; it simply keeps a detected mismatch from replacing
+the preceding completed archive. The coordinated final freeze should
+still apply because separately delivered files cannot be made immutable
+by a one-time packaging check.
+
+No further content-hash mismatch was found for a stable required file
+set. The intended PDF/source/checker binding does not require importing
+archived scripts, rerunning certificates, or altering historical hashes.
+
+The two concrete gaps were reported directly to root before saving this
+report. No live packaging source was edited by the reviewer.
+
+Final commit-order re-review: PASS (2026-10-05 21:31:01 UTC)
+---------------------------------------------------------
+The current package.py resolves all three findings above:
+
+* Lines 98-100 seed required payloads from the initially PINNED paths,
+  excluding only the separately delivered PDF. A later missing required
+  file now fails either is_file or checked_bytes rather than disappearing
+  from the archive inventory.
+* Lines 120-124 serialize the manifest once, pin the expected identity of
+  those bytes, and then write them. Its archive payload goes through the
+  same checked_bytes comparison as every other payload.
+* Lines 149-152 recheck the PDF against its pinned identity before the
+  temporary archive replaces the final archive. ZIP CRC/member checks
+  likewise precede that commit.
+
+All source and record bytes used by the validation gates are therefore
+bound to the manifest and ZIP bytes in this coordinated final-build
+workflow. The standalone PDF is bound to its recorded build and manifest
+identity before archive publication. No additional concrete integrity
+defect was found in the revised commit order. Keep the agreed source/PDF
+freeze through delivery, as with any packaging process that does not
+itself make the surrounding filesystem immutable.
+
+The existing example checker has no common overall-success key; its
+writer reaches the report only after passing. The order-three and
+core-top writers similarly record their successful assertions. This
+review does not add a fictitious uniform result schema or reinterpret
+archived scientific identities as a fresh verification claim.
+
+Method: static source reading only, without executing or importing any
+script, creating a scientific snapshot, or running mutation tests.

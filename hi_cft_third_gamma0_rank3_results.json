@@ -1,0 +1,28 @@
+{
+  "prior_gamma0_identities_checked": true,
+  "independent_complete_M2_ground_neutrality_solution_checked": true,
+  "normalized_d6_trace_affine_in_inverse_level": {
+    "intercept": "-2",
+    "slope": "4"
+  },
+  "ordinary_d1_index": "4*(k-1)",
+  "ordinary_d6_index": "4-2*k",
+  "rank_three_necessary_levels_without_module_energy_bounds": [
+    1,
+    2
+  ],
+  "rank_three_full_current_coset_c_lower_bound": "7/2",
+  "two_A1_previous_full_current_coset_c_lower_bound": "28/11",
+  "global_current_generated_coset_c_lower_bound": "28/11",
+  "additional_each_A1_joint_witness_constraint": "t_d6=2*k-t_d1+2*t_d4=4-2*k+9*t_c1+5*t_d4 >= 0",
+  "scope": "Finite current-representation and real charge-trace positivity only, under the parent universal VOA/modular assumptions. The rank-saturation neutrality argument is analytical and is not proved by this arithmetic helper. No nonvacuum affine-energy bound, new q-series or physical-chain identification.",
+  "input_and_source_hashes": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_universal_results.json": "580888dfb345af7d3f443af0c4e518e583b258376891afa35981c8e70e769dca",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_trace_results.json": "8eb22d1c06e8cd1a2ad7ff27fbd38d3e8a2953ed9c85a08951235897e76e9aff",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_rank3_check.py": "68d2fbab5be09e4e2898444c97951b9a9e64fb77e2d29cc8edb5e5e46f06c375",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_universal_check.py": "631624904ac8f265e887a52a0bb87b28cfaba385956377669c2728c97d28bb15",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_trace_check.py": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b"
+  },
+  "seconds": 0.0006023839814588428,
+  "peak_rss_kib": 20388
+}

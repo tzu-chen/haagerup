@@ -1,0 +1,123 @@
+\section{Solutions for Chapter~\ref{ch:modular}}
+
+\paragraph{Exercise~\ref{ex:Z3-S-square}.}
+\phantomsection
+\label{sol:ex:Z3-S-square}
+Summing over the intermediate label $(a,b)$ gives
+\begin{align*}
+ (S^2)_{(g,k),(h,l)}
+ &=\frac19\sum_{a,b}\omega^{-ka-bg-bh-la}\\
+ &=\left(\frac13\sum_a\omega^{-(k+l)a}\right)
+   \left(\frac13\sum_b\omega^{-(g+h)b}\right)\\
+ &=\delta_{l,-k}\delta_{h,-g}.
+\end{align*}
+For example $(1,0)$ is conjugate to $(2,0)$, rather than to
+itself.  Therefore charge conjugation is not the identity matrix.
+
+
+
+\paragraph{Exercise~\ref{ex:H3-S-square}.}
+\phantomsection
+\label{sol:ex:H3-S-square}
+Let $\mathbf1_m$ be the length-$m$ all-ones column and $J_{m,n}$
+the all-ones rectangular matrix. Direct arithmetic gives
+\[
+ AB=\frac1{36}-\frac1{52}=\frac1{117},\qquad
+ A^2+B^2=\frac1{18}+\frac1{26}=\frac{11}{117}.
+\]
+Using $u^2=1/9$ and $v^2=1/13$, the upper-left diagonal entries
+of $S^2$ are
+$11/117+4/9+6/13=1$, and its off-diagonal entries are
+$2/117+4/9-6/13=0$.
+The row sums $C_4\mathbf1_4=-u\mathbf1_4$ and
+$D_6\mathbf1_6=v\mathbf1_6$, together with
+$A+B=u$ and $A-B=-v$, give the first two rows' mixed blocks:
+\[
+ u(A+B-u)\mathbf1_4^{\mathsf t}=0,
+ \quad v(A-B+v)\mathbf1_6^{\mathsf t}=0,
+ \quad v(B-A-v)\mathbf1_6^{\mathsf t}=0.
+\]
+The $4\times6$ block is
+$uvJ_{4,6}-uvJ_{4,6}=0$. Finally,
+\[
+ C_4^2+2u^2J_4=I_4,\qquad
+ D_6^2+2v^2J_6=I_6
+\]
+by the Fourier sums in the chapter. Symmetry supplies the
+transposed blocks, completing the entire identity $S^2=I$.
+
+
+
+\paragraph{Exercise~\ref{ex:Gauss13}.}
+\phantomsection
+\label{sol:ex:Gauss13}
+The squares are $\{1,3,4,9,10,12\}$ and the nonsquares are
+$\{2,5,6,7,8,11\}$.  The list $6j^2$ for $j=1,\ldots,6$
+is $6,11,2,5,7,8$ modulo thirteen.  For the Gauss--Milgram
+calculation, $1+\omega+\omega^2=0$ combines the four
+dimension-$s$ terms to $s^2$. Since $s=1+d^2$ and
+$d^4=11d^2-1$,
+\[
+ 1+d^4+s^2=2+2d^2+2d^4=24d^2.
+\]
+The six residual twists contribute
+$9d^2(-1-\sqrt{13})/2$, so
+\[
+ p^+=\frac{d^2}{2}(39-9\sqrt{13}).
+\]
+Using $d^2=(11+3\sqrt{13})/2$ and multiplying out gives
+$p^+=(39+9\sqrt{13})/2=3s$.
+
+
+
+\paragraph{Exercise~\ref{ex:Verlinde-d1}.}
+\phantomsection
+\label{sol:ex:Verlinde-d1}
+For $i=1$, $[2i]=2$; for $i=4$, $[8]=5$ because $8\equiv-5$
+modulo thirteen. Hence
+\begin{align*}
+ d_1^2&=\one+a+c_0+c_1+c_2+d_1+d_3+d_4+d_5+d_6,\\
+ d_4^2&=\one+a+c_0+c_1+c_2+d_1+d_2+d_3+d_4+d_6.
+\end{align*}
+The absent residual objects are $d_2$ and $d_5$, respectively.
+Both dimension sums equal
+$1+4s+15d=9+27d=9d^2$.
+
+
+
+\paragraph{Exercise~\ref{ex:modular-extension}.}
+\phantomsection
+\label{sol:ex:modular-extension}
+The first two components of $Sm$ are each $A+B+2u=1$.
+The $a$ component is $2u+4/3=2$; each of the three $c_j$
+components is $2u-2/3=0$.  Every final component is $v-v=0$.
+Thus $Sm=m$.  Each nonzero entry of $m$ lies at twist one, so
+$\Theta m=m$.  Symmetry of $S$ gives
+$Smm^{\mathsf t}=mm^{\mathsf t}=mm^{\mathsf t}S$, and
+the analogous statement for $\Theta$ is immediate.
+To build a local CFT one still needs, among other things, actual
+chiral modules and vertex operators, a compatible algebra
+multiplication on the extension, and the appropriate positivity
+and sewing results.  A modular-invariant integer matrix contains
+none of those multiplication maps by itself.
+
+
+
+\paragraph{Exercise~\ref{ex:central-charge-scope}.}
+\phantomsection
+\label{sol:ex:central-charge-scope}
+In the first statement, the \emph{braided chiral representation
+category} $\Rep(U)$ is a Drinfeld center. Its Gauss--Milgram phase
+is one, so the chiral central charge obeys
+$e^{2\pi ic_U/8}=1$. The value $c_U=8$ satisfies this constraint.
+In the second statement, $\HH_3$ is a fusion category of full-CFT
+symmetry lines. That does not identify the theory's entire chiral
+representation category with $Z(\HH_3)$. Its center organizes
+symmetry sectors, which is a different assertion. Hence a proposed
+nonchiral theory with $c_L=c_R=2$ has no contradiction with the
+first construction: its left-right gravitational anomaly vanishes,
+and the symmetry claim alone imposes no condition $c_L=0\bmod8$.
+This explains compatibility; it does not establish the proposed
+$c=2$ theory or an anyon-chain scaling limit.
+
+

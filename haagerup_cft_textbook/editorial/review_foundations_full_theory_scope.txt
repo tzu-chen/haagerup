@@ -1,0 +1,174 @@
+Full-theory and sewing scope review
+Reviewer: foundations agent. Review completed 2026-10-05 20:02:20 UTC
+(actual clock read immediately before writing; read-only hand/source review).
+No numerical jobs, builds, or chapter edits.
+
+RESULT
+
+The existence statements should be retained. There is an actual unitary local
+two-dimensional conformal net here, conditional only on the construction
+inputs already stated, not merely a modular-invariant candidate. The local
+analytic manuscript proves this before its final VOA fusion-form comparison.
+The main improvement is to name the existence theorem and separate its net
+conclusion from the categorical all-surface factorization theorem and from
+analytic sewing on arbitrary Riemann surfaces. I found no reason to weaken
+the diagonal theory, the selected E8 full theory, or the rational defect and
+boundary formulas to conjectures.
+
+PRIORITIZED CONCRETE REPAIRS
+
+1. r05_full_theories.tex:28--31 and r08_sewing.tex:224--235: replace the generic
+   phrase 'canonical rational full-CFT construction' with its exact route at
+   least once. r04_unitarity.tex:550--555 already distinguishes the routes,
+   but does not name the theorem that realizes the diagonal full theory.
+
+   Suggested r05 replacement:
+   'The diagonal Longo--Rehren construction applied to the completely
+   rational net of Chapter~\ref{ch:unitarity} gives a unitary local full
+   conformal net with this Hilbert space. The rational full-center
+   construction organizes its sewing data. Merely writing the
+   modular-invariant sum would not supply either construction.'
+
+   The second sentence is optional; the first alone pins down actual
+   existence without suggesting that a net is defined by a completed table
+   of Riemann-surface amplitudes. No additional model-specific premise is
+   missing: the net has complete rationality, positive finite-index sectors,
+   and the ordinary-module/Hamiltonian identification needed for the trace.
+   The selected extension full theory is also actual: H' is the positive
+   holomorphic VOA identified with VE8, so H' tensor its antiholomorphic
+   counterpart is the familiar lattice full theory. Its U embedding remains
+   part of the choice, as the text correctly stresses.
+
+2. r08_sewing.tex:176--188 and 224--235: add one compact scope paragraph,
+   rather than weakening 'organizes oriented full-CFT sewing data'. That
+   statement is a correct standard theorem in the TFT framework. The
+   distinction is that its correlators are vectors in the modular-functor
+   spaces, and interpreting them as analytic functions on all surfaces uses
+   the corresponding analytic chiral-block and sewing comparison. The
+   abstract MTC alone supplies neither that interpretation nor analytic
+   convergence. The opening at 179--181 already says this correctly, but
+   'full-theory existence' several paragraphs later can obscure the point.
+
+   Suggested insertion after the algebra-object paragraph:
+   'There are two different kinds of sewing statement here. The TFT theorem
+   proves invariance under mapping classes and bulk and boundary
+   factorization for its categorical correlators. To interpret these as
+   analytic amplitudes on Riemann surfaces one also uses the chiral
+   conformal-block theory and its sewing and convergence theorems. The
+   annulus comparison in Chapter~\ref{ch:unitarity} establishes the
+   positivity and VOA--net statements used in this construction; it is not
+   itself a proof of every higher-genus analytic sewing theorem. The
+   diagonal local conformal net already exists by the preceding net
+   construction.'
+
+   This does not assert that higher-genus analytic sewing is impossible or
+   unproved in the literature. It identifies exactly what the arguments
+   cited in this book establish. The phrase at 227--228 ('a long table ...
+   does not by itself prove ... all sectors and genera') is true and can stay.
+
+3. r08_sewing.tex:184--188: positivity should be attributed to the positive
+   Q-system and unitary realization, rather than to the symmetric-special-
+   Frobenius identities alone. Present text already mentions the unitary
+   Q-system and 'positivity conditions', so this is a useful sharpening,
+   not a discovered false theorem. Suggested replacement of the two vague
+   sentences:
+   'The Frobenius identities by themselves do not assert reflection
+   positivity. Here the positive Q-system and the unitary chiral theory
+   provide the adjoint and Hilbert-space pairings used by the unitary
+   construction.'
+
+   At 37--38, optionally define a reflection-positive channel as one whose
+   two groups of insertions are related by reflection and adjoint. Its
+   pairing is a Gram matrix of states. This is not a claim that the D matrix
+   for arbitrary unrelated external fields is positive. The current
+   qualification 'the appropriate matrix' avoids the mathematical error,
+   but a beginning reader would benefit from the concrete Gram explanation.
+
+PREMISE/CONCLUSION LEDGER
+
+* Actual full local theory: hi_cft_c8_proof.tex:244--265 states the diagonal
+  unitary full conformal-net theorem. hi_cft_c8_manuscript_analytic.tex:
+  861--881 proves it from the completely rational net by Rehren's diagonal
+  construction. It explicitly says the final annulus compatibility claim
+  is not needed for this net construction or the character matching.
+  Primary checked: K.-H. Rehren, Canonical tensor product subfactors,
+  arXiv:math/9911149v2, Theorem 1.4, Proposition 1.5, Corollary 1.6.
+  https://arxiv.org/abs/math/9911149
+  Corollary 1.6 constructs a local two-dimensional net from the chiral
+  DHR system and the indicated Q-system/alpha-induction data; identity
+  coupling gives charge conjugation, agreeing with the displayed diagonal
+  partition function because all twelve labels here are self-dual.
+
+* Categorical sewing: Fjelstad--Fuchs--Runkel--Schweigert, TFT construction
+  of RCFT correlators V, arXiv:hep-th/0503194v2, section 1 and the oriented
+  modular-invariance/boundary-factorization/bulk-factorization theorems in
+  section 2 (in particular Theorem 2.13 for bulk factorization).
+  https://arxiv.org/abs/hep-th/0503194
+  The paper explicitly formulates its theorem categorically; analytical
+  issues enter through the structures assumed in identifying this model
+  with chiral conformal blocks. The theorem genuinely covers oriented
+  world sheets and their categorical factorization, not just the torus.
+  It is not a theorem that every symmetric special Frobenius algebra is
+  unitary. No star/positive hypothesis appears in that general construction.
+
+* Analytic diagonal full fields: Huang--Kong, Full field algebras,
+  arXiv:math/0511328, Theorem 3.8, constructs the diagonal genus-zero full
+  field algebra under the stated rationality, cofiniteness and duality
+  hypotheses. Their Modular invariance for conformal full field algebras,
+  arXiv:math/0609570, proves convergence/continuation of the relevant
+  genus-one full traces and modular invariance of the diagonal construction
+  (Theorem 5.1). These are precise analytic results, not only formal sums.
+  https://arxiv.org/abs/math/0511328
+  https://arxiv.org/abs/math/0609570
+  They are useful optional source-guide anchors if the book names analytic
+  genus-zero/genus-one conclusions. No need to introduce this additional
+  route merely to support the already-established net existence theorem.
+
+* Unitarity and reflection: r04 concludes complete unitarity, not merely
+  independent positive metrics on modules. Together with a specified
+  positive Q-system it supplies the correct unitary extension input.
+  For reflected Euclidean insertions, the positivity mechanism is the
+  Hilbert-space identity sum_ij conjugate(c_i)c_j <Theta(O_i) O_j>
+  = ||sum_j c_j O_j Omega||^2 >= 0, with the usual separated/regularized
+  insertions. Extending that statement to a particular all-surface analytic
+  construction uses its own analytic implementation; FRS identities alone
+  do not substitute for it.
+
+R05/R07 CHECKS
+
+r05:11--15 properly inherits construction and positivity hypotheses; all
+subsequent character counting is within the two actually constructed
+theories. Lines 581--590 correctly distinguish existence from explicit OPE
+coefficients. No additional caveat is needed on spectra or thermodynamics.
+
+r07:28--110 (Verlinde lines, twining/twisting) and 212--239 (Cardy annuli and
+g factors) are standard consequences for the actual rational diagonal
+theory. The derivation of the annulus constraint alone would not establish
+all boundary sewing, but the text presents these as boundaries in the
+canonical rational construction, not as arbitrary solutions of a NIM-rep.
+An optional one-clause cross-reference to the positive full-center
+construction is enough; do not make their existence conditional on a new
+unverified model-specific input.
+
+r07:345--414 correctly distinguishes the selected extension's all-module
+category H3, trivial local-module category, and 36 rational U-preserving
+bimodule defects. The right-module/opposite composition qualification is
+now precise. The twisted Hilbert-space formula explicitly invokes the
+rational defect construction for this selected extension and is not being
+deduced merely from the finite fusion ring. Keeping 'preserving U' and the
+specified embedding is essential; both are present.
+
+The net-side compatibility of the categorical full center with local full
+theories is also an established theorem, not a missing Haagerup conjecture:
+Bischoff--Kawahigashi--Longo, Characterization of 2D rational local conformal
+nets and its boundary conditions: the maximal case, arXiv:1410.8848,
+identifies the full-center and generalized Longo--Rehren constructions and
+relates the full net to the Morita class of the positive Q-system.
+https://arxiv.org/abs/1410.8848
+This is a useful concise primary reference if the source guide needs one
+bridge between r07 and r08. It should not be paraphrased as classification
+of all stress-tensor-preserving defects of the theory.
+
+No chapter edits made. Recommended size of changes: roughly half a page
+total, concentrating the distinction in r08 and naming Longo--Rehren once
+in r05 or r04. Avoid repeating a generic disclaimer at every formula.

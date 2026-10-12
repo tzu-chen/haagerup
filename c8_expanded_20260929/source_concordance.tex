@@ -1,0 +1,159 @@
+\section{Source concordance, version decisions, and assembly record}
+\label{exp:assembly}
+
+The base is \artifact{hi_cft_c8_proof.tex}, together with its structural,
+analytic, physics, and bibliography inputs as they stood on 29 September
+2026. The base PDF has 78 pages. The two companion PDFs have 20 and 17
+pages. This edition folds their relevant source text into the same
+document and adds the supplements named below. Its page numbers should
+not be substituted into historical audit reports for those earlier PDFs.
+
+\subsection{Result-to-source concordance}
+The following table identifies the principal data families. The individual
+supplements give more precise file names, formulas, and scope boundaries.
+The assembly manifest supplies full SHA-256 hashes. A hash fixes the bytes
+used by the transcription; it is not a proof of the mathematics in those
+bytes.
+
+\begin{longtable}{@{}P{.28\linewidth}P{.63\linewidth}@{}}
+\toprule Printed material & Saved source family\\\midrule\endhead
+Main construction and proof &
+\artifact{hi_cft_c8_proof.tex},
+\artifact{hi_cft_c8_manuscript_structure.tex},
+\artifact{hi_cft_c8_manuscript_analytic.tex}.\\
+Physics exposition &
+\artifact{c8_physics_20260927/spectrum.tex},
+\artifact{correlators.tex}, \artifact{couplings.tex},
+\artifact{defects.tex}, \artifact{physics_guide.tex} in the same directory.\\
+Small independent verification guide &
+\artifact{hi_cft_c8_verification_guide.tex},
+\artifact{c8_physics_20260927/verification_finite_inputs.tex},
+\artifact{c8_reviewability_20260927/structural_inputs.tex}.\\
+Finite fields and generation &
+\artifact{hi_cft_20260923_c8_exact_fields.json},
+\artifact{hi_cft_20260923_c8_minimal_generators.json},
+\artifact{c8_reviewability_20260927/minimal_generation_witness.json},
+the exact grade-three records, and the Gate 4/5 records cited in the
+finite supplement.\\
+Small stress and structural coordinates &
+\artifact{c8_reviewability_20260927/grade2_fields.tsv},
+\artifact{c8_reviewability_20260927/structural_fields.tsv}.\\
+Stress-factor and commutant records &
+The \artifact{hi_cft_20260923_proof_} and
+\artifact{hi_cft_20260923_next_structure_} result families,
+with the individual artifacts named in the structural supplement.\\
+Character and recurrence tables &
+\artifact{c8_physics_20260927/data/characters.json} and
+\artifact{c8_physics_20260927/data/fundamental_matrix.json}.\\
+Full spectra and scalars &
+\artifact{c8_physics_20260927/data/diagonal_spectrum.tsv},
+\artifact{e8_spectrum.tsv}, \artifact{scalars.tsv} in the same directory.\\
+Thermal intervals &
+\artifact{c8_physics_20260927/data/thermal.json};
+the separate \artifact{thermal_input_check.json} in the parent directory
+records the earlier check of the supplied enclosure of $\pi$.\\
+Complete primary basis and coupling atlas &
+\artifact{c8_physics_20260927/full_weight_two/low_weight_basis.json},
+\artifact{complete_primary_couplings.json} and
+\artifact{complete_primary_couplings.tsv} in that same subdirectory.
+The parent-directory export is the older 96-field record.\\
+Four-point and block tables &
+\artifact{c8_physics_20260927/correlators.json},
+\artifact{correlators.global_blocks.tsv},
+\artifact{correlators.terms.tsv}, and
+\artifact{correlators.samples.tsv} in the same directory.\\
+Fusion, defects and boundaries &
+\artifact{c8_physics_20260927/defect_data.json},
+\artifact{Cardy_annuli.tsv}, \artifact{E8_U_preserving_annuli.tsv},
+and the remaining named defect TSV exports.\\
+Original scoped replay ledgers &
+\artifact{c8_revision_20260927/finite_input_ledger_final.json},
+\artifact{c8_reviewability_20260927/reviewer_manifest.json},
+\artifact{c8_physics_20260927/release_audit.json}.\\
+Formalization assessment &
+\artifact{c8_physics_20260927/lean_baseline_assessment.tex} and
+\artifact{c8_physics_20260927/lean_assessment.tex}.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Specific version and interpretation decisions}
+
+The older search records retain their original conclusions and caveats.
+The new exposition uses the current manuscript for the main theorem's
+status. In particular, the initial list of missing annulus comparison
+arguments is superseded by the printed A1--A3 arguments in the current
+analytic appendix. The reader should assess those arguments directly;
+neither a finite output file nor the current edition's document build
+certifies them.
+
+The distinction between the original embedded extension and the selected
+extension persists throughout. The original boundary category is only
+identified up to the stated $\mathcal H_2/\mathcal H_3$ alternative. The
+separately selected extension is the one used for the specified
+Haagerup-action observables. A scalar character identity does not choose
+an extension algebra, and identical modular matrices do not resolve
+every equivalence of tensor categories.
+
+The exact $956$-dimensional grade-three calculation is a finite vector-space
+statement. The grade-four coefficient $6010$ in the character table is
+a consequence of the full character identification. It is not relabeled
+as a direct finite rank computation. Likewise, the finite Gate 4 and Gate 5
+records support their named reduction arguments; their counts do not mean
+that every required channel was separately recomputed as an ambient
+high-weight vector.
+
+The character table uses $h_{d_3}=15/13$, with grade measured above this
+actual ground weight. Replacing it with the congruent twist representative
+$2/13$ changes the physical spectrum and is incorrect. The $a$ and $c_0$
+characters agree, but both labels remain in sums over simple sectors.
+For noninvertible symmetry, invariance means eigenvalue equal to the
+vacuum eigenvalue, rather than equal to one. The different first-factor
+and both-factor invariant multiplicities are retained.
+
+The complete $113$-field primary tensor remains a chiral vacuum-module
+tensor. It does not provide the nonvacuum bulk three-point constants of
+the diagonal theory. Selected fractional lattice blocks likewise do not
+constitute sewn bulk four-point functions. No extra scattering, RG-flow,
+or exact-marginality claim is inferred from printing additional entries.
+
+\subsection{What is deliberately represented compactly}
+
+Large families are reduced only when the text gives a complete recovery
+rule. Opposite spin rows are identical and are folded with their individual
+multiplicities specified. The center fusion tensor is symmetric in its
+two input labels, so the unordered products determine every ordered entry.
+The primary coupling atlas uses one nonzero component for every nonzero
+ordered multiplet map, its exact phase and magnitude, and the explicit
+current-equivariance reconstruction. Its accompanying support table
+distinguishes a zero map from an omitted or uncomputed one. A finite
+recurrence specifies the remaining matrix coefficients without listing
+every matrix at every grade.
+
+Raw high-weight sparse vector stores, SQLite elimination databases, and
+all historical exploratory logs are not reproduced wholesale. Their
+mathematical identities, the recorded dimensions, the selected exact
+witnesses, and the remaining provenance obligations are stated. This
+keeps the document a verification draft rather than a line-for-line
+printout of the repository.
+
+\subsection{Rebuilding and checking this edition}
+
+The main source is \artifact{c8_expanded_20260929/haagerup_c8_expanded.tex}.
+Its copied figures are in \artifact{assets/}; the new input fragments and
+tables are beside it. Compile from that directory, with no shell escape.
+The README supplies guarded commands. No research scripts are imported
+or executed by document compilation.
+
+\artifact{assemble_draft.py} transcribes the existing character, spectrum,
+thermal, and coordinate records and incorporates the base source and
+companions. \artifact{physics_tables/build_physics_tables.py} produces
+the new physics table fragments from the completed release. Their input
+manifests record source identities. The table and document audit report
+is separate from the historical research replay reports. Rerunning these
+transcription tools requires the original repository inputs; compiling
+the distributed TeX source package does not.
+
+All original source and data files are opened read-only. A copy of the
+base TeX inputs is preserved under \artifact{base/}. The permanent shared
+desktop policy remains in force: the September 15 memory exception has
+expired. No new numerical research calculation is needed for this edition.

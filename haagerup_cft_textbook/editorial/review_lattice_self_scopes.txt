@@ -1,0 +1,80 @@
+Lattice author self-review: parent, crossing, and Cardy scopes
+2026-10-05, approximately 17:30 UTC
+
+No numerical execution. Sources read in full:
+hi_cft_20261001_theory_symmetric_parent.md
+hi_cft_20261001_theory_short_anchor_scope.md
+hi_cft_20261001_theory_module_mps_review.md
+hi_cft_20261001_theory_gapped_vacuum_fingerprint.md
+hi_cft_20260929_theory_crossing_gap.md
+hi_cft_20261001_theory_cardy_phase_obstruction.md
+hi_cft_20261001_light_symmetry.md
+
+Parent statement
+
+The l05 theorem is correctly conditional on the exact module/Q-system input
+and on the standard sufficiently-long block-MPS parent theorem. Its local
+symmetry proof uses open module intertwiners and adjoint closure; periodic
+four-state invariance alone is explicitly insufficient. The projector
+preserves physical interval endpoints and admissibility, making restriction
+to the constrained path space reducing. The conclusion is a one-site
+translation-invariant finite-range gapped parent on the physical object per
+cell, with four large-ring ground states. There is no claimed range-five
+gap, gap for the short missing-channel anchor, or conclusion for -sum P_rho.
+
+Changes made after review:
+- Distinguished the integer action on canonical unnormalized finite-ring
+  module tensors from the same matrix in an orthonormal infrared vacuum
+  basis. Independent normalization of finite-ring tensors changes entries
+  by norm ratios. The textbook no longer slides between those statements.
+- Added the local-idempotent metric: theta_f=b^2 theta_o and the Euler-
+  weighted action. It derives why the symmetric integer matrix and the
+  unequal Perron probabilities coexist.
+- Added a worked three-/four-site counterexample: S3=ker P_t has dimension
+  36, but rank subadditivity gives dim(ker P1 intersect ker P2)>=66 on the
+  168-dimensional open four-height space. This makes the failure of short
+  parent completeness concrete. Full spanning at larger lengths follows
+  because sum_a A^a is the invertible block diagonal sum of the W_M.
+
+Crossing statement
+
+The chapter uses the source's normalization F_D=(1-z)^(2delta)g_D(z)-
+z^(2delta)g_D(1-z), not the pilot's differently prefactored crossing
+function. The functional coefficient kappa=6/5 therefore agrees with its
+displayed derivative formula. All illustrative decimals are continuum
+hypotheses; none is called a certified chain limit or confidence interval.
+The finite higher charged candidate is already acknowledged, preventing
+the inference of an unseen lattice state or an apparent crossing violation.
+
+Changes made after review:
+- Supplied the Euler-beta proof of derivative and block bounds, including
+  the reweighted mean identity and Jensen step.
+- Displayed the uniform high-dimension rational lower bound .012780875,
+  so the infinite tail is visibly controlled without a dimension grid.
+- Explained the upgrade from a diagonal SL(2) exchange to a two-dimensional
+  scalar Virasoro primary: even-spin selection, odd relative-level
+  cancellation for scalar left/right factors, and absence of a new global
+  primary at Virasoro level one.
+
+Cardy statement
+
+The conclusion is restricted to canonical A=1 sewing for a positive unitary
+bosonic rational VOA with strictly positive nonvacuum lowest weights, and
+the complete isolated real scalar shell dimensions 2/2/4 with the full
+charge and nonzero-cubic hypotheses. It is not a no-go for all RCFTs,
+charge-conjugation partition functions, or additional degenerate shells.
+
+Change made after review:
+- Added the maximal-holomorphic-algebra argument before the ground-space
+  count. Positivity ensures only the right vacuum supplies right weight
+  zero, so every internal symmetry preserves V setwise and permutes the
+  module-pair summands. This closes the logical gap that would occur if
+  one merely chose an arbitrary smaller rational chiral subalgebra.
+
+Outstanding limitation
+
+These checks audit the chapter's use of completed local research arguments;
+they are not independent verification of every exact constructor output
+or a peer-review claim. The physical regular H3 chain remains unidentified
+at the October 1 cutoff. Root will reconcile completed October 5 updates
+near final integration.

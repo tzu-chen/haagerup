@@ -1,0 +1,102 @@
+First-year physics reader pass of r04_unitarity.tex
+Reviewer: lattice author; October 5, 2026, 18:35 UTC.
+Read current chapter in full, relevant VOA definitions, and the construction
+reviewer's latest follow-up. No computations or chapter edits.
+
+Overall judgment
+----------------
+The new analytic definitions substantially improve the chapter. A reader
+with the CFT and VOA primers can follow the core lemma, oscillator damping,
+range/density argument, ordinary-module reconstruction, and the paired
+rotation cancellation. The chapter now distinguishes three genuinely
+different tasks: positive module norms, comparison of actual represented
+operators, and positive fusion forms. It does not replace the latter two
+with a simple-object count.
+
+No new mathematical error found. The following small definition bridges
+would make the passage more self-contained for the stated physics audience.
+Line numbers refer to the version read at 18:35 UTC.
+
+1. r04:71--85 and 212--216: make local vacuum cyclicity explicit
+----------------------------------------------------------------
+The net definition says only "The vacuum is cyclic." Later the separating
+argument needs N_H(I') Omega to be dense for this particular nonempty
+interval, not merely cyclicity for the global observable algebra.
+
+Suggested insertion near the first definition:
+  "For a nonempty interval the vacuum is also cyclic for its local algebra:
+   N(I) Omega is dense (the Reeh--Schlieder property). This local statement,
+   supplied by the conformal-net framework, is stronger than global
+   vacuum cyclicity."
+Then the separating proof is completely intelligible from definitions
+already present. The proof itself is correct: y b Omega=b y Omega=0
+on a dense set and boundedness give y=0.
+
+2. r04:96--110 and 219--224: give statistical dimension one concrete meaning
+----------------------------------------------------------------------------
+The terms "statistical dimension", "two-interval index", and later "index"
+appear before a numerical interpretation. They are all standard, but a
+beginning physics student may otherwise read them as three unrelated counts.
+One short sentence after the sector paragraph would suffice:
+  "For a localized sector represented by an endomorphism rho, its
+   statistical dimension is the square root of the corresponding local
+   subfactor index, d(rho)^2=[N(I):rho(N(I))]; it is a categorical size,
+   not the number of states in an energy eigenspace."
+If desired, refer back to the finite-index discussion in the foundations.
+This is pedagogical context, not a request to reprove index theory.
+
+3. r04:479--485: define Haag duality where the term first does work
+-----------------------------------------------------------------
+The chain of inclusions is excellent, but the condition is only named.
+Add a short equation or phrase:
+  "Haag duality says A(I')'=A(I) in the vacuum representation: every
+   bounded operator commuting with the complementary local algebra
+   already belongs to the interval algebra."
+The existing displayed chain then becomes a complete, easily checked
+argument. Strong locality supplies one inclusion; Haag duality supplies
+the reverse completion.
+
+4. r04:274--290: one backward reference is useful
+------------------------------------------------
+The ordinary/weak-module distinction is central here and is already
+defined carefully in ch:vertex_algebras and ch:regularity. A parenthesis
+"in the sense of Chapter ... " at the first reconstructed weak module
+would help a reader who enters this chapter after the branching calculation.
+No further redefinition is necessary.
+
+Hand checks and pedagogical successes
+------------------------------------
+* The core definition uses the graph norm, and the proof tracks both
+  components of graph convergence. Reducing T and 1-P really does give
+  the adjoint statement; no hidden core hypothesis for T* is required.
+* A bounded-energy cut-off space is used before ordinaryness is proved.
+  The later projection argument justifies finite energy multiplicities,
+  rather than building them into the net-sector assumption.
+* The oscillator norm is the supremum of squared shift weights. It gives
+  an immediate physical model for annulus damping without treating
+  the inverse damping operator as bounded.
+* The annulus range lemma is correct. Its equality of subspaces uses
+  lambda^{-1} r^{-L0} M^fin=M^fin. The geometric subdisc paragraph
+  now supplies the hypotheses instead of assuming them for arbitrary
+  bounded operators.
+* For fixed input p, output q and homogeneous field weight k,
+  n=p+k-q-1 is correct. Finite sums of such states give a finite
+  Laurent polynomial. The component argument uses an open nonempty
+  overlap with the comparison regions and is suitable for the elementary
+  identity theorem.
+* The tensor-product boundedness requirement for localized insertions
+  controls the inserted state as well as the state on which it acts.
+  This distinction is made explicitly, and the analytic theorem remains
+  a named input rather than an unproved consequence of polynomial
+  energy bounds alone.
+* The paired localizer formulas have the correct opposite deck phases.
+  Since a VOA mode shifts energy by an integer, Z commutes with it;
+  the pair insertion is invariant. The h=1/3 exercise is a useful
+  minimal worked check of a phase invisible in the vacuum.
+* The last section explains why complete unitarity permits the positive
+  Q-system and the specified H3 extension. It correctly preserves the
+  distinction between isomorphic ambient E8 theories and the particular
+  embedding of U.
+
+No expansion of the operator-algebra proof machinery is needed for this
+audience beyond the three short definition bridges above.

@@ -1,0 +1,119 @@
+\section{Solutions for Chapter~\ref{ch:haagerup}}
+
+\paragraph{Exercise~\ref{ex:H3-fusion}.}
+\phantomsection
+\label{sol:ex:H3-fusion}
+The invertible factors give
+$A_gA_h=\alpha^{g+h}=A_{g+h}$ and
+$A_gR_h=\alpha^{g+h}\rho=R_{g+h}$.
+The relation $\rho\alpha^h=\alpha^{-h}\rho$ gives
+$R_gA_h=\alpha^{g-h}\rho$.  It also gives
+\[
+ R_gR_h=\alpha^{g-h}\rho^2
+ =A_{g-h}+\sum_kR_{g-h+k}
+ =A_{g-h}+\sum_kR_k.
+\]
+The product of $A_g$ with an invertible object contains the unit
+exactly for $A_gA_{-g}$, and $R_gR_h$ contains the unit
+exactly when $g=h$, proving the duality rule.  Finally,
+$\alpha\rho=R_1$ and $\rho\alpha=R_2$ are distinct simples.
+A braiding would make them isomorphic, so no braiding exists on
+this six-object category.
+
+
+
+\paragraph{Exercise~\ref{ex:H3-F}.}
+\phantomsection
+\label{sol:ex:H3-F}
+Put $r=\sqrt{13}$. From the radicals,
+\[
+ y_-+y_+=\frac{5-r}{6},\qquad
+ y_-y_+=\frac{(5-r)^2-6(1+r)}{144}
+          =\frac{2-r}{9}=\frac{x}{3}.
+\]
+Consequently
+\[
+ xy_-+y_-y_++y_+x
+ =\frac{(2-r)(7-r)}{18}
+ =\frac{3-r}{2}=-d^{-1}.
+\]
+Together with $x+y_-+y_+=-d^{-1}$, this gives
+$x^2+y_-^2+y_+^2=d^{-2}+2d^{-1}=1-d^{-1}$.
+The first row of the full matrix has norm squared
+$d^{-2}+3d^{-1}=1$. Its inner product with any lower row is
+$d^{-1/2}(d^{-1}+x+y_-+y_+)=0$. Each lower row has norm
+squared $d^{-1}+x^2+y_-^2+y_+^2=1$, and two distinct lower
+rows have inner product $d^{-1}+xy_-+y_-y_++y_+x=0$.
+Thus all rows are orthonormal. This checks the inverse of one
+recoupling map. The pentagon also compares compositions of
+different blocks, for every admissible choice of external labels;
+those equations have not been checked by this calculation.
+
+
+
+\paragraph{Exercise~\ref{ex:H3-P}.}
+\phantomsection
+\label{sol:ex:H3-P}
+Let $S_0=\sum_gY_{A_g}$ and $S_1=\sum_gY_{R_g}$.  Summing
+the fusion rules gives
+\[
+ S_0^2=3S_0,\quad S_0S_1=S_1S_0=3S_1,\quad
+ S_1^2=3S_0+9S_1.
+\]
+For $N=S_0+dS_1$, it follows that
+\[
+ N^2=3(1+d^2)S_0+(6d+9d^2)S_1=3sN,
+\]
+where $6d+9d^2=3sd$ follows from $d^2=1+3d$.
+Therefore $P_+=N/(3s)$ is idempotent.  Also
+\[
+ Y_\rho S_0=S_1,\qquad
+ Y_\rho S_1=S_0+3S_1,
+\]
+so $Y_\rho N=dS_0+(1+3d)S_1=dN$.
+No eigenvectors, associator entries, or numerical approximations
+are needed for this ring identity.
+
+
+
+\paragraph{Exercise~\ref{ex:H3-characteristic}.}
+\phantomsection
+\label{sol:ex:H3-characteristic}
+The block-constant subspace gives characteristic polynomial
+$x^2-3x-1$.  On the two copies of the sum-zero subspace, the
+matrix exchanges the blocks, giving $+1$ and $-1$ each twice.
+Thus
+\[
+ \det(xI-N_\rho)=(x^2-3x-1)(x^2-1)^2.
+\]
+Taking traces of powers gives \eqref{eq:H3-path-count}.
+The recursion yields
+$C_2=11,C_3=36,C_4=119,C_5=393,C_6=1298$; adding the
+even-length contribution four gives $1302$ paths at $L=6$.
+
+
+
+\paragraph{Exercise~\ref{ex:H3-neutral}.}
+\phantomsection
+\label{sol:ex:H3-neutral}
+On $\C^3\oplus\C^2\oplus(\C^2)^{\oplus4}$ with its standard
+positive form, take
+\begin{align*}
+ Y_\alpha&=I_3\oplus I_2\oplus
+     \begin{pmatrix}\omega&0\\0&\omega^2\end{pmatrix}^{\oplus4},\\
+ Y_\rho&=dI_3\oplus(-d^{-1}I_2)\oplus
+     \begin{pmatrix}0&1\\1&0\end{pmatrix}^{\oplus4}.
+\end{align*}
+Each block obeys the fusion rules, and
+$Y_\alpha^\dagger=Y_{\alpha^2}$, $Y_\rho^\dagger=Y_\rho$.
+This is a unitary $*$-representation of dimension
+$3+2+4\cdot2=13$; it does not require the noninvertible operator
+$Y_\rho$ itself to be a unitary matrix.
+The neutral projector $E$ has rank five, since it is the identity
+on both kinds of scalar representation and zero on every charged
+doublet.  The ranks of $P_+$, $P_-$, and $P_{\rm ch}$ are
+$3,2,8$, respectively.  There are five $\alpha$-neutral states
+but only three fully Haagerup-invariant states.  Neutrality under
+the invertible subgroup is therefore a strictly weaker condition.
+
+

@@ -1,0 +1,67 @@
+Teaching review of all39 construction exercises and solutions
+2026-10-05 19:07:20 UTC
+
+Compared the exercises in c01--c06 with their active solution files
+solutions/c01_lattice_embedding.tex through solutions/c06_cosets.tex.
+Hand algebra and lightweight text editing only; no numerical processes
+or typesetting. Original aggregate archives were not edited.
+
+The stated answers and formulas passed the review. The following
+teaching improvements were made where an omitted step was useful:
+
+c01: identify the exponential generating the four singular terms;
+show the complementary-weight common denominator and the affine-top
+premise; give theta_g(E_R)=-F_R and the weight-one mode adjoint;
+explain isotropic glue pairings by polarization and distinguish the
+size3 glue subgroup from the size9 discriminant group.
+
+c02: work the first iterated-translation example; give explicit
+raising preimages and clarify that the raising quotient is only a
+vector-space quotient; state the denominator condition for rational
+matrix specialization.
+
+c03: derive the parafermion charge subtraction before substituting;
+distinguish bosonic parity from odd conformal weight in skew symmetry;
+check both square roots and linear independence of the two isotropic
+lines; include the lower as well as upper expectation bound for the
+noncommuting positive matrices.
+
+c04: state why the finite trace argument needs no Hermitian form on
+the unknown module; take truncation index at least3; fill the exact
+moderate-growth substitution A=C_X^2 with fixed prefactor d0(1)^2,
+including all sufficiently large odd as well as even n.
+
+c05: show the PF top fraction4/39 and distinguish its charge
+multiplicity from bulk pairing; separate Schur's endomorphism count
+from the structural boundary-rank theorem; rule out rho=0, solve both
+one-dimensional characters, and prove irreducibility of the displayed
+two-dimensional representation; spell out the reversed squared
+inequality and the D=10 equality hypothesis; derive the polynomial
+d^4-11d^2+1 from the fusion dimension equation.
+
+c06: retain the original-algebra convention in the six-vacuum answer;
+show all three Griess coefficient ratios; derive every grade-four
+Virasoro Gram entry; normalize the group-valued unit assignment;
+give explicit parallel/perpendicular positive energies adding to
+m^2+n^2. The irrational-projection example now explicitly establishes
+infinitely many states in a bounded reduced-energy interval, without
+claiming infinitely many at one exact energy. Explain the integer
+multiplicity use in the diagonal-square estimate, and show the exact
+global-dimension threshold in the descent solution. Finally identify
+the descent algebra as R(1), not the original E8/U extension algebra.
+
+No exercises or labels were added. No numerical formula required
+correction. The text audit passed:151 exercises,151 dedicated
+solutions,errors=[]. Root was told that all six TeX files were stable
+before its next source-hashed PDF build.
+
+Optional editorial ledger:
+construction_dependency_ledger.tex.txt is a compact reader-facing
+proposal organized around changing the defining fields, not a second
+chapter roadmap. It distinguishes concrete finite inputs from reusable
+structural theorems at the four key handoffs. The c01 roadmap and r10
+verification appendix already cover much of this material; integration
+is optional and should replace repetition if used. Scope-foundations
+independently advised focusing on finite membership certificates,
+positive-stress spectra before strong unitarity, and the separate
+sector/annulus comparison. These distinctions inform the proposal.

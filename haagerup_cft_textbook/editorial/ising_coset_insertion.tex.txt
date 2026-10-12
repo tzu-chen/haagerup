@@ -1,0 +1,83 @@
+% Insert after the existing diagonal affine coset example in r02.
+% No new macros or exercises. Primary convention check:
+% Quella--Schomerus, hep-th/0203161, Section 4.3:
+% https://arxiv.org/html/hep-th/0203161#S4.SS3
+
+\begin{example}[The three Ising weights and a branching grade]
+\label{ex:voa-Ising-branching}
+Let $L_k(\lambda)$ denote the integrable affine
+$\mathfrak{sl}_2$ module of level $k$ and highest weight
+$\lambda\in\{0,\ldots,k\}$. Its top has spin
+$j=\lambda/2$. The quadratic Casimir is $j(j+1)$, so
+the Sugawara formula gives
+\[
+ h_k(\lambda)=\frac{j(j+1)}{k+2}
+             =\frac{\lambda(\lambda+2)}{4(k+2)}.
+\]
+Under the diagonal level-two algebra, write
+\[
+ L_1(\lambda)\otimes L_1(\mu)
+ =\bigoplus_{\nu=0}^2 L_2(\nu)\otimes B_{\lambda,\mu}^{\nu}.
+\]
+The spaces $B$ are coset modules. If their first diagonal
+highest vector occurs at numerator grade $N$, its coset weight is
+\begin{equation}
+ h_C=h_1(\lambda)+h_1(\mu)+N-h_2(\nu).
+ \label{eq:voa-coset-grade}
+\end{equation}
+Here $N$ is an integer excitation above the numerator's own
+lowest energy, and cannot be dropped from the formula.
+
+Only labels with $\lambda+\mu-\nu$ even are admissible:
+the diagonal $SU(2)$ center acts on the numerator by
+$(-1)^{\lambda+\mu}$ and on the denominator by $(-1)^\nu$.
+Affine current descendants preserve this parity. The diagonal
+GKO branching theorem supplies sufficiency and completeness in
+this example, and identifies
+\[
+ (\lambda,\mu;\nu)\sim(1-\lambda,1-\mu;2-\nu).
+\]
+This is an identification of coset modules, not of numerator
+modules. There are six admissible triples and three pairs, with
+no fixed triple. Representatives and their weights are
+\begin{center}
+\begin{tabular}{c|c|c|c}
+$(\lambda,\mu;\nu)$ & $N$ & $h_C$ & Ising sector\\
+\hline
+$(0,0;0)$ & $0$ & $0$ & $\one$\\
+$(1,0;1)$ & $0$ & $\frac14-\frac3{16}=\frac1{16}$ & $\sigma$\\
+$(1,1;0)$ & $0$ & $\frac14+\frac14=\frac12$ & $\epsilon$
+\end{tabular}
+\end{center}
+The last two grade-zero branches are visible in the finite
+$\mathfrak{sl}_2$ products: doublet times singlet is a doublet,
+and doublet times doublet contains a singlet.
+
+The equivalent label $(0,0;2)$ reveals the grade correction.
+Let $J_1^a,J_2^a$ be the two level-one currents and $\Omega$
+the product vacuum. The three nonzero states
+\[
+ w^a=(J_{1,(-1)}^a-J_{2,(-1)}^a)\Omega
+\]
+occur at numerator grade one. For $J_D^b=J_1^b+J_2^b$,
+the two equal central terms cancel, giving
+\[
+ J_{D,(n)}^b w^a=0\quad(n>0),\qquad
+ J_{D,(0)}^b w^a=f^{ba}{}_c w^c.
+\]
+Thus the $w^a$ form a diagonal affine spin-one top; its raising
+component is a highest vector with $\nu=2$. There is no such
+top at grade zero, whose space is only the vacuum. Consequently
+\[
+ h_C=0+0+1-h_2(2)=1-\frac12=\frac12,
+\]
+as required by $(0,0;2)\sim(1,1;0)$. The states $w^a$ carry
+diagonal charge; the coset sector is their multiplicity space.
+They are not themselves fields of the vacuum commutant.
+
+The GKO theorem identifies these branching modules with the
+three irreducible Ising Virasoro modules and the commutant with
+the Ising chiral algebra. Central charge subtraction alone had
+not established that statement: it contained no branching
+selection, identification, or lowest-grade information.
+\end{example}

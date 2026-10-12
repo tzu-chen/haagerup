@@ -1,0 +1,1375 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,
+  citecolor=MidnightBlue,pdftitle={A central-charge-eight CFT with Haagerup symmetry: construction, spectrum and observables},
+  pdfauthor={Research manuscript},pdfsubject={Physics and exact construction, with explicit review obligations}}
+\urlstyle{tt}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{0.35em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Central-charge-eight Haagerup construction}
+\fancyhead[R]{\small Review draft}
+\fancyfoot[C]{\thepage}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{certificate}[theorem]{Certificate input}
+\DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\Com}{Com}
+\DeclareMathOperator{\FPdim}{FPdim}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\wt}{wt}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\qdim}{qdim}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\Aut}{Aut}
+\renewcommand{\Vec}{\mathrm{Vec}}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\one}{\mathbf1}
+\newcommand{\artifact}[1]{\textnormal{\nolinkurl{#1}}}
+% Breakable review markers require only standard LaTeX and xcolor.
+% Their textual labels remain meaningful in a monochrome printout.
+\newenvironment{reviewnote}[1]{\par\addvspace{8pt}\begingroup
+  \color{Sepia}\noindent\rule{\linewidth}{0.7pt}\par\nobreak
+  \noindent\textbf{REVIEW --- #1}\par\nobreak\small\noindent\ignorespaces
+}{\par\noindent\rule{\linewidth}{0.7pt}\par\endgroup\addvspace{8pt}}
+\newenvironment{criticalnote}[1]{\par\addvspace{8pt}\begingroup
+  \color{BrickRed}\noindent\rule{\linewidth}{1pt}\par\nobreak
+  \noindent\textbf{HIGH PRIORITY REVIEW --- #1}\par\nobreak\small\noindent\ignorespaces
+}{\par\noindent\rule{\linewidth}{1pt}\par\endgroup\addvspace{8pt}}
+\title{A central-charge-eight CFT with\\[3pt]
+  Haagerup symmetry\\[5pt]
+  \large Construction, spectrum and observables}
+\author{Research manuscript}
+\date{27 September 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We study a unitary two-dimensional conformal field theory at
+$c_L=c_R=8$ with Haagerup non-invertible symmetry. Its construction uses
+an explicit six-current chiral algebra $U\subset V_{E_6\oplus A_2}$,
+with affine levels $1$ and $39$. Under the stated exact construction
+inputs, we establish rationality and complete unitarity, identify the
+twelve Evans--Gannon characters, and obtain both a diagonal $U$ theory
+and a chosen holomorphic $E_8$ extension with Haagerup defects.
+These full theories have different physics: their first scalar
+dimensions are respectively $2/3$ and $2$, while the first scalars
+invariant under the specified full categorical symmetry have dimension
+two. We compare these points with published modular-bootstrap bounds
+and compute spectra with spin through dimension $24$, finite-volume
+thermodynamics with explicit truncation bounds, exact chiral three-point
+data and four-point functions, and defect and Cardy-boundary observables.
+The accompanying tables retain exact arithmetic and normalization
+conventions. We distinguish actual lattice correlators from character
+consequences and from nonvacuum bulk sewing data that remain uncomputed.
+The mathematical arguments, finite certificate inputs, and limited
+Lean formalizations are documented separately for review.
+\end{abstract}
+
+\begin{reviewnote}{Status of the construction}
+This is a research draft. The realization statements depend on the
+explicit finite inputs in Section~\ref{sec:ledger}; the subsequent
+algebraic and analytic implications are argued in the text. Exact
+replays check the specified finite identities, and the available Lean
+lemmas cover only limited parts of the argument. Neither is a machine
+verification of the complete CFT construction. The physics tables state
+which construction results each observable uses.
+\end{reviewnote}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Introduction and statement of results}
+\label{sec:statement}
+
+Non-invertible topological lines constrain the spectrum and interactions
+of a two-dimensional CFT, but a consistent set of line fusion rules does
+not by itself produce a local theory. The Haagerup categories offer a
+particularly concrete test: they have small fusion rings, nonintegral
+quantum dimensions, and no immediate realization as an ordinary finite
+group symmetry. For physics, the questions are both constructive and
+quantitative. Does a unitary CFT realize the category, where does that
+theory lie in bootstrap exclusion plots, and which normalized observables
+can be computed beyond a torus partition function?
+
+Evans and Gannon supplied the modular data and candidate character
+vectors at central charge eight \cite[Sections 2.4 and 5]{EG}.
+Albert--Honda--Kaidi--Zheng studied a proposed Haagerup action in
+$(E_8)_1$ and the corresponding symmetry-resolved bootstrap
+\cite{AHKZ}. Here an explicit lattice construction supplies the
+operator products needed to go beyond modular data. It also makes an
+essential distinction visible: the diagonal full CFT of the smaller
+chiral algebra $U$ is different from the full CFT of its holomorphic
+$E_8$ extension. The former has many relevant scalars; the latter has
+none. Their symmetry-invariant scalar gaps nevertheless agree at two.
+
+The principal spectral comparison is as follows. Degeneracies count
+individual Virasoro-primary components, rather than extended-algebra
+multiplets. In the last row the diagonal theory uses all Verlinde
+lines, and the extension uses the specified first chiral Haagerup factor.
+\begin{center}\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Observable&Diagonal $U$&Selected $E_8$ full theory\\
+\midrule
+Currents per chirality&$6$&$248$\\
+First nonidentity Virasoro-primary dimension&$2/3$&$1$\\
+First nonidentity scalar dimension&$2/3$&$2$\\
+Relevant scalar components&$2941$&$0$\\
+Dimension-two scalar components&$19558$&$61504$\\
+Invariant scalar gap (multiplicity)&$2\ (36)$&$2\ (1488)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Our interaction data include a complete three-point tensor for the
+$113$ weight-two chiral Virasoro primaries of $U$, and explicit
+normalized four-point functions. The spectrum export reaches total
+dimension $24$. Defect-resolved partition functions and boundary
+annuli give observables that distinguish the categorical action even
+when the ordinary $E_8$ partition function is already known.
+
+We start with actual vectors in a positive-definite lattice VOA. The
+ambient vertex operators fix all products and their associativity from
+the outset. The first substantive problem is then to prove that these
+vectors generate a proper subalgebra. Generating additional fields in
+weights two and three does not settle that question: singular products
+of higher fields could still create new currents. We address this issue
+by a finite strong-generation criterion. Its input consists of exact
+normal-product identities and the recursive provenance of the higher
+generators. Its output controls every conformal weight.
+
+The construction has three distinct stages. The first constructs the subalgebra and
+proves properness from explicit finite data. The second uses positive
+conformal vectors, branching, and fusion-category arguments to analyze
+its representation theory. The third compares VOA modules with conformal
+net sectors, proves the net realization, and establishes complete
+VOA unitarity through bounded annulus insertions. In particular,
+the existence of a positive vacuum inner product is not substituted for
+positivity of all fusion pairings.
+
+Our presentation uses the normal-product conventions of De Sole--Kac
+\cite[Section 2]{DSK}, separates character-theoretic information as in
+Evans--Gannon \cite{EG}, and states analytic transport hypotheses in the
+operator-theoretic setting of Carpi--Kawahigashi--Longo--Weiner \cite{CKLW}.
+These works also guide the level of detail: finite input is recorded as
+such, and each passage to an infinite-dimensional conclusion is made by
+a separate lemma. The exact arithmetic certificates are accompanying
+data, not substitutes for these implications.
+
+\subsection{The candidate and its finite construction}
+
+Let
+\[
+ B=V_{E_6\oplus A_2},\qquad H=V_{E_8},\qquad B\subset H
+\]
+be the standard index-three lattice extension. The notation \(A_{1,k}\)
+means the simple affine VOA \(L_k(\mathfrak{sl}_2)\). Fix the embedding
+\(\mathcal K=A_{1,1}\otimes A_{1,39}\subset B\) described in
+Section~\ref{sec:construction}. Let \(u\in B_2\) be the field in
+\eqref{eq:u}, and define the \emph{actual generated} vertex algebra
+\begin{equation}\label{eq:U}
+ U=\langle\mathcal K,\omega_B,u\rangle\subset B.
+\end{equation}
+All products are computed in this lattice VOA. Thus associativity is
+inherited from the ambient algebra, rather than assumed for an abstract
+presentation inferred from character coefficients.
+Throughout the normal-space and mode formulas, \(K=\mathcal K_1\)
+denotes only the six-dimensional current space, not the full affine VOA.
+
+\begin{proposition}[Computational properness conclusion]\label{prop:mainproper}
+Accept the exact lattice identities and provenance recorded in
+Section~\ref{sec:ledger}. The algebra \(U\) is strongly generated by
+actual fields of weights at most four. Its weight-one space is
+\[
+ U_1=\mathfrak{sl}_2\oplus\mathfrak{sl}_2,\qquad \dim U_1=6.
+\]
+Consequently \(U\subsetneq B\), since \(\dim B_1=86\).
+\end{proposition}
+The finite certificates and the all-weight implication are presented in
+Sections~\ref{sec:finite}--\ref{sec:properness}. This is the most directly
+checkable part of the construction.
+
+\begin{corollary}[Initial graded pieces]\label{cor:initial-grades}
+Under the same finite-certificate hypotheses, $U$ is a simple unitary
+VOA of CFT type with the ambient conformal vector and central charge
+eight. Moreover,
+\[
+ U_2=S_2,\qquad U_3=S_3,\qquad
+ \ch_U(\tau)=q^{-1/3}(1+6q+120q^2+956q^3+O(q^4)).
+\]
+Here $S_2,S_3$ are the concrete spaces in
+Certificate~\ref{cert:initial}. This assertion does not require a modular
+character calculation.
+\end{corollary}
+The proof is given after the properness argument. In particular the
+coefficient $6010$ in the proposed character below has a different
+dependency from the first four coefficients.
+
+We write $\HH_3$ for the unitary Haagerup fusion category with six
+simple objects $\one,\alpha,\alpha^2,\rho,\alpha\rho,\alpha^2\rho$
+and fusion rules
+\[
+ \alpha^3=\one,\qquad \alpha\rho=\rho\alpha^{-1},\qquad
+ \rho^2=\one+\rho+\alpha\rho+\alpha^2\rho.
+\]
+Here $\operatorname{FPdim}(\rho)=(3+\sqrt{13})/2$.
+The other unitary category with this fusion ring, denoted $\HH_2$,
+is Morita equivalent to $\HH_3$. Consequently their Drinfeld centers
+are equivalent even though the fusion categories are not. In the
+statement below $Z$ denotes this center, not merely its modular matrices.
+
+\begin{theorem}[Conformal-net realization]\label{thm:main-net}
+Assume the exact finite construction inputs recorded in
+Section~\ref{sec:ledger} and Certificate~\ref{cert:structural-inputs}.
+The VOA $U$ is strongly rational and strongly unitary, with central
+charge eight. Its completely rational smeared-field conformal net
+$\mathcal N_U$ satisfies
+\[
+ \Rep(\mathcal N_U)\simeq Z(\HH_3)
+\]
+as unitary ribbon categories. The twelve-component character vector
+is the $\gamma=0$ Evans--Gannon vector, and in particular
+\begin{equation}
+ \ch_U(\tau)=q^{-1/3}\bigl(1+6q+120q^2+956q^3+6010q^4+\cdots\bigr).
+ \label{eq:vacchar}
+\end{equation}
+There is a diagonal unitary full conformal net with $c_L=c_R=8$
+and partition function $\sum_{i=1}^{12}|\chi_i(\tau)|^2$.
+\end{theorem}
+The proof is assembled in Theorem~\ref{thm:positive-stress-rationality},
+Proposition~\ref{prop:analytic-strong-unitarity},
+Corollary~\ref{cor:analytic-net-haagerup}, and
+Proposition~\ref{prop:analytic-diagonal}. The character argument is
+given before the analytic comparison and does not presume it.
+
+\begin{theorem}[VOA realization and holomorphic extension]\label{claim:main}
+Under the same construction inputs, $U$ is
+completely unitary and
+\begin{equation}\label{eq:maincat}
+ \Rep(U)\simeq Z(\HH_3)
+\end{equation}
+as unitary ribbon categories. There is a unitary holomorphic extension
+$H'\cong V_{E_8}$ whose category of all algebra modules is $\HH_3$;
+its algebra-bimodule category is
+$\HH_3\boxtimes\HH_3^{\mathrm{op}}$.
+\end{theorem}
+
+The additional analytic step is the pairwise annulus comparison in
+Proposition~\ref{clm:analytic-annulus}. Together with module exhaustion,
+it gives Theorem~\ref{thm:analytic-complete-unitarity}; the categorical
+identification and extension are then proved in
+Section~\ref{sec:analytic-category} and
+Section~\ref{sec:analytic-full-theory}.
+
+Here \(H'\) is obtained by transporting the canonical \(\HH_3\)
+Lagrangian algebra. It need not coincide with the originally embedded
+extension \(H/U\); the argument identifies that original
+all-module category only up to the alternatives \(\HH_2,\HH_3\).
+The full-CFT defects in Theorem~\ref{claim:main} preserve \(U\), and need
+not commute with the enlarged \(E_8\) chiral algebra.
+
+\subsection{How the qualifications are used}
+Amber \textbf{REVIEW} notes identify the boundary of exact construction
+inputs and their replay coverage. Red \textbf{HIGH PRIORITY REVIEW}
+notes identify the scope of the construction and the limits of its
+verification. A proved lemma is not made into an additional hypothesis
+merely because its argument is new; its proof and external dependencies
+are supplied for scrutiny. Exact construction identities that are
+accepted as finite inputs are stated separately from these deductions.
+
+\begin{center}
+\begin{tabular}{@{}p{0.27\linewidth}p{0.65\linewidth}@{}}
+\toprule
+Part of the argument & Nature of its evidence \\
+\midrule
+Explicit fields and finite closure & Exact arithmetic over
+\(\QQ(\sqrt{13},\sqrt{-3})\), saved recipes and full residuals.\\
+Properness in all weights & Recursive algebraic theorem plus finite
+certificates; no character upper-bound extrapolation.\\
+Rationality and branching & Positive-stress and category arguments,
+embedded-field and finite-top inputs, and cited external theorems.\\
+Haagerup modular data & Rank exclusions, indicator and character
+arguments printed below, with exact finite arithmetic checked separately.\\
+Net realization and strong unitarity & Actual branching, linear
+reconstruction, sector counting, and unitary classification.\\
+Complete VOA unitarity and extension & Pairwise annulus comparison,
+fusion positivity, unitary classification, and extension theorems.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{A reading guide and the two full theories}
+Sections~\ref{sec:physics-spectrum}--\ref{sec:physics-data-guide}
+collect the physical observables before the construction proofs.
+All central charges quoted in a bootstrap plot mean the common chiral
+value $c=c_L=c_R$, so our point is $c=8$, not $c_L+c_R=16$.
+We use $\Delta=h+\bar h$ and $s=h-\bar h$; a scalar has $s=0$.
+A ``primary'' without further qualification is primary for the two
+Virasoro algebras. An extended-algebra sector can contain many such
+primaries, so a sector count is not an operator degeneracy.
+
+Write $M_0=U,M_b,M_a,M_{c_0},\ldots,M_{d_6}$ for the twelve simple
+$U$ modules, and $H'$ for the selected extension in Theorem~\ref{claim:main}.
+The two bulk Hilbert spaces are
+\begin{equation}\label{eq:physics-two-theories}
+ \mathcal H_{\rm diag}=\bigoplus_i M_i\otimes\overline{M_i},
+ \qquad
+ \mathcal H_{E_8}=H'\otimes\overline{H'}.
+\end{equation}
+The canonical Verlinde lines of the first theory form
+$\Rep(U)=Z(\HH_3)$. In the second theory we specify the chosen first
+chiral factor $\HH_3\subset\HH_3\boxtimes\HH_3^{\rm op}$ when discussing
+the Haagerup bootstrap. Statements about invariance under both factors
+are labeled separately. These lines preserve $U$ and the stress tensor;
+they need not preserve the enlarged $E_8$ current algebra pointwise.
+
+\input{c8_physics_20260927/spectrum.tex}
+\input{c8_physics_20260927/correlators.tex}
+\input{c8_physics_20260927/couplings.tex}
+\input{c8_physics_20260927/defects.tex}
+\input{c8_physics_20260927/physics_guide.tex}
+
+\appendix
+\section{The explicit lattice construction}\label{sec:construction}
+\subsection{Lattice, cocycle, and currents}
+Use simple lattice vectors indexed \(0,\ldots,7\). The Gram matrix
+has diagonal entries two and off-diagonal entries minus one on
+\[
+ (0,1),(1,2),(2,3),(3,4),(2,5),(6,7),
+\]
+with all remaining off-diagonal entries zero. Fix the cocycle
+\begin{equation}\label{eq:cocycle}
+ \epsilon(a,b)=(-1)^{\sum_i a_i b_i+
+                      \sum_{i>j}a_i b_jG_{ij}}.
+\end{equation}
+Write $L=E_6\oplus A_2$ and $\mathfrak h=L\otimes_{\ZZ}\CC$.
+The underlying vector space is
+\[
+ B=S\bigl(\mathfrak h\otimes t^{-1}\CC[t^{-1}]\bigr)
+       \otimes\CC_\epsilon[L].
+\]
+A monomial $h_1(-n_1)\cdots h_r(-n_r)e^\alpha$ has weight
+$(\alpha,\alpha)/2+\sum_i n_i$. In particular its weight is a
+nonnegative integer. The exponent in \eqref{eq:cocycle} is bilinear
+modulo two, and hence defines a normalized two-cocycle. Directly,
+\[
+ \frac{\epsilon(\alpha,\beta)}{\epsilon(\beta,\alpha)}
+       =(-1)^{(\alpha,\beta)},\qquad
+ \epsilon(\alpha,-\alpha)=(-1)^{(\alpha,\alpha)/2}.
+\]
+These identities fix the signs of all root brackets. For example,
+$e^\alpha_0e^{-\alpha}=-\alpha(-1)\one$ for a root $\alpha$.
+The exponential fields obey
+\begin{equation}\label{eq:lattice-product}
+ Y(e^\alpha,z)e^\beta
+ =\epsilon(\alpha,\beta)z^{(\alpha,\beta)}
+   \exp\!\left(\sum_{n>0}\frac{\alpha(-n)}{n}z^n\right)e^{\alpha+\beta}.
+\end{equation}
+Together with the Heisenberg commutation relations, this formula
+specifies the exact mode engine used by the certificates.
+
+Put $\alpha_i=(0,\ldots,1,\ldots,0)$ and
+$\alpha_L=(-1,-2,-3,-2,-1,-2,0,0)$. With
+\[
+ (c_0,\ldots,c_7)=(5,8,9,8,5,0,2,2),\qquad
+ h_R=\sum_i c_i\alpha_i,
+\]
+the two current triples, in the order $(H,E,F)$, are
+\begin{align}
+ (H_L,E_L,F_L)&=
+   (\alpha_L(-1)\one,e^{\alpha_L},-e^{-\alpha_L}),\label{eq:leftcurrents}\\
+ (H_R,E_R,F_R)&=
+   \left(h_R(-1)\one,\sum_{c_i\ne0}e^{\alpha_i},
+                    -\sum_i c_i e^{-\alpha_i}\right).
+                    \label{eq:rightcurrents}
+\end{align}
+Current letters also denote their zero-mode actions when applied to
+a state. Thus, for example, $F_RE_Rv$ means
+$(F_R)_0(E_R)_0v$.
+
+\begin{lemma}[The two affine levels]\label{lem:levels}
+The triples \eqref{eq:leftcurrents}--\eqref{eq:rightcurrents} commute
+and generate $A_{1,1}\otimes A_{1,39}$.
+\end{lemma}
+\begin{proof}
+We have $(\alpha_L,\alpha_L)=2$ and
+$(\alpha_L,\alpha_i)=0$ whenever $c_i\ne0$.
+Also $(h_R,\alpha_i)=2$ for every $c_i\ne0$, and
+$(h_R,h_R)=78$. Formula~\eqref{eq:lattice-product} gives
+$[H_0,E_0]=2E_0$, $[H_0,F_0]=-2F_0$ and $[E_0,F_0]=H_0$
+for both triples. The double poles are
+\[
+ (H_L)_1H_L=2\one,\quad (E_L)_1F_L=\one,\quad
+ (H_R)_1H_R=78\one,\quad (E_R)_1F_R=39\one.
+\]
+Orthogonality gives all mixed singular products equal to zero.
+These are the affine relations at levels one and thirty-nine.
+The positive-definite lattice representation is integrable; equivalently
+one may use the principal $\mathfrak{sl}_2$ embeddings in $A_5$ and
+$A_2$, whose levels $35$ and $4$ add in the diagonal. Thus the
+generated factors are the simple positive-integral-level affine VOAs.
+Their tensor product is simple and embeds in $B$.
+\end{proof}
+
+\subsection{The defining field and the positive real form}
+The exact coefficient convention uses unnormalized simple-root
+Heisenberg oscillators and a torus gauge in which the principal raising
+current is the sum of the corresponding simple-root vertices. The
+lowering current is \(-\sum_i c_i e^{-\alpha_i}\), with
+\[
+ (c_0,\ldots,c_7)=(5,8,9,8,5,0,2,2).
+\]
+The torus rescales simple-root vertices by
+\( (1/\sqrt5,1/\sqrt8,1/3,1/\sqrt8,1/\sqrt5,1,1/\sqrt2,1/\sqrt2)\).
+In this convention define
+\begin{align}
+ u={}&e^{(0,0,0,0,0,-1,1,1)}\notag\\
+ &+\frac{\sqrt{13}+3\sqrt{-3}}{20}
+                   e^{(0,0,0,1,1,-1,0,0)}\notag\\
+ &+\frac{\sqrt{13}-3\sqrt{-3}}{20}
+                   e^{(1,1,0,0,0,-1,0,0)}.\label{eq:u}
+\end{align}
+The compact real form and PCT operation must be transported through
+this gauge. Ordinary coefficient conjugation in the displayed gauge
+is not a replacement for the ambient PCT map.
+
+Here is the transport explicitly. Set
+$\widetilde c=(5,8,9,8,5,1,2,2)$ and let $g$ be the lattice torus
+automorphism which fixes the oscillators and multiplies $e^\alpha$ by
+$\prod_i\widetilde c_i^{-\alpha_i/2}$. If $\theta$ is the ordinary
+lattice PCT involution, the transported involution is
+$\theta_g=g\theta g^{-1}$. For real lattice oscillators,
+\begin{equation}\label{eq:pct}
+ \theta_g\bigl(h_1(-n_1)\cdots h_r(-n_r)e^\alpha\bigr)
+ =(-1)^r\Bigl(\prod_i\widetilde c_i^{\alpha_i}\Bigr)
+       h_1(-n_1)\cdots h_r(-n_r)e^{-\alpha}.
+\end{equation}
+It acts antilinearly on coefficients, so fixes $\sqrt{13}$ and
+negates $\sqrt{-3}$. The transported Hermitian form is
+$\langle v,w\rangle_g=\langle g^{-1}v,g^{-1}w\rangle$ and is
+positive definite. Formula~\eqref{eq:pct} squares to the identity.
+The same torus element acts on $V_{E_8}$: the positive real character
+on $L$ extends by its real linear logarithm to the common Cartan space.
+We transport the form and PCT on $H$ by that element as well, so the
+entire inclusion $U\subset B\subset H$ uses one unitary convention.
+It preserves the current algebra, including the root factor even
+though its two root vectors have different norms in this gauge.
+
+All three momenta in \eqref{eq:u} have squared norm four and Cartan
+weight $(1,13)$. Substitution in the lattice formula verifies that
+$u$ is a highest vector of current type $(2,14)$, where the entries
+now denote representation dimensions. In the original positive unitary
+basis, $g^{-1}u$ is, up to a common scalar,
+\[
+ e^a+\zeta e^b+\overline\zeta e^c,\qquad
+ \zeta=\frac{\sqrt{13}+3i\sqrt3}{\sqrt{40}},\qquad |\zeta|=1,
+\]
+with $a,b,c$ the three displayed momenta. Thus the exact construction
+fixes a relative phase; there is no remaining continuous parameter.
+
+The ambient and affine conformal vectors are fixed by these conventions:
+\begin{align}
+ \omega_B&=\frac12\sum_{i,j}(G^{-1})_{ij}
+               \alpha_i(-1)\alpha_j(-1)\one,\label{eq:ambient-stress}\\
+ \omega_{A_{1,k}}&=\frac{1}{2(k+2)}
+       \left(\tfrac12 H_{-1}H+E_{-1}F+F_{-1}E\right).
+       \label{eq:sugawara}
+\end{align}
+The conformal vector of $U$ is $\omega_B$, not the sum of the two
+affine conformal vectors. Their central charges sum to
+$1+117/41<8$.
+
+\subsection{The constructed spaces in weights two and three}
+
+\begin{certificate}[Actual initial spaces]\label{cert:initial}
+The saved exact construction gives a PCT-stable 120-dimensional
+space \(S_2\subset U_2\), containing \(u,\omega_B\), the affine
+vacuum descendants, two neutral primitive fields, and eight charged
+current multiplets. The current multiplet dimensions are
+\[
+ (1,5),(1,9),(1,9),(1,13),(2,2),(2,6),(2,8),(2,14).
+\]
+These contribute 96 vectors, in addition to the 22 affine vacuum
+vectors and two neutral fields. The exact generated grade-three
+space \(S_3\subset U_3\) has dimension 956. Its normal subspace
+\(N_3=K_{-1}S_2+TS_2\) has dimension 634, and
+\[
+ S_3=N_3+\Span\{a_0b:a,b\in S_2\},\qquad \dim(S_3/N_3)=322.
+\]
+The spaces are current-stable. These are dimensions of constructed
+finite spaces, not initial assertions that they exhaust \(U_2,U_3\).
+\end{certificate}
+The source records are
+\artifact{hi_cft_20260923_c8_exact_fields.json},
+\artifact{hi_cft_20260923_c8_exact_unitary_certificate.json}, and
+\artifact{hi_cft_20260923_c8_minimal_generators.json}, together with
+the exact grade-three checkpoint bound into the final ledger.
+
+The minimal-generator record is logically prior to the closure records.
+It starts with the six specified currents, $\omega_B$, and $u$, then
+closes their weight-two span under current zero modes and $u_1$.
+Every intermediate vector is therefore an actual $U$-vector. The final
+span has dimension $120$ and contains each independently specified
+highest vector and neutral conformal vector. The equality with the saved
+space $S_2$ is checked only after this construction. This is the step
+that relates the large certificate presentation to the short definition
+\eqref{eq:U}; an ambient weight-two dimension count alone would not do so.
+
+For reference the two neutral fields, denoted $e,f$, satisfy
+\begin{equation}\label{eq:two-coset-stresses}
+ e+f=\omega_B-\omega_{A_{1,1}}-\omega_{A_{1,39}},\qquad
+ c_e=\frac{2400}{1271},\quad c_f=\frac{70}{31}.
+\end{equation}
+They commute as Virasoro fields. The exact current and stress
+eigenvalues on the eight primitive highest vectors are as follows.
+The two occurrences of $(1,9)$ are distinct vectors.
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Current dimensions $(n,m)$ & $e_1$ eigenvalue & $f_1$ eigenvalue\\
+\midrule
+$(1,5)$ & $798/1271$ & $38/31$\\
+$(1,9)$ & $200/1271$ & $42/31$\\
+$(1,9)$ & $1512/1271$ & $10/31$\\
+$(1,13)$ & $420/1271$ & $20/31$\\
+$(2,2)$ & $192/1271$ & $49/31$\\
+$(2,6)$ & $1830/1271$ & $3/31$\\
+$(2,8)$ & $752/1271$ & $24/31$\\
+$(2,14)$ & $180/1271$ & $13/31$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each row obeys
+\[
+ \frac{n^2-1}{12}+\frac{m^2-1}{164}+h_e+h_f=2.
+\]
+The affine vacuum space contributes $22$ dimensions in weight two:
+$4$ from $A_{1,1}$, $9$ from $A_{1,39}$, and $3\cdot3$ mixed
+current products. The level-one null multiplet removes five of the
+nine universal weight-two states of its affine factor. Together with
+the two singlets and the $96$ charged states, this gives $120$.
+The exact normal-space and rank calculations certify these spaces
+inside the lattice algebra, including their intersections.
+
+\section{Finite closure and the all-weight criterion}\label{sec:finite}
+Write \(Y(a,z)=\sum_{n\in\ZZ}a_nz^{-n-1}\) and \(T=L(-1)\).
+A singular product has mode index \(n\geq0\). The zero mode \(a_0\)
+is a derivation and commutes with \(T\).
+
+\begin{definition}[Differential normal span]\label{def:normal-span}
+For a homogeneous positive-weight subspace $S\subset V$, let
+$\mathcal N(S)$ be the linear span of the vacuum and every expression
+obtained from vectors of $S$ by translation and arbitrary parenthesized
+$(-1)$ products. Let $\mathcal N_d(S)=\mathcal N(S)\cap V_d$.
+This definition makes translation and normal multiplication closed
+operations on $\mathcal N(S)$; closure under singular products is a
+separate assertion. We use the usual convention that a set strongly
+generates when its differential normal span is the whole algebra.
+\end{definition}
+
+\begin{lemma}[Filtered Wick reduction]\label{lem:filtered-wick}
+Let $V$ be a nonnegatively integer-graded vertex algebra with
+$V_0=\CC\one$, and let $S$ have strictly positive weights. Fix $w$.
+Suppose every singular product of two homogeneous generators of total
+weight less than $w$ belongs to $\mathcal N(S)$. Then the same is
+true for two normal expressions of total weight less than $w$.
+It is also true at total weight $w$ if at least one expression is a
+derivative of a positive-weight expression or a normal product of
+two positive-weight expressions.
+\end{lemma}
+\begin{proof}
+Use induction on total input weight. A vacuum factor has zero singular
+bracket. Sesquilinearity removes a derivative and lowers the total input
+weight; the resulting powers of the formal variable and translations
+preserve coefficientwise membership in $\mathcal N(S)$. Skew symmetry
+allows a composite input to be placed on the right. The noncommutative
+Wick identity is
+\begin{equation}\label{eq:wick}
+ [x_\lambda:y z:]=:[x_\lambda y]z:+:y[x_\lambda z]:
+             +\int_0^\lambda [[x_\lambda y]_\mu z]\,d\mu.
+\end{equation}
+The first two brackets have smaller total input weight, since an
+omitted factor has positive weight. Their coefficients therefore admit
+homogeneous expressions in $\mathcal N(S)$. A coefficient $x_jy$ in
+the integral has weight $\wt(x)+\wt(y)-j-1$. Its pairing with $z$
+has total weight at most $\wt(x)+\wt(y)+\wt(z)-1$, so induction
+applies again. If the coefficient is scalar, its bracket is zero.
+Normal multiplication preserves the first two terms by definition.
+This proves both assertions, including the case in which both inputs
+are composite. Neither a preferred parenthesization nor independence
+of normal words was used.
+\end{proof}
+
+\begin{theorem}[Recursive strong-generation criterion]\label{thm:recursive}
+Let \(V\) be a nonnegatively graded vertex algebra with \(V_0=\CC\one\).
+Choose finite homogeneous subspaces \(S_d\subset V_d\),
+\(1\leq d\leq h\), where $h\geq2$, and let \(\mathcal N\) be their differential
+normally ordered span, allowing every parenthesization. Put
+\(K=S_1\) and \(A=S_2\). Assume
+\begin{enumerate}
+\item \(k_ns,a_ns\in\mathcal N\) for every \(k\in K\), \(a\in A\),
+\(s\in S_d\), and \(n\geq0\);
+\item for \(d\geq3\),
+\[
+ S_d\subset A_0S_{d-1}+\mathcal N_d(S_1+\cdots+S_{d-1}).
+\]
+\end{enumerate}
+Then \(\mathcal N\) is a vertex subalgebra. In particular, the chosen
+spaces strongly generate the vertex algebra that they generate.
+\end{theorem}
+
+\begin{proof}
+The first assumption, the derivation property and \([T,a_0]=0\)
+give \(a_0\mathcal N\subset\mathcal N\) for \(a\in A\).
+Explicitly, $a_0(x_{-1}y)=(a_0x)_{-1}y+x_{-1}(a_0y)$, so
+induction on the construction of a normal expression proves this
+stability before any singular-product closure is known.
+
+Now induct lexicographically on
+\((\wt(s)+\wt(t),\wt(s))\) for generator pairs \(s,t\).
+Left weight one or two is the first assumption. Otherwise the second
+assumption reduces the left input to \(s=a_0b\), with
+\(\wt(b)=\wt(s)-1\), plus normal remainders. The latter are covered
+by Lemma~\ref{lem:filtered-wick}: a homogeneous remainder of weight
+$\wt(s)$ in lower-weight generators has no single undifferentiated
+generator of that weight. Use
+\begin{equation}\label{eq:recursive-jacobi}
+ (a_0b)_nt=a_0(b_nt)-b_n(a_0t).
+\end{equation}
+The first term has smaller total pair weight before applying \(a_0\),
+which preserves \(\mathcal N\). The known normal expression for
+\(a_0t\) has weight \(\wt(t)+1\). Every derivative or composite term
+reduces total pair weight in the second term. The only remaining
+possibility is a single undifferentiated generator of weight
+\(\wt(t)+1\); its pairing with \(b\) has the original total weight
+and smaller left weight. It is therefore an earlier induction case.
+If \(\wt(t)=h\), this single-generator possibility is absent.
+
+All generator singular products close. Wick induction then gives closure
+for all normal expressions. Translation and normal multiplication
+preserve \(\mathcal N\) by definition. For $r\geq1$,
+\[
+ x_{-r}y=\frac{1}{(r-1)!}(T^{r-1}x)_{-1}y,
+\]
+so all negative modes close too.
+\end{proof}
+For the Wick identities see \cite[Section 2]{DSK}.
+The full local derivation is
+\artifact{hi_cft_20260923_next_structure_recursive_strong_certificate.md}.
+
+\begin{remark}[Finite scope of the input]\label{rem:finite-scope}
+Every membership in the first hypothesis has output weight at most
+$h+1$. Thus the criterion avoids checking all generator pairs through
+weight $2h-1$. The second hypothesis is essential: it asserts actual
+zero-product identities, rather than agreement of a dimension or a
+character coefficient. The proof takes place in the given ambient
+vertex algebra and makes no assertion that its normal words are free.
+This resolves the all-weight implication formerly marked F2.
+\end{remark}
+
+\subsection{The finite spaces and prerequisite controls}
+Choose actual quotient lifts \(P_3\subset S_3\) and an actual triplet
+\(P_4\subset U_4\), with joint current highest weight \((0,2)\), and set
+\begin{align}
+ N_4&=K_{-1}S_3+TS_3+(S_2)_{-1}S_2,&W_4&=N_4+P_4,\label{eq:normal4}\\
+ N_5&=K_{-1}W_4+TW_4+(S_2)_{-1}S_3.&&\label{eq:normal5}
+\end{align}
+These denote full differential normal spaces, using the lower closure
+identities to reorder expressions. A computational solver may use a
+proper subset of actual words in these spaces.
+
+The triplet is obtained from an actual \(a_0p\) by current-zero-mode
+projectors and lowering. It satisfies
+\(P_4\subset (S_2)_0S_3+N_4\).
+
+\begin{lemma}[Bounds for the current projectors]\label{lem:current-bounds}
+On ambient weight $d$, a Cartan element represented by $h\in L\otimes\mathbb R$
+has eigenvalues $m$ satisfying $m^2\leq2d(h,h)$. At weight four
+the two current highest weights are therefore at most $4$ and $24$.
+\end{lemma}
+\begin{proof}
+Cartan zero modes act on a Fock monomial of momentum $\alpha$ by
+$(h,\alpha)$, and commute with its oscillators. The grading gives
+$(\alpha,\alpha)\leq2d$, so the estimate is Cauchy--Schwarz in the
+positive lattice form. Every eigenvalue is integral. Apply the estimate
+to $(h,h)=2,78$ and $d=4$, and then to the highest vectors in the
+finite-dimensional semisimple current decomposition.
+\end{proof}
+
+Consequently finite polynomials in \(FE\) give exact projectors.
+For an input of weight \((0,2)\), one may use
+\[
+ \prod_{\ell=1}^{2}\left(1-\frac{F_LE_L}{\ell(\ell+1)}\right),
+ \qquad
+ \prod_{\ell=2}^{12}\left(1-\frac{F_RE_R}{\ell(\ell+1)-2}\right).
+\]
+The raising operator acts first in every \(FE\) factor.
+Indeed, on the weight-$m$ line in an $\mathfrak{sl}_2$ representation
+of highest weight $j$, $FE$ acts by $(j-m)(j+m+2)/4$. The first
+polynomial retains left highest weight zero. At right weight two the
+second retains highest weight two and kills every possible larger
+highest weight. Thus all denominators are nonzero and the projector
+has a finite, justified range.
+
+\begin{certificate}[Lower identities and the actual triplet]\label{cert:lower}
+The lower-closure artifact contains 3,970 completed exact identities.
+The actual \(P_4\) vectors satisfy 18 current-zero-mode identities and
+six independently checked inclusions
+\[
+ L(1)P_4\subset S_3,\qquad L(2)P_4\subset S_2.
+\]
+These direct Virasoro checks are available before the weight-four gate.
+\end{certificate}
+The two gates left for the all-weight argument are
+\begin{align}
+ (S_2)_0S_3&\subset W_4 &&\text{(Gate 4)},\label{eq:gate4}\\
+ (S_2)_0P_4&\subset N_5 &&\text{(Gate 5)}.\label{eq:gate5}
+\end{align}
+
+\section{Gate 4: exact seeds, raising, and singlet recovery}\label{sec:gate4}
+Put \(P=S_3/N_3\), of independently known dimension 322. For a fixed
+joint-highest primitive field \(a\in S_2\), the map
+\[
+ f_a:P\longrightarrow B_4/W_4,\qquad [p]\longmapsto[a_0p]
+\]
+is well defined because the lower relations give \(a_0N_3\subset N_4\).
+Current covariance implies that its kernel is stable under both commuting
+raising operators \(E_L,E_R\).
+
+\begin{lemma}[Raising saturation]\label{lem:raising}
+If \(C_a\subset\ker f_a\) and
+\(P=E_LP+E_RP+C_a\), then \(f_a=0\).
+\end{lemma}
+\begin{proof}
+On \(M=P/\ker f_a\) the hypothesis says
+\(M=E_LM+E_RM\). The commuting ideal \((E_L,E_R)\) acts nilpotently
+because all current weights are bounded. Iterating gives
+\(M=(E_L,E_R)^rM=0\) for sufficiently large \(r\).
+\end{proof}
+
+In this application nilpotence is entirely finite-dimensional. At weight
+three Lemma~\ref{lem:current-bounds} bounds the two Cartan eigenvalues
+by $|m_L|\leq3$ and $|m_R|\leq21$. Either raising operator increases
+$m_L+m_R$ by two. Every word of length $25$ in the two raising
+operators therefore vanishes on $P$. The quotient by $\ker f_a$
+inherits these operators because the kernel is stable. This gives an
+explicit termination bound for the argument; there is no limiting step.
+
+The exact raising coordinates comprise 644 images. Their rank is 294.
+For each of nine independent highest left fields, the completed seed
+sets and these images have rank 322. A nonzero minor at the good split
+prime \(p=1{,}000{,}003\) proves a nonzero characteristic-zero minor.
+This proves spanning because the exact ambient quotient dimension is
+already 322. It does not give an upper rank for an unknown weight-four
+normal space.
+
+The original exact run supplies 2,145 seed identities. The saturation
+calculation asks for 130 further inputs; 118 have direct exact residual
+certificates. The remaining twelve outputs have weight \((0,0)\).
+An exact replay of the known kernel and twelve additional identities
+at output weight \((0,2)\) shows that both raising currents kill each
+of these twelve remaining classes modulo \(W_4\).
+
+\begin{lemma}[Recovery from a joint-singlet projection]\label{lem:singlet}
+Let \(t\in B_4\) have weight \((0,0)\), with
+\(E_Lt,E_Rt\in W_4\). Define
+\begin{equation}\label{eq:projector}
+ \Pi=\prod_{j\in\{2,4\}}
+       \left(1-\frac{4F_LE_L}{j(j+2)}\right)
+       \prod_{j\in\{2,4,\ldots,24\}}
+       \left(1-\frac{4F_RE_R}{j(j+2)}\right).
+\end{equation}
+If \(\Pi t\) is a linear combination of \(\Pi n_i\), with
+\(n_i\in N_4\), then \(t\in W_4\).
+\end{lemma}
+\begin{proof}
+Both \(W_4\) and \(N_4\) are stable under current zero modes.
+Every \(FE\) factor kills \([t]\in B_4/W_4\), so
+\([\Pi t]=[t]\). Each \(\Pi n_i\) remains in \(N_4\subset W_4\).
+Thus \([t]=0\). Equivalently, the weight-zero highest class is a singlet
+in the finite semisimple current module. No dimension assertion about
+the selected normal columns is needed.
+\end{proof}
+
+The prime search selects 21 independent projected normal columns.
+All twelve projected identities have complete residual zero over
+\(\QQ(\sqrt{13},\sqrt{-3})\). The final verifier repeats those
+residuals by independent integer denominator clearing, authenticates
+the raising premise, and repeats all nine saturation ranks. By
+Lemmas~\ref{lem:raising} and~\ref{lem:singlet}, all \(9\cdot322=2898\)
+required highest-left identities hold. Current covariance gives the
+charged descendants. The second neutral field follows from
+\(\omega_B-\omega_{K_L}-\omega_{K_R}\) minus the retained neutral field.
+This proves \eqref{eq:gate4} with the certified lower controls.
+
+\subsection{Positive modes available after Gate 4}
+\label{sec:bootstrap}
+The normal-product argument at the next gate uses positive modes on
+$S_3$. We establish them here, before their first use. This also explains
+why no additional unverified positive-mode gate is required.
+
+\begin{lemma}[Virasoro and current bootstrap]\label{lem:bootstrap}
+The lower identities, the direct $P_4$ controls, and Gate~4 imply
+\begin{align}
+ (S_2)_1S_3&\subset S_3,& (S_2)_2S_3&\subset S_2,&
+ (S_2)_3S_3&\subset K,\label{eq:positive-S3}\\
+ K_1W_4&\subset S_3,&K_2W_4&\subset S_2,&K_3W_4&\subset K,
+ \label{eq:positive-W4}\\
+ L(1)N_5&\subset W_4,&L(2)N_5&\subset S_3.&&
+ \label{eq:positive-N5}
+\end{align}
+The next mode in each of the first two lines is scalar, and all further
+modes vanish.
+\end{lemma}
+\begin{proof}
+The exact lower inputs give all singular products of $K$ and $S_2$
+with $S_2$ in the expected lower spaces. The provenance
+$S_3=N_3+(S_2)_0S_2$ and the current commutator give
+\[
+ K_0S_3\subset S_3,\qquad K_1S_3\subset S_2,\qquad
+ K_2S_3\subset K.
+\]
+For instance,
+\begin{equation}\label{eq:k1-provenance}
+ k_1(a_0b)=(k_0a)_1b+(k_1a)_0b+a_0(k_1b).
+\end{equation}
+The Virasoro commutators for a weight-two vector are
+\begin{align}
+ [L(1),a_n]&=(2-n)a_{n+1}+(L(1)a)_n,\label{eq:L1-weight2}\\
+ [L(2),a_n]&=(3-n)a_{n+2}+3(L(1)a)_{n+1}+(L(2)a)_n.
+ \label{eq:L2-weight2}
+\end{align}
+They show $L(1)S_3\subset S_2$ and $L(2)S_3\subset K$.
+Applied to the three summands of $N_4$, they give
+$L(1)N_4\subset S_3$ and $L(2)N_4\subset S_2$.
+For a normal input $a_{-1}b$ the latter formula includes the scalar
+term $(L(2)a)_{-1}b$; it must not be omitted. It lies in $S_2$.
+The six direct controls of Certificate~\ref{cert:lower} extend these
+inclusions to $W_4$ without using Gate~5.
+
+Each of the eight charged primitive multiplets and the two neutral
+singlets in $S_2$ is quasiprimary. Indeed, $L(1)$ is equivariant for
+current zero modes, and none of their current types is $(3,1)$ or
+$(1,3)$, the two types in $K$. For such a vector $a$ and $p\in S_3$,
+Gate~4 and the preceding controls give
+\begin{align*}
+ 2a_1p&=L(1)(a_0p)-a_0L(1)p\in S_3,\\
+ a_2p&=L(1)(a_1p)-a_1L(1)p\in S_2,\\
+ 2a_3p&=L(2)(a_1p)-a_1L(2)p\in K.
+\end{align*}
+In the last line the possible $(L(2)a)_1$ term is zero since $L(2)a$
+is scalar. The affine normal and derivative part of $S_2$ is handled
+by the current iterate identities. This proves
+\eqref{eq:positive-S3} on all of $S_2$.
+
+The actual construction gives $P_4\subset(S_2)_0S_3+N_4$.
+Equation~\eqref{eq:k1-provenance}, now with $b\in S_3$, gives
+$K_1P_4\subset S_3$; the same inclusion for $N_4$ follows on its
+normal generators. Since currents are primary of weight one,
+\[
+ [L(1),k_1]=-k_2,\qquad [L(2),k_1]=-k_3.
+\]
+The controls on $L(1)W_4,L(2)W_4$ consequently give
+\eqref{eq:positive-W4}. The remaining modes follow from grading.
+
+Finally apply $L(1),L(2)$ to
+$N_5=K_{-1}W_4+TW_4+(S_2)_{-1}S_3$. The current and translation
+summands follow from the established inclusions and the Virasoro
+relations. For the third summand, the required formulas are
+\begin{align*}
+ L(1)(a_{-1}p)
+ &=3a_0p+(L(1)a)_{-1}p+a_{-1}L(1)p,\\
+ L(2)(a_{-1}p)
+ &=4a_1p+3(L(1)a)_0p+(L(2)a)_{-1}p+a_{-1}L(2)p.
+\end{align*}
+Every term belongs respectively to $W_4$ or $S_3$ by Gate~4,
+\eqref{eq:positive-S3}, and the lower identities. Reordering the last
+normal term uses only already established lower products. This proves
+\eqref{eq:positive-N5}.
+\end{proof}
+
+\section{Gate 5 from Jacobi identities}\label{sec:gate5}
+The proof uses the full normal spaces in
+\eqref{eq:normal4}--\eqref{eq:normal5}, not only the selected solver
+columns. To see that the displayed formula for $N_5$ includes every
+lower normal word of weight five, remove a leading derivative, or
+split a normal product into weights $1+4$ or $2+3$. Reversed splits
+are reordered by skew symmetry for normal products. Its correction
+terms are derivatives of singular products, already controlled by
+Lemma~\ref{lem:bootstrap} and the lower identities. Quasi-associativity
+changes the parenthesization with correction terms of the same type.
+Thus the resulting words lie in
+$K_{-1}W_4+TW_4+(S_2)_{-1}S_3$.
+
+\begin{lemma}[Normal-space controls]\label{lem:normal-controls}
+Before using Gate 5, the lower controls and Gate 4 give
+\begin{equation}\label{eq:normal-lemmas}
+ (S_2)_0N_4\subset N_5,\qquad (N_3)_0S_3\subset N_5.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The first follows by zero-mode derivation and skew reordering. For the
+second, \((Ta)_0=0\) and, for a current \(x\),
+\begin{equation}\label{eq:iterate}
+ (x_{-1}a)_0p
+ =\sum_{i\geq0}x_{-1-i}(a_ip)
+  +\sum_{i\geq0}a_{-1-i}(x_ip).
+\end{equation}
+All inner products belong to the required lower spaces. To make the
+translation reduction explicit, repeatedly use
+\[
+ x_{-r}v=\frac{T(x_{-(r-1)}v)-x_{-(r-1)}Tv}{r-1},\qquad r\geq2.
+\]
+The base terms are precisely those in \eqref{eq:normal5}; the same
+identity applies to \(a_{-r}v\) with \(a\in S_2\). Thus no
+unproved \(P_3\)-by-\(P_3\) closure enters \eqref{eq:normal-lemmas}.
+All positive inner modes in \eqref{eq:iterate} are supplied by
+\eqref{eq:positive-S3} and the current controls established before
+this section. More explicitly the first sum has inner vectors in
+$W_4,S_3,S_2,K,\CC\one$, in that order; the second has inner
+vectors in $S_3,S_2,K,\CC\one$. Both sums are finite by grading.
+\end{proof}
+
+If \(P_4\subset N_4\), Gate 5 already follows. Otherwise
+\(Q=W_4/N_4\) is the irreducible current triplet of highest weight
+\((0,2)\), since the actual \(P_4\) is irreducible. Let
+\(q_-,q_0,q_+\) be its weight basis, and set
+\[
+ \beta(a,p)=[a_0p]\in Q,\qquad
+ F(a,q)=[a_0\widetilde q]\in B_5/N_5.
+\]
+The second map does not depend on the representative
+\(\widetilde q\in W_4\), by \eqref{eq:normal-lemmas}.
+
+\begin{lemma}[Jacobi reduction]\label{lem:jacobi}
+If \(a,b\in S_2\) satisfy \(a_0b\in N_3\), then for \(p\in S_3\),
+\begin{equation}\label{eq:jacobi-reduction}
+ F(a,\beta(b,p))=F(b,\beta(a,p)).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The difference is the class of \((a_0b)_0p\), which vanishes by
+\eqref{eq:normal-lemmas} and \([a_0,b_0]=(a_0b)_0\).
+\end{proof}
+
+\subsection{The charged families}
+Let \(a_0,\ldots,a_7\) denote the eight charged highest fields, with
+current weights
+\[
+ (0,4),(0,8),(0,8),(0,12),(1,1),(1,5),(1,7),(1,13).
+\]
+In a product such as \((a_i)_0p\), the parenthesized subscript denotes
+the field label and the next subscript denotes its mode.
+The saved exact relations give
+\[
+ \beta(a_3,p_3)=c_3q_-,\qquad \beta(a_6,p_6)=c_6q_-,
+ \qquad c_3c_6\neq0,
+\]
+where \(p_3=\texttt{r3\_000910}\) has weight \((0,-14)\), and
+\(p_6=\texttt{r3\_000899}\) has weight \((-1,-9)\).
+The coefficients are authenticated in the final Jacobi certificate.
+Exact combinations of the lower relations establish \((a_i)_0a_j\in N_3\)
+for the following pairs:
+\begin{center}
+\begin{tabular}{@{}cccl@{}}
+\toprule
+\(i\)&\(j\)&Input&Weight of \((a_i)_0p_j\)\\
+\midrule
+0&3&\(p_3\)&\((0,-10)\)\\
+1,2&3&\(p_3\)&\((0,-6)\)\\
+3&6&\(p_6\)&\((-1,3)\)\\
+4&6&\(p_6\)&\((0,-8)\)\\
+5&3&\(p_3\)&\((1,-9)\)\\
+6&3&\(p_3\)&\((1,-7)\)\\
+7&3&\(p_3\)&\((1,-1)\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every listed output weight lies outside \(Q\), so
+\(\beta(a_i,p_j)=0\). Equation~\eqref{eq:jacobi-reduction} and
+\(c_j\neq0\) give \(F(a_i,q_-)=0\). Raise this resulting zero
+with \(a_i\) held highest to obtain the other two right inputs.
+Current covariance gives all left descendants.
+
+\begin{remark}
+The weight exclusion is used only at the displayed bottom inputs.
+It need not hold after raising \(p_j\); using it there would be an
+incorrect stronger assertion. We raise the proved zero identity instead.
+\end{remark}
+
+\subsection{The neutral family}
+Let \(C\) be the full current span, inside \(P=S_3/N_3\), of
+brackets of charged weight-two fields. The charged-span certificate
+reconstructs 28 actual charged seeds from the exact lower relations.
+Together with the 644 lowering images, of rank 294, these have rank 322.
+The independent verifier also checks both \(\mathfrak{sl}_2\) commutators
+and all cross-axis commutators against the saved exact raising matrices.
+Since \(C\) is a current submodule, the nilpotent-ideal argument gives
+\[
+ P=F_LP+F_RP+C\quad\Longrightarrow\quad P/C=0.
+\]
+Once again the finite-prime full rank is a positive spanning witness
+inside an independently exact 322-dimensional space.
+
+For the retained neutral singlet \(e\), write
+\[
+ e_0a_3=\sum_i t_i(x_i)_0y_i+n,
+ \qquad n\in N_3,
+\]
+with charged \(x_i,y_i\). Apply zero modes to \(p_3\). By Jacobi,
+the charged conclusion and \eqref{eq:normal-lemmas},
+\[
+ (e_0a_3)_0p_3
+ =\sum_i t_i[(x_i)_0,(y_i)_0]p_3+n_0p_3\in N_5.
+\]
+Indeed Gate 4 puts each inner product in \(W_4\), and the next charged
+product is controlled on both \(N_4\) and \(P_4\). A second Jacobi
+identity gives
+\[
+ e_0((a_3)_0p_3)=(a_3)_0(e_0p_3)+(e_0a_3)_0p_3\in N_5.
+\]
+The nonzero coefficient of \(q_-\) proves the neutral bottom identity;
+covariance gives the triplet. The other neutral field is obtained from
+the total stress minus the two affine Sugawara stresses and \(e\).
+This proves Gate 5. Its 24 independent highest channels comprise
+23 charged channels and one neutral channel; they are consequences
+of the displayed identities, not 24 separately recomputed grade-five
+lattice products.
+
+\section{From the finite gates to properness}\label{sec:properness}
+Lemma~\ref{lem:bootstrap} supplies the positive-current products and
+$L(1)N_5\subset W_4$, $L(2)N_5\subset S_3$ before Gate~5.
+For a quasiprimary primitive $a\in S_2$,
+Gate 5 now yields, for \(p\in P_4\),
+\begin{align*}
+ 2a_1p&=L(1)(a_0p)-a_0L(1)p\in W_4,\\
+ a_2p&=L(1)(a_1p)-a_1L(1)p\in S_3,\\
+ 2a_3p&=L(2)(a_1p)-a_1L(2)p\in S_2,\\
+ a_4p&=L(2)(a_2p)-a_2L(2)p\in K.
+\end{align*}
+The next mode is scalar. The 30 earlier prime-only \(a_1P_4\)
+tests are therefore derived exactly here; they are not an omitted gate.
+
+All hypotheses of Theorem~\ref{thm:recursive} hold for
+\(K,S_2,S_3,P_4\). Their normal span is a vertex subalgebra of \(U\)
+containing \(K,u,\omega_B\), hence equals \(U\). A normal word in
+positive-weight generators cannot acquire weight one unless it is a
+weight-one generator. Thus \(U_1=K\), proving
+Proposition~\ref{prop:mainproper}.
+
+\begin{proof}[Proof of Corollary~\ref{cor:initial-grades}]
+A differential normal word of weight two uses only $K$ and $S_2$;
+its current descendants are already in $S_2$. A word of weight three
+uses only $K,S_2,S_3$, and the lower normal words lie in $N_3$.
+Thus the strong-generation result proves $U_2=S_2$ and $U_3=S_3$.
+The exact PCT certificate gives $\theta_gS_2=S_2$, while
+$\theta_gK=K$. Since $S_2\subset U$ contains the original generators,
+$\theta_gU=U$. The inherited positive form makes $U$ a unitary
+subalgebra of $B$, hence simple by \cite[Proposition 5.29]{CKLW}.
+It contains $\omega_B$, so has central charge eight, the same
+nonnegative grading, and $U_0=\CC\one$. The character assertion is
+now the definition of the graded trace.
+\end{proof}
+
+\begin{reviewnote}{F1: what the finite certificate establishes}
+This proof of properness has the strongest computational support in the
+manuscript. It still relies on correctness of the lattice mode engine,
+the saved actual-vector recipes, and the stated algebraic lemmas.
+Hashes authenticate the records; hashes alone do not prove those lemmas
+or independently reconstruct every earlier mode calculation. The Lean
+checks in Appendix~\ref{sec:formalization} cover selected abstract
+implications, not the VOA construction or the complete strong-generation
+argument. No second implementation of the entire construction is
+claimed. In particular, \(\dim U_4=6010\) is not used as an input to
+this proof.
+\end{reviewnote}
+
+\input{hi_cft_c8_manuscript_structure.tex}
+\input{hi_cft_c8_manuscript_analytic.tex}
+
+\section{Relation to the proposed Haagerup theories}\label{sec:comparison}
+Albert--Honda--Kaidi--Zheng explicitly assume the existence of a
+\(c=8\) Haagerup-center theory in Section II, footnote 4 of
+\cite{AHKZ}.
+Their equation (12) displays the \(\gamma\)-dependent characters,
+and their extension discussion relates the center theory to the
+\(E_8\) theory with Haagerup defects.
+
+Under the stated construction inputs, Theorem~\ref{thm:main-net}
+supplies a $\gamma=0$ realization as a conformal net and a diagonal
+full net theory. Theorem~\ref{claim:main} supplies the completely unitary VOA
+realization and a compatible $E_8$ VOA extension. The distinction
+between $U$-preserving and full-$E_8$-preserving defects is maintained.
+Neither this construction
+nor that finite gauging identifies the continuum limit of the
+\(\rho\)-projector chain. Section III of the cited paper proposes
+further asymmetric quotients towards charges two and six; those require
+additional conformal and defect data. No uniqueness theorem for all
+central-charge-eight CFTs is asserted here.
+
+The ambient lattice is also compatible with the conditional
+characterization in \cite[Section 4.3]{GR}: a rational chiral algebra
+with the Haagerup center at central charge eight must arise from a
+rank-two hypergroup action on $E_{6,1}\otimes A_{2,1}$. That
+characterization constrains a realization; it does not supply its
+generating fields. Conversely, the concrete inclusion constructed here
+does not identify the original extension's fusion category as $\HH_3$
+without the separate distinction between $\HH_2$ and $\HH_3$ discussed
+above. Keeping these two statements separate avoids making an
+existence argument depend on a desired choice of Morita representative.
+
+\section{Certificate ledger and reproducibility}\label{sec:ledger}
+The following frozen records supply the finite construction inputs.
+The revision of 27 September 2026 additionally reran the original
+provenance check, minimal generation, grade-two exact OPE and PCT
+checks, the exact grade-three construction, and the final Gate~4,
+charged-span, and Gate~5 verifiers. Fresh outputs were written under
+\artifact{c8_revision_20260927/}; the frozen inputs were not overwritten.
+All paths are relative to the project directory. The filenames preserve
+an unambiguous connection to the actual records.
+
+\begin{longtable}{@{}p{0.25\linewidth}p{0.67\linewidth}@{}}
+\toprule
+Result & Record and scope\\
+\midrule\endfirsthead
+\toprule Result & Record and scope\\\midrule\endhead
+\bottomrule\endfoot
+Minimal generation &
+\artifact{hi_cft_20260923_c8_minimal_generators.json}:
+the short generating set in \eqref{eq:U} generates all $120$ vectors
+of $S_2$. This necessary provenance step was absent from the original
+640-file bundle and is explicitly included in the supplemented ledger.\\
+Initial spaces &
+\artifact{hi_cft_20260923_c8_exact_unitary_certificate.json}
+and \artifact{hi_cft_20260923_c8_grade3_exact_v2.json}:
+PCT, stress and singular OPE identities, and exact dimension $956$.\\
+Lower identities &
+\artifact{hi_cft_20260923_next_structure_lower_closure.json}:
+3,970 exact relations.\\
+Actual triplet &
+\artifact{hi_cft_20260923_next_structure_p4_controls.json}:
+18 current-zero and six direct Virasoro controls.\\
+Raising saturation &
+\artifact{hi_cft_20260923_c8two_structure_saturation.json}:
+644 exact images in a quotient of dimension 322.\\
+Additional direct seeds &
+\artifact{hi_cft_20260923_c8two_targeted_h4_trimmed_v2/summary.json}:
+118 completed exact identities. The unfinished final block in this
+historical directory is not counted as a completed identity.\\
+Raised seeds &
+\artifact{hi_cft_20260923_c8two_structure_h4_raised_exact/summary.json}:
+twelve additional ordinary exact identities.\\
+Singlet premise &
+\artifact{hi_cft_20260923_c8two_h4_singlet_premise_verified.json}:
+all 24 raising conditions replayed.\\
+Projected residuals &
+\artifact{hi_cft_20260923_c8two_h4_singlet_exact.json}:
+twelve full exact residuals, using 21 selected columns.\\
+Full Gate 4 &
+\artifact{hi_cft_20260923_c8two_gate4_verified.json}:
+all 2,898 identities, using singlet recovery and raising saturation.\\
+Charged spanning &
+\artifact{hi_cft_20260923_c8two_charged_span_verified.json}:
+28 reconstructed seeds, rank 322, and current commutators.\\
+Full Gate 5 &
+\artifact{hi_cft_20260923_c8two_gate5_verified.json}:
+all 24 channels by the stated Jacobi argument.\\
+Combined provenance &
+\artifact{hi_cft_20260923_c8two_proof_bundle.json}:
+640 authenticated files, including earlier exact inputs and proof notes.
+It checks provenance and completion, not formal correctness of every
+mathematical argument.\\
+\end{longtable}
+
+The final Gate 4 verifier replays the twelve projected identities using
+integer-cleared coefficients, separately from the rational producer.
+A field element is represented in the basis
+\(1,s,t,st\), with \(s^2=13\), \(t^2=-3\); all residuals are
+exact four-component rational identities. Prime calculations are used
+to select candidate columns and to certify positive spanning against
+an independently known upper dimension. A vanishing prime residual
+alone is never treated as a characteristic-zero containment proof.
+
+The provenance-ledger replay can be written to a fresh output without
+changing the original certificate:
+\begin{quote}\small
+\begin{verbatim}
+python hi_cft_safe_run.py --limit-mib 1024 -- \
+  python hi_cft_20260923_c8two_proof_bundle.py \
+  --output /tmp/haagerup-c8-proof-review.json
+\end{verbatim}
+\end{quote}
+These lines represent a single shell command. The output path must not
+already exist. This rechecks the frozen source hashes and completion
+flags; it does not rerun all original mode calculations. The original
+and supplemented ledgers together bind the listed certificate
+producers and verifiers, including the additional dependencies
+described below.
+
+\subsection{Fresh replay coverage}
+The supplemented ledger
+\artifact{c8_revision_20260927/finite_input_ledger_complete.json}
+retains the original provenance graph and explicitly binds the
+minimal-generation and exact grade-three records. This repairs an
+omission in the original bundle's declared roots; it does not modify
+the old bundle or infer a mathematical identity from a hash.
+The principal fresh outputs are listed below. A ``replay'' means the
+specific operation in the right column, rather than a full independent
+reconstruction of every earlier lattice calculation.
+
+\begin{longtable}{@{}p{0.38\linewidth}p{0.54\linewidth}@{}}
+\toprule
+Output under \artifact{c8_revision_20260927/} & Recomputed assertion\\
+\midrule\endfirsthead
+\toprule Output & Recomputed assertion\\\midrule\endhead
+\bottomrule\endfoot
+\artifact{provenance_replay.json} & All 640 original source hashes and
+required completion flags agree.\\
+\artifact{minimal_generators_replay.json} & The specified short
+generating set gives the whole exact $120$-dimensional $S_2$.\\
+\artifact{unitary_replay.json} & The PCT, stress, primarity and
+grade-two singular-product tests, including all eight primary
+multiplets, pass in the exact coefficient field.\\
+\artifact{grade3_replay.json} & The characteristic-zero generated
+span has dimension $956$, with normal subspace of dimension $634$.\\
+\artifact{gate4_replay.json} & Integer-cleared projected residuals,
+raising premises and saturation establish all $2,898$ required
+Gate~4 inputs.\\
+\artifact{charged_span_replay.json} & The reconstructed charged
+seeds and lowering images span dimension $322$; the saved current
+matrices satisfy both axis and cross-axis commutators.\\
+\artifact{gate5_replay.json} & Exact quotient relations, nonzero
+bottom coefficients and authenticated inputs support all $24$
+channels of the printed Jacobi deduction.\\
+\artifact{top_bound_replay.json} & Independent rational enumeration
+reconstructs all fourteen core tops, trace coefficients, the two
+current-character inequalities and the $17/10$ certificate.\\
+\artifact{core_extension_replay.json} & The zero-complementary-energy
+space in $S_2$ has dimension $25$ and contains all six required
+order-thirteen spectral witnesses with their exact eigenvalues.\\
+\artifact{top81_replay.json} & In each of four mixed lattice sectors,
+exact zero-mode actions and weighted adjoints generate the entire
+$81$-dimensional top from a unique Cartan eigenline.\\
+\artifact{potts_replay.json} & The explicit Potts primary has the
+required stress action and lies in the actual generated $S_3$.\\
+\artifact{pf13_membership_replay.json} & The parafermion candidate
+lies in the generated Cartan-zero $S_3$, its PCT line is stable,
+and the positive stress identity has the stated exact coefficients.\\
+\end{longtable}
+
+The last two producers originally had fixed output paths. The adapter
+\artifact{c8_revision_20260927/replay_structural_input.py} redirects
+only that output construction to a fresh file, requires exactly one
+write, and compares the complete mathematical output with the frozen
+record, excluding timing and memory statistics. It authenticates the
+unchanged producer and checks that the original record remains unchanged.
+The parafermion polynomial OPE and decoupling records are authenticated
+inputs, not claimed as newly reconstructed by this membership replay.
+
+These calculations ran serially with at most two compute threads and
+CPU affinity enforced. The permanent shared-desktop guard imposed
+a $6$~GiB address ceiling, an $8$~GiB process-group RSS watchdog and
+a $32$~GiB host-available-memory reserve; the exact lattice replays
+used smaller address caps of at most $2$~GiB. The grade-three replay
+took about $493$ seconds and peaked at $0.190$~GiB sampled group RSS.
+No swap capacity was included in the allocation budget. Per-job
+estimates and logs are recorded in
+\artifact{c8_revision_20260927/resource_review.md}.
+
+\section{Limited formalization}\label{sec:formalization}
+The construction's two Lean files isolate implications that are useful independently
+of the VOA implementation. They use the existing Lean~4.33.1 and
+Mathlib~4.33.1 environment and were checked without \texttt{sorry} or
+new axioms. The axiom reports contain only Lean's standard
+propositional extensionality, quotient soundness and, for some
+statements, classical choice.
+
+\begin{enumerate}
+\item \artifact{lean/HaagerupIzumi/CFT/FiniteClosure.lean} proves
+raising saturation for a stable submodule, under an explicit joint
+nilpotence hypothesis. It also proves recovery from a projected
+residual and the abstract linear Jacobi-bottom-witness implication.
+The hypotheses identify exactly where the current-representation
+bounds and finite identities enter the manuscript's use of these
+lemmas.
+\item \artifact{lean/HaagerupIzumi/CFT/TopBound.lean} proves the
+displayed fourteen-variable deficit identity and derives the
+cleared-denominator $17/10$ inequality from nonnegative
+multiplicities and the two stated $\mathfrak{sl}_2$ inequalities.
+The independent rational checker separately reconstructs the
+table to which this identity is applied.
+\end{enumerate}
+
+The physics revision adds
+\artifact{lean/HaagerupIzumi/CFT/PhysicsBounds.lean}, with two checked
+real-number implications. The theorem
+\artifact{modular_heavy_tail_comparison} derives
+$H\leq r(L-L_d)/(1-r)$ from $L+H=L_d+H_d$, $H\leq rH_d$, and
+$0\leq r<1$. The theorem
+\artifact{selfdual_tail_first_moment_comparison} derives
+$H\leq L'/E_{\rm cut}$ from $E_{\rm cut}>0$ and
+$E_{\rm cut}H\leq L'$. These are the algebraic steps in the thermal
+tail argument; they do not prove its infinite-sum, modularity,
+differentiability, or interval-arithmetic premises. The successful
+compiler and standard-axiom report is
+\artifact{c8_physics_20260927/physics_lean.log}.
+
+The safe compiler commands, issued serially from the project root, are
+\begin{quote}\small
+\begin{verbatim}
+python lean/safe_lean.py \
+  lean/HaagerupIzumi/CFT/FiniteClosure.lean
+python lean/safe_lean.py \
+  lean/HaagerupIzumi/CFT/TopBound.lean
+python lean/safe_lean.py \
+  lean/HaagerupIzumi/CFT/PhysicsBounds.lean
+\end{verbatim}
+\end{quote}
+The driver invokes the same resource guard. These formalizations do
+not define a VOA, validate the lattice engine, prove filtered Wick
+reduction, construct the embedded parafermion factor, or formalize
+the analytic comparison.
+Their value is to check the stated algebraic implications with their
+premises exposed, rather than to certify the entire manuscript.
+
+\section{Compilation and review scope}\label{sec:compilation}
+The main source is \artifact{hi_cft_c8_proof.tex}; its companion sources
+are \artifact{hi_cft_c8_manuscript_structure.tex} and
+\artifact{hi_cft_c8_manuscript_analytic.tex}, with references in
+\artifact{hi_cft_c8_bibliography.tex}. Run \texttt{pdflatex} twice
+on the main source for cross-references and the table of contents.
+The document uses standard TeX packages and requires no shell escape.
+
+The frozen computational records remain unchanged. Fresh replays,
+the supplemented provenance ledger and the two Lean modules are
+additional checks with the scopes stated above. The original ledger
+does not authenticate this revised exposition. The analytic comparison
+proof and the exact embedded-field inputs should be examined directly
+when assessing the VOA conclusion; neither a successful PDF build nor
+a modular-character match verifies these arguments.
+\input{hi_cft_c8_bibliography.tex}
+\end{document}

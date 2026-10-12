@@ -1,0 +1,46 @@
+{
+  "scope": "User-authorized temporary lock bypass for this announcement typesetting check only; no numerical research computation or certificate replay.",
+  "limits": {
+    "address_MiB": 1536,
+    "group_RSS_MiB": 1024,
+    "host_reserve_GiB": 32,
+    "CPUs": 1,
+    "threads": 1,
+    "seconds_per_pass": 120
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "exit_code": 0,
+      "seconds": 0.468,
+      "sampled_peak_RSS_MiB": 32.922,
+      "minimum_host_MemAvailable_GiB": 49.171,
+      "stop_reason": null,
+      "log": "build_pass_1.log"
+    },
+    {
+      "pass": 2,
+      "exit_code": 0,
+      "seconds": 0.441,
+      "sampled_peak_RSS_MiB": 20.516,
+      "minimum_host_MemAvailable_GiB": 49.221,
+      "stop_reason": null,
+      "log": "build_pass_2.log"
+    }
+  ],
+  "kernel_controls": {
+    "MemoryMax_bytes": 1073741824,
+    "MemorySwapMax_bytes": 0,
+    "TasksMax": 16,
+    "CPUQuota_percent": 100,
+    "affinity": [
+      31
+    ]
+  },
+  "authorization": "Explicit user request to temporarily bypass the research lock for this document compilation check.",
+  "source_sha256": {
+    "haagerup_c8_announcement.tex": "5acdd0a438e202bf1167ecae355c53dd8d632ee162a8a181a1ddd3fadd3af524",
+    "references.tex": "5a319ee22cfb29847418700af41cc69dea3d72da6bfe52ebfa67b4f6fd4d1111"
+  },
+  "pages": 10
+}

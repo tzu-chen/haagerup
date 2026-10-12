@@ -1,0 +1,659 @@
+\chapter{How a finite calculation controls every conformal weight}
+\label{ch:finite_closure}
+
+The definition of $U$ uses infinitely many possible iterated mode
+products. A calculation through weight four cannot, by itself, say
+what happens at weight twenty. The purpose of this chapter is to bridge
+that gap. We first prove an abstract recursive criterion, then explain
+how the particular finite spaces in the Haagerup construction satisfy
+its hypotheses. The central idea is that higher generators come with
+actual recipes in lower generators. Those recipes let Jacobi identities
+replace an unbounded search by a terminating induction.
+
+The argument is useful far beyond this example. It also teaches how
+to read a computer-assisted proof: exact ranks, exact memberships,
+ambient dimensions, and recursive provenance support different logical
+steps. None can be substituted for another merely because the final
+numbers agree.
+
+\section{Generation and strong generation}
+\index{strong generation}
+
+For this chapter write $D=L_{-1}$ for translation and
+$:ab:=a_{(-1)}b$. We retain the mode convention
+$Y(a,z)=\sum_{n\in\Z}a_{(n)}z^{-n-1}$. The weight rule is
+\begin{equation}\label{eq:c-mode-weight}
+ \wt(a_{(n)}b)=\wt(a)+\wt(b)-n-1.
+\end{equation}
+Products with $n\geq0$ are the singular OPE coefficients. Products
+with negative $n$ are normal products and their derivatives.
+
+\begin{definition}
+For a finite-dimensional homogeneous positive-weight space $S$, its
+\emph{differential normal span} $\mathcal N(S)$ is the span of the
+vacuum and all expressions built from $S$ using $D$ and arbitrarily
+parenthesized normal products. The space $S$ strongly generates a
+vertex algebra when this span is the whole algebra.
+\end{definition}
+
+Allowing arbitrary parentheses avoids an unnecessary preliminary
+rewriting theorem. Normal multiplication in a VOA is neither literally
+commutative nor literally associative. Its defects are controlled by
+singular products and derivatives. If a preferred ordering is desired
+for a computer representation, its validity must be justified by those
+identities.
+
+Vertex generation permits all modes at every step. Strong generation
+uses only normal products and derivatives after the strong generators
+have been named. The distinction is visible immediately in weight two.
+If $a,b$ both have weight two, then $a_{(0)}b$ has weight three.
+It need not be a normal expression in $a,b$: the smallest normal
+product of them has weight four. Such a weight-three field may need to
+be added as a strong generator even though it is already a vertex
+product of the original generators.
+
+\begin{example}[A one-current test]
+A Heisenberg current $J$ satisfies $J_{(1)}J=\one$ and
+$J_{(0)}J=0$, with all higher products zero. These singular products
+already lie in $\mathcal N(J)$. Wick reduction then shows that every
+singular product of two normal expressions in $J$ lies there as well.
+Thus one current strongly generates its Heisenberg VOA. The point is
+the verified OPE closure, not merely the observation that the first
+few Fock-space dimensions agree with partition numbers.
+\end{example}
+
+\section{The two identities that drive the proof}
+
+Translation obeys sesquilinearity, and zero modes are derivations:
+\[
+ [D,a_{(n)}]=-n a_{(n-1)},\qquad
+ a_{(0)}:xy:=:(a_{(0)}x)y:+:x(a_{(0)}y):.
+\]
+The second identity is especially valuable because it has no correction
+term. Also $[D,a_{(0)}]=0$.
+
+For arbitrary modes the efficient language is the $\lambda$-bracket,
+\[
+ [a_\lambda b]=\sum_{n\geq0}\frac{\lambda^n}{n!}a_{(n)}b.
+\]
+The noncommutative Wick identity is
+\begin{equation}\label{eq:c-wick}
+ [a_\lambda:bc:]=:[a_\lambda b]c:+:b[a_\lambda c]:
+          +\int_0^\lambda[[a_\lambda b]_\mu c]\,d\mu.
+\end{equation}
+The integral is a formal polynomial integral, not an analytic operation.
+It accounts for the double contractions that a naive Leibniz rule
+would miss.
+
+\begin{lemma}[Filtered Wick reduction]\label{lem:c-filtered-wick}
+Suppose singular products of generator pairs of total weight less than
+$w$ belong to $\mathcal N(S)$. The same holds for normal expressions
+of total input weight less than $w$. At weight $w$, it holds whenever
+one input is a derivative or a normal product of positive-weight
+expressions.
+\end{lemma}
+\begin{proof}
+Induct on total input weight. Sesquilinearity removes a derivative and
+reduces that weight. Skew symmetry moves a composite to the right.
+Apply \eqref{eq:c-wick}. In each of the first two terms one factor
+has been omitted from the bracket, so its total input weight is smaller.
+For the integral term, the coefficient $a_{(j)}b$ has weight
+$\wt(a)+\wt(b)-j-1$. Pairing it with $c$ gives total weight at
+most $\wt(a)+\wt(b)+\wt(c)-1$, again smaller. If the coefficient
+is scalar its bracket vanishes. Normal multiplication and derivatives
+preserve the span by definition. This proves the induction without
+assuming that normal words are linearly independent.
+\end{proof}
+
+Notice what this lemma does not do. It reduces products containing
+composites, but it does not settle a new pair of primitive strong
+generators. We need one more source of structure for those pairs.
+
+\section{A recursive strong-generation theorem}
+
+Suppose we have finite spaces $S_d\subset V_d$ for $1\leq d\leq h$,
+with $h\geq2$. Let $K=S_1$, $A=S_2$, and
+$\mathcal N=\mathcal N(S_1+\cdots+S_h)$. A subscript $d$ on
+$\mathcal N$ denotes its homogeneous part of conformal weight $d$.
+Here $K$ denotes the
+finite current space; in the Haagerup application it is the weight-one
+part of the affine algebra called $K$ in the preceding chapter.
+A higher field has
+\emph{recursive provenance} if, modulo lower normal expressions, it is
+a zero product of a weight-two field with a field one weight lower.
+
+\begin{theorem}[Finite recursive closure]\label{thm:c-recursive}
+\index{finite closure theorem}
+Assume $V$ is nonnegatively integer graded with $V_0=\C\one$, and
+that the following identities hold in $V$:
+\begin{enumerate}
+\item For $k\in K$, $a\in A$, $s\in S_d$, and every $n\geq0$,
+both $k_{(n)}s$ and $a_{(n)}s$ belong to $\mathcal N$.
+\item For $3\leq d\leq h$,
+\[
+ S_d\subset A_{(0)}S_{d-1}
+       +\mathcal N_d(S_1+\cdots+S_{d-1}).
+\]
+\end{enumerate}
+Then $\mathcal N$ is a vertex subalgebra. Hence the $S_d$ strongly
+generate the vertex algebra that they generate.
+\end{theorem}
+\begin{proof}
+First establish $a_{(0)}\mathcal N\subset\mathcal N$ for $a\in A$.
+This follows from the first hypothesis on generators, the zero-mode
+derivation identity, and commutation with $D$. It uses no unproved
+closure of other singular products.
+
+Now order generator pairs $(s,t)$ lexicographically by
+\[
+ (\wt(s)+\wt(t),\wt(s)).
+\]
+We prove singular closure in that order. If the left weight is one or
+two, it is a hypothesis. Otherwise replace $s$ by terms $a_{(0)}b$
+and lower normal expressions, where $\wt(b)=\wt(s)-1$. The normal
+terms are controlled by Lemma~\ref{lem:c-filtered-wick}. Jacobi gives
+\begin{equation}\label{eq:c-recursive-jacobi}
+ (a_{(0)}b)_{(n)}t
+     =a_{(0)}(b_{(n)}t)-b_{(n)}(a_{(0)}t).
+\end{equation}
+In the first term the inner pair has lower total weight, and the
+outer $a_{(0)}$ preserves $\mathcal N$.
+
+The first hypothesis gives a normal expression for $a_{(0)}t$.
+Every composite or derivative in that expression reduces the second
+term by filtered Wick. The only other possibility is a single
+undifferentiated generator of weight $\wt(t)+1$. Pairing that
+generator with $b$ has the original total weight but smaller left
+weight, so it is earlier in the lexicographic order. If $\wt(t)=h$
+there is no such generator. The induction therefore terminates.
+
+All generator singular products now close. Filtered Wick extends this
+to all normal expressions. For negative modes use
+\[
+ x_{(-r)}y=\frac1{(r-1)!}:(D^{r-1}x)y:,
+ \qquad r\geq1.
+\]
+Thus every mode preserves $\mathcal N$, proving the assertion.
+\end{proof}
+
+The strength of the theorem is its finite range. The largest output
+weight in the first hypothesis is $h+1$, arising from a zero product
+of weights two and $h$. Directly checking every pair of strong
+generators would reach weight $2h-1$. More importantly, the theorem
+explains why those finitely many checks suffice in all weights.
+
+\begin{remark}[Why provenance is indispensable]
+Suppose an arbitrary extra vector were added at weight four because
+it made a character coefficient look correct. Its brackets with
+another weight-four vector would not be controlled by the theorem.
+The recipe $S_4\subset A_{(0)}S_3+$ lower normals is what makes
+\eqref{eq:c-recursive-jacobi} available. A dimension is not a recipe.
+\end{remark}
+
+\section{The finite problem in the Haagerup algebra}
+
+Return to the actual $U\subset B$. Let $K$ be its six known currents,
+and let $S_2,S_3$ be the constructed spaces of dimensions $120,956$.
+Their lower normal space is
+\[
+ N_3=K_{(-1)}S_2+DS_2,\qquad \dim N_3=634,
+\]
+and the exact provenance statement is
+\[
+ S_3=N_3+\Span\{a_{(0)}b:a,b\in S_2\}.
+\]
+Choose actual lifts of the quotient $S_3/N_3$ and an actual current
+triplet $P_4$ of highest weight $(0,2)$. Here highest weights, rather
+than representation dimensions, are being used: $(0,2)$ means the
+representation of dimensions $(1,3)$.
+
+Set
+\begin{align}
+ N_4&=K_{(-1)}S_3+DS_3+(S_2)_{(-1)}S_2,
+ &W_4&=N_4+P_4,\\
+ N_5&=K_{(-1)}W_4+DW_4+(S_2)_{(-1)}S_3.
+ \label{eq:c-normal-spaces}
+\end{align}
+These are the full displayed spans; their exhaustion of the relevant
+normal expressions is justified below. A solver may use selected
+columns that lie in them, but those selected columns must not silently
+replace the full spaces in an algebraic argument.
+
+\begin{constructioninput}[Lower closure and provenance]
+The actual spaces are stable under both current zero-mode algebras.
+All singular products of currents and weight-two fields with $S_2$
+belong to the expected spaces in weights at most three. The triplet
+is constructed from an actual $a_{(0)}p$, with $a\in S_2$ and
+$p\in S_3$, by current projectors and lowering. It satisfies
+\[
+ P_4\subset(S_2)_{(0)}S_3+N_4,
+ \qquad L_1P_4\subset S_3,\quad L_2P_4\subset S_2.
+\]
+The stated inclusions are exact vector identities in the ambient
+lattice algebra and are available before the next two gates.
+\end{constructioninput}
+
+The two remaining central memberships are
+\begin{align}
+ (S_2)_{(0)}S_3&\subset W_4,
+ \label{eq:c-gate4}\\
+ (S_2)_{(0)}P_4&\subset N_5.
+ \label{eq:c-gate5}
+\end{align}
+We call them the weight-four and weight-five gates. The name refers
+to the output weight, not an empirical test that can be replaced by
+sampling a few products.
+
+\section{Raising operators turn seeds into a complete proof}
+
+In this representation-theoretic section, $E_L,E_R,F_L,F_R$
+abbreviate the zero-mode operators of the corresponding current states.
+Let $P=S_3/N_3$, of dimension $322$. For a fixed highest field
+$a\in S_2$, define
+\[
+ f_a:P\longrightarrow B_4/W_4,\qquad[p]\longmapsto[a_{(0)}p].
+\]
+Lower closure makes the map well defined. Because $a$ is highest,
+its kernel is stable under the two commuting raising operators
+$E_L,E_R$.
+
+\begin{lemma}[Finite raising saturation]\label{lem:c-raising}
+\index{raising operators!finite saturation}
+Suppose $C\subset\ker f_a$ and
+$P=E_LP+E_RP+C$. Then $f_a=0$.
+\end{lemma}
+\begin{proof}
+On $P/\ker f_a$ the equation becomes $M=E_LM+E_RM$.
+The ideal generated by the two raising operators is nilpotent because
+the finite-dimensional representation has bounded weights. Iterating
+gives $M=(E_L,E_R)^rM=0$ for sufficiently large $r$.
+\end{proof}
+
+\begin{example}[One lowest vector per irreducible]
+In an irreducible $\mathfrak{sl}_2$ representation of dimension $m$,
+the raising image has codimension one. Its missing direction is the
+lowest-weight vector. In a product of two irreducibles,
+$E_LP+E_RP$ again has codimension one: only the joint-lowest vector
+is missing. Therefore a direct sum of $r$ irreducible constituents,
+counted with multiplicity, needs $r$ such seeds. This explains the
+size of the Haagerup gate before any large matrix is written.
+\end{example}
+
+The exact current decomposition of $P$, in representation dimensions,
+is
+\begin{align*}
+ P={}&3(1,3)+(1,5)+5(1,7)+2(1,9)+3(1,11)+(1,13)\\
+ &+2(1,15)+(1,19)+(2,2)+(2,4)+2(2,6)+2(2,8)\\
+ &+2(2,10)+(2,12)+(2,14).
+\end{align*}
+There are $28$ constituents and total dimension $322$. Hence the
+raising image has dimension $294$. The nine primitive tests are the
+eight listed nontrivial weight-two multiplets and one independent neutral
+stress; affine normal states and the ambient stress are already controlled.
+For each of these highest fields in the first input, exact memberships
+on a spanning set of the
+$28$ missing directions prove the complete map vanishes. This is the
+conceptual content of the weight-four computation.
+
+Some residual outputs have weight $(0,0)$ and require a little care.
+A vector being a highest class modulo $W_4$ does not mean its chosen
+ambient representative is literally a singlet. The following projection
+argument recovers the full membership.
+
+\begin{lemma}[Recovering a residual singlet]
+Let $v\in B_4$ have current weight $(0,0)$ and satisfy
+$E_Lv,E_Rv\in W_4$. Let $\Pi$ be the polynomial projector onto
+joint singlets. If $\Pi v$ lies in $N_4$, then $v\in W_4$.
+\end{lemma}
+\begin{proof}
+Each nonconstant factor in the projector contains $FE$, so acts as
+zero on the class of $v$ modulo $W_4$. Thus $[\Pi v]=[v]$.
+The hypothesis makes the left side zero.
+\end{proof}
+
+There is no mysterious infinite representation theory in this
+projector. At ambient weight $d$, a momentum has norm at most
+$\sqrt{2d}$, so a Cartan eigenvalue obeys
+$m^2\leq2d(h,h)$. At weight four the possible highest weights are
+at most $4$ and $24$ for the two current factors. On weight zero,
+$FE$ acts in highest weight $j$ by $j(j+2)/4$. Therefore
+\[
+ \Pi=\prod_{j=2,4}\left(1-\frac{4F_LE_L}{j(j+2)}\right)
+ \prod_{j=2,4,\ldots,24}
+                 \left(1-\frac{4F_RE_R}{j(j+2)}\right)
+\]
+is an exact finite polynomial. Exact projected residuals complete the
+exceptional seed memberships.
+
+\section{Why the weight-five gate is a Jacobi problem}
+
+After the weight-four gate, Virasoro commutators recover the positive
+products that will be needed next. This step should be proved before
+any use of the weight-five gate, since its normal-space argument
+depends on precisely these products.
+
+\begin{lemma}[The intermediate positive-mode controls]
+\label{lem:c-positive-bootstrap}
+The lower products, the direct $L_1P_4,L_2P_4$ controls, and the
+weight-four gate imply
+\begin{align*}
+ (S_2)_{(1)}S_3&\subset S_3,&
+ (S_2)_{(2)}S_3&\subset S_2,&
+ (S_2)_{(3)}S_3&\subset K,\\
+ K_{(1)}W_4&\subset S_3,&
+ K_{(2)}W_4&\subset S_2,&
+ K_{(3)}W_4&\subset K,\\
+ L_1N_5&\subset W_4,&
+ L_2N_5&\subset S_3.&&
+\end{align*}
+The next mode in each of the first two lines is scalar; further
+modes vanish by weight.
+\end{lemma}
+\begin{proof}
+Current products with $S_3$ follow first from its provenance.
+For example, if $k\in K$ and $a,b\in S_2$, then
+\[
+ k_{(1)}(a_{(0)}b)
+  =(k_{(0)}a)_{(1)}b+(k_{(1)}a)_{(0)}b
+                           +a_{(0)}(k_{(1)}b).
+\]
+Every right-hand term belongs to $S_2$ by lower closure.
+Higher current modes and normal inputs are handled by the same
+commutator and iterate identities.
+
+For a general weight-two vector, the needed Virasoro commutators are
+\begin{align*}
+ [L_1,a_{(n)}]&=(2-n)a_{(n+1)}+(L_1a)_{(n)},\\
+ [L_2,a_{(n)}]&=(3-n)a_{(n+2)}
+                     +3(L_1a)_{(n+1)}+(L_2a)_{(n)}.
+\end{align*}
+These give $L_1S_3\subset S_2$, $L_2S_3\subset K$ and,
+on the three defining summands of $N_4$,
+$L_1N_4\subset S_3$, $L_2N_4\subset S_2$.
+For $L_2(a_{(-1)}b)$ the term $(L_2a)_{(-1)}b$
+must be retained: $L_2a$ is scalar, but its $(-1)$-mode
+acts by that scalar. The direct controls on $P_4$ extend these
+inclusions to $W_4$ before the weight-five gate.
+
+The primitive weight-two multiplets and the two neutral singlets
+are quasiprimary. Indeed $L_1$ is current-equivariant, and none
+of their current types occurs in $K$, whose types are $(3,1)$
+and $(1,3)$. Thus $L_1a=0$ for these $a$. For $p\in S_3$,
+the weight-four gate now gives
+\begin{align*}
+ 2a_{(1)}p&=L_1(a_{(0)}p)-a_{(0)}L_1p\in S_3,\\
+ a_{(2)}p&=L_1(a_{(1)}p)-a_{(1)}L_1p\in S_2,\\
+ 2a_{(3)}p&=L_2(a_{(1)}p)-a_{(1)}L_2p\in K.
+\end{align*}
+In the last line $(L_2a)_{(1)}p=0$, because the positive
+modes of the vacuum are zero. This differs from the normal
+product term just discussed. The current-normal and derivative
+parts of $S_2$ use the general commutators and current iterates,
+so the first line of the lemma holds on all of $S_2$.
+
+Next use $P_4\subset(S_2)_{(0)}S_3+N_4$ in the displayed
+current identity, now allowing $b\in S_3$. It gives
+$K_{(1)}P_4\subset S_3$. Since a current is primary,
+$[L_1,k_{(1)}]=-k_{(2)}$ and
+$[L_2,k_{(1)}]=-k_{(3)}$.
+The established Virasoro controls therefore give the remaining
+current inclusions on $W_4$.
+
+Finally apply $L_1,L_2$ to the three summands of $N_5$.
+The current and derivative summands use the controls already proved.
+For the normal input of weights two and three,
+\begin{align*}
+ L_1(a_{(-1)}p)
+   &=3a_{(0)}p+(L_1a)_{(-1)}p+a_{(-1)}L_1p,\\
+ L_2(a_{(-1)}p)
+   &=4a_{(1)}p+3(L_1a)_{(0)}p
+                  +(L_2a)_{(-1)}p+a_{(-1)}L_2p.
+\end{align*}
+The respective outputs lie in $W_4$ and $S_3$. Reordering a
+normal term uses only lower products that have already been
+established. This completes the proof.
+\end{proof}
+
+The point of spelling out this intermediate lemma is to make the
+logical order visible. We now possess the positive products needed
+to analyze all of the normal subspace $N_5$; no calculation at
+weight five has been used to establish its own hypotheses.
+
+At this stage every normal word of weight five reduces to $N_5$.
+A leading derivative reduces to $W_4$; a normal product splits into
+weights $1+4$ or $2+3$, after reversing the factors if necessary.
+The reordering corrections are derivatives of $K_{(n)}W_4$ or
+$(S_2)_{(n)}S_3$, which have just been controlled. Higher negative
+modes reduce by translation:
+\[
+ x_{(-r)}v=\frac{D(x_{(-(r-1))}v)-x_{(-(r-1))}Dv}{r-1},
+ \qquad r\geq2.
+\]
+Thus no unproved $S_3$-by-$S_3$ singular closure is hidden in the
+following normal-space containments.
+
+One obtains, before the final gate,
+\[
+ (S_2)_{(0)}N_4\subset N_5,
+ \qquad (N_3)_{(0)}S_3\subset N_5.
+\]
+The second inclusion follows from the iterate identity
+\[
+ (:xa:)_{(0)}p=
+ \sum_{i\geq0}x_{(-1-i)}(a_{(i)}p)
+ +\sum_{i\geq0}a_{(-1-i)}(x_{(i)}p),
+\]
+for a current $x$. Every inner mode is already controlled, and grading
+makes the sums finite.
+
+If $P_4\subset N_4$, nothing remains. Otherwise $Q=W_4/N_4$ is the
+current triplet. Define
+\[
+ \beta(a,p)=[a_{(0)}p]\in Q,
+ \qquad F(a,q)=[a_{(0)}\widetilde q]\in B_5/N_5.
+\]
+The normal-space controls make $F$ independent of the lift.
+
+\begin{lemma}[Jacobi exchanges the difficult input]
+If $a_{(0)}b\in N_3$, then
+\begin{equation}\label{eq:c-bottom-jacobi}
+ F(a,\beta(b,p))=F(b,\beta(a,p)).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The difference is the class of $(a_{(0)}b)_{(0)}p$, which lies
+in $N_5$ by the preceding inclusion.
+\end{proof}
+
+Here \emph{charged} means a nontrivial representation of the retained
+current zero modes, while \emph{neutral} means a current singlet.
+Write $q_-$ for a lowest-weight vector of the triplet $Q$.
+The finite construction supplies two nonzero bottom witnesses
+$\beta(b,p)=cq_-$, $c\ne0$. For each charged highest field $a$,
+one chooses such a witness for which $a_{(0)}b\in N_3$ and the
+weight of $a_{(0)}p$ is outside the three weights of $Q$. Then
+$\beta(a,p)=0$, so \eqref{eq:c-bottom-jacobi} gives
+$F(a,q_-)=0$. Raising this \emph{proved zero identity} gives the
+other two triplet inputs; current covariance supplies the descendants
+of $a$.
+
+The emphasized order matters. The weight exclusion holds at the chosen
+bottom input. It need not hold after that input is raised. What is
+raised is the zero identity already established by Jacobi, not an
+unverified assertion that all later intermediate weights are absent.
+
+The remaining neutral family is reduced to charged brackets. Their
+current span exhausts $P$ by the same nilpotent-ideal argument, now
+using lowering. Here is one explicit reduction. Let $e$ be the
+retained neutral singlet and let $a_{\rm ch},p_{\rm bot}$ be a
+charged bottom witness with
+$\beta(a_{\rm ch},p_{\rm bot})=c q_-$, $c\ne0$.
+Charged spanning gives
+\[
+ e_{(0)}a_{\rm ch}
+       =\sum_i t_i(x_i)_{(0)}y_i+n,\qquad n\in N_3,
+\]
+with charged $x_i,y_i\in S_2$. Applying zero modes to
+$p_{\rm bot}$ gives
+\[
+ (e_{(0)}a_{\rm ch})_{(0)}p_{\rm bot}
+ =\sum_i t_i[(x_i)_{(0)},(y_i)_{(0)}]p_{\rm bot}
+                            +n_{(0)}p_{\rm bot}\in N_5.
+\]
+The inner charged products belong to $W_4$ by the weight-four
+gate. The next charged products are controlled on both $N_4$
+and $P_4$ by the normal-space results and the charged portion
+of the weight-five argument. A second Jacobi identity yields
+\[
+ e_{(0)}((a_{\rm ch})_{(0)}p_{\rm bot})
+  =(a_{\rm ch})_{(0)}(e_{(0)}p_{\rm bot})
+                    +(e_{(0)}a_{\rm ch})_{(0)}p_{\rm bot}\in N_5.
+\]
+The nonzero coefficient $c$ proves the neutral bottom identity.
+The neutral zero mode commutes with current zero modes, so covariance
+gives the whole triplet. The other neutral stress follows by
+subtracting the retained stress and the known Sugawara stresses
+from the ambient stress.
+
+\begin{constructioninput}[The two completed gates]
+For the actual finite spaces, the raising-seed memberships and their
+singlet residuals establish \eqref{eq:c-gate4}. The nonzero bottom
+witnesses, lower bracket memberships, and charged spanning identities
+described above establish \eqref{eq:c-gate5}. All equalities are over
+$\Q(\sqrt{13},\sqrt{-3})$ in the fixed lattice basis. The gates are
+finite construction inputs; the recursive theorem is their
+all-conformal-weight consequence.
+\end{constructioninput}
+The construction manuscript's certificate ledger lists the completed
+lower-closure, actual-triplet, weight-four, charged-span, and
+weight-five records. The source guide gives the manuscript location;
+the finite identities remain inputs here, rather than calculations
+independently replayed by this textbook.
+
+\section{Properness is now an all-weight conclusion}
+
+We can now close the last positive modes explicitly. For a
+quasiprimary primitive $a\in S_2$ and $p\in P_4$, the
+weight-five gate and Lemma~\ref{lem:c-positive-bootstrap} give
+\begin{align*}
+ 2a_{(1)}p&=L_1(a_{(0)}p)-a_{(0)}L_1p\in W_4,\\
+ a_{(2)}p&=L_1(a_{(1)}p)-a_{(1)}L_1p\in S_3,\\
+ 2a_{(3)}p&=L_2(a_{(1)}p)-a_{(1)}L_2p\in S_2,\\
+ a_{(4)}p&=L_2(a_{(2)}p)-a_{(2)}L_2p\in K.
+\end{align*}
+The next mode is scalar and further ones vanish. The current-normal
+and derivative portions again use the general identities in the
+bootstrap proof. Thus the zero-mode gates really do supply the
+all-singular-mode hypothesis of the recursive theorem.
+
+Apply Theorem~\ref{thm:c-recursive} with strong-generator spaces
+$K,S_2,S_3,P_4$. The gates, positive-mode bootstrap, and recursive
+recipes establish its hypotheses. Therefore the normal span is a
+vertex subalgebra. It contains the original generators of $U$, and
+every one of its generators is an actual $U$-vector, so it equals $U$.
+
+A normal expression involving only positive-weight generators can have
+weight one only if it is one of the weight-one generators themselves.
+Thus
+\begin{equation}\label{eq:c-properness}
+ U_1=K=\mathfrak{sl}_2\oplus\mathfrak{sl}_2,
+ \qquad\dim U_1=6<86=\dim B_1.
+\end{equation}
+In particular $U$ is proper. The same normal-span argument recovers
+$U_2=S_2$ and $U_3=S_3$ from the lower identities, giving
+\[
+ \operatorname{ch}_U(\tau)=q^{-1/3}
+       (1+6q+120q^2+956q^3+O(q^4)).
+\]
+The statement is stronger than agreement of a finite character prefix:
+it rules out extra currents generated at any later stage.
+
+\section{What a finite-field calculation proves}
+\index{finite-field rank test}
+
+Exact arithmetic over a small number field can still produce large
+rational expressions. Reduction modulo a suitable prime is often an
+efficient way to certify a nonzero determinant. The elementary
+principle is worth separating from more delicate uses.
+
+\begin{proposition}[A nonzero minor survives in characteristic zero]
+Let a matrix have entries in an integral domain of characteristic zero,
+and let a specialization to a finite field be defined on its entries
+and relevant denominators. If an $r\times r$ minor has nonzero image,
+that minor was nonzero before specialization. Hence the original rank
+is at least $r$.
+\end{proposition}
+\begin{proof}
+The determinant is a polynomial in the entries, so specialization
+commutes with it. A zero determinant could not have nonzero image.
+\end{proof}
+
+This proves a lower rank, not an upper rank. If the ambient space has
+independently known dimension $322$, a rank-$322$ reduced matrix proves
+spanning in characteristic zero. Without that dimension bound, the same
+computation would not prove exhaustion. Similarly, a residual that is
+zero modulo one prime need not vanish in characteristic zero. Membership
+identities in this construction are checked as complete number-field
+equalities; finite fields select witnesses or certify nonzero minors.
+Example~\ref{ex:verification-modular-rank} works through a
+two-by-two matrix whose columns become dependent at one admissible
+prime and stay independent at another.
+
+For a reducible coefficient algebra, one must also distinguish one
+embedding from all algebraic conjugate components. Later irrational-axis
+arguments use units or all split fibers to control every component.
+This chapter's basic lesson is already sufficient: state the direction
+of every rank implication before interpreting a numerical-looking
+table as a theorem.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:c-closure-1}
+Prove the negative-mode identity in the final paragraph of the proof of
+Theorem~\ref{thm:c-recursive}. Why does it complete vertex closure once
+singular products and normal products are controlled?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-closure-1]{Solution on page~\pageref*{sol:ex:c-closure-1}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-closure-2}
+In a tensor product of irreducible $\mathfrak{sl}_2$ representations
+of dimensions $m,n$, prove that the quotient by $E_LP+E_RP$ is
+one-dimensional. Give an explicit representative.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-closure-2]{Solution on page~\pageref*{sol:ex:c-closure-2}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-closure-3}
+Check the constituent count and dimension of the displayed decomposition
+of $P$. Recover $\dim(E_LP+E_RP)=294$ without a matrix calculation.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-closure-3]{Solution on page~\pageref*{sol:ex:c-closure-3}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-closure-4}
+Construct an integer matrix whose rank drops modulo $p$, and explain
+why a reduced rank gives only a lower bound on the characteristic-zero
+rank. Construct an integer residual that vanishes modulo $p$ but is
+not zero.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-closure-4]{Solution on page~\pageref*{sol:ex:c-closure-4}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-closure-5}
+For a weight-two quasiprimary $a$, derive the $L_1$ commutator used in
+the positive-mode bootstrap. Then derive
+$2a_{(1)}p=L_1(a_{(0)}p)-a_{(0)}L_1p$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-closure-5]{Solution on page~\pageref*{sol:ex:c-closure-5}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-closure-6}
+Explain, in the proof of recursive closure, why induction on total
+weight alone is insufficient and why the second lexicographic entry
+repairs it. Identify the unique type of term for which that second
+entry is needed.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-closure-6]{Solution on page~\pageref*{sol:ex:c-closure-6}.}}\par
+\end{exercise}

@@ -1,0 +1,81 @@
+{
+  "final_artifacts": [
+    {
+      "artifact": "hi_cft_20260923_c8_lattice_control.json",
+      "verified_source_hashes": 1,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_ope_control.json",
+      "verified_source_hashes": 2,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_fields_precise.json",
+      "verified_source_hashes": 4,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_closure_precise.json",
+      "verified_source_hashes": 5,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_trace_certificate.json",
+      "verified_source_hashes": 4,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_exact_unitary_certificate.json",
+      "verified_source_hashes": 3,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_minimal_generators.json",
+      "verified_source_hashes": 3,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_grade3_span.json",
+      "verified_source_hashes": 4,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_grade3_modular.json",
+      "verified_source_hashes": 3,
+      "historical_producer_archives": [
+        "hi_cft_20260923_c8_exact_grade3_v1.py"
+      ]
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_grade3_exact_v2.json",
+      "verified_source_hashes": 3,
+      "historical_producer_archives": []
+    },
+    {
+      "artifact": "hi_cft_20260923_c8_grade3_action.json",
+      "verified_source_hashes": 4,
+      "historical_producer_archives": []
+    }
+  ],
+  "verified_local_report_links": [
+    "hi_cft_continuum_candidates.md",
+    "hi_cft_product_candidates.md",
+    "hi_cft_20260922_research_report.md",
+    "hi_cft_third_e8_hosts125_187.md",
+    "hi_cft_20260923_c8_exact_fields.json",
+    "hi_cft_20260923_c8_minimal_generators.json",
+    "hi_cft_20260923_c8_exact_unitary_certificate.json",
+    "hi_cft_20260923_c8_exact.py",
+    "hi_cft_20260923_c8_trace_certificate.json",
+    "hi_cft_20260923_c8_grade3_span.json",
+    "hi_cft_20260923_c8_grade3_exact_v2.json",
+    "hi_cft_20260923_c8_grade3_modular.json",
+    "hi_cft_20260923_c8_grade3_action.json",
+    "hi_cft_hypergroup_bridge.md",
+    "hi_cft_20260923_c8_trace_certificate.py",
+    "hi_cft_20260923_c8_resource_review.md"
+  ],
+  "scope": "Integrity and linkage audit; mathematical scope is stated in each certificate.",
+  "report_sha256": "32bb24b05fc9d59a00f3573177137a9b24f6b323f7db4ef07e1cc22f8ea25196"
+}

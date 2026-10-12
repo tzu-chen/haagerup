@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-05T22:35:29.088203+00:00",
+  "scope": "Comparison of selected source identities between preflight and final cutoff; no research source execution or mathematical certificate replay.",
+  "preflight_completed_utc": "2026-10-05T22:28:08.580269+00:00",
+  "final_completed_utc": "2026-10-05T22:35:12.019144+00:00",
+  "source_files": 148,
+  "source_bytes": 28893914,
+  "identities_equal": true,
+  "changed_paths": [],
+  "final_snapshot_sha256": "c69d8dad5ad9ae813e44b3d79a8fe3e42efdc9e568d5a919b280fd28d85993d0",
+  "final_peak_rss_kib_before_snapshot_write": 20548
+}

@@ -1,0 +1,92 @@
+% Draft only; approximately one page. Complements, rather than repeats,
+% c01's advance roadmap by identifying the proof interfaces and their scope.
+% All cited labels were checked against the actual chapter sources.
+% Suggested placement: Appendix C, after the opening finite-certificate section.
+\section{A ledger of implications for the charge-eight construction}
+
+Inputs apply row by row; the diagonal net route branches before
+the final fusion-positivity step.
+Finite construction inputs retain the status explained above; the
+structural implications do not independently replay them.
+Write $H=V_{E_8}$ for the original ambient extension and $H'$ for
+the later selected extension.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{@{}p{.15\textwidth}p{.38\textwidth}p{.41\textwidth}@{}}
+\toprule
+Step & Needed input & Output and logical boundary\\
+\midrule
+\endhead
+Finite closure &
+Specified PCT-stable lattice fields and ambient stress;
+actual memberships and product identities;
+recursive provenance of higher generators. &
+Theorem~\ref{thm:c-recursive} gives all-weight strong generation.
+The completed gates give properness and $\dim U_1=6$,
+\eqref{eq:c-properness}. A few ranks alone do not.\\[5pt]
+
+Positive stresses &
+Actual PCT-stable embedded regular affine, Potts and parafermion
+algebras; their verified projection identities. &
+\eqref{eq:c-finite-positive} expresses $\omega_U$ as a positive
+finite sum of their stresses. This is an energy identity,
+not a commuting tensor decomposition.\\[5pt]
+
+Strong rationality &
+That stress family, compatible component tops, vacuum splitting,
+and the finite-category rigidity argument. &
+$C_2$-cofiniteness and vacuum projectivity
+(Propositions~\ref{prop:c-c2}, \ref{prop:c-projective}) lead to
+semisimplicity and strong rationality
+(Proposition~\ref{prop:c-projective-unit};
+Chapter~\ref{ch:regularity}). Positivity of every $U$-module
+has not been assumed.\\[5pt]
+
+Algebraic branching &
+Strong rationality; finite core-top bounds, extension branching,
+rank-four exclusion and indicator moments. &
+$H\downarrow_U=\one\oplus X\oplus2Y$,
+\eqref{eq:c-H-branching}; the boundary ring is Haagerup and there
+are twelve chiral simples. This does not identify $Y=a$
+or determine the unitary associator
+(Chapter~\ref{ch:branching}).\\[5pt]
+
+Complete unitarity &
+Strong locality; independent algebraic and net sector counts;
+common domains and paired-annulus comparison; fusion positivity
+and unitary category classification. &
+Positive modules and canonical fusion forms; then
+$\Rep(U)\simeq Z(\HH_3)$ as unitary ribbon categories.
+The original boundary category remains
+$\HH_2$ or $\HH_3$
+(Chapter~\ref{ch:unitarity}, especially
+\eqref{eq:unitarity-pair-comparison}).\\[5pt]
+
+Selected extension &
+The center equivalence and the positive canonical Lagrangian
+algebra belonging specifically to $\HH_3$; positive extension
+and charge-eight holomorphic classification theorems. &
+A selected extension
+$H'\downarrow_U=\one\oplus b\oplus2a$, with $H'\cong V_{E_8}$.
+That ambient isomorphism does not identify the two embeddings
+of $U$ (Chapter~\ref{ch:full_theories}).\\[5pt]
+
+Full local theories &
+Diagonal: complete rationality of the net and Longo--Rehren.
+Extension: the chosen positive algebra and extension/sewing theorems. &
+The diagonal theory and $H'\otimes\overline{H'}$ exist, with
+different Hilbert spaces, \eqref{eq:full-diagonal} and
+\eqref{eq:full-E8}. Modular invariance alone would not establish
+either sewing construction
+(Chapter~\ref{ch:sewing}).\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+Characters follow from the modular representation, admissible
+principal parts and six-current coefficient, with uniqueness supplied by
+Proposition~\ref{prop:char-unique}. They count states in the constructed
+sectors; they do not replace the earlier domain or positivity
+arguments. None of the rows identifies the spin-chain infrared limit.

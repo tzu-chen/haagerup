@@ -1,0 +1,114 @@
+% Original proposed prerequisite for l03, for root review.
+% Suggested location: immediately after the definition of A_{abc}, before
+% the continuum pants map. No live-source changes made.
+% Conventions: the regular cyclic-height Hilbert spaces and their ordinary
+% orthonormal embeddings from l01; this is literal height concatenation.
+
+\subsection{What the finite joining map actually does}
+\label{sec:overlap-literal-joining}
+
+The tensor product in the overlap formula is taken in the ordinary
+height embedding of Chapter~\ref{ch:chain}. It does not mean that two
+closed fusion paths automatically form a closed path of the combined
+length. Write
+\[
+ \iota_L:\HH_{\mathrm{path},L}\longrightarrow(\C^6)^{\otimes L}
+\]
+for the isometric embedding that sends each admissible path to its
+height word. Its adjoint deletes the forbidden-word components.
+After identifying the two ambient tensor products with the ambient
+length-$L$ space, the actual joining map is
+\begin{equation}
+ J_{L_1,L_2}
+ =\iota_L^\dagger(\iota_{L_1}\otimes\iota_{L_2}),
+ \qquad L=L_1+L_2.
+ \label{eq:literal-joining-map}
+\end{equation}
+Thus
+\[
+ A_{abc}
+ =\langle c,L|J_{L_1,L_2}
+             \bigl(|a,L_1\rangle\otimes|b,L_2\rangle\bigr).
+\]
+The children and parent are individually normalized before this
+contraction.
+
+To see the seam constraint, let $u$ and $v$ be allowed child words.
+The concatenated word retains all their internal edges, but replaces
+their two closing edges by
+\[
+ u_{L_1-1}\longrightarrow v_0,\qquad
+ v_{L_2-1}\longrightarrow u_0.
+\]
+The image under $J$ is the concatenated parent basis vector if both
+new edges are allowed, and zero otherwise. For example, the length-three
+words $(I_0,X_0,X_0)$ and $(I_1,X_1,X_1)$ are each valid closed
+paths. Their concatenation fails both new seam constraints:
+$X_0\rho$ does not contain $I_1$, and $X_1\rho$ does not contain
+$I_0$. Its image is zero. Concatenating $(I_0,X_0,X_0)$ with
+itself instead gives a valid unit-norm parent word.
+
+Distinct surviving child pairs give distinct parent words. Hence
+$J^\dagger J$ is the orthogonal projector onto the child pairs that
+survive the two seam tests; $JJ^\dagger$ projects onto the parent
+words whose two cut blocks separately close. In particular $J$ is
+a partial isometry: its nonzero singular values are one, and
+\[
+ \|J\|\leq1,\qquad
+ |A_{abc}|\leq
+ \bigl\|J(|a\rangle\otimes|b\rangle)\bigr\|\leq1
+\]
+for normalized states. One should not renormalize the projected joined
+vector separately for each pair of children. That would change the
+multilinear overlap tensor being compared with the pants amplitude.
+
+This elementary contraction property is also the source of the
+error bound used later. If $u,v$ and $\widetilde u,\widetilde v$
+are normalized child states with respective norm differences
+$\delta_1,\delta_2$, then
+\[
+ \|u\otimes v-\widetilde u\otimes\widetilde v\|
+ \leq\delta_1+\delta_2.
+\]
+Contracting with $J$ and a fixed unit parent cannot increase this
+bound. Dividing both amplitudes by the same nonzero vacuum overlap
+therefore gives a difference at most
+$(\delta_1+\delta_2)/|A_{000}|$. A small vacuum overlap can amplify
+an otherwise small absolute state error.
+
+\paragraph{Categorical cups use a different normalization.}
+There is no extra quantum-dimension factor in
+\eqref{eq:literal-joining-map}: its height basis is orthonormal.
+Square roots of quantum dimensions do occur when a graphical
+categorical contraction is converted to normalized states. For a
+simple object $x$, a standard unitary coevaluation
+$R_x:\one\to x^*\otimes x$ obeys
+\[
+ R_x^\dagger R_x=d_x\,1_{\one}.
+\]
+The cup vector of norm one is consequently $d_x^{-1/2}R_x$.
+For $x=\rho$, this uses the positive dimension
+$d=(3+\sqrt{13})/2$. The unnormalized closed cup--cap diagram
+evaluates to $d_x$, while the norm of its normalized cup is one.
+These statements concern categorical duality maps; they do not
+insert a universal $\sqrt{d_x}$ into a literal height overlap.
+A different graphical sewing must specify its duality maps and
+their conversion to the chosen orthonormal basis.
+
+The same distinction applies to gauge and phase choices. Under
+unitary changes of path coordinates $U_L$, representing the same
+finite map requires
+\[
+ J\longmapsto
+ U_LJ(U_{L_1}^\dagger\otimes U_{L_2}^\dagger).
+\]
+Transforming the states while silently keeping the old numerical
+joining map need not preserve the overlap. Independent rephasings
+of the three states give
+$A_{abc}\mapsto
+e^{i\theta_a+i\theta_b-i\theta_c}A_{abc}$ because the parent is a
+bra. Coherent phase conventions, or the invariant combinations
+already constructed, are therefore needed for complex comparisons.
+The following conformal calculation describes the continuum
+geometry approached by this specified finite map; that approach
+remains an additional physical hypothesis.

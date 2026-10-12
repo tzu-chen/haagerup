@@ -1,0 +1,847 @@
+\chapter{Algebraic constructions and exact certificates}
+\label{ch:arithmetic}
+
+The order-three Haagerup category belongs to a much larger algebraic
+problem.  Can one construct associators for similar fusion rules at
+other group orders?  How can special functions produce exact finite
+categorical data?  And what does a computer certificate establish
+when the desired conclusion concerns an infinite-dimensional CFT?
+This chapter gives a guided answer.  Its purpose is to explain the
+logic and several small exact calculations, rather than reproduce
+the full contour analysis or a catalogue of number fields.
+
+\section{The cyclic Haagerup--Izumi family}
+\index{Haagerup--Izumi construction}
+
+Replace $\Z_3$ by $G=\Z/n\Z$, with $n$ odd.  There are $2n$
+simple objects $A_g$ and $R_g$, with fusion
+\begin{align}
+ A_gA_h&=A_{g+h},&A_gR_h&=R_{g+h},\notag\\
+ R_gA_h&=R_{g-h},&R_gR_h&=A_{g-h}+\sum_{k\in G}R_k.
+ \label{eq:HI-general-fusion}
+\end{align}
+The dimension equation is
+\[
+ z^2=nz+1.
+\]
+To avoid changing the meaning of the fixed order-three dimension
+$d$ elsewhere in the book, write the two general roots as
+\begin{equation}
+ d_n=\frac{n+\sqrt{n^2+4}}2,\qquad
+ \delta_n=\frac{n-\sqrt{n^2+4}}2=-d_n^{-1}.
+ \label{eq:HI-general-roots}
+\end{equation}
+The positive Frobenius--Perron dimension is $d_n$.  The algebraic
+construction described below naturally begins at the negative
+spherical dimension $\delta_n$.
+
+At $n=1$, the rule reduces to Fibonacci fusion.  The positive and
+negative spherical categorifications are the Fibonacci and
+Yang--Lee categories.  At $n=3$, the rule becomes the Haagerup
+ring, but the associator still has to be identified: a construction
+of the ring's categorification does not automatically select the
+$\HH_3$ category used for the physical chain.
+
+\section{The finite equations before the special function}
+
+For a useful untwisted presentation, the nontrivial information is
+encoded in an $n\times n$ matrix $\mathsf A_{g,h}$.  The group
+labels are taken modulo $n$.  Set $\delta=\delta_n$ for this
+section.  Among the required equations are rotation symmetry,
+an axis sum, and the quadratic and cubic identities
+\begin{align}
+ \mathsf A_{g,h}&=\mathsf A_{-h,g-h}
+ =\mathsf A_{h-g,-g},\label{eq:HI-rotation}\\
+ \sum_h\mathsf A_{h,0}&=-\delta^{-1},\label{eq:HI-axis-sum}\\
+ \sum_m\mathsf A_{m+g,h}\mathsf A_{h,m}
+ &=\mathbf1_{g=0}-\delta^{-1}\mathbf1_{h=0},
+ \label{eq:HI-quadratic}\\
+ \sum_m\mathsf A_{m,g+h}\mathsf A_{g,m+k}\mathsf A_{h,m+l}
+ &=\mathsf A_{g+l,k}\mathsf A_{h+k,l}
+ -\delta^{-1}\mathbf1_{g=0}\mathbf1_{h=0}.
+ \label{eq:HI-cubic}
+\end{align}
+The symbol $\mathbf1_P$ is the indicator of a condition $P$.
+It is not an object of the category.
+
+The quadratic identity expresses cancellation of inverse
+recouplings.  The cubic identity compares the three-recoupling
+and two-recoupling routes around a pentagon.  Its correction term
+is important: it accounts for an additional invertible intermediate
+channel when the relevant labels vanish.  Deleting that term would
+give a superficially cleaner equation for the wrong fusion space.
+
+The reconstruction theorem is usually stated with an additional
+quartic identity.  In this setup the quartic equations follow by
+contracting the quadratic and cubic identities.  Thus one can first
+solve the conceptually simpler pentagon-type system and then match
+the hypotheses of the reconstruction theorem.  The conclusion is
+a complex spherical fusion category with the specified fusion
+rules and dimension parameter.
+
+These equations are polynomial identities over a field.  They do
+not contain complex conjugates.  Consequently their algebraic
+meaning is different from a unitary identity such as
+$F^\dagger F=I$.
+
+\begin{example}[The entire order-one coefficient problem]
+When $n=1$, there is a single matrix entry
+$\mathsf A=-\delta^{-1}$, with $\delta^2=\delta+1$.
+The quadratic equation becomes
+\[
+ \delta^{-2}=1-\delta^{-1},
+\]
+which follows after dividing the dimension equation by $\delta^2$.
+The cubic becomes
+\[
+ -\delta^{-3}=\delta^{-2}-\delta^{-1}.
+\]
+Multiplying by $\delta^3$ gives $-1=\delta-\delta^2$,
+again exactly the dimension equation.  Both dimension roots solve
+the polynomial conditions.  Positivity has not entered this
+calculation.
+\end{example}
+
+\section{A factorized ansatz and its exceptional point}
+
+Put $\tau_0=\delta-1$ and choose nonzero auxiliary coefficients
+$W_g$ satisfying
+\[
+ W_0=-1,\qquad W_gW_{-g}=\delta\quad(g\ne0).
+\]
+A useful core is
+\begin{equation}
+ \mathsf A_{a,b}=
+ \begin{cases}
+ \displaystyle\frac{W_aW_{b-a}}{\tau_0 W_b},&b\ne0,\\[6pt]
+ \displaystyle\frac{-1+\tau_0\mathbf1_{a=0}}{\tau_0},&b=0.
+ \end{cases}
+ \label{eq:HI-factorized-core}
+\end{equation}
+For nonzero $b$, the reciprocal relation permits the equivalent
+product $W_aW_{b-a}W_{-b}/(\delta\tau_0)$.  Its three indices
+sum to zero, making the cyclic symmetry of
+\eqref{eq:HI-rotation} visible.  The point $a=b=0$ requires an
+extra correction and cannot be recovered by applying the nonzero
+reciprocal relation to $W_0$.
+
+For example,
+\[
+ \mathsf A_{0,0}=\frac{\delta-2}{\delta-1},
+ \qquad
+ \mathsf A_{a,0}=\mathsf A_{0,a}=\mathsf A_{a,a}
+ =-\frac1{\delta-1}\quad(a\ne0).
+\]
+The ansatz therefore imposes a particular fixed-axis condition.
+It selects a family of categories; it is not a consequence of the
+Haagerup--Izumi fusion ring alone.
+
+\begin{example}[An order-three invariant distinguishes coefficient families]
+Move the dimension parameter to its positive value
+$d=(3+\sqrt{13})/2$.  The fixed-axis entry becomes
+\[
+ \mathsf A_{0,0}=\frac{d-2}{d-1}
+ =\frac{\sqrt{13}-1}{\sqrt{13}+1}
+ =\frac{7-\sqrt{13}}6.
+\]
+This equals the $\HH_2$ invariant entry from
+Chapter~\ref{ch:haagerup}.  It differs from the $\HH_3$ entry
+$(2-\sqrt{13})/3$ by $d/3$.  The factorized ansatz has therefore
+imposed a restrictive associator condition even at the smallest
+nontrivial group order. Equality of this one entry does not identify
+the entire category with $\HH_2$ or supply a positive adjoint.
+Its success in solving the Haagerup fusion ring does
+not justify substituting its coefficient for the $\HH_3$ block
+in the physical chain.
+\end{example}
+
+The auxiliary numbers $W_g$ are not automatically physical OPE
+coefficients.  They are coordinates in a factorization used to
+construct an associator.  A separate dictionary would be needed
+to interpret one as a normalized observable of a CFT.
+
+\section{Why two gamma periods differ by the group order}
+
+Choose positive periods
+\begin{equation}
+ \omega_1=d_n+1,\qquad \omega_2=1+d_n^{-1}.
+ \label{eq:HI-gamma-periods}
+\end{equation}
+The dimension equation gives three useful identities:
+\begin{equation}
+ \omega_1-\omega_2=n,\qquad
+ \omega_1\omega_2=\omega_1+\omega_2,\qquad
+ \frac1{\omega_1}+\frac1{\omega_2}=1.
+ \label{eq:HI-period-relations}
+\end{equation}
+These are the reason for the choice.  A shift by the cyclic order
+is the difference of the two special-function shifts.
+
+\subsection{A convergent definition, including the subtraction}
+\index{hyperbolic gamma function}
+
+The special function can be introduced with ordinary complex analysis.
+For positive periods write $\Omega=\omega_1+\omega_2$ and first
+restrict to the open strip $0<\Re z<\Omega$. Define
+\begin{equation}\label{eq:HI-gamma-integral}
+ \gamma(z)=\exp\left\{-\int_0^\infty
+ \left[
+ \frac{\sinh((2z-\Omega)t)}
+      {2\sinh(\omega_1t)\sinh(\omega_2t)}
+ -\frac{2z-\Omega}{2\omega_1\omega_2t}
+ \right]\frac{dt}{t}\right\}.
+\end{equation}
+This is a definition by an absolutely convergent integral, not a
+prescription to subtract two divergent answers. Keep the terms
+inside the same integrand.
+
+To see the cancellation, put $\lambda=2z-\Omega$. Taylor expansion
+at the integration endpoint gives
+\[
+ \frac{\sinh(\lambda t)}
+ {2\sinh(\omega_1t)\sinh(\omega_2t)}
+ =\frac{\lambda}{2\omega_1\omega_2t}
+ +\frac{\lambda(\lambda^2-\omega_1^2-\omega_2^2)}
+ {12\omega_1\omega_2}\,t+O(t^3).
+\]
+After subtraction and division by $t$, the integrand is bounded
+as $t\to0$. At infinity its hyperbolic-function part decays
+exponentially because
+$|\Re(2z-\Omega)|<\Omega$, while the subtracted part is
+$O(t^{-2})$ after division by $t$. These bounds are uniform on
+compact subsets of the strip, giving holomorphy there by the
+standard parameter-integral theorem. Exponentiation makes
+$\gamma$ nonzero on this strip.
+
+Two identities are immediate. At $z=\Omega/2$ the entire
+integrand vanishes, so $\gamma(\Omega/2)=1$. Replacing $z$ by
+$\Omega-z$ negates the integrand, giving
+$\gamma(z)\gamma(\Omega-z)=1$. For real $z$ in the strip
+the logarithm is real, hence $\gamma(z)>0$.
+
+The remaining special-function work establishes the two shifts
+and meromorphic continuation:
+\begin{align}
+ \gamma(z+\omega_1)
+ &=2\sin(\pi z/\omega_2)\gamma(z),\notag\\
+ \gamma(z+\omega_2)
+ &=2\sin(\pi z/\omega_1)\gamma(z),\notag\\
+\gamma(z)\gamma(\omega_1+\omega_2-z)&=1.
+ \label{eq:HI-gamma-identities}
+\end{align}
+Their relation to the integral is visible already on the overlap
+$0<\Re z<\omega_2$. Subtract the logarithms at $z+\omega_1$
+and $z$, using the hyperbolic addition identity, to obtain
+\[
+ \log\gamma(z+\omega_1)-\log\gamma(z)
+ =-\int_0^\infty
+ \left[\frac{\cosh((2z-\omega_2)t)}{\sinh(\omega_2t)}
+       -\frac1{\omega_2t}\right]\frac{dt}{t}.
+\]
+This is the convergent integral for $\log(2\sin(\pi z/\omega_2))$
+on that strip, with its branch real on the real interval. Its
+derivative is the usual cotangent integral, and the value at
+$z=\omega_2/2$ fixes the constant $\log2$. Interchanging the
+periods gives the other shift. The integral evaluations and
+continuation are part of the analytic theorem quoted here; the
+display shows why the sine appears rather than treating the
+shift as an arbitrary functional equation.
+
+The continued function has poles at
+$-r\omega_1-s\omega_2$ and zeros at
+$\Omega+r\omega_1+s\omega_2$, for $r,s\geq0$. At our periods
+$\omega_1/\omega_2=d_n$ is irrational, so these are simple.
+There is a useful normalization check that needs no numerical
+sample. Write $R=\operatorname{Res}_{z=0}\gamma(z)$.
+Taking the limit in both shifts gives
+\[
+ \gamma(\omega_1)=\frac{2\pi R}{\omega_2},\qquad
+ \gamma(\omega_2)=\frac{2\pi R}{\omega_1}.
+\]
+Their product is one by reflection. Positivity as $z\to0^+$
+chooses the positive residue, so
+\[
+ R=\frac{\sqrt{\omega_1\omega_2}}{2\pi},\qquad
+ \gamma(\omega_1)=\sqrt{d_n},\qquad
+ \gamma(\omega_2)=d_n^{-1/2}.
+\]
+The integral normalization has therefore fixed the normalization
+needed by the finite coefficient construction.
+
+\subsection{From the strip function to cyclic samples}
+
+Set $F(z)=1/\gamma(\omega_2+z)$, so $F(0)=\sqrt{d_n}$.
+Reflection gives
+\begin{equation}
+ F(z)F(n-z)=1.
+ \label{eq:HI-sample-reflection}
+\end{equation}
+Taking the ratio of the two shift equations gives
+\[
+ \frac{F(z+n)}{F(z)}
+ =\frac{\sin(\pi z/\omega_1)}{\sin(\pi z/\omega_2)}.
+\]
+For a nonzero integer $a$, the reciprocal-period relation in
+\eqref{eq:HI-period-relations} therefore implies
+\begin{equation}
+ F(a+n)=(-1)^{a+1}F(a).
+ \label{eq:HI-sample-shift}
+\end{equation}
+At $a=0$ both sines vanish; their ratio must be replaced by its
+limit $\omega_2/\omega_1=d_n^{-1}$.  Thus the origin is
+exceptional.  Many errors in finite sampling arguments come from
+using a generic shift formula at precisely such a removable
+singularity without taking the correct limit.
+
+With representatives $1\leq a\leq n-1$, define
+\begin{equation}
+ W_0=-1,\qquad
+ W_a=-(-1)^{a(a+n)/2}\frac{F(a)}{\sqrt{d_n}}.
+ \label{eq:HI-W-samples}
+\end{equation}
+The exponent is an integer because $n$ is odd.  Reflection gives
+$F(a)F(n-a)=1$, and the total sign exponent in $W_aW_{n-a}$ is
+\[
+ \frac{a(a+n)+(n-a)(2n-a)}2=a(a-n)+n^2.
+\]
+Its first term is even and its second odd.  Therefore
+\begin{equation}
+ W_aW_{-a}=-d_n^{-1}=\delta_n,
+\end{equation}
+which proves exactly the reciprocal identity needed in
+\eqref{eq:HI-factorized-core}.
+
+This is a useful example of an analytic expression producing exact
+finite algebraic relations.  It does not yet prove all quadratics
+or cubics: those involve sums over the group rather than only pairs
+of reflected samples.
+
+\section{Fourier transform, contour identities, and reconstruction}
+
+On $\Z/n\Z$, finite Fourier transform turns convolution into
+pointwise multiplication.  For a function $f$ put
+\[
+ \widehat f(k)=\sum_{a=0}^{n-1}f(a)e^{-2\pi i ka/n},
+ \qquad
+ f(a)=\frac1n\sum_{k=0}^{n-1}\widehat f(k)e^{2\pi i ka/n}.
+\]
+The quadratic coefficient equations contain translated convolution
+sums.  Computing the Fourier transform of a column of
+$\mathsf B=\tau_0\mathsf A$ makes their cancellation accessible to the gamma
+reflection identity.  Some recoupling blocks are anti-circulant,
+so it would be inaccurate to say that the transform simply
+diagonalizes every $F$-matrix.  It diagonalizes the relevant cyclic
+translations and organizes their products.
+
+\subsection{The analytic column identity and its domain}
+
+Write $u_h(a)=\mathsf B_{a,h}$, with $1\leq h<n$, and choose
+the principal frequency
+\[
+ \theta_h(k)\equiv\frac{2\pi k}{n}+\pi(h-1)\pmod{2\pi},
+ \qquad -\pi\leq\theta_h(k)\leq\pi.
+\]
+The supplied analytic column identity is
+\begin{equation}\label{eq:HI-column-transform}
+ \widehat u_h(k)=-\omega_2e^{-ih\theta_h(k)/2}
+ \gamma\left(\frac{\Omega+h}{2}-\frac{\Omega\theta_h(k)}{2\pi}\right)
+ \gamma\left(\frac{\Omega+h}{2}+\frac{\Omega\theta_h(k)}{2\pi}\right).
+\end{equation}
+The right side involves only two gamma values instead of an
+$n$-term sum. The frequency representative matters for the
+continuous contour integral used to prove it, even though the
+original finite transform is periodic in $k$. At an endpoint
+$\theta=\pm\pi$, the congruence forces $h$ even, and the two
+displayed values agree.
+
+Here is the connection with residues. The kernel
+\[
+ K_h(z)=\frac{\pi e^{-i\theta z}}{\sin\pi z}
+          \frac{F(z)}{F(z-h)}
+\]
+has residue $(-1)^ae^{-i\theta a}F(a)/F(a-h)$ at an integer
+$a$. The choice of $\theta$ reproduces the signs of the finite
+samples. There is one exceptional sample: the actual column
+entry differs from its generic interpolation at $a=h$.
+Accounting for it gives
+\[
+ \sum_{a=0}^{n-1}\operatorname{Res}_{z=a}K_h(z)
+ =(-1)^h\sqrt{d_n}F(h)
+   \left(\widehat u_h(k)+\omega_2e^{-2\pi ikh/n}\right).
+\]
+The rectangle residue theorem converts this sum to a two-gamma
+integral and the remaining crossed-pole residues. Those residues
+cancel the displayed exceptional-sample correction in the final
+answer. Omitting the correction would give a wrong Fourier formula.
+
+The continuation used here has a precise domain. For fixed
+$|\theta|<\pi$, allow a complex column parameter $h'$ in
+\[
+ \left\{\Re h'>\Omega(|\theta|/\pi-1)\right\}
+ \setminus\left(\omega_1\Z_{\geq0}+\omega_2\Z_{\geq0}\right).
+\]
+Choose first a negative real $h_0$ in this domain and a vertical
+line $h_0<\Re z<0$, which separates the two pole families.
+Locally fixed contour deformations, their crossed-pole corrections,
+and uniform tail estimates continue the integral through the
+connected domain. The final positive integer $0<h<n$ avoids
+the excluded pinch set. At this final value the integral still
+decays at $|\theta|=\pi$, so endpoint limits are valid. This is
+the restricted continuation argument in the expanded and formal
+development; an unqualified appeal to meromorphic continuation
+would omit essential work.
+
+\subsection{A quadratic system becomes one Fourier product}
+
+Reflection and a period shift in
+\eqref{eq:HI-column-transform} give
+\begin{equation}\label{eq:HI-fourier-product}
+ \widehat u_h(k)\widehat u_{n-h}(-k)
+       =\omega_2^2e^{-2\pi ikh/n}.
+\end{equation}
+One can check the signs explicitly. By swapping $h,n-h$ and
+complex conjugating real columns, it suffices to use odd $h$ and
+$0\leq k\leq(n-1)/2$. Put $\lambda_k=\Omega k/n$.
+The four gamma arguments in the product are
+\[
+ x_\pm=(\Omega+h)/2\pm\lambda_k,\quad
+ y_1=\Omega+(n-h)/2-\lambda_k,\quad
+ y_2=(n-h)/2+\lambda_k.
+\]
+They obey $x_++y_1=\Omega+\omega_1$ and
+$x_-+y_2=\omega_1$. Reflection and the period shifts
+reduce their product to
+\[
+ \frac{\sin\!\left(\pi[(h-n)/(2\omega_2)+\omega_1k/n]\right)}
+ {\sin\!\left(\pi[(\Omega+h)/(2\omega_1)-\omega_2k/n]\right)}
+ =(-1)^{(h-n)/2+k}.
+\]
+Indeed the two arguments divided by $\pi$ sum to the integer
+$(h-n+2)/2+k$, and the denominator's argument divided by
+$\pi$ lies strictly between zero and one. The exponential prefactors contribute
+the same sign times $e^{-2\pi ikh/n}$, proving
+\eqref{eq:HI-fourier-product}.
+
+Now define the unscaled quadratic convolution
+\[
+ C_h(g)=\sum_a\mathsf B_{g+a,h}\mathsf B_{h,a}.
+\]
+Rotation symmetry gives
+$\mathsf B_{h,a}=u_{-h}(a-h)$. Transforming in $g$ and
+substituting $b=g+a$, then $c=a-h$, yields
+\begin{align*}
+ \widehat C_h(k)
+ &=\widehat u_h(k)\sum_a u_{-h}(a-h)e^{2\pi ika/n}\\
+ &=\widehat u_h(k)e^{2\pi ikh/n}\widehat u_{-h}(-k)
+ =\omega_2^2=\tau_0^2.
+\end{align*}
+The inverse transform of the constant function is
+$\tau_0^2\mathbf1_{g=0}$. Dividing by $\tau_0^2$ proves
+the quadratic equation for every $h\ne0$ simultaneously.
+At $h=0$ the exceptional axis is elementary:
+\[
+ C_0(g)=n-2\tau_0+\tau_0^2\mathbf1_{g=0}
+       =\tau_0^2(\mathbf1_{g=0}-\delta^{-1}).
+\]
+The last equality follows from $\delta^2=n\delta+1$ and
+$\tau_0=\delta-1$. This completes all quadratic equations.
+The analytic input has been isolated in one column formula;
+the remaining proof is finite Fourier algebra.
+
+\begin{example}[An exact order-three matrix without numerical samples]
+Take $n=3$ and $\delta=(3-\sqrt{13})/2<0$. The sample signs
+give $W_1<0$ and $W_2>0$. Put
+$p=W_1^2/W_2>0$, $q=W_2^2/W_1<0$. Then
+\begin{equation}\label{eq:HI-n3-matrix}
+ \mathsf B=\begin{pmatrix}
+ \delta-2&-1&-1\\-1&-1&p\\-1&q&-1
+ \end{pmatrix},\qquad \mathsf A=\frac{\mathsf B}{\delta-1}.
+\end{equation}
+The reciprocal sample identity gives $pq=\delta$.
+The now-proved quadratic equation at $(g,h)=(1,1)$ reads
+$1-p-q=0$. Thus
+\[
+ p=\frac{1+\sqrt{2\sqrt{13}-5}}2,\qquad
+ q=\frac{1-\sqrt{2\sqrt{13}-5}}2.
+\]
+For a direct check, at $h=1$ the three unscaled quadratic sums
+are $2+pq$, $1-p-q$, $1-p-q$. They equal
+$\tau_0^2,0,0$, since
+$(\delta-1)^2=\delta+2$ at $n=3$. The $h=2$ column has
+the same checks with $p,q$ exchanged, and the axis case was
+computed above.
+
+This also gives an exact special-function sample. Since
+$F(1)F(2)=1$ and $p=F(1)^3/\sqrt d$,
+\[
+ F(1)=(p\sqrt d)^{1/3},\qquad F(2)=F(1)^{-1},
+\]
+with the positive real cube root. This small-order identity was
+deduced from the analytic quadratic theorem; it is not an
+independent proof of that theorem at every order. The matrix
+still has negative categorical dimension. Its quadratics alone
+do not prove the cubic reconstruction identities; the next
+example supplies that extra finite argument at order three.
+\end{example}
+
+\begin{example}[The complete order-three cubic system]
+\label{ex:HI-n3-cubics}
+Once the preceding matrix is given algebraically, its coefficient
+identities can be verified without evaluating a gamma function.
+Put $a=\delta-2$, $\tau_0=\delta-1$, and $\kappa=7-\delta$.
+The three relations
+$\delta^2=3\delta+1$, $p+q=1$, and $pq=\delta$ imply
+\[
+ p^2=p-\delta,\quad q^2=q-\delta,\quad
+ \tau_0^2=\delta+2,\quad a\tau_0=3,\quad
+ a^2=5-\delta,\quad \tau_0^3/\delta=\kappa.
+\]
+Multiplying the cubic equation by $\tau_0^3$ clears every
+denominator. With all indices reduced modulo three, it becomes
+\begin{equation}\label{eq:HI-n3-cleared-cubic}
+ \begin{split}
+ C_{g,h}(k,l)&:=\sum_{m=0}^2
+       \mathsf B_{m,g+h}\mathsf B_{g,m+k}\mathsf B_{h,m+l}\\
+ &=\tau_0\mathsf B_{g+l,k}\mathsf B_{h+k,l}
+        -\kappa\mathbf1_{g=0}\mathbf1_{h=0}.
+ \end{split}
+\end{equation}
+The exceptional correction is present for \emph{every} $k,l$
+when $g=h=0$.
+
+Three entries explain the cancellations. At $(g,h,k,l)=(1,1,0,0)$,
+the sum is $-1+p-p^2=\tau_0$. At $(1,1,1,1)$ it is
+$p^3-2$, and
+\[
+ p^3-2=-\tau_0p-\tau_0^2
+       =\tau_0(q-\delta)=\tau_0q^2,
+\]
+as the right side requires. At $(0,0,0,0)$ the residual is
+\[
+ a^3-2-\tau_0a^2+\kappa=-a^2+5-\delta=0.
+\]
+The last cancellation would fail if the invertible-channel
+correction were omitted.
+
+Here is a complete hand check beyond those representatives.
+For each fixed $g,h$, arrange the left side into a matrix with
+rows $k=0,1,2$ and columns $l=0,1,2$. Expanding its three
+summands and using the displayed relations gives
+\[
+ \begin{aligned}
+ C_{0,0}&=\begin{pmatrix}
+ a^3-2&-a^2+a-1&-a^2+a-1\\
+ -a^2+a-1&-a^2+a-1&3a\\
+ -a^2+a-1&3a&-a^2+a-1
+ \end{pmatrix},\\[3pt]
+ C_{0,1}&=\begin{pmatrix}
+ -3&\tau_0&-\tau_0p\\
+ \tau_0&-\tau_0q&-\tau_0q\\
+ -3&-\tau_0p&\tau_0
+ \end{pmatrix},\\[3pt]
+ C_{1,1}&=\begin{pmatrix}
+ \tau_0&\tau_0&3p\\
+ \tau_0&p^3-2&\tau_0\\
+ 3p&\tau_0&\tau_0
+ \end{pmatrix},\qquad
+ C_{1,2}=\begin{pmatrix}
+ \tau_0&-\tau_0q&-3\\
+ -3&-\tau_0q&\tau_0\\
+ -\tau_0p&\tau_0&-\tau_0p
+ \end{pmatrix}.
+ \end{aligned}
+\]
+Substitution into the right side of
+\eqref{eq:HI-n3-cleared-cubic} gives the same matrices.
+In the exceptional block, besides the already checked corner,
+the only identities needed are
+\[
+ -a^2+a-1=\tau_0-\kappa=2\delta-8,
+ \qquad 3a=\tau_0\delta-\kappa.
+\]
+The other blocks use $a\tau_0=3$ and
+$p^3-2=\tau_0q^2$.
+
+Finally, exchanging $(g,k)$ with $(h,l)$ preserves the equation.
+Simultaneously negating all four indices exchanges $p$ and $q$
+in the matrix, and the three scalar relations are invariant under
+that exchange. The four tables therefore cover the classes
+$\{(0,0)\}$,
+$\{(0,1),(1,0),(0,2),(2,0)\}$,
+$\{(1,1),(2,2)\}$, and $\{(1,2),(2,1)\}$ of ordered pairs
+$(g,h)$. Each table includes all nine $k,l$ choices, proving
+all $81$ cubic equations.
+
+This is an independent finite coefficient verification after
+the explicit matrix is specified. Its identification with the
+gamma samples still uses the analytic argument above, and the
+all-order theorem requires more work. At the positive dimension
+embedding $\delta=d$, one can separately choose
+$p,q=(1\pm i\sqrt{4d-1})/2$, making $\mathsf A$ Hermitian.
+This matrix condition is not by itself the construction of the
+full unitary associator; that passage uses the appropriate
+reconstruction theorem.
+\end{example}
+
+\subsection{The further work needed for reconstruction}
+
+The cubic residual, the difference between the two sides of
+\eqref{eq:HI-cubic}, is treated similarly.  Residue calculations
+convert finite sums into integrals built from four gamma factors.
+An Euler-type integral transformation and a four-term contour
+identity establish the required cancellation in a range where the
+contours and convergence are controlled.  A finite-degree
+interpolation argument, together with index symmetries of the
+factorized ansatz, then recovers the remaining coefficients.
+Finally, algebraic contraction gives the quartics required by
+reconstruction.
+
+Each step answers a different question.  The contour argument proves
+an analytic identity on a justified domain.  Interpolation extends
+the finite set of coefficient identities.  Reconstruction turns the
+coefficient solution into a category.  None of these is replaced
+by finding small numerical residuals for several values of $n$.
+
+\begin{constructioninput}[Recorded formal coefficient theorem]
+For every odd positive integer $n$, the specified gamma samples give
+complex coefficient data satisfying the rotation and axis equations,
+all quadratics, all cubics, and all reconstruction quartics. The
+repository's completed Lean development constructs the hyperbolic
+gamma function from its regularized integral and proves the required
+analytic identities. Its final coefficient theorem does not assume
+those identities as additional hypotheses.
+\end{constructioninput}
+
+The recorded verification is an all-order proof, not a collection
+of finite residual checks. Its source supplies the analytic
+interface by a concrete constructor and then passes that constructor
+to the general coefficient theorem. The recorded build and axiom
+audit report only Lean's standard logical axioms, with no admitted
+proofs or additional axioms. Preparing this textbook included reading
+the final declarations and their stated scope; it did not include
+an independent rebuild of the entire development.
+
+The short analytic manuscript and this formal development should
+also be distinguished. A later source review identifies missing
+continuation-domain justifications and an overly broad initial
+parameter range in the short manuscript. The expanded analytic and
+formal developments supply the more precise domain arguments.
+We therefore quote the coefficient result with its recorded formal
+scope, rather than treating the short contour sketch in this chapter
+as an independent proof.
+
+\begin{theorem}[Categorical consequence quoted from the uniform construction]
+For every odd order $n\geq3$, the explicit gamma-sample construction
+gives a complex spherical Haagerup--Izumi category with noninvertible
+categorical dimension $\delta_n$.  A simultaneous change of field
+embedding gives a pseudounitary category with the same fusion rules
+and dimension $d_n$.
+\end{theorem}
+
+The order-one Fibonacci and Yang--Lee cases are treated separately
+by the elementary calculation above. The displayed categorical
+consequence additionally uses the Evans--Gannon reconstruction
+theorem and the change of dimension embedding explained next.
+These categorical steps are mathematical arguments outside the
+formal coefficient theorem: that theorem has no conclusion asserting
+the existence of a tensor category, a VOA, or a full CFT. The finite
+audits discussed below are a third kind of verification, with their
+own finite scopes. None of these results is a uniform construction
+of unitary CFTs or an identification of an anyon-chain limit.
+The order-three unitary categories used elsewhere in the book are
+known separately and have explicit positive associator presentations.
+
+\section{Why Galois conjugation does not carry an adjoint automatically}
+\index{Galois conjugation}
+
+The automorphism of the quadratic dimension field interchanging
+$\delta_n$ and $d_n$ extends to an automorphism $\sigma$ of
+$\C$.  One first extends it to the algebraic closure of $\Q$,
+fixes a transcendence basis, and then extends to the algebraic
+closure of the resulting field.  Apply this same $\sigma$ to
+every coefficient of the solution.  After adjoining the dimension
+variable and clearing nonzero denominators, the reconstruction
+equations are polynomial over $\Q$.  The transformed coefficients
+therefore satisfy those same equations with dimension $d_n$.
+This argument does not require a prior proof that all gamma samples
+belong to a specified number field.
+
+It need not preserve complex conjugation:
+\[
+ \sigma(\overline z)\quad\hbox{need not equal}\quad
+ \overline{\sigma(z)}.
+\]
+Thus a statement involving adjoints and positive norms is not
+transported merely because its polynomial part is.  In particular,
+the following are progressively different assertions:
+\begin{enumerate}
+\item The fusion ring has a positive dimension character.
+\item A spherical category has dimensions equal to its
+Frobenius--Perron dimensions; it is pseudounitary.\index{pseudounitarity}
+\item The category admits a compatible positive adjoint, making
+it unitary.
+\item A vacuum VOA has a positive invariant Hermitian form.
+\item Its irreducible modules and their intertwining operators
+have the positivity needed for a unitary tensor category and a
+local full theory.
+\end{enumerate}
+The final two assertions concern additional CFT structures and
+cannot be deduced from the first three without the relevant
+construction and analytic theorems.
+
+There is also a useful obstruction on the negative side.  A
+spherical structure on these fusion rules, when it exists, is
+unique: the ratio of two pivotal structures acts by scalars
+$t_x$ on simples.  Because $\rho^2$ contains both $\one$ and
+$\rho$, one has $t_\rho^2=1=t_\rho$, so $t_\rho=1$.
+The other summands and multiplication by invertibles then force
+every $t_x=1$.  A category with negative $\dim\rho$ cannot
+be made positive merely by choosing a different pivotal structure.
+
+\section{What an exact finite certificate can prove}
+\index{certificate!exact finite}
+
+The chiral construction uses finite-dimensional spaces of lattice
+states, exact OPE identities, and rank statements.  A certificate
+should state the finite assertion, the coefficient field, and the
+argument converting the recorded data into that assertion.
+
+For example, a matrix $M$ over a number field has rank at least
+$r$ if a specified $r\times r$ minor has nonzero determinant.
+After clearing denominators, one can reduce modulo a prime avoiding
+those denominators.  A nonzero reduced determinant proves that the
+original determinant was nonzero.  This is an exact argument,
+even if a floating calculation was used earlier to discover which
+minor to choose.
+
+The upper bound is a separate matter.  It can come from exact
+linear relations, a known kernel, or a representation-theoretic
+dimension bound.  A nonzero $r\times r$ minor alone proves
+$\operatorname{rank}M\geq r$, not equality.
+
+\begin{example}[Why every component of a coefficient algebra can matter]
+Consider $R=\Q[t]/(t^2-1)$.  This is a product of two fields,
+not a field.  The element $1+t$ is nonzero at $t=1$ but vanishes
+at $t=-1$.  Thus testing a determinant only at the first component
+does not prove invertibility in all components.
+
+If a coefficient presentation is known to be one number field,
+a single good specialization showing nonzero determinant already
+proves the determinant is a nonzero field element.  If the
+presentation is an algebra with several possible embeddings or
+branches and the claim concerns all of them, one must control the
+appropriate components.  A convenient sufficient certificate is a
+nonzero norm, obtained as the product of determinant values at all
+split points modulo a good prime.  It is sufficient, not necessary:
+a zero reduced norm may simply mean the prime divides a nonzero
+characteristic-zero norm.
+\end{example}
+
+A second useful certificate uses positivity.  If a residual vector
+$v$ lies in a space with an established positive-definite Hermitian
+form and exact arithmetic gives $\langle v,v\rangle=0$, then
+$v=0$.  Without positive definiteness, a nonzero isotropic vector
+can have zero norm.  The metric is part of the certificate's
+mathematical hypotheses.
+
+Finite verification must then be connected to an all-weight theorem.
+Checking the first several graded pieces of a VOA does not exclude
+a new current generated by higher fields.  The strong-generation
+argument in Chapter~\ref{ch:finite_closure} supplies the implication from
+specified finite products and their provenance to closure in every
+weight.  Similarly, a formal proof of a rank lemma does not amount
+to a formalization of the surrounding VOA, tensor-category, or
+conformal-net theory.
+
+\section{The role of arithmetic special values}
+
+The coefficient fields, their Galois actions, and special-function
+values lead naturally to arithmetic questions.  One may ask whether
+the samples can be expressed through units in explicitly described
+number fields, whether class-field or Stark-type constructions
+organize their conjugates, and which embeddings admit positive
+categorical structures.  Such questions can make exact coefficients
+more intelligible and can provide new ways to construct or certify
+them.
+
+They do not, by themselves, specify a conformal spectrum or an OPE.
+In particular, a cubic number field has degree three; this use of
+``cubic'' is unrelated to a three-point coefficient in a CFT.
+An identity between arithmetic special values becomes relevant to
+the physics only after an explicit chain of identifications links
+those values to the categorical or chiral data being used.
+
+For the order-three center, the auxiliary quadratic data involve
+the prime thirteen, and their isometry class is tightly constrained.
+At larger odd orders the corresponding discriminant $n^2+4$ may
+be composite.  The general metric-group description of the center
+does not automatically say that every associator selects the same
+cyclic group and quadratic form.  Structural form, evaluation of a
+selected family, categorical unitarity, and CFT realization remain
+separate questions.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:HI-periods}
+Derive every identity in \eqref{eq:HI-period-relations} from
+$d_n^2=nd_n+1$.  Then derive the nonzero-integer sample shift
+\eqref{eq:HI-sample-shift} and compute the exceptional limit at
+the origin.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:HI-periods]{Solution on page~\pageref*{sol:ex:HI-periods}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:HI-sign}
+Verify the parity calculation following \eqref{eq:HI-W-samples}
+for arbitrary odd $n$.  Explain why the chosen integer
+representatives must be stated when expressions such as
+$(-1)^{a(a+n)/2}$ appear.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:HI-sign]{Solution on page~\pageref*{sol:ex:HI-sign}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:exact-rank}
+Give a $2\times2$ rational matrix that is invertible but becomes
+singular after rounding its entries to six decimal places.  Prove
+its invertibility exactly.  Explain the asymmetry between a
+nonzero determinant modulo a good prime and a zero determinant
+modulo that prime.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:exact-rank]{Solution on page~\pageref*{sol:ex:exact-rank}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:component-norm}
+In $\Q[t]/(t^2-1)$ compute the product of the two evaluations
+of $1+t$ and of $2+t$.  Which element is invertible?  Reduce
+modulo five and compare with the exact answer.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:component-norm]{Solution on page~\pageref*{sol:ex:component-norm}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:unitarity-hierarchy}
+Explain why applying a field automorphism to polynomial pentagon
+equations is legitimate, while applying it to a positivity claim
+requires additional work.  Give an example of an algebraic number
+whose being positive in one real embedding is not preserved in
+another real embedding.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:unitarity-hierarchy]{Solution on page~\pageref*{sol:ex:unitarity-hierarchy}.}}\par
+\end{exercise}
+
+\paragraph{Source note.}
+Evans--Gannon supply the categorical reconstruction framework.
+For the uniform coefficient theorem, the recorded formal source is
+\sourcefile{lean/HaagerupIzumi/Analytic/GammaConstruction.lean}, at
+revision \texttt{698b66a}; its main result is
+\texttt{EGEquations\_ruijsenaars}. The recorded build scope is
+described in \texttt{lean/README.md}, and the short manuscript's
+analytic exposition is assessed in the September 14 source review
+\sourcefile{proof_revised/formalization_review.md}. The formal result
+covers every odd order, whereas the later finite audits certify
+their specified finite statements. Neither should be read as
+formal verification of every structure in the CFT realization.

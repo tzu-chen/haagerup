@@ -76,11 +76,20 @@ jobs through the central resource guard.  Use only:
 
 ```sh
 cd /home/tzuchen/Codes/haagerup
-python3 lean/tools/c8q.py check lean/HaagerupIzumi/C8/Path/File.lean   # elaborate only
-python3 lean/tools/c8q.py build lean/HaagerupIzumi/C8/Path/File.lean   # write .olean for importers
+python3 lean/tools/c8q.py check lean/HaagerupIzumi/C8/Path/File.lean --memory-mib REVIEWED_MIB
+python3 lean/tools/c8q.py build lean/HaagerupIzumi/C8/Path/File.lean --memory-mib REVIEWED_MIB
 python3 lean/tools/c8q.py wait <id>                                     # keep waiting
 python3 lean/tools/c8q.py status                                        # queue state
 ```
+
+The root must review the allocation estimate before `REVIEWED_MIB` is chosen;
+an explicitly configured `C8Q_MEMORY_MIB` may supply that reviewed estimate
+instead. There is no automatic unknown-file budget. A resource failure
+persists `MEMORY_STOP.json` and stops further admission, including bulk
+`--keep-going` builds. Do not clear it or resubmit at a larger cap without
+root review of the allocation path and revised design/estimate. Preserve
+the incident record and separate attempt logs. See `ROADMAP.md` for the
+4 October notification audit and corrected queue workflow.
 
 Use a Bash timeout of 600000 ms.  A request blocks up to 540 s; if it prints
 "not finished", call `wait <id>`.  `build` requires every imported project

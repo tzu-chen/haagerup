@@ -1,0 +1,31 @@
+{
+  "exact_axis_central_charge": "4/5",
+  "exact_axis_membership_in_S2": true,
+  "exact_PCT_and_Virasoro_checks": true,
+  "right_raising_and_lowering_current_p_weight": "1/15",
+  "lattice_plane_Gram": [
+    [
+      4,
+      -2
+    ],
+    [
+      -2,
+      4
+    ]
+  ],
+  "plane_grade3_dimension": 22,
+  "p_weight3_multiplicity": 2,
+  "p_primary_weight3_multiplicity": 1,
+  "numerical_Potts_extension_vector_distance_from_S3": 2.2767376269527203e-12,
+  "numerical_p3_w_norm": 1.4260120027309318e-14,
+  "seconds": 2.1896141619654372,
+  "peak_rss_KiB": 144192,
+  "scope": "The c=4/5 Virasoro subalgebra and its membership are exact. Membership of its weight-three Potts extension is only tested numerically here.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_potts.py": "8898824489584e6460bb685ef5ea1ef235bebb941b57b2fd6e06b992458cf6a1",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact.py": "e9816e9b3cd30d092b45d6ce85297f49ec8431f2f6081d862dd2b41c17ebc865",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_exact4.py": "1dc0dee2a68b012b00c1dadc5329ba23b91820c5196d710e453561ec56197b7e",
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d",
+    "hi_cft_20260923_c8_grade3_span.npz": "6ae1f6eb52872f808e8ac7484365011629d95dd6839d5bb3c06880263c590b5a"
+  }
+}

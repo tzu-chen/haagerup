@@ -1,0 +1,427 @@
+\chapter{What it means to complete a local CFT}
+\label{ch:sewing}
+
+A modular-invariant partition function is a powerful constraint,
+but it is still a count of states. A local theory must also assign
+correlation functions consistently when surfaces are cut and sewn.
+This chapter explains that additional structure through a completely
+worked Ising example, then returns to the Haagerup construction and
+the reduced-theory proposals.
+
+\section{Cutting a surface introduces a channel basis}
+\index{sewing}\index{conformal block!pairing}
+
+Cut a four-punctured sphere along a circle separating two insertions
+from the other two. Insert a complete set of intermediate states
+on that circle. In a rational chiral theory this produces a finite
+sum of conformal blocks, each block already summing infinitely
+many descendants in an intermediate module. If the relevant
+intertwiner space has dimension greater than one, the channel
+also carries a multiplicity index.
+
+Let $\mathcal F_p^{(s)}(z)$ be a chosen basis of holomorphic
+blocks for one cut. A full correlator takes the form
+\begin{equation}
+ G(z,\bar z)=\sum_{p,q}D_{pq}\,
+       \mathcal F_p^{(s)}(z)\overline{\mathcal F_q^{(s)}(z)}.
+ \label{eq:sewing-block-pairing}
+\end{equation}
+Here $p,q$ include multiplicity labels, and $D$ contains products
+of normalized bulk three-point coefficients. It is not fixed by
+the torus matrix $Z_{ij}$ alone.
+
+Changing the cut changes the block basis by a fusing matrix.
+Analytically continuing an insertion around another changes it by
+a braiding or monodromy matrix. The pairing $D$ must transform
+consistently so that the full correlator is single-valued and
+independent of the chosen cut. In a reflection-positive channel,
+the two groups of insertions are related by reflection and adjoint.
+If one group prepares states $\Psi_a$, the reflected pairing is a
+Gram matrix:
+\[
+ K_{ab}=\langle\Psi_a,\Psi_b\rangle,
+ \qquad
+ \sum_{a,b}\overline{c_a}K_{ab}c_b
+ =\Bigl\|\sum_b c_b\Psi_b\Bigr\|^2\ge0.
+\]
+This explains the positive semidefinite coefficient pairing in
+such a channel, with separated insertions and positive Euclidean
+propagation understood. A basis change can move phases between
+blocks and coefficients, but cannot remove a failure of these
+compatibility conditions.
+
+The categorical associator and braiding record these changes of
+chiral channel. They constrain a local completion, while the
+choice of bulk algebra and positive pairing specifies how the
+left and right chiral data are combined.
+For $U$ conformal blocks, these fusing matrices belong to
+$\Rep(U)\simeq Z(\mathcal H_3)$. The associators for junctions
+of the six selected symmetry lines belong to $\mathcal H_3$.
+The center construction relates the two categories, but their
+$F$ matrices are different objects. In particular the four-by-four
+$\rho$ recoupling block is not a conformal-block matrix for
+arbitrary $U$ primaries.
+
+\section{A complete two-channel example from the Ising model}
+\label{sec:sewing-Ising}
+\index{Ising model}\index{BPZ equation}
+
+The Ising spin field $\sigma$ has chiral weight $1/16$, and
+$\sigma\times\sigma=\one+\epsilon$, with
+$h_\epsilon=1/2$. We normalize the full fields by
+\[
+ \langle\sigma(z,\bar z)\sigma(0)\rangle=|z|^{-1/4},
+ \qquad
+ \langle\epsilon(z,\bar z)\epsilon(0)\rangle=|z|^{-2}.
+\]
+The full spin and energy fields have weights $(1/16,1/16)$
+and $(1/2,1/2)$ respectively. We calculate
+$G_\sigma=\langle\sigma(\infty)\sigma(1)\sigma(z,\bar z)
+\sigma(0)\rangle$, where
+$\sigma(\infty)=\lim_{|w|\to\infty}|w|^{1/4}\sigma(w,\bar w)$.
+A useful pair of chiral blocks is
+\begin{align}
+ \mathcal F_1(z)&=\frac{[z(1-z)]^{-1/8}}{\sqrt2}
+                         \sqrt{1+\sqrt{1-z}},\notag\\
+ \mathcal F_\epsilon(z)&=\frac{[z(1-z)]^{-1/8}}{\sqrt2}
+                         \sqrt{1-\sqrt{1-z}}.
+ \label{eq:sewing-Ising-blocks}
+\end{align}
+Choose positive square roots on $0<z<1$ and then specify paths
+for analytic continuation. Near zero,
+\[
+ \mathcal F_1(z)=z^{-1/8}(1+O(z^2)),\qquad
+ \mathcal F_\epsilon(z)=\frac12z^{3/8}(1+O(z)).
+\]
+The exponent difference is the exchanged weight $1/2$.
+
+These blocks can be obtained from the level-two null vector of
+$\sigma$. The Gram-matrix exercise gave
+$(L_{-2}-\tfrac43L_{-1}^2)|\sigma\rangle=0$.
+Insert this null field in a correlator and move the stress contour
+onto the other insertions. The Ward identity replaces the
+$L_{-2}$ insertion by
+$\sum_{i\ne z}[h_\sigma/(z-z_i)^2+
+(z-z_i)^{-1}\partial_{z_i}]$ acting on the correlator.
+Use the three global conformal Ward identities to fix the other
+insertions at $0,1,\infty$. Their derivatives become
+$\partial_0 f=(z-1)f'+2h_\sigma f$ and
+$\partial_1 f=-zf'-2h_\sigma f$ before substituting the
+fixed positions. For
+$f(z)=\langle\sigma(\infty)\sigma(1)\sigma(z)\sigma(0)\rangle$
+the resulting differential equation is
+\begin{equation}
+ f''(z)+\frac{3(1-2z)}{4z(1-z)}f'(z)
+       -\frac{3}{64z^2(1-z)^2}f(z)=0.
+ \label{eq:sewing-Ising-BPZ}
+\end{equation}
+Its indicial equation at zero is
+$r(r-1)+3r/4-3/64=0$, with roots $-1/8$ and $3/8$.
+They are precisely $h_{\rm exchange}-2h_\sigma$ for the
+vacuum and energy channels. Substitution verifies the two
+radical solutions above. A second-order equation has a
+two-dimensional local solution space away from its singularities,
+so these independent solutions exhaust the chiral blocks for
+this null-vector problem.
+
+Under exchange of the $s$ and $t$ cuts,
+\begin{equation}
+ \begin{pmatrix}\mathcal F_1(1-z)\\\mathcal F_\epsilon(1-z)\end{pmatrix}
+ =\frac1{\sqrt2}
+  \begin{pmatrix}1&1\\1&-1\end{pmatrix}
+  \begin{pmatrix}\mathcal F_1(z)\\\mathcal F_\epsilon(z)\end{pmatrix}.
+ \label{eq:sewing-Ising-F}
+\end{equation}
+The identity follows by squaring the half-angle radical relations
+and checking their signs on $0<z<1$. The matrix is real orthogonal.
+It does not preserve either individual channel: a vacuum block
+in one cut contains both channels in the other.
+
+Suppose the full correlator has pairing matrix $D$. Monodromy
+around zero gives phases $e^{-\pi i/4}$ and $e^{3\pi i/4}$ to
+the two holomorphic blocks. The phases differ by a sign, so
+single-valuedness removes off-diagonal entries of $D$.
+Write $D=\diag(a,b)$. Crossing requires
+$F^{\mathsf t}DF=D$, and its off-diagonal entry is
+$(a-b)/2$. Thus $a=b$. Unit normalization of the vacuum channel
+sets $a=1$, yielding
+\begin{equation}
+ G_\sigma(z,\bar z)=|\mathcal F_1(z)|^2+
+                              |\mathcal F_\epsilon(z)|^2.
+ \label{eq:sewing-Ising-full}
+\end{equation}
+This is a local, crossing-symmetric positive pairing. In the
+$z\to0$ expansion, the energy channel has relative coefficient
+$1/4$, so the normalized full coefficient obeys
+$|C_{\sigma\sigma\epsilon}|=1/2$.
+
+The final answer also has a branch-independent form:
+\begin{equation}
+ G_\sigma(z,\bar z)=
+ \frac{\sqrt{1+|z|+|1-z|}}
+      {\sqrt2\,|z(1-z)|^{1/4}}.
+ \label{eq:sewing-Ising-singlevalued}
+\end{equation}
+Indeed, for $w=\sqrt{1-z}$ one has
+$(|1+w|+|1-w|)^2=2(1+|1-z|+|z|)$.
+The expression makes single-valuedness explicit and verifies
+both crossing generators:
+\[
+ G_\sigma(1-z,1-\bar z)=G_\sigma(z,\bar z),\qquad
+ G_\sigma(z,\bar z)=|z|^{-1/4}
+             G_\sigma(1/z,1/\bar z).
+\]
+The prefactor in the second equation is fixed by the external
+dimension; crossing is not invariance under every fractional
+linear transformation without such factors.
+
+Channel mixing explains why a single chiral block usually does not
+give a full correlator by taking its absolute square. Here
+$|\mathcal F_1|^2$ alone fails crossing, even though it is
+nonnegative on the real interval and has the correct leading
+vacuum singularity. Those two properties are insufficient.
+
+\section{Algebra objects organize rational sewing}
+\index{Frobenius algebra}\index{full center}\index{Morita equivalence}
+
+In the rational framework, a suitable symmetric special Frobenius
+algebra object $A$ in the representation category of an existing
+rational chiral theory organizes the oriented full-CFT sewing
+data. The chiral theory and its analytic conformal blocks are
+inputs; an abstract modular category alone does not construct
+them. Multiplication specifies how algebra lines meet,
+associativity makes different decompositions agree, and the
+Frobenius relation relates multiplication to a compatible
+comultiplication. In the unitary Q-system normalization this
+comultiplication is the adjoint of multiplication.
+The positive Q-system and unitary chiral theory provide the adjoint
+and Hilbert-space pairings; the purely algebraic Frobenius identities
+alone do not assert reflection positivity. The resulting bulk state
+space is described by the full center of $A$.
+
+The TFT construction proves mapping-class invariance and bulk and
+boundary factorization for these categorical correlators on oriented
+world sheets. Their interpretation as analytic amplitudes on Riemann
+surfaces also uses the chiral conformal-block theory, including its
+sewing and convergence theorems. The annulus comparison in
+Chapter~\ref{ch:unitarity} establishes the positivity and VOA--net
+statements used here; it is not itself a proof of every higher-genus
+analytic sewing theorem. The diagonal local conformal net already
+exists by the construction in Chapter~\ref{ch:full_theories}.
+
+For the Cardy or diagonal construction, $A=\one$. Its bulk
+object is the canonical sum
+\[
+ \bigoplus_i M_i\boxtimes M_i^*
+\]
+in $\Rep(U)\boxtimes\Rep(U)^{\rm rev}$, with a multiplication
+built from the chiral fusion and duality data. The torus trace is
+the diagonal partition function, with the right-moving
+contragredient convention understood. All twelve Haagerup labels,
+and all Ising labels used here, are self-dual, so the distinction
+between diagonal and charge-conjugate labelings does not change
+these examples. For a local chiral extension,
+a connected commutative separable twist-free algebra in $\Rep(U)$,
+with the positive structure and grading conditions of the extension
+theorem, supplies additional chiral fields; the selected Haagerup
+Lagrangian algebra gives the
+holomorphic extension studied above.
+
+The underlying object is only part of the algebra. A decomposition
+such as $A=\one\oplus b\oplus2a$ does not state its multiplication
+maps or their associativity. Equal characters of $a$ and $c_0$
+make this particularly visible: a scalar trace can conceal an
+extension choice that the junction data distinguish.
+
+Morita-equivalent algebra objects give equivalent full-CFT
+descriptions in the appropriate rational construction, while
+their boundary presentations can look different. This is one
+reason module categories, rather than only fusion rings, are
+natural physical objects. The associator determines whether a
+candidate multiplication is actually associative; a list of
+integer fusion multiplicities cannot replace it.
+
+\section{Existence and explicit OPE tables are different achievements}
+
+Existence of the diagonal full theory does not require printing
+every coefficient in a basis of its bulk primary fields.
+Conversely, a long table of low
+three-point coefficients does not by itself prove all sewing
+identities in all sectors and genera. These are complementary
+forms of information.
+
+For the Haagerup $c=8$ construction, the lattice vacuum algebra
+supplies explicit chiral OPEs, the complete weight-two primary
+tensor, and several exact four-point functions. The structural
+and analytic arguments supply the representation category,
+unitarity, and full-theory existence under their stated inputs.
+The selected lattice intertwiners in the lightest module give
+additional nonvacuum chiral data.
+
+What is not supplied by those particular calculations is a
+complete basis of all nonvacuum intertwiner spaces together with
+the numerical or algebraic bulk sewing tensor for every diagonal
+sector. In particular the nine simple lattice blocks of
+\eqref{eq:corr-light-block} are not a declaration of the complete
+lightest-scalar bulk four-point function. They remember the
+containing $B$ extension and its chosen intertwiners.
+
+For full vacuum-sector fields that factor as
+$\Phi(z,\bar z)=v(z)\bar w(\bar z)$, correlators do factor into
+the corresponding chiral and antiholomorphic correlators. This
+gives many explicit local observables in both full theories.
+The factorization follows from the specified tensor-product
+sector, not from a general rule that every nonvacuum bulk field
+is the product of any two selected chiral blocks.
+
+\section{A coset is a chiral operation}
+\index{coset!full-theory completion}
+
+Suppose $A$ and $C=\Com(A,V)$ commute inside a VOA $V$,
+with complementary conformal vectors
+$\omega_V=\omega_A+\omega_C$.
+When an ambient module has a semisimple restriction with
+compatible ordinary gradings, it can branch as
+\begin{equation}
+ V_i\downarrow_{A\otimes C}
+ =\bigoplus_\lambda A_\lambda\otimes B_{i\lambda},
+ \qquad
+ \chi_i^V=\sum_\lambda\chi_\lambda^A b_{i\lambda}.
+ \label{eq:sewing-branching}
+\end{equation}
+Here $B_{i\lambda}$ is a multiplicity space carrying $C$ fields,
+and $b_{i\lambda}$ is its graded trace when that trace is defined.
+The equality of characters is a branching identity. Deleting the
+$A$ characters from a full partition function is not a general
+sewing theorem.
+
+Several issues can arise. A multiplicity space might fail to be
+irreducible or ordinary for $C$. Infinitely many branching labels
+can produce a divergent reduced thermal trace. Distinct ambient
+sectors can produce repeated copies of the reduced vacuum. A
+putative left/right pairing can fail modular invariance or crossing.
+Finally, an ambient defect need not descend with coherent junctions.
+These are separate questions and can fail independently.
+
+The exact reverse-commutant example in
+Chapter~\ref{ch:cosets} gives a memorable finite warning: a naive
+branching sum produces $6Z_L$, because multiplicities contribute
+$1^2+1^2+2^2=6$ vacuum copies. The lattice CFT $Z_L$ may exist,
+but obtaining it requires a new, justified choice of completion.
+Dividing a trace by six does not construct its multiplication or
+its defect action.
+
+For an irrational stress splitting, the challenge can be analytic
+as well as categorical. A formal diagonal pairing of branching
+spaces with one vacuum may still have infinitely many states
+below some energy and an infinite thermal trace. Conversely,
+projecting to a single chiral vacuum character can violate modular
+invariance. A continuous modular density with no normalizable
+vacuum describes yet another possibility and has different
+effective-central-charge behavior.
+
+\section{Defect descent requires junctions}
+\index{defect!descent}\index{junction}
+
+A line preserving a candidate stress tensor preserves its local
+conformal transformations. This is necessary for a topological
+symmetry of the reduced theory. It is not sufficient to identify
+the reduced defect category with $\mathcal H_3$.
+One needs images of the lines and of their junction spaces,
+compatible tensor-product maps, and the same coherent associativity
+relations. In categorical language, one needs an appropriate
+monoidal transport, not only a list of operators commuting with
+$L_0$.
+
+For example, operators may satisfy the fusion-algebra relations,
+including $\rho^2=1+\rho+\alpha\rho+\alpha^2\rho$, on a selected
+vector space while carrying no information about the $F$ symbols of
+four line junctions. The ordinary Haagerup fusion algebra has
+only two one-dimensional representations and one two-dimensional
+representation. It cannot encode the full tensor product of
+local charge sectors by itself. The tube algebra and its
+half-braiding data supply more information, but their transport
+must still be tied to the actual reduced fields and sewing.
+
+This distinction is constructive rather than merely restrictive.
+In the rational $c=6$ commutant discussed later, the extension
+correspondence transports an algebra object and its multiplication.
+That supplies junction data, which is stronger than a numerical
+agreement of line eigenvalues. For the irrational near-two axis,
+an analogous full transport has not been completed in the
+research record.
+
+\section{How a proposed identification should be assessed}
+
+A convincing identification of a microscopic continuum theory
+should specify the actual Hilbert space and vacuum, a convergent
+torus trace, normalized local fields and their OPEs, crossing and
+sewing, and the intended symmetry action including junctions.
+One rarely computes all of these from a lattice simulation.
+Instead, an exact construction can supply them and numerical
+data can test whether the lattice approaches that construction.
+
+Matching central charge is the first coarse test. Matching
+dimensions, spins, multiplicities, and symmetry sectors is much
+stronger. Matching normalized OPE ratios and phase invariants is
+stronger again. Every comparison needs control of finite-size,
+finite-entanglement, and operator-normalization errors. A mismatch
+can exclude a specified candidate under explicit limiting
+assumptions, but an unexplained mismatch need not classify all
+possible CFTs at the same central charge.
+
+This is the perspective we will use for the physical Haagerup
+chain. It makes the existing evidence informative without turning
+a suggestive decimal or a chiral stress vector into a completed
+bulk construction.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:sewing-Ising}
+Verify \eqref{eq:sewing-Ising-F} on the interval $0<z<1$ by
+elementary radical identities. Use it to show directly that
+$|\mathcal F_1|^2$ alone fails crossing.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:sewing-Ising]{Solution on page~\pageref*{sol:ex:sewing-Ising}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:sewing-pairing}
+Starting with a general Hermitian $2\times2$ matrix $D$, use
+the two Ising monodromy phases and the fusing matrix to determine
+all local crossing-invariant pairings. Impose positivity and
+vacuum normalization at the end.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:sewing-pairing]{Solution on page~\pageref*{sol:ex:sewing-pairing}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:sewing-object}
+Explain the difference between an equality of characters, an
+isomorphism of underlying modules, an isomorphism of algebra
+objects, and an equivalence of full local CFTs. Give one piece
+of data forgotten at each step toward the character.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:sewing-object]{Solution on page~\pageref*{sol:ex:sewing-object}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:sewing-coset}
+A proposed reduced theory has one vacuum but infinitely many
+states with energies bounded by a fixed constant. Prove that
+its thermal trace diverges at every positive inverse temperature.
+Why does positivity make this argument especially direct?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:sewing-coset]{Solution on page~\pageref*{sol:ex:sewing-coset}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:sewing-descent}
+An ambient Haagerup line action commutes with two complementary
+stress tensors. List the extra structures needed to turn its
+restriction into a specified Haagerup symmetry of one reduced
+full theory. Which of these are visible in a torus trace?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:sewing-descent]{Solution on page~\pageref*{sol:ex:sewing-descent}.}}\par
+\end{exercise}

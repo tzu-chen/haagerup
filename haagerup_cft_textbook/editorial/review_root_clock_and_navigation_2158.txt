@@ -1,0 +1,39 @@
+Final reader review and clock-chain example, 2026-10-05 21:58 UTC
+
+Editorial changes only; no scientific source or numerical record was modified.
+
+The final foundation review found a stale reference to the next chapter,
+and a glossary definition of total quantum dimension specialized too early
+to the Haagerup center. These are repaired. The first fusion projector
+now states the Hermitian inner-product convention. The reading guide links
+directly to the solution and notation appendices. The finite-closure chapter
+links to the exact finite-field example, and the height-thirteen construction
+input states that its archived certificate was imported without replay.
+
+The lattice narrative review identified a useful missing qualification:
+a gapped finite-volume vacuum-cluster criterion must specify compatible
+ring sizes and boundary/flux sectors. The qualification now appears in
+both the finite-size and final-identification chapters.
+
+A new hand-solvable clock-chain example in l05 explains that qualification.
+Root and scope_lattice independently derived its residue constraint,
+configuration reconstruction, exact degeneracies, and compatible-ring gap.
+No numerical enumeration or research process was needed.
+
+For H=J sum_j [1-delta(s_{j+1},s_j+1)], the residues
+r_j=s_{j+1}-s_j-1 obey sum r=-L in Z/3. Any allowed residue word
+and initial color reconstruct a unique periodic configuration.
+For 3|L there are three zero-energy states and minimum excitation 2J.
+For 3 not dividing L a single residue -L is required, with L possible
+locations and three initial colors, yielding 3L states of energy J.
+The staggered variable maps the bulk to ferromagnetic clock projectors
+with a boundary color twist. The three period-three configurations are
+called pure bulk vacua; the text does not classify interface states under
+all possible infinite-volume boundary conditions.
+
+For the diagonal clock operator Z_j, product vacua factorize, while the
+symmetric cat has zero one-point function and
+<Z_i^dagger Z_j>=exp[2 pi i (j-i)/3]. This is an order correlation
+coexisting with a finite bulk gap, with no claim about the Haagerup phase.
+
+The source and PDF audits must be refreshed after these final additions.

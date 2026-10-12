@@ -1,0 +1,164 @@
+{
+  "all_integrity_checks_passed": true,
+  "finite_OPE_identification_gates_passed": true,
+  "full_Haagerup_identification_proved": false,
+  "mathematical_derivation": "hi_cft_20260923_proof_pf13_identification.md",
+  "records": [
+    {
+      "artifact": "hi_cft_20260923_proof_current_module_v2.json",
+      "sha256": "4d2f7ee3ceac33c7d0e483e9761c1ffe4da5b0e92a57d616e3dca1138804b25f",
+      "verified_embedded_hashes": 3
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_potts.json",
+      "sha256": "3cb0c889a7232a4b76747a5a3abc8bee46e0d5045c3be5e9c63008e7a5569d2d",
+      "verified_embedded_hashes": 5
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_potts_exact.json",
+      "sha256": "e77f28fb51ac4f990a001ffd9af2fd15a36877eb726f10a7489bdceaaa46ec16",
+      "verified_embedded_hashes": 4
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_rational_core.json",
+      "sha256": "d24ea443bee278cb1b1d30a6c607c2d9829e80fc83fe7a02b77f35052cf7bd5d",
+      "verified_embedded_hashes": 4
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_ambient_coset.json",
+      "sha256": "1ef5e406c0b4f954b46c7c6f7e28fe14bf11276a67471b31e82bb2819c4517cb",
+      "verified_embedded_hashes": 2
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_pf13_exact.json",
+      "sha256": "e39ade557fcca58488c21760382c1cbc54457500f1dc5503e126aa7f0b6b4b92",
+      "verified_embedded_hashes": 0
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_pf13_membership.json",
+      "sha256": "f2f1fcf2083a7d68bfd220986a13bf26e21e36fdb0a6cb73fc130142d11803fc",
+      "verified_embedded_hashes": 3
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_pf13_ope.json",
+      "sha256": "fe61f082573785c2ac4204b756a8e543f3580ff267d03d513d9015c07705f313",
+      "verified_embedded_hashes": 3
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_pf13_nonlinear.json",
+      "sha256": "6cfe502ef784ccd40714ba72dac5531d4528fe43ac8a4cbb31df31e9dea528ff",
+      "verified_embedded_hashes": 4
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_pf13_truncation.json",
+      "sha256": "8d7c33d1b8aa25310ddd8a21a5c059a7042c7eb52f271c69a4646d4b23b01a6a",
+      "verified_embedded_hashes": 0
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_pf13_dly.json",
+      "sha256": "8a3c3fa82c798d1a2577563bfeed08483c5b76a78022f2f2f92847052abab1a1",
+      "verified_embedded_hashes": 0
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_pf13_simple_pole_algebra.json",
+      "sha256": "2e7c7eb9a85a8ade6e7008803353cc0746a9b70a6499d4840154db8a165c7bb7",
+      "verified_embedded_hashes": 1
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_pf13_upper_poles.json",
+      "sha256": "37d5363f495da7bc22ec269e2d5fdb8ba7655cf15d9d6326231aec86506f390a",
+      "verified_embedded_hashes": 4
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_remaining_coset.json",
+      "sha256": "1750096a7c7e00d46cb135df44184153caa7d55f0bd22377a86789b4c26615e5",
+      "verified_embedded_hashes": 2
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_remaining_axes.json",
+      "sha256": "57488f910e3488e0e69f1db6cec015596769db06b679214112500af505357fbf",
+      "verified_embedded_hashes": 2
+    },
+    {
+      "artifact": "hi_cft_20260923_proof_grade4_tol5.json",
+      "sha256": "6de0183c9813f69916779aa4ca730b1e9640e90eb1cc30e0837ad6ee496c50e2",
+      "verified_embedded_hashes": 5
+    }
+  ],
+  "local_links": [
+    "hi_cft_20260923_c8_construction_report.md",
+    "hi_cft_20260923_proof_current_module_v2.json",
+    "hi_cft_20260923_proof_potts.json",
+    "hi_cft_20260923_proof_potts_exact.json",
+    "hi_cft_20260923_proof_rational_core.json",
+    "hi_cft_20260923_proof_ambient_coset.json",
+    "hi_cft_20260923_proof_core_coset.json",
+    "hi_cft_20260923_proof_pf13_identification.md",
+    "hi_cft_20260923_proof_remaining_coset.json",
+    "hi_cft_20260923_proof_pf13_exact.json",
+    "hi_cft_20260923_proof_pf13_membership.json",
+    "hi_cft_20260923_proof_pf13_ope.json",
+    "hi_cft_20260923_proof_pf13_nonlinear.json",
+    "hi_cft_20260923_proof_pf13_truncation.json",
+    "hi_cft_20260923_proof_pf13_dly.json",
+    "hi_cft_20260923_proof_pf13_simple_pole_algebra.json",
+    "hi_cft_20260923_proof_pf13_upper_poles.json",
+    "hi_cft_20260923_proof_remaining_axes.json",
+    "hi_cft_20260923_proof_grade4_tol5.json",
+    "hi_cft_20260923_proof_resource_review.md"
+  ],
+  "manifest_sha256": {
+    "hi_cft_20260923_proof_ambient_coset.json": "1ef5e406c0b4f954b46c7c6f7e28fe14bf11276a67471b31e82bb2819c4517cb",
+    "hi_cft_20260923_proof_ambient_coset.py": "dfd0de6bea30bb7d4becf244e7c8a7fa15e9b0b534ff901c015d6d6cb838c87e",
+    "hi_cft_20260923_proof_artifact_audit.py": "16e24c93f1c1adc88e42ecacade3f2246886a73e3e3bcc8ba2af4a0a13dcd0c8",
+    "hi_cft_20260923_proof_cartan_axes.json": "cf0646e8492b621d8b53292852c3f792a00fb149fa91c5dea91f7b656c25e344",
+    "hi_cft_20260923_proof_cartan_axes.py": "76b2d4ab3450555985072b84d5f8f9cc8b6347487dd45a16db5765335a416c0a",
+    "hi_cft_20260923_proof_core_coset.json": "df844ba63f8e82405397aea48e104b9176b7996ed265fc83a6cc6eff7a4d14c6",
+    "hi_cft_20260923_proof_core_coset.py": "e0327896244ca3476eb12ec32b97c13f628c72e9d63535e3893282dd07ae92b0",
+    "hi_cft_20260923_proof_current_module.json": "04f2037c6731f2447b35574d3307f75333d7bccc85a9b80f72ab7968567a3a09",
+    "hi_cft_20260923_proof_current_module.py": "e1d88245d504382edab26afeeeaad63de8181242efe3eee2a00bdf44decfea7b",
+    "hi_cft_20260923_proof_current_module_v2.json": "4d2f7ee3ceac33c7d0e483e9761c1ffe4da5b0e92a57d616e3dca1138804b25f",
+    "hi_cft_20260923_proof_e8_pf13.json": "680b2007a03352165ad2e25e6592346ba796d1f8a710d8df16b5fdbd1316e3fa",
+    "hi_cft_20260923_proof_e8_pf13.py": "405caba055fb8d9b270cc351f9588fb7b4f2634cc7a505b926329f299ef56e1d",
+    "hi_cft_20260923_proof_exact4.py": "1dc0dee2a68b012b00c1dadc5329ba23b91820c5196d710e453561ec56197b7e",
+    "hi_cft_20260923_proof_general_modes.py": "a561e188f1eaaf2815bbaf52b8a173dab4d870827346c6dab535eae2c4dc4885",
+    "hi_cft_20260923_proof_general_modes_v2.py": "4bd1e6d4df8122734e90da1096fb5d30ed74aec40574a8bee7642307d27099f1",
+    "hi_cft_20260923_proof_grade4.py": "5d5e7c1975ae5852a005628bf5f957f00e2745ffa510b881e1142befdf98cc1f",
+    "hi_cft_20260923_proof_grade4_tol5.json": "6de0183c9813f69916779aa4ca730b1e9640e90eb1cc30e0837ad6ee496c50e2",
+    "hi_cft_20260923_proof_pf13_W5.json": "f5ef77b5fc1f0abae3becb8a776ca6f62294e4bf577bfb37a836d2d2008c770b",
+    "hi_cft_20260923_proof_pf13_W6.json": "311f5a681c3ea15ac8794211520eab4b59aaeede73791a36d086a61fab006cb9",
+    "hi_cft_20260923_proof_pf13_dly.json": "8a3c3fa82c798d1a2577563bfeed08483c5b76a78022f2f2f92847052abab1a1",
+    "hi_cft_20260923_proof_pf13_dly.py": "da7547d1b443b3ae1c6b7874ea916e4ae8f2b16421cc19bccd50ada48e990a56",
+    "hi_cft_20260923_proof_pf13_exact.json": "e39ade557fcca58488c21760382c1cbc54457500f1dc5503e126aa7f0b6b4b92",
+    "hi_cft_20260923_proof_pf13_exact.py": "23a7b9d9846f642858715d6c72e9c355761ab4fb30b594d744e7acb07c5d120b",
+    "hi_cft_20260923_proof_pf13_identification.md": "a81ca1f4f4ddad0a531d61367c48c148184f42f758542e4bd329a4fb84aba31c",
+    "hi_cft_20260923_proof_pf13_membership.json": "f2f1fcf2083a7d68bfd220986a13bf26e21e36fdb0a6cb73fc130142d11803fc",
+    "hi_cft_20260923_proof_pf13_membership.py": "6309214b9de77a1e5c4a4c2e730fa524add6e552a77a4d400891eb0a9703a4b7",
+    "hi_cft_20260923_proof_pf13_nonlinear.json": "6cfe502ef784ccd40714ba72dac5531d4528fe43ac8a4cbb31df31e9dea528ff",
+    "hi_cft_20260923_proof_pf13_nonlinear.py": "e2f4f65e26a29de97f121f3f1c4ae759335eb913210788a8ef5548a897b735f3",
+    "hi_cft_20260923_proof_pf13_ope.json": "fe61f082573785c2ac4204b756a8e543f3580ff267d03d513d9015c07705f313",
+    "hi_cft_20260923_proof_pf13_ope.py": "c1829ce603586a7a3192a29a14427d211e010b2c714911702fc9d3376a225ec8",
+    "hi_cft_20260923_proof_pf13_primary.json": "388c5e922d908026b6e9b232905cb05deb45d49dd68a8ea019a1b0524040e3e1",
+    "hi_cft_20260923_proof_pf13_primary.py": "fe1adedb51cb88c92552cd6a5e6954e2006a19205f976bb2ba989351bafa728c",
+    "hi_cft_20260923_proof_pf13_simple_pole_algebra.json": "2e7c7eb9a85a8ade6e7008803353cc0746a9b70a6499d4840154db8a165c7bb7",
+    "hi_cft_20260923_proof_pf13_simple_pole_algebra.py": "c2b0db8e2f31e7a581ede05022b1045d69fac5550d3932e78e784d9e4568fd6a",
+    "hi_cft_20260923_proof_pf13_truncation.json": "8d7c33d1b8aa25310ddd8a21a5c059a7042c7eb52f271c69a4646d4b23b01a6a",
+    "hi_cft_20260923_proof_pf13_upper_poles.json": "37d5363f495da7bc22ec269e2d5fdb8ba7655cf15d9d6326231aec86506f390a",
+    "hi_cft_20260923_proof_pf13_upper_poles.py": "f6dd1d4b4fd32809cbf3e532b7cc69773c16f6db6d85f647ce503a323afb54ed",
+    "hi_cft_20260923_proof_pf13_upper_poles_resume.py": "aed82d28d9d52fbbb3248c0eb62fd262da41916845a0f4c2d06f36ba2f14352a",
+    "hi_cft_20260923_proof_pf13_weight7.py": "45f4ad5e31e82fa3dede1ba0f51bff31e5a730e91d4b3ebd3fa5051d05c2e8d4",
+    "hi_cft_20260923_proof_potts.json": "3cb0c889a7232a4b76747a5a3abc8bee46e0d5045c3be5e9c63008e7a5569d2d",
+    "hi_cft_20260923_proof_potts.py": "8898824489584e6460bb685ef5ea1ef235bebb941b57b2fd6e06b992458cf6a1",
+    "hi_cft_20260923_proof_potts_exact.json": "e77f28fb51ac4f990a001ffd9af2fd15a36877eb726f10a7489bdceaaa46ec16",
+    "hi_cft_20260923_proof_potts_exact.py": "b2101b6a7c3ff48e866fd1a0de1c91ef7aa6887dcd98995369c3312586eb8e99",
+    "hi_cft_20260923_proof_rational_core.json": "d24ea443bee278cb1b1d30a6c607c2d9829e80fc83fe7a02b77f35052cf7bd5d",
+    "hi_cft_20260923_proof_rational_core.py": "6f97c95a48834dab652c37400ad55a482bddd281d723c18725cc8767485a201c",
+    "hi_cft_20260923_proof_remaining_axes.json": "57488f910e3488e0e69f1db6cec015596769db06b679214112500af505357fbf",
+    "hi_cft_20260923_proof_remaining_axes.py": "d33ea552c7c59de1d243933854bfbff383be5090c3e789568239d3c5115b0bb5",
+    "hi_cft_20260923_proof_remaining_coset.json": "1750096a7c7e00d46cb135df44184153caa7d55f0bd22377a86789b4c26615e5",
+    "hi_cft_20260923_proof_remaining_coset.py": "8a5a37ba2bf3cc10fc3e57f7fea4a37a2c651291364d4ba2aae4b26d1f3b7d04",
+    "hi_cft_20260923_proof_report.md": "ccc8da19ffa322f9b37d199e3145580c4665f6c48bae0e1076f56f6b78a7b8e1",
+    "hi_cft_20260923_proof_resource_review.md": "64f01e7bbbcddc9a18a2c646c3799bc97615676ec6d171fa60be69862834cdc1"
+  },
+  "scope": "File integrity and finite calculation gates. The reconstruction and C2 arguments are mathematical proofs in the linked note; this script does not formally verify those theorems."
+}

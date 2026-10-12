@@ -1,0 +1,16 @@
+{
+  "exact_Linshaw_5_7_simple_pole": true,
+  "c": "8/5",
+  "lambda": "14/473",
+  "W5_over_s_support": 7352,
+  "weight_six_product_support": 25045,
+  "seconds": 394.82758403592743,
+  "peak_rss_KiB": 176140,
+  "scope": "One nonlinear relation is certified. The remaining initial relations in Theorem 5.2 still require verification.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_pf13_nonlinear.py": "e2f4f65e26a29de97f121f3f1c4ae759335eb913210788a8ef5548a897b735f3",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_general_modes_v2.py": "4bd1e6d4df8122734e90da1096fb5d30ed74aec40574a8bee7642307d27099f1",
+    "hi_cft_20260923_proof_pf13_exact.json": "e39ade557fcca58488c21760382c1cbc54457500f1dc5503e126aa7f0b6b4b92",
+    "hi_cft_20260923_proof_pf13_ope.json": "fe61f082573785c2ac4204b756a8e543f3580ff267d03d513d9015c07705f313"
+  }
+}

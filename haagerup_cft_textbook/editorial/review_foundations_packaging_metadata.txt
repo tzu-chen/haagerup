@@ -1,0 +1,118 @@
+Static review of source recording and package metadata
+Reviewer: scope_foundations
+Review time: 2026-10-05 21:09:39 UTC (clock tool)
+
+Scope and method
+----------------
+Read record_sources.py, package.py, the imported build.py helpers, README.txt,
+and the result-writing portions of the two small checkers. Did not execute or
+import any reviewed script; did not run hashing, a build, or research work.
+This report is the only file written by this review. Line numbers refer to
+the scripts read at the stated time.
+
+Disposition
+-----------
+The source recorder's main provenance design passes. It is read-only toward
+the selected research files, describes a selected inventory rather than a
+complete audit, distinguishes current infrastructure from historical run
+identities, and uses exclusive file creation to preserve previous snapshots.
+The package gates correctly connect a stable source tree to its document
+audit, build, PDF navigation audit, checker sources, and plot provenance.
+Three small concrete issues follow. The first two are worth fixing before
+the final package; the third concerns the literal write boundary only.
+
+1. Bind packaged bytes to the hashes that passed the initial gates.
+
+   package.py:23-51 validates current inputs. Lines 78-82 then hash them
+   afresh for the manifest, and lines 98-102 compare ZIP payloads with this
+   later manifest. A chapter or checker edited after its first validation
+   but before its manifest hash can therefore enter the ZIP together with
+   the older build or checker record. The current payload check catches
+   changes after manifest creation, but not this earlier interval.
+
+   A concrete sequence is: chapter A passes the source/build checks; A is
+   edited; the manifest hashes new A; new A is placed in the ZIP; the old
+   PDF/build record remains accepted. The separate PDF has the analogous
+   interval between its validation at 28-31 and its fresh manifest hash
+   at 78. Root's final editorial freeze makes this unlikely in practice,
+   but the guard should bind to the reviewed identities it already knows.
+
+   Minimal repair: retain one map of the initially validated source,
+   checker, plot, and PDF hashes, and require their manifest/payload hashes
+   to equal those retained values. Also pin the bytes/hashes of the records
+   actually read if those records may be replaced during packaging. This
+   does not require a locking framework or another scientific run.
+
+2. Require the promised final selected-source snapshot.
+
+   package.py:53-64 includes whatever editorial files happen to exist;
+   it does not require editorial/scientific_source_snapshot.json. Thus a
+   package made before the planned 22:35 UTC recorder step can pass every
+   current gate while README.txt promises an included dated snapshot.
+
+   Minimal repair: require that exact file before packaging and include
+   it explicitly among the metadata inputs. A short schema/scope check
+   can reject an empty or unrelated JSON file, but no fresh hashing of
+   the external research tree is needed: this is a dated source cutoff,
+   not a requirement that historical snapshots track later edits.
+
+3. Suppress the ordinary import bytecode side effect if writes must be
+   confined literally to editorial/.
+
+   record_sources.py:16 imports build.py. Its top-level code is safe:
+   build.py defines helpers and imports libraries, while typesetting and
+   subprocess launch occur only inside the explicitly called build()
+   routine. No research source is imported or executed. Python can still
+   create/update __pycache__/build.*.pyc next to build.py when importing it.
+   That is an editorial cache, not a provenance modification, but it lies
+   outside editorial/ and can occur even for --list.
+
+   Minimal repair: invoke the recorder with python3 -B (and document that
+   invocation), or set sys.dont_write_bytecode before importing build.
+   No need to duplicate the existing resource-headroom helpers.
+
+Passing properties checked explicitly
+------------------------------------
+* record_sources.py:22-104 gives named selected groups. The exposition
+  discovery excludes archived base/baseline copies deliberately; output
+  scope at 168 says this is neither a complete repository inventory nor
+  a certificate audit. Current policies/guard/shim have their own group.
+* Research paths are opened only for reading. Historical JSON records are
+  hashed as opaque bytes, never parsed and rewritten. The snapshot text
+  explicitly says current infrastructure hashes do not replace old ones.
+* Per-file pre/post metadata includes device, inode, size, mtime_ns and
+  ctime_ns (108-123). The final selected-file metadata pass (163-166)
+  detects ordinary selected-source edits after an individual hash was
+  taken. This is adequate for the coordinated, nonadversarial freeze;
+  it is not advertised as a filesystem-wide atomic snapshot.
+* Destination resolution is constrained to editorial/ and .json
+  (144-146). The early existence check has a useful error, and open('x')
+  at 179 independently prevents an overwrite if another writer creates
+  that destination in the meantime. On failure, a new output name is
+  required; no archived snapshot is silently refreshed.
+* The recorder streams hashes in 1 MiB chunks and has explicit selected
+  input-size ceilings, address-space/CPU/affinity limits, and actual
+  host/cgroup headroom checks. It launches no subprocess. The planned
+  invocation time is root's scheduling responsibility, not a script
+  timer. This review did not independently verify the reported 137-file
+  count or 27.4 MiB total by executing the inventory.
+* build.py:26-33 hashes the flat TeX source sets and included PDF figures.
+  The package compares both audit and build source maps with these inputs,
+  the delivered PDF with the build hash, and the PDF navigation audit with
+  that same PDF. It rejects recorded failed/stopped build passes.
+* package.py:36-51 pins both current checker sources and the archived
+  initial checker to their respective run records; it also pins plot
+  script and generated assets. It preserves the older checker record
+  rather than relabeling it as a run of the newer checker.
+* The result writers put success output only after their checks complete.
+  The order-three chapter_source_at_check_sha256 is a historical identity,
+  not a claim that every later prose edit requires numerical replay.
+  Likewise, old guard hashes should remain old guard hashes; the new
+  source snapshot separately records the current guard.
+* Packaged paths are checked to resolve within the textbook directory.
+  ZIP bytes are checked against the manifest, the archive is CRC-tested,
+  and a temporary archive replaces the final ZIP only after those checks.
+  Regenerating manifest.json/the current delivery ZIP is separate from
+  preserving the immutable scientific-source snapshot.
+
+No scientific or TeX source was modified by this review.

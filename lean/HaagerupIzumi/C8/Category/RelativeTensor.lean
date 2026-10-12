@@ -17,7 +17,8 @@ We use Mathlib's relative tensor product of bimodules `Bimod.tensorBimod`, the c
 of `r_M ▷ N` and `α ≫ M ◁ l_N`.  This needs coequalizers in `C` and tensoring on either
 side preserving them; these are explicit typeclass hypotheses.  In the manuscript's
 semisimple setting the coequalizer is the image of the separability idempotent, a split
-coequalizer; that identification is not formalized here.
+coequalizer; that identification is `SeparableTensor.isSplitCoequalizer` and
+`SeparableTensor.tensorBimodXIso` (`Category/SeparableCoequalizer`).
 
 * `tensorBimod_relation`: if `M` and `N` satisfy `actLeft = c_{A,X} ≫ actRight`, so does
   `M ⊗_A N` (hexagon identity and the balancing relation `coequalizer.condition`).

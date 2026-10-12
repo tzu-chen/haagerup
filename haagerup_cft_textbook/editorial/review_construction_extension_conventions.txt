@@ -1,0 +1,85 @@
+Cross-chapter extension, opposite, and reversal audit
+Timestamp: 2026-10-05 19:54:16 UTC (clock tool)
+Reviewer: construction agent; hand algebra and source reading only.
+Line numbers refer to the source before the small authorized r07 repair.
+
+One explanation repair was needed; no displayed category, annulus,
+transported algebra, or original/selected extension equation changes.
+
+1. Fixed relative-product convention: f03:294--305, f04:418--438.
+The induced left action r_M c_(M,A)^(-1) is the minus convention of
+DMNO Section 3.3. It gives the positive central lift
+Rep(U) -> Z(Rep(U)_A), as used in f04 and c05. No braided reversal is
+needed in the center reconstruction. Source checked:
+https://arxiv.org/html/1009.2117v2#S3.SS3
+The Lagrangian and bimodule statements are Corollary 4.1(i),(ii).
+
+2. Actual explanation repair: r07:361--370.
+Ordinary composition of T_(x,y)(m)=x tensor m tensor y indeed has
+product (xx',y'y), and thus illustrates C tensor C^op. But for right
+A-modules the usual bimodule action is T_B(M)=M tensor_A B; it has
+T_B composed with T_C = T_(C tensor_A B). Thus ordinary-composition
+module endofunctors are the opposite of the usual bimodule category.
+The previous sentence directly identifying them suppressed this
+reversal. Foundation independently confirmed this convention check.
+
+Root authorized the repair. The live r07 now cites the canonical-algebra
+bimodule theorem for the displayed equivalence, explicitly records
+the anti-composition formula, and explains the opposite plus exchange
+of factors. The xmy computation is identified as an illustration of
+the reversed right factor, not a mislabeled direct tensor equivalence.
+The final bimodule category C tensor C^op is unchanged. So are the
+first-factor holomorphic action and all spectra and boundary formulas.
+
+3. Original algebra and boundary fork: c05:259--281, 954--961,
+1014--1032; r04:527--548.
+All retain the actual original extension H, its original Y, and the
+all-right-module category F. The positive center equivalence is
+Rep(U) = Z(F). Complete unitarity permits the H2/H3 classification,
+without selecting a particular original boundary category. c05
+explicitly refuses to identify Y with a from branching counts. The
+unique dimension-d^2 constituent X may be called b; that label has
+no analogous ambiguity. No premature Y=a was found.
+
+4. Selected extension: r05:33--45, 169--176; r07:348--399.
+The transported canonical H3 algebra is explicitly selected and its
+holomorphic extension called H'. Thus H'=1+b+2a is appropriately
+separated from the original H=1+X+2Y. The 36 ordered bimodule pairs
+are H3 tensor H3^op, and selecting the first physical chiral factor
+gives U tensor conjugate(H'), while selecting both gives U tensor
+conjugate(U). The repair in item 2 does not reverse these chosen
+physical labels or change the tube characters.
+
+5. Boundary dual/order: r07:495--521.
+The multiplicity starts from Hom(F(M_mu) tensor x,y). The positive
+central half-braiding moves F(M_mu) past x, and left duality gives
+Hom(F(M_mu),x* tensor y). This justifies the displayed N_(x*y)^z
+annulus rule. It is not permissible to omit x*, nor to commute x*
+and y inside the nonbraided Haagerup category without the central
+object's half-braiding. The present formula uses the correct order.
+The alpha self-annulus and rho self-spectrum remain correct.
+
+6. Transported charge-six algebra: c06:148--198, 221--235.
+P39^rev reverses braiding and twist; it is the mirror factor of the
+mutual-commutant theorem. In contrast F^op reverses tensor order.
+These are distinct operations, and their uses here are compatible.
+The algebra is 1 tensor A with A the original E8/U algebra, so its
+bimodules are P39^rev tensor Bimod_A(Rep(U)), and hence
+P39^rev tensor F tensor F^op. No additional reversal of P39 is
+introduced by the bimodule factorization: its spectator algebra is
+the unit. The total algebra is correctly not called Lagrangian.
+The original H2/H3 fork and the separate analytic C6 realization
+premise remain explicit. Its reverse-coset calculation keeps
+A=1+X+2Y, not the selected H3 summands.
+
+Optional pedagogy, not a mathematical repair: near c06:152 a brief
+definition of superscript rev as inverse braiding/inverse twist would
+contrast it explicitly with the tensor-order op defined at c06:188.
+No live edit made for this suggestion.
+
+Additional requested read-only check: literal_joining_map_insertion.
+The partial-isometry proof, valid/invalid seam words, child-state error
+bound with the same vacuum denominator, cup normalization, and change
+of basis/phase formulas all pass. Distinct surviving child pairs give
+distinct parent words, which is the exact reason the nonzero singular
+values are one. No change requested.

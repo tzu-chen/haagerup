@@ -1,0 +1,758 @@
+{
+  "moment_order": [
+    "dimension",
+    "left_index",
+    "right_index",
+    "mixed",
+    "twice_left_fourth",
+    "twice_right_fourth"
+  ],
+  "rows": [
+    {
+      "levels": [
+        1,
+        39
+      ],
+      "b_ground_actual_moments": [
+        80,
+        20,
+        860,
+        210,
+        20,
+        44372
+      ],
+      "b_ground_prediction_agrees": true,
+      "vacuum_grade2_moments": [
+        120,
+        46,
+        1810,
+        591,
+        94,
+        161710
+      ],
+      "quartic_next_contributions": {
+        "mixed": {
+          "particular": "2495/6",
+          "holomorphic_next": "1051/6",
+          "total": "591"
+        },
+        "left": {
+          "particular": "17/2",
+          "holomorphic_next": "77/2",
+          "total": "47"
+        },
+        "right": {
+          "particular": "168753/2",
+          "holomorphic_next": "-7043/2",
+          "total": "80855"
+        }
+      },
+      "affine_vacuum_grade2_moments": [
+        22,
+        16,
+        36,
+        16,
+        64,
+        336
+      ],
+      "remaining_affine_primary_moments": [
+        98,
+        30,
+        1774,
+        575,
+        30,
+        161374
+      ],
+      "ambient_B2_moments": [
+        1370,
+        516,
+        19980,
+        6666,
+        1044,
+        1543860
+      ],
+      "ambient_B2_irreps": [
+        {
+          "left_dimension": 1,
+          "right_dimension": 1,
+          "multiplicity": 7
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 3,
+          "multiplicity": 10
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 5,
+          "multiplicity": 16
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 7,
+          "multiplicity": 13
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 9,
+          "multiplicity": 14
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 11,
+          "multiplicity": 9
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 13,
+          "multiplicity": 6
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 15,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 17,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 2,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 4,
+          "multiplicity": 8
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 6,
+          "multiplicity": 11
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 8,
+          "multiplicity": 9
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 10,
+          "multiplicity": 7
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 12,
+          "multiplicity": 4
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 14,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 1,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 3,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 5,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 7,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 9,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 11,
+          "multiplicity": 1
+        }
+      ],
+      "b_ground_affine_descendant_moments": [
+        400,
+        240,
+        4640,
+        2680,
+        720,
+        266960
+      ],
+      "b_ground_affine_descendants": [
+        {
+          "left_dimension": 1,
+          "right_dimension": 1,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 3,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 5,
+          "multiplicity": 4
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 7,
+          "multiplicity": 4
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 9,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 11,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 13,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 2,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 4,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 6,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 8,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 10,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 12,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 3,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 5,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 7,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 9,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 11,
+          "multiplicity": 1
+        }
+      ],
+      "ambient_affine_primary_caps": [
+        {
+          "left_dimension": 1,
+          "right_dimension": 1,
+          "multiplicity": 4
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 3,
+          "multiplicity": 6
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 5,
+          "multiplicity": 11
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 7,
+          "multiplicity": 9
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 9,
+          "multiplicity": 11
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 11,
+          "multiplicity": 7
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 13,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 15,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 17,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 2,
+          "multiplicity": 4
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 4,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 6,
+          "multiplicity": 8
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 8,
+          "multiplicity": 7
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 10,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 12,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 14,
+          "multiplicity": 3
+        }
+      ],
+      "support_search_applied": false,
+      "support_witness": null,
+      "support_statistics": null,
+      "failures": []
+    },
+    {
+      "levels": [
+        3,
+        13
+      ],
+      "b_ground_actual_moments": [
+        80,
+        68,
+        236,
+        162,
+        308,
+        3188
+      ],
+      "b_ground_prediction_agrees": true,
+      "vacuum_grade2_moments": [
+        120,
+        136,
+        536,
+        486,
+        844,
+        13484
+      ],
+      "quartic_next_contributions": {
+        "mixed": {
+          "particular": "3533/6",
+          "holomorphic_next": "-617/6",
+          "total": "486"
+        },
+        "left": {
+          "particular": "723/2",
+          "holomorphic_next": "121/2",
+          "total": "422"
+        },
+        "right": {
+          "particular": "17043/2",
+          "holomorphic_next": "-3559/2",
+          "total": "6742"
+        }
+      },
+      "affine_vacuum_grade2_moments": [
+        27,
+        36,
+        36,
+        16,
+        336,
+        336
+      ],
+      "remaining_affine_primary_moments": [
+        93,
+        100,
+        500,
+        470,
+        508,
+        13148
+      ],
+      "ambient_B2_moments": [
+        1370,
+        1548,
+        6564,
+        6426,
+        9396,
+        169812
+      ],
+      "ambient_B2_irreps": [
+        {
+          "left_dimension": 1,
+          "right_dimension": 1,
+          "multiplicity": 9
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 3,
+          "multiplicity": 14
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 5,
+          "multiplicity": 15
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 7,
+          "multiplicity": 6
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 9,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 2,
+          "multiplicity": 14
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 4,
+          "multiplicity": 18
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 6,
+          "multiplicity": 13
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 8,
+          "multiplicity": 6
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 10,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 1,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 3,
+          "multiplicity": 14
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 5,
+          "multiplicity": 11
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 7,
+          "multiplicity": 6
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 9,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 2,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 4,
+          "multiplicity": 6
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 6,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 5,
+          "right_dimension": 1,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 5,
+          "right_dimension": 3,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 5,
+          "right_dimension": 5,
+          "multiplicity": 1
+        }
+      ],
+      "b_ground_affine_descendant_moments": [
+        468,
+        658,
+        1730,
+        2153,
+        4978,
+        31730
+      ],
+      "b_ground_affine_descendants": [
+        {
+          "left_dimension": 1,
+          "right_dimension": 1,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 3,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 5,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 7,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 2,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 4,
+          "multiplicity": 6
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 6,
+          "multiplicity": 4
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 8,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 1,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 3,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 5,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 7,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 2,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 4,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 6,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 5,
+          "right_dimension": 3,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 5,
+          "right_dimension": 5,
+          "multiplicity": 1
+        }
+      ],
+      "ambient_affine_primary_caps": [
+        {
+          "left_dimension": 1,
+          "right_dimension": 1,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 3,
+          "multiplicity": 8
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 5,
+          "multiplicity": 9
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 7,
+          "multiplicity": 4
+        },
+        {
+          "left_dimension": 1,
+          "right_dimension": 9,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 2,
+          "multiplicity": 9
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 4,
+          "multiplicity": 12
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 6,
+          "multiplicity": 9
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 8,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 2,
+          "right_dimension": 10,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 1,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 3,
+          "multiplicity": 8
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 5,
+          "multiplicity": 6
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 7,
+          "multiplicity": 5
+        },
+        {
+          "left_dimension": 3,
+          "right_dimension": 9,
+          "multiplicity": 1
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 2,
+          "multiplicity": 2
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 4,
+          "multiplicity": 3
+        },
+        {
+          "left_dimension": 4,
+          "right_dimension": 6,
+          "multiplicity": 2
+        }
+      ],
+      "support_search_applied": false,
+      "support_witness": null,
+      "support_statistics": null,
+      "failures": []
+    }
+  ],
+  "additional_premise": "Actual E8 extension B=E6_1 times A2_1 with B|W=0 plus b, and the independently identified host125/187 branching.",
+  "scope": "Necessary finite grade2 subrepresentation and moment tests. Passing supplies no VOA or OPE. The affine-primary energy bound uses unitarity of the vacuum VOA only, not unitary nonvacuum modules. Resource exhaustion yields no exclusion.",
+  "selftest": {
+    "actual_embedding_dimensions_checked": true,
+    "affine_PBW_moments_checked": true,
+    "CG_dimension_controls": 25,
+    "bounded_support_controls": 2
+  },
+  "input_record": {
+    "path": "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_quartic_results.json",
+    "sha256": "62fe364e80909c367621aa110f4857c6fb5a140c4a12dba381cc7dba6966937c"
+  },
+  "producer_source_hashes": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_quartic_check.py": "d8998290ab757e167f7c2ab66b84a7254ef5513542e0fa6382320bd832f4f754",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_trace_check.py": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_d6_check.py": "160d952a08239fbbfe968d8c888b9c7def6c7f572a5cb2b1330a8377a6643dfd",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_joint_ground_check.py": "475302a0990c2654080d42cc1dc2876b8acc5d25d1abd975a3f9ed00e123f162",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_check.py": "dbe5bbdcdb507f00180e216cb86c7e0f4b071a1fbbd372115bab34a1c0654ac8",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_next_grade.py": "2a395249011e990a672adc1a8bf0088860fd8b94667156dbdec3c0ceac5a2cc4"
+  },
+  "seconds": 0.011058513016905636,
+  "peak_rss_KiB": 21384
+}

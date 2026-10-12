@@ -1,0 +1,64 @@
+{
+  "status": "exact_flint_regular_representation_controls_passed",
+  "FLINT_version": "3.4.0",
+  "native_threads": 1,
+  "multiplication_controls": 100,
+  "systems": [
+    {
+      "n": 1,
+      "rhs": 3,
+      "method": "dixon",
+      "seconds": 0.0028634780319407582
+    },
+    {
+      "n": 1,
+      "rhs": 3,
+      "method": "multi_mod",
+      "seconds": 0.00010799092706292868
+    },
+    {
+      "n": 3,
+      "rhs": 3,
+      "method": "dixon",
+      "seconds": 0.0009937759023159742
+    },
+    {
+      "n": 3,
+      "rhs": 3,
+      "method": "multi_mod",
+      "seconds": 0.000621453975327313
+    },
+    {
+      "n": 8,
+      "rhs": 3,
+      "method": "dixon",
+      "seconds": 0.003817721037194133
+    },
+    {
+      "n": 8,
+      "rhs": 3,
+      "method": "multi_mod",
+      "seconds": 0.003865809994749725
+    },
+    {
+      "n": 16,
+      "rhs": 3,
+      "method": "dixon",
+      "seconds": 0.014569972991012037
+    },
+    {
+      "n": 16,
+      "rhs": 3,
+      "method": "multi_mod",
+      "seconds": 0.01419162005186081
+    }
+  ],
+  "singular_rejected": true,
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_flint_field_check.py": "6fa86efc8ec2afce0d6c47feeca8de13bf061d01090b71804108fb3ed30e710f",
+    "hi_cft_20260923_next_flint_field_solve.py": "a34162592474e7bc12a211cc3e1fbf6638317ce7832e687dbd20cb3f17989bd4",
+    "hi_cft_20260923_next_fast_field.py": "7e8151431ec87a24df39a325e5891561150fdacf237fb098c2d080486189be55"
+  },
+  "seconds": 0.09846796607598662,
+  "peak_rss_KiB": 34920
+}

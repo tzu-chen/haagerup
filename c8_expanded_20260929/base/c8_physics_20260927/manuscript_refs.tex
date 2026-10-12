@@ -1,0 +1,12 @@
+% Shared current-manuscript references for both companion documents.
+% Rebuild hi_cft_c8_proof.tex before either companion after manuscript edits.
+\RequirePackage{xr-hyper}
+\RequirePackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,
+  filecolor=blue!50!black]{hyperref}
+\IfFileExists{hi_cft_c8_proof.aux}{}{%
+  \PackageError{manuscript-refs}{Missing hi_cft_c8_proof.aux}%
+    {Compile hi_cft_c8_proof.tex before compiling the companion documents.}}
+\externaldocument[ms-]{hi_cft_c8_proof}[hi_cft_c8_proof.pdf]
+\newcommand{\msref}[1]{\ref{ms-#1}}
+\newcommand{\mspageref}[1]{\pageref{ms-#1}}
+\newcommand{\msnameref}[1]{\nameref{ms-#1}}

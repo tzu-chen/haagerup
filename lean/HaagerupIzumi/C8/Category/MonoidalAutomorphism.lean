@@ -47,12 +47,11 @@ canonical monoidal structure).  `isMonoidal_iff` shows that this class says exac
 Inputs that remain hypotheses (no external theorem or certificate is used):
 
 * Pivotal structures themselves.  A pivotal structure is a monoidal natural isomorphism
-  `𝟭 C ≅ (−)**` (EGNO, Definition 4.7.8).  Mathlib has neither pivotal categories
-  (`Mathlib/CategoryTheory/Monoidal/Rigid/Basic.lean` lists them as future work) nor the
-  monoidal structure on the double-dual functor (`rightDualFunctor` in
-  `Monoidal/Rigid/Functor.lean` is a plain functor to `(Cᵒᵖ)ᴹᵒᵖ`).  The uniqueness
-  theorems are therefore stated for an arbitrary lax monoidal `F : C ⥤ C`; instantiating
-  `F` with the double dual gives pivotal uniqueness.
+  `𝟭 C ≅ (−)**` (EGNO, Definition 4.7.8).  Mathlib has no pivotal categories
+  (`Mathlib/CategoryTheory/Monoidal/Rigid/Basic.lean` lists them as future work).  The
+  uniqueness theorems here are stated for an arbitrary lax monoidal `F : C ⥤ C`; the monoidal
+  double-dual functor is constructed in `Category/DoubleDual.lean`, and the instantiation
+  (`PivotalStructure`, `Fusion.IsHIRing.pivotalStructure_eq`) is `Category/Pivotal.lean`.
 * That the categorification realizes the ring: the `X i` are simple with
   finite-dimensional endomorphisms, and `N_{ij}^l ≠ 0` is witnessed by a nonzero
   morphism `X l ⟶ X i ⊗ X j` (in a semisimple category

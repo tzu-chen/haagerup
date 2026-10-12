@@ -1,0 +1,88 @@
+\section{Solutions for Chapter~\ref{ch:chain}}
+
+\paragraph{Exercise~\ref{ex:chain-dimension}.}
+\phantomsection
+\label{sol:ex:chain-dimension}
+The recurrence gives
+\[
+ t_2=11,\ t_3=36,\ t_4=119,\ t_5=393,\ t_6=1298,
+ \ t_7=4287,\ t_8=14159.
+\]
+For odd length the extra term in \eqref{eq:path-dimension} vanishes,
+so $\dim\HH_{\mathrm{path},5}=393$. For even length it is four, giving
+$\dim\HH_{\mathrm{path},8}=14163$. The eigenvalue $d>1$ strictly dominates the
+other five eigenvalues in modulus. The alphabet bound $6^L$ counts
+all words, most of which violate at least one fusion constraint.
+
+
+
+\paragraph{Exercise~\ref{ex:chain-projector}.}
+\phantomsection
+\label{sol:ex:chain-projector}
+Let $v_f$ be the conjugated $f$th column in the convention of
+\eqref{eq:rho-projector}. Unitarity says $v_f^\dagger v_g=\delta_{fg}$.
+For $P_S=\sum_{f\in S}v_fv_f^\dagger$, multiplication gives
+$P_S^2=P_S=P_S^\dagger$, and its range is the $|S|$-dimensional
+span of those columns. With fusion multiplicities, a channel has
+an additional orthonormal multiplicity label, and one sums over
+all selected copies. It is the subspace, not a single scalar label,
+that defines the projection.
+
+
+
+\paragraph{Exercise~\ref{ex:chain-orbit}.}
+\phantomsection
+\label{sol:ex:chain-orbit}
+For a basis vector $|x\rangle$ with stabilizer $K\subset G$, form
+\[
+ v_\chi=\sum_{g\in G}\overline{\chi(g)}\,|gx\rangle.
+\]
+Every repeated orbit entry is multiplied by
+$\sum_{k\in K}\overline{\chi(k)}$. Character orthogonality makes
+this zero unless $\chi|_K=1$. In the surviving case, choose one
+representative per coset and divide its character sum by
+$\sqrt{|G|/|K|}$. Distinct cosets give orthogonal basis vectors,
+so the normalized vector is
+\[
+ |\chi;x\rangle=
+ \frac1{\sqrt{|G|/|K|}}
+ \sum_{g\in G/K}\overline{\chi(g)}\,|gx\rangle.
+\]
+It is independent of the coset representatives precisely because
+$\chi|_K=1$. Equivalently, the original full-group sum has norm
+$\sqrt{|G||K|}$, not $\sqrt{|G|}$. Replacing $g$ by $h^{-1}g$
+in the sum shows that $h|\chi;x\rangle=\chi(h)|\chi;x\rangle$.
+
+
+
+\paragraph{Exercise~\ref{ex:chain-noninvertible}.}
+\phantomsection
+\label{sol:ex:chain-noninvertible}
+Using self-adjointness and $Y_\rho^2=1+3Y_\rho$,
+\[
+ (Y_\rho-2)^2=Y_\rho^2-4Y_\rho+4=5-Y_\rho.
+\]
+Its eigenvalues are $d-2$ and $-d^{-1}-2$, both nonzero. On a unit
+vector,
+$5-d\leq\|(Y_\rho-2)s\|^2\leq5+d^{-1}$.
+An orthogonal projection has only eigenvalues zero and one;
+these values plainly do not have that property. The special
+extraction formula in the rank-four vacuum module uses one
+particular input vector, not a global projection identity.
+
+
+
+\paragraph{Exercise~\ref{ex:chain-boundary}.}
+\phantomsection
+\label{sol:ex:chain-boundary}
+For $L$ physical rho objects between fixed external heights $a,b$,
+the dimension is $(N_\rho^L)_{ab}$: matrix multiplication sums
+all intermediate fusion histories. Summing the diagonal entries
+instead identifies the two ends and permits every compatible
+starting height. It changes both the state space and the closing
+Hamiltonian terms. Even when the infinite bulk theory agrees,
+fixed endpoints can select boundary conformal families or carry
+edge states absent from a given periodic sector. The equal leading
+growth $d^L$ does not equate their finite spectra.
+
+

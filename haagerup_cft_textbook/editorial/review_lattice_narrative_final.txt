@@ -1,0 +1,117 @@
+Final beginner-facing lattice-to-CFT narrative review
+Reviewer: scope_lattice
+Scope: openings, conclusions, and principal inference boundaries of
+l01-l06, with the CFT dictionary in r01 and defect interpretation in r07.
+Read-only review; no jobs, imports, builds, or live-source edits.
+
+RESULT
+
+The narrative passes apart from one useful boundary/size-sequence
+clarification below. I found no statement that identifies the physical
+chain's continuum, proves its vacuum count, or proves its bulk gap
+from the saved finite records. The October 5 conclusions remain
+appropriately qualified, and the exact comparison constructions are
+kept distinct from the target Hamiltonian.
+
+ONE ACTIONABLE CLARIFICATION
+
+l06_identification.tex, closing paragraph beginning "For a gapped
+interpretation with q thermodynamic vacua" (approximately line1564):
+
+Specify periodic sizes compatible with the proposed spatial period
+and the chosen boundary/flux sector before imposing the q-state
+collapsing cluster and positive E_q-E_0 bound.
+
+Suggested start:
+  "For a gapped interpretation with q thermodynamic vacua, take
+  periodic sizes compatible with the proposed spatial period and
+  boundary sector. The corresponding target is a complete
+  collapsing cluster, ..."
+
+Reason: in a translation-broken period-three phase, rings with length
+not divisible by three can force a domain wall. Its mobile states can
+add low levels whose spacings collapse with circumference even when
+the unfrustrated pure phases have a positive bulk gap. Such rings do
+not have the same q-vacuum finite-volume pattern. They require their
+own domain-wall/sector interpretation. This is particularly relevant
+because the final finite variational records mention a period-three
+pattern.
+
+The same qualification can be added economically to l02:38-42,
+where the first general definition says a gapped chain has a uniform
+large-L energy bound above the vacuum sector: "on compatible large
+rings" is enough. The later l02 carrier paragraph already correctly
+distinguishes lengths divisible by three from other residual
+translation boundary conditions.
+
+WHAT NOW WORKS WELL
+
+- l01 begins with an explicitly defined constrained periodic path
+  Hilbert space. Its regular space includes compatible flux sectors;
+  it is not silently identified with a total-vacuum fusion space.
+  Its topological-eigenvalue example explicitly says that vacuum-like
+  line eigenvalues do not identify a conformal family. The final
+  spectator example shows why symmetry alone does not determine c,
+  while expressly saying that adding a spectator changes the model.
+
+- l02 opens by stating that every finite chain has discrete low levels,
+  whether critical or massive. It imports r01's cylinder formulas
+  with explicit vacuum and common-velocity assumptions. The exact
+  Ising example supplies a real calibration without transporting its
+  correction exponents to Haagerup. The closing light-shell census
+  and singlet estimates do not claim continuum completeness or
+  exact marginality.
+
+- l03 opens with a conditional local-field expansion, keeps source
+  normalization explicit, and points to r01/r08. The current test
+  explains that a small finite-space singular value is not a global
+  no-current result, and separates charge conjugation from chirality.
+  Its last response test rejects only a specified one-bare-coupling
+  finite drift model; it explicitly does not infer two infrared
+  couplings or a beta function.
+
+- l04's transfer discussion separates a pure clustering component,
+  periodic transfer roots, and a cat. The current stationary sequence
+  is qualified by an optimization test, not by a physical error
+  estimate. Adjacent entropy slopes are not presented as a plateau.
+  Growing transfer length is allowed to reflect an unsaturated but
+  finite physical length. The entropy geometry and finite-entanglement
+  substitution are stated as distinct steps.
+
+- l05's opening, parent theorem, and following paragraph all distinguish
+  a sufficiently long-range exact parent from both the short
+  missing-channel anchor and H=-sum P_rho. The rank-four vacuum form
+  factors are explicitly conditional on approaching that vacuum
+  structure. Selection of the Y_alpha=1,Y_rho=d sector is made
+  separately from existence of four ground states. The final
+  symmetry-filter argument explains why equal limiting energy
+  densities do not prove an additional pure vacuum.
+
+- l06 opens with separate microscopic, continuum-state, local-OPE,
+  and categorical-junction requirements. Its ending states directly
+  that the physical chain has no identified continuum CFT. Long
+  finite-distance correlations are not made into an infinite plateau,
+  ground-state vacuum count, or gap. The proposed common field
+  dictionary uses the same states, normalizations, velocity, and
+  corrections across observables. It separates a strong numerical
+  identification from convergence sufficient for a proof.
+
+CROSS-CHAPTER INTERPRETATION
+
+r01's integer-spin statement concerns ordinary bosonic local fields
+under the usual discrete-spectrum state-operator assumptions. r07
+expressly allows fractional spin in nontrivial defect sectors. l02's
+carrier momentum subtraction and l01's finite-sector distinctions
+prevent those statements from being confused with ordinary lattice
+momentum labels.
+
+r07's twelve Verlinde lines in the diagonal c8 theory and its six
+Haagerup lines in the selected extension are distinguished, as are
+finite tube factors and infinite-dimensional physical multiplicity
+spaces. l01 uses the same vacuum invariance condition Y_a=d_a under
+its stated unique-vacuum conformal-limit hypothesis. Neither chapter
+identifies those c8 Hilbert spaces with the physical chain simply
+because categorical labels recur.
+
+No other repair requested. Further warnings or restatements would
+mostly duplicate distinctions the text already makes clearly.

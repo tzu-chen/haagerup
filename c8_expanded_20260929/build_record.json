@@ -1,0 +1,40 @@
+{
+  "scope": "Document typesetting only; no numerical research computation or certificate replay.",
+  "limits": {
+    "address_MiB": 1536,
+    "group_RSS_MiB": 1024,
+    "host_reserve_GiB": 32,
+    "CPUs": 2,
+    "threads": 2,
+    "seconds_per_pass": 120
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "exit_code": 0,
+      "seconds": 2.209,
+      "sampled_peak_RSS_MiB": 37.715,
+      "minimum_host_MemAvailable_GiB": 53.926,
+      "stop_reason": null,
+      "log": "build_pass_1.log"
+    },
+    {
+      "pass": 2,
+      "exit_code": 0,
+      "seconds": 2.21,
+      "sampled_peak_RSS_MiB": 37.656,
+      "minimum_host_MemAvailable_GiB": 53.924,
+      "stop_reason": null,
+      "log": "build_pass_2.log"
+    },
+    {
+      "pass": 3,
+      "exit_code": 0,
+      "seconds": 2.21,
+      "sampled_peak_RSS_MiB": 37.547,
+      "minimum_host_MemAvailable_GiB": 53.925,
+      "stop_reason": null,
+      "log": "build_pass_3.log"
+    }
+  ]
+}

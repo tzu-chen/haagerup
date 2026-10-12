@@ -1,0 +1,47 @@
+{
+  "all_checked_upper_poles_match": true,
+  "checks": [
+    "W3 W3 mode 5",
+    "W3 W3 mode 4",
+    "W3 W3 mode 3",
+    "W3 W3 mode 2",
+    "W3 W3 mode 0",
+    "W3 W4 mode 6",
+    "W3 W4 mode 5",
+    "W3 W4 mode 4",
+    "W3 W4 mode 3",
+    "W3 W4 mode 2",
+    "W3 W5 mode 7",
+    "W3 W5 mode 6",
+    "W3 W5 mode 5",
+    "W3 W5 mode 4",
+    "W3 W5 mode 3",
+    "W3 W5 mode 2"
+  ],
+  "previously_completed_exact_assertions": [
+    "W3 W3 mode 5",
+    "W3 W3 mode 4",
+    "W3 W3 mode 3",
+    "W3 W3 mode 2",
+    "W3 W3 mode 0",
+    "W3 W4 mode 6",
+    "W3 W4 mode 5",
+    "W3 W4 mode 4",
+    "W3 W4 mode 3",
+    "W3 W4 mode 2",
+    "W3 W5 mode 7",
+    "W3 W5 mode 6",
+    "W3 W5 mode 5",
+    "W3 W5 mode 4",
+    "W3 W5 mode 3"
+  ],
+  "seconds": 441.35878133098595,
+  "peak_rss_KiB": 113740,
+  "scope": "Together with the saved simple poles, definitions, and the W6 decoupling relation, these give the full singular first-row OPEs.",
+  "sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_pf13_upper_poles_resume.py": "aed82d28d9d52fbbb3248c0eb62fd262da41916845a0f4c2d06f36ba2f14352a",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_general_modes_v2.py": "4bd1e6d4df8122734e90da1096fb5d30ed74aec40574a8bee7642307d27099f1",
+    "hi_cft_20260923_proof_pf13_upper_poles.log": "28fa9acf7f0062fd74aaee673fac1e5c975641d23f7e28a07ad035cb4acfdb4a",
+    "hi_cft_20260923_proof_pf13_upper_poles.py": "f6dd1d4b4fd32809cbf3e532b7cc69773c16f6db6d85f647ce503a323afb54ed"
+  }
+}

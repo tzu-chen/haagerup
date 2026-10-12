@@ -1,0 +1,2032 @@
+% Expanded structural and analytic verification material, 29 September 2026.
+% This file is an additive fragment. It never changes the original manuscript.
+% All calculations below are transcriptions or elementary deductions from
+% archived results; no numerical research producer was run for this expansion.
+
+\section{Additional structure: an atlas of the commuting algebras}
+\label{expstructure:atlas}
+
+Several different commutants occur in the construction. Their central
+charges and their ambient algebras must be specified together. This
+section collects the scattered structural calculations, including useful
+routes that the main proof does not need. The exact inputs have the same
+status as the finite certificate inputs in the main text. The additional
+all-weight arguments below are reproduced from the named research notes
+for verification; they are not new numerical replays or independent
+external validation. In particular, identifying an ambient commutant
+does not identify its intersection with the actual generated algebra
+$U$.
+
+We use $\mathcal T$ for the lattice--Potts core of charge $14/5$,
+$P=K(\mathfrak{sl}_2,3)$, $Q=K(\mathfrak{sl}_2,13)$, and $R=A_L$
+for the order-thirteen extension of $\mathcal T\otimes Q$. Write
+$s_R=\omega_B-\omega_R$, so $c(s_R)=18/5$. This notation avoids
+confusing the core $\mathcal T$ with the translation operator $D$.
+The three ambient algebras remain
+$U\subset B=V_{E_6\oplus A_2}\subset H=V_{E_8}$.
+
+\begin{longtable}{@{}p{0.28\linewidth}p{0.12\linewidth}p{0.53\linewidth}@{}}
+\toprule
+Algebra or stress&Charge&Information available\\
+\midrule\endhead
+$P$&$4/5$&Actual Potts embedding, including its weight-three generator.\\
+$\mathcal T$&$14/5$&Actual order-three extension of a rank-two lattice
+and $P$; four currents.\\
+$Q$&$8/5$&Actual parafermion embedding obtained from complete finite
+polynomial OPE rows.\\
+$R=A_L$&$22/5$&Actual order-thirteen simple-current extension;
+fourteen simple modules and four currents.\\
+$\Com(\mathcal T,B)$&$26/5$&An ambient rational frame
+$V_M\otimes L(1/2,0)\otimes L(7/10,0)$.\\
+$C_B=\Com(R,B)$&$18/5$&Five weight-two states; supplementary
+all-weight identification with the $(4,8,1;13)$ diagonal coset.\\
+$C_H=\Com(R,H)$&$18/5$&Thirteen weight-two states; supplementary
+all-weight identification with an $F_4$ diagonal coset.\\
+$C_U=\Com(R,U)$&$18/5$&Two weight-two states and two weight-three
+states under the properness and finite-grade conclusions. No complete
+character is supplied here.\\
+$C_6=\Com(V_L,U)$&$6$&Lattice double commutant; supplementary
+regularity and category factorization; seven weight-two states.\\
+\bottomrule
+\end{longtable}
+
+The charge-$26/5$ and charge-$18/5$ ambient cosets are different
+objects. The two charge-$18/5$ ambient cosets are also different from
+$C_U$. Finally, the charge-$6$ lattice coset removes only the Cartan
+plane; it retains the Potts and parafermion factors. These distinctions
+explain several otherwise incompatible-looking dimensions in the old
+records.
+
+\subsection{The determinant-thirty-nine lattice and its actual extension}
+\label{expstructure:lattice-core}
+
+In the simple-root coordinates of the construction put
+\[
+\begin{split}
+a_0&=(-1,-2,-3,-2,-1,-2,0,0),\\
+H_R&=(5,8,9,8,5,0,2,2),\\
+t_0&=(1,1,0,1,1,-3,1,1)=\tfrac12(3a_0+H_R).
+\end{split}
+\]
+Their pairings are
+$a_0^2=2$, $H_R^2=78$, $(a_0,H_R)=0$, $t_0^2=24$ and
+$(a_0,t_0)=3$. Thus
+\[
+ L=\ZZ a_0+\ZZ t_0,
+ \qquad G_L=\begin{pmatrix}2&3\\3&24\end{pmatrix},
+ \qquad \det G_L=39.
+\]
+The vector $r_0=t_0/3=a_0/2+H_R/6$ has norm $8/3$. The exact
+generating field $u$ has Potts weight $2/3$ and plane-Heisenberg
+weight $4/3$. The identity
+\begin{equation}
+ u_{-5}(u_{-3}u)=-\frac35e^{t_0}
+ \label{expstructure:triple-product}
+\end{equation}
+places the lattice field $e^{t_0}$ in $U$. PCT gives $e^{-t_0}$,
+and the left affine factor already supplies $e^{\pm a_0}$ and
+the required Heisenberg directions. This is the actual field-level
+reason for $V_L\subset U$; it is not inferred from a character.
+The inner product formula fixes the leading power in a product of
+lattice exponentials. For the triple product in
+\eqref{expstructure:triple-product}, only the leading terms at the
+specified powers contribute. A basis of the full weight-twelve
+ambient space is therefore unnecessary.
+
+Let $\psi$ be the Potts simple current of weight $2/3$. The extension
+is
+\begin{equation}
+ \mathcal T=(V_L\otimes P)
+ \oplus(V_{L+r_0}\otimes\psi)
+ \oplus(V_{L+2r_0}\otimes\psi^2).
+ \label{expstructure:T-extension}
+\end{equation}
+The order-three support is closed under fusion. In the existing
+unitary ambient algebra, nonzero multiplication with the conjugate
+sector has a nonzero vacuum pairing, so multiplication by a supported
+invertible sector is invertible. Connectedness then gives multiplicity
+one. The commutant-energy argument removes a possible hidden
+positive-energy complementary factor. These observations promote the
+three witnessed charge sectors to the actual embedded extension.
+
+The core stress and its complement are
+\[
+ \omega_{\mathcal T}
+ =\frac14h_{a_0}(-1)^2\one
+   +\frac1{156}h_{H_R}(-1)^2\one+p,
+ \qquad c_{\mathcal T}=2+\frac45=\frac{14}5.
+\]
+Here the two Heisenberg terms have central charge one each. The
+source is \artifact{hi_cft_20260923_proof_rational_core.json}, whose
+exact record includes the three terms of $u_{-3}u$, the triple-product
+coefficient, the lattice Gram matrix and the stress commutators.
+Its historical caveat that this core alone does not prove rationality
+of $U$ remains correct; the positive-stress proof uses additional
+factors.
+
+\subsection{Discriminant conventions and why two quadratic forms agree}
+
+The discriminant generator $g=H_R/39$ has
+$g^2/2=1/39$. Its pairings with the lattice basis are $0,1$, so it
+lies in $L^*$, and its order is $39$. The class of $r_0$ is $26g$:
+indeed $r_0-26g=a_0/2-H_R/2=2a_0-t_0\in L$.
+Condensing the order-three diagonal current in
+\eqref{expstructure:T-extension} leaves the order-thirteen pointed
+generator $3g$, with quadratic form
+\[
+ q(j_{\rm old})=\frac{3j_{\rm old}^2}{13}\pmod1.
+\]
+The top-bound and core-extension files instead use the actual right
+Cartan charge $j=6j_{\rm old}\pmod{13}$. Since $6^{-1}=11$ and
+$3\cdot11^2\equiv-1\pmod{13}$, the same form becomes
+\[
+ q(j)=-\frac{j^2}{13}\pmod1.
+\]
+Thus the two formulas in the archive are a change of labels, not a
+disagreement of discriminant forms. The remaining category is
+\[
+ \Rep(\mathcal T)\simeq
+ \mathrm{Fib}\boxtimes\mathcal C(\ZZ/13,-j^2/13),
+ \qquad
+ \operatorname{Dim}\Rep(\mathcal T)
+ =13\frac{5+\sqrt5}{2}.
+\]
+The equality of this core's central charge with that of $G_{2,1}$
+does not identify the VOAs: $\mathcal T_1$ has dimension four, while
+the affine $G_2$ vacuum algebra has fourteen currents.
+
+\subsection{An explicit rational frame in the larger ambient commutant}
+\label{expstructure:ambient26}
+
+Let $\alpha=b-a$, $\beta=c-b$, and $\gamma=\alpha+\beta$, using
+the three momenta in the original $u$. The Gram matrix is
+$\left(\begin{smallmatrix}4&-2\\-2&4\end{smallmatrix}\right)$.
+If $p_\delta$ denotes the exponential coefficient of the actual
+Potts stress, set
+\[
+ e_I=\frac1{16}h_\alpha(-1)^2\one
+       -\frac54\bigl(p_\alpha e^\alpha+p_{-\alpha}e^{-\alpha}\bigr),
+ \qquad
+ e_{TI}=\omega_{\sqrt2A_2}-p-e_I.
+\]
+The saved exact calculations give mutually commuting conformal
+vectors with charges $1/2$ and $7/10$. In the unitary realization
+they generate the simple Ising and tricritical Ising Virasoro VOAs.
+The rank-four perpendicular lattice has basis
+\[
+\begin{aligned}
+m_1&=(-1,1,0,0,0,0,0,0),&m_2&=(0,0,0,-1,1,0,0,0),\\
+m_3&=(0,0,-1,0,0,0,1,0),&m_4&=(0,0,-1,0,0,0,0,1)
+\end{aligned}
+\]
+and Gram matrix
+\[
+G_M=\begin{pmatrix}
+6&0&1&1\\0&6&-1&-1\\1&-1&4&1\\1&-1&1&4
+\end{pmatrix}.
+\]
+The lattice $L\oplus\sqrt2A_2\oplus M$ has index $156$ in
+$E_6\oplus A_2$. Consequently the actual ambient commutant contains
+\[
+ C_0=V_M\otimes L(1/2,0)\otimes L(7/10,0),
+ \qquad \omega_{C_0}=\omega_B-\omega_{\mathcal T}.
+\]
+The charge check is $4+1/2+7/10=26/5$. Because the conformal vector
+is shared, restrictions to this regular frame have no independently
+shifted copies of its simple modules: every copy starts at that
+module's prescribed lowest weight. Finite-dimensional ambient graded
+spaces then make the extension finite. The archived argument applies
+the unitary extension theorem to obtain strong rationality of
+$\Com(\mathcal T,B)$.
+
+The exact record
+\artifact{hi_cft_20260923_proof_ambient_coset.json} also explicitly
+reports $e_I\notin S_2$ and $e_{TI}\notin S_2$. It therefore does
+not give this frame inside $\Com(\mathcal T,U)$. The older numerical
+record \artifact{hi_cft_20260923_proof_core_coset.json} found dimensions
+$4$ and $15$ in the intersections with the selected $S_2,S_3$, with
+a Potts-kernel residual approximately $7.665\times10^{-11}$.
+Those two numerical dimensions are retained only as historical finite
+span observations. Neither is used here as a certified full coset
+character.
+
+\subsection{Order-thirteen extension: the ten additional weight-two states}
+\label{expstructure:R-extension}
+
+The zero-$s_R$-energy part of the exact $120$-dimensional $S_2$ has
+dimension $25$, while $(\mathcal T\otimes Q)_2$ has dimension $15$.
+The ten additional states separate into the following simultaneous
+energy types:
+\[
+\begin{array}{c|c|c|c|c}
+\text{number}&(H_L,H_R)&h_{\mathcal T}&h_Q&h_P\\\hline
+6&(\pm1,\pm5),(0,\pm8)&14/13&12/13&2/3\\
+4&(\pm1,\pm3)&4/13&22/13&\text{not needed for the witness}
+\end{array}
+\]
+In the first row, the four signs in $(\pm1,\pm5)$ are independent.
+The saved vectors are actual joint eigenvectors in $S_2$. For charge
+$j=5$, the Fibonacci-$\tau$ core module begins at $31/65$;
+$14/13-31/65=3/5$ is not integral. Thus the witnessed core factor
+has Fibonacci label $1$. The actual parafermion lowest-weight
+formula singles out the two inverse simple currents at $12/13$.
+By contrast, $22/13$ alone does not distinguish a simple current
+from the $i=10$ parafermion sector. The second row is a consistency
+check, not the step forcing the extension.
+
+The pointed form of $\Rep(\mathcal T\otimes Q)$ is
+$-(j^2+k^2)/13$. Its two maximal isotropic lines are $k=\pm5j$.
+The witnessed nonzero pair generates one full line; both lines
+cannot coexist in an integer-graded local extension since they
+generate the entire pointed group, including nonintegral twists.
+After reversing the parafermion charge convention if necessary,
+\[
+ R=\bigoplus_{j\in\ZZ/13}\mathcal T_{1,j}\otimes Q_{0,-5j}.
+\]
+There is no fixed-point resolution: the order-thirteen action on
+the charge pairs is free. The remaining simple labels are
+$x_a=(1,a)$ and $y_a=(\tau,a)$, $0\leq a\leq6$, with the second
+entry corresponding to even affine label $2a$. The category is
+$\mathrm{Fib}\boxtimes\mathrm{SO}(3)_{13}$.
+
+The thirteen vacuum-extension sectors have lowest weights
+\[
+\begin{array}{c|rrrrrrr}
+ |j|&0&1&2&3&4&5&6\\\hline
+ h&0&4&3&2&4&2&3
+\end{array}
+\]
+where positive $|j|$ denotes two conjugate sectors. Only the charge
+$\pm3$ and $\pm5$ sectors add weight-two states. This supplies an
+independent explanation of $\dim R_1=4$ and $\dim R_2=25$.
+The source is
+\artifact{hi_cft_20260923_next_structure_order13_core.md} and its
+exact spectral record
+\artifact{hi_cft_20260923_next_structure_core_extension.json}.
+
+\subsection{Why the core is already its double commutant}
+\label{expstructure:core-maximality}
+
+The actual lowest-weight table has only two integer-weight labels:
+$x_0$ of weight $0$ and $x_5$ of weight $1$. Hence a connected
+integer-graded conformal extension $D$ of $R$, with finite graded
+spaces, has underlying module
+\[
+ D=R\oplus mX,\qquad X=x_5,\qquad m\in\ZZ_{\geq0}.
+\]
+Regularity of $R$ supplies the decomposition; finite multiplicity
+and the absence of shifted copies use the common conformal vector.
+The truncated level-thirteen fusion rule gives
+\[
+ X\boxtimes X=x_0\oplus x_1\oplus x_2\oplus x_3.
+\]
+In particular the odd summand cannot multiply into itself. If
+$m>0$, the transformation $+1$ on $R$ and $-1$ on $mX$ preserves
+every vertex product and has fixed algebra $R$. The compact-orbifold
+tensor theorem applied to this order-two automorphism forces the
+odd part to be an invertible simple $R$-module. This contradicts
+the four displayed fusion channels (or
+$\FPdim X=\sin(11\pi/15)/\sin(\pi/15)>1$). Therefore $m=0$.
+
+For $V=B$ or $H$, positivity identifies
+\[
+ \ker_V(s_R)_1=\Com(\operatorname{Vir}(s_R),V).
+\]
+This kernel has conformal vector $\omega_R$, ambient integer grading,
+and one-dimensional grade zero, so the extension obstruction gives
+\[
+ \Com(\operatorname{Vir}(s_R),V)=R,
+ \qquad \Com(\Com(R,V),V)=R.
+\]
+Restriction gives the same result inside $U$. This argument does
+not assume rationality of the opposite commutant. It isolates the
+double-commutant input needed later for coset and mirror theorems.
+The archived proof is
+\artifact{hi_cft_20260923_next_structure_core_maximality.md}; its
+external input is McRae's compact-orbifold tensor equivalence,
+Corollary 4.8 in the source cited in that note.
+
+\section{Residual conformal vectors and their complete finite algebra}
+\label{expstructure:residual}
+
+The residual stress splits as $s_R=q+r$ into commuting PCT-fixed
+Virasoro vectors with
+\[
+ c_q=\frac{32}{19},\qquad c_r=\frac{182}{95},\qquad
+ \frac{32}{19}+\frac{182}{95}=\frac{18}5.
+\]
+These central charges agree with those of $K(\mathfrak{sl}_2,17)$
+and the diagonal affine coset at levels $(13,4;17)$, respectively.
+Only the Virasoro fields, their membership and their commutation
+are certified by
+\artifact{hi_cft_20260923_proof_remaining_axes.json}; the larger
+VOA identifications do not follow from these numbers.
+
+The right raising and lowering currents have the exact simultaneous
+weights
+\[
+ (h_{\mathcal T},h_Q,h_{s_R})
+ =\left(\frac6{65},\frac7{65},\frac45\right).
+\]
+They sum to one. In particular their $R$ energy is $1/5$. This
+small branching datum later identifies a tensor-generating core
+label. The translation and PCT checks that justify using the actual
+parafermion stress in this decomposition are stored in
+\artifact{hi_cft_20260923_proof_remaining_coset.json}.
+
+\subsection{Five ambient directions, but only two permitted in the proper algebra}
+
+The full ambient grade-two kernel of $(\omega_R)_1$ in $B$ has
+dimension five. Its producer enumerated a complete momentum ball
+using rational LDL bounds and worked in the entire $1370$-dimensional
+ambient grade, whose Cartan-zero block has dimension $86$. Thus this
+is a full ambient result, rather than a kernel in $S_2$.
+For $H$, the three lattice-glue sectors have grade-two dimensions
+$1370,1377,1377$ and Cartan-zero dimensions $86,83,83$. Their
+residual kernels have dimensions $5,4,4$, totaling $13$.
+
+\begin{center}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Ambient space&Grade two&Cartan zero&Residual kernel&Scope\\
+\midrule
+$B$&1370&86&5&Full grade\\
+$H/B$ glue sector $1$&1377&83&4&Full grade\\
+$H/B$ glue sector $2$&1377&83&4&Full grade\\
+$H$&4124&252&13&Full grade\\
+$S_2\subset U$&120&\text{selected block}&2&Generated span\\
+\bottomrule
+\end{tabular}
+\end{center}
+Sources:
+\artifact{hi_cft_20260923_next_residual_ambient2.json} and
+\artifact{hi_cft_20260923_next_residual_e8_ambient2.json}.
+The complete momentum enumeration is part of the finite certification
+boundary; neither count by itself identifies a VOA at every weight.
+
+There is also a direct properness-sensitive test. In the full
+five-dimensional residual space consider
+\[
+ \Phi(v)=\bigl(v_1E_+\bmod K_1,\ v_1E_-\bmod K_1\bigr).
+\]
+Its exact rank is three, and its kernel is exactly $\Span\{q,r\}$.
+The kernel is separately checked to preserve all six known currents.
+If $v\in C_U$ and $U_1=K_1$, then $v_1E_\pm\in U_1$, so
+$\Phi(v)=0$. Since $q,r\in C_U$, this proves
+\[
+ (C_U)_2=\Span\{q,r\}
+\]
+once properness is supplied. This is a stronger statement than the
+absence of three directions from the selected $S_2$: it excludes
+them from the actual algebra using the current-preservation
+condition. See
+\artifact{hi_cft_20260923_next_structure_residual_current_kernel.json}.
+
+The exact grade-three computation in the authenticated $S_3$ has
+$58$ Cartan-zero dimensions, a residual kernel of dimension two,
+and no residual Virasoro primary of weight three. Its kernel is
+precisely $\Span\{Dq,Dr\}$. Using the separate conclusion $U_3=S_3$
+therefore gives
+\begin{equation}
+ \ch C_U=q_{\mathrm{ser}}^{-3/20}
+ \bigl(1+2q_{\mathrm{ser}}^2+2q_{\mathrm{ser}}^3
+       +O(q_{\mathrm{ser}}^4)\bigr).
+ \label{expstructure:residual-character}
+\end{equation}
+Here $q_{\mathrm{ser}}$ is the character variable, distinct from
+the stress $q$. The source
+\artifact{hi_cft_20260923_next_structure_residual_grade3.json} checks
+the positive core modes as well as the zero-energy kernel. The
+formula does not prove generation by $q,r$ or identify higher
+character coefficients; any new residual strong generator must
+start at weight at least four.
+
+\subsection{The finite Griess algebra in a reproducible basis}
+\label{expstructure:griess}
+
+Use the exact basis $(q,r,v_1,v_2,v_3)$ of
+\artifact{hi_cft_20260923_next_structure_residual_tensor.json}.
+The last three basis vectors are obtained from the saved complete
+ambient kernel by subtracting their invariant-form projections to
+$q$ and $r$, in the producer's pivot order. This fixes their gauge;
+the sparse lattice embedding of the five vectors remains in that
+source. The following tables specify the entire finite algebra in
+this basis without importing its mode engine.
+
+Write $s=\sqrt{13}$, $t=\sqrt{-3}$ and abbreviate
+\[
+ [a,b,c,d]=a+bs+ct+dst.
+\]
+All four entries are rational. The invariant bilinear form is
+$\langle x,y\rangle\one=x_3y$; it is not the positive Hermitian
+Gram matrix in this non-real basis. In particular a complex or
+negative-looking diagonal entry below is not a failure of vacuum
+unitarity. We have
+\[
+\langle q,q\rangle=16/19,\qquad
+\langle r,r\rangle=91/95,\qquad
+\langle q,r\rangle=\langle q,v_i\rangle
+ =\langle r,v_i\rangle=0.
+\]
+The residual weight-one space vanishes, so $x_2y=0$ for these
+weight-two vectors and the Griess product $x\cdot y=x_1y$ is
+commutative. Its unit is $(q+r)/2$. The producer checks every
+product in the full ambient space and verifies invariance
+$\langle x\cdot y,z\rangle=\langle x,y\cdot z\rangle$.
+
+% The exact finite tensor tables are appended immediately below by a
+% stdlib-only transcription of the small archived coefficient arrays.
+\paragraph{Invariant form on the three complementary directions.}
+\begin{longtable}{@{}ll@{}}
+\toprule
+Entry&Exact coefficient\\
+\midrule\endhead
+$\langle v_1,v_1\rangle$&$[-\frac{1350}{91},0,-\frac{1350}{91},0]$\\[3pt]
+$\langle v_1,v_2\rangle$&$[\frac{470}{91},\frac{30}{91},\frac{30}{7},\frac{470}{91}]$\\[3pt]
+$\langle v_1,v_3\rangle$&$[-\frac{820}{91},\frac{720}{91},-\frac{40}{91},-\frac{220}{91}]$\\[3pt]
+$\langle v_2,v_2\rangle$&$[\frac{22940}{273},-\frac{8095}{546},-\frac{14145}{182},-\frac{170}{91}]$\\[3pt]
+$\langle v_2,v_3\rangle$&$[-\frac{34960}{273},0,0,\frac{1840}{273}]$\\[3pt]
+$\langle v_3,v_3\rangle$&$[\frac{22940}{273},\frac{8095}{546},\frac{14145}{182},-\frac{170}{91}]$\\[3pt]
+\bottomrule
+\end{longtable}
+\paragraph{Action of the first stress.}
+Write $q\cdot v_j=\sum_{i=1}^3Q_{ij}v_i$.
+The row index is the output coordinate and the column index is the
+input vector. Then $r\cdot v_j=2v_j-q\cdot v_j$, while
+$q\cdot q=2q$, $r\cdot r=2r$ and $q\cdot r=0$.
+\paragraph{The nine entries of $Q$.}
+\begin{longtable}{@{}ll@{}}
+\toprule
+Entry&Exact coefficient\\
+\midrule\endhead
+$Q_{11}$&$\frac{4}{57}$\\[3pt]
+$Q_{12}$&$[\frac{55}{1368},\frac{107}{1368},-\frac{29}{1368},\frac{35}{1368}]$\\[3pt]
+$Q_{13}$&$[-\frac{71}{1368},\frac{1}{1368},\frac{13}{1368},-\frac{71}{1368}]$\\[3pt]
+$Q_{21}$&$[-\frac{11}{190},-\frac{2}{95},\frac{1}{95},\frac{1}{190}]$\\[3pt]
+$Q_{22}$&$[\frac{64}{57},-\frac{10}{57},0,0]$\\[3pt]
+$Q_{23}$&$[-\frac{9}{76},\frac{5}{76},-\frac{9}{76},\frac{5}{76}]$\\[3pt]
+$Q_{31}$&$[\frac{1}{76},-\frac{1}{380},\frac{13}{380},-\frac{1}{76}]$\\[3pt]
+$Q_{32}$&$[-\frac{9}{76},-\frac{5}{76},\frac{9}{76},\frac{5}{76}]$\\[3pt]
+$Q_{33}$&$[\frac{64}{57},\frac{10}{57},0,0]$\\[3pt]
+\bottomrule
+\end{longtable}
+Its exact characteristic polynomial is
+\[
+ \det(xI-Q)=x^3-\frac{44}{19}x^2+\frac{449}{361}x-\frac{910}{6859}.
+\]
+The remaining six products are recorded coordinate by coordinate below.
+Together with commutativity and the preceding stress actions, this is
+the complete multiplication table. Define
+$v_i\cdot v_j=c^q_{ij}q+c^r_{ij}r+\sum_k c^k_{ij}v_k$.
+\paragraph{$v_1\cdot v_1$.}
+\begin{longtable}{@{}ll@{}}
+\toprule
+Entry&Exact coefficient\\
+\midrule\endhead
+$c^{q}_{11}$&$[-5,0,-5,0]$\\[3pt]
+$c^{r}_{11}$&$[-\frac{220100}{8281},0,-\frac{220100}{8281},0]$\\[3pt]
+$c^{1}_{11}$&$[-\frac{409}{182},0,\frac{409}{182},0]$\\[3pt]
+$c^{2}_{11}$&$[\frac{9}{91},\frac{9}{455},-\frac{9}{35},-\frac{9}{91}]$\\[3pt]
+$c^{3}_{11}$&$[-\frac{198}{455},\frac{72}{455},-\frac{36}{455},\frac{18}{455}]$\\[3pt]
+\bottomrule
+\end{longtable}
+\paragraph{$v_1\cdot v_2$.}
+\begin{longtable}{@{}ll@{}}
+\toprule
+Entry&Exact coefficient\\
+\midrule\endhead
+$c^{q}_{12}$&$[\frac{475}{96},\frac{5}{96},\frac{65}{96},\frac{475}{96}]$\\[3pt]
+$c^{r}_{12}$&$[\frac{319675}{49686},\frac{31925}{49686},\frac{31925}{3822},\frac{319675}{49686}]$\\[3pt]
+$c^{1}_{12}$&$[\frac{2813}{1092},\frac{2117}{1092},-\frac{1919}{1092},-\frac{827}{1092}]$\\[3pt]
+$c^{2}_{12}$&$[\frac{3}{14},\frac{38}{91},-\frac{3}{14},-\frac{38}{91}]$\\[3pt]
+$c^{3}_{12}$&$[-\frac{1381}{728},-\frac{13}{56},-\frac{1381}{728},-\frac{13}{56}]$\\[3pt]
+\bottomrule
+\end{longtable}
+\paragraph{$v_1\cdot v_3$.}
+\begin{longtable}{@{}ll@{}}
+\toprule
+Entry&Exact coefficient\\
+\midrule\endhead
+$c^{q}_{13}$&$[-\frac{335}{96},\frac{715}{96},-\frac{205}{96},-\frac{235}{96}]$\\[3pt]
+$c^{r}_{13}$&$[-\frac{782375}{49686},\frac{495475}{49686},\frac{47675}{49686},-\frac{143875}{49686}]$\\[3pt]
+$c^{1}_{13}$&$[\frac{2813}{1092},-\frac{2117}{1092},\frac{1919}{1092},-\frac{827}{1092}]$\\[3pt]
+$c^{2}_{13}$&$[\frac{1381}{364},-\frac{13}{28},0,0]$\\[3pt]
+$c^{3}_{13}$&$[\frac{3}{14},-\frac{38}{91},-\frac{3}{14},\frac{38}{91}]$\\[3pt]
+\bottomrule
+\end{longtable}
+\paragraph{$v_2\cdot v_2$.}
+\begin{longtable}{@{}ll@{}}
+\toprule
+Entry&Exact coefficient\\
+\midrule\endhead
+$c^{q}_{22}$&$[\frac{10405}{72},-\frac{4265}{144},-\frac{5615}{48},\frac{85}{24}]$\\[3pt]
+$c^{r}_{22}$&$[\frac{3607250}{74529},-\frac{366500}{74529},-\frac{1476500}{24843},-\frac{174250}{24843}]$\\[3pt]
+$c^{1}_{22}$&$[-\frac{286577}{13104},-\frac{817}{1008},\frac{559}{1008},\frac{15083}{13104}]$\\[3pt]
+$c^{2}_{22}$&$[-\frac{6779}{1092},-\frac{601}{1092},\frac{869}{364},\frac{21}{52}]$\\[3pt]
+$c^{3}_{22}$&$[\frac{547}{364},\frac{41}{182},\frac{41}{14},\frac{547}{364}]$\\[3pt]
+\bottomrule
+\end{longtable}
+\paragraph{$v_2\cdot v_3$.}
+\begin{longtable}{@{}ll@{}}
+\toprule
+Entry&Exact coefficient\\
+\midrule\endhead
+$c^{q}_{23}$&$[-\frac{20425}{96},0,0,\frac{1075}{96}]$\\[3pt]
+$c^{r}_{23}$&$[-\frac{1330475}{16562},0,0,\frac{70025}{16562}]$\\[3pt]
+$c^{1}_{23}$&$[\frac{288059}{26208},\frac{15161}{8736},\frac{288059}{26208},-\frac{15161}{26208}]$\\[3pt]
+$c^{2}_{23}$&$[\frac{4673}{1092},-\frac{11}{14},\frac{499}{273},-\frac{457}{1092}]$\\[3pt]
+$c^{3}_{23}$&$[\frac{4673}{1092},\frac{11}{14},-\frac{499}{273},-\frac{457}{1092}]$\\[3pt]
+\bottomrule
+\end{longtable}
+\paragraph{$v_3\cdot v_3$.}
+\begin{longtable}{@{}ll@{}}
+\toprule
+Entry&Exact coefficient\\
+\midrule\endhead
+$c^{q}_{33}$&$[\frac{10405}{72},\frac{4265}{144},\frac{5615}{48},\frac{85}{24}]$\\[3pt]
+$c^{r}_{33}$&$[\frac{3607250}{74529},\frac{366500}{74529},\frac{1476500}{24843},-\frac{174250}{24843}]$\\[3pt]
+$c^{1}_{33}$&$[\frac{22027}{1872},-\frac{27935}{13104},-\frac{139655}{13104},-\frac{2231}{13104}]$\\[3pt]
+$c^{2}_{33}$&$[\frac{547}{364},-\frac{41}{182},-\frac{41}{14},\frac{547}{364}]$\\[3pt]
+$c^{3}_{33}$&$[-\frac{6779}{1092},\frac{601}{1092},-\frac{869}{364},\frac{21}{52}]$\\[3pt]
+\bottomrule
+\end{longtable}
+
+\subsection{The residual charge spectrum and a unique charge-four-fifths axis}
+\label{expstructure:axes}
+
+The exact idempotent equations for
+$e=aq+br+t_1v_1+t_2v_2+t_3v_3$ are $e\cdot e=2e$.
+If its central charge is $c_e$, invariance against the total stress
+makes
+\[
+ \frac{c_e}{2}=\frac{16}{19}a+\frac{91}{95}b,
+ \qquad b=\frac{95c_e}{182}-\frac{80a}{91}.
+\]
+This linear elimination is useful for independently reconstructing
+the polynomial system from the printed multiplication table. The
+all-charge calculation found a zero-dimensional quotient of length
+$32$. Multiplication by $c_e$ on that quotient has the factored
+characteristic polynomial encoded by the following table. A pair in
+the first two columns contributes both linear factors with the listed
+multiplicity.
+
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$c_e$&$18/5-c_e$&Multiplicity of each factor\\
+\midrule
+$0$&$18/5$&1\\
+$4/5$&$14/5$&1\\
+$6/7$&$96/35$&1\\
+$52/55$&$146/55$&1\\
+$34/35$&$92/35$&1\\
+$6/5$&$12/5$&2\\
+$10/7$&$76/35$&2\\
+$58/35$&$68/35$&1\\
+$32/19$&$182/95$&2\\
+$96/55$&$102/55$&1\\
+$62/35$&$64/35$&1\\
+\midrule
+\multicolumn{2}{c}{$c_e^2-(18/5)c_e+32168/10225$}&2\\
+\bottomrule
+\end{tabular}
+\end{center}
+The sum of the factor degrees with multiplicity is $32$.
+Complementation $e\mapsto q+r-e$ explains the symmetry about
+$9/5$. These are algebraic central charges of the complex idempotent
+scheme. A real charge is not a certificate of a PCT-fixed stress,
+and a Virasoro stress alone is not a rational conformal frame.
+Scheme multiplicity must not be read as a count of distinct unitary
+axes. The record is
+\artifact{hi_cft_20260923_next_structure_residual_all_charges_v2.json}.
+
+At $c_e=4/5$, the reduced exact equations give a unique point:
+\begin{align*}
+ e={}&\frac1{24}q+\frac8{21}r
+      +\frac7{120}(1+t)v_1\\
+ &+\frac{19+s+7t+st}{400}v_2
+      +\frac{19-s-7t+st}{400}v_3.
+\end{align*}
+The original ideal computation, in
+\artifact{hi_cft_20260923_next_structure_residual_potts.json},
+only established this algebraic point. The separate verifier
+\artifact{hi_cft_20260923_next_structure_residual_potts_verify.json}
+then checked its full ambient Virasoro products, PCT reality,
+commutation with the core, and commutation with its complement.
+Its $e_1$ spectrum on the five-dimensional residual algebra is
+\[
+ 0^{\oplus3},\qquad (2/5)^{\oplus1},\qquad 2^{\oplus1}.
+\]
+The complement has central charge $14/5$. The verifier's conclusion
+is the unitary minimal Virasoro subalgebra $L(4/5,0)$ in $C_B$;
+it does not assert a weight-three Potts extension inside $C_B$.
+
+The field $e$ has nonzero complementary coordinates and fails
+membership in $S_2$. More decisively, the current-kernel argument
+shows that $e\notin C_U$ in the proper case. In fact every
+idempotent in $\Span\{q,r\}$ is one of $0,q,r,q+r$, because the
+two stresses commute and each satisfies $x\cdot x=2x$. Thus
+$C_U$ has no charge-$4/5$ conformal vector under the established
+properness hypotheses. This does not conflict with the original
+Potts algebra $P\subset U$: $P$ is part of the core, not a
+subalgebra of this residual commutant.
+
+The tensor producer also performed a complete test within the
+rank-one lattice Ising ansatz supported by the residual momenta.
+It checked $21$ momentum pairs with arbitrary coefficients
+$u,v$ satisfying $uv=1/16$, found no such axis, and left no
+underdetermined cases. This excludes that ansatz only. It is not
+an exclusion of every Ising conformal vector by an unrestricted
+idempotent classification.
+
+\section{Supplementary all-weight identification of the ambient residual cosets}
+\label{expstructure:neighbor}
+
+\begin{reviewnote}{Scope of the supplementary coset route}
+The following route is additional verification material from
+\artifact{hi_cft_20260923_next_neighbor_independent_audit.md},
+\artifact{hi_cft_20260923_next_structure_affine_pair.md},
+\artifact{hi_cft_20260923_next_structure_residual_identification.md},
+and \artifact{hi_cft_20260923_next_structure_residual_category.md}.
+It is not needed to replace the main manuscript's positive-stress
+regularity or finite closure arguments. Its conclusions use the
+actual parafermion embeddings, actual simple-current sectors,
+lattice gluing, and the external affine-embedding, coset-regularity
+and mirror theorems specified below. The archived internal audits
+are evidence of review, not independent formal certification of
+these additional theorems or their application. We reproduce the
+steps so they can be verified in this draft.
+\end{reviewnote}
+
+\subsection{The two-neighbor lattice preserves exactly the relevant perpendicular part}
+
+Let $\Lambda=E_8$ be the actual ambient lattice and let
+$\Pi=\Span_{\mathbb R}\{a_0,H_R\}$.
+Because $\det L=39$ is squarefree, $L=\Lambda\cap\Pi$ is
+saturated: the square of a nontrivial saturation index would divide
+$39$. Put
+\[
+ \Lambda_0=\{x\in\Lambda:(x,t_0)\in2\ZZ\},\qquad
+ \Lambda'=\Lambda_0\cup(t_0/2+\Lambda_0).
+\]
+The parity map is nontrivial since $(a_0,t_0)=3$.
+Thus $[\Lambda:\Lambda_0]=2$. The vector $t_0/2$ has even norm
+six, pairs integrally with $\Lambda_0$, and has double in
+$\Lambda_0$. Hence $\Lambda'$ is even, integral and unimodular
+of rank eight, and is again an $E_8$ lattice.
+
+Let $N=\Lambda\cap\Pi^\perp$. Every vector of $N$ already lies
+in $\Lambda_0$. Conversely, a new-coset vector $t_0/2+x$ cannot
+be perpendicular to $a_0$: that would require
+$(x,a_0)=-3/2$, contrary to integrality of $\Lambda$.
+Therefore
+\begin{equation}
+ \Lambda\cap\Pi^\perp=\Lambda'\cap\Pi^\perp=N.
+ \label{expstructure:perp-preserved}
+\end{equation}
+This equality needs the displayed integrality argument. It is not
+a general property of neighboring lattices.
+
+The plane lattice changes to
+\[
+ L'=\ZZ(2a_0)+\ZZ(t_0/2).
+\]
+Set $\alpha'=t_0/2$, $\gamma'=4a_0-t_0/2$, and
+$\beta'=(\alpha'+\gamma')/2=2a_0$. Then
+\[
+ (\alpha')^2=6,\qquad (\gamma')^2=26,
+ \qquad(\alpha',\gamma')=0,
+ \qquad G_{(\alpha',\beta')}=
+ \begin{pmatrix}6&3\\3&8\end{pmatrix}.
+\]
+Both $L$ and $L'$ have determinant $39$.
+
+\subsection{The sign of the discriminant transport is substantive}
+
+The natural old discriminant generator is
+$\mu=H_R/39$. Its natural new partner is
+\[
+ \lambda'=\mu+a_0
+ =\alpha'/3+3\gamma'/13,
+ \qquad q_{L'}(\lambda')=40/39\equiv1/39\pmod1.
+\]
+If $\mu+\eta$, $\eta\in N^*$, is an old glue lift, then
+$\lambda'+\eta=(\mu+\eta)+a_0$ has even $t_0$ pairing
+$1+3=4$. Therefore the old class $n\mu$ and the new class
+$n\lambda'$ have exactly the same $N$ discriminant component.
+Unimodularity and the order $39$ account for every glue sector.
+The expression $-\alpha'/3+3\gamma'/13$ is also a discriminant
+generator, but corresponds to $14\lambda'$ modulo $L'$.
+It is not the natural transport of $\mu$. The archived audit
+explicitly corrects an earlier sign proposal at this point.
+
+The actual $39$-sector description of the core is
+\[
+ R=\bigoplus_{n\bmod39}
+     V_{L+n\mu}\otimes P_{-n}\otimes Q_{3n}.
+\]
+The symbols $P_{-n}\otimes Q_{3n}$ here denote the actual
+multiplicity subspaces in the corresponding $N$-lattice sectors,
+not formal modules with matching characters. The gluing preserves
+these subspaces, so it transports the sum to
+\[
+ R'=\bigoplus_{n\bmod39}
+     V_{L'+n\lambda'}\otimes P_{-n}\otimes Q_{3n}
+     \subset V_{\Lambda'}.
+\]
+The multiplicity-space intertwining operators are unchanged; only
+the torus factors are replaced by factors with the same charge
+fusion. The old product closure excludes extra output multiplicity
+spaces. Compatible lattice cocycles may be chosen to agree on
+$N$; their remaining discrepancy is a coboundary and rescales the
+nonzero intertwining operators. Positive lattice forms can likewise
+be chosen to extend the original form on $N$. These are the
+field-level ingredients of the transport.
+
+\subsection{Actual affine currents in the neighbor}
+
+The two identities
+\[
+ 13\lambda'-\alpha'-6\beta'=\alpha'/3,
+ \qquad
+ 9\lambda'-\alpha'-4\beta'=\gamma'/13
+\]
+exhibit the charged sectors supplying the affine currents. Their
+parafermion charges are $(-1,0)$ and $(0,1)$, respectively.
+The lattice and parafermion energies are
+\[
+\begin{array}{c|cc|c}
+\text{factor}&h_{\rm lattice}&h_{\rm parafermion}&\text{sum}\\\hline
+\alpha'&1/3&2/3&1\\
+\gamma'&1/13&12/13&1
+\end{array}
+\]
+with one-dimensional parafermion tops. They give actual commuting
+$A_{1,3}$ and $A_{1,13}$ current algebras. Their stresses are
+$\omega_{\alpha'}+p$ and $\omega_{\gamma'}+z$.
+The primitive plane field $e^{\beta'}$ supplies the order-two
+simple-current extension, so the standard lattice--parafermion
+reconstruction gives
+\[
+ R'=(A_{1,3}\otimes A_{1,13})
+       \oplus(J_3\otimes J_{13}),
+ \qquad h_{J_3\otimes J_{13}}=3/4+13/4=4.
+\]
+The reconstruction uses the actual PF3 and PF13 fields already
+identified earlier. Matching their central charges would not supply
+these affine raising and lowering vectors.
+
+Both old and new cores have plane stress plus $p+z$. A vector
+commuting with either core has zero plane-Heisenberg energy and
+therefore lies in the common $V_N$ of
+\eqref{expstructure:perp-preserved}. Positivity then gives the
+all-weight equality
+\[
+ \Com(R,V_\Lambda)=\Com(R',V_{\Lambda'})
+ =\{v\in V_N:p_1v=z_1v=0\}.
+\]
+The order-two affine extension shares the affine-pair stress, so
+it has the same commutant. This proof does not infer a full
+commutant from the finite weight-two kernel.
+
+\subsection{Why the affine pair has a unique relevant conjugacy class}
+
+An index-three $\mathfrak{sl}_2$ in $E_8$ has Cartan characteristic
+of norm six. In Euclidean $E_8$ coordinates the norm-six vectors
+have three types, up to signs and permutations:
+\[
+ (2,1,1,0^5),\qquad (1^6,0^2),\qquad
+ ((3/2)^2,(1/2)^6),
+\]
+with counts $1344$, $1792$, $3584$. The $D_8$ Weyl group is
+transitive on each type; reflection in
+$(1/2,\ldots,1/2)$ connects the types. Thus the characteristic
+has one $E_8$ Weyl orbit. For fixed $h$, the centralizer group
+acts with an open orbit on every possible raising operator:
+$\operatorname{ad}(e):\mathfrak g_0\to\mathfrak g_2$ is
+surjective by $\mathfrak{sl}_2$ representation theory. Two open
+orbits in the vector space $\mathfrak g_2$ coincide. This
+upgrades the Cartan-orbit assertion to conjugacy of the first
+$\mathfrak{sl}_2$ embedding.
+
+For its standard representative, use the conformal inclusion
+$G_{2,1}\otimes F_{4,1}\subset E_{8,1}$. The finite branching
+\[
+ 248=(14,1)\oplus(1,52)\oplus(7,26)
+\]
+and
+\[
+ 14\downarrow A_{1,3}\times A_{1,1}
+ =(3,1)\oplus(1,3)\oplus(4,2),
+ \qquad
+ 7\downarrow A_{1,3}\times A_{1,1}=(3,1)\oplus(2,2)
+\]
+show that the current centralizer is exactly
+$F_4\oplus A_1$, both at level one. The finite Lie centralizer
+alone is not the required VOA assertion. To verify the latter,
+list the simple lowest weights:
+\[
+\begin{array}{c|l}
+A_{1,3}&0,3/20,2/5,3/4\\
+A_{1,1}&0,1/4\\
+F_{4,1}&0,3/5
+\end{array}
+\]
+Only the vacuum triple and $(3,1,0)$, $(2,0,26)$, $(1,1,26)$
+have integral sums, the last three at weight one. Only the
+vacuum triple has zero $A_{1,3}$ energy. Regularity and the
+shared conformal vector therefore imply
+\[
+ \Com(A_{1,3},V_{E_8})=F_{4,1}\otimes A_{1,1}
+\]
+at every weight, with no additional affine-commutant extension.
+
+The second $A_{1,13}$ projects to the external $A_1$ with index
+zero or one. The allowed $F_4$ indices quoted from the
+Penkov--Zuckerman table in the archived affine-pair note are
+\[
+ 1,2,3,4,6,8,9,10,11,12,28,35,36,60,156,
+\]
+and that source states uniqueness by index. There is no index
+thirteen and there is a unique index twelve. Hence the second
+factor must use indices $12+1$. The actual residual commutant is
+therefore identified, under these external embedding inputs, as
+\begin{equation}
+ C_H\cong\Com(A_{1,13},F_{4,1}\otimes A_{1,1}).
+ \label{expstructure:CH}
+\end{equation}
+
+\subsection{Transporting the order-three action distinguishes the \texorpdfstring{$B$}{B} coset}
+
+Let $\chi:\Lambda\to\ZZ/3$ have kernel the $E_6\oplus A_2$
+lattice. The vectors $a_0,t_0$ have charge zero. The extension
+$\chi'$ to $\Lambda'$ is fixed by
+$\chi'|_{\Lambda_0}=\chi$ and $\chi'(t_0/2)=0$; the relation
+$2(t_0/2)=t_0$ is compatible. On $N$ the action is unchanged,
+and on the reconstructed core it is trivial. Thus its action on
+$C_H$ fixes precisely $C_B$.
+
+The index-twelve $\mathfrak{sl}_2$ in $F_4$ has adjoint branching
+\[
+ 52=6V_2\oplus4V_4\oplus2V_6.
+\]
+Its full triple centralizer has zero-dimensional Lie algebra;
+the nilpotent centralizer has dimension $6+4+2=12$.
+The weighted diagram is $0200$ (orbit $F_4(a_3)$), with
+characteristic $h=(4,2,2,0)$ of norm $24$. The external orbit
+and component-group tables cited in the archived residual
+identification note give the finite triple centralizer $S_4$.
+The actual order-three element is nontrivial because its fixed
+weight-two space has dimension five inside a space of dimension
+thirteen. All order-three elements of $S_4$ are conjugate.
+
+A representative is the grading automorphism of
+\[
+ F_{4,1}\supset A_{2,1}\otimes A_{2,2}.
+\]
+The two nontrivial simple-current sectors have current tops
+$(3,\overline6)$ and $(\overline3,6)$, of dimension $18$ each.
+The principal $A_1$ factors in the two $A_2$ algebras have levels
+four and eight. Consequently the same actual fixed residual is
+\begin{equation}
+ C_B\cong\Com(A_{1,13},
+             A_{2,1}\otimes A_{2,2}\otimes A_{1,1}),
+ \label{expstructure:CB}
+\end{equation}
+with diagonal levels $4+8+1$. It is the order-three fixed algebra
+of \eqref{expstructure:CH}. The conjugacy of the grading action,
+rather than a comparison of central charges, is the decisive step.
+
+The finite count gives a convenient check on the identification.
+The nineteen currents of the numerator in \eqref{expstructure:CB}
+restrict as $3V_2\oplus2V_4$. Horizontal singlets at grade two
+come from the separate factors with multiplicities $1,2,1$ and
+from the three cross terms with multiplicities $2,1,1$, giving
+eight. The diagonal affine vacuum removes one; the two
+complementary $V_2$ current tops remove two descendant singlets.
+Thus the commutant has $8-1-2=5$ states at weight two.
+The charge-$4/5$ stress from the $A_{2,2}/A_{1,8}$ coset has
+spectrum $0^3,(2/5)^1,2^1$, agreeing with the exact Griess result.
+
+\subsection{Regularity and the full category of the ambient residual}
+
+The displayed standard cosets contain a common conformal frame
+\[
+ L(4/5,0)\otimes
+ \Com(A_{1,12},A_{1,4}\otimes A_{1,8})\otimes L(34/35,0).
+\]
+The charges are $4/5$, $64/35$, $34/35$, totaling $18/5$.
+The last factor is the unitary minimal model $M(14,15)$. The
+middle factor is the level-four diagonal $A_1$ coset; its
+regularity is the specific theorem of Lin (Theorem 5.7 at $k=8$)
+invoked in the archived note. The unitary finite extension of this
+regular frame yields $C_2$-cofiniteness of the ambient residual.
+Together with core maximality, the strong rationality of the
+ambient lattice VOA, and quasiprimary compatibility of the core
+stress, McRae's coset theorem supplies strong rationality. This
+order of argument avoids assuming rationality of arbitrary cosets
+or an unstated categorical-dimension condition on an arbitrary
+extension.
+
+There is more information than regularity. The right currents
+have $R$ energy $1/5$ and charges $\pm2$. Among the fourteen core
+simples, the two lowest-weight-$1/5$ tops are $y_3$ with charges
+$\pm2$ and $y_6$ with charges $\pm4$. Hence the currents force
+$y_3$ to occur in $B\downarrow_R$. Its fusion square is
+\[
+ y_3\boxtimes y_3
+ =(1\oplus\tau)\boxtimes
+ (0\oplus2\oplus4\oplus6\oplus8\oplus10\oplus12),
+\]
+so it tensor-generates every core label. Mutual commutants and
+the mirror theorem then give fourteen distinct simple
+multiplicity spaces $N_i$ and the actual diagonal branching
+\[
+ B=\bigoplus_{i\in\operatorname{Irr}(R)}M_i\otimes N_i.
+\]
+Their braided subcategory is $\Rep(R)^{\rm rev}$, with inverse
+twists because $B$ is integer graded. This is a statement about
+actual branching modules, not merely fourteen proposed characters.
+
+Splitting off this nondegenerate subcategory by the modular
+centralizer theorem, and using the local-module category of the
+existing extension algebra $B$, yields
+\begin{equation}
+ \Rep(C_B)\simeq
+ \mathrm{Fib}^{\rm rev}\boxtimes\mathrm{SO}(3)_{13}^{\rm rev}
+ \boxtimes\mathcal P(E_6\oplus A_2).
+ \label{expstructure:CB-category}
+\end{equation}
+The last factor has group $(\ZZ/3)^2$ and form
+$(2a^2+b^2)/3$, so there are $14\cdot9=126$ simple residual
+modules. The extension algebra is diagonal in the first two
+mutually reversed factors; its dimension is the sum of squared
+core dimensions, which is positive. Thus the local-module
+argument does not omit a zero-dimension exception.
+
+If $U$ contained all of $C_B$, its right currents would still
+force the $y_3$ summand. Fusion closure of mirror labels would
+force all fourteen summands, each of which has multiplicity one
+in $B$. Hence $U=B$. Conversely $U=B$ certainly contains $C_B$.
+This explains structurally why a proper $U$ must have a proper
+residual $C_U\subsetneq C_B$. It supplies no further regularity
+or character claim for $C_U$ itself.
+
+\section{Complete finite top data behind the universal energy bound}
+\label{expstructure:tops}
+
+The main proof states the sharp bound $h\le17/10$. This section
+prints the charge characters and all partial-energy traces used
+there, so a reviewer need not recover them from the checking script.
+The coefficients are the saved exact data in
+\artifact{hi_cft_20260923_next_structure_order13_top_check.json},
+with the preceding lattice--Potts minimization explained in
+\artifact{hi_cft_20260923_next_structure_top_bound_sharp.md}.
+
+\subsection{Every lattice--Potts top, including both minimizing charges}
+
+For $\epsilon=1,\tau$ the core energy at right Cartan charge $m$ is
+\[
+ \frac{m^2}{156}+\frac{\mathbf1_{m\text{ odd}}}{4}
+                  +p_\epsilon(m),
+ \qquad m\equiv j\pmod{13},
+\]
+where $p_1(m)$ is $0$ or $2/3$ according as $3\mid m$ or not,
+and $p_\tau(m)$ is $2/5$ or $1/15$ in the same two cases.
+An odd $m$ carries a complete left affine doublet, and an even
+$m$ a singlet. The minimum is attained within $-12\le m\le12$.
+For a positive $j$, the table combines the conjugate labels $j,-j$;
+its dimension is the dimension of that pair of tops. The absolute
+charges listed can belong to different signs of $j$, but both
+signs of every listed charge occur in the combined pair.
+
+\begin{longtable}{@{}llllr@{}}
+\toprule
+Label&$|m|$&Left multiplicity&Potts weight&Pair dimension\\
+\midrule\endhead
+$(1,0)$&$0$&$1$&$0$&1\\
+$(\tau,0)$&$0$&$1$&$2/5$&1\\
+$(1,1)$&$1,12$&$2,1$&$2/3,0$&6\\
+$(\tau,1)$&$1$&$2$&$1/15$&4\\
+$(1,2)$&$2$&$1$&$2/3$&2\\
+$(\tau,2)$&$2$&$1$&$1/15$&2\\
+$(1,3)$&$3$&$2$&$0$&4\\
+$(\tau,3)$&$3,10$&$2,1$&$2/5,1/15$&6\\
+$(1,4)$&$4,9$&$1,2$&$2/3,0$&6\\
+$(\tau,4)$&$4$&$1$&$1/15$&2\\
+$(1,5)$&$5,8$&$2,1$&$2/3,2/3$&6\\
+$(\tau,5)$&$5,8$&$2,1$&$1/15,1/15$&6\\
+$(1,6)$&$6$&$1$&$0$&2\\
+$(\tau,6)$&$6,7$&$1,2$&$2/5,1/15$&6\\
+\bottomrule
+\end{longtable}
+
+As a worked minimization, for $(1,1)$ the charges $m=1,-12$
+both have energy $12/13$:
+\[
+ \frac1{156}+\frac14+\frac23=\frac{12}{13},
+ \qquad \frac{144}{156}=\frac{12}{13}.
+\]
+Their left multiplicities are two and one. For $(\tau,3)$,
+$m=3,-10$ give respectively
+\[
+ \frac9{156}+\frac14+\frac25=\frac{46}{65},
+ \qquad \frac{100}{156}+\frac1{15}=\frac{46}{65}.
+\]
+Omitting these second minimizers would remove charge ten and
+invalidate the later right-$\mathfrak{sl}_2$ inequalities.
+The analogous second minimizer at $(\tau,6)$ restores charge
+seven.
+
+\subsection{The fourteen core tops as full Cartan characters}
+
+Let $\ell$ record the left Cartan and $z$ the right Cartan.
+Write $\sigma=\ell+\ell^{-1}$ and $[m]=z^m+z^{-m}$ for
+$m>0$. These are Laurent characters, unrelated to the square-root
+normalization of the parafermion primary. The complete top characters
+are:
+\begin{longtable}{@{}llr@{}}
+\toprule
+Module&Top Cartan character&Dimension\\
+\midrule\endhead
+$x_0$&$1$&1\\
+$x_1$&$1$&1\\
+$x_2$&$1+\sigma[3]$&5\\
+$x_3$&$1+[2]+\sigma[3]+[6]$&9\\
+$x_4$&$[6]$&2\\
+$x_5$&$\sigma[1]+[4]+[6]+\sigma[9]+[12]$&14\\
+$x_6$&$[4]+\sigma[9]$&6\\
+$y_0$&$1$&1\\
+$y_1$&$1+\sigma[5]+[8]$&7\\
+$y_2$&$1+[2]+\sigma[3]+\sigma[5]+[8]+[10]$&15\\
+$y_3$&$[2]$&2\\
+$y_4$&$\sigma[1]+[2]+[4]+[6]+\sigma[7]$&14\\
+$y_5$&$\sigma[1]+[4]$&6\\
+$y_6$&$[4]$&2\\
+\bottomrule
+\end{longtable}
+
+These are complete $R$-tops. They need not individually be complete
+right-$\mathfrak{sl}_2$ representations, because the right raising
+and lowering currents are in $U$ but are not currents of $R$.
+For instance $x_5$ has charge twelve but no charge ten. A genuine
+$U$-module top is a nonnegative integral sum of such core tops
+whose combined character must be a finite-dimensional representation
+of both current Lie algebras.
+
+This gives a direct way to see the two inequalities used in the
+bound. The multiplicities of right charge twelve and ten are
+$x_5$ and $y_2$, so the usual nonincreasing multiplicity string
+within an $\mathfrak{sl}_2$ representation forces $y_2\ge x_5$.
+In the left-doublet sector the right charge-nine multiplicity is
+$x_5+x_6$, while charge seven occurs $y_4$ times. Dividing out
+the common doublet gives $y_4\ge x_5+x_6$.
+
+\subsection{All partial-energy traces, with the parafermion contribution retained}
+
+For one core top write $d$ for dimension,
+$L=\Tr\omega_{A_{1,1},1}$, $Q_H=\Tr H_R(0)^2$,
+$P_0=\Tr p_1$, and $Z_0=\Tr z_1$. The traces are taken over
+that entire core top. The relation
+\[
+ Z_0=h_Rd-L-Q_H/156-P_0
+\]
+checks each row from the common core stress. On a complete right
+$\mathfrak{sl}_2$ representation the affine Sugawara trace is
+$3Q_H/164$. Multiplying by its positive-stress coefficient gives
+$83Q_H/6084$. Hence the contribution to the total trace is
+\[
+ W=L+\frac{83}{6084}Q_H+\frac{25}{6}P_0+\frac{25}{26}Z_0.
+\]
+The following table is a transcription, not a fresh evaluation of
+the research checker.
+
+\begin{longtable}{@{}lrrrrrrr@{}}
+\toprule
+Label&$h_R$&$d$&$L$&$Q_H$&$P_0$&$Z_0$&$4680W$\\
+\midrule\endhead
+$x_0$&$0$&$1$&$0$&$0$&$0$&$0$&$0$\\[3pt]
+$x_1$&$\frac{2}{15}$&$1$&$0$&$0$&$0$&$\frac{2}{15}$&$600$\\[3pt]
+$x_2$&$\frac{2}{5}$&$5$&$1$&$36$&$0$&$\frac{10}{13}$&$10440$\\[3pt]
+$x_3$&$\frac{4}{5}$&$9$&$1$&$116$&$\frac{4}{3}$&$\frac{268}{65}$&$56640$\\[3pt]
+$x_4$&$\frac{1}{3}$&$2$&$0$&$72$&$0$&$\frac{8}{39}$&$5520$\\[3pt]
+$x_5$&$1$&$14$&$2$&$720$&$4$&$\frac{44}{13}$&$148560$\\[3pt]
+$x_6$&$\frac{4}{5}$&$6$&$1$&$356$&$\frac{4}{3}$&$\frac{12}{65}$&$54240$\\[3pt]
+$y_0$&$\frac{2}{5}$&$1$&$0$&$0$&$\frac{2}{5}$&$0$&$7800$\\[3pt]
+$y_1$&$\frac{8}{15}$&$7$&$1$&$228$&$\frac{4}{5}$&$\frac{92}{195}$&$36960$\\[3pt]
+$y_2$&$\frac{4}{5}$&$15$&$2$&$472$&$\frac{8}{3}$&$\frac{56}{13}$&$110880$\\[3pt]
+$y_3$&$\frac{1}{5}$&$2$&$0$&$8$&$\frac{2}{15}$&$\frac{14}{65}$&$4080$\\[3pt]
+$y_4$&$\frac{11}{15}$&$14$&$2$&$312$&$\frac{8}{5}$&$\frac{14}{3}$&$81480$\\[3pt]
+$y_5$&$\frac{2}{5}$&$6$&$1$&$36$&$\frac{2}{5}$&$\frac{10}{13}$&$18240$\\[3pt]
+$y_6$&$\frac{1}{5}$&$2$&$0$&$32$&$\frac{2}{15}$&$\frac{4}{65}$&$4920$\\[3pt]
+\bottomrule
+\end{longtable}
+
+For example the $x_5$ character gives
+$Q_H=2(2\cdot1^2+4^2+6^2+2\cdot9^2+12^2)=720$.
+Its four odd-charge doublets contribute $L=2$, while the Potts
+trace is $4$. Therefore
+$Z_0=14-2-720/156-4=44/13$, agreeing with the table.
+This row alone has $W/d>17/10$; it is the compatibility
+inequalities between complete core tops that lower the universal
+bound. Bounding every individual partial energy separately would
+lose that information.
+
+\subsection{What makes the top bound an all-module statement}
+
+The top of an arbitrary simple $U$-module is not assumed to have a
+positive Hermitian form at this point. Instead regularity of $R$
+as a weak-module theory decomposes the restriction into ordinary
+$R$-modules. Intrinsic and ambient weights agree for vectors of
+$R$, so every $R$ mode lowering its intrinsic degree also lowers
+ambient degree and annihilates the lowest $U$ space. That space is
+stable under all $R$ Zhu zero modes and is therefore a direct sum
+of complete simple $R$-tops. Finite-dimensional current Lie algebra
+representations are semisimple algebraically. These are the precise
+inputs behind the character inequalities.
+
+Writing $D_E$ for the total dimension and $W_E$ for the sum of
+the listed $W$ contributions, the printed dual identity in the
+main proof has only the nonnegative differences
+$y_2-x_5$, $y_4-x_5-x_6$ and nonnegative core multiplicities.
+It gives $W_E\le(17/10)D_E$. The stress identity gives
+$W_E=hD_E$, so every simple $U$-module satisfies $h<2$.
+No simultaneous diagonalization of all partial stresses, and no
+unitarity of the unknown module, enters this trace argument.
+
+The resulting absence of hidden branching summands is particularly
+concrete. Every simple summand of an integer-graded lattice module
+has integral lowest weight. Only zero and one are below two.
+The vacuum multiplicity is one; the remaining $80$ currents form
+one exact irreducible top. Thus $B=U\oplus X$ after properness.
+For a mixed lattice module starting at weight one with an
+irreducible $81$-dimensional top, an additional summand could only
+start at an integer weight at least two, which the same bound
+excludes. The finite irreducibility checks and the universal top
+bound have different jobs: one identifies the lowest action,
+the other rules out all later summands.
+
+\section{The supplementary charge-six lattice coset and its limits}
+\label{expstructure:c6}
+
+The charge-six construction uses the same saturated plane lattice
+$L$ but removes only its Heisenberg/lattice sector. Put
+\[
+ C_6=\Com(V_L,U),\qquad N=E_8\cap\Pi^\perp.
+\]
+Lattice positivity gives
+$C_6=U\cap V_N=\Com(\mathcal H_\Pi,U)$, where
+$\mathcal H_\Pi$ is the plane Heisenberg algebra. Its conformal
+vector is the perpendicular stress. The zero-perpendicular-energy
+space in $V_{E_8}$ is exactly $V_L$: a vector of zero energy has
+neither perpendicular momentum nor perpendicular oscillators.
+This proves $\Com(C_6,U)=V_L$ at every weight.
+
+The source route is
+\artifact{hi_cft_20260923_next_c2_asymmetric_coset.md}, with the
+independent local audit
+\artifact{hi_cft_20260923_next_structure_c6_coset_audit.md}.
+Its use of the lattice-coset regularity theorem is specific: it
+checks the positive-definite lattice double commutant required by
+Section 4.3 of the Creutzig--Kanade--Linshaw--Ridout source before
+applying its Lemma 4.6, Theorem 4.12 and Corollary 4.13.
+It does not claim rationality for arbitrary cosets. Under the
+strong rationality of $U$ already obtained in the main proof,
+this route yields a strongly rational $C_6$. As elsewhere in
+this supplementary route, these theorem applications are written
+out for review and are not a new external validation.
+
+\subsection{A fully specified rank-six lattice, not only a determinant}
+
+The lattice $N$ has determinant $39$ and root system
+$A_2\oplus A_2\oplus A_1$. Its full isometry class is the even
+index-six extension
+\[
+ N=(A_2\oplus A_2\oplus A_1\oplus\langle78\rangle)
+       +\ZZ(\omega,\omega,\alpha/2,u/6),
+\]
+where $\omega^2=2/3$, $\alpha^2=2$ and $u^2=78$. The glue
+vector has norm $2/3+2/3+1/2+78/36=4$. In a basis
+$(a_1,a_2,b_1,b_2,c,v)$ consisting of simple roots and this glue
+vector, the Gram matrix is
+\begin{equation}
+\begin{gathered}
+G_N=\begin{pmatrix}
+2&-1&0&0&0&1\\
+-1&2&0&0&0&0\\
+0&0&2&-1&0&1\\
+0&0&-1&2&0&0\\
+0&0&0&0&2&1\\
+1&0&1&0&1&4
+\end{pmatrix},\\
+\nu=6v-4a_1-2a_2-4b_1-2b_2-3c.
+\end{gathered}
+\label{expstructure:N-gram}
+\end{equation}
+with $\nu^2=78$ and $\nu$ orthogonal to the five roots.
+The determinant check is the Schur complement
+\[
+ 18\left(4-\frac23-\frac23-\frac12\right)=39.
+\]
+The letter $\nu$ here is the perpendicular vector denoted $u$
+in the abstract lattice description, not the original weight-two
+generating field.
+
+There is also a basis in the original ambient coordinates.
+Let $e_0,\ldots,e_7$ be the simple-root basis, with diagonal Gram
+entries two and edges
+$(0,1),(1,2),(2,3),(3,4),(2,5),(6,7)$ of pairing $-1$.
+The index-three glue vector is
+\[
+ \lambda=(4/3,5/3,2,4/3,2/3,1,2/3,1/3).
+\]
+The vectors $e_0,\ldots,e_6,\lambda$ form an integral basis of
+$E_8$. For $x=\sum_{i=0}^6y_ie_i+k\lambda$, orthogonality to
+the plane says
+\[
+ y_5=-k,\qquad y_6=-\sum_{i=0}^4y_i-8k.
+\]
+Thus $n_i=e_i-e_6$, $0\le i\le4$, and
+$n_5=\lambda-e_5-8e_6$ form a complete integral basis of $N$.
+After replacing $n_5$ by
+\[
+ w=n_5-2n_0-2n_1-2n_2-n_3-n_4
+   =(-2/3,-1/3,0,1/3,-1/3,0,2/3,1/3),
+\]
+the Gram matrix is
+\[
+\begin{pmatrix}
+4&1&2&2&2&-2\\
+1&4&1&2&2&-1\\
+2&1&4&1&2&-1\\
+2&2&1&4&1&0\\
+2&2&2&1&4&-2\\
+-2&-1&-1&0&-2&2
+\end{pmatrix}.
+\]
+The archived proof identifies the isometry class by the root and
+glue argument below; it does not claim to have saved a change-of-basis
+matrix from this ambient basis to \eqref{expstructure:N-gram}.
+All of this data is in
+\artifact{hi_cft_20260923_next_c6_lattice.md}.
+
+\subsection{The root-and-glue proof, including the excluded alternative}
+
+The authenticated neighbor adjoint table has $22$ joint
+Cartan-zero vectors. Removing the eight Cartan directions leaves
+$14$ roots in $N$. No such root lies in the $E_6\oplus A_2$
+root lattice: orthogonality to $a_0$ removes the $e_5$ coordinate
+of an $E_6$ root, leaving the parabolic $A_5$; $H_R$ has positive
+pairing two with every simple root of that $A_5$, and also with
+both roots of the separate $A_2$. Thus all perpendicular roots
+carry nonzero charge in $E_8/(E_6\oplus A_2)=\ZZ/3$.
+
+An $A_3$ subsystem would have consecutive simple roots
+$r,s,t$. Nonzero charges of $r+s$ and $s+t$ force the three
+simple charges to agree; then $r+s+t$ has zero charge, a
+contradiction. Hence every irreducible root component is $A_1$
+or $A_2$. Fourteen roots and rank at most six leave
+$A_2\oplus A_1^4$ or $A_2^2\oplus A_1$. The first has full
+rank and determinant $48$, whose index in $N$ would have square
+$48/39$, impossible. Therefore the rank-five root lattice is
+$R_0=A_2^2\oplus A_1$.
+
+Its discriminant form
+\[
+ D_{R_0}=(\ZZ/3)^2\oplus\ZZ/2,
+ \qquad q(a,b,c)=\frac{a^2+b^2}{3}+\frac{c^2}{4}
+\]
+has no nonzero isotropic element, so $R_0$ is primitive in its
+span. Let its rank-one perpendicular have norm $2m$, and let
+$r$ be the glue index. Injectivity of the glue projections into
+the two discriminant groups gives $r\mid6$. Determinants give
+\[
+ 39=\frac{18(2m)}{r^2},\qquad m=\frac{13r^2}{12}.
+\]
+Integrality forces $r=6$ and $2m=78$. The order-six class on the
+rank-one side has quadratic value $13/12\equiv1/12$; its partner
+must have value $11/12$, forcing nonzero components in both
+$A_2$ discriminants and in the $A_1$ discriminant. Diagram
+conjugation reverses either $A_2$ component, so the glue is unique
+up to isometry. This recovers the complete lattice above.
+
+Its VOA has weight-one dimension $6+14=20$, with Lie algebra
+$A_2\oplus A_2\oplus A_1$ and one abelian current. Its chiral
+category is the pointed category on $\ZZ/39$ with form
+$-n^2/39$. In contrast $(C_6)_1=0$ in the proper branch: the
+non-Cartan $U$ currents have nonzero plane charges and the two
+Cartan currents fail the positive Heisenberg-mode condition.
+The known $U_2=S_2$ conclusion gives $\dim(C_6)_2=7$.
+
+\subsection{Category factorization and the transported extension algebra}
+
+Every one of the $39$ lattice labels occurs in the actual core
+$R$, hence in $U$. The mirror theorem for the regular mutual
+pair $(V_L,C_6)$ identifies the branching modules with the full
+reverse pointed category $\mathcal P_{39}^{\rm rev}$, where
+$q_{\mathcal P_{39}}(n)=n^2/39$. Modular centralizer decomposition
+and the existing diagonal extension give
+\begin{equation}
+ \Rep(C_6)\simeq\mathcal P_{39}^{\rm rev}\boxtimes\Rep(U).
+ \label{expstructure:c6-category}
+\end{equation}
+The actual $U$ algebra over $V_L\otimes C_6$ is the diagonal
+algebra in $\mathcal P_{39}\boxtimes\mathcal P_{39}^{\rm rev}$,
+tensored with the unit of $\Rep(U)$. Its local-module category
+is the second factor, explaining \eqref{expstructure:c6-category}.
+Under the main Haagerup-center identification the rank is
+$39\cdot12=468$. Its multiplicative central charge is consistent:
+the reverse pointed factor has charge six modulo eight and a
+Drinfeld center has trivial anomaly.
+
+Let $A_U$ be the actual extension algebra of the original
+$U\subset H$. Transitivity of extension algebras identifies the
+ambient algebra over $V_L\otimes C_6$ as
+$\Delta_{\mathcal P_{39}}\boxtimes A_U$, including its
+multiplication. Taking the $V_L$ vacuum multiplicity yields the
+actual extension $C_6\subset V_N$ with algebra
+$\one_{\mathcal P_{39}^{\rm rev}}\boxtimes A_U$.
+Thus the $C_6$-preserving algebra-bimodule category is
+\[
+ \mathcal P_{39}^{\rm rev}\boxtimes
+ {}_{A_U}\Rep(U)_{A_U}
+ \simeq\mathcal P_{39}^{\rm rev}\boxtimes
+ \mathcal F\boxtimes\mathcal F^{\rm op},
+ \qquad \mathcal F=\Rep(U)_{A_U}.
+\]
+This transports the actual associativity data of the original
+extension, not just its fusion matrices. The categorical defect
+statement retains the full-CFT realization requirements: this
+supplementary coset argument does not independently prove complete
+unitarity of $C_6$ or the needed comparison of every bimodule with
+a physical defect operator. Nor does it select $\mathcal F=\HH_3$
+when the original extension is only known to have
+$\mathcal F\simeq\HH_2$ or $\HH_3$.
+
+\subsection{Precise obstructions to obtaining charge two by the immediate routes}
+
+Several negative results constrain this additional construction.
+They do not identify the physical chain or rule out an unrelated
+charge-two theory.
+
+First, the simple dimensions of $\Rep(U)$ are
+$1,d^2,1+d^2$ (four times), and $3d$ (six times), where
+$d=(3+\sqrt{13})/2$. Its only invertible is the unit and
+$(3d)^2>1+d^2$. If two nontrivial fusion factors existed, each
+would have a noninvertible simple of dimension at least $3d$;
+their external product would exceed the largest allowed simple
+dimension. Thus this category has no nontrivial fusion-category
+tensor factorization. In particular a tensor factorization of
+$U$ into unitary strongly rational charges two and six would
+force one factor to be holomorphic, whose charge must be zero
+modulo eight, a contradiction. This does not exclude a finite
+conformal extension of a tensor product or a mutual-commutant pair.
+
+Second, the transparent current algebra inside $U$ is contained
+in its two $\mathfrak{sl}_2$ factors. Their full Sugawara charge is
+\[
+ 1+\frac{3\cdot39}{39+2}=\frac{158}{41}.
+\]
+A compact reductive current subalgebra has no larger Sugawara
+charge, by positivity of the complementary affine coset.
+An ordinary coset by such currents therefore has charge at least
+$8-158/41=170/41>2$. The precise premise is that the gauged
+currents commute with the specified symmetry action; generalized
+quotients or modified actions are outside this statement.
+
+Third, the exact charge-one and charge-two idempotent exclusions
+in the complete seven-dimensional $(C_6)_2$ are recorded in
+\artifact{hi_cft_20260923_next_c2_reduced_exclusion_c1_checked.json}
+and
+\artifact{hi_cft_20260923_next_c2_reduced_exclusion_c2_checked.json}.
+Their original finite scope becomes exhaustive only after using
+$U_2=S_2$ and the complete Cartan-commutant dimension. If $e$ is
+any complex Virasoro vector in this weight-two space and $t_6$
+is the total stress, the absence of weight-one states and
+invariance give
+\[
+ (t_6,e)=(e,e)=c_e/2,
+ \qquad t_6-e\text{ is a commuting Virasoro vector of charge }6-c_e.
+\]
+Thus the exclusions also rule out charges five and four. In
+particular an ordinary conformal charge-four coset inside this
+$C_6$ cannot leave charge two. The argument does not require
+$e$ to be PCT real. The polynomial system and its finite
+certificate interpretation are described in
+\artifact{hi_cft_20260923_next_c2_slice_theorem.md}.
+
+These facts distinguish an actual charge-six lattice commutant
+from an asserted charge-two physical theory. Finite topological
+gauging itself preserves the stress and central charge. Deleting
+a commuting conformal sector is additional structure and does not
+automatically transport the desired defect action.
+
+\section{Categorical exclusions: diagnostic calculations and their scope}
+\label{expstructure:categorical-diagnostics}
+
+The main branching argument eliminates the rank-four and higher
+multiplicity rank-six possibilities before invoking unitary
+classification. Several early notes only compared with familiar
+affine models; the later notes give universal replacements.
+This section records the small diagnostic calculations that are
+particularly useful when checking that upgrade.
+
+\subsection{The rank is an endomorphism-algebra calculation}
+
+From the actual extension restriction
+$H=\one\oplus X\oplus Y\oplus Y^*$, the alternatives are
+\[
+\begin{array}{c|c|c}
+\text{case}&\End_U(H)&\text{boundary rank}\\\hline
+Y\not\cong Y^*&\CC^4&4\\
+Y\cong Y^*&\CC\oplus\CC\oplus M_2(\CC)&6
+\end{array}
+\]
+The dimension is the sum of squared multiplicities, not the number
+of distinct summands. In the second case the composition algebra
+is noncommutative, an essential input to the rank-six fusion-ring
+analysis. Center induction identifies this algebra with the
+complexified fusion algebra of the all-module boundary category.
+The local modules are a different category: for a holomorphic
+extension they form $\Vec$ and cannot give this rank calculation.
+
+The actual order-three lattice grading automorphisms inject into
+the invertible objects of the boundary category. Untwistedness
+requires additional information. The metric group of $B$ has
+quadratic form $(2a^2+b^2)/3$; its two transverse isotropic lines
+are $(a,a)$ and $(a,-a)$. Induction from the second line to modules
+of the first-line extension is fully faithful by adjunction:
+only the trivial intersection can contribute a morphism.
+The target dimension is $9/3=3$, so the three images exhaust it.
+This gives the tensor equivalence with untwisted
+$\Vec_{\ZZ/3}$. The existence of three invertible objects alone
+would not determine their associator.
+
+\subsection{Why the balanced multiplicity-six near-group case is impossible}
+
+For a rank-four $\ZZ/3+6$ near-group category, put
+$d=3+2\sqrt3$ and $r=1+d$. In the balanced induction pattern,
+the known central dimensions are
+\[
+ 1,\quad 1+2d,\quad 2r\ (3\text{ times}),
+ \quad r\ (4\text{ times}),\quad n_jd,
+ \qquad \sum_jn_j^2=22.
+\]
+The normalized modular vacuum row has entries
+\[
+ b,\ a,\ \underbrace{1/3,1/3,1/3}_{3},
+ \underbrace{1/6,1/6,1/6,1/6}_{4},
+ \frac{n_j\sqrt3}{12},
+ \qquad
+ a=\frac{2+\sqrt3}{12},\quad b=\frac{2-\sqrt3}{12}.
+\]
+Signed Galois symmetry under $\sqrt3\mapsto-\sqrt3$ forces the
+row of the unique dimension-$1+2d$ object to be
+\[
+ a,\ b,\ 1/3,1/3,1/3,\ 1/6,1/6,1/6,1/6,
+ -n_j\sqrt3/12.
+\]
+That object is self-dual because its dimension is unique. Its
+self-fusion coefficient is therefore
+\[
+ N_{XX}^{X}
+ =\frac{a^3}{b}+\frac{b^3}{a}+\frac{3}{9}
+        +\frac4{36}-\frac{22}{48}
+ =\frac{97}{72}+\frac{32}{72}-\frac{33}{72}
+ =\frac43.
+\]
+For a hand check, $a+b=1/3$, $ab=1/144$, so
+$a^2+b^2=7/72$ and
+$(a^3/b)+(b^3/a)=97/72$. Nonintegrality excludes the balanced
+case without specifying any unknown twist or unprinted modular
+row. The source is
+\artifact{hi_cft_20260923_next_structure_m6_balanced_exclusion.md}.
+
+For the remaining unbalanced case, the later universal projection
+uses only a forced three-dimensional character subspace. With
+$d=3+2\sqrt3$, its remaining twists $z_j$ satisfy
+\[
+ \sum_jn_j^2=6,\qquad
+ \sum_jn_j^2z_j=-2-4i,\qquad
+ \sum_jn_j^2z_j^2=-2+4i(1-\epsilon),
+ \quad\epsilon\in\{1,-1\}.
+\]
+The second-moment modulus excludes $\epsilon=-1$. Next
+\[
+ \sum_jn_j^2(1+\Re z_j)(1+\Im z_j)
+ =6-2-4+\tfrac12\Im(-2)=0.
+\]
+Each summand is nonnegative, so every twist is $-1$ or $-i$;
+the total squared multiplicities are two and four respectively.
+This argument allows a dimension-$2d$ object at the latter twist;
+it does not assume exhaustion by a familiar rank-nine model.
+In the categorical twist convention, before the common character
+phase $e^{-2\pi i/3}$ is included, the stable weighted projection obeys
+\[
+ S_v=-\frac12\begin{pmatrix}1&2&1\\1&0&-1\\1&-2&1\end{pmatrix},
+ \qquad T_v=\operatorname{diag}(1,-i,-1).
+\]
+The harmonic-theta coefficient calculation in the two orientations
+then gives either $\dim U_1=8+A$, $A\in\ZZ_{\geq0}$, or
+$\dim U_1=5+12P$, $P\in\ZZ_{\geq0}$. Neither can be six.
+The universal scope is supplied by
+\artifact{hi_cft_20260923_next_structure_m6_universal_projection.md};
+the earlier
+\artifact{hi_cft_20260923_next_structure_m6_character_obstruction.md}
+by itself only excluded the two explicit ribbon models compared there.
+
+\subsection{The exceptional rank-six multiplicity-two check}
+
+For the noncommutative rank-six family,
+$d^2=1+3md$ and the residual central objects have dimensions
+$3n_jd$. The first two indicator moments are
+\[
+\begin{split}
+ \sum_jn_j^2&=4m^2+2,\\
+ \sum_jn_j^2\theta_j
+   &=-\frac{m^2+m\sqrt{9m^2+4}}2,\\
+ \sum_jn_j^2\theta_j^2
+   &=\frac{-m^2+(2\epsilon-m)\sqrt{9m^2+4}}2.
+\end{split}
+\]
+The root-count estimate eliminates $m>1$ except possibly the
+squareclass ten. In that squareclass, a multiset summing to
+$-a-b\sqrt{10}$ has at least $a+8b$ roots. Its equality statement
+requires that the sum of squared roots belongs to $\QQ(\sqrt{10})$;
+this is an actual hypothesis, provided here by the displayed
+second indicator moment. Without it, Galois averaging would not
+recover the original squared sum.
+
+The last candidate is $m=2$, $\sqrt{9m^2+4}=2\sqrt{10}$.
+It has $18$ roots, $a=2$, $b=2$, and attains the lower bound
+$2+8\cdot2=18$. Equality forces squared sum $2$. The indicator
+formula instead gives $-2$ when $\epsilon=1$ and
+$-2-4\sqrt{10}$ when $\epsilon=-1$. This explicit contradiction
+removes the exceptional case.
+
+The corrected proof and its prior audit are
+\artifact{hi_cft_20260923_next_structure_rank6_indicators.md}.
+The same note records a useful failed diagnostic: the HLPW
+primary-$n$ positivity tests are nonnegative for the entire family,
+so those tests cannot prove $m=1$. A criterion that every candidate
+passes is not evidence that it selects the desired multiplicity.
+
+At $m=1$, the remaining six-root sum is
+$(-1-\sqrt{13})/2$. The minimal quadratic Gauss orbit forces
+six distinct thirteenth-root twists with exponents
+$\{2,5,6,7,8,11\}/13$, each with $n_j=1$; the squared sum is
+$(-1+\sqrt{13})/2$ and forces second indicator $+1$.
+This gives the twelve central dimensions and twists. Determining
+these modular data and proving a braided category equivalence
+remain separate steps. The main manuscript's unitary route uses
+the separately stated unitary classification; the older optional
+pivotal route invokes a broader external exhaustive census whose
+equation-solving files were not independently replayed here.
+
+\section{Analytic verification map: domains, sectors and extensions}
+\label{expstructure:analytic-map}
+
+The analytic part of the current manuscript proves three bridges:
+A2 is the independent net sector count; A3 reconstructs and exhausts
+ordinary unitary modules; A1 compares the particular bounded annulus
+insertions. Their roles differ. The following table records both
+the conclusion and the premise that would be lost by a shortcut.
+The references point to the proofs already present in this draft.
+
+\begin{longtable}{@{}p{0.19\linewidth}p{0.36\linewidth}p{0.37\linewidth}@{}}
+\toprule
+Step&Actual conclusion&Required distinction\\
+\midrule\endhead
+Vacuum form&The PCT-stable $U$ has a positive invariant form.&This
+is a form on the vacuum VOA, not yet on every simple module.\\
+Finite index&The bounded-insertion subnet is completely rational;
+its abstract vacuum isomorphism transfers that property to
+$\mathcal N_U$.&An isomorphism-invariant property does not identify
+individual concrete insertion operators.\\
+A2&The actual $H$ restriction has multiplicities $1,1,2$; the
+boundary ring gives twelve net sectors.&The count is derived for
+the net category, rather than copied from the VOA modular matrix.\\
+A3&Each irreducible net sector reconstructs an irreducible ordinary
+unitary $U$-module; the functor is fully faithful and linear $*$.&No
+tensorator or braiding compatibility is claimed for this functor.\\
+Exhaustion&Twelve distinct net images exhaust twelve algebraic
+simple modules.&Equality of counts gives linear surjectivity,
+not positivity of canonical fusion pairings.\\
+A1&The two concrete nets coincide and each localized annulus
+insertion transports to its bounded module form.&Central path lifts,
+range domains and full insertion interiors are part of the claim.\\
+Fusion positivity&Tener's theorem gives positivity of canonical
+VOA fusion forms after strong unitarity and A1.&Unitarizability of
+the fusion product is supplied before applying that theorem.\\
+Classification&The now unitary all-module category has the
+specified Haagerup classes and the center is $Z(\HH_3)$.&Matching
+modular data alone is not this tensor classification.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Closed-field reduction: the domain fact needed before irreducibility}
+
+For a closable smeared field $T_0$ on a common finite-energy core
+$D$ and an orthogonal projection $P$, the two statements
+$PD\subset D$ and $T_0P=PT_0$ on $D$ imply that $P$ reduces
+the closure and its adjoint. A graph-norm approximation establishes
+$TP=PT$ on the closed domain; applying the same argument to
+$1-P$ decomposes the closed operator as a direct sum. Its polar
+partial isometry and the spectral projections of its absolute
+value are then block diagonal. This is the reason the formal
+module projection becomes an intertwiner of the generated local
+von Neumann algebras. Formal mode commutation without domain
+invariance would not give that conclusion.
+
+In reverse reconstruction, choose one ordinary simple algebraic
+summand $S$ of the reconstructed weak module $M$ and let $P$
+project onto its Hilbert closure. The needed domain inclusion is
+\[
+ P1_{[0,R]}(L_0)\mathcal K
+   \subset\bigoplus_{h+n\le R}S_{h+n}\subset S.
+\]
+It uses finite-dimensional energy spaces of $S$, not a prior
+finite-multiplicity assertion for the entire sector Hilbert space.
+The invariant form then gives mode commutation. A smeared field
+need not map $M$ into itself; its Hilbert-space value and boundedness
+of $P$ suffice to pass to the closed field. Irreducibility forces
+$P=1$ and hence $M=S$. These points are the substantive content
+of Proposition~\ref{clm:analytic-reconstruction}.
+
+Full faithfulness also needs boundedness of an algebraic module
+isomorphism. Compare its two positive invariant forms grade by
+grade. The resulting positive grade-preserving comparison operator
+is a $U$-endomorphism. An eigenvector in the finite lowest space
+generates an eigenspace submodule, so simplicity makes the operator
+one scalar on the whole module. The isomorphism therefore has a
+bounded unitary rescaling. This is stronger than simply observing
+that algebraic Schur's lemma gives one-dimensional morphism spaces.
+
+\subsection{A fractional-energy test for the common-lift argument}
+
+Vacuum normalization cannot distinguish every universal rotation
+lift: $Z=e^{2\pi iL_0}$ is the identity on the integer-graded
+vacuum but acts by $e^{2\pi ih}$ on a simple module of lowest
+weight $h$. For example, on a module with $h=2/13$ it acts by
+$e^{4\pi i/13}$. Identifying two annulus lifts only from their
+vacuum scalar would miss this phase.
+
+The pairwise construction instead first chooses the lifts of the
+two localized annuli in the canonical localized extension, whose
+remaining ambiguity is scalar. It normalizes their nonzero vacuum
+operators there, and then undoes the same universal lift
+$\widetilde\delta$ of a common localizer. On a module, changing
+that common lift by $Z^m$ changes the pair as
+\[
+ A_M\longmapsto Z^{-m}A_M,
+ \qquad B_M\longmapsto B_MZ^m.
+\]
+Every $U$ mode changes conformal energy by an integer, so it
+commutes with $Z$. Hence
+\[
+ B_MZ^mY_M(v,z)Z^{-m}A_M=B_MY_M(v,z)A_M.
+\]
+This is a pairwise cancellation at fractional as well as integer
+lowest weights. It neither assumes a global choice of lifts for
+all individual annuli nor discards a deck transformation by
+vacuum normalization.
+
+For the semigroup part of an incoming annulus, the framing
+$h(\theta,s)=\varphi_{t-s}(e^{i\theta})$ has logarithmic velocity
+$i\rho(e^{i\theta})\partial_\theta$. With the stated stress
+convention its integrated action is exactly $e^{-tL(\rho)}$.
+Thin annuli supply the boundary reparametrizations, giving the
+specific operator
+$U(\psi)e^{-tL(\rho)}U(\gamma)^*$, including its scalar.
+This concrete identification is what an abstract vacuum-net
+isomorphism alone does not provide.
+
+\subsection{Range, density and holomorphic continuation are three separate checks}
+
+For a geometrically complementary annulus $C_M$, round
+factorization gives
+\[
+ A_MC_M=\lambda r^{L_0},\qquad0<r<1,\quad\lambda\ne0.
+\]
+Thus every finite-energy vector lies in $\operatorname{Ran}A_M$:
+\[
+ v=A_MC_M(\lambda^{-1}r^{-L_0}v).
+\]
+Injectivity of $A_M$ gives the equality of test domains
+\[
+ A_M^{-1}M^{\rm fin}=C_MM^{\rm fin}.
+\]
+Boundedness and dense range of $C_M$ then give density of this
+domain. The outgoing adjoint has the same properties. These are
+range and density statements; neither follows merely from saying
+that an annulus operator is bounded.
+
+On those two test domains, both the input $A_M\xi$ and output
+$B_M^*\eta$ have finite energy support. For a weight-$k$ state
+$v$, only modes with $q=p+k-n-1$ contribute between input energy
+$p$ and output energy $q$. Hence
+\[
+ \langle Y_M(v,z)A_M\xi,B_M^*\eta\rangle
+\]
+is a finite Laurent polynomial in $z$. Sewing first identifies
+it with the bounded geometric insertion on the incoming interior;
+adjoints do so on the outgoing interior. The holomorphic identity
+theorem extends it to the interior of the union of the two closed
+regions. Every component meets one of the original open regions,
+since the remaining set lies in their boundaries and has no open
+component. Uniqueness on dense test domains identifies the bounded
+operator, without treating the unsmeared formal field as everywhere
+defined.
+
+The prescribed insertion interior is the union over all compatible
+geometric representatives of the same generalized operator pair.
+The proof repeats over that union and uses uniqueness on overlaps.
+Pairs with empty insertion interior still contribute the generator
+$B_UA_U$, handled directly by local annulus transport. Finally,
+locality and Haag duality on the same vacuum Hilbert space give
+\[
+ \mathcal A_U^{\rm bl}(I)\subset\mathcal N_U(I)
+ \subset\mathcal A_U^{\rm bl}(I')'
+ =\mathcal A_U^{\rm bl}(I).
+\]
+That is concrete equality of the two net constructions, the
+conclusion needed for the module insertion representation.
+
+\subsection{Primary theorem chain retained by the current A1 proof}
+
+The following is the exact source map recorded by the final
+27 September analytic revision. It is useful for reviewing the
+pairwise argument without reconstructing its citation chain.
+
+\begin{longtable}{@{}p{0.23\linewidth}p{0.68\linewidth}@{}}
+\toprule
+Source&Specific uses\\
+\midrule\endhead
+Tener, fields \cite{TenFields}&Definition 3.16 for incoming
+semigroup data; Lemma 3.19 and Corollaries 3.20--3.22 for a common
+localizer; Definition 4.2 for module range and density; Proposition
+4.13 for vacuum covariance; proof of Theorem 4.28 for the union of
+representative interiors; Section 5.1, formula (5.2), for paired
+module annulus actions.\\
+Henriques--Tener, annuli \cite{HTAnn}&Remark 4.2, formula (5.2)
+and Theorem 5.5 for the integrated framing operator; Section 7
+and Theorem 7.4 for the localized extension and local sector
+transport.\\
+Henriques--Tener, nets \cite{HTNet}&Lemmas 4.15 and 7.9 for
+injectivity/dense range and round factorization; Proposition 4.17
+for transport; Lemma 6.8 for local point insertions; formula (76)
+for sewing; Corollary 6.15 for holomorphicity; Proposition 6.19 and
+formula (81) for adjoints; Theorems 8.9 and 9.5(i) for vacuum
+reconstruction and module insertions.\\
+Tener, fusion \cite{TenFusion}&Definition 2.18 is the required
+module representation property; Theorem 4.4 and Corollary 4.6
+supply canonical fusion positivity after the separately proved
+strong unitarity.\\
+\bottomrule
+\end{longtable}
+
+The frozen earlier part of
+\artifact{hi_cft_c8_revision_20260927_analytic.md} records an
+unsuccessful search for a ready-made theorem proving A1. Its final
+section explicitly supersedes that assessment with the pairwise
+construction. Both records remain useful: the failed shortcut
+explains why complete unitarity is not deduced from a linear
+category equivalence, while the final proof supplies the additional
+operator comparison. The current manuscript treats A1 as proved
+under its ordinary construction inputs, not as an additional
+unresolved assumption. External expert verification of the written
+argument is still distinct from those internal review records.
+
+\subsection{The three extension objects that must remain distinct}
+
+\begin{longtable}{@{}p{0.2\linewidth}p{0.34\linewidth}p{0.37\linewidth}@{}}
+\toprule
+Object&Established construction&Identification boundary\\
+\midrule\endhead
+Original $H=V_{E_8}$&The given lattice inclusion over $U$, with
+restriction $\one\oplus X\oplus Y^{\oplus2}$.&Its all-module
+category is $\HH_2$ or $\HH_3$; the proof does not choose which.\\
+Chosen net $\mathcal E_3$&Transport the canonical $\HH_3$ Q-system
+to $\Rep(\mathcal N_U)$ and apply local net reconstruction.&It is
+holomorphic of charge eight; no classification of arbitrary
+holomorphic charge-eight nets as the $E_8$ lattice net is asserted.\\
+Chosen VOA $H'$&After complete unitarity, transport the canonical
+$\HH_3$ algebra to $\Rep(U)$ and use unitary VOA extension theory.&
+Holomorphic charge-eight VOA classification identifies $H'$ with
+$V_{E_8}$ as a VOA, but does not identify its embedding over $U$
+with the original lattice embedding.\\
+\bottomrule
+\end{longtable}
+
+For the chosen $\HH_3$ extension, all right algebra modules form
+$\HH_3$, local modules form $\Vec$, and algebra bimodules form
+$\HH_3\boxtimes\HH_3^{\rm op}$ with $36$ simples. Only the local
+subcategory inherits the ambient braiding by descent. The
+unitarization argument for all modules uses the braided left
+action and the relative tensor product; it does not impose the
+extra local-module monodromy condition. The diagonal full net
+theory, by contrast, has partition function
+$\sum_i|\chi_i|^2$ and uses the twelve-sector linear character
+comparison. These constructions have different roles even though
+they start from the same smaller chiral algebra.
+
+\section{Structural provenance, replay results and historical status changes}
+\label{expstructure:provenance}
+
+A saved exact identity, an exact replay of its producer, and an
+all-weight implication are different pieces of evidence. This
+section records their relationship. No research producer was run
+for the present expansion: the coefficients and results here were
+read from the existing artifacts, with lightweight text and JSON
+transcription only.
+
+\subsection{The bounded structural replays of 27 September}
+
+\begin{longtable}{@{}p{0.22\linewidth}p{0.47\linewidth}p{0.2\linewidth}@{}}
+\toprule
+Replay&Exact assertions recovered&Recorded resources\\
+\midrule\endhead
+Potts primary&Stress charge $4/5$; actual weight-three primary;
+membership after a rank-$40$ descendant space and one additional
+zero-mode pair, reaching rank $41$; $w_{P,2}$ eigenvalues $0,2,-2$
+on $H_R,E_+,E_-$.&$8.234$ s; producer peak $97820$ KiB.\\
+PF13 membership&The saved primary lies in the generated rank-$58$
+Cartan-zero space after $154$ zero-weight pairs; PCT-stable primary
+line; positive-stress coefficients $1,3403/4563,25/6,25/26$.&
+$180.622$ s; adapter peak $120436$ KiB.\\
+Order-thirteen core&$\dim S_2=120$; known tensor-core grade two
+$15$; zero-residual-energy dimension $25$; ten extras and all six
+one-dimensional witness charge spaces.&$6.455$ s; producer peak
+$40216$ KiB.\\
+Four mixed tops&All four sign choices complete; seed index $68$,
+one-dimensional seed Cartan eigenspace, exact weighted adjoints,
+cyclic dimension $81$, irreducible top.&$3.031$ s; producer peak
+$26496$ KiB.\\
+Top-bound arithmetic&All fourteen minima, dimensions, stress traces
+and charge characters; both $\mathfrak{sl}_2$ inequalities and the
+nonnegative dual identity.&Tiny exact Fraction calculation;
+no field action is inferred.\\
+\bottomrule
+\end{longtable}
+
+The files are, respectively,
+\artifact{c8_revision_20260927/potts_replay.json},
+\artifact{c8_revision_20260927/pf13_membership_replay.json},
+\artifact{c8_revision_20260927/core_extension_replay.json},
+\artifact{c8_revision_20260927/top81_replay.json}, and
+\artifact{c8_revision_20260927/top_bound_replay.json}.
+The first two corresponding logs end with the adapter status
+\texttt{unchanged\_producer\_exact\_replay\_passed}. The adapter
+compares complete mathematical outputs with the frozen certificate,
+ignoring only run time and memory accounting. It authenticates
+source and original certificate before and after, and redirects
+exactly one requested output path and one write. This status is
+stronger than an intermediate producer success message.
+
+The core and top producers can record a bounded partial run, so
+process exit zero alone is insufficient. The saved mixed-top record
+has \texttt{status=complete}, four sectors, and in every sector
+\texttt{cyclic\_dimension=81},
+\texttt{seed\_eigenspace\_dimension=1},
+\texttt{exact\_weighted\_adjoint\_checks=true}, and
+\texttt{irreducible=true}. Even these full finite checks do not
+supply the $h<2$ all-weight branching step by themselves.
+
+The archived resource review
+\artifact{c8_revision_20260927/structural_replay_review.md}
+estimated below $0.5$ GiB for core and mixed-top jobs and below
+$0.75$ GiB for the two membership jobs, including sparse pivots,
+Fraction temporaries, copies and bounded mode caches. It used
+serial root-controlled launches with a $2$ GiB address cap,
+$8$ GiB process-group RSS watchdog, two CPUs/threads and the
+permanent $32$ GiB host reserve. These measured historical jobs
+do not authorize a larger future replay or renewal of an expired
+resource exception.
+
+\subsection{PF13 checkpoints and the boundary of the replay claim}
+
+The full PF13 identification combines more than the membership
+record. Its direct OPE stage used a continuation of a partially
+completed run: fifteen completed exact assertions were retained
+in an authenticated log, and the remaining direct coefficient was
+computed by a separate continuation. The final simple pole is
+obtained by a checked algebraic Jacobi/skew-symmetry derivation,
+not by treating an interrupted weight-seven expansion as zero.
+The weight-six decoupling identity had already completed before
+that direct high-weight cross-check was stopped.
+
+The reconstruction therefore depends on the recursive field
+checkpoints
+\artifact{hi_cft_20260923_proof_pf13_W5.json} and
+\artifact{hi_cft_20260923_proof_pf13_W6.json}, as well as the
+exact-field, DLY-conversion and weight-seven producers. A source
+provenance audit found these five dependencies missing from an
+earlier combined graph. Their historical hashes were retained in
+\artifact{hi_cft_20260923_proof_artifact_audit.json}; the revised
+\artifact{c8_revision_20260927/authenticate_inputs.py} explicitly
+binds them. The $W^6$ file is about $8.8$ MiB and is stream-hashed
+rather than parsed by the revision's $8$ MiB JSON cap.
+
+Hash authentication proves identity of bytes with the recorded
+checkpoint, not correctness of the modes that produced it. The
+membership replays above do not rerun the expensive $W^5,W^6$
+construction. The readable companion prints the complete nonlinear
+rows and the seven-term decoupling relation so their algebraic
+role can be checked separately. The finite-reconstruction theorem
+then recovers the remaining generator brackets by an acyclic
+sequence of Wick and iterate reductions. It is this combination,
+not agreement of $(c,\lambda)$ alone, that identifies the PF13
+factor.
+
+\subsection{Reading old scope flags without reinstating obsolete gaps}
+
+\begin{longtable}{@{}p{0.32\linewidth}p{0.29\linewidth}p{0.29\linewidth}@{}}
+\toprule
+Archived record&Original finite scope&Current use in this draft\\
+\midrule\endhead
+\artifact{hi_cft_20260923_proof_potts.json}&Potts stress exact;
+weight-three membership numerical.&The separate exact primary and
+membership record supplies that missing finite input.\\
+\artifact{hi_cft_20260923_proof_pf13_membership.json}&Membership and
+positive stress exact; PF identification explicitly false/conditional
+in that one file.&The complete OPE, decoupling and reconstruction
+chain supplies the identification separately. The old flag is
+not edited.\\
+\artifact{hi_cft_20260923_proof_core_coset.json}&Numerical dimensions
+in selected $S_2,S_3$ only.&Retained as exploratory observations;
+not promoted to a full coset character.\\
+\artifact{hi_cft_20260923_next_structure_order13_core.md}&Actual
+core established; no properness or $\Rep(U)$ identification.&Core
+input to the top bound; properness uses the independent finite
+strong-generation argument.\\
+\artifact{hi_cft_20260923_next_structure_residual_low_character.md}&
+Residual grades two and three conditional on properness and
+$U_3=S_3$.&The present manuscript supplies those separate premises;
+no claim about residual grades four and higher is added.\\
+\artifact{hi_cft_20260923_next_structure_m6_character_obstruction.md}&
+Two explicit ribbon models excluded; no general classification
+claimed.&The later universal weighted projection supplies the
+missing generality.\\
+\artifact{hi_cft_20260923_next_structure_final_dependency_audit.md}&
+Conditional identification coherent; properness and analytic bridges
+not yet supplied at that date.&Useful audit of the algebraic chain;
+current finite closure and analytic proofs are additional work.\\
+\artifact{hi_cft_c8_revision_20260927_analytic.md}&Early entries
+leave A1 open; final entry explicitly supersedes them.&Current
+pairwise A1 proof is retained with its domain and lift obligations;
+this appendix does not revert it to an assumption.\\
+\bottomrule
+\end{longtable}
+
+A historical record can have a correct limited statement even
+when later work proves more. Conversely, a later global argument
+does not turn a numerical residual or a source hash into an
+independent exact field verification. The source annotations above
+preserve both directions of this distinction.
+
+\subsection{Additional primary dependencies of the supplementary coset route}
+
+The following source locations are retained from the archived notes;
+the expansion does not claim a fresh external source audit.
+They identify which theorem applications beyond the main proof a
+reviewer should inspect when using the supplementary results.
+
+\begin{longtable}{@{}p{0.27\linewidth}p{0.65\linewidth}@{}}
+\toprule
+Application&Primary source location recorded in the archive\\
+\midrule\endhead
+Lattice--parafermion reconstruction&Arakawa--Lam--Yamada
+\cite{ALY}, Sections 2.4 and 6, equations (2.13), (2.16), (2.19)
+and simple-current extension Theorem 2.4.\\
+No proper extension of $R$&McRae,
+\href{https://arxiv.org/abs/1810.00747}{compact-orbifold tensor theory},
+Corollary 4.8 (and Theorem 4.14 for the optional regularity of a
+hypothetical extension).\\
+Index-twelve $F_4$ embedding&Penkov--Zuckerman,
+\href{https://math.constructor.university/penkov/papers/gen_hc_r_final.pdf}{generalized Harish-Chandra modules},
+Section 3 and Table B for the index list and uniqueness by index.\\
+Finite centralizer $S_4$&Westaway,
+\href{https://arxiv.org/abs/2312.01838}{Section 4.9}, and Xue,
+\href{https://jolt.centre-mersenne.org/item/10.5802/jolt.950.pdf}{Section 5.1 and Table 13},
+for the $F_4(a_3)$ diagram, nilpotent centralizer and component group.\\
+Regular diagonal frame&Lin,
+\href{https://arxiv.org/abs/2107.09400}{rationality of diagonal coset VOAs},
+Theorem 5.7 at $k=8$, and Theorem 3.10 for the stated finite
+extension $C_2$ step.\\
+Ambient residual regularity&McRae,
+\href{https://arxiv.org/abs/2108.01898}{Theorem 6.11}, after the
+actual double-commutant and $C_2$ hypotheses have been checked.\\
+Mirror branching&McRae,
+\href{https://arxiv.org/abs/2107.06577}{mirror equivalence}, Theorem 1.1
+and the twist discussion after Theorem 4.6.\\
+Charge-six regularity&Creutzig--Kanade--Linshaw--Ridout,
+\href{https://arxiv.org/abs/1611.00305}{Section 4.3}, including its
+standing lattice hypothesis, Lemma 4.6, Theorem 4.12 and
+Corollary 4.13.\\
+Category splitting and actual extension transport&M\"uger modular
+centralizer decomposition, and the Lagrangian/local-module and
+extension-transitivity results used in \cite{DMNO,Mueger,HKL}.
+The archived notes specify the diagonal algebra and nonzero dimension
+rather than appealing only to a matching global dimension.\\
+\bottomrule
+\end{longtable}

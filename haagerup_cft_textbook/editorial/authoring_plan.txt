@@ -1,0 +1,51 @@
+Haagerup CFT textbook authoring plan
+
+Requested work period: 2026-10-05 16:46:09 through 22:46:09 UTC.
+Audience: starting mathematics and physics PhD students.
+Deliverables: coherent standalone LaTeX textbook and compiled PDF, worked
+examples, substantial exercises with selected solutions, glossary and short
+source guide. Source data stay separate from the reader-facing exposition.
+
+The repository contains concurrent research and extensive uncommitted work.
+Only haagerup_cft_textbook/ is owned by this writing task. Read current status
+again near final integration; do not modify scientific source/results.
+
+Resource policy: /home/tzuchen/.codex/AGENTS.md is canonical. Root alone
+coordinates any numerical admission through ~/.local/bin/research-safe-run.
+Subagents may read, do algebra, and write assigned text. No fresh large
+research computation is needed to write this book. Typesetting is editorial,
+will be tightly bounded, and is not a replacement numerical launcher.
+
+Scientific boundaries:
+1. The c=8 construction in hi_cft_c8_proof.tex is a research construction
+   with explicit finite inputs and subsequent structural/analytic arguments.
+   This textbook teaches and audits those implications, not an independent
+   verification of every finite lattice product or a claim of peer review.
+2. The physical regular H3 chain H=-sum P_rho has no identified continuum
+   theory in the latest completed handoff. Approximate c near 2 is evidence.
+3. Irrational c*=2.025004294... chiral stress axes are separate candidates;
+   a chiral commutant is not a sewn full local CFT.
+4. Algebraic HI categories, positive dimensions, unitary associators, vacuum
+   VOA unitarity, unitarizable modules, and complete unitarity are distinct.
+
+Editorial conventions:
+Use book chapters with meaningful prerequisites and short opening learning
+goals written as prose. Teach through derived examples. Explain why each
+definition is needed before introducing the next one. End chapters with
+exercises; selected solutions are kept in separate files for a final appendix.
+Use theorem/proposition/lemma/corollary/definition/example/remark/exercise
+environments and proof. Label finite repository inputs as construction input,
+and label conditional deductions locally. References are sparse and collected
+in a short reading guide; main text should be understandable without scripts.
+Use Y(a,z)=sum a_(n) z^(-n-1), L_n=omega_(n+1), h holomorphic weight,
+Delta=h+hbar, spin=h-hbar, d=(3+sqrt(13))/2, s=1+d^2=2+3d.
+Use mathcal D for total quantum dimension and distinguish global dimension.
+Use alpha for an invertible Haagerup object; central label a is different.
+
+Planned waves:
+1. Source audit and pedagogical architecture.
+2. Original chapter drafts with worked calculations and selected solutions.
+3. Cross-review of mathematical claims, conventions, dependency gaps.
+4. Expand difficult transitions and examples; prune repeated caveats/data.
+5. Compile, inspect rendered pages, check cross references and equations.
+6. Final integration with current research status and reader-oriented guide.

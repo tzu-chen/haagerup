@@ -1,0 +1,16 @@
+{
+  "central_charge": "8/5",
+  "coset_grade3_space": 15,
+  "spectrum": {
+    "0": 2,
+    "2/15": 3,
+    "2/5": 2,
+    "4/5": 3,
+    "7/5": 2,
+    "2": 1,
+    "3": 2
+  },
+  "weight_three_multiplicity": 2,
+  "primary_weight_three_multiplicity": 1,
+  "space_invariance_residual": 2.2315391891903597e-10
+}

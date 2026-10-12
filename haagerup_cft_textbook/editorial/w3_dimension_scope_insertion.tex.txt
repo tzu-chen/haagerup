@@ -1,0 +1,236 @@
+% Draft only: optional compact companion to the rational-orbifold obstruction.
+% Expanded all-height argument; no numerical certificate was replayed.
+% Primary premises checked directly: ACL1801.03822 Thms12.1/12.3;
+% FFRS math/0309465 Def7.2,Thm7.6,Lemma7.8; DNO1109.5558 Cor3.3,
+% Thm3.6,Remark3.9; BG1004.1205 Thm3.3; EMG2408.02794 Remark1.2.
+% Local provenance: hi_cft_20260923_c2two_w3_candidates.md, including its
+% distinction between full-center algebra factorization and matrix factorization.
+
+\subsection{Why a nearby ordinary \texorpdfstring{$W_3$}{W3} model is not enough}
+
+The unitary minimal algebras $W_3(p,p+1)$, $p\geq4$, have
+\[
+ c_p=2-\frac{24}{p(p+1)}.
+\]
+They approach two from below. Approximate central-charge agreement near
+two therefore motivates testing this family, while an established charge
+strictly above two would already distinguish it. Here we ask whether they
+can support the required defects while those defects preserve this
+rational $W_3$ algebra. Throughout this subsection, a full theory means
+the unitary rational sewing construction from a separable Frobenius
+algebra $A$ that is simple as an $A$--$A$ bimodule.
+
+Here is a first arithmetic filter that can be understood without the
+classification of full theories. Put
+\[
+ K_p=\Q(\zeta_{2p},\zeta_{2(p+1)}),\qquad
+ \zeta_n=e^{2\pi i/n}.
+\]
+The positive quantum dimensions of the chiral simple objects belong to
+$K_p$. In the rational sewing description by a simple separable Frobenius
+algebra $A$, a defect $X$ has normalized dimension
+\[
+ \FPdim_{{}_A\mathcal C_A}X
+   =\frac{\FPdim_{\mathcal C}X}{\FPdim_{\mathcal C}A}
+   \in K_p,
+ \qquad \mathcal C=\Rep\bigl(W_3(p,p+1)\bigr).
+\]
+The numerator and denominator use the underlying objects in
+$\mathcal C$. This also applies to a reducible defect, since sums stay
+in the same field.
+
+Only primes dividing $2p(p+1)$ can ramify in this cyclotomic field.
+On the other hand, $\Q(\sqrt{13})$ has discriminant thirteen, so
+thirteen ramifies in it. The fact used here is that a subfield cannot
+introduce a ramified prime absent from its containing field. Since
+$\sqrt{13}=2d-3$, a defect of Haagerup dimension
+$d=(3+\sqrt{13})/2$ would therefore require
+\[
+ 13\mid p(p+1).
+\]
+The first surviving height is $p=12$, with $c_p=24/13$.
+This is a necessary test, not a proof that this height works; it
+still leaves infinitely many heights, with both adjacent heights
+at least twelve.
+
+\emph{An elementary gap controls ordinary affine dimensions.}
+For affine $SU(3)$, let the \emph{height} $n$ mean level $n-3$.
+Shifted labels are positive integers $a,b$ with $a+b<n$, and
+\[
+ D_n(a,b)=\frac{\sin(\pi a/n)\sin(\pi b/n)\sin(\pi(a+b)/n)}
+ {\sin^2(\pi/n)\sin(2\pi/n)}.
+\]
+The $W_3$ dimensions are products from its two adjacent heights;
+simultaneous simple-current field identification leaves them unchanged.
+The vacuum label is $(1,1)$. The expression is symmetric in the
+positive triple $(a,b,n-a-b)$, so sort it with
+$a\leq b\leq n-a-b$. The invertible orbit has $(a,b)=(1,1)$ and
+dimension one. The fundamental and its conjugate orbits have
+\[
+ f_n=D_n(1,2)=1+2\cos(2\pi/n),\qquad
+ 1+\sqrt3\leq f_n<3\quad(n\geq12).
+\]
+Every other sorted label has $a=1,b\geq3$, or $a,b\geq2$.
+Reducing to $(1,3)$ or $(2,2)$ can only lower the dimension:
+the derivative signs of the numerator with respect to $a,b$ are those
+of $\sin((2a+b)\pi/n)$ and $\sin((a+2b)\pi/n)$, nonnegative in
+the sorted region. Moreover, with $[m]=\sin(m\pi/n)/\sin(\pi/n)$,
+\[
+ \frac{D_n(2,2)}{D_n(1,3)}=\frac{[2]^2}{[3]}>1,\qquad
+ D_n(1,3)=2\cos(2\pi/n)+4\cos^2(2\pi/n)\geq3+\sqrt3.
+\]
+Since $3<d<3+\sqrt3$, no affine simple at these heights has dimension
+$d$. Two noninvertible factors have product at least
+$(1+\sqrt3)^2>d$. This handles the diagonal Cardy theory, but not
+yet every sewing algebra.
+
+\begin{constructioninput}[Categorical classification inputs for this test]
+The unitary diagonal affine coset has its standard full branching rule
+and extension/local-module correspondence. The complete $W_3$ modular
+invariant classification has exceptional affine heights $8,12,24$.
+At heights at least twelve away from these exceptions, the
+indecomposable module categories of the
+ordinary affine $SU(3)$ fusion category are the simple-current cases
+and their products with the invertible charge-conjugation module
+category. Tensoring by the latter preserves the dual fusion category
+up to equivalence. These are classification inputs; the reduction below
+explains why they apply to the actual sewing algebras here.
+\end{constructioninput}
+
+\emph{Pass from torus matrices to actual sewing algebras.}
+Choose the two adjacent heights as $n,q$, with $3\nmid q$; their
+order need not be increasing. Let $\mathcal A_n$ be the affine
+$SU(3)$ category at height $n$, and $\mathcal D_q$ the triality-zero
+subcategory at height $q$. Triality is the central $\Z_3$ charge,
+equal to $a+2b$ modulo three in shifted labels. Since $3\nmid q$,
+the pointed $\Z_3$ subcategory $\mathcal P_q$ is nondegenerate and
+$\mathcal A_q\simeq\mathcal P_q\boxtimes\mathcal D_q$.
+
+The coset/extension theorem realizes the $W_3$ category as local
+modules for the diagonal $\Z_3$ graph algebra in
+\[
+ \mathcal A_p\boxtimes\mathcal A_4
+                 \boxtimes\mathcal A_{p+1}^{\mathrm{rev}}.
+\]
+This is an algebraic realization, not an inference from matching
+$S,T$. Its reconstruction premise holds because the denominator-vacuum
+branch of the numerator vacuum contains only the $W_3$ vacuum. The
+branching rule reconstructs exactly the three simultaneous
+simple-current translates of the vacuum. Here charge conjugation on
+the reversed factor lets us write the same current exponent in all
+three graph labels. Their graph multiplication
+is unique up to isomorphism because $H^2(\Z_3,\C^*)=0$.
+
+After extracting $\mathcal D_q$, take objects with trivial
+$\mathcal P_q$ component. Locality uniquely determines their
+$\mathcal A_4$ component from their triality. This correction changes
+the braiding but not the affine associator: the pointed height-four
+category has a realization with trivial associator and braiding
+$c(a,b)=e^{2\pi iab/3}$ on $\Z_3$. Induction is fully
+faithful on these objects, because its Hom formula sums over the three
+graph translates and only the trivial translate has trivial
+$\mathcal P_q$ component. The local-category dimension is
+$\FPdim(\mathcal A_n)\,3\,3/3^2=\FPdim(\mathcal A_n)$, so no
+additional objects remain. Consequently
+\[
+ \mathcal C\simeq\widetilde{\mathcal A}_n
+                      \boxtimes\mathcal D_q^{\pm},
+\]
+where $\widetilde{\mathcal A}_n$ is monoidally equivalent to ordinary
+$\mathcal A_n$, with a triality correction to its braiding; the sign
+allows reversal of braiding. Neither change alters dimensions.
+
+Let $\mathcal L$ be the Lagrangian full center of any sewing algebra.
+Among the conductor-compatible heights, the classified coefficient
+matrices have the form $M_n\otimes I_{\mathcal D_q}$, up to label
+conjugation. Intersect $\mathcal L$ with
+$\mathcal D_q\boxtimes\mathcal D_q^{\mathrm{rev}}$, interchanging these
+two factors if the braiding was reversed. The intersection
+theorem makes this an \emph{\'etale algebra}, not just a subobject.
+Its graph underlying object has dimension $\FPdim(\mathcal D_q)$,
+so it is already Lagrangian in that factor. After condensing it,
+the factor has local category $\mathrm{Vec}$: no nontrivial object
+remains for a mixed gluing. The classification of connected
+\'etale algebras in a product therefore factors $\mathcal L$ as an
+algebra. A possible graph autoequivalence gives an invertible module
+category and does not change dimensions. Thus every simple defect has
+dimension $uv$, where $u$ is a simple dimension in a Morita dual of
+ordinary $\mathcal A_n$, and $v$ is an ordinary dimension in
+$\mathcal D_q$. This is the step that a factorized partition function
+alone would miss.
+
+\emph{All nonexceptional heights now follow from the gap.}
+In the classified simple-current cases, the algebra has support
+$1$ or $1+J+J^2$. A length-three orbit gives defect dimension
+$D_n(a,b)$. At a fixed point the possible dimensions are
+$D_n(a,b)/3$ or $D_n(a,b)$. The stabilizer of the combined left and
+right action is $\Z_3$ on a free orbit, and $\Z_3^2$ at a fixed
+point. Its projective irreducible representations have dimension one,
+or dimension three when the latter group's commutator pairing is
+nondegenerate. Dividing the underlying-object dimension by
+$\FPdim A=3$ gives the stated possibilities.
+A fixed point requires $3\mid n$
+and $(a,b)=(n/3,n/3)$, and
+\[
+ \frac{D_n(n/3,n/3)}3
+ =\frac{\sqrt3}{8\sin^2(\pi/n)\sin(2\pi/n)}
+ \geq3+2\sqrt3>d.
+\]
+Every allowed $u$ or $v$ is therefore one, lies in $[1+\sqrt3,3)$,
+or exceeds $d$; two noninvertible factors are too large. The affine
+classification includes all module categories at these heights,
+including the charge-conjugation cases, so no sewing algebra is omitted.
+
+\emph{Only the pair $(12,13)$ requires a separate finite input.}
+The other exceptional heights, eight and twenty-four, have no adjacent
+height divisible by thirteen. At height twelve, all affine dimensions
+lie in $\Q(\sqrt3)$: the fundamental and its dual generate the fusion
+ring and both have dimension $1+\sqrt3$. Every Morita-dual simple
+dimension $u$ also lies there, by the dimension-ratio formula.
+At height thirteen, $v=D_{13}(a,b)\in\Q(\zeta_{13})$, whereas
+\[
+ \Q(\sqrt3)\cap\Q(\zeta_{13})=\Q.
+\]
+If $uv=d$, then $u=d/v$ belongs to both fields, so $u$ is rational
+and $v$ must be a rational multiple of $d$.
+
+\begin{constructioninput}[The exact height-thirteen comparison]
+For all sixty-six pairs $a,b>0$, $a+b<13$, the three invertible
+labels $(1,1),(1,11),(11,1)$ have dimension one; all other
+sixty-three dimensions have degree six over $\Q$. None is therefore
+a rational multiple of the quadratic number $d$.
+
+The finite verification takes place exactly in
+$\Q[z]/(1+z+\cdots+z^{12})$, with $z=\zeta_{13}$ and
+$q_{13}=-z^7=e^{\pi i/13}$. It evaluates
+$[m]=(q_{13}^m-q_{13}^{-m})/(q_{13}-q_{13}^{-1})$ and
+$D_{13}(a,b)=[a][b][a+b]/[2]$. Galois substitution gives exact
+degrees; reality and invariance under $z\mapsto z^3$ test membership
+in $\Q(\sqrt{13})$. This is an exhaustive finite algebraic input,
+not a comparison of approximate decimal dimensions.
+\end{constructioninput}
+
+For example, the fundamental value is $D_{13}(1,2)=1+z+z^{-1}$.
+It generates the real subfield of $\Q(\zeta_{13})$, which has degree
+six; the complete finite input extends this check to every other label,
+including labels outside the triality-zero subcategory.
+
+This disposes of every sewing algebra at the exceptional pair,
+including both exceptional modular-invariant types at height twelve.
+The argument even excludes a reducible defect of dimension $d$.
+In the nonexceptional cases every noninvertible simple has dimension
+at least $1+\sqrt3>d-1$, so such an object could only be a single
+noninvertible simple, already excluded, or a sum of invertibles of
+integer dimension. In the exceptional case a summand with
+noninvertible $v$ again exceeds $d-1$ and would have to be the whole
+object; if every $v$ is invertible, the sum stays in $\Q(\sqrt3)$.
+
+Thus a unitary strong tensor Haagerup action preserving the stated
+rational $W_3$ algebra is excluded for every $p\geq4$ and every
+rational sewing algebra in the stated framework. A tensor functor
+preserves the positive dimension, so its image of $\rho$ would have
+supplied the forbidden dimension $d$. This says nothing about
+Virasoro-only defects of a $W_3$ theory or another CFT at the same
+central charge. It is also different from Chapter~\ref{ch:cosets},
+where an explicitly constructed irrational factor lacked an independent
+spin-three vacuum generator.

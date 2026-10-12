@@ -1,0 +1,189 @@
+Independent hand review of root additions, 2026-10-05
+Reviewer: scope_foundations. No numerical jobs, formal builds, or r-file edits.
+
+Reviewed: r05:186–284 and boost exercise/solution; r07:104–126,
+202–252,370–391; r08:86–164. Overall: the displayed calculations pass.
+One useful correction concerns the distinction between abelian zero-mode
+energy and oscillator energy. One genuinely missing elementary topic is an
+explicit pointed 3-cocycle example connecting the pentagon to gauging.
+
+1. Current-current deformation and the boost
+-------------------------------------------
+
+Correct r05:223–225:
+"collect a state's abelian charges ... The abelian contributions are
+h_ab=p_L^2/2 and bar h_ab=p_R^2/2" omits the oscillator levels for a
+general state. A neutral current oscillator has p=0 but h=1. Suggested:
+"The charge-dependent zero-mode contributions are p_L^2/2 and p_R^2/2.
+Heisenberg oscillator levels and neutral-sector weights supply the remaining
+terms and are held fixed in this charge-space description."
+
+Then the dimension variation at 233–234 is exactly correct. For general
+epsilon, delta(p_L^2-p_R^2)=2p_L^T epsilon p_R-2p_R^T epsilon^T p_L=0,
+whereas delta Delta=2p_L^T epsilon p_R. The solution's two block products
+X^T eta and eta X have the correct signs. For r=1, epsilon=-1,
+X^2=I and exp(tX) gives the stated charges.
+
+The compact-boson example agrees with the book's convention
+p_L=m/R+nR/2, p_R=m/R-nR/2. At R=sqrt(2)e^t and m=n=1 this gives
+sqrt(2)cosh(t), -sqrt(2)sinh(t); h=cosh^2(t), bar h=sinh^2(t), spin=1
+and Delta=cosh(2t). The finite boost changes h and bar h at order t^2
+for this initially chiral state, so its vanishing first-order delta Delta
+at t=0 is consistent, not an obstruction to the example.
+
+The current normalizations H_L/sqrt(2), H_R/sqrt(78) are correct at levels
+1 and39 with H(z)H(0)~2k/z^2. Four Cartan products consequently have
+the displayed identity two-point metric. The commuting-current theorem
+supports the simultaneous four-direction family. I checked the original
+description in Forste–Roggenkamp, Section2, especially equations2.4,2.7,2.8:
+https://arxiv.org/pdf/hep-th/0304234
+It keeps the non-charge data fixed, describes the deformation space by the
+pseudo-orthogonal quotient, and separately quotients by dualities to obtain
+the actual moduli space. The textbook already preserves that distinction.
+An optional precision is "local deformation space before duality
+identifications" at 236–240; enhanced points can be orbifold points of
+the moduli space, although the displayed covering space is smooth.
+
+The text correctly avoids inferring persistence of the full Haagerup
+junction data merely from exact marginality of a categorical singlet.
+
+2. Pointed condensation, twisted Verlinde, and St vectors
+--------------------------------------------------------
+
+r07:202–252 gives the correct 1/3/9 simple-object counts. In the strict
+pointed center, the free right module induced from (g,0) is x_g. Its three
+distinct underlying simples are permuted transitively by the charge algebra,
+so it is a simple right module; all free orbits are indexed by g. Balancing
+gives x_g tensor_A x_h=x_{g+h}. For a particularly explicit reason the
+associator is untwisted, the free-induction functor on the pure-flux objects
+(g,0) is a tensor equivalence onto these modules, and the pure-flux source
+has trivial associator. This is a useful optional extra sentence: fusion
+rules alone would not identify Vec_Z3 rather than Vec_Z3^omega in general.
+
+Locality is exactly the monodromy condition omega^(ell*g)=1 for all ell,
+so only g=0 remains. For bimodules, a left action commuting with the right
+action is determined by a character of Z3 after fixing a baseline left
+shift. The three choices of character for each g give nine inequivalent
+simples. Any additional multiplicity space decomposes into characters,
+so there are no missing higher-dimensional simple bimodules.
+
+r07:104–126: AB=1/117 follows from (1/6)^2-1/(4*13), and A+B=1/3 gives
+1/A+1/B=39. The first two Verlinde terms contribute39/27=13/9.
+The middle vacuum entries are1/3, hence the remaining term is
+3[(2/3)^3+3(-1/3)^3]=5/9. Thus N_{c1,c1}^{c1}=2 as written.
+The scalar top count is2*3^2=18. The vacuum/c1 ground pairs give3+3=6
+states at Delta1/3 with spins +/-1/3, which are defect states rather than
+ordinary bosonic local fields. All normalization factors agree.
+
+r07:370–391: St_alpha is obtained from the first two columns minus the
+third. The first three entries vanish, the c_j entries are1, and the
+d_j entries vanish. For t_rho the vacuum entry is zero since B=d^2 A;
+the b entry is dB-d^-1 A=A*d*(d^2-d^-2)=1 because
+A=1/[3(1+d^2)] and1+d^2=d*sqrt(13). The four middle entries equal
+(d-d^-1)/3=1, and the six final entries equal(d+d^-1)/sqrt(13)=1.
+This matches the forgetful table exactly. The conjugate holomorphic E8
+character acquires no S phase, so the holomorphic-vector calculation is
+also the full mixed-character trace transformation claimed there.
+
+3. Ising BPZ equation and branch-independent correlator
+------------------------------------------------------
+
+r08:86–113 checks. The Ward derivative substitutions satisfy translation
+and dilation after taking the insertion at infinity:
+partial0 f=(z-1)f'+2h f, partial1 f=-zf'-2h f.
+The L_-2 insertion becomes
+  -(1-2z)/[z(1-z)] f' + h/[z^2(1-z)^2] f.
+Subtracting(4/3)f'' and setting h=1/16 gives the printed differential
+equation, including its signs and3/64 coefficient. Its two indicial roots
+are -1/8 and3/8. The displayed radical blocks have precisely those leading
+terms and the previous crossing/normalization checks continue to hold.
+
+r08:146–164 also checks globally on the punctured cross-ratio plane.
+For w^2=1-z,
+ |1+w|^2+|1-w|^2=2(1+|1-z|),
+ |1+w||1-w|=|1-w^2|=|z|,
+which proves the branch-independent expression. It is invariant under
+z->1-z. Under z->1/z its numerator gains |z|^-1/2 and denominator
+gains |z|^-1/2 relative to the remaining |1-z| term, giving exactly
+G(z)=|z|^-1/4 G(1/z). This agrees with four external full dimensions1/8.
+No correction to the BPZ or crossing formulas is needed.
+
+4. A genuine foundational gap worth filling
+-------------------------------------------
+
+The book repeatedly needs the distinction between an invertible fusion
+group and its associator class: the untwisted Vec_Z3 in c05, possible
+gauging anomalies in l06, and why an algebra-object sum may fail to
+multiply. f03 currently mentions a three-cocycle but gives no cocycle
+formula or concrete anomalous example. A half-page worked Vec_Z2 example
+would connect these ideas without a group-cohomology prerequisite.
+
+Let g^2=1 and let alpha_{a,b,c}=omega(a,b,c)=(-1)^(abc), a,b,c in{0,1}.
+The pentagon is
+ omega(b,c,d) omega(a,b+c,d) omega(a,b,c)
+ =omega(a,b,c+d) omega(a+b,c,d),
+and both exponents expand to abc+abd+acd+bcd modulo2. Thus this is a
+valid unitary associator with the same two-object fusion ring as Vec_Z2.
+Its only nontrivial value is omega(1,1,1)=-1. A normalized change of
+binary-junction basis cannot change that value: the relevant 2-cochain
+ratio is u(1,1)u(0,1)/[u(1,1)u(1,0)]=1.
+
+Try to condense A=1+g with unit-normalized multiplication and nonzero
+g*g->1 coefficient beta. Associativity on g tensor g tensor g equates
+beta with -beta, impossible over C. Setting beta=0 leaves a degenerate
+nonseparable algebra and does not give the required condensation. This
+is an elementary illustration of a gauging obstruction carried by the
+associator. It does not imply that the actual H3 order-three subgroup is
+anomalous; c05 separately proves that its associator is untwisted.
+
+If root approves, this fits naturally after the existing algebra-object
+example in f03. No need to introduce the whole machinery of group
+cohomology or claim that this exhausts every gauging problem.
+
+Follow-up: root authorized this example, and it is now in f03. It includes
+the nonsplitting argument for the beta=0 right regular module, so failure
+of separability is explained rather than only asserted.
+
+5. Later annulus and Ising boundary addition
+------------------------------------------
+
+Checked r07:155–255 and figures/annulus_channels.tex after their insertion.
+The Ishibashi exponent (L0+bar L0-c/12)/2 gives exactly one chiral character.
+For q=exp(-pi v beta/ell), tau=i v beta/(2ell), so -1/tau gives
+tilde q=exp(-4pi ell/(v beta)), as printed. The drawing's periodic
+horizontal edges and solid spatial boundaries agree with the two evolution
+arrows and the caption. Cardy coefficients, annulus multiplicities,
+Ising fixed/free identifications and g values all pass.
+
+Tiny precision at r07:249: write "one nonidentity relevant boundary primary"
+instead of "one relevant boundary primary"; the identity also has weight
+below one, although it is omitted from nontrivial boundary perturbations.
+The fixed/free changing field of weight1/16 is correctly distinguished
+from the free/free boundary field of weight1/2.
+
+6. New construction solutions
+-----------------------------
+
+Independently read c_solutions.tex's Further construction solutions and
+the nearby dimension-threshold, projection, and character-square solutions.
+No incorrect calculation found. In particular:
+- x5 bookkeeping ratio148560/(4680*14)=619/273 and the top-certificate
+  coefficients -37176,29904 are correct.
+- Translation covariance gives (n+1)a_(n)v=-L_-1 a_(n+1)v; the descent
+  through n=0 has nonzero coefficients and does not force a_(-1)v=0.
+- The conductor-forty m=2 case has18 roots, first sum -2-2sqrt(10),
+  and conflicting second sums2 versus -2 or -2-4sqrt(10).
+- The perpendicular lattice has glue norm4, order6 and determinant39;
+  squarefreeness excludes a larger integral saturation.
+- The vacuum-algebra solution carefully distinguishes six vacuum states,
+  a chosen positive multiplication, and a specified Haagerup defect action.
+- In the independent-temperature proof, t=4pi^2s/p and p<=s^2/4 give
+  st>=16pi^2. A shared large u connects arbitrary s1,s2 and forces
+  sqrt(s)G(s) constant; equal temperatures alone give only one involution.
+- The stress projection arithmetic, Potts PCT phases, noncommuting positive
+  operator example, and rank-two/rank-three dimension thresholds also pass.
+
+The newly expanded c05 conductor13 explanation is correct: the irrational
+coefficient of the averaged primitive-order-N orbit vanishes unless
+N=13m with m squarefree and coprime13; otherwise its magnitude per root
+is1/(12 phi(m)). Equality of the six-root budget forces m=1 or2.

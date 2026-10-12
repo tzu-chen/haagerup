@@ -1,0 +1,96 @@
+\section{Solutions for Chapter~\ref{ch:fusion}}
+
+\paragraph{Exercise~\ref{ex:fib-count}.}
+\phantomsection
+\label{sol:ex:fib-count}
+Tensoring $m_L\one\oplus n_L\tau$ with $\tau$ gives
+\[
+ m_{L+1}=n_L,\qquad n_{L+1}=m_L+n_L.
+\]
+At $L=0$ the tensor product is the unit, so the pairs for
+$L=0,1,2,3,4,5$ are
+\[
+ (1,0),(0,1),(1,1),(1,2),(2,3),(3,5).
+\]
+The recursion matrix has eigenvalues $\varphi$ and
+$-\varphi^{-1}$.  Its powers have integer entries, but their dominant
+asymptotic growth is controlled by the irrational eigenvalue
+$\varphi$.  This is no different in principle from an integer
+recursion whose closed form involves cancelling irrational terms.
+
+
+
+\paragraph{Exercise~\ref{ex:gauge-cancel}.}
+\phantomsection
+\label{sol:ex:gauge-cancel}
+The left fusion-tree vector is multiplied by
+$u_{ab}^{e}u_{ec}^{d}$, while the right tree with channel $f$ is
+multiplied by $u_{bc}^{f}u_{af}^{d}$.  Expressing the rescaled left
+vector in the rescaled right basis gives their ratio in
+\eqref{eq:F-gauge}.  When all six labels equal $\rho$, both
+products are $(u_{\rho\rho}^{\rho})^2$, so the ratio is one.
+For generic labels the ratio need not be one; changing a junction
+phase can change the entry without changing the category.
+
+
+
+\paragraph{Exercise~\ref{ex:projectors}.}
+\phantomsection
+\label{sol:ex:projectors}
+For two channels $f,g$,
+\begin{align*}
+ (P^{(f)}P^{(g)})_{ee'}
+ &=\sum_k\overline{F_{ef}}F_{kf}
+           \overline{F_{kg}}F_{e'g}\\
+ &=\overline{F_{ef}}F_{e'g}\,\delta_{fg}
+ =\delta_{fg}(P^{(f)})_{ee'}.
+\end{align*}
+The sum over $k$ is column orthogonality.  Similarly,
+$\sum_f\overline{F_{ef}}F_{e'f}=\delta_{ee'}$ is row
+orthogonality.  Omitting the complex conjugates would give the
+wrong projector in a general unitary gauge, even though it would
+go unnoticed for the real Fibonacci and $\HH_3$ blocks displayed
+in the text.
+
+
+
+\paragraph{Exercise~\ref{ex:fib-pentagon}.}
+\phantomsection
+\label{sol:ex:fib-pentagon}
+The identities $v^2=u$ and $u^2=1-u$ give
+\[
+ u^2-uv^2=0,\qquad uv+u^2v=v(u+u^2)=v,
+ \qquad v^2-u^3=u-u(1-u)=u^2.
+\]
+The four remaining off-diagonal entries use either $v^2=u$ or
+the already identical value $-uv$; the middle diagonal entries
+also use $v^2=u$. Both matrix products therefore equal
+\[
+ \begin{pmatrix}0&u&v\\u&u&-uv\\v&-uv&u^2\end{pmatrix}.
+\]
+Dividing the $(1,3)$ equation by $v$
+uses $v\ne0$.  The other root of $u^2+u=1$ is negative, so the
+condition $v^2=u$ cannot hold with $v$ real.  This excludes that
+root from the stated positive real ansatz; it is not an argument
+that the algebraic fusion ring has only one categorification.
+
+
+
+\paragraph{Exercise~\ref{ex:dimension-not-state}.}
+\phantomsection
+\label{sol:ex:dimension-not-state}
+The roots are $\varphi=(1+\sqrt5)/2$ and
+$-\varphi^{-1}=(1-\sqrt5)/2$. Since the complexified ring is
+$\C[t]/(t^2-t-1)$, evaluation at either root is a unital algebra
+homomorphism to $\C$, hence a one-dimensional representation of
+that algebra. The word ``one-dimensional'' describes the space
+on which the algebra acts, not the value of its generator.
+An ordinary finite-dimensional vector space has a nonnegative
+integer dimension. The positive root is irrational and the other
+root is negative, so neither is such a dimension. In particular,
+a tensor functor sending $\tau$ to an ordinary vector space would
+require an integer $N$ with $N^2=1+N$, which is impossible.
+The positive categorical dimension instead measures asymptotic
+fusion-space growth.
+
+

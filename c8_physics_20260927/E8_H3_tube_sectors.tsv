@@ -1,0 +1,13 @@
+mu	lowest_Delta	lowest_degeneracy	first_nonidentity_scalar_Delta	scalar_degeneracy	partition_function
+0	0	1	2	1488	chi_0 * conjugate(chi_E8)
+b	1	80	2	19840	chi_b * conjugate(chi_E8)
+a	1	81	2	20088	chi_a * conjugate(chi_E8)
+c0	1	81	2	20088	chi_c0 * conjugate(chi_E8)
+c1	1/3	3	none	0	chi_c1 * conjugate(chi_E8)
+c2	2/3	27	none	0	chi_c2 * conjugate(chi_E8)
+d1	6/13	7	none	0	chi_d1 * conjugate(chi_E8)
+d2	11/13	42	none	0	chi_d2 * conjugate(chi_E8)
+d3	15/13	119	none	0	chi_d3 * conjugate(chi_E8)
+d4	5/13	5	none	0	chi_d4 * conjugate(chi_E8)
+d5	7/13	13	none	0	chi_d5 * conjugate(chi_E8)
+d6	8/13	14	none	0	chi_d6 * conjugate(chi_E8)

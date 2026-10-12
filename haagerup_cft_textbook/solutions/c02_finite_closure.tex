@@ -1,0 +1,107 @@
+\section{Solutions for Chapter~\ref{ch:finite_closure}}
+
+\paragraph{Exercise~\ref{ex:c-closure-1}: all negative modes.}
+\phantomsection
+\label{sol:ex:c-closure-1}
+Translation covariance gives $(Da)_{(n)}=-n a_{(n-1)}$.
+For example $(D^2a)_{(-1)}=(Da)_{(-2)}=2a_{(-3)}$.
+More generally each differentiation supplies the next factor
+$1,2,\ldots,r-1$, giving
+$(D^{r-1}a)_{(-1)}=(r-1)!a_{(-r)}$. Thus negative modes are
+normal products with translated left inputs. Once translation, normal
+products, and nonnegative modes preserve a space, every mode preserves
+it, which is exactly vertex-subalgebra closure.
+
+
+
+\paragraph{Exercise~\ref{ex:c-closure-2}: the missing lowest line.}
+\phantomsection
+\label{sol:ex:c-closure-2}
+Choose weight bases $v_0,\ldots,v_{m-1}$ and
+$w_0,\ldots,w_{n-1}$ ordered from lowest to highest. The raising
+image in the first factor contains every $v_i$ with $i>0$, and
+the second contains every $w_j$ with $j>0$. Their sum therefore
+contains all tensor basis vectors except $v_0\otimes w_0$.
+That vector cannot be in the image because neither raising operator
+can reach a joint-lowest weight. The quotient is one dimensional.
+Equivalently, normalize the basis so that $E_Lv_i=v_{i+1}$
+below the top and $E_Rw_j=w_{j+1}$. Every basis tensor except
+$v_0\otimes w_0$ then has an explicit preimage under one of the
+two operators. This is a quotient of vector spaces; it need not
+be a representation of the lowering operators.
+
+
+
+\paragraph{Exercise~\ref{ex:c-closure-3}: counting the raising quotient.}
+\phantomsection
+\label{sol:ex:c-closure-3}
+The summands whose left representation has dimension one contribute
+\[
+ 3+1+5+2+3+1+2+1=18
+\]
+irreducible constituents and
+\[
+ 9+5+35+18+33+13+30+19=162
+\]
+dimensions. Those whose left representation has dimension two
+contribute $1+1+2+2+2+1+1=10$ constituents and
+$4+8+24+32+40+24+28=160$ dimensions. Thus $P$ has dimension
+$322$ and $28$ constituents, with multiplicity. Each constituent
+contributes precisely one joint-lowest vector to the quotient by
+$E_LP+E_RP$, by Exercise~\ref{ex:c-closure-2}. The image therefore
+has dimension $322-28=294$. Multiplicity copies require separate
+seeds even when their representation types agree.
+
+
+
+\paragraph{Exercise~\ref{ex:c-closure-4}: specialization can lose rank.}
+\phantomsection
+\label{sol:ex:c-closure-4}
+The matrix $\left(\begin{smallmatrix}1&0\\0&p\end{smallmatrix}\right)$
+has rank two over $\Q$ and rank one over $\mathbb F_p$.
+A nonzero minor modulo $p$ was nonzero over $\Q$, but a vanishing
+minor modulo $p$ may merely have been divisible by $p$. The scalar
+residual $p$ is the simplest example of a nonzero integer residual
+that reduces to zero. Thus lower rank certificates and exact
+zero-residual certificates require different evidence.
+For rational matrices, first clear denominators and choose a prime
+which does not divide them. Without that condition, the proposed
+specialization might not even be defined.
+
+
+
+\paragraph{Exercise~\ref{ex:c-closure-5}: the positive-mode bootstrap.}
+\phantomsection
+\label{sol:ex:c-closure-5}
+For a weight-two state, the Virasoro commutator formula gives
+\[
+ [L_1,Y(a,z)]=z^2\partial_zY(a,z)+4zY(a,z)+Y(L_1a,z).
+\]
+Comparing the coefficient of $z^{-n-1}$ yields
+\[
+ [L_1,a_{(n)}]=(2-n)a_{(n+1)}+(L_1a)_{(n)}.
+\]
+Quasiprimary means $L_1a=0$, so the last term vanishes. Apply
+the $n=0$ identity to $p$ and rearrange:
+\[
+ 2a_{(1)}p=L_1(a_{(0)}p)-a_{(0)}L_1p.
+\]
+Thus control of the zero product, together with the already proved
+$L_1$ stability of its output space, controls the next positive
+mode. Quasiprimary does not mean that $L_2a$ vanishes; this is why
+the subsequent $L_2$ argument separately keeps track of scalar terms.
+
+
+
+\paragraph{Exercise~\ref{ex:c-closure-6}: why one induction index fails.}
+\phantomsection
+\label{sol:ex:c-closure-6}
+In the term $b_{(n)}(a_{(0)}t)$, a normal expression for
+$a_{(0)}t$ may contain a single generator of weight $\wt(t)+1$.
+The left input $b$ has weight $\wt(s)-1$, so the total input
+weight is unchanged. Induction on total weight alone has made no
+progress. The left weight has decreased, however, so lexicographic
+induction applies. Composite and derivative terms are already dealt
+with by filtered Wick and do not need this second index.
+
+

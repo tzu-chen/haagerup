@@ -1,0 +1,128 @@
+\section{Solutions for Chapter~\ref{ch:factors}}
+
+\paragraph{Exercise~\ref{ex:c-factors-1}: parafermion charges.}
+\phantomsection
+\label{sol:ex:c-factors-1}
+Subtracting the charge-one Cartan stress gives
+$c_{\mathrm{PF}_k}=3k/(k+2)-1=2(k-1)/(k+2)$.
+Thus the three substitutions are $2/4=1/2$,
+$4/5$, and $24/15=8/5$, respectively.
+The first is the Ising parafermion algebra. Notice that the
+parafermion central charges approach two from below as $k$ tends
+to infinity; proximity to two by itself therefore selects no
+particular level or full theory.
+
+
+
+\paragraph{Exercise~\ref{ex:c-factors-2}: three opposite momentum pairs.}
+\phantomsection
+\label{sol:ex:c-factors-2}
+Using $r^2=13$, $t^2=-3$, and $\overline t=-t$, the three products are
+\[
+ p_{\beta_1}p_{-\beta_1}
+ =p_{\beta_3}p_{-\beta_3}
+ =\frac{r^2-9t^2}{1000}
+ =\frac{40}{1000}=\frac1{25},
+\]
+and
+\[
+ p_{\beta_2}p_{-\beta_2}
+ =\frac{49-9r^2t^2}{10000}
+ =\frac{49+351}{10000}=\frac1{25}.
+\]
+The transported PCT multiplies an opposite exponential by
+$10,1,10$ for the three positive momenta. Directly,
+\begin{align*}
+ 10\overline{p_{\beta_1}}&=(-r+3t)/10=p_{-\beta_1},\\
+ \overline{p_{\beta_2}}&=(7-3rt)/100=p_{-\beta_2},\\
+ 10\overline{p_{\beta_3}}&=-(r+3t)/10=p_{-\beta_3}.
+\end{align*}
+The opposite directions use the reciprocal factors, so each
+two-term exponential pair is fixed. Each Heisenberg oscillator
+changes sign under PCT; its quadratic products are fixed as well.
+Consequently the entire Potts stress is PCT real in the transported
+positive form.
+
+
+
+\paragraph{Exercise~\ref{ex:c-factors-3}: the spin-three simple pole.}
+\phantomsection
+\label{sol:ex:c-factors-3}
+Skew symmetry gives
+$a_{(0)}a=-a_{(0)}a+D(a_{(1)}a)-\frac12D^2(a_{(2)}a)
++\frac16D^3(a_{(3)}a)-\cdots$ for an even field $a$.
+Here ``even'' means bosonic parity, despite the odd conformal
+weight three; no fermionic minus sign is present.
+Use $a_{(1)}a=b_4$, $a_{(2)}a=DL$, $a_{(3)}a=2L$.
+Derivatives of the scalar higher pole vanish. Thus
+\[
+ 2a_{(0)}a=Db_4-\frac12D^3L+\frac13D^3L
+            =Db_4-\frac16D^3L.
+\]
+Dividing by two gives the displayed self-row.
+
+
+
+\paragraph{Exercise~\ref{ex:c-factors-4}: the two isotropic lines.}
+\phantomsection
+\label{sol:ex:c-factors-4}
+If $j=0$, isotropy forces $k=0$. Otherwise divide by $j^2$ to
+obtain $(k/j)^2=-1$ in $\mathbb F_{13}$. The two roots are
+$5$ and $-5$. Adjoining both lines would adjoin their span, which
+is the entire two-dimensional discriminant group. It contains
+$(1,0)$, whose quadratic value is $-1/13$, so such an extension
+would not have integral vacuum grading.
+Explicitly $5^2=25\equiv-1\pmod{13}$, and
+$(1,5),(1,-5)$ are independent because their determinant
+$-10$ is nonzero modulo thirteen. A quadratic polynomial over a
+field has at most two roots, so there are no further isotropic lines.
+
+
+
+\paragraph{Exercise~\ref{ex:c-factors-5}: coefficients of the stress identity.}
+\phantomsection
+\label{sol:ex:c-factors-5}
+In the basis $(\omega_L,\omega_R,e,f)$, the four coefficients on
+the proposed right side are
+\begin{align*}
+ \omega_L &: 1,\\
+ \omega_R &: \frac{3403}{4563}+\frac5{27}+\frac{35}{507}
+             =\frac{3403+845+315}{4563}=1,\\
+ e &: \frac38+\frac58=1,\\
+ f &: \frac{13}{14}+\frac1{14}=1.
+\end{align*}
+They therefore reproduce the sum of the four orthogonal stresses.
+The norm of a vector gives only one quadratic constraint; it
+does not determine these four projection coefficients. More
+fundamentally, a correct central term is only one pole in a
+self-OPE. Establishing the Potts or parafermion subalgebra also
+requires the remaining singular products, the requisite higher
+fields, and the stated translation and PCT properties.
+
+
+
+\paragraph{Exercise~\ref{ex:c-factors-6}: positivity without commutativity.}
+\phantomsection
+\label{sol:ex:c-factors-6}
+Take
+\[
+ A=\begin{pmatrix}2&0\\0&1\end{pmatrix},
+ \qquad B=\begin{pmatrix}2&1\\1&2\end{pmatrix}.
+\]
+Their spectra are $\{1,2\}$ and $\{1,3\}$, respectively, so both
+are positive definite and self-adjoint. But
+$[A,B]=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$.
+For $\alpha,\beta>0$ and every vector $v$,
+\[
+ (\alpha+\beta)\|v\|^2
+ \leq
+ \langle(\alpha A+\beta B)v,v\rangle
+ \leq(2\alpha+3\beta)\|v\|^2.
+\]
+This follows by bounding each expectation separately and adding.
+No common eigenbasis was used. The $C_2$ proof does the same
+thing with the partial energies on a fixed ambient grade: it bounds
+each expectation on the same vector in $C_2(V)^\perp$, then uses
+the positive stress identity to bound the total energy.
+
+

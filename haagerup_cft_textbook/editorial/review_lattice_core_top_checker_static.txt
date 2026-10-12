@@ -1,0 +1,151 @@
+Static review of check_core_tops.py
+Reviewer: scope_lattice
+Method: source inspection and hand algebra only. The checker was not
+executed or imported. No numerical job or build was launched.
+
+RESULT
+
+Scientific logic passes. The formulas, all fourteen expected rows,
+the charge-multiplicity coefficients, and the 17/10 certificate agree
+with c05_branching.tex. The finite enumeration is exhaustive under the
+printed core-module formulas. The proposed 128 MiB address-space and
+whole-job memory limits with one CPU are comfortably above the small
+allocation path found by static inspection; actual admission and host
+checks remain root's responsibility through the canonical guard.
+
+No mathematical repair is required. Two minor reporting/estimate
+clarifications are listed at the end.
+
+FORMULAS AND ENUMERATION
+
+check_core_tops.py:48-61 covers both families x,y and a=0,...,6,
+with all 25 integers m=-12,...,12. Thus it covers fourteen core
+labels and retains tied representatives instead of selecting only
+one representative per residue.
+
+The expression (-5*m+6)%13-6 is the unique representative of -5m
+modulo thirteen in [-6,6]. Python's nonnegative remainder makes
+F(m%2,4) equal to 1/4 for negative as well as positive odd m.
+The Potts choices agree with c05:30-32. The PF expression agrees
+with c05:48-49, including the essential positive-grade term.
+The left multiplicity is two for odd m and one for even m, precisely
+as described in c05:41-43 and :154-159.
+
+I independently reduced the minimization by absolute residue j:
+  |j| =          0    1    2    3    4    5    6
+  |k| =          0    5    3    2    6    1    4
+  h_T(x,j) =     0   12/13 9/13 4/13 10/13 14/13 3/13
+  h_T(y,j) =   2/5  21/65 6/65 46/65 11/65 31/65 41/65.
+Combining these with a(a+1)/15-k^2/13+max(0,|k|-a)
+gives the minimizing absolute charge sets printed in c05:145-151:
+  x: {0}, {0}, {0,3}, {0,2,3,6}, {6}, {1,4,6}, {4};
+  y: {0}, {0,5}, {0,2,3,5}, {2}, {1,2,4,6}, {1,4}, {4}.
+The script's full m loop retains the extra tied representatives that
+these absolute residue labels alone would conceal.
+
+Every entry in expected at script:39-45 matches c05:125-131:
+  x dimensions 1,1,5,9,2,14,6;
+  y dimensions 1,7,15,2,14,6,2;
+  x lowest weights 0,2/15,2/5,4/5,1/3,1,4/5;
+  y lowest weights 2/5,8/15,4/5,1/5,11/15,2/5,1/5.
+The fourteen 4680W values are also transcribed exactly.
+
+CUTOFF
+
+The loop over m=-6,...,6 supplies one representative of every charge
+class modulo thirteen and verifies the uniform lattice-Potts bound
+14/13. For any omitted |m|>=13, its quadratic energy alone satisfies
+  m^2/156 >= 169/156 = 14/13 + 1/156.
+Both the parity and Potts terms are nonnegative. The PF contribution
+is identical for representatives of the same m mod13, so it cancels
+when the two candidates in that charge class are compared.
+Thus every omitted candidate is strictly worse than an included one
+in its own class, for every a and either family. Minimizing the total
+energy directly over m is equivalent to the chapter's nested
+minimization over charge class and representative.
+The cutoff is therefore justified; it is not an empirical search
+window inferred from matching the expected table.
+
+TRACES, CHARGES, AND CERTIFICATE
+
+The sums L,P,Z include the correct left multiplicity, and Q is the
+same multiplicity-weighted sum of m^2. Script:69 reproduces
+  W=L+(83/6084)Q+(25/6)P+(25/26)Z.
+The code does not incorrectly replace this by dimension times the
+core's lowest weight.
+
+The charge-count assertions at :95-98 implement exactly
+  mult(12)=x5; mult(10)=y2;
+  mult(9)=2(x5+x6); mult(7)=2y4.
+For example, the charge-12 state is the even tied representative
+in x5; the charge-9 states are odd representatives in x5 and x6.
+The factor two is from left doublets, not a spurious count of both
+positive and negative charges. The comments correctly leave the
+right-sl2 multiplet premise to the surrounding mathematics.
+
+The coefficient checked on the left of the certificate is
+7956 dim-4680W. Hand subtraction gives, in x0,...,x6 order,
+  7956,7356,29340,14964,10392,-37176,-6504,
+and in y0,...,y6 order,
+  156,18732,8460,11832,29904,29496,10992.
+The two displayed inequality vectors with coefficients 8460 and
+28716, plus the script's nonnegative remainder, reproduce precisely
+these numbers. In particular
+  x5: -8460-28716=-37176;
+  x6: 22212-28716=-6504;
+  y4: 1188+28716=29904.
+All remainder coefficients are nonnegative. This checks the identity
+and its conditional use with the two representation inequalities;
+it does not separately establish the compatible-top lemma or the
+positive-stress identity on actual U-modules. The script's scope
+statement correctly says this.
+
+RESOURCE AND PROVENANCE PATH
+
+There are no scientific-library imports, eigensolvers, subprocess
+launches, threads, workers, unbounded caches, or input-sized arrays.
+All arithmetic uses small integer numerators/denominators with fixed
+small loops. JSON consists of fourteen short dictionaries. The
+source-hash reads are sequential: current sizes inspected were
+6,711 bytes for the checker, 48,834 for c05, and 29,146 for the guard.
+There is no hidden large file or tensor allocation in this path.
+
+The optimization check prevents -O from disabling assertions. Main
+requires the canonical guard environment, the textbook working
+directory, and exactly one CPU in its affinity mask. The proposed
+guard invocation requests one thread and explicit 128 MiB AS and
+whole-job budgets, below the ordinary defaults. No local fallback is
+implemented. The report records script, chapter, and canonical guard
+hashes and the observed affinity. The environment marker is a
+misuse-prevention check; root's actual guarded invocation remains
+the enforcement mechanism.
+
+Expected arithmetic storage below 1 MiB is very conservative.
+Expected checker RSS below 32 MiB is plausible for these standard
+library imports and tiny objects, but is an estimate rather than a
+measurement. The proposed 128 MiB hard budgets allow substantial
+headroom for the interpreter, mappings, output, and small wrappers.
+No larger budget or extra CPU is warranted by this source path.
+
+TWO MINOR PRECISION POINTS
+
+1. Script:12 says "at most25 candidate rows ... at once." During
+   construction of the next candidates list, the previous minimizers
+   list still retains some old tuples until :63 reassigns it.
+   Its largest retained set is eleven rows (the y2 top), so a safe
+   exact description is "25 current candidate rows plus at most
+   eleven retained minimizer rows." These share their Fraction
+   objects with their tuple references rather than copying whole
+   arrays. This has no material effect on either proposed budget.
+   Adding spaces in the docstring's "most25", "below1MiB",
+   "below32MiB", and "The128MiB" would also improve readability.
+
+2. max_rss_mib and elapsed_seconds are sampled before final JSON
+   serialization and file writing. Their recorded values are therefore
+   a high-water mark and elapsed time through report preparation,
+   not a measurement covering the last serialization/print. The extra
+   output is tiny and poses no resource issue. If metadata is meant
+   to claim whole-program peak/time, name it "before_report_write" or
+   take a second measurement for the final printed summary.
+
+No source edits made; static review only.

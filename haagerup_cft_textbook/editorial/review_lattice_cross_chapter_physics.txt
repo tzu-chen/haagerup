@@ -1,0 +1,240 @@
+Cross-chapter physical consistency review
+Reviewer: lattice author, October 5, 2026.
+Read-only review; no numerical work or chapter edits.
+
+Scope and reading context
+-------------------------
+Read the actual master-file ordering, reading guide and notation appendix;
+r01, r03, r05--r08; c06; and the physical interpretation, normalization,
+scope and worked examples throughout l01--l06. Revisited the completed
+charge-six extension audit to check the actual-versus-selected extension
+distinction. Local derivations were already reviewed; this pass concentrates
+on whether their objects and conventions agree across chapter boundaries.
+Line references below are to the files as read during this review.
+
+Overall result
+--------------
+No contradictory physical identification was found. The text keeps the
+diagonal c=8 theory, selected E8 extension, rational C6 commutant,
+irrational chiral commutant, physical rho-projector chain, and exact gapped
+comparison Hamiltonian distinct. The local estimates are consistently
+conditional when applied to a continuum limit. There is, however, one
+concrete symbol collision that should be repaired, and three smaller
+notation changes would substantially reduce first-year-reader confusion.
+
+1. REPAIR: the length-three path Hilbert space prints as the category H3
+-------------------------------------------------------------------------
+l01:44--89 uses \HH_L for the regular periodic Hilbert space, including
+the statement \dim\HH_3=36.
+preamble.tex:49 defines \HH=\mathcal H.
+The fusion category is also \mathcal H_3, throughout the book and explicitly
+as \HH_3 in c06:690--707.
+
+Thus two different objects have exactly the same printed name, and the
+sentence about dimension becomes especially misleading:
+  path-space dimension at L=3 = 36;
+  fusion-category global dimension = 3(1+d^2), not 36.
+
+Suggested repair: use \HH_{\mathrm{path},L} for the finite chain space
+throughout l01, including the numerical subscripts in the counting example.
+Keep \mathcal H_3 for the category. This is a small localized change and
+does not require changing the full-CFT Hilbert-space notation \HH_diag.
+If the notation appendix gains a chain row, give this path-space notation.
+
+2. REPAIR ADVISED: c_L is both a chirality and a circumference label
+-----------------------------------------------------------------
+l02:20 uses c_L=c_R=c, in agreement with r01 and the reading guide.
+l02:170,183 then uses c_L^(T) for the finite size-L stress estimator.
+The notation is defined locally, so the formula is not wrong, but this is
+exactly the factor-of-two-sensitive passage where L should not change
+meaning silently.
+
+Suggested repair: write \widehat c_T(L)=8|M|^2/g_T^2 and use the same table
+heading. The quoted c_18^(T) can become \widehat c_T(18).
+This also advertises that it is a finite diagnostic rather than the
+limiting left central charge.
+
+3. REPAIR ADVISED: preserve the thermal dimensionless-variable convention
+------------------------------------------------------------------------
+r05:291 defines b=2*pi*beta*v/L, so the modular fixed point is b=2*pi.
+l02:346--374 instead defines b=L/v, the physical inverse temperature at
+the modular fixed point. All equations in each passage are internally
+correct, but a reader carrying the first convention into the second
+will introduce factors of 2*pi.
+c06:510--527 uses beta directly against L0-c/24, hence dimensionless
+chiral inverse temperatures.
+
+Suggested minimal repair:
+  l02: call the physical fixed temperature beta_* = L/v throughout;
+       c=6 beta_* mu/pi, beta_* m3=3m2, etc.
+       Add "It corresponds to b=2*pi in Chapter [full theories]."
+  c06: at the two-temperature trace, add "Here beta and epsilon are
+       dimensionless coefficients of conformal energies."
+There is no need to rewrite any derivation or introduce another
+temperature convention.
+
+4. REPAIR ADVISED: the chain translation reuses the constructed VOA's U
+-----------------------------------------------------------------------
+l01:232--274 names the translation U immediately after many chapters in
+which U denotes the central-charge-eight vertex algebra.
+This is local and not a mathematical contradiction, but the use is avoidable.
+Suggested name: U_tr, with U_tr^L=1, leaving the color action A unchanged.
+The Fourier sign and all momentum selection equations are correct.
+
+5. Optional short bridge: name the charge-six full theory explicitly
+-------------------------------------------------------------------
+c06:99--166 carefully constructs the chiral pair C6 subset V_N and its
+transported extension algebra. It then describes a route to physical
+charge-six defects, with the correct analytic qualifications. Unlike
+r05, this section does not display the resulting full Hilbert space.
+For a first-year physics reader, one short paragraph could say that,
+once the quoted positive extension/full-theory bridge is applied, the
+ordinary diagonal lattice theory is
+  H_{N,diag} = direct sum over lambda in N*/N of
+              V_{N+lambda} tensor overline{V_{N+lambda}},
+with 39 lattice sectors and c_L=c_R=6.
+The transported noninvertible defects preserve C6, not every V_N current.
+This would immediately explain how a pointed maximal lattice category
+coexists with the smaller-algebra-preserving Haagerup defect factor.
+
+Keep the original-versus-selected qualification: the transported algebra
+in c06 is the actual original E8/U algebra A. Its boundary category is
+whichever H2/H3 possibility that original embedding realizes. Do not rename
+it the selected canonical H3 algebra without making that additional
+selection. The chapter currently preserves this scope; the extra paragraph
+would only make the full-theory object visible.
+
+6. Optional very small notation/readability aids
+------------------------------------------------
+* c06:358--367 calls the full opposite irrational commutant M_f.
+  l05:171 uses M_f for the alpha-fixed finite algebra module. Both are
+  explicitly defined, but M_fix in l05 would eliminate a possible false
+  connection between unrelated constructions.
+* r06:173--182 calls the two internal sl2 labels "left and right" and
+  refers to a "right spin-two multiplet". These are internal current
+  spins, not spacetime conformal spins or opposite chirality. r05:196--198
+  already explains this correctly. A short reminder in r06 would make
+  the weight-two counting easier to enter independently.
+* The l01 category notation H2/H3 is plain H, while most earlier chapters
+  use \mathcal H_2/\mathcal H_3. Once path-space notation is repaired,
+  harmonizing the category font would be useful but is not essential.
+
+The six theory layers, checked against their actual claims
+----------------------------------------------------------
+A. Diagonal U theory:
+   r05:20--31 specifies canonical rational sewing and twelve U-module
+   pairings. Its nine lightest scalars have Delta=2/3, and the full
+   invariant sector for all twelve Verlinde lines is U tensor Ubar.
+   r07 derives that projector from modular orthogonality. The theory
+   carries the center's twelve canonical Verlinde lines; it is not
+   being silently assigned the six-line H3 action of the E8 extension.
+
+B. Selected E8 extension:
+   r05:33--57 uses H', not the original H, and the actual canonical
+   algebra 1+b+2a. Equal characters of a and c0 are explicitly not
+   used to identify algebra multiplication or the embedding.
+   r07 uses C=Rep(U)_A for its six boundaries and C x C^op for its
+   36 U-preserving defects. The first-factor action has invariant
+   space U tensor H'bar, giving 1488 dimension-two scalars; both
+   factors give 36. These agree with r05.
+
+C. Rational charge-six commutant:
+   c06 supplies mutual lattice commutants, a specific rationality
+   theorem, Rep(C6)=P39^rev x Rep(U), and the transported original
+   algebra including its multiplication. It does not identify C6
+   with the pointed lattice extension V_N.
+   The reverse coset's 6 Z_L0 is a repeated-branching prescription,
+   not a six-vacuum critical theory or an identified gapped vacuum
+   module. This is consistent with the warning in r08:284--299.
+
+D. Irrational chiral commutant:
+   c06 distinguishes the exact semiconformal stress e of charge c_*,
+   the actual N_e vacuum algebra, and several proposed full spaces.
+   It does not equate a commuting stress with a tensor factor.
+   The conditional trace-divergence theorem assumes the all-grade
+   opposite-algebra identity. The strict diagonal continuum theorem
+   has a different state-space hypothesis and gives c_eff=1.
+   Neither is treated as a global no-go for c_* local theories.
+   l02 and l06 correctly refrain from relabeling c_* as the chain's
+   measured central charge.
+
+E. Physical chain:
+   l01 fixes the real unitary H3 associator, regular periodic closure
+   and H=-sum P_rho. The finite H2/H3 trace distinction and the
+   open-H2 entropy warning do not migrate between Hamiltonians.
+   l02--l04 retain finite-size, finite-source and finite-entanglement
+   qualifications. The inventory of charges does not identify tube
+   modules or imply a fully specified continuum category.
+
+F. Gapped comparisons:
+   l05's Q lies in the nonbraided H3 line category; its right modules
+   are vacua for a category action, not the braided extension-module
+   category Rep(U)_A from r07. This distinction is explicit.
+   Four exact tensors, a sufficiently long parent and its positive
+   gap do not prove the short missing-channel parent or the physical
+   rho-projector Hamiltonian is gapped. The theorem's Hilbert-space
+   and symmetry scope is correct.
+   Vacuum Frobenius form factors are ordinary finite-algebra moments,
+   not CFT three-point coefficients unless a separate limiting
+   operator projection is demonstrated.
+
+Normalization checks passed
+----------------------------
+* c always denotes one chiral charge: r01 cylinder shift, r05
+  E=Delta-2/3 and E_vac=-4*pi*v/(3L), l02 Casimir term, and the
+  thermal modular moments all agree. The suggested temperature rename
+  above removes only a symbol conflict.
+* Stress norm c/2, unit stress sqrt(2/c) T, and the unit external
+  primary coupling h sqrt(2/c) agree across r01, r06, l02 and l03.
+  At c=8,h=2 the coefficient is one. The pants Schwarzian uses one
+  chiral stress and gives B sqrt(c/8), with no extra factor of two.
+* The primary pants ratio divides by the same-shape vacuum overlap;
+  cylinder factors are not inserted twice. The vacuum amplitude
+  exponent is c/8 (the squared-overlap logarithm has coefficient c/4).
+  Its outgoing conjugation matches the OPE coefficient convention.
+* r01, r05 and l06 all use h=p_L^2/2 and the circle convention
+  p_L=m/R+nR/2, self-dual R=sqrt2. The l06 shift quotient R/n
+  and the r05 enhanced-current boost have this same convention.
+* The r06 raw lattice gauge has norms (4,40,40); normalized
+  exponentials have unit norms. The distinction is explicit, so
+  the defining u's norm 12 and the 1/sqrt3 unit expansion agree.
+* Chiral adjoints stay chiral in r01 and r06. Full scalar dimensions
+  are twice the chiral top weight only under the specified equal
+  pairing. Fractional twisted spins in r07 are not asserted to be
+  ordinary bosonic local spins.
+* The physical Fourier sign in l01 raises lattice momentum by m.
+  l02 consequently uses H_2 -> (2*pi*v/L)(L_-2+bar L_2).
+  Carrier momenta +/-2*pi/3 are separated from residual conformal
+  spin and from the proposed internal translation C3 in l03/l06.
+* The line invariance eigenvalue is d, not 1, in both r07 and l01.
+  An intrinsic alpha-neutral state need not be fully invariant;
+  l02's neutral light chi/epsilon fields are separated from the
+  source-visible fully invariant singlet.
+* Closed-ring entropy uses c/3, open-chain entropy c/6, and the
+  one-cut finite-entanglement formula c(1+1/n)/12. Cat mixing and
+  the ordinary height partial trace are identified separately.
+* Top dimensions, categorical dimensions and primary-component
+  multiplicities are kept distinct in r03/r05. Character equality
+  a=c0 does not erase their categorical or defect distinction.
+* The Cardy phase test in l06 assumes the actual identity-algebra
+  sewing, complete isolated shells and positive nonvacuum weights.
+  It does not contradict the diagonal c8 construction: that theory
+  does not have the required isolated real two-dimensional light
+  shells. Its c1 top has dimension three, hence nine bulk components.
+
+Priority
+--------
+Fix item 1. Items 2--4 are small changes that improve the most delicate
+normalization transitions. Item 5 is an optional one-paragraph bridge,
+not a request for more coset machinery. No broad scientific rewrite,
+new claim, numerical run, or length-driven expansion is indicated.
+
+Implementation follow-up
+-----------------------
+After the read-only review, root explicitly requested the lattice edits.
+Items 1, 2 and 4 are now implemented in l01/l02, and the l02 part of
+item 3 uses beta_* consistently with a cross-reference to dimensionless
+b=2*pi. Affected exercise statements and l_solutions were updated.
+Text searches found no remaining old path-space or estimator notation in
+these files. Root was notified before the planned solution reorganization.
+No other author's chapter was edited.

@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,xurl}
+\input{c8_physics_20260927/manuscript_refs.tex}
+\newcommand{\QQ}{\mathbb Q}\newcommand{\CC}{\mathbb C}\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\Rep}{\operatorname{Rep}}\newcommand{\HH}{\mathcal H}\newcommand{\one}{\mathbf1}
+\newcommand{\artifact}[1]{\path{#1}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[proposition]{Remark}
+\setlength{\emergencystretch}{2em}
+\title{What remains to formalize in Lean\\A section-by-section assessment of the $c=8$ draft}
+\author{Companion assessment based on the local Lean and Mathlib sources}
+\date{27 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The existing Lean proofs verify a few finite algebraic implications;
+they do not formalize the lattice construction or the Haagerup CFT
+theorem. This assessment distinguishes a useful conditional lemma from
+an end-to-end formalization, records reusable library infrastructure,
+and assigns conversion difficulty to every section of the manuscript.
+The original coverage assessment is retained, with navigation updated
+to the current manuscript's sections and appendices; an additional
+assessment covers the physics sections and their new exact datasets.
+The frozen original remains available with the archived baseline.
+Two additional Lean lemmas check
+the real-number rearrangement and positive division used in the thermal
+tail bounds, with their analytic premises explicit. The Python
+arithmetic certificates and outward-rounded intervals remain separate
+from these kernel-checked implications.
+The estimates describe dependency and proof-engineering difficulty,
+not a prediction of elapsed time or a claim that no relevant external
+formalization exists.
+\end{abstract}
+\tableofcontents
+\paragraph{Version and manuscript links.}
+All operative section, appendix, proposition, and page references below
+link to the current \artifact{hi_cft_c8_proof.pdf} through its stable
+LaTeX labels. Keep the companion and manuscript PDFs in the same
+directory to follow these links. The mathematical construction is now in
+Appendices~\msref{sec:construction}--\msref{sec:comparison}; the ledger,
+formalization, and build records are in
+Appendices~\msref{sec:ledger}--\msref{sec:compilation}.
+The concordance retains earlier numbers only as historical identifiers
+for the 55-page manuscript archived at
+\artifact{c8_physics_20260927/baseline/hi_cft_c8_proof.pdf}.
+The frozen original assessment remains in
+\artifact{c8_reviewability_20260927/lean_assessment.tex}.
+Updating navigation does not change the assumptions or claimed scope
+of any Lean declaration.
+\input{c8_physics_20260927/lean_baseline_assessment.tex}
+\input{c8_physics_20260927/lean_assessment.tex}
+\end{document}

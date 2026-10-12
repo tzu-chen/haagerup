@@ -1,0 +1,151 @@
+Final physics-reader route review
+Reviewer: scope_lattice
+Scope: r00_reading_guide.tex against the actual chapter inputs in
+haagerup_cft_textbook.tex, plus prerequisite use in the chain and coset
+chapters. Read-only review; no live edits, jobs, or builds.
+
+ASSESSMENT
+
+The guide accurately describes the actual order. Part I gives fusion
+spaces, CFT, lattice VOAs, the six Haagerup lines, centers, and modular
+data. Part II develops the explicit construction through unitarity and
+then characters. Part III treats full theories and sewing. Part IV
+starts with cosets and then treats the physical chain. The existing
+Ising tour is particularly effective: it supplies one completely
+specified comparison theory across otherwise different mathematical
+languages, without implying that it is the Haagerup chain.
+
+No global chapter reordering is needed. The printed order is sensible
+for a reader following the existence argument. It nevertheless delays
+the first concrete physical-chain calculation until Chapter 19 and
+places the long coset frontier before it. A beginning physics reader
+can profitably visit the exact Ising calibration and the elementary
+fusion-path construction earlier, then return to the research
+construction. The current prose route at r00:170-178 allows this but
+does not give actual chapter references or a checkable result to work
+toward.
+
+I drafted one optional eight-row route table in
+editorial/physics_reading_route_table.tex.txt. It names existing
+chapter labels, gives a concrete skill at each stage, and returns to
+the existence proofs rather than silently bypassing their hypotheses.
+The row on structural proofs deliberately describes following the
+logical dependencies, rather than promising that one short
+calculation proves rationality or complete unitarity.
+
+The table is intended immediately after the existing Ising-tour
+paragraph, or as a replacement for the physics half of the general
+route paragraph. It supplements the printed order, not the chapter
+contents. It should not be accompanied by a proposed number of days
+or hours to master the material.
+
+ACTUAL CHAPTER LABELS CHECKED
+
+1 ch:fusion; 2 ch:cft; 3 ch:vertex_algebras; 4 ch:haagerup;
+5 ch:centers; 6 ch:modular; 7 ch:lattice_embedding;
+8 ch:finite_closure; 9 ch:factors; 10 ch:regularity;
+11 ch:branching; 12 ch:unitarity; 13 ch:characters;
+14 ch:full_theories; 15 ch:correlators; 16 ch:defects;
+17 ch:sewing; 18 ch:cosets; 19 ch:chain; 20 ch:scaling;
+21 ch:overlaps; 22 ch:tensor_networks; 23 ch:gapped;
+24 ch:identification; 25 ch:arithmetic; 26 ch:related-categories.
+The draft uses references rather than these hard-coded numbers.
+
+FOUR TARGETED PREREQUISITE BRIDGES
+
+1. Bogoliubov normal form and the fermionic zero-point energy.
+   Most useful actual addition.
+   Location: l02_scaling.tex:148-188.
+
+   The particle-hole matrix, parity preservation, and NS/R projection
+   are explained well. The transition from its positive eigenvalue to
+   E_0=-(1/2) sum_k epsilon(k) assumes familiarity with the normal form
+   of a quadratic fermion Hamiltonian. A beginning reader may otherwise
+   wonder why the sum counts all allowed k yet contains a factor 1/2.
+   A two-sentence bridge after the Bogoliubov explanation would close
+   the gap:
+
+   "The transformation is canonical: the new operators gamma_k obey
+   the same fermion anticommutation relations. The diagonal Hamiltonian
+   is H_I=sum_k epsilon(k)(gamma_k^dagger gamma_k-1/2), with each
+   allowed quasiparticle momentum counted once; its empty-mode energy
+   is therefore minus one half of the dispersion sum."
+
+   Retain the following R-sector paragraph: its required zero-mode
+   occupancy is precisely the parity-projection exception to the
+   empty-mode description, and costs zero energy at criticality.
+   This is a missing intermediate step, not a correction to the
+   energies already proved.
+
+2. Affine level, GKO subtraction, and the diagonal level forty.
+   A cross-reference is enough; do not rederive the whole theory.
+   Location: c06_cosets.tex:323-341.
+
+   The reader meets "compact diagonal" and "GKO stress" after many
+   intervening chapters. The relevant prerequisites already appear in
+   r02_vertex_algebras.tex:560-621 and the Ising branching example
+   ex:voa-Ising-branching; c03_factors.tex:45-64 explains the finite
+   integrable label set and distinguishes affine fusion from top-spin
+   tensor products.
+
+   Suggested short reminder:
+   "Here GKO means the diagonal affine coset construction used in
+   Worked example [ex:voa-Ising-branching]: the current double poles
+   add the levels, while the coset stress subtracts the diagonal
+   Sugawara stress from the two numerator stresses."
+
+   This makes the level 1+39=40 and the displayed central-charge
+   subtraction immediately reconstructible. The existing rational
+   identification and Haagerup-preservation caveats remain necessary.
+
+3. PCT-real versus coordinatewise real.
+   Optional backward cross-reference.
+   Location: c06_cosets.tex:20-22 and :331.
+
+   PCT is not undefined in the book: r02_vertex_algebras.tex:701-726
+   explains its radial-adjoint meaning and transport under a gauge
+   change; c01_lattice_embedding.tex treats the actual compact gauge.
+   But a physics reader jumping to reduced theories may confuse
+   PCT-real with real coefficients in the displayed exponential basis.
+
+   A parenthetical at first use is sufficient:
+   "PCT-real means fixed by the antilinear radial-adjoint involution
+   of Chapter [ch:vertex_algebras], with the positive form transported
+   in the chosen gauge."
+
+   No separate spacetime-PCT digression is needed. The chapter already
+   gives a good definition of semiconformality and of the commutant.
+
+4. Direct integrals and partition densities.
+   Useful one-sentence definition before the strict continuum result.
+   Location: c06_cosets.tex:672-690.
+
+   The text correctly distinguishes a partition density from a literal
+   finite Hilbert-space trace, and states the positive-measure and
+   modular-inversion hypotheses. The term "direct integral" itself is
+   introduced without a beginner's definition.
+
+   Suggested bridge:
+   "A direct integral is the continuum analogue of a direct sum of
+   sectors: a measure replaces the sum over module labels. Integrating
+   their characters with that measure defines a partition density,
+   whose normalization and modular law require the assumptions stated
+   below."
+
+   Avoid asserting that a finite Laplace integral is automatically the
+   trace of the continuous Hilbert-space operator, or that every
+   noncompact theory has a unique canonical density. The present
+   conditional proposition deliberately does not assume either claim.
+
+ALREADY ADEQUATELY EXPLAINED
+
+No new prerequisite sections are needed for ordinary versus categorical
+symmetry, constrained path Hilbert spaces, NS versus R boundary
+conditions, conformal spin versus lattice momentum, Schmidt
+decomposition, current-current marginal running, Sugawara's basic
+formula, or branching grade. Their local explanations and existing
+references now give sufficient entry points. The compact-versus-
+noncompact and all-branches-diagonal hypotheses in the coset chapter
+are also stated carefully. The remaining challenge is the amount of
+material, which a concrete route can address better than further
+terminology or warnings.

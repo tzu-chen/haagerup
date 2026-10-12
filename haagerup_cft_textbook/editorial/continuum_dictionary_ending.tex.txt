@@ -1,0 +1,49 @@
+% Proposed insertion in l06, for root review. Not integrated.
+% Place after the present statement of the limiting primary-field dictionary.
+% This explains the operational content without repeating the opening checklist.
+
+To make such a dictionary concrete, choose a candidate full CFT and a
+fixed scaling-dimension cutoff. Track the entire low-energy space below
+that cutoff along a specified size sequence, including the sectors
+required by the proposal. A single assignment of these spaces must
+match rescaled energies, residual momenta, and symmetry actions.
+Near-degenerate multiplets permit a change of basis; they do not permit
+a different field identification for each observable. The vacuum and
+velocity must likewise be shared.
+
+For each proposed continuum field, choose a controlled sequence of
+lattice operators and its normalization and mixing coefficients. Use
+that same choice for vacuum-to-field amplitudes, matrix elements
+between primary states, and descendant matrix elements. The first
+group fixes the two-point normalization; the second tests OPE
+coefficients; the third tests the Ward identities and descendant
+assignment. Fitting an independent scale to each matrix element would
+discard precisely the consistency that makes this a field dictionary.
+Several microscopic recipes for the same field provide additional
+checks when their separately fixed limits agree.
+
+A correction model should then explain several observables using the
+same irrelevant or running couplings and predict levels or amplitudes
+not used in the fit. Example~\ref{ex:scaling-Ising-calibration} shows
+that two valid finite-size calibrations can approach the same limit
+from opposite sides. Example~\ref{ex:full-current-logarithms} shows
+that one running coupling can produce different logarithms in different
+fields. These are lessons about consistency, not correction exponents
+to assign to the Haagerup chain.
+
+A finite, mutually consistent table can support a strong numerical
+identification. A proof that the chain has that scaling limit requires
+further control of convergence of the state and operator data,
+compatibility as the cutoff increases, and the resulting continuum
+correlations. The existence of the candidate CFT is a separate
+question from this convergence. Finally, the lattice lines must have
+the claimed limiting action and junction spaces, with associators
+equivalent to the physical $H_3$ data. Agreement of loop dimensions
+or fusion multiplicities alone does not establish that part of the
+dictionary.
+
+% Optional replacement/expansion of the existing gapped-alternative sentence:
+% For a gapped phase with q thermodynamic vacua, separate a collapsing cluster
+% E_a(L)-E_0(L)->0 for 0<=a<q from liminf_{L->infty}(E_q(L)-E_0(L))>0,
+% and require finite connected lengths within pure vacua. The exact
+% rank-four comparison module does not predetermine q for the physical chain.

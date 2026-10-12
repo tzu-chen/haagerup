@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "schema": "haagerup-c8-physics-spectrum-v1",
+  "order": 24,
+  "complete_full_CFT_Delta_max": 24,
+  "characters": 12,
+  "character_rows_including_E8": 325,
+  "diagonal_sector_rows": 3410,
+  "diagonal_Delta_spin_rows": 2582,
+  "E8_Delta_spin_rows": 325,
+  "checks": {
+    "published_first_four_columns": true,
+    "all_reported_character_coefficients_nonnegative_integral": true,
+    "all_reported_Virasoro_multiplicities_nonnegative_integral": true,
+    "all_chiral_descendant_reconstructions": true,
+    "independent_E8_eta_product_identity": true,
+    "spin_reflection_and_unitarity": true,
+    "explicit_low_spectrum_controls": true,
+    "thermal_interval_consistency": true
+  },
+  "source_sha256": {
+    "c8_physics_20260927/spectrum.py": "fde4f08d4263ba4d9223ccb94666efe955c356ed7f65eb172a1bc10dc082ec31",
+    "hi_cft_third_flavoured_trace_check.py": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b",
+    "hi_cft_third_rank3_current_series.py": "d93ec1fe4b5bb8db6c616a67ef3e9f2935010e68c43563cf5d39ce457b3fe948",
+    "hi_cft_20260923_next_structure_conditional_characters.md": "671c9468b075894f5b90008a611fbac1a36f684a85ea082916c6587ecc92dcae"
+  },
+  "output_sha256": {
+    "characters.json": "b03b49bb3c05a5db467a15662b1202405b7cbb704afd1dd6bd6bdc5d0fc7fa80",
+    "characters.tsv": "df42c0542d7b7e707a270469be29addccc7f42752c5652a1f464c1cc51e75a2c",
+    "fundamental_matrix.json": "66e76aee17dd65a5bcbb8a47065cd5229e5ef0204508437d20bef4f62bdad535",
+    "diagonal_sector_spectrum.tsv": "692640425ba789e688a941b8e822d7a0b5043a9cfab06626570c4b040859b3d3",
+    "diagonal_spectrum.tsv": "8db9e9f9cd6e09863212bc5078b87dbbbc9b84b0eff72bc30d806be2b4a6c80c",
+    "e8_spectrum.tsv": "6a82b9d25bc1e7e81dbb2e9547b3f974c4020a2a818e341ad899860291a924fb",
+    "scalars.tsv": "c5910a6ecc569ddcac03cadde0b8dace07e530f8c8119b8510f74dfa9a6fb53b",
+    "low_spectrum.json": "df85361f113e9f24c549ecd2e68c3f1615edcb204b2dc56f6cb064e2d28a5956",
+    "thermal.json": "1ba761d39345fe89015718745b2daf2f4666ba948f885e432efdfafa085ca5d9",
+    "thermal.tsv": "2d88f78a6ad1b908448a1b5119f9d940b3d3e00fd1321a7ea0d74e1a7015a962",
+    "thermal_readable.tex": "d606d9b9a6601a0de280b7017fd34db6698e40850654675438981e3f41a087b9"
+  },
+  "elapsed_seconds": 0.8658673230092973,
+  "peak_RSS_KiB": 26180,
+  "scope": "Arithmetic consequences of published modular data and manuscript character identification. No lattice modes, OPE coefficients, defect eigenvectors, existence proof, or Lean proof are computed."
+}

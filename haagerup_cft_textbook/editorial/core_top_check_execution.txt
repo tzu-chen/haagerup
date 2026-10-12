@@ -1,0 +1,16 @@
+Core-top exact arithmetic check
+
+Completed UTC: 2026-10-05T21:15:33.589731+00:00
+Working directory: /home/tzuchen/Codes/haagerup/haagerup_cft_textbook
+Command: ~/.local/bin/research-safe-run --wait --limit-mib 128 --memory-mib 128 --threads 1 -- timeout 30s python3 check_core_tops.py
+Static review: review_lattice_core_top_checker_static.txt; root inspected the complete standard-library execution path.
+Estimate: below 1 MiB arithmetic storage, below 32 MiB process RSS; 128 MiB AS and whole-job memory reservation, one CPU.
+Pre-run host MemAvailable: 53694480 KiB; inspected cgroup ancestors had no lower memory.max.
+The first sandboxed invocation could not reach the user systemd manager and refused without admitting a job. The same central-guard command then ran with approved access to that manager.
+Guard admitted slot 1/2, CPU 0, 128 MiB memory, 128 MiB AS, 8192 MiB host reserve. Exit status 0.
+All fourteen rows, finite cutoff, charge multiplicities and coefficientwise 17/10 certificate passed.
+Process high-water RSS sampled before JSON output: 15.92578125 MiB.
+The guard printed sampled peak scope memory 0.0 MiB because the job finished between its samples; this is not a claim of zero memory use.
+Checker SHA256: 4418af14fd300ef2c50da761d4cb62ae660665aacad7b69bb87ecf905e2fee80
+Guard SHA256: 09b9986966402a73bba8e078884a50b5762c4980485ea295e8cca2e02fc8ae63
+Scope excludes the actual VOA embedding, compatible-top lemma, large lattice certificates, and every stopped chain continuation.

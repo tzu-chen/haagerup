@@ -15,7 +15,10 @@ a tensor automorphism of the identity functor; on simples it is a function
 `t : ι → G` (scalars in `G = ℂˣ`) with `t_i t_j = t_l` whenever `l ⊂ i ⊗ j`.
 That this is how monoidal automorphisms of the identity act on simples (Schur, naturality,
 monoidality) is proved in `Category/MonoidalAutomorphism.lean`
-(`IsHIRing.monoidalAut_eq_refl`, `IsHIRing.monoidalIso_eq`); the based-ring statement proved here
+(`IsHIRing.monoidalAut_eq_refl`, `IsHIRing.monoidalIso_eq`), and the uniqueness of pivotal
+structures (monoidal isomorphisms `𝟭 ≅ (-)ᘁᘁ`) is `IsHIRing.pivotalStructure_eq` in
+`Category/Pivotal.lean` (with the monoidal double dual of `Category/DoubleDual.lean`); the based-ring
+statement proved here
 is that
 every such `t` is identically one (for any `m ≥ 1`, in particular `m = 1`):
 `ρ² ∋ 1, ρ` gives `t_ρ² = 1 = t_ρ`, `ρ² ∋ aρ, a²ρ` gives their scalars, and

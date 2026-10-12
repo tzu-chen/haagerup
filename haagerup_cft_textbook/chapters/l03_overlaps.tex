@@ -1,0 +1,1028 @@
+\chapter{Local fields, sewing overlaps, and Ward tests}
+\label{ch:overlaps}
+
+Energy levels tell us which states might exist; matrix elements tell us how
+their fields interact. This chapter develops two ways to approach those
+interactions from a lattice chain. One uses fixed local operators and their
+matrix elements. The other glues normalized wavefunctions into a
+pair-of-pants geometry. Both are natural consequences of the state-operator
+correspondence, but they have different finite-size corrections. We derive
+phase-independent three-point invariants, the unavoidable descendant content
+of a spatially averaged primary, and a useful response test for a proposed
+running coupling. These calculations also explain why a large overlap with
+one low state is not a general error bound for an OPE coefficient.
+The primary and descendant conventions are those of
+Chapter~\ref{ch:cft}; Chapter~\ref{ch:sewing} explains the full-CFT
+consistency conditions that any limiting overlap interpretation must obey.
+
+\section{From a local lattice source to a normalized field}
+\index{operator calibration}
+
+Let $o_j$ be a fixed finite-range lattice density. Its momentum-filtered
+average is
+\[
+ O_k=\frac1L\sum_j e^{-ikj}o_j.
+\]
+For a neutral source its vacuum mean should first be subtracted. For a
+field at a nonzero carrier momentum, the phase removes that carrier before
+comparison with a residual scalar zero mode. The support and coefficients
+of $o_j$ should be kept fixed while $L$ changes.
+
+Suppose that in a critical limit
+\[
+ o_j\sim a_\phi\phi(x)+\sum_ba_b\mathcal O_b(x).
+\]
+The coefficient $a_\phi$ is a nonuniversal microscopic normalization.
+If $|\phi\rangle$ is the corresponding unit-normalized cylinder state,
+then
+\[
+ A_\phi(L)=\langle\phi|O|0\rangle
+       \sim a_\phi(2\pi/L)^{\Delta_\phi}
+\]
+in a fixed coordinate convention. A ratio such as
+\begin{equation}
+ c_O(L)=\frac{\langle\phi^\dagger|O|\phi\rangle}
+                    {\langle\phi|O|0\rangle}
+ \label{eq:lattice-cubic}
+\end{equation}
+can cancel $a_\phi$ and the common cylinder factor. Under convergence to
+the intended primary insertion and states, it approaches the normalized
+three-point coefficient $C(\phi,\phi,\phi)$.
+
+The conditional phrase matters. The denominator tests $O$ on the vacuum;
+the numerator tests it on an excited state. An unwanted operator can have
+a small vacuum-to-low-state matrix element and a substantial excited-state
+matrix element. No algebraic inequality turns a single large vacuum
+overlap into a uniform operator-norm estimate.
+
+\subsection{A finite-dimensional operator optimization}
+
+One can choose a span of local words $o^{(a)}$ with the desired charge and
+momentum and set $O=\sum_ac_aO^{(a)}$. The source Gram matrix is
+\[
+ G_{ab}=\langle0|(O^{(a)})^\dagger O^{(b)}|0\rangle.
+\]
+The source squared norm is $c^\dagger Gc$. Linear constraints can normalize the
+overlap with a target and cancel overlaps with selected unwanted states.
+Minimizing the Gram norm subject to those constraints is a finite linear
+algebra problem. Null operator directions must be removed consistently;
+otherwise a formally large coefficient can represent a zero or nearly
+zero source.
+
+The resulting recipe is useful when trained at one reference size and
+then transferred unchanged. Retraining independently at every size may
+produce a sequence of operators with no fixed local continuum limit.
+Equally, choosing the recipe that most closely matches a favorite CFT
+value makes subsequent agreement circular. Predetermined operator ranges,
+all successful recipes, and failures should remain visible.
+
+\begin{example}[Solving the source optimization]
+Assume the independent source Gram matrix is positive definite,
+and define $b_a=\langle0|(O^{(a)})^\dagger|\phi\rangle$.
+The target amplitude of $O=\sum_ac_aO^{(a)}$ is $b^\dagger c$.
+For $b\ne0$, minimizing $c^\dagger Gc$ subject to
+$b^\dagger c=1$ gives
+\[
+ c_{\mathrm{opt}}=\frac{G^{-1}b}{b^\dagger G^{-1}b},\qquad
+ \|O_{\mathrm{opt}}|0\rangle\|^2
+ =\frac1{b^\dagger G^{-1}b}.
+\]
+Indeed Cauchy--Schwarz applied to $G^{1/2}c$ and $G^{-1/2}b$
+gives the lower bound, saturated by the displayed vector. The
+maximum target fraction is $b^\dagger G^{-1}b$, the squared
+projection of $|\phi\rangle$ onto the allowed source span.
+
+For two normalized sources with real mutual overlap $1/5$ and
+target overlaps $3/5$ each, $G$ has diagonal entries one and
+off-diagonal entries $1/5$, while $b=(3/5,3/5)^T$.
+The optimum is $c=(5/6,5/6)^T$ and its fraction is $3/5$.
+Each source alone has fraction $9/25$. The improvement is a
+finite linear-algebra fact about the chosen span, with no CFT
+assumption. Whether this optimized source has a stable local
+continuum interpretation is the separate transfer-in-size test.
+\end{example}
+
+\begin{definition}[Vacuum-source fraction]
+For a normalized target $|\phi\rangle$ and source $s=O|0\rangle$, define
+\[
+ f_\phi=\frac{|\langle\phi|s\rangle|^2}{\|s\|^2}.
+\]
+The complement $1-f_\phi$ is exactly the fraction of the finite source
+squared norm outside that state, provided the norm and normalization are known.
+\end{definition}
+
+This is a strong finite statement, even if no other states have been
+saved. What it does not measure is $\|O|a\rangle\|$ for other $|a\rangle$
+or the difference between $O$ and a continuum operator in a norm valid on
+an entire low-energy space.
+
+\section{Complex phases and information that cannot be rephased away}
+\index{phase invariant!OPE coefficients}
+
+Normalize charged fields by
+$\langle\phi(z)\phi^\dagger(0)\rangle=|z|^{-2\Delta_\phi}$.
+The transformation $\phi\mapsto e^{i\theta_\phi}\phi$ preserves this
+normalization and changes the cubic $c_\phi=C(\phi,\phi,\phi)$ by
+$e^{3i\theta_\phi}$. Thus an individual complex cubic has a conventional
+phase.
+
+For the charge pattern
+\[
+ \phi:(1,0),\quad\chi:(0,1),\quad
+ \psi:(1,1),\quad\eta:(1,-1)
+\]
+under $C_3\times C_3$, define
+\[
+ \lambda=C(\phi,\chi,\psi^\dagger),\quad
+ \nu=C(\phi,\psi,\eta),\quad
+ \kappa=C(\chi,\psi,\eta^\dagger).
+\]
+The first charge is intrinsic alpha charge. The second records the
+proposed order-three internal part of the carrier translation,
+distinct from the residual conformal spin. Its survival as a faithful
+continuum symmetry is a premise tested in Chapter~\ref{ch:identification}.
+The rephasing algebra below uses the displayed selection rules; it
+does not by itself prove that continuum symmetry interpretation.
+All three are allowed by charge conservation. Their phases transform as
+\[
+ \lambda\mapsto e^{i(\theta_\phi+\theta_\chi-\theta_\psi)}\lambda,
+ \quad
+ \nu\mapsto e^{i(\theta_\phi+\theta_\psi+\theta_\eta)}\nu,
+\]
+and similarly for $\kappa$. Cubing and dividing by self cubics cancels
+the field phases:
+\begin{equation}
+ I_\lambda=\frac{\lambda^3c_\psi}{c_\phi c_\chi},\qquad
+ I_\nu=\frac{\nu^3}{c_\phi c_\psi c_\eta},\qquad
+ I_\kappa=\frac{\kappa^3c_\eta}{c_\chi c_\psi}.
+ \label{eq:triangle-invariants}
+\end{equation}
+The ratio $J=\kappa\nu/(\lambda c_\psi)$ is also invariant and obeys
+$J^3=I_\nu I_\kappa/I_\lambda$.
+
+\begin{example}[Parity need not make every invariant real]
+Suppose spatial parity acts as
+$P\phi=\phi$, $P\chi=\chi^\dagger$,
+$P\psi=\eta$, $P\eta=\psi$, in a suitable phase convention.
+Then $c_\eta=c_\psi$ and parity can make $\kappa$ and $c_\chi$ real,
+so $I_\kappa$ is real. But parity sends $\lambda$ to the different
+coupling $C(\phi,\chi^\dagger,\eta^\dagger)$. It does not send every
+field to its adjoint. It therefore does not force $I_\lambda$ to equal
+its complex conjugate.
+\end{example}
+
+A unitary symmetry that simultaneously conjugates all three fields in
+$I_\lambda$ would force its reality: its field phases cancel between
+numerator and denominator. A nonreal invariant can therefore obstruct
+such a symmetry. This is more informative than finding a complex entry
+in an arbitrary eigenvector basis. It is also different from the
+antiunitary conjugation associated with a real Hamiltonian.
+
+\begin{numericalrecord}[Finite mixed-tensor fingerprint]
+At $L=15$, prescribed range-four/five recipes give
+$|\lambda|\simeq1.420$--$1.432$. Three different choices of which
+field supplies the inserted local operator agree within approximately
+$.26$--$.68\%$ for matched recipes. The direct chi insertion gives
+\[
+ \Re I_\lambda\in[1.114433,1.119331],\qquad
+ \Im I_\lambda\in[-.203273,-.199851].
+\]
+These ranges describe deterministic operator variation. They are not
+confidence intervals for continuum data. The nonreal finite invariant
+is nevertheless unchanged by the saved state rephasings.
+\end{numericalrecord}
+Chapter~\ref{ch:identification} applies this invariant to a specified
+canonical Cardy hypothesis, with the required spectral completeness
+and sewing assumptions kept explicit.
+
+\section{A local primary creates an entire translation family}
+\index{descendant!global Virasoro}
+
+The state-operator correspondence gives a precise benchmark for a source
+fraction. Let $\phi$ be a scalar primary with $h=\bar h=\Delta/2$.
+On the plane,
+\[
+ \phi(z,\bar z)|0\rangle
+ =e^{zL_{-1}+\bar z\bar L_{-1}}|\phi\rangle.
+\]
+Radial quantization and the global conformal algebra imply
+\[
+ \|L_{-1}^n|h\rangle\|^2=n!(2h)_n,
+\]
+where $(a)_n=a(a+1)\cdots(a+n-1)$. This follows inductively from
+$[L_1,L_{-1}]=2L_0$.
+
+On the unit circle, spatial averaging keeps precisely the terms with
+equal left and right levels. The normalized scalar translation
+descendant is
+\[
+ |D_n\rangle=
+ \frac{L_{-1}^n\bar L_{-1}^n|\phi\rangle}{n!(\Delta)_n}.
+\]
+Its amplitude relative to the primary amplitude is $(\Delta)_n/n!$.
+Orthogonality of different energies then gives
+\begin{equation}
+ F_{\mathrm{vac}}(\Delta)=
+ \frac{\|O_0|0\rangle\|^2}{|\langle\phi|O_0|0\rangle|^2}
+ =\sum_{n=0}^{\infty}\left[\frac{(\Delta)_n}{n!}\right]^2.
+ \label{eq:vac-descendant-series}
+\end{equation}
+For $0\leq\Delta<1/2$, Gauss summation yields
+\begin{equation}
+ F_{\mathrm{vac}}(\Delta)
+ =\frac{\Gamma(1-2\Delta)}{\Gamma(1-\Delta)^2},\qquad
+ p_{\mathrm{primary}}=
+ \frac{\Gamma(1-\Delta)^2}{\Gamma(1-2\Delta)}.
+ \label{eq:primary-Gamma-fraction}
+\end{equation}
+The first daughter has relative amplitude $\Delta$ and squared weight
+$\Delta^2$. A pure local primary therefore creates more than its
+primary state. Demanding a source fraction of exactly one would impose
+the wrong continuum target.
+
+The convergence condition has a physical meaning. The equal-time
+two-point function behaves near coincidence as $|\theta|^{-2\Delta}$.
+Its spatial integral is finite precisely for $\Delta<1/2$. For larger
+dimensions, a microscopic contact region can dominate the unfiltered
+source norm even though its low-energy matrix elements have a good
+scaling limit.
+
+\subsection{Why a finite fraction can exceed the CFT fraction}
+
+Let $O=L^{-1}\sum_jo_j$. A regular short-distance contribution to its
+variance is of order $L^{-1}$, whereas the long-distance primary
+contribution is of order $L^{-2\Delta}$. Thus a possible expansion is
+\[
+ \operatorname{Var}(O)=A L^{-2\Delta}+B/L+\cdots.
+\]
+After normalization by the primary overlap squared,
+\begin{equation}
+ F_L=F_{\mathrm{vac}}+B'L^{2\Delta-1}+\cdots.
+ \label{eq:contact-correction}
+\end{equation}
+The coefficient $B'$ is not constrained to be positive: it measures
+the difference between a microscopic regularization and the ideal
+continuum contribution. At light dimensions near $.13$--$.28$, this
+correction decays much more slowly than $L^{-2}$.
+
+For example, using the conditional $L=18$ stress dimensions gives
+primary fractions approximately $.95865,.79759,.84008$ for
+$\phi,\epsilon,\chi$. Measured fixed range-five source fractions are
+approximately $.985,.962,.969$. These numbers do not prove that the
+continuum fields are impure or that genuine descendants have been
+removed. They show why finite source purity cannot be turned into a
+percent-level continuum OPE error merely by subtracting from one.
+
+\subsection{Excited sources have a different descendant coefficient}
+
+There is a related but different calculation for $O_0|\phi\rangle$.
+In this calculation $O_0$ is the unit-circle average of the normalized
+continuum primary. A microscopic source must first have its common
+vacuum-to-primary amplitude divided out before making this comparison.
+Suppose a scalar primary $\beta$ of weights $(h,h)$ occurs in
+$\phi\times\phi$, with coefficient $C_\beta$. For equal external
+weights, the chiral global OPE coefficient multiplying
+$L_{-1}^n\beta$ is $(h)_n/[n!(2h)_n]$. After normalizing left and right
+descendants, the scalar amplitude is
+\[
+ C_\beta\frac{(h)_n^2}{n!(2h)_n}.
+\]
+Consequently
+\begin{equation}
+ \|O_0|\phi\rangle\|^2\geq
+ \sum_{\beta\ \mathrm{scalar}}|C_\beta|^2
+ \sum_{n\geq0}\frac{(h_\beta)_n^4}
+ {(n!)^2(2h_\beta)_n^2}.
+ \label{eq:excited-descendant-bound}
+\end{equation}
+Other Virasoro directions and higher-spin primary families can add
+positive weight. The first scalar daughter amplitude here is
+$C_\beta\Delta_\beta/4$, whereas the vacuum-source amplitude above
+was $\Delta$. Mixing these two external-state geometries produces a
+factor-of-four error.
+
+If the identity is allowed in the channel, its global family contributes
+only the $n=0$ term. One should not substitute $h=0$ into the displayed
+ratio of Pochhammer symbols for $n>0$: the vacuum's translation
+descendants vanish. Other vacuum Virasoro directions, such as
+$T\bar T$, are separate positive contributions.
+
+\section{Ward vectors, phases, and nonorthogonal candidate spans}
+
+A candidate daughter should satisfy energy, momentum, norm, and matrix
+element tests together. A lattice approximation to a Virasoro mode can
+produce a Ward vector $S$. One may project it onto a fixed collection
+of residual-checked low states, but those states need not be exactly
+orthogonal after numerical reconstruction.
+
+Let the columns of $Y$ be the retained states, let
+$G=Y^\dagger Y$, and put $B=Y^\dagger S$. For positive invertible
+$G$, the actual orthogonal projector is
+\[
+ \Pi_Y=Y G^{-1}Y^\dagger,
+ \qquad \|\Pi_YS\|^2=B^\dagger G^{-1}B.
+\]
+If $A=Y^\dagger O|0\rangle$, the overlap with the coherently phased
+normalized Ward projection is
+\[
+ \frac{B^\dagger G^{-1}A}
+ {\sqrt{B^\dagger G^{-1}B}\,\langle\phi|O|0\rangle}.
+\]
+Independent rephasings of the numerical eigenvectors cancel in this
+formula. Replacing the complex amplitudes by their absolute values
+before forming the sum destroys that coherent test.
+
+In an earlier calculation, a two-candidate span at $L=15$
+has about $.9870$ of a conditional ideal daughter squared norm, yet only
+$.2418$ of the complete Ward-source squared norm. Its bare-source vacuum
+ratios have real parts near $.098$, compared with the conditional
+primary dimension $.1464$; trained range-five ratios are smaller.
+The attractive norm agreement therefore does not settle the family
+assignment. An energy near ``primary plus two'' is only one of several
+necessary checks.
+
+\begin{example}[A local improvement preserves an equal-energy numerator]
+For a fixed local operator $O$ and real $t$, define
+\[
+ O_t=O+t[H,[H,O]].
+\]
+Between exact energy eigenstates,
+\[
+ \langle n|O_t|m\rangle
+ =\bigl[1+t(E_n-E_m)^2\bigr]\langle n|O|m\rangle.
+\]
+If $\phi$ and $\phi^\dagger$ are exactly degenerate, the cubic
+numerator in \eqref{eq:lattice-cubic} is unchanged. With primary and
+daughter gaps $g_0,g_1$, their vacuum ratio changes by
+$(1+tg_1^2)/(1+tg_0^2)$. Choosing $t=-g_1(L_\star)^{-2}$ kills the
+daughter amplitude at one reference size while changing the primary
+denominator much less when $g_0\ll g_1$.
+
+The same fixed $t$ must then be used at every size. If the gaps scale
+as $L^{-1}$, the improvement vanishes relatively as $L^{-2}$ in the
+limit. Retuning $t$ with $L$ would be a different operator sequence.
+This example does not assert that the actual diagonal word recipes
+have this commutator form; it exhibits a concrete possible mechanism.
+\end{example}
+
+\section{Heat filtering and a conditional omitted-tail bound}
+\index{heat filtering}
+
+A positive-time filter reduces sensitivity to short-distance source
+weight. For exact finite eigenstates define
+\[
+ F_L(\tau)=
+ \frac{\|e^{-\tau(H-E_\phi)}O|0\rangle\|^2}{|A_\phi|^2}
+ =\sum_j\left|\frac{A_j}{A_\phi}\right|^2
+       e^{-2\tau(E_j-E_\phi)}.
+\]
+The candidate primary contributes one. In an ideal CFT, with
+$\omega_L=2\pi v/L$, the scalar descendants lie $2n\omega_L$ above
+it, giving
+\begin{equation}
+ F_{\mathrm{CFT}}(\tau)=
+ {}_2F_1(\Delta,\Delta;1;q),\qquad
+ q=e^{-4\tau\omega_L}.
+ \label{eq:filtered-hypergeometric}
+\end{equation}
+Keeping $\tau\omega_L$ fixed as $L$ grows suppresses microscopic
+energies while preserving nontrivial descendant weights. Keeping
+physical $\tau$ fixed sends $q\to1$ instead.
+
+Suppose a set $J$ of exact orthonormal eigenstates is retained and every
+omitted source-coupled state has energy at least $E_{\rm cut}$. Positivity
+then proves
+\[
+ 0\leq F_L(\tau)-F_J(\tau)
+ \leq e^{-2\tau(E_{\rm cut}-E_\phi)}
+ \left[F_L(0)-\sum_{j\in J}|A_j/A_\phi|^2\right].
+\]
+The full unfiltered norm is essential. So is the true omitted-energy
+cutoff: the largest energy among a few accurate Ritz vectors is not
+automatically such a cutoff. This distinction separates a rigorous
+positive bound from a useful conditional spectral diagnostic.
+
+\section{Sewing two circles into one}
+\index{wavefunction overlap}
+
+Let $L=L_1+L_2$. In a common height embedding, define the literal
+wavefunction overlap
+\[
+ A_{abc}(L_1,L_2)=
+ \langle c,L|\bigl(|a,L_1\rangle\otimes|b,L_2\rangle\bigr).
+\]
+The outgoing parent is a bra. Seams, orientation, fusion-vertex gauge,
+and normalization of all three states must be held fixed. Exact
+microscopic gluing is a well-defined finite operation even when its
+continuum description has not been established.
+
+\subsection{What the finite joining map actually does}
+\label{sec:overlap-literal-joining}
+
+The tensor product in the overlap formula is taken in the ordinary
+height embedding of Chapter~\ref{ch:chain}. It does not mean that two
+closed fusion paths automatically form a closed path of the combined
+length. Write
+\[
+ \iota_L:\HH_{\mathrm{path},L}\longrightarrow(\C^6)^{\otimes L}
+\]
+for the isometric embedding that sends each admissible path to its
+height word. Its adjoint deletes the forbidden-word components.
+After identifying the two ambient tensor products with the ambient
+length-$L$ space, the actual joining map is
+\begin{equation}
+ J_{L_1,L_2}
+ =\iota_L^\dagger(\iota_{L_1}\otimes\iota_{L_2}),
+ \qquad L=L_1+L_2.
+ \label{eq:literal-joining-map}
+\end{equation}
+Thus
+\[
+ A_{abc}
+ =\langle c,L|J_{L_1,L_2}
+             \bigl(|a,L_1\rangle\otimes|b,L_2\rangle\bigr).
+\]
+The children and parent are individually normalized before this
+contraction.
+
+To see the seam constraint, let $u$ and $v$ be allowed child words.
+The concatenated word retains all their internal edges, but replaces
+their two closing edges by
+\[
+ u_{L_1-1}\longrightarrow v_0,\qquad
+ v_{L_2-1}\longrightarrow u_0.
+\]
+The image under $J$ is the concatenated parent basis vector if both
+new edges are allowed, and zero otherwise. For example, the length-three
+words $(I_0,X_0,X_0)$ and $(I_1,X_1,X_1)$ are each valid closed
+paths. Their concatenation fails both new seam constraints:
+$X_0\rho$ does not contain $I_1$, and $X_1\rho$ does not contain
+$I_0$. Its image is zero. Concatenating $(I_0,X_0,X_0)$ with
+itself instead gives a valid unit-norm parent word.
+
+Distinct surviving child pairs give distinct parent words. Hence
+$J^\dagger J$ is the orthogonal projector onto the child pairs that
+survive the two seam tests; $JJ^\dagger$ projects onto the parent
+words whose two cut blocks separately close. In particular $J$ is
+a partial isometry: its nonzero singular values are one, and
+\[
+ \|J\|\leq1,\qquad
+ |A_{abc}|\leq
+ \bigl\|J(|a\rangle\otimes|b\rangle)\bigr\|\leq1
+\]
+for normalized states. One should not renormalize the projected joined
+vector separately for each pair of children. That would change the
+multilinear overlap tensor being compared with the pants amplitude.
+
+This elementary contraction property is also the source of the
+error bound used later. If $u,v$ and $\widetilde u,\widetilde v$
+are normalized child states with respective norm differences
+$\delta_1,\delta_2$, then
+\[
+ \|u\otimes v-\widetilde u\otimes\widetilde v\|
+ \leq\delta_1+\delta_2.
+\]
+Contracting with $J$ and a fixed unit parent cannot increase this
+bound. Dividing both amplitudes by the same nonzero vacuum overlap
+therefore gives a difference at most
+$(\delta_1+\delta_2)/|A_{000}|$. A small vacuum overlap can amplify
+an otherwise small absolute state error.
+
+\paragraph{Categorical cups use a different normalization.}
+There is no extra quantum-dimension factor in
+\eqref{eq:literal-joining-map}: its height basis is orthonormal.
+Square roots of quantum dimensions do occur when a graphical
+categorical contraction is converted to normalized states. For a
+simple object $x$, a standard unitary coevaluation
+$R_x:\one\to x^*\otimes x$ obeys
+\[
+ R_x^\dagger R_x=d_x\,1_{\one}.
+\]
+The cup vector of norm one is consequently $d_x^{-1/2}R_x$.
+For $x=\rho$, this uses the positive dimension
+$d=(3+\sqrt{13})/2$. The unnormalized closed cup--cap diagram
+evaluates to $d_x$, while the norm of its normalized cup is one.
+These statements concern categorical duality maps; they do not
+insert a universal $\sqrt{d_x}$ into a literal height overlap.
+A different graphical sewing must specify its duality maps and
+their conversion to the chosen orthonormal basis.
+
+The same distinction applies to gauge and phase choices. Under
+unitary changes of path coordinates $U_L$, representing the same
+finite map requires
+\[
+ J\longmapsto
+ U_LJ(U_{L_1}^\dagger\otimes U_{L_2}^\dagger).
+\]
+Transforming the states while silently keeping the old numerical
+joining map need not preserve the overlap. Independent rephasings
+of the three states give
+$A_{abc}\mapsto
+e^{i\theta_a+i\theta_b-i\theta_c}A_{abc}$ because the parent is a
+bra. Coherent phase conventions, or the invariant combinations
+already constructed, are therefore needed for complex comparisons.
+
+In the scaling picture, Euclidean time extends along three cylinders
+meeting at a pair of pants. Its conformal map to a punctured sphere
+relates ratios of overlaps to three-point functions. This geometric
+statement presumes that the chosen microscopic seams approach the
+specified continuum sewing.
+
+\subsection{The primary geometry factor}
+
+Put $x=L_1/L$ and define the positive entropy function
+\[
+ H(x)=-x\log x-(1-x)\log(1-x).
+\]
+An explicit cylinder coordinate is
+\[
+ z(w)=\frac L{2\pi}
+ \bigl[x\log(w-1)+(1-x)\log w+H(x)\bigr].
+\]
+The incoming punctures are at $w=1,0$ and the outgoing one
+is at infinity. The derivative vanishes at $w=1-x$; the
+constant $H(x)$ places this joining point at zero real cylinder
+time. Logarithm branches specify the seam phases.
+
+The local disk coordinates of unit-normalized cylinder states are
+$\xi_1=e^{2\pi z/L_1}$, $\xi_2=e^{2\pi z/L_2}$, and
+$\xi_3=e^{-2\pi z/L}$. Near the outgoing puncture use $u=1/w$.
+The minus sign is essential: the incoming ends have
+$\Re z\to-\infty$, while the outgoing end has
+$\Re z\to+\infty$; all three local coordinates must vanish
+at their respective punctures. Normalizing states by these disk
+coordinates already includes the cylinder-to-plane state factors;
+one must not insert a second factor $(2\pi/L_i)^{\Delta_i}$.
+Their inverse Jacobians have magnitudes
+\[
+ \left|\frac{dw}{d\xi_1}\right|=e^{-H/x},\qquad
+ \left|\frac{dw}{d\xi_2}\right|=e^{-H/(1-x)},\qquad
+ \left|\frac{du}{d\xi_3}\right|=e^H.
+\]
+A scalar primary of dimension $\Delta$ contributes the
+$\Delta$th power of the relevant magnitude. Dividing by the
+nonzero vacuum overlap with exactly the same lengths and seams
+cancels the overall conformal anomaly and its gluing normalization.
+Different vacuum shapes require a further shape factor, as in
+the current test below.
+The ideal CFT prediction for three scalar primaries in these coordinates,
+to which a correctly calibrated lattice ratio should converge, is
+\begin{equation}
+ \frac{A_{abc}}{A_{000}}
+ =e^{-H(x)[\Delta_a/x+\Delta_b/(1-x)-\Delta_c]}
+       C_{ab}^{\ c}.
+ \label{eq:primary-pants-factor}
+\end{equation}
+The coefficient is the plane correlator with the outgoing
+conjugate field at infinity. For nonzero spins the same
+calculation retains the holomorphic and antiholomorphic
+Jacobians separately; their coordinate phases must be fixed
+before comparing complex amplitudes.
+
+At equal halves the factor becomes
+$2^{-2\Delta_a-2\Delta_b+\Delta_c}$. For a normalized
+conjugate pair with outgoing vacuum, $C_{a\bar a}^{\ 0}=1$,
+so the ratio is
+\[
+ \exp\!\left[-\frac{\Delta_aH(x)}{x(1-x)}\right].
+\]
+This is the geometric function used in the later current test;
+for spinful conjugate fields it gives the magnitude, with the
+coordinate phase retained separately. At equal halves and
+dimension one its value is $1/16$.
+The exponential rescaling supplies an OPE estimator only if
+the lattice states actually converge to those primaries.
+
+\subsection{The vacuum size dependence}
+
+For the normalizable identity vacuum in this periodic pants geometry,
+the conformal-anomaly calculation gives
+\[
+ A_{000}(xL,(1-x)L)\sim C(x)L^{-c/8},\qquad 0<x<1
+ \quad\text{fixed}.
+\]
+The microscopic seam must approach the specified sewing, with no
+additional leading scaling field at the junction. The local twofold
+branch has scaling dimension $\Delta_2=c/8$; Section~\ref{sec:MPS-replica}
+derives that dimension from the Schwarzian. Applying it to the
+normalized three-cylinder geometry is the geometric input here.
+The squared overlap consequently has exponent $c/4$, and the
+logarithmic bipartite fidelity is
+$-\log|A_{000}|^2=(c/4)\log L-2\log|C(x)|+\cdots$.
+The primary ratios above had canceled this vacuum anomaly and could
+not determine it by themselves.
+
+At two sizes with the same split and seam, the constant cancels:
+\[
+ c^{(\mathrm{vac})}_{L,L'}
+ =-8\frac{\log|A_{000}(xL',(1-x)L')/A_{000}(xL,(1-x)L)|}
+          {\log(L'/L)}.
+\]
+This is a velocity-free finite-size diagnostic. Corrections to the
+leading geometric law remain in the ratio.
+
+The saved equal-split vacuum overlap is $.4306101916422253$ for
+$9+9\to18$, compared with the earlier $6+6\to12$ value
+$.47886168385663636$. Their two-size exponent gives
+$c^{(\mathrm{vac})}_{12,18}=2.0955399664$. This is an informative geometric observable;
+it does not control conical, bulk, or logarithmic corrections.
+
+\subsection{A stress overlap from the Schwarzian}
+
+Stress is not a primary, and this gives a particularly simple pants
+observable. With the same $x$ and $H(x)$, put
+\[
+ B(x)=x(1-x)e^{2H(x)}.
+\]
+For one normalized chiral stress state, the ideal pants map gives
+\begin{equation}
+ \left|\frac{A_{00T}}{A_{000}}\right|
+       =B(x)\sqrt{c/8}.
+ \label{eq:pants-stress}
+\end{equation}
+For example, an outgoing local coordinate can be written
+$\xi=e^{-H(x)}u(1-u)^{-x}$. Reversing its power series gives
+\[
+ u=e^H\xi-xe^{2H}\xi^2+\frac{3x^2-x}{2}e^{3H}\xi^3
+       +O(\xi^4).
+\]
+Thus $u'(0)=e^H$, $u''(0)=-2xe^{2H}$, and
+$u'''(0)=3(3x^2-x)e^{3H}$. The Schwarzian
+$u'''/u'-\tfrac32(u''/u')^2$ is
+$\{u,\xi\}_{\xi=0}=-3x(1-x)e^{2H(x)}$. Inserting the stress
+transformation law $T(\xi)=(du/d\xi)^2T(u)+(c/12)\{u,\xi\}$ and
+dividing by $\sqrt{c/2}$ gives the signed ratio
+$-B(x)\sqrt{c/8}$ in this coordinate convention, hence
+\eqref{eq:pants-stress}. A rephased stress state can change the
+sign; the modulus is invariant. At equal halves $B=1$.
+
+The value comes from the Schwarzian vacuum term, not from a primary
+coefficient $C(1,1,T)$. This explains why it survives even though an
+ordinary plane one-point function of stress vanishes. Agreement with
+the energy-Fourier estimator would be a useful common-stress test;
+it is not guaranteed at accessible sizes.
+
+\section{Connected overlap invariants}
+
+All eight overlaps with either vacuum or one selected field on each
+leg contain more information than a single three-field amplitude.
+Normalize by $A_{000}$, call the resulting quantities $R$, and set
+\begin{align*}
+ m_1&=R_{100},\quad m_2=R_{010},\quad m_3=R_{001},\\
+ B_{12}&=R_{110}-m_1m_2,
+ \quad B_{13}=R_{101}-m_1m_3,
+ \quad B_{23}=R_{011}-m_2m_3,\\
+ K&=R_{111}-m_1R_{011}-m_2R_{101}-m_3R_{110}
+       +2m_1m_2m_3.
+\end{align*}
+These are the algebraic analogues of connected moments. Under an
+independent affine change of external field on each leg,
+$X_i\mapsto u_iX_i+v_i1$, direct expansion gives
+\[
+ B_{ij}\mapsto u_iu_jB_{ij},\qquad
+ K\mapsto u_1u_2u_3K.
+\]
+Thus $K^2/(B_{12}B_{13}B_{23})$ is unchanged.
+
+For identical normalized Hermitian scalar primaries in an ideal pants geometry,
+the external coordinate factors cancel between the triple coefficient
+and the square root of the three pair coefficients. With consistent
+real signs,
+\[
+ \frac{K}{\sqrt{B_{12}B_{13}B_{23}}}=C_{XXX}.
+\]
+The pair factors must be nonzero. For a charged order-three field,
+$C_{XXX}$ can be nonzero while $\langle XX\rangle=0$; the
+identical-label quotient is then undefined. One must use an
+appropriate conjugate-label construction instead.
+For stress, its two- and three-point normalizations instead give
+\begin{equation}
+ c=\frac{8B_{12}B_{13}B_{23}}{K^2}.
+ \label{eq:connected-stress-c}
+\end{equation}
+The complex products, rather than products of absolute values, are
+required. A wrong sign can turn an inconsistent finite tensor into an
+apparently positive central charge.
+
+Affine cancellation has a definite scope. It removes identity mixing,
+leg rescalings, and the affine terms generated by stress coordinate
+changes. A physical nonidentity insertion at the branch point produces
+a four-point correlator with a connected part that need not be fixed
+by the lower moments. The scalar invariant therefore does not cancel
+every conical correction.
+
+\subsection{A stronger cancellation for three stresses}
+
+Stress has additional Ward identities that a general scalar lacks.
+Assume one common local branch expansion is used in all eight
+overlaps, with exact continuum vacuum or holomorphic stress on
+each external leg. A cover field of dimension $w$ contributes with
+relative size $L^{-w/2}$ at a twofold branch. Correlators of any
+nonvacuum Virasoro primary with only external stresses vanish:
+Ward recursion reduces them to the primary's zero one-point
+function. The same holds for its descendants. Only the vacuum
+branch family can contribute.
+
+An extra branch stress $T(b)$ acts on a plane stress correlator by
+\[
+ \sum_i\left[
+ \frac1{b-z_i}\partial_{z_i}
+ +\frac2{(b-z_i)^2}
+ +\frac{c}{2(b-z_i)^4}\mathcal R_i\right],
+\]
+where $\mathcal R_i$ removes the $i$th stress from that moment.
+These are respectively an infinitesimal displacement of a
+puncture, a leg rescaling, and an affine leg shift. The connected
+invariant \eqref{eq:connected-stress-c} is invariant under all
+three. Its linear response to the branch stress therefore vanishes;
+differentiating in $b$ gives the same result for every
+$\partial^nT(b)$.
+
+The first new vacuum quasiprimary is
+$\Lambda=:TT:-(3/10)\partial^2T$, with squared norm
+$N_\Lambda=c(5c+22)/10$. Choose plane punctures $0,1,\infty$,
+where the unperturbed connected pairs are $c/2$ and the triple is
+$c$. Ward identities give, for a branch $\Lambda(b)$,
+\begin{align*}
+ \delta B_{01}&=\frac{N_\Lambda}{b^4(b-1)^4},&
+ \delta B_{0\infty}&=\frac{N_\Lambda}{b^4},&
+ \delta B_{1\infty}&=\frac{N_\Lambda}{(b-1)^4},\\
+ \delta K&=\frac{2N_\Lambda(b^2-b+1)^2}{b^4(b-1)^4}.
+\end{align*}
+In $\delta\log c=\sum\delta B_{ij}/B_{ij}-2\delta K/K$,
+these cancel by the elementary identity
+\[
+ 1+(b-1)^4+b^4=2(b^2-b+1)^2.
+\]
+Thus even the linear weight-four correction, of nominal order
+$L^{-2}$, disappears. Differentiating also removes
+$\partial\Lambda$, of nominal order $L^{-5/2}$.
+
+Because the invariant is nonlinear, this does not yet control
+quadratic terms. For the deliberately incomplete branch state
+$1+tT(b)$, put $q=b^{-2}$, $r=(b-1)^{-2}$. Direct substitution
+of the stress Ward moments shows that the quadratic term in
+$\log c$ is
+\[
+ (c+2)\left[-\tfrac12(q^2+r^2+q^2r^2)+qr(q+r+1)\right]=0.
+\]
+The same polynomial identity proves the equality. Differentiating
+in the common branch location removes the mixed nonlinear
+$T,\partial T$ term. Vacuum fields through weight five are
+spanned by the derivatives just considered and $\Lambda$;
+the only nonlinear combinations below total weight six are
+$T^2$ and $T\partial T$. Hence every local branch correction
+through order $L^{-5/2}$ cancels under the stated hypotheses.
+
+Order $L^{-3}$ can survive. For example, the same bare branch
+at $b=1/2$, with $c=2$, gives
+$c_{\mathrm{connected}}(t)=2+6144t^3+O(t^4)$.
+This is a calculation of the allowed local branch contribution,
+not an error estimate for lattice data. Bulk irrelevant fields,
+external-state contamination, and independently regulated branch
+points are not removed by it. In particular it does not justify
+fitting every finite three-stress estimator to $c+aL^{-3}$.
+
+\begin{numericalrecord}[A useful disagreement between observables]
+The scalar connected overlap invariant is $1.12049321$ at $6+6$ and
+$1.12397612$ at $9+9$. Meanwhile the $L=18$ fixed range-five local
+epsilon sources give absolute self cubics approximately
+$.93242$--$.93755$. Both finite diagnostics are fairly stable, but they
+disagree substantially if both are read as the same continuum OPE
+coefficient. This is evidence that observable-dependent corrections
+remain, not an invitation to average the two numbers.
+\end{numericalrecord}
+
+The finite stress tensor supplies an even sharper consistency check.
+For equal halves, define the raw pair ratios
+\[
+ K_{13}=\frac{A_{T0T}A_{000}}{A_{T00}A_{00T}},\qquad
+ K_{12}=\frac{A_{TT0}A_{000}}{A_{T00}A_{0T0}}.
+\]
+The ideal Ward values are $K_{13}=1-16/c$ and
+$K_{12}=1+2/c$. A saved $6+6$ input-output ratio gives the
+encouraging effective $c=2.07127$. But its input-input ratio is
+$K_{12}=-4.21244$, which has the wrong sign relative to the
+positive-charge Ward prediction. The all-eight connected formula
+returns $-6.43646$ there and $-43.18719$ at $6+9$. These are
+failures of the selected finite tensor to obey the continuum Ward
+relations, not negative physical central charges. A separate Ising
+control gives $.49938$ and $.49955$ at nearby sizes, approaching
+its known $c=1/2$.
+
+Even a correction hypothesis can be overdetermined. In the
+equal-split model with only a branch insertion $1+tT(1/2)$, retain
+the local-coordinate Schwarzian shifts:
+\[
+ X_0=T(0)+c/2,\qquad X_1=T(1)+c/2,\qquad
+ X_\infty=T(\infty)-c/16.
+\]
+Ward identities give
+\[
+ \langle X_0X_1X_\infty\rangle_t
+ =\frac{c(64+30c-c^2)}{64}(1+24t).
+\]
+For $c>0$, $c\ne32$, the nearly zero raw three-stress overlap
+would require $t=-1/24$. At that value,
+$K_{12}=-3-6/c$ and $K_{13}=3/2-24/c$, hence
+\[
+ K_{13}=4K_{12}+27/2.
+\]
+The measured $K_{12}$ predicts about $-3.34974$, whereas the
+measured $K_{13}$ is about $-6.7247$. One arbitrary stress-branch
+coefficient cannot reconcile the three measurements. Higher branch
+fields, bulk corrections, and external-state errors remain separate
+possibilities. The lesson is to test a correction model against
+more observables than it has adjustable parameters.
+
+\section{A current test independent of the mixing angle}
+
+A state with spin one need not be a holomorphic current. A current
+has $(h,\bar h)=(1,0)$ and must satisfy both chirality and normalized
+gluing tests. A conjugate holomorphic current has the same spin;
+conjugating its internal charge does not reverse its chirality.
+Pairing opposite momenta can therefore test the wrong overlap.
+
+For normalized conjugate primaries of dimension $\Delta$, the
+identity OPE coefficient is one. At split $x$, the ideal pants
+amplitude normalized by the same-shape vacuum overlap is
+\[
+ G(x;\Delta)=
+ \exp\!\left[-\frac{\Delta H(x)}{x(1-x)}\right].
+\]
+For a current and equal halves this is $1/16$. If the vacuum
+denominator is instead taken at a different shape $y$, the leading
+vacuum shape factor must also be included:
+\[
+ G(x;1)\exp[-\tfrac c2(f(x)-f(y))],
+ \qquad f(x)=\frac{F(x)+F(1-x)}{12},
+\]
+where $F(x)=(3-3x+2x^2)\log x/(1-x)$.
+Both children must grow when using this expression asymptotically.
+Keeping one child small cannot be repaired merely by inserting the correct
+leading shape factor.
+
+To allow mixing, take orthonormal bases $u_i,v_j$ of two proposed
+current subspaces and form
+\[
+ M_{ij}=\frac{\langle0,L|\bigl(|u_i,L_1\rangle\otimes|v_j,L_2\rangle\bigr)}
+ {A_{000}(L,y)}.
+\]
+Unitary basis changes give $M\mapsto U^TMV$. Its singular values
+are invariant under state phases and arbitrary unitary mixing.
+If the current and its conjugate both converge inside the retained
+subspaces, the splits approach fixed fractions $x,y\in(0,1)$,
+and the gluing converges as assumed, then
+\[
+ \liminf_{L\to\infty}\|M_L\|_2
+ \geq G(x;1)\exp[-\tfrac c2(f(x)-f(y))].
+\]
+For asymptotically equal splits and a vacuum denominator of
+the same shape, this reduces to the bound $1/16$.
+This is simply the variational definition of the largest singular
+value: the amplitude of any normalized pair in the two spaces is
+at most $\|M\|_2$. Enlarging either space can increase this norm;
+it does not show that all added states are currents.
+
+The stored $7+8\to15$ test compares with the fixed-point geometric
+value $.06162$. Its largest singular values for respectively
+$1,2,3,4,6$ states per child are
+\[
+ .01034,\quad .01977,\quad .03395,\quad .05437,\quad .05584.
+\]
+Removing the projected lowest-scalar level-one descendant reduces
+the six-state value to about $.03454$. These finite deficits
+disfavor a current hidden in the specified small subspaces, but
+finite corrections and missing subspace weight are uncontrolled.
+At a smaller parent length the six-state norm exceeds the current
+reference. There is no monotonic no-current theorem in these data.
+
+A norm inequality makes the missing information explicit. Suppose
+normalized current approximants lie within distances
+$\delta_1,\delta_2$ of normalized vectors in the selected spaces,
+and their full normalized gluing differs from the ideal value by
+at most $\eta$. Literal gluing against a unit parent is a
+contraction, so
+\[
+ \|M\|_2\geq G_{\mathrm{ideal}}-\eta
+ -\frac{\delta_1+\delta_2}{|A_{000}(L,y)|}.
+\]
+A parent-vector error adds another analogous term. A rigorous
+finite exclusion needs these errors; high state fidelity on a
+single short ring does not supply their asymptotic bounds.
+
+Finally, for an actual spin-one primary, the energy-mode convention
+$H_{+1}\to\omega_L(L_{-1}+\bar L_1)$ gives
+\[
+ \|H_{-1}|J\rangle\|^2=\omega_L^2(\Delta_J-1),\qquad
+ \|H_{+1}|J\rangle\|^2=\omega_L^2(\Delta_J+1).
+\]
+Thus a current has vanishing lowering norm. A nonprimary has extra
+positive lowering contributions, and an unfiltered lattice norm
+can also contain ultraviolet weight. A projected low-energy Ward
+test, enlarged until stable, is the appropriate comparison to the
+continuum identity.
+
+\section{Perturbing the Hamiltonian: a velocity-free response test}
+
+Take $H(\theta)=H+\theta V$ and a differentiable normalized eigenbranch.
+The Hellmann--Feynman identity gives
+\[
+ \frac{dE_a}{d\theta}=\langle a|V|a\rangle.
+\]
+At an exact degeneracy one first diagonalizes $V$ in that eigenspace.
+For a gap $g_a=E_a-E_0$, define
+$d_a=\langle a|V|a\rangle-\langle0|V|0\rangle$. Then
+\begin{equation}
+ \frac{d}{d\theta}\left(\frac{g_a}{g_b}\right)
+ =\frac{d_ag_b-g_ad_b}{g_b^2}.
+ \label{eq:HF-ratio}
+\end{equation}
+Adding an identity to $V$ cancels in $d_a$. Adding $bH$ changes
+$d_a$ by $bg_a$ and cancels in \eqref{eq:HF-ratio}. The response of a
+gap ratio is therefore insensitive to energy shifts and overall
+velocity rescalings.
+
+For $V=+\sum_jP_j^1$, the completed $L=18$ response in coordinates
+$(g_\chi/g_\phi,g_\epsilon/g_\phi)$ is approximately
+$(.37336,.00731)$, whereas the $15$-to-$18$ logarithmic-size secant
+is $(.03634,.01916)$. They are not parallel. Thus those two finite
+drifts are not already described by a pure change of this one bare
+coupling with every other correction neglected. It would be stronger
+than the evidence to infer two infrared running couplings: the bare
+operator can mix several fields and need not coincide with the
+direction controlling size drift.
+
+Similarly, extracting the sign of a marginal beta function from a
+finite scalar self-matrix element requires an identified dimension-two
+primary, a normalized scalar source, and controlled contamination by
+stress and other fields. Persistent finite signs can guide a theory;
+they cannot supply these missing premises.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:overlap-phases}
+Verify all three phase invariants in \eqref{eq:triangle-invariants}
+and the relation for $J^3$. Show that a symmetry conjugating all three
+fields in $I_\lambda$ forces that invariant to be real even when it
+attaches independent unit phases to the fields.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:overlap-phases]{Solution on page~\pageref*{sol:ex:overlap-phases}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:overlap-descendant}
+Prove by induction that $\|L_{-1}^n|h\rangle\|^2=n!(2h)_n$.
+Use this to derive the first three terms of
+\eqref{eq:vac-descendant-series}. Explain why the threshold
+$\Delta=1/2$ is also visible from the equal-time two-point function.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:overlap-descendant]{Solution on page~\pageref*{sol:ex:overlap-descendant}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:overlap-cumulant}
+Expand $X_i\mapsto u_iX_i+v_i1$ in the definitions of $B_{ij}$ and
+$K$ and prove their stated transformation laws. Identify which
+assumption would fail if a fourth physical operator were inserted
+at the sewing branch point.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:overlap-cumulant]{Solution on page~\pageref*{sol:ex:overlap-cumulant}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:overlap-filter}
+Prove the omitted-tail inequality for $F_L(\tau)$. Construct a
+three-level example showing why small residuals of two retained
+eigenvectors do not provide an energy cutoff for the omitted state.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:overlap-filter]{Solution on page~\pageref*{sol:ex:overlap-filter}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:overlap-response}
+Derive \eqref{eq:HF-ratio}. For two gap ratios collected in a vector
+$R$, show why changing the normalization of $\theta$ rescales
+$\partial_\theta R$ without rotating it. What further hypothesis is
+needed to compare this vector with $\partial_{\log L}R$?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:overlap-response]{Solution on page~\pageref*{sol:ex:overlap-response}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:overlap-current}
+Show that unitary changes of the two incoming state bases act on
+the gluing matrix as $M\mapsto U^TMV$ and preserve its singular
+values. Prove the displayed finite error inequality from the
+contraction property of gluing. Why does the inequality become
+weaker when the vacuum overlap is small?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:overlap-current]{Solution on page~\pageref*{sol:ex:overlap-current}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:overlap-branch}
+Verify $1+(b-1)^4+b^4=2(b^2-b+1)^2$ and use it to cancel
+the linear $\Lambda$ correction in the connected stress invariant.
+For $q=b^{-2}$, $r=(b-1)^{-2}$, show that it also implies
+$q^2+r^2+q^2r^2=2qr(q+r+1)$. Explain why two distinct branch
+locations are not covered by differentiating this one-location
+identity.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:overlap-branch]{Solution on page~\pageref*{sol:ex:overlap-branch}.}}\par
+\end{exercise}

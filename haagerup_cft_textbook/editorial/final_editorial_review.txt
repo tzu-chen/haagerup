@@ -1,0 +1,66 @@
+Final editorial review — 2026-10-05
+
+Edition: 337 PDF pages, 26 main chapters, 95 worked examples,
+151 exercises and 151 linked solution anchors. There are 63 active TeX
+files, 725 labels, and 522 distinct reference targets. The source and
+PDF-navigation audits report no errors.
+
+The official reading PDF has SHA256
+7335c4ec1250bdaa55203e0711bc4261a80a41083b3780d3daa3652ae2e4fb78.
+Its final source identities are in the build and document-audit records.
+
+A source ZIP was extracted into a new temporary directory, with no saved
+TeX auxiliary files. Three typesetting passes reproduced the reading
+copy's extracted paginated text, contents, example list, index, and TeX
+auxiliary data exactly. The rebuilt PDF has a different metadata identity,
+which is recorded rather than substituted for the official PDF. See
+archive_rebuild_check.json. This trial used the preflight source snapshot;
+the final archive adds the final snapshot and later editorial records.
+
+The current PDF's 175,073 extracted word boxes all lie within their physical
+page boundaries. All 37 fonts are embedded. These are limited layout checks,
+not tests of every possible overlap or mathematical correctness. See
+final_pdf_layout_font_audit.json. Root also inspected the rendered final
+index page; the few remaining alphabetical entries are readable and their
+links are intact. Earlier visual checks covered new examples and diagrams.
+
+At 22:32 UTC, scope_foundations completed an additional read-only review
+of README.txt, the opening reading guide, and the integrated construction
+dependency ledger. Result: PASS, with no concrete blockers. The text
+distinguishes typesetting reproducibility, recorded exact checks,
+conditional construction inputs, and unresolved continuum identification.
+
+Final independent mathematical signoffs before source packaging:
+scope_construction found no blocker in the live rank-one C2 example or
+the charge-six realization statements. The lattice full theory's existence
+is separated from its conditional physical-defect comparison, and the
+original H2/H3 distinction is retained. scope_lattice found no blocker in
+the clock example, compatible-size gap criteria, or relevant solutions.
+Both reviews were read-only and required no computations.
+
+The final small-example additions include an exact rank-one lattice C2
+quotient, a period-three clock-chain example with incompatible ring sizes,
+and finite-field rank certificates. Their hand arguments and independent
+reviews are recorded in the corresponding editorial notes. No numerical
+job was needed for these additions.
+
+The mathematical scope remains explicit: this is a graduate textbook
+exposition of the research construction, not an independent replay of all
+large certificates. The selected H3 extension and the original ambient
+boundary category are distinguished. The physical Haagerup chain's
+continuum limit, exact central charge, and asymptotic gap remain open in
+the completed records used here. Unrun research jobs were not started.
+
+Historical checks retain their original source and PDF identities.
+Superseded drafts and earlier reports are provenance, not assertions about
+the final page count. The final source snapshot identifies the selected
+research documents and separately identifies the current resource guard
+and policies without replacing historical execution hashes.
+
+Final selected-source cutoff: 22:35:12 UTC. All 148 selected files
+(28,893,914 bytes) have identical SHA256 and size identities to the
+22:28:08 preflight inventory. The comparison is recorded in
+final_source_snapshot_comparison.json. The bounded recorder's measured
+peak resident memory before writing the snapshot was 20,548 KiB.
+The source/reference/Python-syntax audit was refreshed after the recorder
+repair and final inventory; it still reports no errors.

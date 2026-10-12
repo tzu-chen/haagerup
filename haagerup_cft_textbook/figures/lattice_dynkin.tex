@@ -1,0 +1,16 @@
+\begin{tikzpicture}[
+ root/.style={circle,draw=MidnightBlue,fill=white,inner sep=0pt,minimum size=6pt},
+ every label/.style={font=\small},
+ line/.style={thick,MidnightBlue}
+]
+\foreach \i/\c in {0/5,1/8,2/9,3/8,4/5}{
+ \node[root,label=above:{$\alpha_{\i}$},label=below:{$\c$}] (a\i) at (\i*1.25,0) {};
+}
+\node[root,draw=gray,label=above:{$\alpha_5$},label=right:{$0$}] (a5) at (2.5,1.3) {};
+\node[root,label=above:{$\alpha_6$},label=below:{$2$}] (a6) at (7,0) {};
+\node[root,label=above:{$\alpha_7$},label=below:{$2$}] (a7) at (8.25,0) {};
+\foreach \i/\j in {0/1,1/2,2/3,3/4,6/7}{\draw[line] (a\i)--(a\j);}
+\draw[thick,gray] (a2)--(a5);
+\node[font=\small] at (2.5,-0.95) {principal $A_5$: level $35$};
+\node[font=\small] at (7.625,-0.95) {principal $A_2$: level $4$};
+\end{tikzpicture}

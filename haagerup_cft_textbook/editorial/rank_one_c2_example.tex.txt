@@ -1,0 +1,71 @@
+% Draft only. Suggested placement: immediately after the Heisenberg warning
+% in c04_regularity.tex. Hand-checked; no computation or chapter edit.
+\begin{example}[A five-dimensional quotient of the rank-one lattice theory]
+\label{ex:regularity-A1-C2}
+Let $V=V_{A_1}=L_1(\mathfrak{sl}_2)$, with the weight-one
+currents $E,F,H$ normalized as in the rank-one lattice example.
+The VOA identities make
+\[
+ R=V/C_2(V),\qquad [a][b]=[a_{(-1)}b],
+\]
+a commutative associative graded algebra. Derivatives vanish in
+$R$, so strong generation by $E,F,H$ implies that their classes
+$e,f,h$ generate it as an ordinary commutative algebra.
+
+The lattice exponential formula supplies the decisive relation.
+For a root $\alpha$ of norm two, $Y(e^\alpha,z)e^\alpha$
+starts at $z^2$. Its constant coefficient is therefore zero:
+\[
+ E_{(-1)}E=0,\qquad e^2=0.
+\]
+This is a relation in the actual simple lattice VOA. The universal
+affine vacuum algebra at level one has not yet imposed this
+integrability relation.
+
+Zero modes preserve $C_2(V)$ and act as derivations on $R$.
+The derivation $\partial_F$ induced by $F_{(0)}$ obeys
+\[
+ \partial_F(e)=-h,\qquad
+ \partial_F(h)=2f,\qquad \partial_F(f)=0.
+\]
+Apply it successively to $e^2=0$, $eh=0$, $h^2-2ef=0$,
+and $hf=0$. The resulting equations are
+\[
+ -2eh=0,\qquad -h^2+2ef=0,\qquad
+ 6hf=0,\qquad 2f^2=0.
+\]
+Consequently every class is a linear combination of
+\[
+ 1,\quad e,\quad h,\quad f,\quad ef.
+\]
+Every cubic monomial vanishes; for instance
+$h^3=2ehf=0$. This proves an upper bound of five, but it does
+not yet prove that the last class survives.
+
+Weights zero and one already give four independent classes,
+since $C_2(V)$ has no component in either weight. At weight two,
+the weight formula for $a_{(-2)}b$ gives exactly
+\[
+ C_2(V)\cap V_2=D V_1,\qquad D=L_{-1}.
+\]
+The conformal vector satisfies $L_1\omega=0$, so
+$\langle Da,\omega\rangle=\langle a,L_1\omega\rangle=0$
+for $a\in V_1$. Its norm is $c/2=1/2$, hence
+$\omega\notin C_2(V)$. Finally the level-one Sugawara formula
+gives
+\[
+ [\omega]=\frac16\left(\frac{h^2}{2}+2ef\right)
+          =\frac{ef}{2}=\frac{h^2}{4}.
+\]
+Thus $ef\ne0$, and the displayed spanning set is a basis:
+\[
+ \dim R=5,\qquad
+ \sum_{n\geq0}(\dim R_n)t^n=1+3t+t^2.
+\]
+
+Adding the lattice exponential fields to the Heisenberg algebra
+has made the surviving current classes nilpotent and the quotient
+finite. This establishes $C_2$-cofiniteness; by itself it is not
+a proof of rationality. Nor is five a count of simple modules:
+this VOA has the two affine simples labelled $\ell=0,1$.
+\end{example}

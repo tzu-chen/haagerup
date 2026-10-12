@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-10-05T22:27:29.158896+00:00",
+  "scope": "Editorial source inventory only; no research computation or scientific source execution",
+  "failed_command": "python3 -B record_sources.py --output editorial/scientific_source_preflight.json",
+  "failure": "MemoryError on first 1 MiB stream allocation after a 128 MiB RLIMIT_AS was applied below the existing imported virtual-address baseline",
+  "snapshot_written": false,
+  "failed_script_archive": "editorial/recorder_history/20261005_2223_record_sources.py",
+  "failed_script_sha256": "f7213e4288c889e50f18dfd799f906ea81acbc17e4f5233f4203e09dd9c4b497",
+  "measured_imported_vmsize_kib": 255044,
+  "measured_imported_rss_kib": 19184,
+  "threads": 1,
+  "dominant_mapping": {
+    "path": "/usr/lib/locale/locale-archive",
+    "mib": 222.5703125,
+    "permissions": "r--p"
+  },
+  "revised_estimate": "384 MiB virtual cap includes the existing locale map, with at least 16 MiB required baseline headroom; expected RSS below 32 MiB, two live 64 KiB stream buffers, and less than 32 MiB source file data in the current inventory. Lower inherited AS soft/hard limits remain in force. No machine-policy or numerical-guard change.",
+  "repair_source_sha256": "3d8a0b0df86ac7015ce2b46b583f54039a95744222400fb0287130af4f78e5dd",
+  "follow_on_stage": "A trial staging copy was incomplete because no preflight snapshot existed; no trial archive was created."
+}

@@ -1,0 +1,234 @@
+"""Extract the complete exists_EGEquations_odd dependency graph from cached Lean proofs.
+
+Run from the repository root: python lean/docs/build_dependency_graph.py
+Always runs under hi_cft_safe_run.py; requires existing, current Lean artifacts.
+"""
+
+from pathlib import Path
+from collections import defaultdict
+import argparse
+import hashlib
+import json
+import os
+import re
+import resource
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[2]
+LEAN = ROOT / "lean"
+DOCS = LEAN / "docs"
+TOOLS = LEAN / "tools" / "dependency_graph"
+CACHE = LEAN / ".lake" / "dependency-graph"
+TARGET_MODULE = "HaagerupIzumi.Analytic.GammaConstruction"
+TARGET = "HaagerupIzumi.exists_EGEquations_odd"
+IMPORT = re.compile(r"(?m)^(?:public\s+)?(?:meta\s+)?import\s+(?:all\s+)?(HaagerupIzumi(?:\.[^\s]+)*)")
+
+
+def project_modules():
+    seen = set()
+    pending = [TARGET_MODULE]
+    while pending:
+        module = pending.pop()
+        if module in seen:
+            continue
+        seen.add(module)
+        source = LEAN.joinpath(*module.split(".")).with_suffix(".lean")
+        pending.extend(IMPORT.findall(source.read_text()))
+    return sorted(seen)
+
+
+def run(command, env, **kwargs):
+    try:
+        return subprocess.run([str(arg) for arg in command], cwd=LEAN, env=env,
+                              check=True, text=True, **kwargs)
+    except subprocess.CalledProcessError as error:
+        if error.stdout:
+            sys.stderr.write(error.stdout)
+        if error.stderr:
+            sys.stderr.write(error.stderr)
+        raise
+
+
+def normalize_generated_duplicates(data):
+    """Lean may regenerate the same congruence/equation theorem in several modules.
+
+    Merge a repeated constant name only after verifying identical declaration
+    metadata and identical direct dependencies in each original module dump.
+    """
+    groups = defaultdict(list)
+    for node in data["graph"]["nodes"]:
+        groups[node["name"]].append(node)
+    repeated = {name: variants for name, variants in groups.items() if len(variants) > 1}
+    if not repeated:
+        return data
+    module_signatures = {}
+    for module in {n["module"] for variants in repeated.values() for n in variants}:
+        part = json.loads((CACHE / f"{module}.json").read_text())
+        signatures = defaultdict(set)
+        for edge in part["graph"]["edges"] + part["boundary"]:
+            signatures[edge["tgt"]].add((edge["src"], edge["kind"]))
+        module_signatures[module] = signatures
+    unique = []
+    for name, variants in sorted(groups.items()):
+        first = min(variants, key=lambda node: node["module"])
+        if len(variants) > 1:
+            metadata = {k: v for k, v in first.items() if k != "module"}
+            signature = module_signatures[first["module"]][name]
+            for variant in variants:
+                if {k: v for k, v in variant.items() if k != "module"} != metadata or module_signatures[variant["module"]][name] != signature:
+                    raise RuntimeError(f"Conflicting duplicate declaration: {name}")
+            first["generatedIn"] = sorted({n["module"] for n in variants})
+        unique.append(first)
+    data["graph"]["nodes"] = unique
+    edge_key = lambda edge: (edge["src"], edge["tgt"], edge["kind"])
+    data["graph"]["edges"] = sorted({edge_key(e): e for e in data["graph"]["edges"]}.values(), key=edge_key)
+    data["boundary"] = sorted({(*edge_key(e), e["module"]): e for e in data["boundary"]}.values(), key=lambda e: (*edge_key(e), e["module"]))
+    data["merged_generated_declarations"] = sorted(repeated)
+    print(f"Merged {len(repeated)} regenerated names with verified identical dependencies", flush=True)
+    (CACHE / "all-project-dependencies.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+    return data
+
+
+def extract():
+    CACHE.mkdir(parents=True, exist_ok=True)
+    prefix = Path(subprocess.check_output(["lean", "--print-prefix"], cwd=LEAN, text=True).strip())
+    helper_source = LEAN / "tools" / "lean_stack_limit.c"
+    fingerprint = hashlib.sha256(helper_source.read_bytes() + str(prefix).encode()).hexdigest()[:16]
+    preload = LEAN / ".lake" / "safe-runtime" / f"lean-stack-{fingerprint}.so"
+    if not preload.exists():
+        preload.parent.mkdir(parents=True, exist_ok=True)
+        run(["cc", "-shared", "-fPIC", helper_source, "-o", preload,
+             f"-L{prefix / 'lib/lean'}", "-lleanshared",
+             f"-Wl,-rpath,{prefix / 'lib/lean'}"], os.environ)
+    env = dict(os.environ, LEAN_NUM_THREADS="2", MIMALLOC_DISALLOW_ARENA_ALLOC="1",
+               MALLOC_ARENA_MAX="2", LD_PRELOAD=str(preload))
+    lean = prefix / "bin" / "lean"
+    leanc = prefix / "bin" / "leanc"
+    lake = prefix / "bin" / "lake"
+    modules = project_modules()
+    sources = {m: hashlib.sha256(LEAN.joinpath(*m.split(".")).with_suffix(".lean").read_bytes()).hexdigest()
+               for m in modules}
+    # Include elaborated artifacts and the dependency/toolchain pins in cache
+    # identity: unchanged source can elaborate differently after a library update.
+    artifact_hashes = {}
+    for module in modules:
+        base = LEAN / ".lake/build/lib/lean" / Path(*module.split("."))
+        artifact_hashes[module] = [Path(str(base) + suffix).read_text().strip()
+                                   for suffix in [".olean.hash", ".olean.private.hash", ".ilean.hash"]]
+    pin_files = {name: (LEAN / name).read_text() for name in ["lean-toolchain", "lake-manifest.json"]}
+
+    # Lake checks actual prerequisite traces; refuse to rebuild the proof library.
+    audit = CACHE / "Audit.lean"
+    audit.write_text(f"module\npublic import {TARGET_MODULE}\n\n#print axioms {TARGET}\n")
+    setup = run([lake, "--no-build", "setup-file", audit], env, capture_output=True)
+    setup_path = CACHE / "Audit.setup.json"
+    json.loads(setup.stdout)  # Fail before invoking Lean if Lake did not emit valid setup data.
+    setup_path.write_text(setup.stdout)
+    audit_result = run([lean, "-j2", "-s8192", audit, "--setup", setup_path], env, capture_output=True)
+    (CACHE / "axioms.txt").write_text(audit_result.stdout + audit_result.stderr)
+    print(audit_result.stdout.strip(), flush=True)
+    if "sorryAx" in audit_result.stdout:
+        raise RuntimeError("The target's axiom audit contains sorryAx")
+
+    lib = CACHE / "lib"
+    (lib / "ResultGraph").mkdir(parents=True, exist_ok=True)
+    package_libs = sorted((LEAN / ".lake/packages").glob("*/.lake/build/lib/lean"))
+    env["LEAN_PATH"] = os.pathsep.join(map(str, [lib, LEAN / ".lake/build/lib/lean", *package_libs]))
+    # Two small upstream modules, compiled sequentially with the project's pinned Lean.
+    objects = []
+    for module in ["Basic", "Extract"]:
+        source = TOOLS / "ResultGraph" / f"{module}.lean"
+        output = lib / "ResultGraph" / f"{module}.olean"
+        print(f"Compiling result-graph/{module}", flush=True)
+        c_file = CACHE / f"{module}.c"
+        obj = CACHE / f"{module}.o"
+        run([lean, "-j2", "-s8192", source, "--root", TOOLS, "-o", output, "-c", c_file], env)
+        run([leanc, "-O1", "-c", c_file, "-o", obj], env)
+        objects.append(obj)
+    main_c = CACHE / "Main.c"
+    run([lean, "-j2", "-s8192", TOOLS / "Main.lean", "--root", TOOLS, "-c", main_c], env)
+    executable = CACHE / "extract-dependencies"
+    # Share Lean's runtime so the existing stack-limit preload controls this
+    # runtime too; static linking would introduce a second runtime instance.
+    run([leanc, "-O1", "-leanshared", main_c, *objects, "-lleanshared",
+         f"-Wl,-rpath,{prefix / 'lib/lean'}", "-o", executable], env)
+    # Stream one module per process. Loading every private module together has
+    # too large an address-space footprint for the desktop's fixed 6 GiB cap.
+    # Each module's existing Lake setup selects exactly its required artifacts.
+    pieces = []
+    extraction_key = hashlib.sha256((TOOLS / "Main.lean").read_bytes() +
+                                    (TOOLS / "ResultGraph/Extract.lean").read_bytes() +
+                                    (TOOLS / "ResultGraph/Basic.lean").read_bytes() +
+                                    json.dumps([sources, artifact_hashes, pin_files], sort_keys=True).encode()).hexdigest()
+    for number, module in enumerate(modules, 1):
+        stem = CACHE / module
+        piece = stem.with_suffix(stem.suffix + ".json")
+        stamp = stem.with_suffix(stem.suffix + ".sha256")
+        if not piece.exists() or not stamp.exists() or stamp.read_text() != extraction_key:
+            part_module_file = CACHE / "current-module.txt"
+            part_module_file.write_text(module + "\n")
+            relative = Path(*module.split("."))
+            part_setup = json.loads((LEAN / ".lake/build/ir" / relative.with_suffix(".setup.json")).read_text())
+            module_base = LEAN / ".lake/build/lib/lean" / relative
+            part_setup["importArts"][module] = [
+                [str(module_base) + ext for ext in [".olean", ".olean.server", ".olean.private"]],
+                [str(module_base) + ext for ext in [".ir.sig", ".ir"]]]
+            part_setup_file = CACHE / "current-module.setup.json"
+            part_setup_file.write_text(json.dumps(part_setup))
+            print(f"[{number}/{len(modules)}] {module}", flush=True)
+            result = run([executable, part_module_file, part_setup_file, piece], env, capture_output=True)
+            stamp.write_text(extraction_key)
+        pieces.append(json.loads(piece.read_text()))
+    merged_nodes = [node for part in pieces for node in part["graph"]["nodes"]]
+    project_names = {node["name"] for node in merged_nodes}
+    merged_edges = [edge for part in pieces for edge in part["graph"]["edges"]]
+    boundary = []
+    for part in pieces:
+        for edge in part["boundary"]:
+            if edge["module"].startswith("HaagerupIzumi"):
+                if edge["src"] not in project_names:
+                    raise RuntimeError(f"Missing project dependency: {edge}")
+                merged_edges.append({k: edge[k] for k in ["src", "tgt", "kind"]})
+            else:
+                boundary.append(edge)
+    data = {"graph": {"nodes": sorted(merged_nodes, key=lambda n: n["name"]),
+                       "edges": sorted(merged_edges, key=lambda e: (e["src"], e["tgt"])),
+                       "roots": ["HaagerupIzumi"]},
+            "boundary": boundary, "modules": modules, "lean_version": pieces[0]["lean_version"]}
+    raw = CACHE / "all-project-dependencies.json"
+    for module, digest in sources.items():
+        path = LEAN.joinpath(*module.split(".")).with_suffix(".lean")
+        if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+            raise RuntimeError(f"Project source changed during extraction: {module}")
+    data["source_sha256"] = sources
+    data["artifact_hashes"] = artifact_hashes
+    data["axiom_audit"] = audit_result.stdout.strip()
+    data["extractor"] = {"name": "result-graph", "url": "https://github.com/PierreSenellart/result-graph",
+                         "commit": "e62387eb62ceedc68dbe3cb79c8974191a6218df", "local_adaptations": True}
+    raw.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+    return data
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--guarded", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--from-cache", action="store_true", help="Render the previous extraction without running Lean")
+    parser.add_argument("--extract-only", action="store_true")
+    args = parser.parse_args()
+    if not args.guarded:
+        os.execv(sys.executable, [sys.executable, str(ROOT / "hi_cft_safe_run.py"), "--",
+                 sys.executable, str(Path(__file__).resolve()), "--guarded", *sys.argv[1:]])
+    parent = Path(f"/proc/{os.getppid()}/cmdline").read_bytes().split(b"\0")
+    _, hard = resource.getrlimit(resource.RLIMIT_AS)
+    if len(parent) < 2 or parent[1] != os.fsencode(ROOT / "hi_cft_safe_run.py") or hard < 0 or hard > 6 * 1024**3:
+        sys.exit("Refusing: the resource guard must be active")
+    data = json.loads((CACHE / "all-project-dependencies.json").read_text()) if args.from_cache else extract()
+    data = normalize_generated_duplicates(data)
+    if not args.extract_only:
+        from render_dependency_graph import render
+        render(data, TARGET, LEAN, DOCS)
+
+
+if __name__ == "__main__":
+    main()

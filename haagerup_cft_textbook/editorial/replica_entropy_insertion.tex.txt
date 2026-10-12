@@ -1,0 +1,111 @@
+% Original teaching derivation for l04, checked against the single-interval
+% and single-cut conventions of Calabrese--Cardy hep-th/0405152.
+% Root draft; integration status recorded separately.
+\section{Why entropy measures the central charge}
+\label{sec:MPS-replica}
+\index{replica trick}\index{twist field!replica}\index{entanglement entropy}
+
+The coefficient in an entropy fit comes from the stress-tensor anomaly.
+We can derive it using the Schwarzian transformation law of
+Chapter~\ref{ch:cft}. Consider the vacuum of a unitary full CFT on the
+infinite line, with $c_L=c_R=c$, and an interval $A=[u,v]$ of length
+$\ell=v-u$. Keep a microscopic cutoff $a$ so that its reduced density
+matrix is well defined. For an integer $n\geq2$, multiplying $n$ copies
+of this density matrix and tracing joins the copies cyclically along
+$A$. The resulting Euclidean surface has $n$ sheets, with branch
+points at $u$ and $v$.
+
+Equivalently, use $n$ copies of the CFT on one plane and insert fields
+$\mathcal T_n(u)$ and $\widetilde{\mathcal T}_n(v)$ that implement
+the cyclic permutation and its inverse. The stress tensor in this
+replica theory is the sum $T^{\rm tot}=\sum_{j=1}^nT_j$, with chiral
+central charge $nc$. The branch geometry is uniformized by
+\[
+ z(w)=\left(\frac{w-u}{w-v}\right)^{1/n}.
+\]
+Different sheets choose different phases of this root. Those phases
+do not change its Schwarzian derivative. The vacuum stress in the
+$z$ plane vanishes, so on each sheet
+\[
+ \langle T_j(w)\rangle=\frac c{12}\{z,w\}.
+\]
+To evaluate it, write $g(w)=(w-u)/(w-v)$. A direct differentiation
+gives $\{g,w\}=0$ and
+$\{g^{1/n},g\}=(1-n^{-2})/(2g^2)$. The Schwarzian chain rule then
+gives
+\[
+ \langle T^{\rm tot}(w)\rangle
+ =\frac c{24}\left(n-\frac1n\right)
+   \frac{(u-v)^2}{(w-u)^2(w-v)^2}.
+\]
+On the other hand, the Ward identity for two conjugate primaries of
+weight $h_n$ gives exactly the same rational function with coefficient
+$h_n$. We have therefore calculated the replica weights:
+\begin{equation}\label{eq:MPS-twist-weight}
+ h_n=\bar h_n=\frac c{24}\left(n-\frac1n\right),\qquad
+ \Delta_n=\frac c{12}\left(n-\frac1n\right).
+\end{equation}
+The factor $n$ in the total stress is essential. Using only one
+sheet's stress would miss it.
+
+The twist two-point function now determines the interval moment:
+\[
+ \Tr\rho_A^n=C_n(\ell/a)^{-2\Delta_n},\qquad C_1=1.
+\]
+The constants $C_n$ depend on the cutoff convention. Substitution in
+the definition of the R\'enyi entropy gives
+\begin{equation}\label{eq:MPS-interval-Renyi}
+ S_n(A)=\frac c6\left(1+\frac1n\right)\log(\ell/a)+k_n,
+ \qquad k_n=\frac{\log C_n}{1-n}.
+\end{equation}
+The physical continuation near $n=1$ is the one defined by powers of
+the regulated positive density matrix. It yields
+$S_1=(c/3)\log(\ell/a)+k_1$. Integer replica values by themselves
+are not an abstract uniqueness theorem for analytic continuation.
+For a periodic spatial circle of circumference $L$, the plane-to-cylinder
+map replaces $\ell$ by the chord length:
+\[
+ S_n(\ell,L)=\frac c6\left(1+\frac1n\right)
+ \log\left[\frac L{\pi a}\sin\frac{\pi\ell}{L}\right]+k_n.
+\]
+This uses the conformal vacuum on the circle. A finite lattice has
+additional corrections to the scaling formula.
+
+A half-infinite bipartition has one entangling endpoint. To obtain
+a finite entropy, consider a clustering massive vacuum near the
+critical point, with one large length $\xi$. Its replica moment is a
+single twist expectation. Scaling gives
+\[
+ \Tr\rho_{\rm half}^n
+   \sim A_n(a/\xi)^{\Delta_n},\qquad
+ S_n^{\rm half}
+   =\frac c{12}\left(1+\frac1n\right)\log(\xi/a)+s_n+o(1).
+\]
+Here $A_n$ depends on the massive theory and regulator. The power uses
+one twist dimension, whereas an interval two-point function uses two.
+This explains the factor of two between the two geometries. Replacing
+this physical correlation length by the length of a finite-bond MPS
+is a further scaling hypothesis, considered in the next section.
+
+\begin{example}[Ising entropies and an ordered cat]
+For the Ising CFT, $c=1/2$. The logarithmic coefficients of
+$S_1,S_2,S_\infty$ on an interval are respectively
+$1/6,1/8,1/12$; the corresponding single-cut coefficients are
+$1/12,1/16,1/24$. The last values use the regime in which the
+scaling formula also controls the largest Schmidt probability.
+A common factor-of-two error would turn the correct Ising
+single-cut von Neumann slope $1/12$ into a spurious estimate
+$c=1/4$ if one used the interval coefficient $c/3$.
+
+The three-component product-state cat considered above instead has
+$\Tr\rho_A^n=3^{1-n}$ across a nontrivial cut, hence $S_n=\log3$
+for every $n$. Its entropy has no logarithmic length slope. More
+generally, suppose three components have mutually orthogonal Schmidt
+supports on both sides of the cut, the same Schmidt probabilities
+$p_a$, and equal weights. The full probabilities are
+$p_a/3$, each repeated three times. Thus
+$S_n^{\rm cat}=S_n^{\rm component}+\log3$. A fixed mixing constant
+does not change an asymptotic slope; changing component weights
+along a variational sequence can change a finite entropy secant.
+\end{example}
+

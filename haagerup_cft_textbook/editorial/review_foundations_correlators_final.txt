@@ -1,0 +1,195 @@
+Final independent hand review: r06_correlators.tex and dedicated solutions
+Reviewer: scope_foundations
+Clock read during review: 2026-10-05 20:48:54 UTC
+Scope: source reading and hand algebra only. No numerical job, build, or
+independent admission. No live chapter or solution source was changed.
+
+Disposition
+===========
+PASS for all displayed normalizations, signs, four-point formulas,
+level-four Gram data, and the five dedicated exercise solutions. The
+chapter correctly distinguishes its vacuum-module chiral correlators
+from its selected nonvacuum chiral blocks and from diagonal-U bulk
+correlators. No required mathematical repair was found.
+
+Two low-priority wording improvements, neither affecting a result:
+
+1. r06:359 reuses b as the central module label shortly after b=a_(1)a
+   denoted a weight-four field. Add "Here b again denotes the module
+   label in the modular table, not the preceding weight-four field."
+   Alternatively rename that preceding state locally, but the one
+   sentence is the smallest change.
+2. solutions/r06:53-55 invokes exchanging two equal-central-charge
+   factors. The stress-sector argument is correct, but this need not
+   assert an automorphism of the whole ambient theory. Say "Within
+   the two-stress vacuum subalgebra, exchanging the equal-central-charge
+   Virasoro factors sends A to -A." Direct cancellation of the two
+   cubic terms would also explain the vanishing without mentioning
+   a symmetry outside that subalgebra.
+
+1. Normalized products and the u correlators
+==========================================
+The coefficient at r06:26-28 is correct for the stated antilinear-first
+Hermitian convention: projection to v_k supplies 1/N_k, while replacing
+that output by v_k/sqrt(N_k) leaves the denominator sqrt(N_i N_j N_k).
+It is paired with the radial adjoint at infinity, as the text states.
+Cartan norms 2 and 78 give squared couplings 1/2 and 169/78=13/6.
+The stress norm is c/2=4, so T/2 has unit norm and its coupling to a
+unit h=2 field is h/sqrt(c/2)=1.
+
+The three transported raw norm contributions are 4, (1/10)40, (1/10)40.
+Thus ||u||^2=12 and its three coefficients in a unit momentum basis
+all have modulus 1/sqrt(3). The momentum Gram matrix is 2I+2J, with
+eigenvalues 8,2,2. Charge conservation therefore really is equality of
+the positive and negative momentum multisets, not merely a necessary
+condition. The counts 3+6+6 and the finite-distance powers in both
+the chapter and ex:corr-fifteen's solution agree. Even pairings make
+the lattice fields commute, and the paired cocycle/adjoint convention
+leaves coefficient 1/9 for all surviving terms.
+
+The resulting numerator 3-4x+4x^2 and both crossing identities check
+algebraically. The values at 1/2 are 512/3 and 11/3. Distinct equal-charge
+momenta sum to squared norm 12, whereas identical ones give 16. Hence
+the first state has h=6 and its coefficient starts at x^2. Its three
+orthogonal momentum components have magnitude 2/3, giving norm squared
+4/3 and normalized coupling magnitude 2/sqrt(3). It is a sum of lattice
+exponentials at that weight, so it is indeed a Virasoro primary.
+
+For triangular subtraction, the reduced Taylor coefficients are
+1,8/3,6,12,65/3. At order four, the lower global blocks contribute
+  (8/3)(1/4)=2/3,
+  (14/3)(9/10)=21/5,
+  (58/9)(3/2)=29/3.
+The remainder is 107/15. The charged reduced function begins
+(4/3)x^6. The solution uses the reduced function rather than confusing
+the raw x^2 power with exchanged weight two. At weight two, global
+quasiprimaries consist of the total stress and Virasoro primaries;
+derivatives of currents are not quasiprimary. Thus subtracting stress
+contribution 1 from 14/3 really leaves 11/3 for the primary sum.
+
+2. Weight-two resolution and the stress example
+===============================================
+The eight stated multiplets sum to 96, and the other dimensions are
+5+9+3=17. The internal left/right designation is explicit and does not
+mix internal sl2 spin with physical chirality. The level-one left
+spin-two candidate is a null current descendant, as stated.
+
+For commuting stresses, norms are c_i/2 and cross norms vanish.
+L_2 acting on sum_i a_i T_i gives (sum_i a_i c_i)/2 times the vacuum;
+L_1 and higher positive modes give no other condition. This verifies
+the primary criterion and the three-dimensional difference space.
+For A=c_2 T_1-c_1 T_2,
+  N_A=c_1 c_2(c_1+c_2)/2,
+  <A,A_(1)A>=c_1 c_2(c_2^2-c_1^2)=2N_A(c_2-c_1).
+Both the chapter and solution then give
+8(c_2-c_1)^2/[c_1 c_2(c_1+c_2)]. At the displayed central charges this
+reduces to 23104/9243. Equal central charges kill the cubic coefficient,
+not the positive norm.
+
+The Ward-completion identity follows by applying the zero-mode
+derivation and commuting its action through the primary projection.
+The latter commutation uses invariance under the compact current action
+and then its complexified Lie algebra. E F^p v_0=p(n-p)F^(p-1)v_0 is
+correct for a dimension-n sl2 representation. The count 18,365 is
+properly attributed to the recorded tensor calculation; this hand
+review does not independently replay that large enumeration.
+
+3. Spin-three normalization, pole residues, and odd-spin signs
+=============================================================
+The canonical positive generator has radial Hermitian mode convention
+a_(n)^dagger=a_(4-n). Thus b=a_(1)a has
+||b||^2=<a,a_(3)b>=A||a||^2=AN=B. For a weight-three primary this
+Hermitian convention is consistent with PCT(a)=-a; PCT reality and
+Hermitian self-adjointness of a chiral field must not be conflated.
+The chapter does not make that conflation, and its phrase "canonical
+positive normalization" selects the phase used in these equations.
+The raw coordinate fields in the source have explicitly different
+rescaling factors, so substituting them without rescaling would be
+wrong, but no such substitution occurs here.
+
+The OPE coefficients are mutually consistent under skew symmetry:
+the simple pole is (1/2)partial b-(1/12)partial^3 T_0. The Ward
+three-point function is 3N/(1-w)^2 when the third insertion is w;
+its derivatives at zero give 6N and 72N. Likewise the b correlator
+is B/(1-w)^4, giving derivative 4B. This last dependence follows
+from translation and scaling even though b is not quasiprimary.
+The simple-pole coefficient is therefore 2B-6N=2B-2c_0, as in
+the chapter and ex:corr-spin3's solution. The remaining residues
+and constant N^2 agree. Integer-spin locality gives a meromorphic
+function on the sphere; the prescribed principal parts plus its
+constant at infinity determine it completely. No finite-series
+fit is being mistaken for this all-orders argument.
+
+4. Direct level-four Virasoro Gram check
+=======================================
+Writing v=L_{-4}|0> and w=L_{-2}^2|0>, the elementary commutators give
+  <v,v>=5c_0,
+  <v,w>=3c_0,
+  <w,w>=c_0(c_0+8)/2.
+Since partial^2 T_0=2v and Lambda=w-(3/5)v, one obtains
+  ||partial^2 T_0||^2=20c_0,
+  <Lambda,partial^2 T_0>=0,
+  ||Lambda||^2=c_0(5c_0+22)/10.
+
+There is also a direct check that the printed subtraction really
+is primary, rather than merely assuming its orthogonality. For
+b=a_(1)a, the primary-mode commutator gives
+  L_1 b=3 partial T_0,
+  L_2 b=10T_0,
+  L_3 b=0,
+  L_4 b=3c_0|0>.
+Its Gram overlaps are <partial^2 T_0,b>=6c_0 and
+<Lambda,b>=16c_0/5. Dividing by the corresponding norms gives
+3/10 and 32/(5c_0+22), precisely the two printed coefficients.
+Subtracting them cancels every positive Virasoro mode through L_4;
+higher modes vanish by weight. Thus W_4 is an intrinsic primary.
+
+The residual norm divided by N^2 simplifies to the chapter's gamma_4^2.
+For Potts, Q=26 and lambda Q=8; positivity makes the zero-norm vector
+zero in the actual unitary algebra. For PF13, Q=30, the remaining
+factor is 3364/473 and the prefactor is 18/5, giving 60552/2365.
+All quantities use the intrinsic c_0, not the ambient c=8. The chapter
+states this distinction explicitly.
+
+5. Light-sector blocks, Gram data, and full-CFT scope
+===================================================
+The beta vectors have norm squared 2/3 and mutual product -1/3.
+The finite Gaussian factors are x^(-2/3) and
+(1-x)^(-<beta_i,beta_j>), with the specified real branch on (0,1).
+This checks both diagonal and off-diagonal formulas and the need
+for a path upon chiral analytic continuation.
+
+At intermediate weight one, the beta Heisenberg vector projects
+onto H_R with coefficient q_i/78; it has no projection onto H_L
+or the root currents. The U-current Gram contribution is therefore
+q_i q_j/78. Subtracting it from I-J/3 gives exactly the displayed
+solution matrix. The mutually orthogonal vectors (1,1,1), (1,0,-1),
+and (1,-2,1) have eigenvalues 0,35/39,1. In particular, the extremal
+diagonal split is 2/39+8/13=2/3. Negative off-diagonal overlaps do
+not contradict positive semidefiniteness.
+
+The intermediate ambient lattice vacuum is the extension U plus b,
+so a selected lattice block restricts to a particular combination
+of these U channels. It is a genuine U chiral intertwiner block,
+but not a complete channel basis. The two ambient lattice sectors
+restricting to c_1 do not identify their extension sewing with the
+diagonal-U bulk sewing. Consequently the warning against inferring
+the latter's lightest-scalar bulk correlator from a single absolute
+square is mathematically necessary and correctly scoped.
+
+Conversely, the earlier u, current, stress, and spin-three fields
+are in the U vacuum module. Their displayed meromorphic correlators
+are actual chiral vacuum correlators, and pairing them with the
+chosen antiholomorphic vacuum counterparts does give full vacuum-
+sector observables. The opening paragraph correctly makes this
+positive statement while reserving nonvacuum sewing for r08.
+
+Local derivation/provenance checked
+==================================
+  c8_physics_20260927/correlators.tex
+  c8_physics_20260927/correlators_notes.md
+  c8_expanded_20260929/physics_details.tex
+  c8_expanded_20260929/coordinate_details.tex
+  haagerup_cft_textbook/chapters/c01_lattice_embedding.tex
+The small arithmetic and commutator identities above were checked
+independently by hand; recorded large tensor counts were not recomputed.

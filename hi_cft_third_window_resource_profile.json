@@ -1,0 +1,16 @@
+{
+  "window_id": "20260915T170457Z_6h",
+  "start_utc": "2026-09-15T17:04:57Z",
+  "deadline_utc": "2026-09-15T23:04:57Z",
+  "authorization": "User: FOR THIS TRY ONLY, not running other projects; may use more than half RAM if needed, staying clear of OOM.",
+  "maximum_address_mib": 36864,
+  "maximum_group_rss_mib": 34816,
+  "host_reserve_mib": 12288,
+  "launch_margin_mib": 2048,
+  "cgroup_launch_reserve_mib": 4096,
+  "cgroup_running_reserve_mib": 2048,
+  "compute_threads": 2,
+  "numerical_jobs": 1,
+  "swap_is_capacity": false,
+  "scope": "Expires automatically at the deadline; permanent hi_cft_safe_run.py and AGENTS.md defaults remain unchanged. Every job needs a reviewed allocation estimate and the smallest useful address limit."
+}

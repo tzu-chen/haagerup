@@ -1,0 +1,20 @@
+% Draft only: integrate after the two-calibrations discussion in l02.
+% The PDF is generated only after root admits plot_ising_calibration.py.
+\begin{figure}[tbp]
+ \centering
+ \includegraphics[width=\textwidth]{figures/ising_calibration.pdf}
+ \caption{Two finite-size calibrations of the same critical Ising
+ energy-field gap, using the exact formulas in
+ Example~\ref{ex:scaling-Ising-calibration}.
+ Symbols mark even $L=4,6,\ldots,32$; curves show the smooth
+ continuation of the formulas to real $L\geq4$.
+ Put $z=\pi/(2L)$. The known-velocity estimate is
+ $\Delta_\epsilon^{(v)}=\sin z/z$, whereas the stress-calibrated
+ estimate is $\Delta_\epsilon^{(T)}=\sec^2z$.
+ They approach the same dimension from opposite sides.
+ The right panel shows the calibration bias itself:
+ $\widehat v_T/(2J)=(\sin z/z)\cos^2z$.
+ Dashed lines show the common limiting value~$1$ at $1/L^2=0$.
+ These are exact Ising formulas, not fits or Haagerup-chain data.}
+ \label{fig:scaling-Ising-calibrations}
+\end{figure}

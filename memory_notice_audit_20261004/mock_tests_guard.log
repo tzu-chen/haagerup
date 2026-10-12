@@ -1,0 +1,42 @@
+Resource guard: slot 2/2, memory 256 MiB, AS 256 MiB, CPUs [2], host reserve 8192 MiB
+test_dry_run_needs_no_estimate_and_launches_nothing (test_c8_build_all.BatchSafetyTests.test_dry_run_needs_no_estimate_and_launches_nothing) ... ok
+test_invalid_request_stops_batch (test_c8_build_all.BatchSafetyTests.test_invalid_request_stops_batch) ... ok
+test_missing_estimate_launches_nothing (test_c8_build_all.BatchSafetyTests.test_missing_estimate_launches_nothing) ... ok
+test_ordinary_failure_may_continue_but_is_not_success (test_c8_build_all.BatchSafetyTests.test_ordinary_failure_may_continue_but_is_not_success) ... ok
+test_resource_stop_overrides_keep_going (test_c8_build_all.BatchSafetyTests.test_resource_stop_overrides_keep_going) ... ok
+test_capacity_retry_preserves_logs_and_declared_budget (test_c8q.QueueSafetyTests.test_capacity_retry_preserves_logs_and_declared_budget) ... c8q runner: queue /tmp/tmpbsxl72u9, max parallel 1, declared reservations
+c8q runner: start a build /tmp/tmpbsxl72u9/a.lean (1536 MiB)
+c8q runner: done a exit 0 /tmp/tmpbsxl72u9/a.lean (10s, 1536 MiB)
+c8q runner: stop flag seen, exiting
+ok
+test_explicit_budget_required_and_not_clamped (test_c8q.QueueSafetyTests.test_explicit_budget_required_and_not_clamped) ... c8q: declare a reviewed --memory-mib or explicitly set C8Q_MEMORY_MIB; there is no automatic estimate for this request
+ok
+test_first_memory_failure_blocks_second_and_restart (test_c8q.QueueSafetyTests.test_first_memory_failure_blocks_second_and_restart) ... c8q runner: queue /tmp/tmp6temha_m, max parallel 1, declared reservations
+c8q runner: start a build /tmp/tmp6temha_m/a.lean (1024 MiB)
+c8q: admission stopped by /tmp/tmp6temha_m/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q runner: done a exit 125 /tmp/tmp6temha_m/a.lean (20s, 1024 MiB)
+c8q runner: stop flag seen, exiting
+c8q: admission stopped by /tmp/tmp6temha_m/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q: admission stopped by /tmp/tmp6temha_m/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q: admission stopped by /tmp/tmp6temha_m/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+ok
+test_old_pending_request_without_budget_never_launches (test_c8q.QueueSafetyTests.test_old_pending_request_without_budget_never_launches) ... c8q runner: queue /tmp/tmpgqbgw0jm, max parallel 1, declared reservations
+c8q: admission stopped by /tmp/tmpgqbgw0jm/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q runner: stop flag seen, exiting
+c8q: a: declare a reviewed --memory-mib or explicitly set C8Q_MEMORY_MIB; there is no automatic estimate for this request
+ok
+test_other_already_active_job_finishes_after_latch (test_c8q.QueueSafetyTests.test_other_already_active_job_finishes_after_latch) ... c8q runner: queue /tmp/tmppg6csgp9, max parallel 2, declared reservations
+c8q runner: start a build /tmp/tmppg6csgp9/a.lean (1024 MiB)
+c8q runner: start b build /tmp/tmppg6csgp9/b.lean (1024 MiB)
+c8q: admission stopped by /tmp/tmppg6csgp9/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q runner: done a exit 125 /tmp/tmppg6csgp9/a.lean (30s, 1024 MiB)
+c8q runner: done b exit 0 /tmp/tmppg6csgp9/b.lean (30s, 1024 MiB)
+c8q runner: stop flag seen, exiting
+ok
+test_resource_exit_and_wrapped_lean_failures (test_c8q.QueueSafetyTests.test_resource_exit_and_wrapped_lean_failures) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.040s
+
+OK
+Resource guard: sampled peak scope memory 0.0 MiB; exit 0

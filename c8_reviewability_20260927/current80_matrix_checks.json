@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "arithmetic": "independent stdlib Fraction field and sparse matrix arithmetic",
+  "ambient_dimension": 86,
+  "complement_dimension": 80,
+  "cyclic_dimension": 80,
+  "positive_Heisenberg_LDL_diagonal": [
+    "2",
+    "3/2",
+    "4/3",
+    "5/4",
+    "6/5",
+    "1/2",
+    "2",
+    "3/2"
+  ],
+  "Hermitian_Gram_from_lattice_and_positive_gauge": true,
+  "six_current_vectors_match_explicit_formulas": true,
+  "complement_is_current_orthogonal": true,
+  "all_15_adjoint_pairs_verified": true,
+  "all_30_operators_preserve_complement": true,
+  "Cartan_matrices_match_lattice_weights": true,
+  "unique_joint_Cartan_eigenline": [
+    0,
+    10
+  ],
+  "all_80_cyclic_recipes_and_independence_verified": true,
+  "certificate_sha256": "7cf40b79b91d7ba019a619aed423b5b96a53df72a0dd317b47aab23d1d3677d2",
+  "checker_sha256": "5489a63f0261313b95bed312511335df7f80eaaf7d70559dd813c4cb8434e31c",
+  "peak_rss_KiB": 25336,
+  "scope": "Finite linear algebra of supplied exact matrices only. Their identification with actual lattice zero modes, generator membership and lowering-mode annihilation assertions are not independently verified by this checker."
+}

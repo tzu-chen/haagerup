@@ -1,0 +1,313 @@
+{
+  "OPE_tests": [
+    {
+      "column": 0,
+      "label": "fixed_0",
+      "weight_two_leakage": 4.316087464635771e-14,
+      "weight_two_max_entry": 2.051029994077972e-14,
+      "unwanted_current_leakage": 2.3438023788760684e-15,
+      "seconds": 2.3764412100426853,
+      "mode1_nonzeros": 15224
+    },
+    {
+      "column": 1,
+      "label": "fixed_1",
+      "weight_two_leakage": 1.6878138708418358e-14,
+      "weight_two_max_entry": 6.543961911521114e-15,
+      "unwanted_current_leakage": 3.923605172710395e-15,
+      "seconds": 4.212454130058177,
+      "mode1_nonzeros": 19900
+    },
+    {
+      "column": 2,
+      "label": "fixed_2",
+      "weight_two_leakage": 2.7521721529334227e-14,
+      "weight_two_max_entry": 1.5769289433022693e-14,
+      "unwanted_current_leakage": 1.6822939229026836e-15,
+      "seconds": 3.747205542982556,
+      "mode1_nonzeros": 19900
+    },
+    {
+      "column": 3,
+      "label": "fixed_3",
+      "weight_two_leakage": 9.222151345246438e-15,
+      "weight_two_max_entry": 1.7267113675730173e-15,
+      "unwanted_current_leakage": 1.7723948359691441e-15,
+      "seconds": 2.303492815932259,
+      "mode1_nonzeros": 15224
+    },
+    {
+      "column": 4,
+      "label": "fixed_4",
+      "weight_two_leakage": 1.0006137027653242e-14,
+      "weight_two_max_entry": 2.936884283215869e-15,
+      "unwanted_current_leakage": 2.904408022011413e-15,
+      "seconds": 1.2201549119781703,
+      "mode1_nonzeros": 8446
+    },
+    {
+      "column": 5,
+      "label": "fixed_5",
+      "weight_two_leakage": 1.3839496728116897e-14,
+      "weight_two_max_entry": 7.033351992636289e-15,
+      "unwanted_current_leakage": 1.463832431580038e-15,
+      "seconds": 1.213795957970433,
+      "mode1_nonzeros": 8446
+    },
+    {
+      "column": 6,
+      "label": "fixed_6",
+      "weight_two_leakage": 2.729062958922983e-14,
+      "weight_two_max_entry": 1.3843216811796183e-14,
+      "unwanted_current_leakage": 1.1640563429740586e-15,
+      "seconds": 0.32583693601191044,
+      "mode1_nonzeros": 1970
+    },
+    {
+      "column": 7,
+      "label": "fixed_7",
+      "weight_two_leakage": 1.0605657343207759e-14,
+      "weight_two_max_entry": 3.3872038416227094e-15,
+      "unwanted_current_leakage": 5.794081789420793e-15,
+      "seconds": 1.390595386037603,
+      "mode1_nonzeros": 7032
+    },
+    {
+      "column": 8,
+      "label": "fixed_8",
+      "weight_two_leakage": 1.5758717302241896e-14,
+      "weight_two_max_entry": 8.05122623541735e-15,
+      "unwanted_current_leakage": 4.0528565897703034e-15,
+      "seconds": 0.9826152089517564,
+      "mode1_nonzeros": 7032
+    },
+    {
+      "column": 9,
+      "label": "fixed_9",
+      "weight_two_leakage": 3.018040388050663e-14,
+      "weight_two_max_entry": 1.3997728702263801e-14,
+      "unwanted_current_leakage": 3.2698323287335155e-15,
+      "seconds": 0.130558570032008,
+      "mode1_nonzeros": 1310
+    },
+    {
+      "column": 10,
+      "label": "fixed_10",
+      "weight_two_leakage": 3.497474723129409e-14,
+      "weight_two_max_entry": 2.468281247504708e-14,
+      "unwanted_current_leakage": 1.1119650090559955e-15,
+      "seconds": 1.2379938300000504,
+      "mode1_nonzeros": 8888
+    },
+    {
+      "column": 11,
+      "label": "fixed_11",
+      "weight_two_leakage": 3.4328232329054855e-14,
+      "weight_two_max_entry": 2.3013021302197628e-14,
+      "unwanted_current_leakage": 1.1438985099511192e-15,
+      "seconds": 1.1342653749743477,
+      "mode1_nonzeros": 8888
+    },
+    {
+      "column": 12,
+      "label": "fixed_12",
+      "weight_two_leakage": 1.691224730796879e-14,
+      "weight_two_max_entry": 7.495718527550042e-15,
+      "unwanted_current_leakage": 1.0004331323145339e-15,
+      "seconds": 1.142788241035305,
+      "mode1_nonzeros": 8888
+    },
+    {
+      "column": 13,
+      "label": "fixed_13",
+      "weight_two_leakage": 1.0411692556461427e-14,
+      "weight_two_max_entry": 3.3070218005333618e-15,
+      "unwanted_current_leakage": 2.426926959883561e-15,
+      "seconds": 1.1409357079537585,
+      "mode1_nonzeros": 8888
+    },
+    {
+      "column": 14,
+      "label": "fixed_14",
+      "weight_two_leakage": 1.7558424461953793e-14,
+      "weight_two_max_entry": 1.1330013291088271e-14,
+      "unwanted_current_leakage": 1.042703269257467e-15,
+      "seconds": 0.9247232789639384,
+      "mode1_nonzeros": 7856
+    },
+    {
+      "column": 15,
+      "label": "fixed_15",
+      "weight_two_leakage": 9.8463505726094e-15,
+      "weight_two_max_entry": 2.490886719514762e-15,
+      "unwanted_current_leakage": 2.0826000295088725e-15,
+      "seconds": 0.3637540260097012,
+      "mode1_nonzeros": 7856
+    },
+    {
+      "column": 16,
+      "label": "fixed_16",
+      "weight_two_leakage": 9.341861448086061e-15,
+      "weight_two_max_entry": 4.7448235665732646e-15,
+      "unwanted_current_leakage": 1.111288800636791e-15,
+      "seconds": 0.3619825829518959,
+      "mode1_nonzeros": 7856
+    },
+    {
+      "column": 17,
+      "label": "fixed_17",
+      "weight_two_leakage": 1.0656791250996745e-14,
+      "weight_two_max_entry": 3.45400825715671e-15,
+      "unwanted_current_leakage": 2.685112203865764e-15,
+      "seconds": 0.36261493794154376,
+      "mode1_nonzeros": 7856
+    },
+    {
+      "column": 18,
+      "label": "fixed_18",
+      "weight_two_leakage": 1.0553956912534227e-14,
+      "weight_two_max_entry": 4.690693989813632e-15,
+      "unwanted_current_leakage": 5.073331529331228e-16,
+      "seconds": 0.04951804899610579,
+      "mode1_nonzeros": 813
+    },
+    {
+      "column": 19,
+      "label": "fixed_19",
+      "weight_two_leakage": 1.3303676977768379e-14,
+      "weight_two_max_entry": 6.661338147750939e-15,
+      "unwanted_current_leakage": 1.2138709180286543e-15,
+      "seconds": 0.021669810987077653,
+      "mode1_nonzeros": 768
+    },
+    {
+      "column": 20,
+      "label": "fixed_20",
+      "weight_two_leakage": 2.0701889697515694e-14,
+      "weight_two_max_entry": 1.6342362559884846e-14,
+      "unwanted_current_leakage": 9.077666560893406e-16,
+      "seconds": 0.07482742797583342,
+      "mode1_nonzeros": 428
+    },
+    {
+      "column": 21,
+      "label": "fixed_21",
+      "weight_two_leakage": 1.3824887837111108e-14,
+      "weight_two_max_entry": 9.03745580645082e-15,
+      "unwanted_current_leakage": 8.886529716106199e-16,
+      "seconds": 0.07255455199629068,
+      "mode1_nonzeros": 428
+    },
+    {
+      "column": 22,
+      "label": "fixed_22",
+      "weight_two_leakage": 7.506009591058631e-14,
+      "weight_two_max_entry": 8.326746783665928e-15,
+      "unwanted_current_leakage": 3.4563567395724886e-14,
+      "seconds": 2.630944884964265,
+      "mode1_nonzeros": 19246
+    },
+    {
+      "column": 23,
+      "label": "fixed_23",
+      "weight_two_leakage": 6.644163646467606e-14,
+      "weight_two_max_entry": 7.108344413942117e-15,
+      "unwanted_current_leakage": 1.1417200274762987e-13,
+      "seconds": 2.4951896419515833,
+      "mode1_nonzeros": 18456
+    },
+    {
+      "column": 24,
+      "label": "1,5;e=798/1271",
+      "weight_two_leakage": 7.746435179415821e-13,
+      "weight_two_max_entry": 8.038724969079624e-14,
+      "unwanted_current_leakage": 2.2092536984872083e-13,
+      "seconds": 2.4307431349297985,
+      "mode1_nonzeros": 17898
+    },
+    {
+      "column": 29,
+      "label": "1,9;e=200/1271",
+      "weight_two_leakage": 1.0286641838374076e-12,
+      "weight_two_max_entry": 1.5450237185181618e-13,
+      "unwanted_current_leakage": 3.136926597140664e-13,
+      "seconds": 1.245423575048335,
+      "mode1_nonzeros": 11816
+    },
+    {
+      "column": 38,
+      "label": "1,9;e=1512/1271",
+      "weight_two_leakage": 3.611593447653386e-13,
+      "weight_two_max_entry": 3.912140260151787e-14,
+      "unwanted_current_leakage": 6.665688507588455e-14,
+      "seconds": 0.8153260139515623,
+      "mode1_nonzeros": 11816
+    },
+    {
+      "column": 47,
+      "label": "1,13;e=420/1271",
+      "weight_two_leakage": 5.445005909585362e-13,
+      "weight_two_max_entry": 7.625499452436667e-14,
+      "unwanted_current_leakage": 1.4567652110559907e-13,
+      "seconds": 0.31091784697491676,
+      "mode1_nonzeros": 4368
+    },
+    {
+      "column": 60,
+      "label": "2,2;e=192/1271",
+      "weight_two_leakage": 5.11870895083314e-13,
+      "weight_two_max_entry": 5.962012522823727e-14,
+      "unwanted_current_leakage": 1.6589912176053141e-13,
+      "seconds": 1.6930904010077938,
+      "mode1_nonzeros": 21662
+    },
+    {
+      "column": 64,
+      "label": "2,6;e=1830/1271",
+      "weight_two_leakage": 2.602875300600287e-13,
+      "weight_two_max_entry": 2.07063014911533e-14,
+      "unwanted_current_leakage": 3.95656529633946e-14,
+      "seconds": 1.2701462720287964,
+      "mode1_nonzeros": 15622
+    },
+    {
+      "column": 76,
+      "label": "2,8;e=752/1271",
+      "weight_two_leakage": 4.843794324946122e-13,
+      "weight_two_max_entry": 5.4428690208260886e-14,
+      "unwanted_current_leakage": 1.0955508722277365e-13,
+      "seconds": 0.8419630700955167,
+      "mode1_nonzeros": 10787
+    },
+    {
+      "column": 92,
+      "label": "2,14;e=180/1271",
+      "weight_two_leakage": 3.928958789225018e-13,
+      "weight_two_max_entry": 5.046749888681331e-14,
+      "unwanted_current_leakage": 8.75074739492927e-14,
+      "seconds": 0.1117838219506666,
+      "mode1_nonzeros": 1434
+    }
+  ],
+  "current_covariance_residuals": [
+    2.6610758020770464e-14,
+    2.9159274621811174e-14,
+    1.9635567748324125e-14,
+    3.7599425687487263e-13,
+    1.3582526076652504e-13,
+    8.421222549765237e-14
+  ],
+  "PCT_invariance_residual": 6.551206009597393e-14,
+  "max_weight_two_leakage": 1.0286641838374076e-12,
+  "max_unwanted_current_leakage": 3.136926597140664e-13,
+  "seconds": 38.90000560297631,
+  "peak_rss_KiB": 133764,
+  "scope": "Floating low-grade OPE closure, not an all-grade VOA or Haagerup-category proof.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_closure.py": "1054a526ad4e6f1ee5a6ad332cea184b1b34f8c3562ecee1d1c05de4d202b048",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_lattice.py": "398601b48fdea83207922d784a50eda32edad05113f5fe12f0a9410c542715ee",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_ope.py": "27136b9f33e767cd0f8cc66a420a44ba08451006d8e7de9c1320a8fab85df65a",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_fields.py": "0a2b7e32e0415091f1edf9f860977859d525b543a4f9b423da87057bc8e4ccf9",
+    "hi_cft_20260923_c8_fields_precise.npz": "57b34695b28180d1dbf6ddbd62a3457be1b996d1fc8f4e3621806f5d174139bf"
+  }
+}

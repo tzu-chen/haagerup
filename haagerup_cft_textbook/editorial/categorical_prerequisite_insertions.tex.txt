@@ -1,0 +1,153 @@
+% Draft A1: after the verbal zigzag explanation in f01_fusion.tex.
+In formulas, choose a left dual $X^*$ with maps
+\[
+ \operatorname{ev}_X:X^*\otimes X\to\one,
+ \qquad \operatorname{coev}_X:\one\to X\otimes X^*.
+\]
+With associators understood, the two straightening identities are
+\[
+ (1_X\otimes\operatorname{ev}_X)
+ (\operatorname{coev}_X\otimes1_X)=1_X,
+ \qquad
+ (\operatorname{ev}_X\otimes1_{X^*})
+ (1_{X^*}\otimes\operatorname{coev}_X)=1_{X^*}.
+\]
+For finite-dimensional vector spaces they say
+$v=\sum_i e_i e^i(v)$, using a basis and its dual.
+In a fusion category the same equations concern junction maps;
+they do not require the line $X$ to be an ordinary vector space.
+
+% Draft A2: expand the existing pivotal/spherical sentences immediately
+% before eq:dimension-character, avoiding duplicate definitions.
+A pivotal structure is a natural monoidal identification
+$j_X:X\to X^{**}$. It lets us close an endomorphism $f:X\to X$
+without changing the orientation of its line. One closure gives
+\[
+ \Tr_{\rm cat}(f)
+ =\operatorname{ev}_{X^*}
+   \bigl((j_Xf)\otimes1_{X^*}\bigr)
+   \operatorname{coev}_X.
+\]
+Sphericity says that closing on the other side gives the same scalar.
+The quantum dimension is $d_X=\Tr_{\rm cat}(1_X)$.
+For $X=\bigoplus_a a^{\oplus m_a}$, an endomorphism consists of
+matrices $f_a$ on the multiplicity spaces, and
+\[
+ \Tr_{\rm cat}(f)=\sum_a d_a\Tr(f_a).
+\]
+Thus on $\one\oplus\tau^{\oplus2}$ in the Fibonacci category,
+an endomorphism $(\lambda,B)$ with $B\in M_2(\C)$ has trace
+$\lambda+\varphi\Tr(B)$. Its identity has trace $1+2\varphi$,
+not the unweighted sum of multiplicities $3$. This weighting is the
+same one that will appear in modular link traces and twist moments.
+
+% Draft A3: local clarification in c04_regularity.tex after the paragraph
+% introducing Grothendieck--Verdier duality. This is the same duality gap,
+% not a proposed separate categorical digression.
+More precisely, this duality gives natural isomorphisms
+\[
+ \Hom(Y\otimes X,\one)\simeq\Hom(Y,DX).
+\]
+At $Y=DX$, the identity of $DX$ corresponds to the evaluation
+$DX\otimes X\to\one$, so this map is nonzero when $X\ne0$.
+The assertion represents maps \emph{into} the unit; it does not yet
+supply a coevaluation from the unit satisfying the snake identities.
+
+% Draft B: after eq:algebra-module-dimensions in f04_modular.tex,
+% or immediately after the canonical special-case paragraph there.
+% Do not duplicate r07's later complete condensation calculation.
+\subsection{Why a Lagrangian algebra recovers a center}
+\label{sec:lagrangian-reconstruction}
+The tensor unit of the module category $\mathcal M_A$ is $A$ itself.
+Its dimension there must be one even when its dimension in
+$\mathcal M$ is large. The normalization is
+\[
+ \FPdim_{\mathcal M_A}(M)
+   =\frac{\FPdim_{\mathcal M}(M)}{\FPdim_{\mathcal M}(A)},
+\]
+where the numerator forgets the module action. In our positive
+spherical setting these are also the categorical dimensions.
+For instance, in $Z(\operatorname{Vec}_{\Z_3})$ take
+$A=\bigoplus_k(0,k)$. The flux module
+$x_g=\bigoplus_k(g,k)$ has ambient dimension three and module
+dimension one. The three flux modules consequently have global
+dimension three, as the dimension formula predicts. Their actions
+and relative tensor products are worked out in
+Chapter~\ref{ch:defects}.
+
+There is also an actual functor behind reconstruction. The free
+module functor is
+$G_A:\mathcal M\to\mathcal M_A$, $G_A(X)=X\otimes A$.
+It is \emph{central}: the ambient braiding supplies coherent
+half-braidings of $G_A(X)$ with every $A$-module. Equivalently,
+it lifts to a braided tensor functor
+\[
+ \widetilde G_A:\mathcal M\longrightarrow Z(\mathcal M_A).
+\]
+This is the meaning of a central functor; it need not take values in
+a braided category before the lift.
+
+\begin{theorem}[Lagrangian reconstruction]
+\label{thm:lagrangian-reconstruction}
+Let $\mathcal M$ be a nondegenerate braided fusion category and
+$A$ a connected commutative separable algebra. If
+$\FPdim(A)^2=\FPdim(\mathcal M)$, then the central lift gives
+a braided equivalence
+$\mathcal M\simeq Z(\mathcal M_A)$, carrying $A$ to the canonical
+algebra $I(\one)$.
+\end{theorem}
+The structural input is that this lift is fully faithful. Once that
+is known, the dimension formulas explain why the Lagrangian condition
+makes it exhaustive:
+\[
+ \FPdim Z(\mathcal M_A)
+ =\left(\frac{\FPdim\mathcal M}{\FPdim A}\right)^2
+ =\FPdim\mathcal M.
+\]
+A fully faithful fusion subcategory with the full positive global
+dimension cannot omit any simple object. This general theorem is
+what turns a holomorphic extension $H/U$ into the identification
+$\Rep(U)\simeq Z(\Rep(U)_H)$ later in the construction.
+
+% Draft C: replace the six-line informal module-category paragraph before
+% the Morita theorem in f03_centers.tex. Right-module convention is explicit;
+% it does not change the preceding definition of an object that is a right
+% A-module, or the later tensor-opposite convention for bimodule defects.
+For fusion categories the analogue of a representation is a
+\emph{module category}. In a right-action convention it consists
+of a finite semisimple category $\mathcal N$, an action
+$(m,X)\mapsto m\triangleleft X$, and coherent isomorphisms
+\[
+ (m\triangleleft X)\triangleleft Y
+   \simeq m\triangleleft(X\otimes Y),\qquad
+ m\triangleleft\one\simeq m.
+\]
+Their coherence is the module version of the pentagon. A module
+endofunctor $T$ also has coherent isomorphisms
+$T(m\triangleleft X)\simeq T(m)\triangleleft X$:
+it respects the action, rather than merely mapping objects to objects.
+Such functors form the \emph{dual category}, with composition as
+tensor product. If $\mathcal N$ is indecomposable as a module
+category, this dual is a fusion category. Choosing a left-action
+convention requires the corresponding reversal of composition order.
+
+For a small example, let untwisted $\operatorname{Vec}_{\Z_3}$
+act on $\operatorname{Vec}$ by forgetting the grading. Each simple
+group label acts as the identity functor. A linear endofunctor is
+$T_W(v)=W\otimes v$; respecting the generator's action equips
+$W$ with an operator $U$ satisfying $U^3=1$. The three one-dimensional
+eigenvalue choices $1,\zeta_3,\zeta_3^2$, where
+$\zeta_3=e^{2\pi i/3}$, are the three simple module
+endofunctors, and composition multiplies their characters. Thus the
+module category has one simple object, whereas its dual has three.
+Fusion categories related through such an indecomposable module
+category are Morita equivalent. Their simple objects and fusion
+rings can differ; their centers agree by the theorem below.
+
+% Source scope for the editor:
+% B's structural statements: DMNO, arXiv:1009.2117v2, Definition 2.4,
+% Section 3.3, Lemma 3.11, Corollary 3.28 and Corollary 4.1.
+% C's finite-semisimple and indecomposable hypotheses: the same source,
+% Section 2.6. The Z3 example is a direct calculation above.
+% A is the elementary duality/trace construction already implicit in f01;
+% A3 states the actual Hom representation property of the GV input in c04.

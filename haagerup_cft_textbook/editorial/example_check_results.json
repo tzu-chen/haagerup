@@ -1,0 +1,27 @@
+{
+  "scope": "Small exact textbook examples only; no all-weight CFT certificate",
+  "rational": {
+    "Ising_null": true,
+    "weight_four_couplings": [
+      "0",
+      "60552/2365"
+    ],
+    "light_Gram_eigenvalues": [
+      "0",
+      "35/39",
+      "1"
+    ],
+    "character_and_spectrum_arithmetic": true,
+    "rational_crossing_samples": 4
+  },
+  "cyclotomic": {
+    "S_squared_identity": true,
+    "nonnegative_integer_Verlinde_entries": 1728,
+    "c1_c1_c1": 2,
+    "twined_to_twisted_vectors": 2
+  },
+  "seconds": 0.467,
+  "max_rss_mib": 16.184,
+  "script_sha256": "e6286bf3c0d9929975b66892183d34170ac0cec29c00bba9ff02432ef9d08cb2",
+  "guard_sha256": "09b9986966402a73bba8e078884a50b5762c4980485ea295e8cca2e02fc8ae63"
+}

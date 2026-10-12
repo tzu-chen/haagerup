@@ -1,0 +1,178 @@
+Order-three cubic equations: independent hand derivation
+Author: scope_construction
+Timestamp: 2026-10-05 20:32:35 UTC (clock tool before report write)
+Scope: algebra by hand; no symbolic/numerical execution or imports.
+Root owns the separate proposed integer-normal-form checker.
+
+Reader-facing LaTeX draft: editorial/n3_cubic_insertion.tex.txt. It includes
+the full four-table proof (36 entries plus two symmetries covering all81),
+explicit independence from the analytic gamma identification, and the optional
+Hermitian positive-embedding observation without an associator-unitarity claim.
+
+Conclusion
+----------
+Yes: every one of the 3^4=81 order-three cubic equations follows from
+  delta^2=3delta+1, p+q=1, pq=delta.
+The argument below is a complete small-order hand reduction, not merely
+a prediction that a checker will return zero. For the textbook, the three
+worked representatives in part 2 are the compact teaching insertion; the
+four-table completion in part 3 can be retained as an optional verification
+table or used editorially to substantiate the all-81 assertion.
+This adds no all-order special-function theorem and no positivity claim.
+
+1. Clear denominators before checking the cubic
+-----------------------------------------------
+Put tau=delta-1 and a=delta-2, so
+
+  B = [[a,-1,-1],[-1,-1,p],[-1,q,-1]],  A=B/tau.
+
+Both delta and tau are nonzero by delta^2-3delta-1=0. The useful reductions
+are
+
+  p^2=p-delta,       q^2=q-delta,
+  tau^2=delta+2,     a*tau=3,     a^2=5-delta,
+  tau^3/delta=7-delta.
+
+For the last identity, tau^3=(delta-1)(delta+2)=4delta-1 and
+delta^{-1}=delta-3. Write kappa=7-delta.
+The cubic in the chapter, after multiplication by tau^3, is
+
+  C_(g,h)(k,l):=sum_(m=0)^2 B_(m,g+h) B_(g,m+k) B_(h,m+l)
+    =tau B_(g+l,k) B_(h+k,l)-kappa 1_(g=0)1_(h=0),       (*).
+
+Every group index is reduced modulo three. The correction is present for
+ALL nine choices of k,l when g=h=0. It is not restricted to the all-zero
+quadruple. Equivalently, it is a constant all-ones matrix in that block.
+
+2. Three nontrivial representatives, ready for a short insertion
+----------------------------------------------------------------
+At (g,h,k,l)=(1,1,0,0), the three terms on the left are -1,p,-p^2.
+Thus
+
+  C_(1,1)(0,0)=-1+p-p^2=delta-1=tau,
+
+which is the right side, since B_(1,0)^2=1. This illustrates how the
+quadratic relation for p, with the PLUS-delta constant term,
+p^2-p+delta=0, enters a cubic recoupling identity.
+
+At (1,1,1,1), the left side is p^3-2 and the right side is tau*q^2.
+They agree because
+
+  p^3-2=(1-delta)p-delta-2=-tau*p-tau^2,
+  tau*q^2=tau(q-delta)=tau(1-p-delta)=-tau*p-tau^2.
+
+The cubic power has introduced no new algebraic parameter.
+
+At (0,0,0,0), the left side is a^3-2. Including the correction, the
+residual is
+
+  a^3-2-tau*a^2+kappa
+    =-a^2+5-delta=0,
+
+because a-tau=-1 and a^2=5-delta. Omitting the exceptional correction
+would leave a nonzero residual. This is a particularly clear small
+example of the invertible-channel term in the cubic equation.
+
+An optional fourth check isolates p+q=1 with a mixed input. At
+(g,h,k,l)=(0,1,0,2), the left side is
+
+  -a*p-1+q=-a*p-p=-tau*p,
+
+equal to tau B_(2,0) B_(1,2). No correction occurs in this case.
+
+Possible concluding prose for the existing example:
+  "In this order-three example the three relations also imply every cubic
+  reconstruction identity: simultaneous index inversion exchanges p and q,
+  and interchanging (g,k) with (h,l) reduces the 81 checks to four
+  three-by-three tables. These finite algebraic cancellations do not provide
+  a positive adjoint or identify the result with the physical H3 associator."
+
+If root prefers to cite only the three displayed representatives in the
+reader-facing text, the full-table proof below or a separately scoped exact
+enumeration should support the sentence claiming every cubic. Representative
+checks by themselves do not establish that sentence.
+
+3. A complete four-table hand proof
+----------------------------------
+Use rows indexed by k=0,1,2 and columns indexed by l=0,1,2. Directly expanding
+the three summands gives the following left-side matrices; the displayed
+simplifications use only the relations in part 1:
+
+  C_(0,0) =
+    [[a^3-2,       -a^2+a-1, -a^2+a-1],
+     [-a^2+a-1,    -a^2+a-1,  3a],
+     [-a^2+a-1,     3a,      -a^2+a-1]].
+
+  C_(0,1) =
+    [[-3,   tau,     -tau*p],
+     [tau, -tau*q,   -tau*q],
+     [-3,  -tau*p,    tau]].
+
+  C_(1,1) =
+    [[tau, tau,       3p],
+     [tau, p^3-2,     tau],
+     [3p,  tau,       tau]].
+
+  C_(1,2) =
+    [[tau,    -tau*q, -3],
+     [-3,     -tau*q, tau],
+     [-tau*p,  tau,  -tau*p]].
+
+The right-side product matrices B_(g+l,k)B_(h+k,l), before multiplication
+by tau, are respectively
+
+  R_(0,0)=[[a^2,1,1],[1,1,delta],[1,delta,1]],
+  R_(0,1)=[[-a,1,-p],[1,-q,-q],[-a,-p,1]],
+  R_(1,1)=[[1,1,a*p],[1,q^2,1],[a*p,1,1]],
+  R_(1,2)=[[1,-q,-a],[-a,-q,1],[-p,1,-p]].
+
+For the (0,0) block, subtraction of kappa in EVERY entry gives the needed
+identities
+
+  a^3-2=tau*a^2-kappa,
+  -a^2+a-1=tau-kappa,
+  3a=tau*delta-kappa.
+
+The first was worked above. The second has both sides 2delta-8, and the
+third has both sides 3delta-6. The three nonexceptional blocks agree using
+a*tau=3 and p^3-2=tau*q^2. For example, a*delta-2=tau and
+-a*p-1+q=-tau*p explain entries in the mixed blocks. Thus (*) is proved
+for all k,l at the four stated ordered pairs (g,h).
+
+To cover every other pair, use two exact symmetries:
+
+  (i)  (g,h,k,l) -> (h,g,l,k).
+       It swaps commuting scalar factors on each side of (*).
+
+  (ii) (g,h,k,l) -> (-g,-h,-k,-l), together with p <-> q.
+       The displayed matrix has B_(-r,-s)(p,q)=B_(r,s)(q,p).
+       The three scalar relations are invariant under p <-> q.
+
+The ordered (g,h) pairs split into the four classes
+  {(0,0)},
+  {(0,1),(1,0),(0,2),(2,0)},
+  {(1,1),(2,2)},
+  {(1,2),(2,1)}.
+The tables cover one representative from each, with all nine k,l choices.
+Hence they cover all (1+4+2+2)*9=81 equations, including repeated and
+exceptional indices. No generic-index division or discarded zero case is
+involved.
+
+4. Relation to the proposed exact checker and reconstruction
+------------------------------------------------------------
+The natural exact representation is the free rank-four integer normal
+form with basis 1,delta,p,delta*p, reduced by
+delta^2=3delta+1 and p^2=p-delta; set q=1-p. The cleared residual (*) is
+integral in this ring, including its kappa correction. There is no need
+for floating roots, radicals, a CAS, or division during the 81-case loop.
+Root is drafting that independent checker; none was run for this review.
+
+The existing sentence "its quadratics alone do not prove the cubic
+reconstruction identities" should be adjusted if the hand verification is
+integrated: the displayed n=3 relations have now supplied those cubics by
+an additional argument. The general all-order cubic theorem still needs
+its analytic/formal proof. Reconstruction and quartic contraction remain
+the separately stated structural steps, and Hermitian positivity remains
+a different question. The proof works algebraically for either dimension
+embedding and either ordering of p,q; the negative-root sign convention is
+needed only to identify the special-function sample in this example.

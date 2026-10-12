@@ -1,0 +1,220 @@
+Beginner-reader sequence audit: c01--c06
+Reviewer: scope_construction
+Timestamp: 2026-10-05 20:14:37 UTC (clock tool before report drafting)
+
+Original pass was read-only. Integration approved by root and applied
+2026-10-05 20:19:09 UTC (clock reading during final source review).
+All listed recommendations, including optional clarity clauses, are now
+applied in c01--c06. The gamma_78 rename was also propagated to the one
+matching pairing in solutions/c06_cosets.tex. No scientific source,
+numerical job, or build was involved. Formulas and theorem strength are
+unchanged apart from the approved notation/typing fixes.
+
+Affected passages were reread after editing; symbol occurrences and the
+remaining norm-twenty u_0 were checked by text search. The polar/cusp gloss
+also makes explicit that polar coefficients refer to the original character
+difference, before multiplication by eta^8. No full document audit or PDF
+build was run; those remain with root. The line numbers below refer to the
+pre-edit source and preserve the review's original locations.
+
+The actual reading order was checked: r01/r02 and f01--f04 precede c01;
+r04/r03 and the full-theory/defect/sewing chapters precede c06.
+Definitions already supplied there were not counted as missing prerequisites.
+
+The new multiplet, parafermion-grade, component-top, indicator, and ordinary
+branching bridges have removed the earlier major jumps. I recommend small
+local repairs below rather than another exposition section. Items marked
+"priority" prevent a genuine notation/typing misunderstanding; other items
+are short navigation improvements.
+
+1. c01_lattice_embedding.tex
+----------------------------
+(a) Lines 22-29: S(...) and the twisted group-algebra notation are used
+without their elementary meaning being explicit. Proposed sentence after
+the displayed space:
+  "Here S denotes the symmetric algebra of the negative oscillator modes,
+  and the momentum algebra has multiplication
+  e^alpha e^beta=epsilon(alpha,beta)e^(alpha+beta)."
+This is just a definition of the symbols already in the display.
+
+(b) Line 130, priority: "simple current" first appears here; the earlier
+fusion primer defines invertible objects but does not give this VOA term.
+Proposed replacement:
+  "Here J is a simple current, meaning a simple module invertible under
+  fusion, and J has order three: J fused with itself three times is B."
+One can retain the current displayed H=B+J+J^2 without changing notation.
+
+(c) Lines 320-326: the explicit PCT formula leaves h_i unchanged while
+claiming antilinearity. This is correct for h_i in the real Cartan, but the
+opening lattice section has h=L tensor C. Add before the formula:
+  "In the explicit formula take the h_i in the real lattice Cartan and
+  extend antilinearly to complex coefficients."
+This prevents a beginner from treating arbitrary complex h_i as fixed.
+
+2. c02_finite_closure.tex
+-------------------------
+(a) Lines 114-133: N_d first appears in the theorem without a definition.
+After N=N(S_1+...+S_h), add:
+  "A subscript d on N denotes its homogeneous part of conformal weight d."
+
+(b) Lines 244-253, priority: E_L,E_R were states in c01, but from here they
+act as operators on quotient spaces, and later FE is a composition. Add:
+  "In this representation-theoretic section E_L,E_R,F_L,F_R abbreviate
+  the zero-mode operators of the corresponding current states."
+The existing compact rescaling does not affect FE or the raising images.
+
+(c) Lines 285-287: "nine independent highest left fields" is an unexplained
+count after the 28-constituent table. A short provenance reminder would help:
+  "The nine primitive tests are the eight listed nontrivial weight-two
+  multiplets and one independent neutral stress; affine normal states and
+  the ambient stress are already controlled."
+This agrees with the original eight multiplets plus retained singlet. Here
+"left" means the first input of f_a, not the L current factor; replacing
+"highest left fields" by "highest fields in the first input" avoids that
+second ambiguity without adding a sentence.
+
+(d) Lines 447-450, priority: "charged" and "bottom" have not been defined
+for these gate witnesses. Add before the witness discussion:
+  "Here charged means a nontrivial representation of the retained current
+  zero modes, neutral means a current singlet, and q_- is a lowest-weight
+  vector of the triplet Q."
+These are internal current labels, not charges of a Haagerup defect line.
+
+3. c03_factors.tex
+------------------
+(a) Lines 26-30: L(4/5,0) and L(4/5,3) occur without a local notation
+dictionary. Proposed sentence:
+  "We write L(c,h) for the simple highest-weight Virasoro module of central
+  charge c and lowest weight h."
+The earlier Ising discussion explains the modules but does not explicitly
+establish this L(c,h) notation.
+
+(b) Lines 140-147, priority: C(G,q) is not defined in the preceding chapters.
+The twist following the display helps, but does not explicitly say what
+the general notation denotes. Add:
+  "The notation C(G,q) denotes the pointed braided category with simples
+  g in G, fusion given by group addition, and twist exp(2 pi i q(g))."
+This also serves the later order-thirteen and order-thirty-nine uses.
+
+(c) Lines 201-205: three beta vectors precede a 2-by-2 Gram matrix. Replace
+"Their Gram matrix" by "The Gram matrix of beta_1,beta_2". This is only a
+small disambiguation, but it makes the linear dependence beta_3=beta_1+beta_2
+visible rather than inviting the reader to look for a missing row.
+
+(d) Lines 554-558, optional: the generator change taking 3j^2/13 to
+-j^2/13 can be made explicit in one clause:
+  "Replacing the old order-thirteen generator by twice itself gives
+  3(2j)^2 congruent to -j^2 modulo thirteen."
+No new theorem or classification is needed for this relabeling.
+
+4. c04_regularity.tex
+---------------------
+(a) Lines 163 and 180-182, priority: "Zhu algebra" appears before it has
+been described. At its first mention, add a parenthetical gloss:
+  "the associative algebra that encodes degree-zero mode actions on
+  lowest spaces".
+The proof needs this interpretation and the stated semisimplicity theorem;
+it does not need a new section giving Zhu's explicit quotient construction.
+
+(b) Lines 317-325, priority: D has denoted translation throughout the previous
+chapters, but DX now denotes categorical duality. Make the change explicit:
+  "In this categorical section D denotes contragredient duality, so DX is
+  the contragredient object; it is not the translation operator."
+The following Hom formula then defines the exact duality property used.
+
+No additional sentences are needed in the C2 energy cutoff or projective
+vacuum proofs: the direct-sum quotient argument, noncommuting-energy warning,
+generalized-weight exactness, and right-exactness example now supply the
+important missing premises. Likewise the proof explains Cauchy completeness
+where it is needed; it need not be defined a second time.
+
+5. c05_branching.tex
+--------------------
+(a) Lines 96-98: "four traces" is followed by L being called an energy and
+P,Z being called energies. For literal units, say:
+  "On a core top let L,P,Z be the traces of the left affine, Potts, and
+  PF13 energy operators, and let Q=Tr H_R(0)^2."
+This preserves the excellent subsequent warning that W is bookkeeping on
+an isolated row rather than that row's ambient energy.
+
+(b) Lines 250-252, optional: the four mixed lattice sectors may surprise
+a reader who remembers only the two glue sectors of H/B. Add:
+  "There are four such B-module sectors because each of the two Z/3
+  discriminant coordinates is nonzero; the E8 extension chooses two of
+  them as its glue sectors."
+
+(c) Lines 422-429, priority: "polar coefficients" and "cusp" are used
+before the character chapter, which now follows unitarity. Add:
+  "A polar character term is a negative power of q, equivalently a state
+  of weight below c/24; the cusp is q=0, or tau tending to i infinity."
+The explicit theta example then proves the needed cancellation mechanism;
+there is no need to move the general character chapter earlier again.
+
+(d) Lines 743-745, priority: d_m is used in the indicator bridge before
+its definition in the next section. The ring was already derived, so
+"the rank-six fusion ring below" is also a misleading direction. Replace
+the opening with:
+  "For the rank-six ring just derived, let d_m be the positive solution
+  of d_m^2=1+3md_m. Its simple dimensions are 1,1,1,d_m,d_m,d_m."
+The later radical expression can remain as the explicit solution.
+
+(e) Lines 753-754 and 814-816: name the residual simple and twist before
+the moment formulas. A compact replacement at 814 is:
+  "Every remaining central simple Z_j has twist theta_j and forgets to
+  n_j R, with n_j a positive integer."
+The earlier bridge may call these "a residual induced summand" without
+assuming the reader has already met that particular index convention.
+
+(f) Lines 874-880 and 923, priority: phi and mu are undefined arithmetic
+functions at their first use. phi earlier meant the golden ratio in the
+Potts table. Add before the root-sum estimate:
+  "Here phi(n) is Euler's totient, the number of residues coprime to n."
+At the primitive-twentieth-root sum add "where mu is the Moebius function";
+its usual description (zero for a square factor, otherwise (-1)^r for r
+distinct prime factors) fits in the same sentence if desired. The later
+thirteen-conductor paragraph presently supplies this name too late.
+
+6. c06_cosets.tex
+-----------------
+(a) Lines 104-107 and 338, priority: u_0 denotes a norm-78 rank-one generator
+in the rank-six lattice presentation, then a specific norm-20 plane vector.
+This is an unnecessary apparent contradiction within one chapter. Rename
+the earlier generator gamma_78 (two occurrences) and expand its definition:
+  "Here omega_i is a fundamental weight of the ith A2 factor, alpha
+  generates A1, and gamma_78 generates the rank-one lattice <78>."
+Retain the norm values and leave the later u_0=(ell+h)/2 unchanged. Defining
+the fundamental weights also explains the asserted order-six glue directly.
+
+(b) Lines 148-153, priority: superscript rev appears before a local gloss,
+whereas op is explained a little later. Add at first use:
+  "The superscript rev reverses the braiding and twist; it does not reverse
+  tensor order, which is denoted op below."
+The notation appendix says this correctly, but occurs after this chapter.
+
+(c) Lines 278-280, priority: the equation U_1=A_{1,1} direct-sum A_{1,39}
+mixes a finite current Lie algebra with infinite-dimensional affine VOAs.
+Proposed replacement:
+  "The retained current Lie algebra is U_1=sl2 direct-sum sl2, generating
+  the affine subalgebra A_{1,1} tensor A_{1,39}. Any transparent compact
+  current denominator lies in this retained current algebra."
+This also makes the meaning of the Sugawara central-charge bound clearer.
+
+(d) Lines 633-645, optional: the character notation for branching spaces
+is inferable but a short definition would make the square-sum inequality
+transparent:
+  "Here chi_{B_lambda}(beta)=Tr_{B_lambda}
+  exp[-beta(L^e_0-c_*/24)], including the same chiral Casimir shift."
+It prevents a reader from switching to unshifted degeneracy series midway
+through the two-temperature trace proof.
+
+(e) Line 875, optional: gloss dominant as "every simple target is a summand
+of an image". The category was constructed to have this property, so the
+gloss explains the theorem's hypothesis without adding a new argument.
+
+Integration scope
+-----------------
+These edits are symbol definitions, one-sentence reminders, or typing fixes.
+They do not change the original-versus-selected extension algebra convention,
+the H2/H3 fork, any finite-input claim, or the analytic premise on the charge-six
+physical defect interpretation. No new exercises or mathematical topics are
+recommended. If root wants the shortest pass, prioritize the marked items.

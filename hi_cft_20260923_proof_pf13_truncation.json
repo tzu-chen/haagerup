@@ -1,0 +1,59 @@
+{
+  "exact_W6_truncation": true,
+  "basis": [
+    ":L W4:",
+    ":W3 W3:",
+    ":L(:LL:):",
+    ":d2L L:",
+    ":dL dL:",
+    "d2W4",
+    "d4L"
+  ],
+  "coefficients": [
+    [
+      "-148744/473",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "566160/473",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-4800/121",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "3860/11",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-33320/121",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-489817/4730",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "2193061/52030",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "W6_support": 28342,
+  "seconds": 1057.1920546300244,
+  "scope": "An exact weight-six decoupling identity in the candidate subalgebra; not by itself a universal-algebra isomorphism."
+}

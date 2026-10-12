@@ -1,0 +1,83 @@
+# Bounded entry point: invoke only through the shared resource watchdog.
+# Example: python hi_cft_safe_run.py -- julia --project=<env> this.jl --selftest
+let
+    limits=zeros(Culong,2)
+    ccall(:getrlimit,Cint,(Cint,Ptr{Culong}),9,limits)==0 || error("Cannot inspect RLIMIT_AS")
+    limits[1]<=6*1024^3 || error("A hard address-space cap <=6 GiB is required")
+    parent=ccall(:getppid,Cint,())
+    command=read("/proc/$parent/cmdline",String)
+    occursin("hi_cft_safe_run.py",command) || error("Use the shared hi_cft_safe_run.py launcher")
+end
+include(joinpath(@__DIR__,"hi_cft_overlap_pumps_optimize.jl"))
+
+# This is the same four-tensor contraction as the original allocating
+# applyTM_MPO_r, with a different contraction order. The original order can
+# produce 216 D^4 complex entries for this model; here the largest output is
+# 36 D^4 and no seven-index intermediate is built.
+@eval puMPS.MPS begin
+    function applyTM_MPO_r(A::MPSTensor,B::MPSTensor,o::MPOTensor,T2::MPS_MPO_TM)::MPS_MPO_TM
+        E=TM_dense_MPO(A,B,o)
+        left=prod(size(E)[1:3]);middle=prod(size(E)[4:6]);right=prod(size(T2)[4:6])
+        @assert size(E)[4:6]==size(T2)[1:3]
+        result=reshape(E,left,middle)*reshape(T2,middle,right)
+        return reshape(result,(size(E)[1:3]...,size(T2)[4:6]...))
+    end
+    function applyTM_MPO_l(A::MPSTensor,B::MPSTensor,o::MPOTensor,T2::MPS_MPO_TM)::MPS_MPO_TM
+        E=TM_dense_MPO(A,B,o)
+        left=prod(size(T2)[1:3]);middle=prod(size(T2)[4:6]);right=prod(size(E)[4:6])
+        @assert size(T2)[4:6]==size(E)[1:3]
+        result=reshape(T2,left,middle)*reshape(E,middle,right)
+        return reshape(result,(size(T2)[1:3]...,size(E)[4:6]...))
+    end
+    # The optimizer calls these in-place methods. The separate product is
+    # intentional: its result may alias T2, so mul!(result,T2,E) is unsafe.
+    function applyTM_MPO_l!(result::MPS_MPO_TM{T},A::MPSTensor{T},B::MPSTensor{T},o::MPOTensor{T},T2::MPS_MPO_TM{T},work::Vector{T})::MPS_MPO_TM{T} where T
+        copyto!(result,applyTM_MPO_l(A,B,o,T2));return result
+    end
+    function applyTM_MPO_r!(result::MPS_MPO_TM{T},A::MPSTensor{T},B::MPSTensor{T},o::MPOTensor{T},T2::MPS_MPO_TM{T},work::Vector{T})::MPS_MPO_TM{T} where T
+        copyto!(result,applyTM_MPO_r(A,B,o,T2));return result
+    end
+    worklen_applyTM_MPO_l(A::MPSTensor{T},B::MPSTensor{T},o::MPOTensor{T},T2::MPS_MPO_TM{T}) where T = 0
+    workvec_applyTM_MPO_r!(work::Vector{T},A::MPSTensor{T},B::MPSTensor{T},o::MPOTensor{T},T2::MPS_MPO_TM{T}) where T = work
+    workvec_applyTM_MPO_r(A::MPSTensor{T},B::MPSTensor{T},o::MPOTensor{T},T2::MPS_MPO_TM{T}) where T = T[]
+end
+
+function contraction_selftest()
+    BLAS.set_num_threads(2);Random.seed!(1357)
+    errors=Float64[]
+    for (m1,m2,m3) in ((6,1,6),(6,6,1),(1,6,6),(1,1,1))
+        D=3;A=randn(ComplexF64,D,6,D);B=randn(ComplexF64,D,6,D)
+        o=randn(ComplexF64,m1,6,m2,6)
+        T2=randn(ComplexF64,D,m2,D,D,m3,D)
+        @tensor original[k1,a,b1,k3,c,b3] := conj(B[b1,t,b2])*(o[a,s,b,t]*(A[k1,s,k2]*T2[k2,b,b2,k3,c,b3]))
+        revised=puMPS.MPS.applyTM_MPO_r(A,B,o,T2)
+        push!(errors,norm(original-revised)/norm(original))
+        result=similar(original)
+        puMPS.MPS.applyTM_MPO_r!(result,A,B,o,T2,ComplexF64[])
+        push!(errors,norm(original-result)/norm(original))
+        Tleft=randn(ComplexF64,D,m3,D,D,m1,D)
+        @tensor original_left[k1,a,b1,k3,c,b3] := ((Tleft[k1,a,b1,k2,b,b2]*conj(B[b2,t,b3]))*o[b,s,c,t])*A[k2,s,k3]
+        revised_left=puMPS.MPS.applyTM_MPO_l(A,B,o,Tleft)
+        push!(errors,norm(original_left-revised_left)/norm(original_left))
+        result_left=similar(original_left)
+        puMPS.MPS.applyTM_MPO_l!(result_left,A,B,o,Tleft,ComplexF64[])
+        push!(errors,norm(original_left-result_left)/norm(original_left))
+        if m1==m2
+            alias=copy(T2)
+            puMPS.MPS.applyTM_MPO_r!(alias,A,B,o,alias,ComplexF64[])
+            push!(errors,norm(original-alias)/norm(original))
+            alias_left=copy(Tleft)
+            puMPS.MPS.applyTM_MPO_l!(alias_left,A,B,o,alias_left,ComplexF64[])
+            push!(errors,norm(original_left-alias_left)/norm(original_left))
+        end
+    end
+    @assert maximum(errors)<1e-12
+    println("D3 contraction relative errors: ",errors)
+    println(read("/proc/self/status",String))
+end
+
+if ARGS==["--selftest"]
+    contraction_selftest()
+else
+    main()
+end

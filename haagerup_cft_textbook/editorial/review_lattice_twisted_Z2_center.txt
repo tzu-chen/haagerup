@@ -1,0 +1,147 @@
+Independent hand derivation: Z(Vec_Z2^omega), omega(a,b,c)=(-1)^(abc)
+Reviewer: scope_lattice
+Read-only derivation in f01/f03's actual duality, associator, and
+half-braiding directions. No jobs, imports, or live edits.
+
+RESULT
+
+All proposed formulas pass:
+  t^2=(-1)^g;
+  (g,t)*(h,u)=(g+h,(-1)^(gh)tu);
+  theta_(g,t)=c_g(g)=t^g.
+With canonical positive pivotal structure, no extra final sign is
+needed in theta=c_g(g). The duality/pivotal calculation below is
+important because dropping its signs gives the wrong intermediate
+formula.
+
+The only essential naming caution is that sbar is the anti-semion
+(the conjugate-twist label), NOT the categorical dual of s.
+All four simples are self-dual. This agrees with f04's explanation
+that categorical duality preserves the twist scalar rather than
+complex-conjugating it.
+
+1. HALF-BRAIDING IN THE BOOK'S DIRECTION
+
+Use the associator
+  a_(a,b,c): (a tensor b) tensor c -> a tensor (b tensor c)
+with scalar omega(a,b,c), and c_g(x):g tensor x -> x tensor g.
+To move g through x tensor y, the actual path is
+
+  g(xy) --a^-1_(g,x,y)--> (gx)y
+        --c_g(x) tensor 1--> (xg)y
+        --a_(x,g,y)--> x(gy)
+        --1 tensor c_g(y)--> x(yg)
+        --a^-1_(x,y,g)--> (xy)g.
+
+Consequently
+  c_g(x+y)
+    = omega(x,g,y)/
+        [omega(g,x,y) omega(x,y,g)] c_g(x)c_g(y)
+    = (-1)^(gxy)c_g(x)c_g(y).
+
+The unit condition is c_g(0)=1. Setting x=y=1 gives
+1=(-1)^g t^2, hence t^2=(-1)^g. Thus t=+/-1 for g=0 and
+t=+/-i for g=1.
+
+These are all the simples, not just four exhibited objects. For a
+graded object with a multiplicity space in degree g, its generator
+half-braiding is an operator T satisfying T^2=(-1)^g I. That
+polynomial has distinct roots, so the space decomposes into the
+two scalar half-braidings. There are two choices in each degree.
+
+2. TENSOR PRODUCT HAS ITS OWN ASSOCIATOR FACTOR
+
+For the product of (g,c) and (h,d), move the pair through x:
+
+  (gh)x --a_(g,h,x)--> g(hx)
+        --1 tensor d(x)--> g(xh)
+        --a^-1_(g,x,h)--> (gx)h
+        --c_g(x) tensor 1--> (xg)h
+        --a_(x,g,h)--> x(gh).
+
+The product half-braiding is therefore
+  c_(g tensor h)(x)
+    = omega(g,h,x) omega(x,g,h)/omega(g,x,h) c_g(x)c_h(x)
+    = (-1)^(ghx)c_g(x)c_h(x).
+At x=1 this is the claimed (-1)^(gh)tu.
+Multiplying the two phases without this factor would incorrectly
+turn the center's fusion group into a cyclic group of order four.
+
+3. POSITIVE PIVOTAL STRUCTURE AND TWIST
+
+Here is a concrete gauge compatible with f01's left-dual convention.
+Every underlying g is its own dual. Set
+  coev_g:1 -> g tensor g to scalar 1,
+  ev_g:g tensor g ->1 to scalar (-1)^g.
+The zigzags each acquire the associator omega(g,g,g)=(-1)^g,
+so they are identities. Evaluation and this particular left
+coevaluation are not adjoints for g=1; the relevant opposite
+duality maps supply the compatible unitary conjugate solution.
+There is no conflict with unitarity.
+
+The canonical positive pivotal in this gauge is j_g=(-1)^g.
+Indeed f01's trace convention gives
+  d_g=ev_(g*) (j_g tensor 1) coev_g=(-1)^g j_g=1.
+The duality tensorator gives the identity double-dual tensorator
+on Z2 in this gauge, and j_(g+h)=j_g j_h, so this is monoidal.
+
+For complete transparency, the Drinfeld bend u_g:g -> g** uses
+the path
+  g --1 tensor coev_(g*)--> g(g* g**)
+    --a^-1_(g,g*,g**)--> (g g*)g**
+    --c_g(g*) tensor 1--> (g* g)g**
+    --ev_g tensor 1--> g**.
+Its scalar is
+  u_g=1 * (-1)^g * c_g(g) * (-1)^g=c_g(g).
+The compatible ribbon twist is theta_g=u_g^-1 j_g, giving
+  theta_g=(-1)^g/c_g(g)=c_g(g),
+because c_g(g)^2=(-1)^g. For g=0 both sides equal one;
+for g=1 this uses t^2=-1.
+
+This convention also reproduces f03's untwisted Z3 result:
+there coev=ev=j=1 and u_(g,chi)=chi(-g), so theta=chi(g).
+Thus the positive twist orientation used in the proposed example
+matches the book's existing half-braiding convention.
+
+4. FUSION, BALANCING, AND COMPARISON
+
+Name the simples
+  1=(0,1), b=(0,-1), s=(1,i), sbar=(1,-i).
+The product rule gives
+  b^2=s^2=sbar^2=1,  s*sbar=b,  b*s=sbar.
+Their twists are respectively 1,1,i,-i. All dimensions are one.
+This is the double-semion center. The notation sbar indicates
+opposite semion twist, not s*. Since s^2=1, s*=s, and likewise
+sbar*=sbar.
+
+The braiding from (g,t) to (h,u) is c_g(h)=t^h.
+The monodromy is therefore t^h u^g. Balancing agrees:
+  theta_[(g,t)*(h,u)]/(theta_(g,t)theta_(h,u))=t^h u^g.
+For example the self-monodromy of s is i^2=-1, whereas the
+mutual monodromy of s and sbar is i(-i)=1.
+The boson b has monodromy -1 with either semion. These facts
+also prove that only the unit is transparent. The Gauss sum is
+1+1+i-i=2, equal to the total quantum dimension, as for a center.
+
+For the untwisted associator, the same derivation instead gives
+t=+/-1 and componentwise fusion (g,t)*(h,u)=(g+h,tu).
+Its twists are 1,1,1,-1: the toric-code center. Both centers
+have fusion group Z2 x Z2, but their twists differ. Thus the
+associator changes the braided center without changing either
+the original Z2 fusion ring or, in this example, the center's
+abstract fusion ring.
+
+SUGGESTED COMPACT MAIN-TEXT DERIVATION
+
+The main example can display the two scalar equations from sections
+1 and 2, list the four objects and twists, and finish with the toric
+code comparison. One sentence should retain the pivotal premise:
+  "Closing the half-braiding with the canonical positive pivotal
+  structure gives theta_(g,t)=c_g(g)=t^g."
+A short parenthesis or footnote can explain:
+  "For coev_g=1 and ev_g=(-1)^g, positivity gives j_g=(-1)^g;
+  the Drinfeld bend is u_g=c_g(g), so
+  u_g^-1 j_g=c_g(g) by t^2=(-1)^g."
+Also expressly state that both semions are self-dual despite the
+bar notation. These are the two places most likely to generate a
+hidden sign or misleading duality claim.

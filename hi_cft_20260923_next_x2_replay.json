@@ -1,0 +1,20 @@
+{
+  "rank_independently_verified": 1250,
+  "prime": 1000003,
+  "exact_X1_orthogonality_verified": true,
+  "X1_rank_verified": 80,
+  "all_source_hashes_verified": true,
+  "all_vector_hashes_and_pivots_verified": true,
+  "all_word_references_grading_and_Cartan_weights_verified": true,
+  "mode_coefficients_reevaluated": false,
+  "scope": "Independent rank and exact-X1 audit. Word structure and weights are checked; equality of each saved vector to its stated mode word is supplied by the frozen producer, not re-evaluated here.",
+  "maximum_saved_or_echelon_vector_terms": 84,
+  "seconds": 0.35785901895724237,
+  "peak_rss_KiB": 24012,
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_x2_replay.py": "3e2ee8941599d18f6e14fc2ae45d601c6d01479b8198869790af45a3379b3ab6",
+    "hi_cft_20260923_next_x2_conditional_rank.json": "914f3fb3a79e209c8031240f533457643c9eb6295070680028a40effb7d3563a",
+    "hi_cft_20260923_next_x2_conditional_rank.vectors.jsonl": "905a948c00f3987c22671906dd708f0d059f7ebb7fad4ed805c1e6b676f10b6c",
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d"
+  }
+}

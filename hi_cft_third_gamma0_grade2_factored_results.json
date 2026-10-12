@@ -1,0 +1,874 @@
+{
+  "rows": [
+    {
+      "levels": [
+        1,
+        39
+      ],
+      "target": [
+        98,
+        30,
+        1774,
+        575,
+        30,
+        161374
+      ],
+      "left_dimension_solutions": [
+        {
+          "1": 38,
+          "2": 30
+        }
+      ],
+      "right_block_enumerations": [
+        {
+          "left_dimensions": {
+            "1": 38,
+            "2": 30
+          },
+          "block_solution_counts": {
+            "1": 2,
+            "2": 2
+          },
+          "block_solutions": {
+            "1": [
+              {
+                "right_dimension": 38,
+                "right_index": 624,
+                "twice_right_fourth": 48000,
+                "right_irreps": [
+                  [
+                    13,
+                    1
+                  ],
+                  [
+                    9,
+                    2
+                  ],
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "singlets": 2
+              },
+              {
+                "right_dimension": 38,
+                "right_index": 624,
+                "twice_right_fourth": 52608,
+                "right_irreps": [
+                  [
+                    13,
+                    1
+                  ],
+                  [
+                    11,
+                    1
+                  ],
+                  [
+                    5,
+                    2
+                  ],
+                  [
+                    1,
+                    4
+                  ]
+                ],
+                "singlets": 4
+              }
+            ],
+            "2": [
+              {
+                "right_dimension": 30,
+                "right_index": 575,
+                "twice_right_fourth": 48623,
+                "right_irreps": [
+                  [
+                    12,
+                    2
+                  ],
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 30,
+                "right_index": 575,
+                "twice_right_fourth": 56687,
+                "right_irreps": [
+                  [
+                    14,
+                    1
+                  ],
+                  [
+                    8,
+                    1
+                  ],
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "singlets": 0
+              }
+            ]
+          }
+        }
+      ],
+      "all_feasible_decompositions": [
+        {
+          "affine_primary_irreps": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 9,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 13,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 8,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 14,
+              "multiplicity": 1
+            }
+          ],
+          "commutant_weight2_singlets": 2,
+          "moments": [
+            98,
+            30,
+            1774,
+            575,
+            30,
+            161374
+          ]
+        }
+      ],
+      "feasible_decomposition_count": 1,
+      "possible_commutant_weight2_dimensions": [
+        2
+      ],
+      "budget": {
+        "nodes": 3367,
+        "combinations": 4
+      },
+      "scope": "All finite affine-primary decompositions obeying the exact moments, actual ambient caps, integrability and unitary-vacuum affine-energy bound. These remain necessary representation conditions, not OPE existence."
+    },
+    {
+      "levels": [
+        3,
+        13
+      ],
+      "target": [
+        93,
+        100,
+        500,
+        470,
+        508,
+        13148
+      ],
+      "left_dimension_solutions": [
+        {
+          "1": 7,
+          "2": 20,
+          "3": 10,
+          "4": 4
+        }
+      ],
+      "right_block_enumerations": [
+        {
+          "left_dimensions": {
+            "1": 7,
+            "2": 20,
+            "3": 10,
+            "4": 4
+          },
+          "block_solution_counts": {
+            "1": 3,
+            "2": 22,
+            "3": 5,
+            "4": 2
+          },
+          "block_solutions": {
+            "1": [
+              {
+                "right_dimension": 7,
+                "right_index": 4,
+                "twice_right_fourth": 16,
+                "right_irreps": [
+                  [
+                    3,
+                    1
+                  ],
+                  [
+                    1,
+                    4
+                  ]
+                ],
+                "singlets": 4
+              },
+              {
+                "right_dimension": 7,
+                "right_index": 8,
+                "twice_right_fourth": 32,
+                "right_irreps": [
+                  [
+                    3,
+                    2
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                "singlets": 1
+              },
+              {
+                "right_dimension": 7,
+                "right_index": 20,
+                "twice_right_fourth": 272,
+                "right_irreps": [
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "singlets": 2
+              }
+            ],
+            "2": [
+              {
+                "right_dimension": 20,
+                "right_index": 18,
+                "twice_right_fourth": 90,
+                "right_irreps": [
+                  [
+                    4,
+                    1
+                  ],
+                  [
+                    2,
+                    8
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 26,
+                "twice_right_fourth": 170,
+                "right_irreps": [
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 34,
+                "twice_right_fourth": 250,
+                "right_irreps": [
+                  [
+                    4,
+                    3
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 42,
+                "twice_right_fourth": 330,
+                "right_irreps": [
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    2,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 50,
+                "twice_right_fourth": 410,
+                "right_irreps": [
+                  [
+                    4,
+                    5
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 42,
+                "twice_right_fourth": 714,
+                "right_irreps": [
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    2,
+                    7
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 50,
+                "twice_right_fourth": 794,
+                "right_irreps": [
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    4,
+                    1
+                  ],
+                  [
+                    2,
+                    5
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 58,
+                "twice_right_fourth": 874,
+                "right_irreps": [
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 66,
+                "twice_right_fourth": 954,
+                "right_irreps": [
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    4,
+                    3
+                  ],
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 74,
+                "twice_right_fourth": 1418,
+                "right_irreps": [
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 82,
+                "twice_right_fourth": 1498,
+                "right_irreps": [
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    4,
+                    1
+                  ],
+                  [
+                    2,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 90,
+                "twice_right_fourth": 1578,
+                "right_irreps": [
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    4,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 106,
+                "twice_right_fourth": 2122,
+                "right_irreps": [
+                  [
+                    6,
+                    3
+                  ],
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 90,
+                "twice_right_fourth": 3114,
+                "right_irreps": [
+                  [
+                    8,
+                    1
+                  ],
+                  [
+                    2,
+                    6
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 98,
+                "twice_right_fourth": 3194,
+                "right_irreps": [
+                  [
+                    8,
+                    1
+                  ],
+                  [
+                    4,
+                    1
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 106,
+                "twice_right_fourth": 3274,
+                "right_irreps": [
+                  [
+                    8,
+                    1
+                  ],
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    2,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 114,
+                "twice_right_fourth": 3354,
+                "right_irreps": [
+                  [
+                    8,
+                    1
+                  ],
+                  [
+                    4,
+                    3
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 122,
+                "twice_right_fourth": 3818,
+                "right_irreps": [
+                  [
+                    8,
+                    1
+                  ],
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 130,
+                "twice_right_fourth": 3898,
+                "right_irreps": [
+                  [
+                    8,
+                    1
+                  ],
+                  [
+                    6,
+                    1
+                  ],
+                  [
+                    4,
+                    1
+                  ],
+                  [
+                    2,
+                    1
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 154,
+                "twice_right_fourth": 4522,
+                "right_irreps": [
+                  [
+                    8,
+                    1
+                  ],
+                  [
+                    6,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 170,
+                "twice_right_fourth": 6218,
+                "right_irreps": [
+                  [
+                    8,
+                    2
+                  ],
+                  [
+                    2,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 20,
+                "right_index": 178,
+                "twice_right_fourth": 6298,
+                "right_irreps": [
+                  [
+                    8,
+                    2
+                  ],
+                  [
+                    4,
+                    1
+                  ]
+                ],
+                "singlets": 0
+              }
+            ],
+            "3": [
+              {
+                "right_dimension": 10,
+                "right_index": 12,
+                "twice_right_fourth": 48,
+                "right_irreps": [
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 10,
+                "right_index": 24,
+                "twice_right_fourth": 288,
+                "right_irreps": [
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    3,
+                    1
+                  ],
+                  [
+                    1,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 10,
+                "right_index": 40,
+                "twice_right_fourth": 544,
+                "right_irreps": [
+                  [
+                    5,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 10,
+                "right_index": 56,
+                "twice_right_fourth": 1568,
+                "right_irreps": [
+                  [
+                    7,
+                    1
+                  ],
+                  [
+                    1,
+                    3
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 10,
+                "right_index": 60,
+                "twice_right_fourth": 1584,
+                "right_irreps": [
+                  [
+                    7,
+                    1
+                  ],
+                  [
+                    3,
+                    1
+                  ]
+                ],
+                "singlets": 0
+              }
+            ],
+            "4": [
+              {
+                "right_dimension": 4,
+                "right_index": 2,
+                "twice_right_fourth": 2,
+                "right_irreps": [
+                  [
+                    2,
+                    2
+                  ]
+                ],
+                "singlets": 0
+              },
+              {
+                "right_dimension": 4,
+                "right_index": 10,
+                "twice_right_fourth": 82,
+                "right_irreps": [
+                  [
+                    4,
+                    1
+                  ]
+                ],
+                "singlets": 0
+              }
+            ]
+          }
+        }
+      ],
+      "all_feasible_decompositions": [
+        {
+          "affine_primary_irreps": [
+            {
+              "left_dimension": 1,
+              "right_dimension": 1,
+              "multiplicity": 2
+            },
+            {
+              "left_dimension": 1,
+              "right_dimension": 5,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 2,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 4,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 6,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 2,
+              "right_dimension": 8,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 3,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 3,
+              "right_dimension": 7,
+              "multiplicity": 1
+            },
+            {
+              "left_dimension": 4,
+              "right_dimension": 4,
+              "multiplicity": 1
+            }
+          ],
+          "commutant_weight2_singlets": 2,
+          "moments": [
+            93,
+            100,
+            500,
+            470,
+            508,
+            13148
+          ]
+        }
+      ],
+      "feasible_decomposition_count": 1,
+      "possible_commutant_weight2_dimensions": [
+        2
+      ],
+      "budget": {
+        "nodes": 212,
+        "combinations": 660
+      },
+      "scope": "All finite affine-primary decompositions obeying the exact moments, actual ambient caps, integrability and unitary-vacuum affine-energy bound. These remain necessary representation conditions, not OPE existence."
+    }
+  ],
+  "selftest": {
+    "hand_doublet_partitions_checked": true,
+    "parity_control": true,
+    "mandatory_singlet_control": true
+  },
+  "input_record": {
+    "path": "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_moments_results.json",
+    "sha256": "dc75bd0c91b0b982aed415cf395f189f4ac5d738f3c6c04f6a13a7aad1a1e60a"
+  },
+  "producer_source_hashes": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_d6_check.py": "160d952a08239fbbfe968d8c888b9c7def6c7f572a5cb2b1330a8377a6643dfd",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_factored.py": "6416b68b738deefe8428f02e35172b2b5d50c26d1de455ecd796de6473ee19a4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_flavoured_trace_check.py": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_joint_ground_check.py": "475302a0990c2654080d42cc1dc2876b8acc5d25d1abd975a3f9ed00e123f162",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_next_grade.py": "2a395249011e990a672adc1a8bf0088860fd8b94667156dbdec3c0ceac5a2cc4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_grade2_check.py": "dbe5bbdcdb507f00180e216cb86c7e0f4b071a1fbbd372115bab34a1c0654ac8",
+    "/home/tzuchen/Codes/haagerup/hi_cft_third_gamma0_quartic_check.py": "d8998290ab757e167f7c2ab66b84a7254ef5513542e0fa6382320bd832f4f754"
+  },
+  "limits": {
+    "DFS_nodes": 500000,
+    "block_solutions": 5000,
+    "combinations": 1000000,
+    "output_decompositions": 2000
+  },
+  "seconds": 0.004460046999156475,
+  "peak_rss_KiB": 21424,
+  "additional_embedding_premise": "Actual E8 extension B=E6_1 times A2_1 with B|W=0 plus b, and the independently identified host125/187 branching."
+}

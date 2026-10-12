@@ -1,0 +1,92 @@
+Final cross-chapter convention sweep
+Reviewer: scope_foundations
+Time: 2026-10-05 21:19:22 UTC (clock tool)
+
+Method
+------
+Read r00_reading_guide.tex and r09_notation.tex, then used targeted rg
+and surrounding text across the active chapters. The check concerned
+cross-chapter consistency rather than repeating individual proof audits.
+No live TeX edits, numerical jobs, script imports, or builds.
+
+One concrete mismatch to repair
+-------------------------------
+chapters/f06_related_categories.tex:820, equation eq:EH-F-overlap,
+reverses the established row/column naming of the associator matrix.
+
+f01_fusion.tex:204-207 defines
+  L_e = sum_f F_{e,f} R_f,
+and lines 258-261 explicitly say left channel = row, right channel =
+column. l01_chain.tex:109-113 uses the same convention.
+
+The planar overlap is correctly tr(R_f^* L_e)/d_d, but f06 currently
+places its indices on F in the order (f,mu,nu),(e,alpha,beta).
+Minimal repair: change only that LHS to
+
+  (F^{abc}_d)_{(e,alpha,beta),(f,mu,nu)}
+
+and retain the trace RHS unchanged. Optionally add "with the convention
+of equation eq:F-basis-convention" to the preceding sentence. No inverse
+or complex conjugation is needed. The following three-by-three worked
+matrix is real symmetric, so its explicit entries are unaffected.
+
+Requested convention distinctions: no mismatch found
+---------------------------------------------------
+1. Chiral versus summed central charge.
+   r00:79-80 and r01:87-90 agree with r09:37-38: c=8 means
+   (c_L,c_R)=(8,8). r05's thermal shift is 2/3, c06's full charge-six
+   theory has c_L=c_R=6, and the cylinder, entropy, replica, and pants
+   formulas in l02-l04 use one chiral c consistently. The three-Potts
+   phrase "total c=12/5" in l06 is the sum of the three factor charges
+   per chirality; it is consistent in context, not a factor-of-two error.
+   The center's c modulo 8 constraint is kept separate from the central
+   charge of a full theory carrying Haagerup defects.
+
+2. Chiral h versus full Delta.
+   r00/r01/r09 consistently define Delta=h+bar h. r03's character table
+   lists chiral lowest weights, and r05 doubles the top weights for
+   diagonal scalar dimensions. In particular c1 has h=1/3 and diagonal
+   scalar Delta=2/3. d3's h=15/13 is explicitly distinguished from twist
+   residue 2/13 in both f04 and r03. r07 distinguishes a twisted ground
+   dimension from the first scalar dimension. r06's fractional chiral
+   block is not silently promoted to a diagonal bulk correlator.
+
+3. Quantum dimensions versus ordinary dimensions.
+   f02/f03/f04/r03/r07 agree on d, d^2, s, 3d, global dimension 3s,
+   and center total quantum dimension 3s. Ordinary tube dimensions
+   1,4,5,...,3 and top-space dimensions such as 80 and 81 are explicitly
+   separated from these numbers. r05 obtains bulk multiplicities by
+   squaring ordinary top dimensions, not quantum dimensions. r07's
+   two-copy multiplicity is not confused with a two-state CFT sector.
+
+4. Dual, adjoint, and conjugate labels.
+   r02 distinguishes graded contragredient M' from a barred
+   antiholomorphic factor. f04/r09 correctly distinguish linear ribbon
+   duality from antilinear adjoint and allow a self-dual central object
+   to have nonreal twist. r05/r08 exploit self-duality only for the
+   twelve center labels, while r07 retains alpha*=alpha^2 in the
+   six-boundary annulus formula. c06 explicitly identifies the bar on
+   lattice sectors as the conjugate antiholomorphic sector. The local
+   planar-algebra star in f06 is introduced as its adjoint; it does not
+   change the object-dual convention of r09.
+
+5. Original boundary category versus selected canonical extension.
+   c05 retains Y for the original extension constituent and uses a only
+   after the canonical H3 choice. r04 leaves the original all-module
+   category in {H2,H3}. f04/r05/r07 and r09 distinguish H' from the
+   original H=V_E8 embedding. c06 explicitly transports the original
+   algebra A and its F in {H2,H3}; it does not claim that this operation
+   selects H3. f02 and f05 also distinguish the physical H3 associator
+   from the order-three algebraic coefficient presentation.
+
+6. Diagonal U versus selected E8 spectrum.
+   r00's gaps agree with r03/r05: diagonal scalar gap 2/3, E8 scalar
+   gap 2, but E8 ordinary primary gap 1 from currents. The diagonal
+   twelve-line category and the selected extension's 36 bimodule
+   defects remain distinct in r05/r07. Their invariant scalar counts
+   36 versus 1488 are attached to explicitly different preserved
+   symmetry choices. r07's tube sector function chi_mu times the
+   conjugate E8 character is not confused with |chi_mu|^2.
+
+No other concrete cross-chapter mismatch was found in these six areas.
+The associator-index repair was sent to root before this report was saved.

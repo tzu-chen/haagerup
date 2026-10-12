@@ -1,0 +1,132 @@
+# Research wrapper around the GPL-3.0 authors' periodic-MPS implementation.
+# The optimization loop follows sym_puMPS_v2.jl by Yijian Zou; its copied
+# source tree and LICENSE are retained under /tmp/hi_cft_overlap_pumps.
+if abspath(PROGRAM_FILE)==@__FILE__
+    error("Direct optimization is disabled. Use hi_cft_safe_run.py with hi_cft_overlap_pumps_safe24.jl")
+end
+using LinearAlgebra, Random, TOML
+const source=get(ENV,"HAAGERUP_PUMPS_SOURCE",joinpath(@__DIR__,"hi_cft_overlap_pumps_reference","puMPS"))
+include(joinpath(source,"MPS.jl"))
+include(joinpath(source,"puMPS.jl"))
+include(joinpath(source,"symTensor_v2.jl"))
+include(joinpath(source,"sym_puMPS_v2.jl"))
+include(joinpath(source,"Haagerup_symMPO.jl"))
+# Compatibility for TensorOperations 5: the old public convenience helpers
+# used in the reference code were removed; these two usages are elementary.
+@eval puMPS.MPS scalar(x::AbstractArray)=x[]
+@eval puMPS.MPS scalar(x::Number)=x
+@eval puMPS tensorcopy(A,old,new)=permutedims(A,Tuple(findfirst(==(i),old) for i in new))
+
+function metric_gradient(M,lambda_inverse,derivative,blocks; cutoff=1e-12)
+    # Same central-gauge norm metric as reference states.jl, but invert its
+    # exact Z3 blocks spectrally instead of using unconverged BiCGStab solves.
+    D=puMPS.bond_dim(M);N=puMPS.num_sites(M)
+    Li=Matrix(lambda_inverse)
+    T1=puMPS.MPS.TM_convert(blocks[N-1])
+    @tensor Nc[b2,b1,t2,t1] := Li[t1,ti]*Li[b1,bi]*T1[ti,bi,t2,b2]
+    Nc=reshape(Nc,D^2,D^2)
+    @tensor dc[v1,v2,s] := derivative[v1,s,vi]*Li[vi,v2]
+    dc=reshape(dc,D^2,6);gc=zero(dc)
+    charges=repeat(0:2,inner=D÷3)
+    differences=vec([mod(charges[i]-charges[j],3) for i in 1:D,j in 1:D])
+    hermiticity=norm(Nc-Nc')/max(norm(Nc),eps())
+    hermiticity<1e-7 || error("Norm metric not Hermitian: $hermiticity")
+    sectors=[findall(==(q),differences) for q in 0:2]
+    offblock=maximum(norm(Nc[a,b]) for a in sectors,b in sectors if a!=b)/max(norm(Nc),eps())
+    offblock<1e-9 || error("Norm metric mixes Z3 blocks: $offblock")
+    decompositions=[]
+    for q in 0:2
+        ix=sectors[q+1]
+        block=Nc[ix,ix]
+        vals,V=eigen(Hermitian((block+block')/2))
+        push!(decompositions,(ix,vals,V))
+    end
+    scale=maximum(maximum(abs.(vals)) for (_,vals,_) in decompositions)
+    minimum(minimum(vals) for (_,vals,_) in decompositions)>-1e-8*scale || error("Norm metric is not positive")
+    for (ix,vals,V) in decompositions
+        keep=vals.>cutoff*scale
+        gc[ix,:]=V[:,keep]*((V[:,keep]'*dc[ix,:])./vals[keep])
+    end
+    gc=reshape(gc,D,D,6)
+    @tensor gradient[v1,s,v2] := gc[v1,vi,s]*Li[vi,v2]
+    return gradient,sqrt(abs(dot(vec(gradient),vec(derivative))))
+end
+
+function checkpoint(M,N,D,prefix,records,gradient)
+    A=puMPS.mps_tensor(M)
+    open(prefix*".bin","w") do io; write(io,A);end
+    result=Dict("N"=>N,"D"=>D,"gradient_norm"=>gradient,
+                "energy_density"=>records[end]["energy_density"],
+                "iterations"=>records,"binary_shape"=>[D,6,D],
+                "binary_dtype"=>"ComplexF64 little-endian column-major",
+                "source"=>"YuhanLiuSYSU/Haagerup_wave_function_overlap")
+    status=read("/proc/self/status",String)
+    for key in ("VmPeak","VmHWM","VmSize","VmRSS")
+        matched=match(Regex("(?m)^"*key*":\\s+(\\d+) kB"),status)
+        matched===nothing || (result[key*"_KiB"]=parse(Int,matched.captures[1]))
+    end
+    open(prefix*".toml","w") do io;TOML.print(io,result);end
+end
+
+function normalize_blocks!(M,blocks)
+    N=puMPS.num_sites(M)
+    magnitude=real(puMPS.norm(M,TM_N=blocks[N]))
+    rmul!(puMPS.mps_tensor(M),magnitude^(-1/N))
+    # Reference states.jl uses normM^(-2/n) here. Correct covariance of the
+    # n-th transfer power is normM^(-2n/N). The supplied normalized tensors
+    # hide that typo; changing the target length exposes it immediately.
+    for n in 1:N;rmul!(blocks[n],magnitude^(-2*n/N));end
+    @assert abs(real(puMPS.tr(blocks[N]))-1)<1e-9
+end
+
+function main()
+    N,D,maximum_iterations=parse.(Int,ARGS[1:3])
+    D==24 && 3<=N<=18 && 0<=maximum_iterations<=40 || error("Only D24, N<=18, <=40 iterations are enabled")
+    input,prefix=ARGS[4:5]
+    budget=parse(Float64,get(ENV,"PUMPS_SECONDS","300"))
+    0<budget<=600 || error("Time budget must be at most 600 seconds")
+    tolerance=parse(Float64,get(ENV,"PUMPS_GRADIENT_TOL","1e-6"))
+    threads=parse(Int,get(ENV,"PUMPS_BLAS_THREADS","2"))
+    1<=threads<=2 || error("At most two BLAS threads are allowed")
+    BLAS.set_num_threads(threads)
+    Random.seed!(1249)
+    A=reshape(reinterpret(ComplexF64,read(input)),D,6,D)|>Array
+    leg=SymLeg(3,[0,1,2],fill(D÷3,3))
+    legs=SymLeg[leg,SymLeg(3,[0,1,2],[2,2,2]),conj(leg)]
+    M=sym_puMPS_from_dense(puMPS.puMPState(A,N),legs)
+    _,h=Haagerup_local_MPO_sym()
+    hfull=full.(h); Mfull=full(M)
+    println("Loaded N=$N D=$D input=$input");flush(stdout)
+    start=time(); blocks=puMPS.blockTMs(Mfull)
+    normalize_blocks!(Mfull,blocks)
+    energy=real(puMPS.expect(Mfull,hfull,blkTMs=blocks))
+    @assert -1-1e-8<=energy<=1e-8 "Local projector energy outside [-1,0]"
+    records=[Dict("iteration"=>0,"energy_density"=>energy,"elapsed_seconds"=>time()-start)]
+    gradient_norm=Inf; step=parse(Float64,get(ENV,"PUMPS_INITIAL_STEP","0.1"))
+    checkpoint(Mfull,N,D,prefix,records,gradient_norm)
+    println("INITIAL energy_density=$energy seconds=$(time()-start)");flush(stdout)
+    for k in 1:maximum_iterations
+        if time()-start>budget;println("Time budget reached");break;end
+        iteration_start=time()
+        Mfull,lambda,lambda_inverse=canonicalize_left_sym!(Mfull,legs)
+        blocks=nothing;GC.gc()
+        blocks=puMPS.blockTMs(Mfull)
+        deriv=puMPS.derivatives_1s(Mfull,hfull,blkTMs=blocks,e0=energy)
+        GC.gc()
+        gradient,gradient_norm=metric_gradient(Mfull,lambda_inverse,deriv,blocks)
+        if gradient_norm<tolerance
+            println("Gradient converged: $gradient_norm");
+            checkpoint(Mfull,N,D,prefix,records,gradient_norm);break
+        end
+        step,energy=puMPS.line_search_energy(Mfull,energy,gradient,gradient_norm^2,
+                                            clamp(step,.001,1.),hfull)
+        puMPS.set_mps_tensor!(Mfull,puMPS.mps_tensor(Mfull).-step.*gradient)
+        puMPS.normalize!(Mfull)
+        push!(records,Dict("iteration"=>k,"energy_density"=>energy,
+                          "gradient_norm"=>gradient_norm,"step"=>step,
+                          "elapsed_seconds"=>time()-start,"iteration_seconds"=>time()-iteration_start))
+        checkpoint(Mfull,N,D,prefix,records,gradient_norm)
+        println("ITER $k E=$energy grad=$gradient_norm step=$step sec=$(time()-iteration_start)");flush(stdout)
+    end
+    println("Saved $prefix");flush(stdout)
+end

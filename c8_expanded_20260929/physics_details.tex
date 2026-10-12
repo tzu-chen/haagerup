@@ -1,0 +1,1012 @@
+% Expanded verification companion. Original physics sections are retained.
+% Every table below is a transcription of the saved 113-field release.
+\clearpage
+\section{Weight-two interactions: a complete printed reconstruction atlas}
+\label{expphysics:interaction-atlas}
+
+The short physics chapter identifies the fields and quotes selected
+couplings. This section supplies the information needed to inspect the
+entire weight-two primary tensor without opening its 18,365-row sparse
+file. It gives the actual component index dictionary, every highest-vector
+norm, every nonzero ordered map between current multiplets, a
+phase-sensitive representative of each map, and an explicit elementary
+formula reconstructing the other components. The compression uses
+current-algebra equivariance, not a numerical approximation or a choice
+to omit small coefficients.
+
+The source distinction matters. The files
+\artifact{c8_physics_20260927/complete_primary_couplings.json} and its
+neighboring TSV concern the earlier 96-field slice. All interaction
+tables in this section use the files of the same names in
+\artifact{c8_physics_20260927/full_weight_two/}. That later release
+contains all 113 Virasoro primaries in $U_2$. Its exact sparse tensor has
+$113^3=1,442,897$ ordered entries, of which 18,365 are nonzero and
+1,424,532 vanish. The additional 17 fields are retained throughout this
+section, including in the normalization and the $u$-pair sum rule.
+
+\subsection{Actual component basis, including the lowering gauge}
+\label{expphysics:lowering-gauge}
+
+Write $V_m$ for the current multiplet numbered $m$, with dimensions
+$(n_m,r_m)$ under the left and right $\mathfrak{sl}_2$ factors. The
+field denoted by $(m,p,q)$ is the actual saved vector
+\begin{equation}
+ v_{m,p,q}=(F_L)_0^p(F_R)_0^qv_{m,0,0},
+ \qquad 0\leq p<n_m,\quad0\leq q<r_m.
+ \label{expphysics:component-basis}
+\end{equation}
+The integer indices $0,\ldots,112$ used in the tensor are printed in
+Table~\ref{expphysics:basis-dictionary}. There is no factorial division
+in this convention. The Cartan charges are
+$(n_m-1-2p,r_m-1-2q)$, and the algebraic raising rules are
+\begin{align}
+ (E_L)_0v_{m,p,q}&=p(n_m-p)v_{m,p-1,q},\\
+ (E_R)_0v_{m,p,q}&=q(r_m-q)v_{m,p,q-1}.
+ \label{expphysics:raising}
+\end{align}
+These rules fix an algebraic $\mathfrak{sl}_2$ basis. They do not by
+themselves say that the displayed $E$ and $F$ are Hermitian adjoints.
+
+In fact the left lowering normalization is substantial and must not
+be lost in a comparison of component tables. The saved positive norms
+give
+\begin{equation}
+ \boxed{\displaystyle
+ N_{m,p,q}=N_{m,0,0}\,8640^{2p}
+ \frac{p!\,(n_m-1)!}{(n_m-1-p)!}
+ \frac{q!\,(r_m-1)!}{(r_m-1-q)!}.}
+ \label{expphysics:all-norms}
+\end{equation}
+Thus on these multiplets the adjoints of the zero-mode lowering
+operators are $(F_L)_0^*=8640^2(E_L)_0$ and
+$(F_R)_0^*=(E_R)_0$. Equivalently one can pass to compactly normalized
+generators $E'_L=8640E_L$, $F'_L=F_L/8640$. The tabulated vectors
+continue to use the original saved generators, as in
+\eqref{expphysics:component-basis}. For example, the highest defining
+field has $N_{7,0,0}=12$, whereas $N_{7,1,0}=895795200$.
+Replacing the latter by 12 would change normalized coefficients
+incorrectly. The right lowering alone has the familiar
+factor $q!(r_m-1)!/(r_m-1-q)!$.
+
+The factor can also be derived directly from the torus gauge,
+without consulting all component norms. The left root is
+$\alpha_L=(-1,-2,-3,-2,-1,-2,0,0)$ and the gauge entries are
+$(5,8,9,8,5,1,2,2)$. Hence
+\[
+ \prod_i\widetilde c_i^{(\alpha_L)_i}
+ =\frac1{5^2\,8^4\,9^3}=\frac1{8640^2}.
+\]
+With $E_L=e^{\alpha_L}$ and $F_L=-e^{-\alpha_L}$, transported
+PCT gives $\theta_g(E_L)=-F_L/8640^2$.
+The adjoint identity for a weight-one zero mode is
+$a_0^*=-(\theta_ga)_0$, yielding the adjoints just stated.
+The right-current coefficients similarly pair each root with its
+inverse gauge factor, giving the unit compact normalization on
+the right. Iterating these adjoints and the raising rules proves
+\eqref{expphysics:all-norms}.
+
+Equation~\eqref{expphysics:all-norms} is also directly visible in the
+saved data: the transcription checks its ratio against every one of
+the 113 recorded norms. This is a check of an encoding convention,
+not a new lattice-mode calculation. The highest vectors and their
+norms are as follows.
+
+\input{physics_tables/highest_norms.tex}
+
+The first eight highest vectors are the original charged multiplets,
+of types $(1,5)$, $(1,9)$, $(1,9)$, $(1,13)$, $(2,2)$,
+$(2,6)$, $(2,8)$ and $(2,14)$.
+The two copies of $(1,9)$ have different coset weights; their labels
+must remain distinct. Multiplets 8 and 9 have highest vectors
+$(E_R)_{-1}E_R$ and $(E_L)_{-1}E_R$ and types $(1,5),(3,3)$.
+The last three are the following total-Virasoro primaries:
+\begin{align}
+ v_{10}&=c_rT_L-c_lT_R,\\
+ v_{11}&=c_e(T_L+T_R)-(c_l+c_r)T_e,\\
+ v_{12}&=c_f(T_L+T_R+T_e)-(c_l+c_r+c_e)T_f,
+ \label{expphysics:stress-differences}
+\end{align}
+where
+\[
+ (c_l,c_r,c_e,c_f)=
+ \left(1,\frac{117}{41},\frac{2400}{1271},\frac{70}{31}\right).
+\]
+The stress labels here are internal commuting chiral factors, not
+the left and right spacetime central charges. Their sum is eight.
+
+For a linear combination $A=\sum_i a_iT_i$, the fourth-order pole of
+the total stress with $A$ is $\tfrac12\sum_i a_ic_i$. Hence $A$ is
+primary of weight two exactly when $\sum_i a_ic_i=0$. Since the four
+stress tensors are orthogonal and have norms $c_i/2$, the three
+combinations above are mutually orthogonal and orthogonal to the
+total stress. This verifies both the primary condition and the
+normalization mechanism without referring to a mode engine.
+
+There are $96+5+9+3=113$ displayed fields. The vacuum character gives
+$\dim U_2=120$ and $\dim U_1=6$. The six current derivatives and the
+total stress account for the remaining seven states. The positive
+orthogonal primary vectors therefore exhaust the primary space:
+there is no omitted primary multiplet at this weight. The first
+column of the next table makes all subsequent tensor indices
+unambiguous.
+
+\input{physics_tables/basis_dictionary.tex}
+
+\subsection{What a phase-sensitive representative means}
+\label{expphysics:phase-convention}
+
+Let $N_i=\langle v_i,v_i\rangle_g>0$ and
+$\widehat v_i=v_i/\sqrt{N_i}$, using the positive square root.
+All pairings are antilinear in their first slot. The tensor is
+\begin{equation}
+ C_{ij}^{\ k}=
+ \frac{\langle v_k,(v_i)_1v_j\rangle_g}
+      {\sqrt{N_iN_jN_k}}.
+ \label{expphysics:normalized-tensor}
+\end{equation}
+Thus its third entry refers to the adjoint field at infinity. In a
+local OPE it multiplies $z^{-2}\widehat v_k$. Projection to the
+primary space is understood: the identity, currents, their
+derivatives, and the total stress have their own OPE terms.
+
+To print complex phases compactly, use only in this section
+\[
+ \sigma=\sqrt{13}>0,\qquad\vartheta=i\sqrt3,
+ \qquad\overline\sigma=\sigma,\quad
+ \overline\vartheta=-\vartheta.
+\]
+The numerator in \eqref{expphysics:normalized-tensor} is a positive
+rational multiple of a primitive integer combination
+$\kappa=a+b\sigma+c\vartheta+d\sigma\vartheta$. ``Primitive''
+means that the four integer coefficients have no common positive
+factor. Its sign is retained; $\kappa$ and $-\kappa$ are different
+phases. Each representative table row gives $\kappa$ and the saved
+rational number $Q=|C_{ij}^{\ k}|^2$. The exact coefficient is
+\begin{equation}
+ \boxed{\displaystyle
+ C_{ij}^{\ k}=\kappa
+          \sqrt{\frac{Q}{\overline\kappa\kappa}}.}
+ \label{expphysics:phase-reading}
+\end{equation}
+Every square root in this formula is positive real. This is a
+complete exact complex value, including its phase; it is not merely
+an absolute-value table. If desired its phase denominator is obtained
+with rational arithmetic from
+\[
+ \overline\kappa\kappa=
+ a^2+13b^2+3c^2+39d^2+(2ab+6cd)\sigma.
+\]
+For $\kappa=\pm1$ the coefficient is simply $\pm\sqrt Q$.
+The use of $\sigma$ here avoids confusing $\sqrt{13}$ with the
+dimension symbol $s=3d+2$ used in the modular-data discussion.
+
+\subsection{An explicit reconstruction formula for every component}
+\label{expphysics:transvectant}
+
+For each fixed ordered triple $(m,n,\ell)$ the projection
+\[
+ P_\ell\bigl((\,\cdot\,)_1\,\cdot\,\bigr):V_m\otimes V_n\longrightarrow V_\ell
+\]
+is an $\mathfrak{sl}_2\oplus\mathfrak{sl}_2$ intertwiner. This
+follows because current zero modes are derivations and commute with
+the total Virasoro modes. Orthogonal projection onto the full
+primary space preserves this property. Each factor in a finite
+$\mathfrak{sl}_2$ tensor product occurs with multiplicity at most
+one. Consequently a specified triple of the labeled current
+multiplets has at most one intertwiner, even when two different
+multiplets elsewhere in the list have the same dimensions.
+One nonzero component fixes this map completely.
+
+Here is a concrete formula that removes the need to choose a
+Clebsch--Gordan phase convention. For one current factor let $a,b,c$
+be the highest Cartan weights, i.e. the representation dimensions
+minus one, and set $L=(a+b-c)/2$. A map is allowed only if
+\[
+ L\in\mathbb Z,\qquad0\leq L\leq\min(a,b).
+\]
+Use the polynomial realization with $F=Y\partial_X$ and basis
+\[
+ w_{a,p}=F^pX^a=a^{\underline p}X^{a-p}Y^p,
+ \qquad a^{\underline p}=\frac{a!}{(a-p)!}.
+\]
+The $L$th transvectant is
+\begin{equation}
+ \mathcal T_L(f,g)=\sum_{t=0}^{L}(-1)^t\binom Lt
+ (\partial_X^{L-t}\partial_Y^tf)
+ (\partial_X^t\partial_Y^{L-t}g).
+ \label{expphysics:transvectant-definition}
+\end{equation}
+It is equivariant and lands in degree $c=a+b-2L$. Put $r=p+q-L$.
+The coefficient of $w_{c,r}$ in
+$\mathcal T_L(w_{a,p},w_{b,q})$ is
+\begin{equation}
+ \begin{split}
+ K_{a,b;c}(p,q;r)
+ ={}&\frac{a^{\underline p}b^{\underline q}}{c^{\underline r}}
+ \sum_{t=0}^{L}(-1)^t\binom Lt
+ (a-p)^{\underline{L-t}}p^{\underline t}\,
+ (b-q)^{\underline t}q^{\underline{L-t}}.
+ \end{split}
+ \label{expphysics:K-formula}
+\end{equation}
+Set this coefficient to zero if $r\ne p+q-L$ or $r$ is outside
+$0,\ldots,c$. A falling factorial with more differentiations than
+its nonnegative integer degree is zero. For degree zero,
+$0^{\underline0}=1$. These conventions cover trivial representations,
+tops and bottoms, without a limiting prescription.
+
+For a full component triple $(i,j,k)$, multiply the $K$ factors
+for the left and right current algebras and denote the result by
+$K_{ijk}$. Use the lowering exponents from
+Table~\ref{expphysics:basis-dictionary}. If $(i_*,j_*,k_*)$ is the
+printed nonzero representative for the same ordered multiplet
+triple, the exact normalized tensor is
+\begin{equation}
+ \boxed{\displaystyle
+ C_{ij}^{\ k}=C_{i_*j_*}^{\ k_*}
+ \frac{K_{ijk}}{K_{i_*j_*k_*}}
+ \sqrt{\frac{N_kN_{i_*}N_{j_*}}
+              {N_iN_jN_{k_*}}}.}
+ \label{expphysics:full-reconstruction}
+\end{equation}
+The denominator $K_{i_*j_*k_*}$ is nonzero because that component
+of the unique intertwiner is nonzero. All norm factors are explicit
+in \eqref{expphysics:all-norms} and the printed highest-norm table.
+The formula uses the raw algebraic lowering basis, so the factor
+$8640^{2p}$ must be included in its norm conversion.
+
+To see the normalization directly, write
+$P_\ell((v_i)_1v_j)=B_{mn}^{\ \ell}K_{ijk}v_k$ in a
+charge-compatible component. Pairing with $v_k$ gives a numerator
+$B_{mn}^{\ \ell}K_{ijk}N_k$, hence
+$C_{ij}^{\ k}=B_{mn}^{\ \ell}K_{ijk}\sqrt{N_k/(N_iN_j)}$.
+Taking the ratio with the representative gives
+\eqref{expphysics:full-reconstruction}; the unknown reduced scalar
+$B_{mn}^{\ \ell}$ cancels. This proof also explains why the phase
+of a representative is sufficient.
+
+For example the first $V_0\otimes V_0\to V_1$ representative is
+$(i,j,k)=(0,0,5)$, with
+\[
+ C_{00}^{\ 5}=\frac{\sigma+2\vartheta}{5}
+                  \sqrt{\frac{3971}{2808}}.
+\]
+On the right factor its degrees are $(4,4,8)$, so $L=0$.
+Moving to $(i,j,k)=(0,1,6)$ changes $K$ from 1 to $4/8=1/2$,
+while $N_6/N_5=8$ and $N_1/N_0=4$. The normalized coefficient is
+therefore divided by $\sqrt2$, and
+$|C_{01}^{\ 6}|^2=3971/5616$, agreeing with the component export.
+This example tests both the no-factorial convention and the
+distinction between raw coefficients and unit-field coefficients.
+
+The saved computation used a second, independent way to obtain
+the components: the Ward recurrence
+\[
+ P((Fv_i)_1v_j)=F\,P((v_i)_1v_j)-P((v_i)_1Fv_j).
+\]
+Its directly computed highest-first slice contained 1137 actual
+lattice mode products and 3512 charge-compatible projections,
+with 1639 nonzero projections. After completion, the saved report
+records 51,076 raising/lowering pair checks, 12,769 primary
+skew-symmetry pair checks, and 33 additional direct lattice product
+probes. The printed reconstruction formula is the representation
+theory underlying those Ward identities; the document transcription
+does not rerun the lattice calculation or extend its weight cutoff.
+
+\subsection{Exhaustive support and all reduced coefficients}
+\label{expphysics:atlas-coverage}
+
+Among the $13^3=2197$ ordered multiplet triples, exactly 318 have
+a nonzero projected map. The other 1879 maps vanish in the saved
+complete tensor. This includes triples forbidden by the two
+$\mathfrak{sl}_2$ triangle rules and any allowed triples whose reduced
+coefficient is zero. A zero map is stronger than a vanishing selected
+component. To make the distinction explicit, the support table lists
+every ordered pair $(m,n)$, including pairs with no target.
+
+\input{physics_tables/coupling_support.tex}
+
+The next table contains exactly one row for each of the 318 nonzero
+maps. The choice of representative favors a short saved squared
+coefficient and need not put the first component at the top of its
+multiplet. Its first column identifies the ordered map; its second
+column gives the actual component indices. These are all the rows
+required by \eqref{expphysics:full-reconstruction}. A triple absent
+from this table is a zero map, as specified by the support table.
+
+\input{physics_tables/reduced_coupling_atlas.tex}
+
+\subsection{Stress projections and an independent four-point cross-check}
+
+For a unit primary of internal stress weight $h_i$, the squared
+coupling to the unit stress $T_i/\sqrt{c_i/2}$ is $2h_i^2/c_i$.
+The complete saved list for the eight original current multiplets
+is printed below. It resolves the two distinct $(1,9)$ multiplets
+without relying on their names. Each multiplet's four $h_i$ values
+sum to two.
+
+\input{physics_tables/stress_ward.tex}
+
+The extremal pair $(68,95)$ is
+$(v_{7,0,0},v_{7,1,13})$. The normalized second component is the
+chiral adjoint of $\widehat u$ up to a phase, because that extremal
+Cartan weight occurs only once. There are exactly nine nonzero
+primary targets. Printing all nine makes the aggregate
+four-point check a short rational addition.
+
+\input{physics_tables/u_pair_projections.tex}
+
+Their sum is $11/3$. The three stress-difference targets sum to
+$41/140$; adding the total stress contribution 1 gives $181/140$
+for the four commuting stresses. The six remaining primary targets
+sum to $1417/420$. Thus the total global weight-two coefficient is
+\[
+ \frac{14}{3}
+ =1+\frac{11}{3}
+ =\frac{181}{140}+\frac{1417}{420}.
+\]
+The two decompositions resolve different orthogonal subspaces.
+Neither interpretation counts the derivative of a weight-one
+current as a new global quasiprimary.
+
+\clearpage
+\section{Correlator verification tables and exact channel expansions}
+\label{expphysics:correlator-details}
+
+This section prints the channel data of
+\artifact{c8_physics_20260927/correlators.json}, including all
+coefficients through the saved cutoff 32. Rational-function
+identities are exact at every cross-ratio where defined. A finite
+global-block table records coefficients only through its stated
+cutoff. Those two statements should be kept distinct when checking
+crossing and positivity.
+
+\subsection{A Gaussian calculation with every surviving term visible}
+
+Let the three lattice momenta of the defining weight-two field be
+\begin{align*}
+ a_0&=(0,0,0,0,0,-1,1,1),\\
+ a_1&=(0,0,0,1,1,-1,0,0),\\
+ a_2&=(1,1,0,0,0,-1,0,0).
+\end{align*}
+They have Gram matrix with diagonal 4 and off-diagonal 2, and
+\[
+ u=e^{a_0}+\frac{\sqrt{13}+3\sqrt{-3}}{20}e^{a_1}
+            +\frac{\sqrt{13}-3\sqrt{-3}}{20}e^{a_2}.
+\]
+The three squared exponential norms in the transported form are
+$(4,40,40)$. The coefficient absolute squares are $(1,1/10,1/10)$,
+so each contributes four to the norm $\|u\|^2=12$. The normalized
+field is $\widehat u=u/\sqrt{12}$. An adjoint at a chiral insertion
+is still a holomorphic field; it is not an antiholomorphic insertion.
+
+Number the four insertion points $(\infty,1,x,0)$. A letter $p$
+means $\widehat u$ and a letter $m$ its chiral adjoint. Inserting
+the three exponential terms at each position gives 81 choices per
+ordering. Momentum conservation is imposed before assigning a
+nonzero correlator. Exactly fifteen choices survive in each of the
+six two-$p$, two-$m$ orderings. Although the cocycle signs vary,
+the complete normalized coefficient of each surviving monomial is
+$1/9$. The cocycle sign in the next table is one factor in this
+calculation, not the sign of the final correlator contribution.
+
+\input{physics_tables/surviving_gaussian_terms.tex}
+
+Summing the monomials gives
+\begin{align}
+ G_0(x)&=G_{mpmp}(x)=G_{pmpm}(x)
+       =\frac{3-4x+4x^2}{3x^4(1-x)^4},\\
+ G_+(x)&=G_{mmpp}(x)=G_{ppmm}(x)
+       =\frac{x^2(4-4x+3x^2)}{3(1-x)^4},\\
+ G_{pmmp}(x)&=G_{mppm}(x)=G_+(1-x).
+ \label{expphysics:all-u-orderings}
+\end{align}
+The neutral sum before collecting a numerator is particularly
+simple:
+\[
+ G_0(x)=\frac1{3x^4(1-x)^4}
+       +\frac2{3x^2(1-x)^4}
+       +\frac2{3x^4(1-x)^2}.
+\]
+The three terms correspond to the three exponent pairs in the
+surviving-term table. Crossing is a rational identity:
+$G_0(1-x)=G_0(x)$ and $G_+(x)=x^{-4}G_0(1/x)$.
+
+The equal-charge OPE starts at power $x^2$. Its leading state is
+the weight-six primary $\widehat u_{(-3)}\widehat u$, with the
+following three momentum components:
+\begin{align}
+ \widehat u_{(-3)}\widehat u={}&
+ -\frac{\sqrt{13}+3\sqrt{-3}}{120}
+ e^{(0,0,0,1,1,-2,1,1)}\nonumber\\
+ &-\frac{\sqrt{13}-3\sqrt{-3}}{120}
+ e^{(1,1,0,0,0,-2,1,1)}
+ -\frac1{60}e^{(1,1,0,1,1,-2,0,0)}.
+ \label{expphysics:charged-leading-vector}
+\end{align}
+Each momentum has squared length twelve. The saved exact norm of
+this state is $4/3$, agreeing with the first equal-charge global
+coefficient $A_6=4/3$. This supplies an actual state behind the
+leading channel, not merely a power-series coefficient.
+
+\subsection{How to verify the global-block columns by hand}
+\label{expphysics:block-recursion}
+
+For an external unit field of weight $h$, the convention is
+\begin{equation}
+ R(x)=x^{2h}G(x)=A_0+\sum_{n\geq1}
+ A_nx^n\,{}_2F_1(n,n;2n;x).
+ \label{expphysics:global-convention}
+\end{equation}
+Write $R(x)=\sum_{m\geq0}r_mx^m$. Since the hypergeometric
+series has leading coefficient one, this is triangular:
+\begin{align}
+ A_0&=r_0,\\
+ A_m&=r_m-\sum_{n=1}^{m-1}A_n
+ \frac{(n)_{m-n}^{\,2}}{(2n)_{m-n}(m-n)!},\qquad m\geq1.
+ \label{expphysics:block-triangular}
+\end{align}
+Here $(n)_j$ is the rising Pochhammer symbol. This recurrence is
+enough to verify every entry of the next six tables with rational
+arithmetic. The $A_0$ term is constant: it has no descendant
+contribution to subtract.
+
+For example the neutral generator has $r_1=8/3$, $r_2=6$ and
+$r_3=12$. The first current block contributes $A_1/2$ at order
+two, so $A_2=6-4/3=14/3$. At order three it contributes $A_1/3$,
+while the weight-two block contributes $A_2$, giving
+$A_3=12-8/9-14/3=58/9$. A bare Taylor coefficient such as 6
+therefore cannot be interpreted directly as a primary coupling sum.
+
+In a reflection-positive channel, $A_n$ is a sum of squared
+couplings to orthonormal global quasiprimaries at weight $n$.
+It includes global quasiprimaries which are Virasoro descendants
+of lower-weight states. It is neither the squared coupling to
+one distinguished field nor the coefficient of a single
+Virasoro conformal block. Odd coefficients vanish for the
+identical-boson equal-charge, spin-three, current and stress
+channels displayed below. The neutral charged-adjoint ordering
+does not have that odd-weight selection rule.
+
+\subsubsection{Weight-two generator: neutral channel}
+The first coefficient $A_1=8/3=1/2+13/6$ resolves the two Cartan
+currents, whose charges on $u$ are $(1,13)$ and whose squared
+norms are $(2,78)$. At weight two the decomposition was printed
+in Table~\ref{expphysics:u-pair}.
+\input{physics_tables/blocks_u_neutral.tex}
+
+\subsubsection{Weight-two generator: equal-charge channel}
+There is no identity or current exchange in this charge sector,
+and no exchange below weight six. The leading weight-six field
+is the explicit vector \eqref{expphysics:charged-leading-vector}.
+\input{physics_tables/blocks_u_equal_charge.tex}
+
+\subsection{Spin-three self-OPEs with the residues fully specialized}
+
+For either intrinsic spin-three algebra put $N=c/3$,
+$b=a_{(1)}a$ and $\widehat a=a/\sqrt N$. The self-OPE is
+\[
+ a(z)a(0)\sim\frac{N}{z^6}+\frac{2T_c}{z^4}
+ +\frac{\partial T_c}{z^3}+\frac b{z^2}
++\frac{\frac12\partial b-\frac1{12}\partial^3T_c}{z}.
+\]
+Here $a$ is the canonically rescaled generator. The raw spin-three
+coordinate fields printed in Appendix~\ref{expdata:coordinates}
+must first be multiplied by the conversion factors stated there.
+Their raw self-OPE coefficient is not, in general, $c/3$ and is
+not automatically their positive Hermitian norm. The final unit
+field $\widehat a$ includes the further positive factor $1/\sqrt{c/3}$.
+The two cases have
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+algebra&$c$&$\lambda$&$a_{(3)}b/a$&$\|b\|^2$\\
+\midrule
+Potts&$4/5$&$4/13$&$1119/65$&$1492/325$\\
+parafermion 13&$8/5$&$14/473$&$69283/2365$&$554264/35475$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are intrinsic central charges. Replacing either with the
+ambient value eight would give different stress residues.
+
+Let $S_j(x)=x^{-j}+(1-x)^{-j}$. Specializing every coefficient,
+the complete unit-normalized functions are
+\begin{align}
+ G_{\rm Potts}(x)={}&1+S_6(x)
+ +\frac{45}{2}\{S_4(x)+S_3(x)\}
+ +\frac{3357}{52}S_2(x)+\frac{1386}{13}S_1(x),\\
+ G_{\rm PF13}(x)={}&1+S_6(x)
+ +\frac{45}{4}\{S_4(x)+S_3(x)\}
+ +\frac{207849}{3784}S_2(x)+\frac{46641}{473}S_1(x).
+ \label{expphysics:spin3-specialized}
+\end{align}
+Their denominators can be taken to be $x^6(1-x)^6$.
+For a direct polynomial comparison, write their numerators as
+$P(x)=\sum_{j=0}^{12}p_jx^j$. They are palindromic,
+$p_{12-j}=p_j$, and their first seven coefficients are
+\begin{align*}
+ (p_0,\ldots,p_6)_{\rm Potts}={}&
+ \left(1,-6,\frac{75}{2},-\frac{265}{2},\frac{14667}{52},
+ -\frac{5190}{13},\frac{11319}{26}\right),\\
+ (p_0,\ldots,p_6)_{\rm PF13}={}&
+ \left(1,-6,\frac{105}{4},-\frac{305}{4},\frac{647739}{3784},
+ -\frac{138690}{473},\frac{671793}{1892}\right).
+\end{align*}
+The principal parts at zero follow from the displayed OPE. Equal-field
+crossing fixes those at one, and the identity channel fixes the
+constant at infinity. There is no remaining holomorphic function on
+the sphere vanishing at infinity. This is why the rational functions
+are determined beyond the finite expansion cutoff.
+
+The intrinsic Virasoro quasiprimary
+$\Lambda=:T_cT_c:-\tfrac3{10}\partial^2T_c$ has norm
+$c(5c+22)/10$. Its squared unit-normalized coupling in the
+$\widehat a\widehat a$ channel is $4608/[5c(5c+22)]$.
+Subtracting this from the global weight-four exchange leaves
+\[
+ \gamma_4^2=
+ \frac{48(c+2)\{8-\lambda(5c+22)\}}{c(5c+22)}
+ =0\quad\hbox{or}\quad\frac{60552}{2365},
+\]
+for Potts and the parafermion case, respectively. The new
+weight-four primary is null in Potts. Its nonzero counterpart in
+the parafermion case should not be confused with the unavoidable
+weight-four global quasiprimary in the Virasoro vacuum module.
+
+\subsubsection{Potts spin-three global blocks}
+\input{physics_tables/blocks_Potts.tex}
+\subsubsection{Parafermion spin-three global blocks}
+\input{physics_tables/blocks_PF13.tex}
+
+\subsection{Current and stress Ward correlators as normalization controls}
+
+For a unit Cartan current and the unit total stress $\widehat T=T/2$,
+\begin{align}
+ G_{\widehat H}(x)&=1+x^{-2}+(1-x)^{-2},\\
+ G_{\widehat T}(x)&=1+x^{-4}+(1-x)^{-4}
+ +x^{-2}+(1-x)^{-2}+x^{-1}+(1-x)^{-1}.
+ \label{expphysics:ward-controls}
+\end{align}
+These controls use the same global-block extraction and normalization
+as the interacting examples. The stress exchange in the first has
+$A_2=2$, whereas in the second it has $A_2=1$; their external
+weights differ. The coefficient $C_{\widehat T\widehat T\widehat T}$
+is one at $c=8$.
+
+\subsubsection{Unit Cartan current}
+\input{physics_tables/blocks_unit_Cartan.tex}
+\subsubsection{Unit total stress}
+\input{physics_tables/blocks_unit_total_stress.tex}
+
+\subsection{Nine lightest-module lattice blocks and their precise scope}
+
+The two $A_2$ lattice cosets with charges $+1$ and $-1$ restrict
+to the same lightest $U$-module $M_{c_1}$, of weight $1/3$ and
+top dimension three. In simple-root coordinates take
+\[
+ \beta_0=(2/3,1/3),\quad
+ \beta_1=(-1/3,1/3),\quad
+ \beta_2=(-1/3,-2/3).
+\]
+Their mutual Gram matrix is
+\[
+ ((\beta_i,\beta_j))=
+ \begin{pmatrix}2/3&-1/3&-1/3\\-1/3&2/3&-1/3\\-1/3&-1/3&2/3\end{pmatrix},
+\]
+and their right-Cartan charges are $(2,0,-2)$. With paired lattice
+intertwiners normalized to unit leading vacuum coefficient,
+\begin{equation}
+ \mathcal B_{ij}(x)=
+ \langle V_{-\beta_i}(\infty)V_{\beta_i}(1)
+          V_{-\beta_j}(x)V_{\beta_j}(0)\rangle
+ =x^{-2/3}(1-x)^{-(\beta_i,\beta_j)}.
+ \label{expphysics:lightest-lattice-block}
+\end{equation}
+Positive real powers on $0<x<1$ specify the initial branch.
+Analytic continuation requires a path, since these blocks have
+fractional exponents.
+
+\input{physics_tables/lightest_blocks.tex}
+
+The relative-weight-one coefficient is the Gram entry
+$(\beta_i,\beta_j)$. Its projection to the $U$ current is
+$q_iq_j/78$. The complement in the $M_b$ top is therefore
+\[
+ G_b=\begin{pmatrix}
+ 8/13&-1/3&-11/39\\
+ -1/3&2/3&-1/3\\
+ -11/39&-1/3&8/13
+ \end{pmatrix},\qquad
+ \operatorname{spec}(G_b)=\left\{0,1,\frac{35}{39}\right\}.
+\]
+The zero eigenvector is $(1,1,1)$, reflecting
+$\beta_0+\beta_1+\beta_2=0$. The other eigenvectors can be
+chosen as $(1,-2,1)$ and $(1,0,-1)$, with eigenvalues $1$ and
+$35/39$. Negative off-diagonal entries are therefore consistent
+with a positive semidefinite Gram matrix.
+
+All six permutations of $(0,1,2)$ give charge-neutral chiral
+three-point functions of the three corresponding lattice
+intertwiners, with absolute coefficient squared one and coordinate
+factor $(z_{12}z_{13}z_{23})^{-1/3}$. Their phases depend on the
+intertwiner bases and cocycle convention. The data do not provide
+a complete $U$-channel basis or the sewing constants of a
+diagonal-$U$ bulk four-point function. In particular, taking
+$|\mathcal B_{ij}|^2$ by itself is not the claimed construction
+of that nonvacuum bulk correlator.
+
+\subsection{Exact cross-ratio samples and saved check boundaries}
+
+These rational-point evaluations are useful when comparing an
+independent implementation, plotting convention, or crossing
+transformation. They are exact values, not floating-point output.
+
+\input{physics_tables/correlator_samples.tex}
+
+The saved report records 486 charge assignments, six $u$ orderings
+with fifteen surviving terms each, exact polynomial crossing
+identities for the $u$ and spin-three functions, and reconstruction
+of the global expansions through weight 32. Reflection-positive
+coefficients were checked through the same cutoff. Positivity at
+all weights follows from the positive VOA realization when its
+construction inputs hold; it is not established by extending the
+finite numerical-looking table by inspection. None of these checks
+is a replay of all lattice self-OPE certificates or a verification
+of arbitrary full-CFT sewing identities.
+
+\clearpage
+\section{Complete modular, fusion and diagonal-defect reference tables}
+\label{expphysics:defect-details}
+
+All rows in this section use the fixed sector order
+\begin{equation}
+ (0,b,a,c_0,c_1,c_2,d_1,d_2,d_3,d_4,d_5,d_6).
+ \label{expphysics:center-order}
+\end{equation}
+The identity label $0$ in a coefficient vector means the vacuum
+object. A zero coefficient means its absence. Confusing these
+two uses of zero is avoided by always printing a full twelve-entry
+vector. These tables concern the diagonal $U$ theory; the six-line
+Haagerup action after holomorphic extension is treated separately.
+
+\subsection{Every exact modular and line eigenvalue in compact form}
+
+For direct inspection of the cyclotomic data, put
+\[
+ r=\sqrt{13},\quad d=\frac{3+r}{2},\quad s=3d+2=d^2+1,
+ \quad A=\frac16-\frac1{2r},\quad B=\frac16+\frac1{2r},
+ \quad t_j=-2\cos\frac{2\pi j}{13}.
+\]
+Indices on $t_j$ are taken modulo 13 with $t_j=t_{13-j}$.
+The exact $S$ matrix is completely specified by
+\begin{align}
+ S_{00}=S_{bb}&=A,&S_{0b}=S_{b0}&=B,\\
+ S_{0x}=S_{bx}&=\frac13&& (x=a,c_0,c_1,c_2),\\
+ S_{0d_j}&=r^{-1},&S_{bd_j}&=-r^{-1},\\
+ S_{xd_j}&=0&& (x=a,c_0,c_1,c_2),\\
+ (S_{xy})_{x,y=a,c_0,c_1,c_2}
+ &=\frac13\begin{pmatrix}2&-1&-1&-1\\-1&2&-1&-1\\-1&-1&-1&2\\-1&-1&2&-1\end{pmatrix},&&\\
+ S_{d_id_j}&=r^{-1}t_{ij}.&&
+ \label{expphysics:exact-S}
+\end{align}
+Symmetry supplies the transposed entries. Thus the twelve-term
+cyclotomic encodings in the JSON may be checked using a small
+real trigonometric matrix. The positive embedding is essential:
+$S_{00}=1/(3s)>0$.
+
+The quantum dimensions are
+\[
+ (1,d^2,s,s,s,s,3d,3d,3d,3d,3d,3d),
+ \qquad\mathcal D=\frac1{S_{00}}=3s.
+\]
+Here $\mathcal D$ is the total quantum dimension and the global
+dimension is $\mathcal D^2$. For a Verlinde line $x$ the eigenvalue
+on the diagonal sector $i$ is $\lambda_x(i)=S_{xi}/S_{0i}$.
+For the first six sector columns, the entire eigenvalue table is
+\begin{center}\small
+\begin{tabular}{c|rrrrrr}
+\toprule
+line $x$&$0$&$b$&$a$&$c_0$&$c_1$&$c_2$\\
+\midrule
+$0$&1&1&1&1&1&1\\
+$b$&$d^2$&$d^{-2}$&1&1&1&1\\
+$a$&$s$&$s/d^2$&2&$-1$&$-1$&$-1$\\
+$c_0$&$s$&$s/d^2$&$-1$&2&$-1$&$-1$\\
+$c_1$&$s$&$s/d^2$&$-1$&$-1$&$-1$&2\\
+$c_2$&$s$&$s/d^2$&$-1$&$-1$&2&$-1$\\
+$d_i$ ($1\leq i\leq6$)&$3d$&$-3/d$&0&0&0&0\\
+\bottomrule
+\end{tabular}
+\end{center}
+For the final six sector columns, the line $0$ has six entries 1,
+the line $b$ six entries $-1$, and each of $a,c_0,c_1,c_2$ six
+entries 0. The remaining $6\times6$ block is
+\begin{equation}
+ (\lambda_{d_i}(d_j))_{i,j=1}^6=
+ \begin{pmatrix}
+ t_1&t_2&t_3&t_4&t_5&t_6\\
+ t_2&t_4&t_6&t_5&t_3&t_1\\
+ t_3&t_6&t_4&t_1&t_2&t_5\\
+ t_4&t_5&t_1&t_3&t_6&t_2\\
+ t_5&t_3&t_2&t_6&t_1&t_4\\
+ t_6&t_1&t_5&t_2&t_4&t_3
+ \end{pmatrix}.
+ \label{expphysics:line-cosine-block}
+\end{equation}
+Equations and tables above specify all 144 exact line eigenvalues
+without decimal rounding. A line eigenvalue is not a Hilbert-space
+multiplicity, and may be negative or irrational.
+
+\subsection{All center fusion products}
+
+The full coefficient tensor is
+\[
+ N_{xy}^{\ \ z}=\sum_i\frac{S_{xi}S_{yi}S_{zi}}{S_{0i}}.
+\]
+All labels are self-dual and $S$ is real in the stated basis. The
+table below prints every unordered product; commutativity gives
+the remaining ordered products. For example its $b,b$ vector is
+$(1,1,1,1,1,1,1,1,1,1,1,1)$, and its $a,a$ vector is
+$(1,2,2,1,1,1,1,1,1,1,1,1)$. All entries are exact integers
+copied from the saved Verlinde output.
+
+\input{physics_tables/fusion_complete.tex}
+
+One way to verify an individual row independently is to check the
+dimension identity
+\[
+ \operatorname{qdim}(x)\operatorname{qdim}(y)
+ =\sum_zN_{xy}^{\ \ z}\operatorname{qdim}(z).
+\]
+It is a necessary consistency check, not a replacement for the
+Verlinde calculation: distinct fusion vectors can have the same
+weighted dimension. The saved exporter also checks exact
+associativity and all Verlinde coefficients, rather than relying
+on this single scalar test.
+
+\subsection{All twelve spatially twisted Hilbert spaces}
+
+For a line $x$, a temporal insertion has partition function
+$\sum_i\lambda_x(i)|\chi_i|^2$. Its modular transform is the
+spatially twisted Hilbert-space trace
+\begin{equation}
+ Z_{[x]}=\sum_{i,j}(N_x)_{ij}\chi_i\overline{\chi_j},
+ \qquad(N_x)_{ij}=N_{xi}^{\ \ j}.
+ \label{expphysics:twisted-matrix}
+\end{equation}
+The matrices below have both row and column order
+\eqref{expphysics:center-order}. They print all twelve complete
+bilinear forms, so a reader need not transpose indices in the
+fusion table while verifying a twisted spectrum. Symmetry of each
+matrix follows from the real self-dual modular data.
+
+If $h_i$ and $t_i$ denote a module's lowest weight and top dimension,
+the ground dimension is the minimum of $h_i+h_j$ over positive
+matrix entries. Its multiplicity is the sum of
+$(N_x)_{ij}t_it_j$ over pairs attaining that minimum. Scalars
+require exact equality of left and right weights, not merely
+integer spin. A pair with $h_i-h_j\notin\mathbb Z$ contributes
+no scalar at any grade. The vacuum module has its first positive
+weight at one with six states, which must be used when excluding
+the identity. These elementary rules explain why the scalar gap
+can differ from the ground-state gap of a defect space.
+
+\input{physics_tables/twisted_matrices.tex}
+
+\subsection{All diagonal Cardy annuli and their positive gaps}
+
+The elementary boundary labeled $x$ has closed-channel state
+\[
+ |x\rangle=\sum_i\frac{S_{xi}}{\sqrt{S_{0i}}}|i\rangle\!\rangle.
+\]
+The open annulus between $x$ and $y$ is
+$Z_{xy}^{\rm open}=\sum_iN_{xy}^{\ \ i}\chi_i$. Accordingly
+Table~\ref{expphysics:fusion-complete} already prints every full
+annulus character vector. The next table adds all ground-state
+and first-positive-weight data. A self-annulus has one vacuum,
+whereas distinct elementary boundaries have none. The first
+positive weight in a vacuum character is one, not an absent
+state obtained by deleting the entire vacuum representation.
+
+\input{physics_tables/cardy_gaps.tex}
+
+Boundary overlaps in this normalization are
+\begin{equation}
+ g_x=\frac{\operatorname{qdim}(x)}{\sqrt{3s}},\qquad
+ g_0^2=\frac1{3s},\quad g_b^2=\frac{d^4}{3s},\quad
+ g_a^2=g_{c_j}^2=\frac{s}{3},\quad
+ g_{d_j}^2=\frac{3d^2}{s}.
+ \label{expphysics:cardy-g-exact}
+\end{equation}
+Their positive values, shown with the saved plotting precision, are
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+boundary type&$g_x$\\\midrule
+$0$&$0.1673069562521514$\\
+$b$&$1.825038973650249$\\
+$a,c_j$&$1.992345929902401$\\
+$d_j$&$1.657732017398097$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These decimals are the saved plotting values; the displayed
+algebraic expressions define the observables. The boundary entropy
+is $\log g_x$, not $g_x$ itself.
+
+The vacuum Cardy boundary has six positive-weight-one currents.
+Every other self-annulus contains weight-$1/3$ boundary fields:
+six for $c_1$ and three for each other nonvacuum boundary. This
+identifies relevant boundary operators. Neither their degeneracy
+nor their conformal weight specifies a boundary renormalization
+group flow or its endpoint.
+
+\clearpage
+\section{The six Haagerup lines and all extension boundary sectors}
+\label{expphysics:extension-details}
+
+The selected holomorphic extension is $H'=V_{E_8}$ with
+$H'|_U=M_0\oplus M_b\oplus2M_a$. Its six right-module labels are
+ordered as
+\[
+ (1,\alpha,\alpha^2,\rho,\alpha\rho,\alpha^2\rho).
+\]
+They have dimensions $(1,1,1,d,d,d)$ and fusion rules
+$\alpha^3=1$, $\rho\alpha=\alpha^2\rho$,
+$\rho^2=1+\rho+\alpha\rho+\alpha^2\rho$. Unlike the center
+fusion table, the ordered product table need not be symmetric.
+
+\input{physics_tables/h3_fusion.tex}
+
+\subsection{Forgetful matrix, tube factors and first-factor traces}
+
+The entire forgetful multiplicity matrix, with the six rows above
+and twelve columns in \eqref{expphysics:center-order}, is
+\begin{equation}
+ n=\left(\begin{array}{rrrrrrrrrrrr}
+ 1&1&2&0&0&0&0&0&0&0&0&0\\
+ 0&0&0&1&1&1&0&0&0&0&0&0\\
+ 0&0&0&1&1&1&0&0&0&0&0&0\\
+ 0&1&1&1&1&1&1&1&1&1&1&1\\
+ 0&1&1&1&1&1&1&1&1&1&1&1\\
+ 0&1&1&1&1&1&1&1&1&1&1&1
+ \end{array}\right).
+ \label{expphysics:forgetful-matrix}
+\end{equation}
+Restriction of a right module $x$ is
+$Rx=\bigoplus_\mu n_{x\mu}M_\mu$. The selected action is on
+the first chiral factor, with the antiholomorphic $H'$ theory a
+spectator. Its Hilbert space and tube decomposition are
+\begin{align}
+ \mathcal H_x&=Rx\otimes\overline{H'}
+ =\bigoplus_\mu W_x^\mu\otimes\mathcal V_\mu,\\
+ \dim W_x^\mu&=n_{x\mu},\qquad
+ \mathcal V_\mu=M_\mu\otimes\overline{H'},\\
+ Z_x&=\sum_\mu n_{x\mu}\chi_\mu\overline{\chi_{E_8}}.
+ \label{expphysics:tube-conventions}
+\end{align}
+The twelve functions $\chi_\mu\overline{\chi_{E_8}}$ count the
+$\mathcal V_\mu$ factors; they exclude $W_x^\mu$.
+For example $\dim W_1^a=2$, and omitting that factor would
+incorrectly halve the corresponding physical untwisted charged
+multiplicity. Conversely inserting it into the bootstrap
+multiplicity-space function would count that factor twice.
+
+\input{physics_tables/tube_spaces.tex}
+
+All antiholomorphic weights of $H'$ are integers. A sector with
+noninteger $h_\mu$ therefore has no scalar at any grade, because
+adding integral grades never makes its left weight equal an integer
+right weight. In the four integer-weight sectors, the first
+nonidentity scalars occur at $(1,1)$ and have multiplicities
+$6\cdot248$, $80\cdot248$, $81\cdot248$, $81\cdot248$.
+The resulting physical six twisted spaces, including the
+forgetful multiplicities, are the following.
+
+\input{physics_tables/h3_twisted_gaps.tex}
+
+For orientation, the untwisted invariant scalar multiplicity is
+1488, while the entire untwisted scalar space at dimension two
+has multiplicity $248^2=61504$. The untwisted $\mathbb Z_3$-charged
+space contains two copies of $\mathcal V_a$, so its scalar
+multiplicity is $2\cdot81\cdot248=40176$. In contrast, the
+bootstrap union $\mathcal V_a\cup\mathcal V_{c_0}$ concerns
+two tube multiplicity-space labels and is not that entire charged
+subspace. Their identical scalar gap two does not identify the
+underlying spaces.
+
+On the three untwisted multiplicity factors, the line matrices
+may be chosen as
+\[
+ \begin{array}{c|cc}
+  &\alpha&\rho\\\hline
+ M_0&1&d\\
+ M_b&1&-d^{-1}\\
+ \mathbb C^2\otimes M_a&
+ \begin{pmatrix}\omega&0\\0&\omega^2\end{pmatrix}&
+ \begin{pmatrix}0&1\\1&0\end{pmatrix}
+ \end{array},\qquad\omega=e^{2\pi i/3}.
+\]
+Taking the traces on these multiplicity factors gives
+\[
+ Z^{[\alpha]}=(\chi_0+\chi_b-\chi_a)\overline{\chi_{E_8}},
+ \qquad
+ Z^{[\rho]}=(d\chi_0-d^{-1}\chi_b)\overline{\chi_{E_8}}.
+\]
+The antiholomorphic character is unchanged in a first-factor
+insertion. Replacing either expression with the absolute square
+of its holomorphic factor would describe a different paired
+left/right insertion.
+
+\subsection{All \texorpdfstring{$U$}{U}-preserving annuli of the full extension}
+
+The open Hilbert space between boundary modules $x,y$ is
+$R(x^*\otimes_Ay)$. Thus
+\begin{equation}
+ Z_{xy}^{E_8,\mathrm{open}}=
+ \sum_{z,\mu}N_{x^*y}^{\ \ z}n_{z\mu}\chi_\mu.
+ \label{expphysics:extension-annulus}
+\end{equation}
+The duals are $1^*=1$, $\alpha^*=\alpha^2$,
+$(\alpha^2)^*=\alpha$ and the three noninvertible objects
+are self-dual. The dual on $x$ cannot be dropped just because
+the center labels in the earlier Cardy table were self-dual.
+For instance the $\alpha,\alpha$ annulus has a vacuum;
+using $\alpha\otimes\alpha$ instead of
+$\alpha^*\otimes\alpha$ would incorrectly remove it.
+
+\input{physics_tables/e8_annuli.tex}
+
+The boundary overlaps are exactly
+\[
+ (g_1,g_\alpha,g_{\alpha^2},g_\rho,g_{\alpha\rho},g_{\alpha^2\rho})
+ =(1,1,1,d,d,d).
+\]
+This normalization is fixed by the vacuum coefficient in the
+closed channel, rather than by an arbitrary proportionality
+constant. Restriction multiplies categorical dimensions by
+$\operatorname{qdim}(A)=\mathcal D$, so multiplying by
+$S_{00}=1/\mathcal D$ gives
+$\operatorname{qdim}(x)\operatorname{qdim}(y)$ for that coefficient.
+Positive boundary overlaps then give $g_x=\operatorname{qdim}(x)$.
+
+The three invertible self-annuli equal $\chi_{E_8}$ and have
+248 weight-one currents as their first positive boundary states.
+Each noninvertible self-annulus instead has nine weight-$1/3$
+states. Distinct noninvertible boundaries have twelve
+weight-$1/3$ ground fields between them. All other distinct pairs
+have three such ground fields. These are consequences of the
+printed vectors and the $M_{c_1}$ top dimension three.
+
+\subsection{Provenance and what has actually been incorporated}
+
+The modular, fusion, defect, and boundary entries above are saved
+exact consequences of the positive Haagerup modular data and the
+supplied $\gamma=0$ character tops. The source exporter represents
+numbers in $\mathbb Q(\zeta_{13})$ by twelve rational coefficients
+and uses the positive Gauss sum
+\[
+ \sqrt{13}=\sum_{j=1}^{12}\left(\frac j{13}\right)\zeta_{13}^j.
+\]
+It records checks of $S^2=1$, $(S\Theta)^3=1$, nonnegative
+integrality of the complete Verlinde tensor, associativity,
+dimension multiplicativity, self-duality, and the forgetful
+matrix's compatibility with the two fusion rings. These checks
+do not reconstruct associators, braidings, or generic nonvacuum
+OPE coefficients from modular data.
+
+For reproducibility, the new transcription utility is
+\artifact{physics_tables/build_physics_tables.py}; its input
+hashes and coverage counts are recorded in
+\artifact{physics_tables/transcription_manifest.json} and
+\artifact{physics_sources.md}. It reads saved finite outputs and
+formats exact entries. It does not import the lattice engine or
+rerun a physics exporter. Its coverage checks include all 113
+component labels, the 318 distinct nonzero multiplet triples,
+all 18,365 sparse component entries when identifying that support,
+198 global-block rows, all center fusion products, and every
+boundary pair up to the stated reversal symmetry. Original
+artifacts remain the provenance for the finite exact calculations;
+the printed formulas and tables make their contents available for
+inspection within this expanded draft.

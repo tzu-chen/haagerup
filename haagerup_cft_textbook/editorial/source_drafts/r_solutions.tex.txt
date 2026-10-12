@@ -1,0 +1,546 @@
+\section{Solutions on conformal fields and vertex algebras}
+
+\paragraph{Exercise~\ref{ex:cft-level1}.}
+The commutator $[L_1,L_{-1}]=2L_0$ gives, by induction,
+\[
+ L_1L_{-1}^n|h\rangle
+ =n(2h+n-1)L_{-1}^{n-1}|h\rangle.
+\]
+Taking an inner product and using $L_{-1}^\dagger=L_1$
+therefore multiplies the previous norm by $n(2h+n-1)$.
+Starting with a unit primary gives $n!(2h)_n$.
+For equal external weights, each three-point descendant coefficient
+is $(p)_n$ for an exchanged primary of weight $p$.
+The block is consequently
+\[
+ z^p\sum_{n\ge0}\frac{(p)_n^2}{n!(2p)_n}z^n
+ =z^p\left(1+\frac p2z+
+       \frac{p(p+1)^2}{4(2p+1)}z^2+\cdots\right).
+\]
+The identity block is treated separately at $p=0$.
+
+\paragraph{Exercise~\ref{ex:cft-null}.}
+Let $v=(L_{-2}+aL_{-1}^2)|h\rangle$. Acting with $L_1$
+gives $[3+a(4h+2)]L_{-1}|h\rangle$, so at $h=1/16$
+we need $a=-4/3$. The $L_2$ action is
+$4h+c/2+6ah$. At $c=1/2,h=1/16$ it equals
+$1/4+1/4-1/2=0$. Thus
+\[
+ \left(L_{-2}-\frac43L_{-1}^2\right)|1/16\rangle
+\]
+is the null vector. Higher positive modes annihilate it by
+grading. Its vanishing is the input for the Ising differential
+equation in the sewing chapter.
+
+\paragraph{Exercise~\ref{ex:cft-compact}.}
+For $(m,n)=(1,1)$, $\bar h=0$ requires $R^{-1}-R/2=0$,
+hence $R=\sqrt2$. Then $p_L=\sqrt2$ and $h=p_L^2/2=1$.
+Under $(R,m,n)\mapsto(2/R,n,m)$, $p_L$ is unchanged
+and $p_R$ changes sign. Both conformal weights are unchanged.
+The holomorphic current at the fixed radius is the exponential
+current of the $A_1$ lattice example.
+
+\paragraph{Exercise~\ref{ex:cft-stress-combination}.}
+The fourth-order pole of $(T_1+T_2)(z)
+(c_2T_1-c_1T_2)(0)$ is
+$(c_2c_1-c_1c_2)/2=0$, and the remaining singular poles
+are $2A/z^2+\partial A/z$. Thus $A$ is primary for the
+total stress. Orthogonality of the two stress states gives
+\[
+ \norm A^2=\frac12c_1c_2(c_1+c_2)>0.
+\]
+Its self-OPE has second-order coefficient
+$2(c_2^2T_1+c_1^2T_2)$, which is generally not $2A$.
+A primary of weight two is therefore not automatically a
+Virasoro stress.
+
+\paragraph{Exercise~\ref{ex:cft-thermal}.}
+Put $t=v\beta/L$. The vacuum contribution to $Z(it)$ at large
+$t$ is $e^{\pi ct/6}$, because the cylinder vacuum energy
+uses $c_L+c_R=2c$. Modular invariance replaces $t$ by $1/t$.
+As $\beta\to0$,
+\[
+ \log Z\sim\frac{\pi c}{6t}=\frac{\pi cL}{6v\beta}.
+\]
+If the vacuum is not normalizable, the low-temperature trace is
+controlled by the actual spectral threshold and its measure.
+One cannot insert a unit-degeneracy vacuum term; this is where
+effective central charge and possible power or logarithmic
+prefactors enter.
+
+\paragraph{Exercise~\ref{ex:cft-marginality}.}
+One needs normalized OPE coefficients controlling quadratic beta
+functions; higher-order integrated correlators and contact terms
+controlling further obstructions; and an analysis of redundant
+directions, current recombinations, and symmetry constraints.
+Vanishing beta functions must hold on a locus of couplings after
+these identifications. A count of thirty-six dimension-two
+primaries alone supplies none of those conclusions.
+
+\paragraph{Exercise~\ref{ex:voa-weight}.}
+The singular products have $n=0,\ldots,6$ and respective weights
+$6,5,4,3,2,1,0$. Products with $n>6$ vanish because their
+weights would be negative. CFT type gives $V_0=\C\one$,
+so $a_{(6)}b$ is a scalar multiple of the vacuum; $a_{(4)}b$
+is the weight-two candidate. This list permits a product to be
+zero; weight counting does not establish its nonvanishing.
+
+\paragraph{Exercise~\ref{ex:voa-cocycle}.}
+Write the exponent of the sign as a bilinear form $B(a,b)$
+over $\Z/2\Z$. Bilinearity gives
+\[
+ B(a,b)+B(a+b,c)=B(b,c)+B(a,b+c),
+\]
+which is exactly the two-cocycle identity. For the triangular
+root-basis choice, $B(a,b)-B(b,a)$ is
+$\sum_{i>j}G_{ij}(a_ib_j+a_jb_i)$ modulo two.
+The diagonal terms in $(a,b)$ are even, so this is $(a,b)$
+modulo two. Hence the commutator ratio is $(-1)^{(a,b)}$.
+A coboundary has the form
+$f(a)f(b)/f(a+b)$ and is symmetric in $a,b$; it cancels
+out of that ratio.
+
+\paragraph{Exercise~\ref{ex:voa-rankone}.}
+The oscillator series begins $1+q+2q^2+\cdots$.
+For the vacuum lattice, $\Theta_L=1+2q+O(q^4)$, giving
+\[
+ \Theta_L\prod_{n\ge1}(1-q^n)^{-1}=1+3q+4q^2+\cdots.
+\]
+For the shifted lattice, the momentum weights are
+$(m+1/2)^2$. Thus
+\[
+ \Theta_{L+\alpha/2}=q^{1/4}(2+2q^2+\cdots),\qquad
+ \frac{\Theta_{L+\alpha/2}}{\prod_{n\ge1}(1-q^n)}
+ =q^{1/4}(2+2q+6q^2+\cdots).
+\]
+The two shortest momenta explain the two-dimensional top.
+The module is nevertheless invertible: adding its discriminant
+coset twice gives $L$. An invertible simple has categorical
+dimension one, independently of its top multiplicity.
+
+\paragraph{Exercise~\ref{ex:voa-heisenberg-c2}.}
+Every oscillator $J_{-n}\one$ with $n\ge2$ is a derivative,
+and derivatives vanish in the $C_2$ quotient. Commuting
+oscillators shows that only powers of $J_{-1}\one$ remain.
+The Heisenberg Fock basis has no relation among these powers;
+equivalently the associated polynomial symbols of the
+$C_2$ terms contain an oscillator of index at least two.
+The quotient is $\C[x]$, an infinite-dimensional algebra.
+The VOA is strongly generated by $J$, so this is the desired
+counterexample to an implication from finite strong generation.
+
+\paragraph{Exercise~\ref{ex:voa-coset}.}
+Subtract the charge-one Cartan boson:
+\[
+ \frac{3k}{k+2}-1=\frac{2(k-1)}{k+2}.
+\]
+At $k=3$ and $13$ this is $4/5$ and $8/5$.
+Identification with the parafermion factors additionally needs
+their generating fields, OPEs, null relations, and the proof
+that the relevant simple quotient is realized. Central charge
+is only one invariant of a VOA.
+
+\paragraph{Exercise~\ref{ex:voa-gauge}.}
+The transported basis norms are $4,40,40$, since $g^{-1}$
+rescales each vector by the inverse of the stated factor.
+Each of the last two coefficients has squared modulus
+$(13+27)/400=1/10$. Therefore
+\[
+ \norm v_g^2=4+40/10+40/10=12.
+\]
+Adding coefficient magnitudes alone would give $6/5$,
+which uses the old orthonormal form on the new coordinates.
+
+\section{Solutions on characters and unitarity}
+
+\paragraph{Exercise~\ref{ex:char-oscillator}.}
+The five partitions give, respectively,
+\[
+ 8,\quad8^2,\quad\binom92,\quad
+ 8\binom92,\quad\binom{11}{4}.
+\]
+Their sum is $8+64+36+288+330=726$.
+The $E_8$ theta coefficients through weight four are
+$1,240,2160,6720,17520$. Hence the VOA coefficient is
+\[
+ 17520+6720(8)+2160(44)+240(192)+726=213126.
+\]
+This separates momentum degeneracy from oscillator degeneracy.
+
+\paragraph{Exercise~\ref{ex:char-primary}.}
+Through grade three, multiplication by
+$P(q)=1-q-q^2+\cdots$ gives
+\[
+\begin{array}{c|rrrr}
+ &v(0)&v(1)&v(2)&v(3)\\\hline
+ b&80&1170&9300&53162\\
+ d_4&5&224&2504&16975
+\end{array}
+\]
+For example, $v_b(3)=65042-10630-1250=53162$.
+Convolution with $1/P(q)=1+q+2q^2+3q^3+\cdots$
+returns
+$a(1)=v(1)+v(0)$,
+$a(2)=v(2)+v(1)+2v(0)$, and
+$a(3)=v(3)+v(2)+2v(1)+3v(0)$.
+These recover all the displayed character entries.
+
+\paragraph{Exercise~\ref{ex:char-pole}.}
+A twist determines $h$ modulo one, so the three stated
+weights have the same twist. The possible $2/13$ top would
+produce a pole with coefficient $\gamma$. Existence of the
+specified fundamental modular solutions, together with
+$\dim U_1=6+13\gamma$ and the independent six-current theorem,
+forces $\gamma=0$. The uniquely selected fundamental solution
+then has its first nonzero $d_3$ coefficient at $15/13$.
+Excluding $2/13$ by itself would not exclude $28/13$;
+that final selection uses the known fundamental solution.
+
+\paragraph{Exercise~\ref{ex:char-equal}.}
+The Grothendieck group is free on the isomorphism classes
+of simples. Taking a character is a linear map from that group
+to a space of functions, and the map need not be injective.
+Defect insertions, including tube projectors, can distinguish
+equal unflavoured characters. Flavoured traces or matrix
+elements of specified current zero modes can also distinguish
+modules when the associated actions differ.
+
+\paragraph{Exercise~\ref{ex:char-uniqueness-scope}.}
+If $v$ is a modular-invariant constant vector, adding $tv$
+does not change any negative-power coefficient. The compact
+modular-curve argument then proves uniqueness only modulo
+such invariant constants. One must prescribe the projection
+of the constant coefficient onto the invariant subspace,
+or an equivalent value normalization, to remove the ambiguity.
+
+\paragraph{Exercise~\ref{ex:unitarity-damping}.}
+Set $a=-2\log r>0$. The continuous function
+$f(x)=(x+1)e^{-ax}$ has derivative
+$e^{-ax}[1-a(x+1)]$. Thus
+\[
+ \sup_{n\ge0}(n+1)r^{2n}\le
+ \begin{cases}
+ 1,&a\ge1,\\
+ e^{a-1}/a,&0<a<1.
+ \end{cases}
+\]
+Choosing an integer nearest $1/a-1$ also shows that the
+discrete supremum diverges like $1/(ea)$ as $a\downarrow0$.
+The estimate is finite for every proper annulus and loses
+uniformity as the damping annulus degenerates.
+
+\paragraph{Exercise~\ref{ex:unitarity-projector}.}
+Because $P$ preserves the common core, $1-P$ preserves it too,
+and $T_0(1-P)=(1-P)T_0$. Apply the same graph-limit
+argument to both projections. Their ranges then give a
+direct-sum decomposition of the \emph{closed operator and its
+domain}. The adjoint of this direct sum is the direct sum of
+the adjoints, proving reduction of $T^*$. Only proving
+invariance of one subspace would not by itself give this
+direct-sum statement.
+
+\paragraph{Exercise~\ref{ex:unitarity-counting}.}
+Full faithfulness identifies each image endomorphism algebra
+with $\C$, so the image of a simple is simple in the target
+semisimple category. It also preserves the vanishing of
+Hom spaces between distinct simples, making the twelve
+images pairwise nonisomorphic. They exhaust the twelve target
+simples, and additivity exhausts finite direct sums.
+A tensorator would be a coherent natural isomorphism
+$F(X)\otimes F(Y)\to F(X\otimes Y)$.
+Counting objects and morphism dimensions neither supplies
+these maps nor verifies their pentagon and braiding compatibilities.
+
+\paragraph{Exercise~\ref{ex:unitarity-deck}.}
+A full rotation on the $h=1/3$ module is
+$e^{2\pi i/3}$, while on the integer-graded vacuum VOA it is
+one. If $v\in U$ is homogeneous, every mode changes energy
+by the integer $\wt(v)-n-1$. Hence every mode commutes
+with $Z=e^{2\pi iL_0}$, and
+$BZ^mY(v,z)Z^{-m}A=BY(v,z)A$ on the test domain.
+Bounded extension preserves this equality. The paired
+cancellation does not make the individual charged-sector
+phase equal to one.
+
+\paragraph{Exercise~\ref{ex:unitarity-end}.}
+For four mutually inequivalent summands, Schur's lemma gives
+$\C^4$, of dimension four. If $Y\cong Y^*$, the $Y$
+multiplicity space is two-dimensional, giving
+$\C\oplus\C\oplus M_2(\C)$, of dimension six and
+noncommutative. The canonical extension argument translates
+these dimensions into the rank-four and rank-six alternatives.
+It is the repeated simple, rather than four displayed summands,
+that produces a matrix block.
+
+\section{Solutions on full spectra and correlation functions}
+
+\paragraph{Exercise~\ref{ex:full-relevant}.}
+Squaring the seven top dimensions gives
+\[
+ 3^2+5^2+7^2+13^2+14^2+27^2+42^2
+ =9+25+49+169+196+729+1764=2941.
+\]
+At dimension $23/13$, the $d_4$ top pairs with a grade-one
+primary. The multiplicity for each spin $+1$ or $-1$ is
+$5(229-5)=1120$. Similarly the $d_1$ contribution at
+$25/13$ is $7(292-7)=1995$ for each sign.
+Counting both signs doubles these numbers.
+
+\paragraph{Exercise~\ref{ex:full-E8states}.}
+At chiral weights $(1,1)$ there are $248^2=61504$
+scalar primaries. At each of $(2,0)$ and $(0,2)$,
+the chiral weight-two space splits into $3875$ primaries,
+$248$ current derivatives, and one stress state.
+Thus the total is
+\[
+ 61504+2(3875)+2(248)+2=69752.
+\]
+The last $498$ states are not Virasoro primaries.
+
+\paragraph{Exercise~\ref{ex:full-tail}.}
+For each omitted state, factor
+$E^ke^{-bE}=e^{-b_0E}[E^ke^{-(b-b_0)E}]$
+and bound the bracket by its supremum for $E\ge E_D$.
+Positivity permits summation. With $a=b-b_0>0$, the
+suprema are
+\[
+ \sup_{E\ge E_D}Ee^{-aE}=
+ \begin{cases}E_De^{-aE_D},&aE_D\ge1,\\
+ (ae)^{-1},&aE_D<1,\end{cases}
+\]
+and
+\[
+ \sup_{E\ge E_D}E^2e^{-aE}=
+ \begin{cases}E_D^2e^{-aE_D},&aE_D\ge2,\\
+ 4/(a^2e^2),&aE_D<2.\end{cases}
+\]
+Heat capacity uses the variance
+$\langle E^2\rangle-\langle E\rangle^2$, so one needs
+control of the zeroth, first, and second weighted sums,
+including their common denominator. A small unweighted
+tail can still carry a substantial energy moment.
+
+\paragraph{Exercise~\ref{ex:full-onevac}.}
+There are six dimension-zero states, which describes a
+multiple-vacuum or disconnected situation instead of the
+specified connected theory with a unique vacuum.
+Division by six can destroy integral multiplicities and
+does not construct identity fields, OPEs, or sewing maps.
+A numerical rescaling of a partition function cannot repair
+missing local-theory data.
+
+\paragraph{Exercise~\ref{ex:full-symmetry}.}
+The $36=6^2$ count is the diagonal theory's scalar
+dimension-two subspace invariant under all its Verlinde lines.
+The $1488=6\cdot248$ count is invariant under the selected
+first-factor $\mathcal H_3$ action in the extended full theory.
+The $61504=248^2$ count is the entire scalar dimension-two
+space of that extended theory, with no symmetry restriction.
+Different ambient Hilbert spaces and line actions are being used.
+
+\paragraph{Exercise~\ref{ex:full-boost}.}
+The two block products are
+\[
+ X^{\mathsf t}\eta=
+ \begin{pmatrix}0&-\varepsilon\\
+ \varepsilon^{\mathsf t}&0\end{pmatrix},\qquad
+ \eta X=
+ \begin{pmatrix}0&\varepsilon\\
+ -\varepsilon^{\mathsf t}&0\end{pmatrix}.
+\]
+They sum to zero. Thus $e^{tX}$ preserves the quadratic
+form $p^{\mathsf t}\eta p$, and its infinitesimal action is
+the stated charge boost. For $r=1$ and $\varepsilon=-1$,
+$X^2=I$ and $e^{tX}=I\cosh t+X\sinh t$.
+Starting at $(p_L,p_R)=(\sqrt2,0)$ yields
+$(\sqrt2\cosh t,-\sqrt2\sinh t)$.
+The spin remains $(p_L^2-p_R^2)/2=1$, although
+$\bar h=\sinh^2t>0$ for $t\ne0$.
+
+\paragraph{Exercise~\ref{ex:corr-fifteen}.}
+Write the momenta at $(\infty,1,x,0)$ as
+$(-a_i,a_j,-a_k,a_\ell)$. Neutrality requires the
+multisets $\{i,k\}$ and $\{j,\ell\}$ to agree.
+There are three choices with all labels equal. For $i\ne k$,
+the choices $(j,\ell)=(i,k)$ and $(k,i)$ give six each.
+The finite-distance factors are
+$x^{-(a_k,a_\ell)}(1-x)^{-(a_j,a_k)}$.
+They are, respectively,
+$x^{-4}(1-x)^{-4}$,
+$x^{-4}(1-x)^{-2}$, and
+$x^{-2}(1-x)^{-4}$.
+Each assignment has coefficient $1/9$, giving the three
+terms in the chapter.
+
+\paragraph{Exercise~\ref{ex:corr-blocks}.}
+At order four the blocks of exchanged weights one, two,
+and three contribute $2/3$, $21/5$, and $29/3$.
+Subtracting them from the reduced-correlator coefficient gives
+\[
+ A_4=\frac{65}{3}-\frac23-\frac{21}{5}-\frac{29}{3}
+     =\frac{107}{15}.
+\]
+In the charged ordering the reduced correlator is
+$x^4G_+(x)=(4/3)x^6+\cdots$, so the first exchanged
+global primary has weight six and squared coefficient $4/3$.
+The corresponding unit-normalized three-point coefficient
+has magnitude $2/\sqrt3$.
+
+\paragraph{Exercise~\ref{ex:corr-stress}.}
+Only pure-factor contractions survive, and
+$\langle T_i(\infty)T_i(1)T_i(0)\rangle=c_i$.
+For $A=c_2T_1-c_1T_2$ the unnormalized three-point
+coefficient is $c_1c_2(c_2^2-c_1^2)$.
+Divide its square by
+$\norm A^6=[c_1c_2(c_1+c_2)/2]^3$ to obtain
+\[
+ C_{\widehat A\widehat A\widehat A}^2
+ =\frac{8(c_2-c_1)^2}{c_1c_2(c_1+c_2)}.
+\]
+When $c_1=c_2$, exchanging the two factors sends $A$ to
+$-A$, so its odd correlator vanishes. Its positive norm
+does not vanish; it remains a nonzero field.
+
+\paragraph{Exercise~\ref{ex:corr-spin3}.}
+At the Potts point $5c_0+22=26$ and
+$\lambda(5c_0+22)=(4/13)26=8$, so the weight-four
+primary norm is zero. For the simple pole in the four-point
+function, $\frac12\partial b$ contributes
+$\frac12(4B)=2B$ and
+$-\frac1{12}\partial^3T_0$ contributes
+$-72N/12=-6N=-2c_0$.
+The total is $2B-2c_0$.
+
+\paragraph{Exercise~\ref{ex:corr-lightgram}.}
+Using $q=(2,0,-2)$ gives
+\[
+ K=\frac1{39}
+ \begin{pmatrix}
+ 24&-13&-11\\
+ -13&26&-13\\
+ -11&-13&24
+ \end{pmatrix}.
+\]
+The vectors $(1,1,1)$, $(1,0,-1)$, and $(1,-2,1)$
+are eigenvectors with eigenvalues $0$, $35/39$, and $1$.
+They are mutually orthogonal and span the space, so $K$
+is positive semidefinite. Positivity concerns the quadratic
+form, not the signs of its individual matrix entries.
+
+\section{Solutions on defects and sewing}
+
+\paragraph{Exercise~\ref{ex:defect-projector}.}
+Modular orthogonality makes the eigenvalue of $\Pi_{\rm inv}$
+equal to $\delta_{i0}$ in sector $i$. Therefore it squares
+to itself and is Hermitian on the orthogonal sector
+decomposition. Its vacuum eigenvalue before normalization
+is $\sum_a d_a^2=\mathcal D^2$, which explains the
+denominator. Dividing by $\mathcal D$ would leave the
+vacuum eigenvalue $\mathcal D$ and would fail idempotence.
+
+\paragraph{Exercise~\ref{ex:defect-twined}.}
+On the scalar blocks, $\alpha=1$ and the two possible
+$\rho$ eigenvalues solve $x^2=1+3x$.
+On the two-dimensional block,
+$\alpha^3=1$, $\rho^2=1$, and conjugation by the swap
+matrix sends $\alpha$ to $\alpha^{-1}$. Moreover
+$1+\alpha+\alpha^2=0$, so
+$\rho+\alpha\rho+\alpha^2\rho=0$ there. These checks
+verify the generating relations and hence all products.
+The traces of $\alpha$ on the three multiplicity blocks
+are $1,1,-1$; those of $\rho$ are $d,-d^{-1},0$.
+Multiplying by the respective characters and the unchanged
+antiholomorphic factor gives the two twined traces.
+
+\paragraph{Exercise~\ref{ex:defect-alpha}.}
+The forgetful table gives
+$R\alpha=c_0\oplus c_1\oplus c_2$.
+The smallest weight is $1/3$ and its top multiplicity is
+three. In the first-factor twisted Hilbert space this pairs
+with the antiholomorphic $E_8$ vacuum, giving fractional
+spin. A twisted state sits at a defect endpoint or in a
+defect boundary condition; the ordinary untwisted locality
+requirement of integer spin does not apply to it unchanged.
+
+\paragraph{Exercise~\ref{ex:defect-between}.}
+For $i\ne j$,
+$(\alpha^i\rho)^*(\alpha^j\rho)
+=\alpha^{i-j}+\rho+\alpha\rho+\alpha^2\rho$.
+The nontrivial invertible term restricts to
+$c_0+c_1+c_2$, contributing three states of weight $1/3$.
+Each noninvertible contributes another three. The total is
+$3+3\cdot3=12$, compared with nine in the self-boundary
+case, where the invertible term is the vacuum boundary.
+
+\paragraph{Exercise~\ref{ex:defect-categories}.}
+Six counts the simples of the Haagerup boundary fusion
+category; twelve counts those of its braided Drinfeld center;
+thirty-six counts the simples of the relevant bimodule defect
+category equivalent, up to the stated opposite convention,
+to a product of the boundary category with its opposite.
+The center is braided; the boundary and bimodule categories
+are used as fusion categories. A Lagrangian algebra has
+only the trivial local module category, although its all-module
+category has six simples. Replacing all modules by local
+ones would discard precisely the nonlocal boundary sectors.
+
+\paragraph{Exercise~\ref{ex:sewing-Ising}.}
+For $0<z<1$, put $u=\sqrt{1+\sqrt{1-z}}$ and
+$v=\sqrt{1-\sqrt{1-z}}$. Then
+$u^2+v^2=2$ and $uv=\sqrt z$.
+Consequently
+$(u\pm v)/\sqrt2=\sqrt{1\pm\sqrt z}$.
+The common factor $[z(1-z)]^{-1/8}/\sqrt2$
+is unchanged by $z\mapsto1-z$, proving the Hadamard
+fusing relation. It mixes both blocks: the continued
+identity block is $(\mathcal F_1+\mathcal F_\epsilon)/\sqrt2$.
+Its absolute square therefore cannot equal
+$|\mathcal F_1|^2$ for all $z$.
+
+\paragraph{Exercise~\ref{ex:sewing-pairing}.}
+Write $D=\left(\begin{smallmatrix}a&b\\\bar b&d\end{smallmatrix}\right)$.
+The relative phase of the two monodromy eigenvalues is $-1$.
+With the convention $G=\mathcal F^{\mathsf t}D\overline{\mathcal F}$,
+the condition $M^{\mathsf t}D\overline M=D$ forces $b=0$.
+For $D=\operatorname{diag}(a,d)$, the condition
+$F^{\mathsf t}D\overline F=D$ with the real Hadamard $F$ forces $a=d$.
+Thus $D=aI$. Positivity gives $a\ge0$, and a nontrivial
+theory with unit vacuum coefficient has $a=1$.
+Because $\mathcal F_\epsilon\sim\frac12z^{3/8}$,
+the energy-channel bulk coefficient is $1/4$, giving
+$|C_{\sigma\sigma\epsilon}|=1/2$.
+
+\paragraph{Exercise~\ref{ex:sewing-object}.}
+An equivalence of full local theories preserves all
+correlators and their sewing structures. An algebra-object
+description specifies the chiral multiplication, unit, and
+compatibilities that enter the rational full-theory construction.
+Forgetting multiplication leaves an underlying module, which
+still remembers how the chiral algebra acts. Taking its
+character retains only energy multiplicities. Thus OPE
+products are lost on passing to the module, and most
+representation matrices are lost on passing to the character.
+An equality at a weaker level does not reconstruct the stronger
+one. In the rational construction, Morita equivalence of
+appropriate algebra objects can describe equivalent full
+theories even when the algebra objects are not isomorphic.
+
+\paragraph{Exercise~\ref{ex:sewing-coset}.}
+If infinitely many orthogonal states have energy $E\le E_*$,
+each contributes at least $e^{-\beta E_*}>0$ to the trace.
+The partial sums are unbounded for every $\beta>0$.
+A common vacuum-energy shift only multiplies this divergence
+by a finite positive constant. Positivity rules out cancellations;
+an alternating formal series is not a positive thermal trace.
+
+\paragraph{Exercise~\ref{ex:sewing-descent}.}
+One needs the chosen reduced Hilbert space and its left-right
+pairing, bounded or otherwise controlled line operators on
+that space, junction maps with the specified associator,
+compatibility with the local OPE, and sewing consistency.
+For a nontrivial branching extension, one also needs coherence
+with the complementary-sector multiplicities and the algebra
+object defining the reduction. A torus trace can detect
+spectra and certain line eigenvalue sums. It does not record
+the junction associator or all the local and higher-surface
+sewing identities.

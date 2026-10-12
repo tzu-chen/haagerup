@@ -1,0 +1,783 @@
+{
+  "schema": "haagerup-c8-physics-release-v1",
+  "scope": "Current physics-first manuscript, exact data/producers, both current companion guides with manuscript references, and frozen earlier input-review bundle. Mathematical construction hypotheses remain as documented.",
+  "files": [
+    {
+      "path": "c8_physics_20260927/Cardy_annuli.tsv",
+      "bytes": 8121,
+      "sha256": "992d5f7dae8fdfcfe3600214559accc7f0dcedb4ec8762b2d38b1094dbf6d9e7"
+    },
+    {
+      "path": "c8_physics_20260927/E8_H3_tube_sectors.tsv",
+      "bytes": 637,
+      "sha256": "f336dea16f13009e1b65938979826f9b5a9d691c85ccf1b91c97ad33331be746"
+    },
+    {
+      "path": "c8_physics_20260927/E8_H3_twisted.tsv",
+      "bytes": 477,
+      "sha256": "7d112538617f2c4f9c94b47439642b90a6afdefce5355aa5b93ed66ea994d6d5"
+    },
+    {
+      "path": "c8_physics_20260927/E8_U_preserving_annuli.tsv",
+      "bytes": 2386,
+      "sha256": "a156d3b2199d38b043f5bbc664be243510c5fc61e327ff7ba8ee0005c3d293fb"
+    },
+    {
+      "path": "c8_physics_20260927/E8_U_preserving_boundaries.tsv",
+      "bytes": 696,
+      "sha256": "a5ef9cb547097710148aa99484fb7cf1527b16faf51164a634179585c68faa0c"
+    },
+    {
+      "path": "c8_physics_20260927/H3_forgetful.tsv",
+      "bytes": 231,
+      "sha256": "f8491d600e87e18e0060091ec5389c216e1f7d8ac3938d76ecb47421f68b4b7e"
+    },
+    {
+      "path": "c8_physics_20260927/H3_fusion.tsv",
+      "bytes": 4982,
+      "sha256": "7bc112db07477323c90dbdc32eb2c089d1f2d5c293411d58f731cc9c5f384e05"
+    },
+    {
+      "path": "c8_physics_20260927/README.md",
+      "bytes": 11102,
+      "sha256": "8f4810e93e19a2a039ad6a69575af2bcde2a0103672d27797d0bf432abd9b0b5"
+    },
+    {
+      "path": "c8_physics_20260927/audit_release.py",
+      "bytes": 5519,
+      "sha256": "7c349279c3b02d079fbf320f46571b6ec44d67c6753d72ba3faa4f6b807aa1b3"
+    },
+    {
+      "path": "c8_physics_20260927/baseline/hi_cft_c8_bibliography.tex",
+      "bytes": 10012,
+      "sha256": "d6bd2e355557af1d5ae63ae2e027b74459e0f403d77b4f757480c6a8fd25d1f9"
+    },
+    {
+      "path": "c8_physics_20260927/baseline/hi_cft_c8_manuscript_analytic.tex",
+      "bytes": 47958,
+      "sha256": "c87f5e1f57746fb60b33e894751f452c2699926a46af329a4417f66c12cd035f"
+    },
+    {
+      "path": "c8_physics_20260927/baseline/hi_cft_c8_manuscript_structure.tex",
+      "bytes": 69846,
+      "sha256": "474e4dd9074cb4d02135a6869340285daf0302336b5f64ec216dd7a79780d369"
+    },
+    {
+      "path": "c8_physics_20260927/baseline/hi_cft_c8_proof.pdf",
+      "bytes": 691100,
+      "sha256": "727fbbd0fa586a6efa1c31a94fe325d18847f3a267090dbe47d791406da671ed"
+    },
+    {
+      "path": "c8_physics_20260927/baseline/hi_cft_c8_proof.tex",
+      "bytes": 59380,
+      "sha256": "edb93be9f48e8b8f94387123f6cc2eb254aed7dcab63361911e309478b5506b5"
+    },
+    {
+      "path": "c8_physics_20260927/baseline/hi_cft_c8_proof_README.md",
+      "bytes": 5812,
+      "sha256": "942a1a0dfb4b1cbf666b8f0e6af095167ae0111c7d60e1a899cc9c2ef723d6db"
+    },
+    {
+      "path": "c8_physics_20260927/bibliography_additions.tex",
+      "bytes": 860,
+      "sha256": "9948a1668dcf26ab89eb4015dc305b5fd2897654b38dbd5e5e561a1b84621ca6"
+    },
+    {
+      "path": "c8_physics_20260927/bootstrap_overlay.py",
+      "bytes": 10682,
+      "sha256": "c5a284861958f3f308ee5d194b961528023e9c3a8312a84e304d8dac1fd8c38a"
+    },
+    {
+      "path": "c8_physics_20260927/bootstrap_overlay_final.log",
+      "bytes": 342,
+      "sha256": "ef34265c52c690c07f9487b48613e99cd00b3c02b994ce07ca9780a616bfae27"
+    },
+    {
+      "path": "c8_physics_20260927/bootstrap_render_final.log",
+      "bytes": 152,
+      "sha256": "4729910908915fd7fdb07f4032758157fa02be117efaf87dafe1055788df5a5b"
+    },
+    {
+      "path": "c8_physics_20260927/bootstrap_sources.md",
+      "bytes": 3681,
+      "sha256": "a8126d9657c14c6bf6beca0f63cbf6756f54bdc3ab18fd6578833ac73579d782"
+    },
+    {
+      "path": "c8_physics_20260927/build_release.py",
+      "bytes": 8568,
+      "sha256": "81730b922ac8a32859114567ba75af8a98f9823d08688caf4f310284386ea459"
+    },
+    {
+      "path": "c8_physics_20260927/check_manuscript_refs.py",
+      "bytes": 28925,
+      "sha256": "696c5dc5c04027e7d109dcd8f3d10f424dc3064e8f7cf0466f6c7671306d5357"
+    },
+    {
+      "path": "c8_physics_20260927/check_physics_crosslinks.py",
+      "bytes": 4046,
+      "sha256": "74d18ff4f891daa7af6ead335c1945a8a490440c3c0882b64e9725b79e3cc5a0"
+    },
+    {
+      "path": "c8_physics_20260927/check_thermal_inputs.py",
+      "bytes": 2144,
+      "sha256": "4ceb1526373f368028d709c7e14a8195d6cce0fa1331560d776914a33aa5c120"
+    },
+    {
+      "path": "c8_physics_20260927/companion_anchor_visual_review.json",
+      "bytes": 676,
+      "sha256": "c5b9e2cecd963b3e8497861cbcb062d25797841df363fb22fe8e562e725df59c"
+    },
+    {
+      "path": "c8_physics_20260927/complete_couplings.py",
+      "bytes": 7731,
+      "sha256": "52b7eccb0fb334ef467c004a9f1ae1c7bebcc1f1268d059cf14f39b91c565f86"
+    },
+    {
+      "path": "c8_physics_20260927/complete_primary_couplings.json",
+      "bytes": 60945,
+      "sha256": "d59315e0630a56378c827b89df821910021c522641098e8a9dce2cdc5a178f8d"
+    },
+    {
+      "path": "c8_physics_20260927/complete_primary_couplings.tsv",
+      "bytes": 3043169,
+      "sha256": "b96bb964d9f439a5cdbd94fc93f414ffcd57758605f640cf7e1d60f7428fa10b"
+    },
+    {
+      "path": "c8_physics_20260927/complete_weight_two.py",
+      "bytes": 8251,
+      "sha256": "d2815ab20547daf3131ae6d0360989c6ad0932a3f3a487f43158561d356f07c6"
+    },
+    {
+      "path": "c8_physics_20260927/complete_weight_two_final.log",
+      "bytes": 353,
+      "sha256": "2aabe21ac2aabe587b971653573775f449fa32221995245700b30e72646b76f0"
+    },
+    {
+      "path": "c8_physics_20260927/correlators.global_blocks.tsv",
+      "bytes": 6115,
+      "sha256": "1eb0e53bb3f1110843813afbafc694ff793017d75fc2fedf076497ce41c5b411"
+    },
+    {
+      "path": "c8_physics_20260927/correlators.json",
+      "bytes": 284419,
+      "sha256": "06f792bbf410488efb919b4e81c52df044ee99eb967c8ed54509fe139d457404"
+    },
+    {
+      "path": "c8_physics_20260927/correlators.py",
+      "bytes": 25896,
+      "sha256": "13a27679d9f5df895bb877e4ca06c04fcd9f428805dec698e90b4b412d909c2d"
+    },
+    {
+      "path": "c8_physics_20260927/correlators.samples.tsv",
+      "bytes": 1132,
+      "sha256": "02679e7a6bb3bf27c5ea1152177a32c5cbd4c0ef31fa56882a3da32a063488ab"
+    },
+    {
+      "path": "c8_physics_20260927/correlators.terms.tsv",
+      "bytes": 36243,
+      "sha256": "44e86429cc8f7603087f8af4bbe9bd792b1b4d5269b71726b1eafb2823d5e742"
+    },
+    {
+      "path": "c8_physics_20260927/correlators.tex",
+      "bytes": 16012,
+      "sha256": "b6d8edcc8bee55a91ca5cfcb6ba8ba82d23835cef08825d142563e761ea8dadf"
+    },
+    {
+      "path": "c8_physics_20260927/correlators_final.log",
+      "bytes": 682,
+      "sha256": "3bdc4e305555acd6053ea504cd280923f41e00108a4c535bc5159ed221a3f758"
+    },
+    {
+      "path": "c8_physics_20260927/correlators_notes.md",
+      "bytes": 4121,
+      "sha256": "4b0828fd198c0c9a9dd7ac1f11a677fe97ac66b50537c1f5756d4477a8b13789"
+    },
+    {
+      "path": "c8_physics_20260927/couplings.tex",
+      "bytes": 7958,
+      "sha256": "685a58205dc2ece5314273d7ebdbf1929a1ab6102f94de0811fde4bacdfafe63"
+    },
+    {
+      "path": "c8_physics_20260927/crosslink_checks.json",
+      "bytes": 2600,
+      "sha256": "ee40bb24ece2af18e77ed9233cbb637ae47f6902bc346df99dc31b4f27c2b7a9"
+    },
+    {
+      "path": "c8_physics_20260927/crosslink_checks_final.log",
+      "bytes": 253,
+      "sha256": "66c1e21ca56cf5a353b5a6e95820f5e6d6a54115ce3151a53fb92ddc1a9a7565"
+    },
+    {
+      "path": "c8_physics_20260927/data/characters.json",
+      "bytes": 15284,
+      "sha256": "b03b49bb3c05a5db467a15662b1202405b7cbb704afd1dd6bd6bdc5d0fc7fa80"
+    },
+    {
+      "path": "c8_physics_20260927/data/characters.tsv",
+      "bytes": 9982,
+      "sha256": "df42c0542d7b7e707a270469be29addccc7f42752c5652a1f464c1cc51e75a2c"
+    },
+    {
+      "path": "c8_physics_20260927/data/diagonal_sector_spectrum.tsv",
+      "bytes": 184877,
+      "sha256": "692640425ba789e688a941b8e822d7a0b5043a9cfab06626570c4b040859b3d3"
+    },
+    {
+      "path": "c8_physics_20260927/data/diagonal_spectrum.tsv",
+      "bytes": 98582,
+      "sha256": "8db9e9f9cd6e09863212bc5078b87dbbbc9b84b0eff72bc30d806be2b4a6c80c"
+    },
+    {
+      "path": "c8_physics_20260927/data/e8_spectrum.tsv",
+      "bytes": 11869,
+      "sha256": "6a82b9d25bc1e7e81dbb2e9547b3f974c4020a2a818e341ad899860291a924fb"
+    },
+    {
+      "path": "c8_physics_20260927/data/fundamental_matrix.json",
+      "bytes": 86183,
+      "sha256": "66e76aee17dd65a5bcbb8a47065cd5229e5ef0204508437d20bef4f62bdad535"
+    },
+    {
+      "path": "c8_physics_20260927/data/low_spectrum.json",
+      "bytes": 3346,
+      "sha256": "df85361f113e9f24c549ecd2e68c3f1615edcb204b2dc56f6cb064e2d28a5956"
+    },
+    {
+      "path": "c8_physics_20260927/data/run_summary.json",
+      "bytes": 2517,
+      "sha256": "05149240d466fcbee43b42e65919949c22d0218e275f8abc7e61b7edd778768d"
+    },
+    {
+      "path": "c8_physics_20260927/data/scalars.tsv",
+      "bytes": 5388,
+      "sha256": "c5910a6ecc569ddcac03cadde0b8dace07e530f8c8119b8510f74dfa9a6fb53b"
+    },
+    {
+      "path": "c8_physics_20260927/data/thermal.json",
+      "bytes": 27128,
+      "sha256": "1ba761d39345fe89015718745b2daf2f4666ba948f885e432efdfafa085ca5d9"
+    },
+    {
+      "path": "c8_physics_20260927/data/thermal.tsv",
+      "bytes": 9964,
+      "sha256": "2d88f78a6ad1b908448a1b5119f9d940b3d3e00fd1321a7ea0d74e1a7015a962"
+    },
+    {
+      "path": "c8_physics_20260927/data/thermal_readable.tex",
+      "bytes": 800,
+      "sha256": "d606d9b9a6601a0de280b7017fd34db6698e40850654675438981e3f41a087b9"
+    },
+    {
+      "path": "c8_physics_20260927/defect_data.json",
+      "bytes": 135341,
+      "sha256": "e4f64d3e051d07d060afa6725cbae304e3c513e3cf972176364e9f5b9b80dc3f"
+    },
+    {
+      "path": "c8_physics_20260927/defect_plots.py",
+      "bytes": 8199,
+      "sha256": "8c860c2827efd2b41352a173d1f55a28fb454e031407b26791835c6722e74fe0"
+    },
+    {
+      "path": "c8_physics_20260927/defect_sectors.tsv",
+      "bytes": 2114,
+      "sha256": "fd8207d6fe40415d3262c43fc01a51af06faeaedc9c2fe8bf2924b4754fdf50c"
+    },
+    {
+      "path": "c8_physics_20260927/defects.py",
+      "bytes": 18897,
+      "sha256": "b6d7e44883668cd7e150967d4cfc777f64369f0d4886c2e03f781170874f8a01"
+    },
+    {
+      "path": "c8_physics_20260927/defects.tex",
+      "bytes": 17535,
+      "sha256": "ef644c75648ba0b8367e51ea90d3ee1773e1f8ebe4a3cace10e7b9c1e7d99088"
+    },
+    {
+      "path": "c8_physics_20260927/defects_README.md",
+      "bytes": 4961,
+      "sha256": "721cc9f6491e61012da9dcdcd120b5367f5172ac13693ccb83bd956bd48451de"
+    },
+    {
+      "path": "c8_physics_20260927/defects_final.log",
+      "bytes": 402,
+      "sha256": "4253a0d4955099ec56a6a55e49c46e5bb2fdce30052035e0fcc43be8e4d63995"
+    },
+    {
+      "path": "c8_physics_20260927/document_visual_review.json",
+      "bytes": 860,
+      "sha256": "4d7581400203ff8d6ba5b837603d5e29c0b1257e1e0123845d403978c419c44c"
+    },
+    {
+      "path": "c8_physics_20260927/figures/E8_boundary_annuli.pdf",
+      "bytes": 17737,
+      "sha256": "ffb74d95c73db13bc8a4499d62b2facda712d4fa47f52c2a3a1ca26fa58f087b"
+    },
+    {
+      "path": "c8_physics_20260927/figures/E8_boundary_annuli.svg",
+      "bytes": 48307,
+      "sha256": "c8ad91483ae7a311c8844d0a833865c567644ba12669f0a313ffd439f4cf37c6"
+    },
+    {
+      "path": "c8_physics_20260927/figures/bootstrap_model_points.json",
+      "bytes": 923,
+      "sha256": "d2afe873a6bb18ef1775800c8f1897d8eeb2fcc477be0c64285f2d6f178ec824"
+    },
+    {
+      "path": "c8_physics_20260927/figures/bootstrap_model_points.pdf",
+      "bytes": 20932,
+      "sha256": "5a10a684ad106684885cf51248ec884139473d2e3c584866c3103153672e2aaa"
+    },
+    {
+      "path": "c8_physics_20260927/figures/bootstrap_model_points.svg",
+      "bytes": 29032,
+      "sha256": "68ad9ae15886d2859b51c744ce5d7a4a275298a32edd611faa7d6f918a74c0b0"
+    },
+    {
+      "path": "c8_physics_20260927/figures/defect_observables.pdf",
+      "bytes": 26260,
+      "sha256": "51df3a01ead4f9fde552531efb02cd23785798d59fada152a7e93979e363bf65"
+    },
+    {
+      "path": "c8_physics_20260927/figures/defect_observables.svg",
+      "bytes": 85145,
+      "sha256": "f7f5478986fb2f6c075611b264b852fbd0551a68702b2f212d084d2c54e1158c"
+    },
+    {
+      "path": "c8_physics_20260927/figures/haagerup_bootstrap_comparison.pdf",
+      "bytes": 397883,
+      "sha256": "1a303741ef6f5dcae3f55b9f16ccd57e65cf07d3a426c5172e63fbca4a979a84"
+    },
+    {
+      "path": "c8_physics_20260927/figures/haagerup_bootstrap_comparison.tex",
+      "bytes": 2063,
+      "sha256": "5e8f0ad4d671ed53162d074b75252ef5c2360b3fa29b3e377e206668e895311c"
+    },
+    {
+      "path": "c8_physics_20260927/figures/haagerup_bootstrap_comparison_metadata.json",
+      "bytes": 6160,
+      "sha256": "4401db4a4e3d226f6cb4dc3de4d7443ccc74b429ecb0c2aad44789c1b80a6dee"
+    },
+    {
+      "path": "c8_physics_20260927/figures/physics_plots.json",
+      "bytes": 2585,
+      "sha256": "17a1970dccb0c26cab95f16938a91a02268cbd4bba27a227d7a41fc0b393d5e0"
+    },
+    {
+      "path": "c8_physics_20260927/figures/physics_primary_spectrum.pdf",
+      "bytes": 48645,
+      "sha256": "55a0c61af9b5e8351109cac56ac19bd9af49086128a5444b92f7c12f1331d1ae"
+    },
+    {
+      "path": "c8_physics_20260927/figures/physics_primary_spectrum.svg",
+      "bytes": 151193,
+      "sha256": "72a50c1dce637a82faf5589b4485041cc678cb7a56b35168e9bf92752deed6b4"
+    },
+    {
+      "path": "c8_physics_20260927/figures/physics_thermal_comparison.pdf",
+      "bytes": 18725,
+      "sha256": "56a16036015158a70a80c49ade87bfda962e211a7f0833a9d99247d97ed27577"
+    },
+    {
+      "path": "c8_physics_20260927/figures/physics_thermal_comparison.svg",
+      "bytes": 43221,
+      "sha256": "d33aa20405c11f396a2333461cf5946529391128ae1f698b0b47e4e4b7611b90"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two/complete_primary_couplings.json",
+      "bytes": 108152,
+      "sha256": "80517cd8d019a984c1f8f4b2f9019f3950ae5197b6165b27ac55d766cf98f555"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two/complete_primary_couplings.tsv",
+      "bytes": 3616741,
+      "sha256": "b4d0c1723f8545570cecaf976e6027ac6fea13d9cab7771e0cfaa129a6ff4273"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two/low_weight_basis.json",
+      "bytes": 1456954,
+      "sha256": "cc17704dfd5aeb7bed5cc37cc5eb315f84dd564497f539072e18b3a50a59c1ef"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two/low_weight_couplings.json",
+      "bytes": 1279623,
+      "sha256": "a819b299a39d9f2e84b47e0b491abc6564fb77187316999e1bc78f5b809101dd"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two/low_weight_couplings.tsv",
+      "bytes": 382307,
+      "sha256": "dbf1093c75a9ed1fefd7b93e74fc1d353153e0f4c427bba74c2d0c5b32cc4de6"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two/low_weight_products.jsonl",
+      "bytes": 4295950,
+      "sha256": "3ab9c52ed2a8117f1403fac390ce39b03a8ec15cd6f189a3cdc3e8dbdbb26556"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two/stress_couplings.tsv",
+      "bytes": 1055,
+      "sha256": "f900c142b3c8e421a9e2b0f67f68a790aaee77b11d4e8ce405c2be9cae4f55d2"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two.py",
+      "bytes": 11968,
+      "sha256": "c38176aabe7f679821bf0171335ccb891ad5a04fb2e0186823a47de4e69bf106"
+    },
+    {
+      "path": "c8_physics_20260927/full_weight_two_final.log",
+      "bytes": 1365,
+      "sha256": "4d20e04646f60c3093c0a708d51a780eb41a32428b4111b540ecedf4c8f9a4b3"
+    },
+    {
+      "path": "c8_physics_20260927/fusion.tsv",
+      "bytes": 19454,
+      "sha256": "8e31b3a7fe5e9d7f3d33a755507d887f4c1ae721873467b10398d9356ba48589"
+    },
+    {
+      "path": "c8_physics_20260927/lean_anchors_final.log",
+      "bytes": 6887,
+      "sha256": "a29c5b82d2847755e892ca574625129b9b86e9fac22eeecf56191dbdc5487ae0"
+    },
+    {
+      "path": "c8_physics_20260927/lean_assessment.tex",
+      "bytes": 20495,
+      "sha256": "3a6d53ac01ab0ef694fa4c4f10e94e4d4fe790013494357a0821678d6e33a55b"
+    },
+    {
+      "path": "c8_physics_20260927/lean_assessment_final.log",
+      "bytes": 6779,
+      "sha256": "ea941e9dbcee5e899ccaea8de50e4d64d21ff8eca7cb7f673ea0319856f59492"
+    },
+    {
+      "path": "c8_physics_20260927/lean_baseline_assessment.tex",
+      "bytes": 36248,
+      "sha256": "4768c77a4270a7153ad679520153e4cc654d73703c6b86009e15b3126d4c285d"
+    },
+    {
+      "path": "c8_physics_20260927/line_eigenvalues.tsv",
+      "bytes": 14944,
+      "sha256": "2dcf5798813cd06fa2017c2f992b86a5efefd7c8b11eb50451fcd19a05a1893f"
+    },
+    {
+      "path": "c8_physics_20260927/low_weight_basis.json",
+      "bytes": 1253858,
+      "sha256": "cddd8ffa203c63425a3d645c68107efbe412a17f6bf4e60f58133f9c93ec081f"
+    },
+    {
+      "path": "c8_physics_20260927/low_weight_couplings.json",
+      "bytes": 502852,
+      "sha256": "7e9711fcc2074d7940c923d59f0e2a4de6ccb2b04659a1a3c730313d9b1999d5"
+    },
+    {
+      "path": "c8_physics_20260927/low_weight_couplings.py",
+      "bytes": 10947,
+      "sha256": "936f24e732400bc92140c37599045d2fb0d66c65e6541d4df60e3f07af58b5e5"
+    },
+    {
+      "path": "c8_physics_20260927/low_weight_couplings.tsv",
+      "bytes": 162392,
+      "sha256": "3b180005d91e420c0cb1d679a6f1071007df4396053a02978fb8f759b9d0cf88"
+    },
+    {
+      "path": "c8_physics_20260927/low_weight_products.jsonl",
+      "bytes": 2065191,
+      "sha256": "46932fe203c00ee3195ebd1fe0abe8c82ac2531f7ef8f2c1dabc0d9a89a04e2f"
+    },
+    {
+      "path": "c8_physics_20260927/manuscript_final.log",
+      "bytes": 9947,
+      "sha256": "c0597a5033a3f0be0b810212f937eeab9a14530bafd935e5a548c854b4fcad4b"
+    },
+    {
+      "path": "c8_physics_20260927/manuscript_reference_check.json",
+      "bytes": 156017,
+      "sha256": "e2d5ccee159f7506e843a7924442196714dac25bdbb0352cdd998144d7420408"
+    },
+    {
+      "path": "c8_physics_20260927/manuscript_refs.tex",
+      "bytes": 654,
+      "sha256": "4b40cf19d01695f531b79b4c5cb7925e1cfaf4504481cd065e7eafcdc4261654"
+    },
+    {
+      "path": "c8_physics_20260927/manuscript_refs_final.log",
+      "bytes": 539,
+      "sha256": "997e03ad8a7a71cbc36b7d549a886e7b10d83177779e203cede474c81d2962df"
+    },
+    {
+      "path": "c8_physics_20260927/modular_S.tsv",
+      "bytes": 17366,
+      "sha256": "5de90f77f284df0699bed8245e235a654dc8426327ae9ddb28b404ef67ebb5e4"
+    },
+    {
+      "path": "c8_physics_20260927/physics_guide.tex",
+      "bytes": 7602,
+      "sha256": "57c19821d4f03fb873b3a9ec155b298310049abab24edb22b84982af07c6bde5"
+    },
+    {
+      "path": "c8_physics_20260927/physics_lean.log",
+      "bytes": 378,
+      "sha256": "ebf4eb5a832526f0e20263b3afdb362623625b8c4c7c025216f489f30cc50419"
+    },
+    {
+      "path": "c8_physics_20260927/physics_plots.py",
+      "bytes": 11160,
+      "sha256": "50746578b5f5a6d0165cae044175742cdf0f83927e321682852fda3fba031375"
+    },
+    {
+      "path": "c8_physics_20260927/release_audit.json",
+      "bytes": 182112,
+      "sha256": "44d473918f3b03f154ab8991edee8172806d79c7e78aa08701301eb431ed5d3b"
+    },
+    {
+      "path": "c8_physics_20260927/release_audit_final.log",
+      "bytes": 294,
+      "sha256": "69ca6e0b5f3c12c99f8a95c63cf59697f07807d861ad08cadfa7d6fb20446372"
+    },
+    {
+      "path": "c8_physics_20260927/release_replay.json",
+      "bytes": 590,
+      "sha256": "5c1b712a4c06ec95d6614d97f76afa6e382c2c6050edcdd4907c9eaf82a67c69"
+    },
+    {
+      "path": "c8_physics_20260927/release_replay_final.log",
+      "bytes": 861,
+      "sha256": "36cecd6ddc216f4d0e413b9976cec2e8ce7ab0cbd91244ad28c3c402c9240455"
+    },
+    {
+      "path": "c8_physics_20260927/resource_review.md",
+      "bytes": 3380,
+      "sha256": "41ca9bb4a871533ed287e615baaabf87dd24c971802de98363dcb116f77d78b7"
+    },
+    {
+      "path": "c8_physics_20260927/spectrum.py",
+      "bytes": 26960,
+      "sha256": "fde4f08d4263ba4d9223ccb94666efe955c356ed7f65eb172a1bc10dc082ec31"
+    },
+    {
+      "path": "c8_physics_20260927/spectrum.tex",
+      "bytes": 17380,
+      "sha256": "8970cdae85bd851450c47f6c9524d05b5390900d9bce1f8404bb09ea8cd3e070"
+    },
+    {
+      "path": "c8_physics_20260927/spectrum_final.log",
+      "bytes": 2668,
+      "sha256": "f67bed88e528eef238b35e27704e2792f17d2d5d05d76a444e4f89895ae87cb7"
+    },
+    {
+      "path": "c8_physics_20260927/spectrum_notes.md",
+      "bytes": 5681,
+      "sha256": "d3837313c2bcedc901c6125551df7d63d7ec15192e4be7ec9702e3522bc61b3f"
+    },
+    {
+      "path": "c8_physics_20260927/stress_couplings.tsv",
+      "bytes": 1055,
+      "sha256": "f900c142b3c8e421a9e2b0f67f68a790aaee77b11d4e8ce405c2be9cae4f55d2"
+    },
+    {
+      "path": "c8_physics_20260927/thermal_input_check.json",
+      "bytes": 2304,
+      "sha256": "939b1214b516548dd9258df04623ecc15c7fa3bbc9521e8cf4d4fe2964184b43"
+    },
+    {
+      "path": "c8_physics_20260927/thermal_input_final.log",
+      "bytes": 236,
+      "sha256": "b5bf52fc2f6c338096eb7aacb50d8dd583b4fbca3549404870fe56b1d44488fe"
+    },
+    {
+      "path": "c8_physics_20260927/twisted_gaps.tsv",
+      "bytes": 5783,
+      "sha256": "533c38172c8dac6d6dd238d13bded285bd22e944dd92f80f3ae1ecad85306adf"
+    },
+    {
+      "path": "c8_physics_20260927/verification_anchor_inventory.md",
+      "bytes": 16988,
+      "sha256": "b9354ba4e5ab720c4b07cbb1f0a5269946f1876c03a92f6307a73a73ab375c90"
+    },
+    {
+      "path": "c8_physics_20260927/verification_anchors_final.log",
+      "bytes": 7318,
+      "sha256": "06e0667c4483d33defc312d8ca4003a51f132613e838f56772679cba94d210c9"
+    },
+    {
+      "path": "c8_physics_20260927/verification_finite_inputs.tex",
+      "bytes": 21671,
+      "sha256": "045fb2b3fc8f7fe4f02d4748df5a643052f33fee31ed2ff3f4f812357be4b4d0"
+    },
+    {
+      "path": "c8_physics_20260927/verify_bundle.py",
+      "bytes": 3387,
+      "sha256": "3080187835194f371494336380f624190a259d385d112c841b451a9d31c02862"
+    },
+    {
+      "path": "c8_physics_20260927/weight_two_static_review.md",
+      "bytes": 10338,
+      "sha256": "7e4f6d939ae293d2177e8cb3ba569a1e84aefccb94e61cecb9db8370dba92780"
+    },
+    {
+      "path": "c8_reviewability_20260927/check_readable_inputs.py",
+      "bytes": 16337,
+      "sha256": "10e9a8a882b61e85a4c7b5eeb81b66372095b1de262a2bcc3d4e9c155b730a5d"
+    },
+    {
+      "path": "c8_reviewability_20260927/lean_assessment.tex",
+      "bytes": 34012,
+      "sha256": "2dcb15c8329f53d2b3aded7fad08292b70d9b14b353d5db5a27df44aae66f70e"
+    },
+    {
+      "path": "c8_reviewability_20260927/structural_inputs.tex",
+      "bytes": 25470,
+      "sha256": "094dd20a4baafcb2444b913da1bbc54a82b6ec2091724d032f4cb622ba89afe6"
+    },
+    {
+      "path": "hi_cft_20260923_c8_exact.py",
+      "bytes": 7875,
+      "sha256": "e9816e9b3cd30d092b45d6ce85297f49ec8431f2f6081d862dd2b41c17ebc865"
+    },
+    {
+      "path": "hi_cft_20260923_c8_exact_fields.json",
+      "bytes": 157145,
+      "sha256": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d"
+    },
+    {
+      "path": "hi_cft_20260923_next_structure_conditional_characters.md",
+      "bytes": 4505,
+      "sha256": "671c9468b075894f5b90008a611fbac1a36f684a85ea082916c6587ecc92dcae"
+    },
+    {
+      "path": "hi_cft_20260923_proof_pf13_ope.json",
+      "bytes": 496822,
+      "sha256": "fe61f082573785c2ac4204b756a8e543f3580ff267d03d513d9015c07705f313"
+    },
+    {
+      "path": "hi_cft_20260923_proof_pf13_upper_poles.json",
+      "bytes": 1484,
+      "sha256": "37d5363f495da7bc22ec269e2d5fdb8ba7655cf15d9d6326231aec86506f390a"
+    },
+    {
+      "path": "hi_cft_20260923_proof_pf13_upper_poles.py",
+      "bytes": 2743,
+      "sha256": "f6dd1d4b4fd32809cbf3e532b7cc69773c16f6db6d85f647ce503a323afb54ed"
+    },
+    {
+      "path": "hi_cft_c8_bibliography.tex",
+      "bytes": 10831,
+      "sha256": "34ce31b39e36da40419004309731f17dbfa0f3f57b1d86084c351056fa70643f"
+    },
+    {
+      "path": "hi_cft_c8_companions_README.md",
+      "bytes": 13421,
+      "sha256": "47b0cd52b46920806c43f150695d8b0e24723207c6d224462d180e96c4a57227"
+    },
+    {
+      "path": "hi_cft_c8_lean_assessment.pdf",
+      "bytes": 352094,
+      "sha256": "5028134f9448c893e7802c43479423bcfe70b490f64e9ee44d44dae0fbb963dd"
+    },
+    {
+      "path": "hi_cft_c8_lean_assessment.tex",
+      "bytes": 2997,
+      "sha256": "067c45b54317ed5ba3d7b52b2b6084f2c3f0f20bed44cd708e969fa535cd9368"
+    },
+    {
+      "path": "hi_cft_c8_manuscript_analytic.tex",
+      "bytes": 47958,
+      "sha256": "c87f5e1f57746fb60b33e894751f452c2699926a46af329a4417f66c12cd035f"
+    },
+    {
+      "path": "hi_cft_c8_manuscript_structure.tex",
+      "bytes": 69846,
+      "sha256": "474e4dd9074cb4d02135a6869340285daf0302336b5f64ec216dd7a79780d369"
+    },
+    {
+      "path": "hi_cft_c8_proof.aux",
+      "bytes": 33350,
+      "sha256": "0818c8caa1f839a3619a0f905bc6ba1b78421a038a5263f40fae4fadcdda07b9"
+    },
+    {
+      "path": "hi_cft_c8_proof.pdf",
+      "bytes": 1308255,
+      "sha256": "38d3bc1c04f3805ca9d6a08fb0de342793058c54a93947a68340b324fd09dd64"
+    },
+    {
+      "path": "hi_cft_c8_proof.tex",
+      "bytes": 63553,
+      "sha256": "e67701657faa6a2993be42358f47585384979e7e43489312822c2d00189111f7"
+    },
+    {
+      "path": "hi_cft_c8_proof_README.md",
+      "bytes": 7132,
+      "sha256": "95c9ea52b3c910436717c8f1ddbf794476c6c5a361713119de7cbaf4cfb3a818"
+    },
+    {
+      "path": "hi_cft_c8_reviewability_bundle.zip",
+      "bytes": 4729766,
+      "sha256": "62d3bbc86db20ff621d4a7cb253af78979df858361996128509a066d8c932740"
+    },
+    {
+      "path": "hi_cft_c8_verification_guide.pdf",
+      "bytes": 409139,
+      "sha256": "0159bd0125900217826947fc4b43ebbf051a6cd9b3d5140a887a8c7a4a58bca2"
+    },
+    {
+      "path": "hi_cft_c8_verification_guide.tex",
+      "bytes": 15325,
+      "sha256": "057592b29fcf11c0601c7907dce409189d30d56b792b30804384e01e9efdebc2"
+    },
+    {
+      "path": "hi_cft_safe_run.py",
+      "bytes": 5952,
+      "sha256": "277670ce0b7773afce64b56c8a266b7cb6fe47e056c79d5e9e84262b8674673f"
+    },
+    {
+      "path": "hi_cft_third_flavoured_trace_check.py",
+      "bytes": 8558,
+      "sha256": "0cb35f01ab0c3ccc4b078ad15f779ad1e614d7838fdb3e5405ba5052b240026b"
+    },
+    {
+      "path": "hi_cft_third_rank3_current_series.py",
+      "bytes": 11403,
+      "sha256": "d93ec1fe4b5bb8db6c616a67ef3e9f2935010e68c43563cf5d39ce457b3fe948"
+    },
+    {
+      "path": "lean/HaagerupIzumi/CFT/FiniteClosure.lean",
+      "bytes": 5028,
+      "sha256": "d493ca389446a0c0f15aca9879b07d69ad04f578d3a74b741e2d323fefdbbea6"
+    },
+    {
+      "path": "lean/HaagerupIzumi/CFT/PhysicsBounds.lean",
+      "bytes": 2153,
+      "sha256": "eaf1652f1927a2fb51d39ecb6d2c34ecb225c7a01cf04605fe0c3157f6a1b81f"
+    },
+    {
+      "path": "lean/HaagerupIzumi/CFT/TopBound.lean",
+      "bytes": 2862,
+      "sha256": "fedee277595efcdbe908bc7d9c4617f351b2b30f29f3a9c5d157a016caae82a0"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "bytes": 3546,
+      "sha256": "99e9d2b033f57d36744413836af6f2898d11c47e95fc8390f53cd2a710ac5c69"
+    },
+    {
+      "path": "lean/lakefile.toml",
+      "bytes": 268,
+      "sha256": "f8894aabecea6ee29a1c79362b71a0933312a187f900612b91a5a3f485a2fa48"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "bytes": 25,
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    {
+      "path": "lean/safe_lean.py",
+      "bytes": 6517,
+      "sha256": "bfbad8b1e11dcf1073c305b4212a85eda1d432f9158fac68575680884723324a"
+    },
+    {
+      "path": "lean/tools/lean_stack_limit.c",
+      "bytes": 533,
+      "sha256": "515b02d6e885dad72d368717c91a8e49d41cdbc555acff928ca6d6352ce76b3e"
+    }
+  ],
+  "excluded": "Full third-party AHKZ paper; transient build products; initial duplicate runs; Lean toolchain/Mathlib binary cache.",
+  "manifest_note": "The manifest authenticates all other bundle members; it does not hash itself."
+}

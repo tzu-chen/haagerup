@@ -1,0 +1,92 @@
+\section{Solutions for Chapter~\ref{ch:correlators}}
+
+\paragraph{Exercise~\ref{ex:corr-fifteen}.}
+\phantomsection
+\label{sol:ex:corr-fifteen}
+Write the momenta at $(\infty,1,x,0)$ as
+$(-a_i,a_j,-a_k,a_\ell)$. Neutrality requires the
+multisets $\{i,k\}$ and $\{j,\ell\}$ to agree.
+There are three choices with all labels equal. For $i\ne k$,
+the choices $(j,\ell)=(i,k)$ and $(k,i)$ give six each.
+The finite-distance factors are
+$x^{-(a_k,a_\ell)}(1-x)^{-(a_j,a_k)}$.
+They are, respectively,
+$x^{-4}(1-x)^{-4}$,
+$x^{-4}(1-x)^{-2}$, and
+$x^{-2}(1-x)^{-4}$.
+Each assignment has coefficient $1/9$, giving the three
+terms in the chapter.
+
+
+
+\paragraph{Exercise~\ref{ex:corr-blocks}.}
+\phantomsection
+\label{sol:ex:corr-blocks}
+At order four the blocks of exchanged weights one, two,
+and three contribute $2/3$, $21/5$, and $29/3$.
+Subtracting them from the reduced-correlator coefficient gives
+\[
+ A_4=\frac{65}{3}-\frac23-\frac{21}{5}-\frac{29}{3}
+     =\frac{107}{15}.
+\]
+In the charged ordering the reduced correlator is
+$x^4G_+(x)=(4/3)x^6+\cdots$, so the first exchanged
+global primary has weight six and squared coefficient $4/3$.
+The corresponding unit-normalized three-point coefficient
+has magnitude $2/\sqrt3$.
+
+
+
+\paragraph{Exercise~\ref{ex:corr-stress}.}
+\phantomsection
+\label{sol:ex:corr-stress}
+Only pure-factor contractions survive, and
+$\langle T_i(\infty)T_i(1)T_i(0)\rangle=c_i$.
+For $A=c_2T_1-c_1T_2$ the unnormalized three-point
+coefficient is $c_1c_2(c_2^2-c_1^2)$.
+Divide its square by
+$\norm A^6=[c_1c_2(c_1+c_2)/2]^3$ to obtain
+\[
+ C_{\widehat A\widehat A\widehat A}^2
+ =\frac{8(c_2-c_1)^2}{c_1c_2(c_1+c_2)}.
+\]
+When $c_1=c_2$, exchanging the two Virasoro factors within their
+two-stress vacuum subalgebra sends $A$ to $-A$, so its odd
+correlator vanishes. Its positive norm
+does not vanish; it remains a nonzero field.
+
+
+
+\paragraph{Exercise~\ref{ex:corr-spin3}.}
+\phantomsection
+\label{sol:ex:corr-spin3}
+At the Potts point $5c_0+22=26$ and
+$\lambda(5c_0+22)=(4/13)26=8$, so the weight-four
+primary norm is zero. For the simple pole in the four-point
+function, $\frac12\partial b$ contributes
+$\frac12(4B)=2B$ and
+$-\frac1{12}\partial^3T_0$ contributes
+$-72N/12=-6N=-2c_0$.
+The total is $2B-2c_0$.
+
+
+
+\paragraph{Exercise~\ref{ex:corr-lightgram}.}
+\phantomsection
+\label{sol:ex:corr-lightgram}
+Using $q=(2,0,-2)$ gives
+\[
+ K=\frac1{39}
+ \begin{pmatrix}
+ 24&-13&-11\\
+ -13&26&-13\\
+ -11&-13&24
+ \end{pmatrix}.
+\]
+The vectors $(1,1,1)$, $(1,0,-1)$, and $(1,-2,1)$
+are eigenvectors with eigenvalues $0$, $35/39$, and $1$.
+They are mutually orthogonal and span the space, so $K$
+is positive semidefinite. Positivity concerns the quadratic
+form, not the signs of its individual matrix entries.
+
+

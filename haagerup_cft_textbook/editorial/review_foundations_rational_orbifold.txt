@@ -1,0 +1,109 @@
+Second-reader review: rational orbifold dimension obstruction
+Reviewer: scope_foundations
+Time: 2026-10-05 21:13:56 UTC (clock tool)
+
+Read-only scope
+--------------
+Read editorial/rational_orbifold_dimension_insertion.tex.txt, the relevant
+c06 full-faithfulness proof, and the primary theorem statements below.
+No script imports, jobs, certificates, or live-source edits. A first quick
+pass had already been sent to the construction author; this is the deeper
+source/hypothesis check requested by root.
+
+Verdict: mathematical argument passes. One useful premise clarification
+---------------------------------------------------------------------
+At draft lines 31-33 (now also in l06's inserted section), explicitly say
+that A is simple as an A--A bimodule. Proposed sentence:
+
+  Here simplicity means End_{A-A}(A)=C, so the identity defect A is
+  simple and the bimodule category is a fusion category.
+
+This states the author's intended existing hypothesis; it is not a
+restriction to haploid algebras or to the diagonal/Cardy full theory.
+Separable algebra plus this indecomposability is the required Morita
+setting. Do not replace it by simplicity of A as an underlying C-object.
+
+Primary theorem check
+---------------------
+Dong--Ren--Xu, On Orbifold Theory, arXiv:1507.03306v2,
+https://arxiv.org/html/1507.03306, Section 2 assumptions (V1)--(V4),
+Theorem 4.4, and Lemma 4.7: the draft supplies their simple CFT-type
+parent, finite automorphism group, rational/C2-cofinite fixed algebra,
+and strictly positive nonvacuum twisted lowest weights. The parent and
+fixed algebra are CFT-type here because V_L is and the group fixes its
+vacuum. The fixed-algebra assumptions imply the required twisted
+rationality. The theorem identifies the vacuum S-entry scaling, hence
+the global-dimension factor |G|^2; positivity gives the positive dimension
+function, equal to FPdim. Thus the notation FPdim in the draft is justified,
+not an unproved substitution of categorical for Frobenius--Perron dimension.
+
+Etingof--Nikshych--Ostrik, On Fusion Categories, arXiv:math/0203060v11,
+https://arxiv.org/pdf/math/0203060, Corollary 8.14 and Proposition 8.27:
+an indecomposable module category's dual has the same global FP dimension,
+and integer global FP dimension forces each simple's FP dimension to be
+the square root of an integer. These are precisely the two implications
+used here. Weak integrality does not assert integer dimensions for all
+objects and is not being conflated with integrality.
+
+Lattice and holomorphic specialization
+-------------------------------------
+The lattice calculation is immediate from the already established module
+labels L*/L: every label is invertible, so FPdim Rep(V_L)=|L*/L|.
+Consequently FPdim D=|G|^2|L*/L| is an integer for every admitted sewing
+algebra A, not only for A=1. Morita invariance concerns the defect category
+and does not require that the chiral orbifold category remain pointed.
+
+For unimodular L this is |G|^2. More generally the same theorem applied
+to a holomorphic parent gives |G|^2, provided the same fixed-algebra and
+twisted-positivity premises are retained. An optional one-sentence remark
+can make this case explicit. No untwisted group-double identification is
+needed: a group associator anomaly does not change this global-dimension
+argument. The worked untwisted S3-center example is correctly labeled as
+an example, rather than asserted as every holomorphic orbifold's category.
+
+Simple-image issue
+------------------
+The displayed d^2=(11+3 sqrt(13))/2 excludes a SIMPLE image of rho.
+The draft correctly acknowledges that arbitrary sums can have irrational
+squared dimension and cites Proposition c-faithful-descent to close this
+gap for a unitary strong tensor action. I rechecked that proof by hand:
+
+* The finitely many simple summands of the six images generate a fusion
+  category because the source fusion and duality rules close that list.
+* For the induced dominant functor, the adjoint unit algebra has a central
+  lift containing the central unit once. If it is nontrivial, the smallest
+  nonunit central dimension 3d forces FPdim A >= 1+3d=d^2.
+* The target global dimension is at most 3+3/d^2, below the Fibonacci
+  minimum for any nonpointed fusion category. A noninvertible simple has
+  squared dimension at least two, so ranks at least three have dimension
+  at least four; the rank-two minimum is the Fibonacci category.
+* The resulting pointed target would give every object integer dimension,
+  contradicting preservation of the positive dimension d of rho.
+
+Thus the functor is fully faithful, rho remains simple, and ENO's
+simple-square obstruction applies. The proof is not merely a claim that
+all tensor functors preserve simplicity. Full faithfulness is special to
+this Haagerup source and its center dimensions.
+
+The final preservation-scope paragraph is correct: all A-bimodule sewing
+choices are covered, but Virasoro-only defects or an unspecified asymmetric
+chiral framework are not placed in this finite category by the argument.
+
+Companion W3 draft (author-requested short review)
+------------------------------------------------
+Read editorial/w3_dimension_scope_insertion.tex.txt against saved
+hi_cft_20260923_c2two_w3_candidates.md, including its Section 6c.
+The dimension-ratio field test and ramification implication 13|p(p+1)
+are correct. The stronger imported exclusion of every dimension-d object,
+including reducible objects, is supported by the saved Section 6c gap and
+exceptional-field arguments, not just the earlier simple-object theorem.
+The draft correctly retains actual tensor/full-center algebra factorization,
+complete affine module-category classification, and the exact height-13
+comparison as imported inputs. This review did not rerun or independently
+reprove those classifications/certificates.
+
+One wording refinement at W3 draft lines 13-14: say 'approximate
+central-charge agreement near two' rather than suggesting an exact equality
+cannot distinguish this family. Every c_p is strictly below two, so an
+exact candidate charge above two already differs. No mathematical premise
+or scope correction otherwise found. Findings sent directly to the author.

@@ -1,0 +1,1664 @@
+\chapter{Testing an identification without assuming one}
+\label{ch:identification}
+
+Many theories can share an approximate central charge and a few low
+dimensions. A convincing identification must also explain multiplicities,
+charges, three-point tensors, locality, and the actual noninvertible
+junction data. This chapter develops several discriminating tests that are
+stronger than matching decimals. Some are exact theorems about candidate
+theories; their application to the chain remains conditional on a controlled
+continuum dictionary. Others are explicit ultraviolet constructions that
+organize the observed charges but have not yielded the required infrared
+theory. Keeping these roles separate allows a failed candidate to teach us
+something without being mistaken for a general no-go theorem.
+
+\section{What must match}
+
+A proposed identification has at least four layers. First, specify the
+microscopic model: the physical $\mathcal H_3$ associator, rho-channel Hamiltonian,
+regular periodic space, couplings, and twists. Second, specify the limiting
+kinematics: vacuum, velocity, central charge, complete low shells, and their
+charge and momentum assignments. Third, specify local dynamics: normalized
+OPE coefficients and a consistent crossing/sewing structure. Finally,
+identify the categorical lines with their fusion, associators, and action
+on the local fields and twisted sectors.
+
+A chiral commutant with a certain central charge addresses only part of
+this list. A modular-invariant torus function addresses another part.
+Neither alone specifies a local full CFT. Conversely, a lattice model with
+the correct ordinary $C_3\times C_3$ charges need not possess a Haagerup
+line. The irrational dimension $d=(3+\sqrt{13})/2$ and its junctions are
+substantial extra data.
+
+The central charge near two motivates comparison with two compact bosons,
+orbifolds, cosets, and interacting deformations. It does not justify
+assuming any one of those descriptions. The exact $c=8$ research
+construction and the separate irrational chiral axis discussed in
+Chapter~\ref{ch:cosets} should likewise not be relabeled as the infrared limit of
+the physical chain.
+
+\section{The simplest product-theory test}
+
+Suppose a proposal assigns
+$\phi=\sigma_A\otimes1$,
+$\chi=1\otimes\sigma_B$, and
+$\psi=\sigma_A\otimes\sigma_B$ in a product CFT with normalized
+two-point functions. Factorization immediately gives
+\[
+ \Delta_\psi=\Delta_\phi+\Delta_\chi,\qquad
+ C(\phi,\chi,\psi^\dagger)=1.
+\]
+The self cubics factorize as well, so $I_\lambda=1$.
+These statements are insensitive to field phases once expressed in
+absolute coefficients and the invariant $I_\lambda$.
+
+The physical chain's finite mixed coefficient near $1.42$, nonreal
+$I_\lambda$, and nonadditive gaps disagree with that elementary
+dictionary at currently measured sizes. Turning this into a continuum
+exclusion requires limits of those quantities. It does already explain
+why recognizing two ordinary $C_3$ charges is insufficient to call the
+theory a product of two familiar charged CFTs.
+
+\section{Compact bosons and a sharp light-shell bound}
+\index{Narain CFT}
+
+A rank-two Narain theory is a unitary CFT of two compact bosons with a
+momentum-winding lattice of signature $(2,2)$. A vertex operator is
+labeled by $(p_L,p_R)$, with
+\[
+ h=|p_L|^2/2,
+ \qquad\bar h=|p_R|^2/2,
+\]
+before adding nonnegative integer oscillator levels. The lattice pairing
+\[
+ B(p,q)=p_L\cdot q_L-p_R\cdot q_R
+\]
+is integral. Normalized vertex three-point coefficients have modulus one
+when the charges sum to zero, and vanish otherwise. Cocycle phases affect
+their phases, not their magnitudes.
+This is the two-boson version of the circle construction in
+Chapter~\ref{ch:cft}; the integral pairing encodes mutual locality
+between momentum-winding vertices.
+
+A scalar vertex has $|p_L|^2=|p_R|^2=\Delta$. For scalar dimensions below
+$1/2$, oscillators are absent. Any two charges in light scalar shells obey
+\[
+ |B(p,q)|\leq2\sqrt{\Delta_p\Delta_q}<1.
+\]
+Integrality therefore forces $B(p,q)=0$. All charges in the shells span a
+totally isotropic real subspace of dimension at most two. Projection to
+the left momenta is injective on this subspace, because a null vector
+with $p_L=0$ also has $p_R=0$. Charge addition can consequently be studied
+as addition of vectors in one Euclidean plane, with each dimension shell
+lying on a circle.
+
+\begin{theorem}[Unequal light scalar shells]
+Let $A,B,C$ be normalized scalar fields in a compact rank-two Narain
+theory, with $0<\Delta_A,\Delta_B,\Delta_C<1/2$. If their dimensions
+are not all equal, then
+\[
+ |C(A,B,C)|\leq1.
+\]
+Arbitrary degeneracy and complex mixtures within each shell are allowed.
+\end{theorem}
+\begin{proof}
+Choose the two unequal radii as the $B,C$ inputs. Write their vertex
+coefficients as $b_\mu,c_\nu$, with squared sums one. For an output
+charge $-\lambda$ on the $A$ circle, set
+\[
+ T_\lambda=\sum_{\mu+\nu=-\lambda}
+           \epsilon(\mu,\nu)b_\mu c_\nu,
+ \qquad |\epsilon|=1.
+\]
+Two circles in the plane have at most two intersection points, so
+each nonzero output has at most two input decompositions. If there
+are two, write
+$\mu+\nu=\mu'+\nu'=-\lambda$ and
+$\delta=\mu-\mu'=\nu'-\nu$. Equal radii within each input shell
+give
+\[
+ 2\mu\cdot\delta=2\nu'\cdot\delta=|\delta|^2,
+ \qquad(\mu-\nu')\cdot\delta=0.
+\]
+The crossed input pairs have larger output radius:
+\[
+ |\mu+\nu'|^2=|\lambda|^2+|\delta|^2.
+\]
+They are absent from the diagonal sum on the $A$ circle. The
+interference term is bounded by
+\[
+ 2|b_\mu c_\nu b_{\mu'}c_{\nu'}|
+ \leq |b_\mu c_{\nu'}|^2+|b_{\mu'}c_\nu|^2.
+\]
+Each crossed pair is used at most once. To see this, fix $(\mu,\nu')$.
+Their unequal radii imply $\mu\ne\nu'$, so $\delta$ lies on a fixed
+one-dimensional perpendicular. Writing $\delta=te$ gives
+$t^2=2t\mu\cdot e$, with at most one nonzero solution. Thus the
+original two decompositions are uniquely recovered.
+
+Every interference term is therefore charged to distinct input pairs
+outside the allowed diagonal set. Summing proves
+$\sum_\lambda|T_\lambda|^2\leq
+\sum_{\mu,\nu}|b_\mu|^2|c_\nu|^2=1$.
+Finally, contracting $T$ with the normalized coefficient vector of
+$A$ and using Cauchy--Schwarz gives the result.\end{proof}
+
+This proof is useful beyond its numerical bound. It treats arbitrary
+shell degeneracy rather than a favored vertex basis, retains cocycle
+phases through absolute inequalities, and uses integrality before
+geometry. It is therefore not restricted to pure momentum states or
+a special torus radius.
+
+For three equal light dimensions the sharp bound is instead
+$2/\sqrt3$. The unequal-radius uniqueness argument above no longer
+applies. A short separate argument gives the correct constant. Three
+nonzero equal-radius vectors adding to zero form an equilateral
+triad, and a charge belongs to at most one unordered such triad:
+the other two must be its rotations by $\pm120$ degrees. Thus the
+allowed triples partition into disjoint three-element sets.
+
+On one triad, after taking absolute values, the output for normalized
+nonnegative vectors $b,c\in\R^3$ is
+$T_i=b_jc_k+b_kc_j$, with $\{i,j,k\}=\{1,2,3\}$. Direct expansion
+gives
+\[
+ \sum_iT_i^2
+ =1+\left(\sum_ib_ic_i\right)^2-2\sum_ib_i^2c_i^2
+ \leq1+\frac13\left(\sum_ib_ic_i\right)^2\leq\frac43.
+\]
+The first inequality uses Cauchy--Schwarz on the three products
+$b_ic_i$. A final contraction with a unit vector has magnitude at
+most $2/\sqrt3$. If several disjoint triads occur, their contributions
+are bounded by $(2/\sqrt3)\sum_Ta_Tb_Tc_T$, where the restricted
+coefficient norms have squared sums at most one. H\"older's
+inequality bounds that last sum by one. Cocycle phases cannot
+increase this absolute bound.
+
+For a Hermitian field, opposite triads have equal coefficient norms.
+Pairing them gives the stronger self-cubic bound $\sqrt{2/3}$:
+if the norm in each member of a pair is $a_T$, then
+$2\sum_Ta_T^2\leq1$ and the cubic is bounded by
+$(4/\sqrt3)\sum_Ta_T^3\leq\sqrt{2/3}$. The following example
+attains both constants when the corresponding vertex charges exist.
+
+\begin{example}[An equilateral vertex triad]
+Choose three equal-length scalar charges $p_1,p_2,p_3$ with
+$p_1+p_2+p_3=0$, and normalize
+\[
+ \phi=(V_{p_1}+V_{p_2}+V_{p_3})/\sqrt3.
+\]
+When the compatible vertex phases are chosen coherently, its cubic
+gets the six permutations of the charge-conserving triple, giving
+\[
+ C(\phi,\phi,\phi)=\frac6{3\sqrt3}=\frac2{\sqrt3}.
+\]
+The Hermitian quadrature $X=(\phi+\phi^\dagger)/\sqrt2$ has cubic
+$\sqrt{2/3}$. A single normalized vertex has cubic magnitude at
+most one, but a degenerate-shell mixture can have a larger cubic.
+\end{example}
+
+The chain's finite $|\lambda|$ near $1.42$ is thus a strong comparator
+if its limiting fields have distinct dimensions below $1/2$. The
+theorem applies to a compact rank-two parent and to untwisted fields
+that lift isometrically to it. It is not by itself a theorem about
+twisted fields of every orbifold or about every $c=2$ CFT.
+
+\section{What an orbifold loophole requires}
+
+Gauging a finite symmetry introduces twisted sectors. Their local fields
+need not be ordinary sums of parent vertex operators, so one cannot
+apply a parent shell bound to them without an additional argument.
+Complete shell multiplicity provides one such argument in specified
+classes.
+
+Suppose the entire real scalar space at a light dimension is one
+charged doublet $\phi,\phi^\dagger$, with nonzero cubic and
+$\langle\phi\phi^\dagger\rangle=1$. Charge conservation gives
+$\langle\phi\phi\rangle=0$. Its normalized real directions are
+\[
+ X_\theta=\frac{e^{i\theta}\phi+e^{-i\theta}\phi^\dagger}{\sqrt2},
+ \qquad C(X_\theta,X_\theta,X_\theta)
+ =\frac{\Re(e^{3i\theta}c_\phi)}{\sqrt2}.
+\]
+The factor $1/\sqrt2$ follows by expanding the cube: only the
+$\phi^3$ and $(\phi^\dagger)^3$ terms survive. On this real
+two-plane the cubic is proportional to $\Re(z^3)$. Its orthogonal
+stabilizer is the six-element dihedral group $D_3$. Thus every
+symmetry preserving that isolated shell acts through $D_3$.
+
+In an ordinary $\Z_2$ orbifold, the quantum involution must act on
+this plane either trivially or as a reflection. In either case there
+is an invariant real direction. The invariant direction lifts to
+an untwisted parent field, where the Hermitian Narain bound applies.
+At a suitable cubic extremum, its cubic magnitude is
+$|c_\phi|/\sqrt2$, giving
+\[
+ |c_\phi|\leq2/\sqrt3
+\]
+for dimensions below $1/2$. This allows the original charged field
+to mix twisted and untwisted directions; the isolated full plane is
+the essential hypothesis.
+
+For finite linear geometric point groups, the argument extends
+below dimension $2/9$: fields fixed by every quantum character
+lie in commutator sectors, whose nonidentity rotations have twist
+cost at least $2/9$. The following result handles a larger class
+of asymmetric actions, with a slightly smaller dimension interval.
+
+\subsection{Finite asymmetric actions and the shift subgroup}
+\index{orbifold!isolated doublet bound}
+
+\begin{proposition}[The current-preserving orbifold doublet bound]
+\label{prop:asymmetric-doublet}
+Gauge an effective finite group $G$ of internal symmetries of a
+compact rank-two Narain theory. Assume the gauging is an ordinary
+consistent bosonic unitary orbifold and that $G$ preserves a chosen
+two-dimensional Heisenberg current space on each chirality, setwise.
+Asymmetric lattice actions, momentum/winding phases, nonabelian
+groups, and consistent ordinary discrete torsion are allowed.
+
+If the entire real scalar eigenspace at
+$0<\Delta<5/36$ is one nontrivial order-three doublet, then its
+normalized charged cubic obeys
+\[
+ |c_\phi|\leq2/\sqrt3.
+\]
+\end{proposition}
+
+The premise preserves each two-dimensional current space, not
+each current separately. At an enhanced point, a symmetry can mix
+a chosen Cartan current with root vertex currents; such an action
+is outside this proposition unless an invariant pair of Cartans
+can be chosen. We first prove the stated result before addressing
+those enhanced cases.
+
+\begin{proof}
+Write the even unimodular charge lattice of signature $(2,2)$ as
+$\Gamma$. A current-preserving symmetry acts by
+\[
+ V_p\longmapsto u_g(p)V_{M_gp},\qquad
+ (J_L,J_R)\longmapsto(R_L(g)J_L,R_R(g)J_R),
+\]
+where $R_L,R_R\in O(2)$ and $M_g$ preserves the lattice and
+its chosen positive and negative planes. We will use three
+pieces of this action: its current-trivial kernel, the signs of
+its two determinants, and its finite rotations.
+
+\emph{First gauge the current-trivial subgroup.}
+Let $K=\ker(R_L\times R_R)$. The currents determine both
+charges, so $M_k=1$ for $k\in K$. The vertex-operator OPE
+then gives $u_k(p+q)=u_k(p)u_k(q)$. Thus effectiveness makes
+$K$ a finite abelian subgroup of $\Hom(\Gamma,U(1))$; it is
+normal as the kernel of a group action. Lattice self-duality
+identifies its characters with distinct rational shifts
+$s_k\bmod\Gamma$.
+
+There are no twisted oscillators in a $k$ sector: its charges
+are $\Gamma+s_k$ before projection. Define the invariant
+sublattice
+\[
+ \Gamma_0=\{p\in\Gamma:u_k(p)=1\text{ for every }k\in K\}.
+\]
+The pairing between $\Gamma$ and $K$ makes the map
+$\Gamma\to\widehat K$ onto. Indeed a proper image would
+have a nontrivial annihilating character, hence a nonidentity
+element of $K$ acting trivially on every charge, contrary to
+effectiveness. Therefore $[\Gamma:\Gamma_0]=|K|$.
+
+Projection in each $k$ sector imposes a character condition on
+the original charge $p$. Discrete torsion changes which character
+occurs, but surjectivity still makes the solutions one nonempty
+coset of $\Gamma_0$. The $|K|$ sectors remain disjoint because
+their $s_k\bmod\Gamma$ are distinct. Their union $\Gamma'$
+is additive and even integral by closure and locality of the
+gauged vertex OPE. Its covolume is
+\[
+ \operatorname{covol}(\Gamma')
+ =\frac{\operatorname{covol}(\Gamma_0)}{|K|}=1.
+\]
+Hence $\Gamma'$ is again even unimodular of signature $(2,2)$,
+with one oscillator Fock space per charge. The $K$ orbifold is
+another rank-two Narain theory. This covolume argument does not
+require $K$ to be a geometric target-space translation group.
+
+Fields of the full $G$ orbifold supported on $K$ monodromies
+lift isometrically into this intermediate torus theory, subject
+to the remaining $G$ equivariance. Their normalized sphere
+correlators agree. On a punctured sphere the local monodromies
+generate the holonomies; when these lie in $K$, the torsion
+restricts to $K$, and the gauge-volume factor cancels against
+vacuum normalization. No extra $\sqrt{|G|}$ multiplies a
+normalized cubic. We need this subspace and its correlators,
+without assuming that the remaining quotient acts geometrically.
+
+\emph{Next bound the cost of a proper rotation.}
+The two maps $\det R_L,\det R_R:G\to\{\pm1\}$ are group
+characters. If both signs are positive, the charge action belongs
+to the identity component of real $SO(2,2)$. Its integral group
+is represented by
+\[
+ [SL(2,\Z)\times SL(2,\Z)]/\{(I,I),(-I,-I)\}.
+\]
+One can see the representation on integral two-by-two matrices
+with quadratic form minus the determinant: $(A,B)$ acts by
+$X\mapsto AXB^{-1}$. A finite element has finite lifts $A,B$,
+since a suitable power is the same central sign in both factors.
+A finite-order integral $SL(2)$ matrix has trace
+$-2,-1,0,1,$ or $2$. At trace $\pm2$, finite order excludes
+a nonzero Jordan part, giving $\pm I$; the other traces give
+orders $3,4,6$. Its rotation fraction is thus among
+\[
+ 0,\quad\frac12,\quad\pm\frac13,\quad
+ \pm\frac14,\quad\pm\frac16.
+\]
+For fractions $a,b$ in the two factors, the physical chiral
+fractions are $a+b,a-b$, up to orientation and interchange.
+For instance, split the real two-by-two matrices into the
+planes commuting and anticommuting with the standard complex
+structure. Left and right rotations subtract their angles on
+one plane and add them on the other.
+Reducing each to $[0,1/2]$ gives the complete nonidentity list:
+\begin{center}
+\begin{tabular}{c|c}
+Chiral rotation fractions & Scalar lower bound\\\hline
+$(\nu,\nu)$, $\nu=1/2,1/3,1/4,1/6$
+ & $\nu(1-\nu)\geq5/36$\\
+$(1/2,0)$ & $1/4$\\
+$(1/3,0)$ & $2/9$\\
+$(1/2,1/6)$ & $1/4$\\
+$(1/12,5/12)$ & $35/144$
+\end{tabular}
+\end{center}
+The two real chiral bosons rotated through fraction $\theta$
+have oscillator ground weight $\theta(1-\theta)/2$. This
+normal-ordering shift can be checked with an exponential regulator,
+without assigning values to divergent sums. Put
+\[
+ S_a(\varepsilon)=\sum_{n\geq0}(n+a)e^{-\varepsilon(n+a)}
+ =-\partial_\varepsilon
+       \frac{e^{-a\varepsilon}}{1-e^{-\varepsilon}}.
+\]
+Its expansion is
+$S_a=\varepsilon^{-2}-(a^2-a+1/6)/2+O(\varepsilon)$.
+The two twisted frequency lists start at $\theta$ and
+$1-\theta$, so their vacuum energy relative to two untwisted
+lists is
+\[
+ h_\theta=\frac12\lim_{\varepsilon\downarrow0}
+ [S_\theta(\varepsilon)+S_{1-\theta}(\varepsilon)
+                      -2S_1(\varepsilon)]
+ =\frac{\theta(1-\theta)}2.
+\]
+The divergent terms cancel before taking the limit. Zero-mode
+and excitation energies are nonnegative. A scalar obeys
+$h=\bar h$, so its dimension satisfies the stronger bound
+\[
+ \Delta\geq\max\{\theta_L(1-\theta_L),
+                         \theta_R(1-\theta_R)\}.
+\]
+For example the last row cannot use the sum of two unequal
+oscillator ground weights as a scalar dimension: the smaller
+side must first rise to meet the larger. Level matching and
+projection may raise the actual scalar threshold further.
+Extra shift phases, or a lift of larger order, cannot lower
+the oscillator floor. Consequently a scalar below $5/36$
+whose two determinant signs are positive must be supported in
+$K$ sectors.
+
+\emph{Finally let the cubic select those signs.}
+If $c_\phi=0$ the bound is immediate. Otherwise the complete
+real doublet has the nonzero harmonic cubic already described,
+with orthogonal stabilizer $D_3$. Every internal symmetry acts
+within this plane by the full-eigenspace hypothesis. In particular,
+the abelian quantum-character group
+$\widehat{G_{\rm ab}}=\Hom(G,U(1))$ has image $1,C_2,$ or
+$C_3$ in $D_3$. A character $\chi$ acts on a $g$-twisted
+sector by $\chi(g)$, also with ordinary discrete torsion.
+Indeed rescaling a twisted group basis by $e_g\mapsto\chi(g)e_g$
+preserves its torsion-modified multiplication because
+$\chi(g)\chi(h)=\chi(gh)$.
+
+If the image is trivial, choose a unit real direction maximizing
+the cubic. If it is $C_2$, choose its reflection-fixed axis.
+In either case a unit Hermitian $X$ is fixed by all quantum
+characters and satisfies $|C_{XXX}|=|c_\phi|/\sqrt2$.
+Characters separate the abelianization, so every supporting
+monodromy lies in $[G,G]$. Both determinant characters are then
+positive on it. The rotation bound puts the entire support in $K$.
+
+If the image is $C_3$, the two complex lines are simultaneous
+quantum-character eigenlines. The group $D_3$ has a unique
+order-three subgroup, so these are also the physical charged
+lines spanned by $\phi$ and $\phi^\dagger$. Finite abelian duality identifies
+their characters with inverse elements of exact order three
+in $G_{\rm ab}$. Every determinant character has order at most
+two and is therefore trivial on those elements. Both signs
+are again positive, and the support of $\phi$ lies in $K$.
+This is why low reflection-twisted sectors cannot escape the
+argument by mixing with untwisted fields. We never assumed that
+the physical order-three symmetry equals a quantum symmetry.
+
+In the first two cases, lift $X$ to the intermediate Narain
+theory and apply the Hermitian bound $|C_{XXX}|\leq\sqrt{2/3}$.
+Its fixed-axis normalization gives
+$|c_\phi|\leq\sqrt2\sqrt{2/3}=2/\sqrt3$.
+In the $C_3$ case, lift $\phi$ itself and apply the complex
+bound $2/\sqrt3$ directly. All lifts preserve the dimension and
+normalized cubic, completing the proof.
+\end{proof}
+
+\begin{example}[A shift orbifold changes the radius]
+The kernel step has a familiar one-boson model. Use the circle
+convention of Chapter~\ref{ch:cft}:
+\[
+ h=\frac12(m/R+wR/2)^2,\qquad
+ \bar h=\frac12(m/R-wR/2)^2,
+ \qquad m,w\in\Z,
+\]
+gauge the translation $X\mapsto X+2\pi R/n$. It acts on a
+momentum vertex by $e^{2\pi im/n}$, so projection requires
+$m=nm'$. The $k$-twisted sector has $w\in\Z+k/n$;
+combining all sectors gives $w=w'/n$ with $w'\in\Z$.
+Substitution yields the same weight formulas with radius
+$R'=R/n$ and integer charges $m',w'$. No oscillator has been
+twisted. The smaller invariant momentum lattice and the new
+fractional winding sectors restore an even self-dual charge
+lattice together. Keeping only the invariant untwisted states
+would omit the second half of this construction.
+\end{example}
+
+\subsection{What happens when currents are enhanced}
+
+At a rank-two torus point, chiral charges of squared norm two form a
+simply laced root system of rank at most two. The maximal
+weight-one Lie algebra on either chirality is therefore one of
+\[
+ \mathfrak u(1)^2,\qquad
+ \mathfrak{su}(2)_1\oplus\mathfrak u(1),\qquad
+ \mathfrak{su}(2)_1^{\oplus2},\qquad
+ \mathfrak{su}(3)_1.
+\]
+Their affine and Heisenberg stresses exhaust charge two. A
+finite symmetry preserves the full current algebra, but may
+move its chosen Cartan. This is the gap left by the preceding
+proposition, not a reason to apply it without checking its
+hypothesis.
+
+\begin{constructioninput}[Completed enhanced-parent inventory]
+\label{input:Narain-enhanced}
+For an ordinary consistent effective finite orbifold of any
+unitary rank-two Narain theory, including enhanced parents,
+asymmetric chiral actions and permitted discrete torsion, an
+isolated order-three scalar doublet obeys
+\[
+ |c_\phi|\leq2/\sqrt3
+ \quad\hbox{if}\quad
+ \frac{13}{100}<\Delta<\frac{61}{450}.
+\]
+The completed October 1 inventory combines the preceding
+current-preserving theorem with specialized finite-group
+classification and twisted-spectrum lemmas. Those additional
+lemmas are imported here; the following case split explains
+their role without claiming to reproduce their full proofs.
+\end{constructioninput}
+
+The additional inputs have a simple interpretation.
+A current line preserved up to sign can be squared to give a
+self-adjoint invariant operator on the isolated scalar plane.
+When the sign-fixing kernel has a complementary $SU(2)$
+projection with element orders at most five, its spectral
+restrictions force the cubic to vanish
+for $1/8<\Delta<9/50$. On an $A_2$ chirality, bounded inner
+projective orders at most seven instead give no scalar at all
+for $13/100<\Delta<5/36$, including actual outer extensions.
+For two $A_1$ factors with bounded projections, the relevant
+scalars are odd under the quantum character of factor exchange,
+so their cubic vanishes in the required interval. These results
+control cases where no invariant Cartan is immediately visible.
+
+The current-algebra inventory then proceeds as follows.
+\begin{itemize}
+\item For $\mathfrak u(1)^2$, the whole current space already is
+an invariant Heisenberg space.
+\item For $\mathfrak{su}(2)\oplus\mathfrak u(1)$, the central
+line is characteristic. A finite $SO(3)$ projection either has
+orders at most five, invoking the current-line test, or is cyclic
+or dihedral with a preserved rotation axis. That axis and the
+central line give an invariant Cartan.
+\item For two $\mathfrak{su}(2)$ factors, first take the kernel
+of the factor permutation. Two bounded projections use the
+two-factor test. Two cyclic or dihedral projections admit axes
+compatible with any exchange: choose one axis and transport it
+by an exchange, whose square belongs to the kernel. If just one
+projection has large order, the factors cannot be exchanged;
+its axis is a preserved current line and the other projection
+is bounded.
+\item For $\mathfrak{su}(3)$, the finite inner image can be
+primitive irreducible, imprimitive, or reducible. The primitive
+exceptional groups have bounded projective orders and use the
+spectral test. Apart from bounded exceptions, an irreducible
+imprimitive group has a unique invariant triangle of complex
+lines; every normalizer preserves that triangle and hence its
+Cartan. Reducible $2+1$ blocks have a characteristic central
+current line. Three distinct joint-character lines give a
+Cartan directly, while repeated joint characters fall under
+the current-line or bounded-order cases.
+\end{itemize}
+
+Outer $SU(3)$ automorphisms are semilinear in this discussion:
+they can conjugate the complex coordinates. Uniqueness of an
+invariant triangle makes its preservation by such a normalizer
+valid; merely choosing a convenient triangle would not suffice.
+The exceptional small cases are handled by the separate bounded
+spectral lemmas. Left and right current algebras may have different
+enhancements. Apply the inventory to each independently, then
+conjugate their invariant Cartans by the connected current
+groups. This is a change to an isomorphic toroidal presentation,
+after which Proposition~\ref{prop:asymmetric-doublet} applies.
+
+The interval in Construction input~\ref{input:Narain-enhanced}
+lies inside every component interval. Its upper endpoint
+$61/450$ is excluded because it can occur in a bounded
+two-factor spectrum. Neither the inventory nor the simpler
+doublet theorem classifies all compact $c=2$ CFTs, generalized
+categorical gaugings, ineffective topological factors, or
+noncompact theories.
+
+For comparison, the illustrative continuum hypothesis
+$\Delta_\phi=.134$, together with a limiting cubic near the finite
+estimate $|c_\phi|\simeq1.584$, would violate the bound in both
+stated intervals if established.
+They are not confidence intervals. Most importantly, isolation
+in one measured charge sector is not isolation of the entire
+continuum scalar shell. An additional exactly degenerate scalar
+removes a premise even when it has a different charge. These
+theorems supply conditional exclusions of construction classes,
+not an identification of the chain's continuum.
+
+\section{Ordinary crossing can demand an additional scalar}
+\index{crossing symmetry!positive functional}
+
+Crossing is useful without first guessing a named CFT. Choose the
+Hermitian field $X=(\phi+\phi^\dagger)/\sqrt2$ and make the charged
+self cubic positive by a field phase. Restrict its four-point
+function to a line. Unitarity gives a positive diagonal
+$SL(2,\R)$ block expansion with
+\[
+ g_D(z)=z^D\,{}_2F_1(D,D;2D;z),\qquad g_0=1.
+\]
+Writing $\delta=\Delta_\phi$, define crossing vectors
+\[
+ F_D(z)=(1-z)^{2\delta}g_D(z)-z^{2\delta}g_D(1-z).
+\]
+Crossing is $\sum_Da_DF_D=0$ with $a_D\geq0$. The known identity,
+charged-doublet, and epsilon terms have weights
+\[
+ a_0=1,\qquad a_\delta=|c_\phi|^2/2,
+ \qquad a_e=g_\phi^2,
+\]
+where $e=\Delta_\epsilon$ and
+$g_\phi=C(\phi,\phi^\dagger,\epsilon)$.
+
+A linear functional can separate allowed spectra. At $z=1/2$, put
+$C=D(D-1)$, $r_D=g_D'/g_D$, and $\kappa=6/5$. The block Casimir
+equation gives $g_D''=2g_D'+8Cg_D$ and
+$g_D'''=8(C+1)g_D'$. Direct differentiation therefore yields
+\begin{align*}
+ \mathcal L(F)&=\frac{F'''-8\kappa F'}{16\,2^{-2\delta}},\\
+ \frac{\mathcal L(F_D)}{g_D}
+ &=(C+A-\kappa)r_D-4\delta(3C+B-\kappa),\\
+ A&=1-6\delta+6\delta^2,\qquad
+ B=1-3\delta+2\delta^2.
+\end{align*}
+Euler's integral for the hypergeometric function implies
+\[
+ 2\sqrt2D\leq r_D\leq3D,
+ \qquad (2/3)^D\leq g_D(1/2)\leq(1+2^{-D})/2.
+\]
+These are bounds at every positive dimension, not estimates at a
+finite sample of dimensions.
+
+To derive them, let $t$ have the symmetric beta distribution with
+density proportional to $t^{D-1}(1-t)^{D-1}$ on $[0,1]$. Euler's
+integral writes
+\[
+ g_D(1/2)=2^{-D}\mathbb E[(1-t/2)^{-D}].
+\]
+The weight $w(t)=(1-t/2)^{-D}$ is increasing. In the probability
+measure reweighted by $w$, its mean $\mu$ therefore satisfies
+$\mu\geq1/2$: the covariance of two increasing real functions is
+nonnegative. Integrating the derivative of
+$t^D(1-t)^D(1-t/2)^{-D}$ gives
+\[
+ \mathbb E_w\!\left[(2-t)-\frac2{2-t}\right]=0.
+\]
+Jensen's inequality for $u\mapsto1/u$ implies
+$(2-\mu)^2\geq2$, hence $\mu\leq2-\sqrt2$.
+Differentiating Euler's representation of $g_D$ and using the same
+identity yields $r_D=4D-2D\mu$. This proves the two derivative
+bounds. Finally, convexity bounds $w(\mathbb E t)$ below
+$\mathbb E w$, while the chord joining $w(0)$ and $w(1)$ bounds it
+above. Multiplication by $2^{-D}$ gives the two block bounds.
+
+For $\delta\in[.13,.14]$, substituting the derivative bounds proves
+$\mathcal L(F_D)>0$ for $0<D\leq.16$ and for $D\geq1.75$.
+For the latter range, $C\geq21/16$ makes the coefficient of $r_D$
+positive; the lower derivative bound gives a positive polynomial
+lower bound. Explicitly, using $2\sqrt2>113/40$ and $D\geq7/4$,
+\[
+ \frac{\mathcal L(F_D)}{g_D}
+ \geq\left(\frac{791}{160}-\frac{42}{25}\right)C
+ -\frac{791}{160}\frac{1153}{1250}
+ +\frac{36153}{125000}
+ \geq .012780875>0.
+\]
+The coefficient of $C$ is positive, so its minimum occurs at
+$C=21/16$; there is no untested high-dimension tail. For the
+former range, the coefficient of $r_D$ is negative, and the
+upper derivative bound gives
+\[
+ 3D^3-4.68D^2-1.0872D+.289224,
+\]
+which decreases to the positive value $.007752$ at $D=.16$.
+
+\begin{example}[A hand crossing certificate]
+Assume the illustrative continuum values
+\[
+ \delta=.134,\quad e=.263,\quad |c_\phi|=1.584,
+ \quad g_\phi=1.3.
+\]
+The same bounds give
+$\mathcal L(F_0)>.303$,
+$\mathcal L(F_\delta)>.9\times.083$,
+and $\mathcal L(F_e)>-(37/40)\times.246$.
+Since $|c_\phi|^2/2>5/4$, the known contribution is greater than
+\[
+ .303+\frac54\frac9{10}(.083)
+       -\frac{169}{100}\frac{37}{40}(.246)
+ =.0118155>0.
+\]
+All numbers in this inequality are terminating rationals. If every
+other exchange lay outside $(.16,1.75)$, positivity would make the
+whole functional crossing sum positive, a contradiction. Hence an
+additional coupled exchange is required in that interval.
+\end{example}
+
+For identical bosonic scalars, nonzero-spin primaries have even integer
+spin and hence dimension at least two by unitarity. Below $1.75$,
+the required exchange is therefore scalar. One must still check
+that it is not merely a new diagonal $SL(2,\R)$ primary inside an
+already listed two-dimensional conformal family. For a scalar
+family, the left and right global weights agree. Their tensor
+product decomposes into diagonal primaries at relative levels
+$n=0,1,2,\ldots$, with interchange parity $(-1)^n$. The scalar
+three-point tensor is symmetric in the two equal factors, so its
+odd-relative-level coefficients vanish. The first extra coupled
+diagonal primary is at $\Delta+2$. A new global primary inside a
+Virasoro module also first occurs at level two, since level one is
+the ordinary translation descendant. Neither mechanism can produce
+the required exchange below $1.75$. The conclusion is an additional
+two-dimensional scalar Virasoro primary with a nonzero
+$X\times X$ coupling, possibly degenerate with a supplied scalar.
+
+The displayed numbers are hypotheses about continuum data, not
+confidence intervals extracted from the chain. Moreover, the finite
+chain already contains an appropriate higher charged candidate.
+Its saved $L=15$ dimension in one prescribed scale is about $.731$,
+with a nonzero coefficient around $.45$. Including it changes the
+finite functional sum's sign. Thus the crossing demand is compatible
+with an observed extra channel. Partial sums neither solve crossing
+nor show a violation; descendants and the high spectrum remain.
+
+\section{A nonreal invariant and the scope of a Cardy test}
+\index{Cardy theory!phase obstruction}
+
+The light three-point tensor can constrain more than individual OPE
+magnitudes. Assume the complete real scalar shells have dimensions
+$2,2,4$ for the phi, chi, and psi/eta groups, with the charge pattern
+above, nonzero self cubics, and the stated physical parity. The
+nonzero self cubics restrict the orthogonal transformations on the
+two light planes to $D_3$. On the four-plane, the cubic is
+proportional to $\Re(z^3+w^3)$; its Hessian determinant is
+proportional to $|z|^2|w|^2$, forcing a symmetry to preserve or
+exchange the two coordinate planes. The nonzero mixed triangles
+then recover the normal $C_3\times C_3$ subgroup.
+
+If $\Im I_\lambda\ne0$, simultaneous inversion of both charge axes
+is forbidden. With the given parity, the image of all scalar-tensor
+symmetries on these shells is $C_{3,\alpha}\times D_{3,S}$.
+This classifies an image on selected fields, not a possible kernel
+acting only on higher states, and it does not turn spatial parity
+into an orientation-preserving internal line.
+
+One consequence concerns a specific rational full-CFT construction.
+Assume a unitary bosonic rational chiral algebra $V$ with positive
+nonvacuum lowest weights and its canonical $A=1$ Cardy sewing,
+\[
+ \HH_{\rm bulk}=\bigoplus_iM_i\otimes\overline{M_i^*}.
+\]
+The canonical construction includes the OPE multiplication and sewing
+of Chapter~\ref{ch:sewing}, not only the displayed Hilbert-space sum.
+The positivity hypothesis ensures that $V$ is the maximal
+holomorphic algebra of this full theory: only the right vacuum
+module can contain a state of right weight zero. Every internal
+symmetry preserves this maximal left algebra and its right analogue
+setwise, even if it acts nontrivially on their fields. It therefore
+permutes the irreducible module-pair summands. Without this step,
+counting summands of a chosen smaller chiral algebra would not
+constrain an arbitrary physical symmetry.
+
+At a scalar weight $0<h<1$, all states in such a summand are
+chiral ground states. A module ground space of dimension $n_i$
+contributes $n_i^2$ bulk directions. An isolated real charged
+doublet must therefore arise from a nonselfdual pair with
+one-dimensional ground spaces: two isolated selfdual real lines
+cannot carry a nontrivial order-three rotation by permutation.
+
+The canonical identity-algebra sewing has a spatial parity
+exchanging the two chiral sides. On each such doublet it conjugates
+the charge. Applying this to both light doublets gives simultaneous
+inversion and forces $I_\lambda$ real under the full-shell and
+mixed-tensor hypotheses. A nonreal limiting value would exclude
+that canonical completion.
+
+This is not a theorem that every unitary CFT has real three-point
+coefficients, nor an exclusion of every rational CFT. Other full
+algebras, other sewing data, additional degenerate fields, or a
+different limit lie outside its assumptions. Even a charge-conjugation
+torus partition function alone is weaker than the specified canonical
+sewing hypothesis.
+
+\section{A dimension obstruction for rational lattice orbifolds}
+\index{orbifold!weak integrality}
+
+The scalar-shell arguments above need detailed low-energy information.
+A different test uses only the finite category of defects, provided one
+specifies the chiral algebra that those defects preserve. It extends the
+pointed-lattice argument of Chapter~\ref{ch:cosets} to rational finite
+orbifolds, including their twisted sectors.
+
+Let $L$ be an even positive-definite lattice and $G$ a finite faithful
+group of unitary automorphisms of $V_L$. Put $W=V_L^G$. Assume that $W$
+is rational and $C_2$-cofinite, and that every irreducible $g$-twisted
+$V_L$-module, except the untwisted vacuum module itself, has strictly
+positive lowest weight. These are the hypotheses of the orbifold
+global-dimension theorem being used; finiteness of $G$ alone is not
+being offered as a proof of them. The theorem gives
+\[
+ \FPdim\Rep(W)=|G|^2\FPdim\Rep(V_L)=|G|^2|L^*/L|.
+\]
+The last equality follows because all lattice modules are invertible
+and have dimension one.
+
+\begin{proposition}[The retained rational-orbifold algebra matters]
+\label{prop:rational-orbifold-Haagerup}
+Assume the preceding orbifold hypotheses and a unitary rational full
+CFT described over $\mathcal C=\Rep(W)$ by a simple separable Frobenius
+algebra $A$, with the usual local sewing construction. Its
+$W$-preserving defect category cannot contain $\mathcal H_3$ as a
+full fusion subcategory.
+\end{proposition}
+\begin{proof}
+These defects form the fusion category
+$\mathcal D={}_A\mathcal C_A$. Here simplicity of $A$ means
+simplicity as an $A$--$A$ bimodule:
+$\operatorname{End}_{A-A}(A)=\C$, so the defect unit is simple.
+The categories $\mathcal D$ and $\mathcal C$ are Morita equivalent,
+so their Frobenius--Perron global dimensions agree. Therefore
+$\FPdim\mathcal D=|G|^2|L^*/L|$ is an integer. A fusion category with
+integer global Frobenius--Perron dimension is called
+\emph{weakly integral}; the corresponding dimension theorem says
+that every simple $X$ satisfies $\FPdim(X)^2\in\Z$.
+The Haagerup simple $\rho$ violates this necessary condition:
+\[
+ \FPdim(\rho)^2=d^2=\frac{11+3\sqrt{13}}2\notin\Z.
+\]
+A full fusion embedding preserves simplicity and these positive
+dimensions, giving a contradiction.
+\end{proof}
+
+The simplicity qualification is important: a sum of simple objects can
+have irrational squared dimension even in a weakly integral category.
+For a genuine unitary strong tensor action of $\mathcal H_3$, however,
+Proposition~\ref{prop:c-faithful-descent} already proves full
+faithfulness into a semisimple rigid target with simple unit. Thus
+sending $\rho$ to a reducible defect does not evade this particular
+Haagerup obstruction.
+
+\begin{example}[A finite-group center has noninvertible objects]
+Consider the untwisted group category $Z(\mathrm{Vec}_{S_3})$.
+Its simples are labeled by a conjugacy class $[g]$ and an irreducible
+representation $\pi$ of its centralizer; their dimensions are
+$|[g]|\dim\pi$. The identity class gives dimensions $1,1,2$.
+The transposition class has size three and centralizer $\Z_2$,
+giving $3,3$. The three-cycle class has size two and centralizer
+$\Z_3$, giving $2,2,2$. Consequently
+\[
+ \FPdim Z(\mathrm{Vec}_{S_3})
+ =1^2+1^2+2^2+3^2+3^2+2^2+2^2+2^2=36=|S_3|^2.
+\]
+Finite-group constructions can therefore produce noninvertible
+sectors while still obeying strong arithmetic restrictions. Weak
+integrality does not require every simple dimension to be an integer:
+the Ising dimensions $1,1,\sqrt2$ illustrate the distinction. Their
+squares remain integers, unlike the Haagerup value above.
+\end{example}
+
+The algebra $A$ may encode a non-diagonal pairing or a local extension;
+the proof is not restricted to the Cardy choice $A=\one$. It does
+require the proposed defects to preserve $W$ on both chiralities.
+Preserving only the total stress is weaker, and does not place a
+defect in ${}_A\mathcal C_A$. Nonrational radii or orbifolds, a new
+action breaking $W$, and asymmetric constructions without this
+specified rational category remain outside the argument. Conversely,
+within its stated framework the exclusion needs no extrapolated scalar
+gap, isolated doublet, or numerical OPE coefficient.
+
+\section{Nearby rational theories: test the retained algebra}
+\index{chiral extension!candidate tests}
+
+A central charge is a coarse invariant. The rational numbers
+$21/10$, $25/12$, $13/6$, and $44/21$ all lie near the finite
+Haagerup diagnostics, but a theory at one of those charges must
+still have the required symmetries and scalar spectrum. We now
+describe a second family of tests, complementary to the canonical
+Cardy phase test: retain a specified rational chiral algebra, allow
+its bosonic local extensions and physical non-diagonal pairings,
+and ask whether any such full theory has enough internal symmetry.
+Throughout this test assume a bosonic unitary rational full CFT with
+a unique vacuum, retaining the stated algebra in both chiralities
+and satisfying the usual completeness and sewing assumptions.
+
+The distinction between a retained algebra and a number is
+essential. Excluding full theories containing one particular
+$W$-algebra does not exclude every theory with its central charge.
+A deformation can also destroy the proposed chiral subalgebra,
+even when its ultraviolet description used it.
+
+\subsection{Why two order-three actions can be compulsory}
+
+Suppose the ordinary internal part $S$ of translation survives
+faithfully, has order three, and commutes with the full Haagerup action. It cannot
+equal $\alpha$ or $\alpha^2$, because
+\[
+ \alpha^k\rho=\rho\alpha^{-k}
+\]
+and the two objects $\rho\alpha^k,\rho\alpha^{-k}$ are distinct
+for $k=1,2$. Under the stated faithfulness assumptions,
+$\alpha,S$ generate $\Z_3^2$. If one then gauges a suitable
+order-three subgroup, a mixed anomaly can alter the extension law
+and produce $\Z_9$ rather than a direct product. An obstruction
+to every subgroup of order nine covers both possibilities. This
+discussion assumes a precise original-versus-gauged field
+dictionary; a scalar in an imposed spatially twisted sector is
+not automatically a local scalar of the original theory.
+
+\subsection{The extension and symmetry strategy}
+
+There are several logically separate steps. Integer conformal
+weight is necessary for a module to occur in a bosonic chiral
+extension, because the algebra object must have trivial twist.
+It is not sufficient: multiplication, associativity, commutativity,
+and positivity still constrain the support. A useful additional
+necessary condition is total positivity of each constituent's
+quantum dimension under all number-field embeddings. Once the
+actual extension algebras are classified, their chiral
+automorphisms and their invertible representation objects can be
+studied.
+
+For a physical rational full CFT, pass to the maximal left and
+right chiral algebras that actually occur. The full theory then
+has a multiplicity-one graph pairing
+\[
+ \HH=\bigoplus_X X\otimes\overline{F(X)}
+\]
+for a braided equivalence of the corresponding representation
+categories, with its associative OPE multiplication. A symmetry
+fixing both chiral algebras pointwise acts by a phase $\lambda_X$
+on each summand. Nonzero OPE channels require
+\[
+ \lambda_X\lambda_Y=\lambda_Z
+ \quad\hbox{whenever }N_{XY}^{Z}>0.
+\]
+Thus these phases are tensor automorphisms of the identity. In a
+modular category their group is identified with the invertible
+objects through the nondegenerate braiding. Bounding that group
+and the chiral automorphism images bounds the full internal
+symmetry. The OPE assumption is important: an arbitrary formal
+matrix commuting with $S,T$ need not provide this graph algebra.
+
+\begin{example}[All minimal-model products at $c=21/10$]
+The unitary Virasoro minimal charges are
+$c_m=1-6/[m(m+1)]$, $m\geq3$; write $M_m=M(m,m+1)$.
+A product at $21/10$ must have
+exactly three nontrivial factors. Two have charge below two;
+five have charge at least $5/2$. Four Ising factors give two,
+and replacing any by the next model raises the charge by at
+least $1/5$, overshooting $21/10$.
+
+Order the three labels. If the smallest is at least five, the
+total is at least $12/5$, which is too large. If the smallest is four, all three must
+be four. If it is three, the other charges sum to $8/5$.
+Taking the next label to be three, four, or five would require
+the last charge to be respectively $11/10$, $9/10$, or $4/5$.
+Only the last occurs, since $c_m=9/10$ would require
+$m(m+1)=60$. Larger next labels already overshoot. Hence the
+complete product list is
+\[
+ M_4^{\otimes3},\qquad M_3\otimes M_5\otimes M_5.
+\]
+This elementary classification is the beginning of the test,
+not its conclusion; non-diagonal pairings and extensions must
+still be included.
+\end{example}
+
+For three tricritical Ising factors, the only possible local
+extension supports lie in the even products of their three
+weight-$3/2$ fermion currents, a bosonic $\Z_2^2$. These add no
+weight-two fields. Chiral automorphisms can therefore permute
+the three primitive stress idempotents, with a two-group kernel.
+Their order-three part is at most one three-cycle. That cycle
+acts faithfully on suitable module classes, so a multiplicity-one
+left-right graph pairing cannot admit independent left and right
+three-cycles.
+
+There is also a short arithmetic check on the remaining symmetry
+kernel. Every symmetry in that kernel is an invertible defect
+preserving the original product algebra $V=M_4^{\otimes3}$.
+All $V$-preserving defects form a bimodule fusion category Morita
+equivalent to $\Rep(V)$, of global dimension
+$64(\varphi+2)^3$, where $\varphi=(1+\sqrt5)/2$. The smaller
+symmetry kernel need not be that whole category. An invertible
+order-three defect would give a fusion subcategory of dimension
+three. Fusion-subcategory divisibility would force
+$64(\varphi+2)^3/3$ to be an algebraic integer. Its field norm is
+\[
+ \frac{64^2\,5^3}{9},
+\]
+which is not an integer, a contradiction. Combining the chiral
+and kernel arguments excludes an internal subgroup of order nine
+throughout this retained-algebra family. The norm calculation is
+not a statement that every category of nonintegral dimension has
+no group symmetry; it uses this particular algebraic integer.
+
+For $M_3\otimes M_5^{\otimes2}$, the only integer-weight supports
+are the two weight-three $M_5$ currents and their product. Thus
+the possible extensions are indexed by the five subgroups of
+$\Z_2^2$. Resolving the local modules shows that order-nine
+symmetry forces both $M_5$ factors to extend to Potts. The
+resulting retained algebra is Ising times two Potts algebras.
+It necessarily contains a unique scalar
+\[
+ \sigma_{\mathrm I}\otimes1\otimes1,
+ \qquad \Delta=1/8,
+\]
+in every physical pairing. To see the last assertion directly,
+Potts-pair weight residues have denominator fifteen, whereas
+differences of distinct Ising weights $0,1/2,1/16$ do not.
+$T$-commutation separates three Ising blocks $N_i$ of the modular
+invariant. The vacuum diagonal block of $S$-commutation says
+that $N_0$ commutes with the Potts-pair matrix $S_{\mathrm P}$.
+The off-diagonal vacuum-row equation is
+\[
+ (S_{\mathrm I})_{0i}S_{\mathrm P}N_i
+ =N_0S_{\mathrm P}(S_{\mathrm I})_{0i}.
+\]
+The nonzero Ising vacuum row and invertibility of $S_{\mathrm P}$
+therefore give $N_i=N_0$: the invariant is
+$I_{\mathrm I}\otimes N_0$. This retains the Ising spin field
+with the vacuum Potts pair. No other scalar occurs at $1/8$, since the smallest
+nonvacuum Potts chiral weight is $1/15>1/16$. A unique Hermitian
+scalar is fixed by any odd-order symmetry: its real one-dimensional
+orthogonal action is only a sign.
+
+Consequently this second family conflicts with a limiting jointly
+neutral scalar gap above $1/8$, if both order-three actions survive.
+The chain's finite neutral gap near $.26$ motivates the test; its
+limit remains an additional premise.
+
+\subsection{Why a nearby ordinary \texorpdfstring{$W_3$}{W3} model is not enough}
+\label{sec:identification-W3}
+
+The unitary minimal algebras $W_3(p,p+1)$, $p\geq4$, have
+\[
+ c_p=2-\frac{24}{p(p+1)}.
+\]
+They approach two from below. Approximate central-charge agreement near
+two therefore motivates testing this family, while an established charge
+strictly above two would already distinguish it. Here we ask whether they
+can support the required defects while those defects preserve this
+rational $W_3$ algebra. Throughout this subsection, a full theory means
+the unitary rational sewing construction from a separable Frobenius
+algebra $A$ that is simple as an $A$--$A$ bimodule.
+
+Here is a first arithmetic filter that can be understood without the
+classification of full theories. Put
+\[
+ K_p=\Q(\zeta_{2p},\zeta_{2(p+1)}),\qquad
+ \zeta_n=e^{2\pi i/n}.
+\]
+The positive quantum dimensions of the chiral simple objects belong to
+$K_p$. In the rational sewing description by a simple separable Frobenius
+algebra $A$, a defect $X$ has normalized dimension
+\[
+ \FPdim_{{}_A\mathcal C_A}X
+   =\frac{\FPdim_{\mathcal C}X}{\FPdim_{\mathcal C}A}
+   \in K_p,
+ \qquad \mathcal C=\Rep\bigl(W_3(p,p+1)\bigr).
+\]
+The numerator and denominator use the underlying objects in
+$\mathcal C$. This also applies to a reducible defect, since sums stay
+in the same field.
+
+Only primes dividing $2p(p+1)$ can ramify in this cyclotomic field.
+On the other hand, $\Q(\sqrt{13})$ has discriminant thirteen, so
+thirteen ramifies in it. The fact used here is that a subfield cannot
+introduce a ramified prime absent from its containing field. Since
+$\sqrt{13}=2d-3$, a defect of Haagerup dimension
+$d=(3+\sqrt{13})/2$ would therefore require
+\[
+ 13\mid p(p+1).
+\]
+The first surviving height is $p=12$, with $c_p=24/13$.
+This is a necessary test, not a proof that this height works; it
+still leaves infinitely many heights, with both adjacent heights
+at least twelve.
+
+\emph{An elementary gap controls ordinary affine dimensions.}
+For affine $SU(3)$, let the \emph{height} $n$ mean level $n-3$.
+Shifted labels are positive integers $a,b$ with $a+b<n$, and
+\[
+ D_n(a,b)=\frac{\sin(\pi a/n)\sin(\pi b/n)\sin(\pi(a+b)/n)}
+ {\sin^2(\pi/n)\sin(2\pi/n)}.
+\]
+The $W_3$ dimensions are products from its two adjacent heights;
+simultaneous simple-current field identification leaves them unchanged.
+The vacuum label is $(1,1)$. The expression is symmetric in the
+positive triple $(a,b,n-a-b)$, so sort it with
+$a\leq b\leq n-a-b$. The invertible orbit has $(a,b)=(1,1)$ and
+dimension one. The fundamental and its conjugate orbits have
+\[
+ f_n=D_n(1,2)=1+2\cos(2\pi/n),\qquad
+ 1+\sqrt3\leq f_n<3\quad(n\geq12).
+\]
+Every other sorted label has $a=1,b\geq3$, or $a,b\geq2$.
+Reducing to $(1,3)$ or $(2,2)$ can only lower the dimension:
+the derivative signs of the numerator with respect to $a,b$ are those
+of $\sin((2a+b)\pi/n)$ and $\sin((a+2b)\pi/n)$, nonnegative in
+the sorted region. Moreover, with $[m]=\sin(m\pi/n)/\sin(\pi/n)$,
+\[
+ \frac{D_n(2,2)}{D_n(1,3)}=\frac{[2]^2}{[3]}>1,\qquad
+ D_n(1,3)=2\cos(2\pi/n)+4\cos^2(2\pi/n)\geq3+\sqrt3.
+\]
+Since $3<d<3+\sqrt3$, no affine simple at these heights has dimension
+$d$. Two noninvertible factors have product at least
+$(1+\sqrt3)^2>d$. This handles the diagonal Cardy theory, but not
+yet every sewing algebra.
+
+\begin{constructioninput}[Categorical classification inputs for this test]
+The unitary diagonal affine coset has its standard full branching rule
+and extension/local-module correspondence. The complete $W_3$ modular
+invariant classification has exceptional affine heights $8,12,24$.
+At heights at least twelve away from these exceptions, the
+indecomposable module categories of the
+ordinary affine $SU(3)$ fusion category are the simple-current cases
+and their products with the invertible charge-conjugation module
+category. Tensoring by the latter preserves the dual fusion category
+up to equivalence. These are classification inputs; the reduction below
+explains why they apply to the actual sewing algebras here.
+\end{constructioninput}
+
+\emph{Pass from torus matrices to actual sewing algebras.}
+Choose the two adjacent heights as $n,q$, with $3\nmid q$; their
+order need not be increasing. Let $\mathcal A_n$ be the affine
+$SU(3)$ category at height $n$, and $\mathcal D_q$ the triality-zero
+subcategory at height $q$. Triality is the central $\Z_3$ charge,
+equal to $a+2b$ modulo three in shifted labels. Since $3\nmid q$,
+the pointed $\Z_3$ subcategory $\mathcal P_q$ is nondegenerate and
+$\mathcal A_q\simeq\mathcal P_q\boxtimes\mathcal D_q$.
+
+The coset/extension theorem realizes the $W_3$ category as local
+modules for the diagonal $\Z_3$ graph algebra in
+\[
+ \mathcal A_p\boxtimes\mathcal A_4
+                 \boxtimes\mathcal A_{p+1}^{\mathrm{rev}}.
+\]
+This is an algebraic realization, not an inference from matching
+$S,T$. Its reconstruction premise holds because the denominator-vacuum
+branch of the numerator vacuum contains only the $W_3$ vacuum. The
+branching rule reconstructs exactly the three simultaneous
+simple-current translates of the vacuum. Here charge conjugation on
+the reversed factor lets us write the same current exponent in all
+three graph labels. Their graph multiplication
+is unique up to isomorphism because $H^2(\Z_3,\C^*)=0$.
+
+After extracting $\mathcal D_q$, take objects with trivial
+$\mathcal P_q$ component. Locality uniquely determines their
+$\mathcal A_4$ component from their triality. This correction changes
+the braiding but not the affine associator: the pointed height-four
+category has a realization with trivial associator and braiding
+$c(a,b)=e^{2\pi iab/3}$ on $\Z_3$. Induction is fully
+faithful on these objects, because its Hom formula sums over the three
+graph translates and only the trivial translate has trivial
+$\mathcal P_q$ component. The local-category dimension is
+$\FPdim(\mathcal A_n)\,3\,3/3^2=\FPdim(\mathcal A_n)$, so no
+additional objects remain. Consequently
+\[
+ \mathcal C\simeq\widetilde{\mathcal A}_n
+                      \boxtimes\mathcal D_q^{\pm},
+\]
+where $\widetilde{\mathcal A}_n$ is monoidally equivalent to ordinary
+$\mathcal A_n$, with a triality correction to its braiding; the sign
+allows reversal of braiding. Neither change alters dimensions.
+
+Let $\mathcal L$ be the Lagrangian full center of any sewing algebra.
+Among the conductor-compatible heights, the classified coefficient
+matrices have the form $M_n\otimes I_{\mathcal D_q}$, up to label
+conjugation. Intersect $\mathcal L$ with
+$\mathcal D_q\boxtimes\mathcal D_q^{\mathrm{rev}}$, interchanging these
+two factors if the braiding was reversed. The intersection
+theorem makes this a commutative separable algebra, also called an
+\emph{\'etale algebra}, not just a subobject.
+Its graph underlying object has dimension $\FPdim(\mathcal D_q)$,
+so it is already Lagrangian in that factor. After condensing it,
+the factor has local category $\mathrm{Vec}$: no nontrivial object
+remains for a mixed gluing. The classification of connected
+\'etale algebras in a product therefore factors $\mathcal L$ as an
+algebra. A possible graph autoequivalence gives an invertible module
+category and does not change dimensions. Thus every simple defect has
+dimension $uv$, where $u$ is a simple dimension in a Morita dual of
+ordinary $\mathcal A_n$, and $v$ is an ordinary dimension in
+$\mathcal D_q$. This is the step that a factorized partition function
+alone would miss.
+
+\emph{All nonexceptional heights now follow from the gap.}
+In the classified simple-current cases, the algebra has support
+$1$ or $1+J+J^2$. A length-three orbit gives defect dimension
+$D_n(a,b)$. At a fixed point the possible dimensions are
+$D_n(a,b)/3$ or $D_n(a,b)$. The stabilizer of the combined left and
+right action is $\Z_3$ on a free orbit, and $\Z_3^2$ at a fixed
+point. Its projective irreducible representations have dimension one,
+or dimension three when the latter group's commutator pairing is
+nondegenerate. Dividing the underlying-object dimension by
+$\FPdim A=3$ gives the stated possibilities.
+A fixed point requires $3\mid n$
+and $(a,b)=(n/3,n/3)$, and
+\[
+ \frac{D_n(n/3,n/3)}3
+ =\frac{\sqrt3}{8\sin^2(\pi/n)\sin(2\pi/n)}
+ \geq3+2\sqrt3>d.
+\]
+Every allowed $u$ or $v$ is therefore one, lies in $[1+\sqrt3,3)$,
+or exceeds $d$; two noninvertible factors are too large. The affine
+classification includes all module categories at these heights,
+including the charge-conjugation cases, so no sewing algebra is omitted.
+
+\emph{Only the pair $(12,13)$ requires a separate finite input.}
+The other exceptional heights, eight and twenty-four, have no adjacent
+height divisible by thirteen. At height twelve, all affine dimensions
+lie in $\Q(\sqrt3)$: the fundamental and its dual generate the fusion
+ring and both have dimension $1+\sqrt3$. Every Morita-dual simple
+dimension $u$ also lies there, by the dimension-ratio formula.
+At height thirteen, $v=D_{13}(a,b)\in\Q(\zeta_{13})$, whereas
+\[
+ \Q(\sqrt3)\cap\Q(\zeta_{13})=\Q.
+\]
+If $uv=d$, then $u=d/v$ belongs to both fields, so $u$ is rational
+and $v$ must be a rational multiple of $d$.
+
+\begin{constructioninput}[The exact height-thirteen comparison]
+For all sixty-six pairs $a,b>0$, $a+b<13$, the three invertible
+labels $(1,1),(1,11),(11,1)$ have dimension one; all other
+sixty-three dimensions have degree six over $\Q$. None is therefore
+a rational multiple of the quadratic number $d$.
+
+The finite verification takes place exactly in
+$\Q[z]/(1+z+\cdots+z^{12})$, with $z=\zeta_{13}$ and
+$q_{13}=-z^7=e^{\pi i/13}$. It evaluates
+$[m]=(q_{13}^m-q_{13}^{-m})/(q_{13}-q_{13}^{-1})$ and
+$D_{13}(a,b)=[a][b][a+b]/[2]$. Galois substitution gives exact
+degrees; reality and invariance under $z\mapsto z^3$ test membership
+in $\Q(\sqrt{13})$. This is an exhaustive finite algebraic input,
+not a comparison of approximate decimal dimensions.
+The textbook imports its archived exact certificate without replaying
+that calculation; Appendix~\ref{app:verification} explains this scope.
+\end{constructioninput}
+
+For example, the fundamental value is $D_{13}(1,2)=1+z+z^{-1}$.
+It generates the real subfield of $\Q(\zeta_{13})$, which has degree
+six; the complete finite input extends this check to every other label,
+including labels outside the triality-zero subcategory.
+
+This disposes of every sewing algebra at the exceptional pair,
+including both exceptional modular-invariant types at height twelve.
+The argument even excludes a reducible defect of dimension $d$.
+In the nonexceptional cases every noninvertible simple has dimension
+at least $1+\sqrt3>d-1$, so such an object could only be a single
+noninvertible simple, already excluded, or a sum of invertibles of
+integer dimension. In the exceptional case a summand with
+noninvertible $v$ again exceeds $d-1$ and would have to be the whole
+object; if every $v$ is invertible, the sum stays in $\Q(\sqrt3)$.
+
+Thus a unitary strong tensor Haagerup action preserving the stated
+rational $W_3$ algebra is excluded for every $p\geq4$ and every
+rational sewing algebra in the stated framework. A tensor functor
+preserves the positive dimension, so its image of $\rho$ would have
+supplied the forbidden dimension $d$. This says nothing about
+Virasoro-only defects of a $W_3$ theory or another CFT at the same
+central charge. It is also different from Chapter~\ref{ch:cosets},
+where an explicitly constructed irrational factor lacked an independent
+spin-three vacuum generator.
+
+\subsection{Principal \texorpdfstring{$W$}{W} algebras and an arithmetic filter}
+
+The unitary principal type-$A$ charges are
+\[
+ c(N,k)=(N-1)\left[1-
+ \frac{N(N+1)}{(N+k)(N+k+1)}\right],\qquad k\geq1.
+\]
+At $k=1$ they lie below two. For $N=2,3$ their charge is at
+most two. For $N\geq7,k\geq2$,
+$c(N,k)\geq c(7,2)=34/15>2.2$. Checking $N=4,5,6$
+therefore leaves exactly $W_4(8,9)$ at $13/6$ and
+$W_6(8,9)$ at $25/12$ in $2<c<2.2$.
+
+The extension problem cannot be solved by looking only at the
+original simple currents. In the $W_4$ coset
+$(SU(4)_4\otimes SU(4)_1)/SU(4)_5$, some noncurrent
+integer-weight labels initially appear possible. A typical
+denominator quantum dimension among these is
+\[
+ d_\mu=\frac{\sin^2(4\pi/9)}
+ {\sin(\pi/9)\sin(2\pi/9)}.
+\]
+Its Galois image multiplying sine arguments by five is negative:
+the numerator remains positive, while
+$\sin(5\pi/9)\sin(10\pi/9)<0$. Choosing the common-field
+automorphism $113\equiv1\pmod{16}$ and
+$113\equiv5\pmod{18}$ fixes the numerator $SU(4)_4$
+dimensions while producing that negative denominator image.
+It is an actual automorphism of the common cyclotomic field
+because $\gcd(113,288)=1$.
+The corresponding coset objects fail total positivity and cannot
+occur in an extension algebra. This is an exact sign argument,
+without a floating-point test near zero.
+
+After that filter, the surviving extension algebras transfer to
+the known $SU(4)_4$ list, including its exceptional
+$SO(15)_1$ extension. All their added fields begin at weight
+four, leaving one real weight-three generator. An odd-order
+chiral automorphism fixes it, as it fixes the stress; these
+generate the original principal algebra as a vertex algebra.
+The remaining extension automorphisms and invertible modules
+are two-groups. Thus every physical full theory retaining this
+principal $W_4$ algebra lacks order-three internal symmetry.
+
+\begin{constructioninput}[Completed rational-algebra tests]
+The completed exact label and extension audits establish the
+following restrictions, including bosonic local chiral extensions
+and physical non-diagonal pairings:
+\begin{center}
+\begin{tabular}{p{.34\textwidth}p{.55\textwidth}}
+Retained algebra & Restriction\\\hline
+$M_4^{\otimes3}$, $c=21/10$
+ & No internal subgroup of order nine.\\[3pt]
+$M_3\otimes M_5^{\otimes2}$, $c=21/10$
+ & Order-nine symmetry forces the two Potts extensions and a
+ jointly neutral scalar of dimension $1/8$; $\Z_9$ is absent.\\[3pt]
+$W_6(8,9)$, $c=25/12$
+ & No internal subgroup of order nine.\\[3pt]
+$W_4(8,9)$, $c=13/6$
+ & No internal symmetry of order three.\\[3pt]
+$W(E_8)(35,36)$, $c=44/21$
+ & No internal symmetry of order three; every proper bosonic
+ chiral extension is excluded by the exact Galois sign test.
+\end{tabular}
+\end{center}
+The finite exhaustive label calculations and the quoted extension
+classifications are inputs to this inventory. The preceding
+examples explain the main methods; they do not independently
+reproduce every label in those audits.
+\end{constructioninput}
+
+For $W_6$, the only nontrivial bosonic extension is by a $\Z_3$ of
+integer-spin currents. Its fixed-point resolution produces no
+new invertibles beyond a $\Z_2$; its possible chiral
+three-cycle acts faithfully on resolved module classes. This
+again prevents two independent left-right three-cycles. For the
+$E_8$ principal algebra, all five nonvacuum integer-weight
+supports have a negative Galois conjugate. Its distinct real
+strong-generator weights $2,8,12,14,18,20,24,30$ let one
+inductively fix every generator under an odd-order automorphism,
+and its representation category has no nontrivial invertible
+objects. These are different mechanisms leading to the stated
+symmetry restrictions.
+
+\subsection{Why the exceptional \texorpdfstring{$E_6$}{E6} branch stays separate}
+
+The principal coset
+\[
+ V=\frac{(E_6)_3\otimes(E_6)_1}{(E_6)_4}
+\]
+also has $c=21/10$, but the previous Galois filter does not
+dispose of it. Its six integer-weight supports are the vacuum,
+two currents of weight eight, a conjugate pair $X,X^*$ of
+weight two, and a field $Y$ of weight three. All pass the necessary
+total-positivity test. Moreover a genuine exceptional affine
+$(E_6)_4$ extension supplies a commutant algebra for a proposed
+coset extension. Under the specified categorical transfer, the
+following partial-category calculation applies. This does not
+claim an independent construction of every intermediate VOA.
+The branch cannot be dismissed by
+assuming that all extensions are simple-current extensions.
+
+The unextended diagonal theory and the diagonal ordinary current
+extension have a scalar at $\Delta=1/10$. That is a useful test
+of those pairings, not every intermediate algebra. Under the
+specified exceptional commutant-algebra transfer, a partial
+extension has category
+\[
+ \Rep(V_Y)\simeq
+ \mathcal C((E_6)_3)\boxtimes\mathrm{Ising}_{5/2}.
+\]
+The subscript specifies the Ising modular category with fermion
+weight residue $1/2$ and spin-field residue $5/16$; it is not a
+claim that an ordinary critical Ising factor of charge $1/2$
+appears as a tensor factor of this VOA.
+Its exact twist residues imply no positive local scalar below
+$7/45$ and none in $(9/40,2/5)$ in any physical pairing retaining
+that extension. Under the further fully condensed branch, the
+category is
+\[
+ (\mathrm{Fib}^{\mathrm{rev}})^{\boxtimes3}
+ \boxtimes\mathrm{Ising}_{5/2},
+\]
+and its allowed positive scalar dimensions below one are contained
+in
+\[
+ \{1/5,\ 9/40,\ 2/5,\ 3/5,\ 5/8\}.
+\]
+
+These constraints need only twists, once the braided category of
+the retained algebra is established. A local scalar has
+$h=\bar h=\Delta/2$; if $0<\Delta<1$, its actual chiral
+weight lies in $(0,1/2)$ and is determined there by its residue
+modulo one. Summing the Fibonacci residues
+$0,3/5,1/5,4/5$ with the Ising residues $0,1/2,5/16$
+gives the last list. A pairing may omit entries; it cannot add a
+residue absent from the category.
+
+As a consistency check, the partial category has topological
+central charge
+$78/5+5/2=181/10\equiv21/10\pmod8$.
+The fully condensed category gives
+$3(-14/5)+5/2=-59/10\equiv21/10\pmod8$.
+Both agree with the coset charge modulo eight. This necessary
+check does not turn either categorical calculation into a
+uniquely identified VOA or full theory.
+
+The charged scalar near $.13$ and neutral scalar near $.26$
+would each test these exceptional branches if their limits are
+established. Yet a full CFT can retain an algebra that is
+mathematically extendible without containing its largest possible
+extension. One cannot impose the fully condensed twist list on
+every intermediate theory. Nor does equality of representation
+categories identify VOAs, characters, OPEs, or chiral
+automorphisms. A complete analysis of every intermediate algebra
+and full pairing remains outside the completed result.
+
+\section{A constructive ultraviolet family: three Potts order fields}
+
+The charge pattern also suggests an explicit organizing model. Start
+with three critical three-state Potts CFTs, total $c=12/5$, and their
+normalized order fields $\sigma_i$ of dimension $2/15$. Preserve
+\[
+ \alpha:(\sigma_1,\sigma_2,\sigma_3)
+       \mapsto\omega(\sigma_1,\sigma_2,\sigma_3),
+\]
+and
+$S:(\sigma_1,\sigma_2,\sigma_3)
+\mapsto(\sigma_1,\omega\sigma_2,\omega^2\sigma_3)$.
+Then $\phi=\sigma_1$, $\psi=\sigma_2$, $\eta=\sigma_3$ have the
+desired ordinary charges. Reflection combined with exchanging
+copies two and three gives the desired parity.
+
+The neutral scalar $W=\sigma_1\sigma_2\sigma_3$ has dimension
+$2/5$. A Hermitian perturbation $uW+\bar uW^\dagger$ can have a
+genuine relative phase once the three self-cubic phases are fixed.
+Thermal anisotropy preserving the exchange of copies two and three
+is needed to split phi from psi/eta. The relevant couplings
+generated by products of $W$ must also be retained; a one-complex-
+parameter action is not closed under renormalization.
+
+The missing charge line has a simple composite basis
+\[
+ w_1=\sigma_2\sigma_1^\dagger,\quad
+ w_2=\sigma_3\sigma_2^\dagger,\quad
+ w_3=\sigma_1\sigma_3^\dagger,
+\]
+all of dimension $4/15$. Choose the common Potts-field phase so that
+the self cubic $c_\sigma$ is real and positive. If
+$\chi=\sum_ia_iw_i$ with $\sum_i|a_i|^2=1$, factorization gives
+\[
+ c_\chi=c_\sigma^2\sum_ia_i^3+6a_1a_2a_3,
+ \qquad\lambda=a_1,\quad\kappa=a_2,\quad\nu=0.
+\]
+The six mixed permutations explain how a composite field can have
+a large self cubic. At the ultraviolet point, however,
+$|\lambda|\leq1$, and the scalar shells have extra degeneracies.
+The observed finite chain tensor would require substantial
+interaction effects and a demonstrated infrared splitting.
+
+A strong-coupling clock reduction of this family has an ordinary
+$C_3^2$ duality whose line dimension, if topological at a critical
+point, is $\sqrt9=3$. It is not the Haagerup rho dimension, and its
+fusion square is the sum of nine invertible group lines. Ordinary
+self-duality therefore does not supply the missing Haagerup
+junctions or prove a continuous transition. The ultraviolet family
+is a concrete place to look, not an identified CFT.
+
+\section{The remaining identification problem}
+
+In the completed October 5 research record, the physical regular
+$\mathcal H_3$ chain $H=-\sum P_\rho$ has no identified continuum CFT.
+Its data suggest a long nearly critical regime, with several
+central-charge diagnostics near two but substantial drift,
+separated light charge shells, and a detailed nontrivial mixed
+three-point tensor. They do not yet establish ultimate
+masslessness, a controlled exact central charge, or continuum
+OPE coefficients with error bounds.
+
+\begin{numericalrecord}[What the latest finite comparisons add]
+The $64$-state Ward runs empirically cover all four predetermined
+descendant-energy windows at $L=12$ and the first three at $L=15$.
+The widest $L=15$ window remains truncated. Agreement between
+independent starts and recovery of known states support this
+coverage, but do not certify the entire low spectrum.
+Intermediate filtering improves several energy and norm
+comparisons while leaving operator-dependent amplitude
+discrepancies. A vector can align closely with the proposed
+Ward direction and still have the wrong normalized source
+amplitude; the descendant assignment must satisfy both tests.
+
+Two invariant local directions,
+\[
+ V_1=\sum_jP_{\one,j},\qquad
+ V_{\rm diff}=\sum_j\bigl(P_{\alpha\rho,j}-P_{\alpha^2\rho,j}\bigr),
+\]
+both couple strongly to the same chosen invariant-state candidate.
+Their stress-subtracted diagonal responses on four fixed states
+give six nonzero pairwise minors at $L=12,15$ in the stored
+floating-point data, indicating two finite response directions. This tests a concrete
+common-operator model at those sizes. It does not establish two
+infrared primaries or two marginal couplings; subleading fields
+and finite-size corrections can produce two finite response
+directions even when only one field dominates in the infrared.
+Separate equal-energy comparisons in the two charged families
+show small decreasing catalog-wide deviations from proportionality over
+$L=9,12,15$. These aggregate diagnostics do not bound each individual
+pair; nonzero individual discrepancies are retained.
+They support further common-field tests but prove neither an
+exact operator identity nor a limiting OPE normalization.
+
+Two stationary module-based variational trials with height-fiber
+dimensions $18/54$ have visible charged height correlations
+through separation $513$. One has a pronounced period-three
+pattern; the other is nearly uniform at the longest measured
+distances. These are direct physical insertions, so they add
+information beyond auxiliary transfer eigenvalues. Both trials
+are finite-capacity local optimization endpoints. The observations
+do not establish an infinite-distance plateau, a ground-state
+vacuum count, or a bulk gap. An ordered finite-bond approximation
+can also occur when the exact chain is critical.
+\end{numericalrecord}
+
+The constructive algebraic results are valuable on their own. The
+exact module tensors and their gapped parent show that symmetry
+alone does not settle the phase. The $c=8$ construction has its own
+finite and analytic hypotheses. The irrational chiral axis near
+$2.025004294$ has a definite stress tensor but still needs the
+full local completion and defect descent required for a chain
+identification. Gaussian bounds, crossing functionals, and Cardy
+tests can reject specified dictionaries when their premises are
+established; they cannot select a unique theory by elimination
+without an exhaustive classification.
+
+To make a limiting primary-field dictionary concrete, choose a candidate full CFT and a
+fixed scaling-dimension cutoff. Track the entire low-energy space below
+that cutoff along a specified size sequence, including the sectors
+required by the proposal. A single assignment of these spaces must
+match rescaled energies, residual momenta, and symmetry actions.
+Near-degenerate multiplets permit a change of basis; they do not permit
+a different field identification for each observable. The vacuum and
+velocity must likewise be shared.
+
+For each proposed continuum field, choose a controlled sequence of
+lattice operators and its normalization and mixing coefficients. Use
+that same choice for vacuum-to-field amplitudes, matrix elements
+between primary states, and descendant matrix elements. The first
+group fixes the two-point normalization; the second tests OPE
+coefficients; the third tests the Ward identities and descendant
+assignment. Fitting an independent scale to each matrix element would
+discard precisely the consistency that makes this a field dictionary.
+Several microscopic recipes for the same field provide additional
+checks when their separately fixed limits agree.
+
+A correction model should then explain several observables using the
+same irrelevant or running couplings and predict levels or amplitudes
+not used in the fit. Example~\ref{ex:scaling-Ising-calibration} shows
+that two valid finite-size calibrations can approach the same limit
+from opposite sides. Example~\ref{ex:full-current-logarithms} shows
+that one running coupling can produce different logarithms in different
+fields. These are lessons about consistency, not correction exponents
+to assign to the Haagerup chain.
+
+A finite, mutually consistent table can support a strong numerical
+identification. A proof that the chain has that scaling limit requires
+further control of convergence of the state and operator data,
+compatibility as the cutoff increases, and the resulting continuum
+correlations. The existence of the candidate CFT is a separate
+question from this convergence. Finally, the lattice lines must have
+the claimed limiting action and junction spaces, with associators
+equivalent to the physical $\mathcal H_3$ data. Agreement of loop dimensions
+or fusion multiplicities alone does not establish that part of the
+dictionary.
+
+For a gapped interpretation with $q$ thermodynamic vacua, choose
+periodic sizes compatible with the proposed spatial period and
+boundary or flux sector. Along that size sequence the corresponding
+target is a complete collapsing cluster,
+$E_a(L)-E_0(L)\to0$ for $0\leq a<q$, separated from a positive
+bulk scale
+\[
+ \liminf_{L\to\infty}\bigl(E_q(L)-E_0(L)\bigr)>0.
+\]
+The energies are ordered with multiplicity. A period-three ordered
+phase, for example, can force a domain wall on rings whose length is
+not divisible by three; those rings need a separate spectral analysis.
+Example~\ref{ex:gapped-clock-frustration} shows this effect exactly
+in a commuting clock Hamiltonian.
+Connected lengths within
+individual pure vacua must stay finite; a symmetric cat can retain
+long-range order across the whole vacuum cluster. The exact rank-four
+comparison module does not predetermine the number of vacua of the
+physical projector Hamiltonian. The critical and gapped alternatives
+both call for consistent state, operator, and symmetry data.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:identification-product}
+Derive the product-theory predictions for $\Delta_\psi$,
+$\lambda$, and $I_\lambda$. Explain which of them survive an
+arbitrary rephasing of the three fields.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:identification-product]{Solution on page~\pageref*{sol:ex:identification-product}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:identification-Narain}
+Prove that a totally isotropic subspace of a real vector space of
+signature $(2,2)$ has dimension at most two by projecting to one
+positive definite factor. Explain why the strict light-dimension
+inequality is needed to turn the integral pairing into zero.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:identification-Narain]{Solution on page~\pageref*{sol:ex:identification-Narain}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:identification-triad}
+Count the charge-conserving triples in the equilateral vertex
+example and recover $2/\sqrt3$. Why does this not contradict the
+unequal-shell theorem?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:identification-triad]{Solution on page~\pageref*{sol:ex:identification-triad}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:identification-crossing}
+Derive the functional expression from the block Casimir identities.
+Check the displayed rational lower bound $.0118155$. State exactly
+which unmeasured continuum assumptions are needed to apply it to
+the lattice chain.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:identification-crossing]{Solution on page~\pageref*{sol:ex:identification-crossing}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:identification-orbifold}
+For asymmetric rotation fractions $(1/12,5/12)$, compute the
+two oscillator ground weights. Compare their sum with the
+lower bound on a scalar dimension and explain the difference.
+Why is an order-two determinant character trivial on an
+order-three element of the abelianization? Finally recover
+the charged bound $2/\sqrt3$ from the fixed real axis and the
+Hermitian parent bound, keeping the normalization factors.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:identification-orbifold]{Solution on page~\pageref*{sol:ex:identification-orbifold}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:identification-Potts}
+Derive the cubic of $\chi=\sum_ia_iw_i$ in the three-Potts example
+by independent charge conservation in the three factors. Show why
+a large self cubic does not imply a large mixed coefficient
+$\lambda$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:identification-Potts]{Solution on page~\pageref*{sol:ex:identification-Potts}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:identification-norm}
+Let $\varphi=(1+\sqrt5)/2$. Compute the field norms of
+$\varphi+2$ and $64(\varphi+2)^3/3$. Explain the
+algebraic-integer obstruction to an order-three fusion
+subcategory in the tricritical Ising defect kernel. Which extra
+argument is needed to control symmetries that act nontrivially
+on the chiral algebra?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:identification-norm]{Solution on page~\pageref*{sol:ex:identification-norm}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:identification-residues}
+Combine the twist residues $0,3/5,1/5,4/5$ and
+$0,1/2,5/16$ and recover the displayed possible scalar
+dimensions strictly between zero and one. Explain why the result
+is a necessary list and why it applies only when the specified
+extended algebra is actually retained by the full CFT.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:identification-residues]{Solution on page~\pageref*{sol:ex:identification-residues}.}}\par
+\end{exercise}

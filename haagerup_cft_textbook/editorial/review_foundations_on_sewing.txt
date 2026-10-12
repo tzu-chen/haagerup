@@ -1,0 +1,379 @@
+Independent review of r07_defects, r08_sewing, and r09_notation
+Reviewer: scope_foundations. Date: 2026-10-05, 17:33--17:42 UTC.
+Line numbers refer to the snapshot read at the beginning of this review.
+
+I read all three chapters, compared the defect formulas with the original
+analytic manuscript and c8_physics_20260927/defects.tex, and checked the
+Ising formulas and several modular/annulus identities by hand. No numerical
+or symbolic process was run, and no root chapter was edited.
+
+Summary
+=======
+The displayed Ising blocks, crossing matrix, monodromy phases, pairing, and
+normalized OPE coefficient are consistent. The defect eigenvalues, invariant
+projector, twining/twisting transformation, restriction multiplicities,
+Haagerup line matrices, self-annulus, and boundary entropy normalization also
+check out. The main requested repairs concern conventions and hypotheses,
+rather than incorrect numerical formulas. The glossary definition of a
+primitive transfer map needs an actual correction. Some short calculations
+below would make the chapters more self-contained without adding references.
+
+1. Ising normalization and crossing: checked, with two useful completions
+=======================================================================
+
+1.1 r08_sewing.tex:48--63, 97--104 -- define the correlator and its two-point
+normalizations explicitly.
+The formulas are correct for
+
+    G(z,zbar)=<sigma(infinity) sigma(1) sigma(z,zbar) sigma(0)>,
+    <sigma(z,zbar)sigma(0)>=|z|^(-1/4),
+    <epsilon(z,zbar)epsilon(0)>=|z|^(-2),
+
+with sigma(infinity)=lim_{|w|->infinity}|w|^(1/4)sigma(w,wbar).
+The full sigma has (h,hbar)=(1/16,1/16); full epsilon has (1/2,1/2).
+The chiral epsilon label denotes the weight-one-half representation. State
+these conventions before the radical formulas. Without the insertion
+positions and two-point normalizations, the quoted absolute OPE coefficient
+is not intrinsically fixed, even though the text calls it normalized.
+
+Independent expansion gives
+
+    F_1=z^(-1/8)(1+z^2/64+...),
+    F_epsilon=(1/2)z^(3/8)(1+z/4+...).
+
+Thus the absence of a linear vacuum correction, both exponents, and the
+energy coefficient 1/4 in |F_epsilon|^2 are correct. In the stated unit
+two-point normalization, |C_sigma,sigma,epsilon|=1/2 follows.
+
+1.2 r08:66--73 -- the missing BPZ equation can be supplied in two lines.
+The null vector (L_-2-(4/3)L_-1^2)|sigma> is correct. For the fixed-position
+chiral correlator f(z), Ward identities yield
+
+    (4/3) f'' = (2z-1)/(z(1-z)) f' + h/[z^2(1-z)^2] f,
+    h=1/16,
+
+or equivalently
+
+    f'' + 3(1-2z)/(4z(1-z)) f'
+        - 3/(64z^2(1-z)^2) f = 0.
+
+Here the derivatives at the insertions 0 and 1 become respectively
+(z-1)f'+2hf and -zf'-2hf by global Ward identities. These substitutions
+explain the ODE without introducing additional machinery. Its indicial
+equation is r(r-1)+(3/4)r-3/64=0, with roots -1/8 and 3/8.
+This is a high-value addition: the current paragraph says an ODE exists,
+but a textbook reader can readily follow the actual equation.
+
+1.3 r08:75--104 -- crossing and monodromy check.
+On 0<z<1 write z=sin^2(theta), 0<theta<pi/2. After removing the common
+[z(1-z)]^(-1/8), the two blocks are cos(theta/2) and sin(theta/2).
+Under z->1-z, theta->pi/2-theta. The ordinary sine/cosine angle formulas
+give exactly the displayed Hadamard matrix, including its signs.
+
+The local powers give monodromy diag(exp(-pi i/4),exp(3pi i/4)); its two
+eigenvalues have ratio -1, so every off-diagonal entry of the Hermitian
+pairing is excluded. F^t diag(a,b) F has off-diagonal entry (a-b)/2,
+forcing D=aI; positivity and vacuum normalization give D=I. These steps
+are correct. For a general complex fusing matrix and the convention
+G=F_vector^t D conjugate(F_vector), the invariance equation is
+M^t D conjugate(M)=D; the simpler printed F^tDF works because this F is real.
+No repair is needed for the Ising calculation itself.
+
+1.4 A branch-free closed form also verifies the other crossing generator.
+The final result can be written
+
+    G(z,zbar)=sqrt(1+|z|+|1-z|)
+                  /[sqrt(2) |z(1-z)|^(1/4)].
+
+Indeed, with w=sqrt(1-z),
+(|1+w|+|1-w|)^2=2(1+|1-z|+|z|). This formula makes single-valuedness
+manifest and shows both
+
+    G(1-z,1-zbar)=G(z,zbar),
+    G(z,zbar)=|z|^(-1/4) G(1/z,1/zbar).
+
+The second equation includes the external-field conformal prefactor. The
+chapter currently checks the first generator explicitly; adding this
+formula completes a genuinely elementary crossing example and prevents
+readers from forgetting such prefactors in other normalizations.
+
+2. Defect categories: state the opposite convention and preservation scope
+========================================================================
+
+2.1 r07_defects.tex:193--202 -- define C^op here or in the glossary.
+In C boxtimes C^op, 'op' reverses tensor order, not the arrows of the
+underlying category. This differs from 'rev' on a braided category, which
+reverses the braiding and twist. Neither notation is currently defined in
+r09, and they appear in adjacent chapters.
+
+A short derivation is available from the original analytic argument.
+For T_(x,y)(m)=x tensor m tensor y,
+
+    T_(x,y) T_(x',y')(m)
+      = (x tensor x') tensor m tensor (y' tensor y).
+
+Thus (x,y) tensor (x',y')=(xx',y'y), explaining the reversed right order.
+The canonical-algebra double-centralizer theorem identifies these
+Z(C)-module endofunctors with A-bimodules. The first-factor embedding is
+x->(x,1). This is both a useful proof sketch of the 36 count and a concrete
+definition of the convention. Source: hi_cft_c8_manuscript_analytic.tex:
+947--964.
+
+2.2 r07:185--202 and r09:88--89 -- keep the chiral preservation hypothesis
+attached to the 36-object count.
+These are the A-A bimodule defects for the selected full rational extension,
+preserving the specified U chiral structure (on the corresponding two sides),
+not a classification of every possible E8 defect or every defect preserving
+only the stress tensor. In particular they need not preserve the enlarged
+E8 current algebra. The chapter already states the last distinction well;
+one sentence identifying the counted class as U-linear rational defects
+would settle the scope. Also retain the selected H' embedding: equality of
+the abstract holomorphic VOA with E8 does not identify it with the original
+H/U extension. The current source conventions correctly maintain that point.
+
+2.3 r07:10--11, 38--46, 185--240 -- distinguish the two uses of twelve.
+There are twelve Verlinde lines in the diagonal U full theory. The selected
+six-line Haagerup action on the E8 full theory has twelve center/tube charges.
+These are both indexed by Rep(U)=Z(H3), but their physical Hilbert spaces
+are different: M_i tensor conjugate(M_i) versus
+M_i tensor conjugate(H'). The chapter explains both constructions correctly,
+but one explicit comparison sentence before the extension section would
+prevent a beginner from identifying their sector partition functions.
+
+2.4 r07:213--224 -- the restriction and twisted-space identifications are
+correct under the canonical extension/defect construction.
+Free--forgetful adjunction gives Hom_U(M_mu,Rx)=Hom_C(F(M_mu),x), hence
+the stated multiplicity decomposition. The physical identification of the
+first-factor twisted space with Rx tensor conjugate(H') additionally uses
+the rational defect construction; it does not follow merely from equality
+of modular transformation matrices. This hypothesis is present implicitly
+through the preceding section and could be recalled in the introducing
+sentence, as the original physics source does.
+
+2.5 r07:287--299 -- the annulus formula has the correct dual and normalization.
+An illuminating one-line derivation is
+
+    Hom_C(F(M_mu) tensor x,y)
+       = Hom_C(F(M_mu),x* tensor y)
+       = Hom_U(M_mu,R(x* tensor_A y)),
+
+where the central half-braiding moves F(M_mu) past x as required. This
+explains why x* must occur, rather than importing it from a commutative
+Verlinde ring. Since dim_U Rz=dim(A) dim_C z and S00 dim(A)=1, the closed
+vacuum coefficient is d_x d_y, giving the printed positive g_x=d_x.
+The self-annulus coefficients (1,4,5,3,3,3,3,...,3), its nine weight-1/3
+states, and the invertible self-annulus chi_E8 agree with the fusion rules.
+
+3. Sewing algebra hypotheses and the two different associators
+============================================================
+
+3.1 r08_sewing.tex:41--44 -- explicitly distinguish chiral-block F from
+the six-line H3 F.
+For U conformal blocks the fusing matrices belong to Rep(U)=Z(H3).
+For junctions of the selected six symmetry lines they belong to H3 itself.
+These are related by the center construction, but they are not the same
+matrices: in particular the 4x4 rho recoupling block in f02 is not a
+four-point conformal-block matrix for arbitrary U primaries. This sentence
+would connect the prerequisites to the main construction at precisely the
+point where readers are most likely to overidentify the two meanings of F.
+
+3.2 r08:115--122 -- an abstract Frobenius coproduct is not automatically
+an adjoint.
+The symmetric special Frobenius framework applies to a modular tensor
+category attached to an existing rational chiral theory and organizes its
+oriented sewing data. Frobenius relates multiplication to a compatible
+comultiplication. Only in the chosen positive dagger/Q-system structure may
+one identify that comultiplication with the adjoint, up to normalization.
+The current phrase 'its adjoint splitting' runs those two levels together.
+
+Repair: write 'its compatible comultiplication; in the unitary Q-system
+normalization this is the adjoint of multiplication'. State once that the
+chiral theory and its conformal blocks are already supplied: an abstract
+modular category plus a Frobenius algebra does not construct the analytic
+chiral CFT from scratch. In this book those chiral and positivity hypotheses
+are supplied by the preceding construction and analytic chapters.
+
+The boundary/module and defect/bimodule dictionary matches the primary FRS
+framework directly checked at https://arxiv.org/abs/hep-th/0204148.
+The orientation qualifier matters: unoriented surfaces need extra reversion
+data (https://arxiv.org/abs/math/0511590). No need to develop that extra
+theory; simply say 'oriented' when first stating the framework.
+
+3.3 r08:131--134 -- commutative and twist-free alone are not the full
+extension hypotheses.
+Recall connectedness and separability, and the positive Q-system structure
+for a unitary extension. The earlier chapters establish all of these for
+the chosen canonical algebra, so this is a wording repair, not an additional
+unproved input. Suggested phrase: 'a connected commutative separable
+twist-free algebra, with the positive structure and grading conditions of
+the extension theorem, supplies the additional chiral fields.'
+
+3.4 r08:124--131 -- clarify the right-moving dual convention.
+The canonical object sum_i M_i boxtimes M_i* is standard. Its relation to
+the physical notation sum_i M_i tensor conjugate(M_i) depends on the chosen
+contragredient/antiholomorphic dictionary. For all twelve Haagerup labels
+and for Ising, every label is self-dual, so no formula changes. If this
+paragraph is meant generally, say which right-moving convention makes this
+the diagonal rather than charge-conjugation matrix. This is a convention
+clarification; I found no contradiction in the actual self-dual examples.
+
+3.5 r08:185--198 -- attach the branching assumptions to the displayed
+factorized character identity.
+For the equality chi_i^V=sum chi_lambda^A b_i,lambda one needs a genuine
+semisimple restriction as an A-module, compatible ordinary gradings, and
+the complementary conformal-vector relation omega_V=omega_A+omega_C.
+Commuting fields by themselves do not imply that additive L0 relation or
+discrete factorized character identity. The paragraph says a module 'can'
+branch this way and later flags convergence, which is appropriately cautious;
+putting the conformal-vector relation in the initial sentence makes the
+displayed equality precise. Retain the later warning about infinite sums,
+vacuum multiplicity, and sewing: those are correctly separated.
+
+3.6 r08:237--245 -- remove the unnecessary word 'commuting'.
+The ordinary Haagerup line algebra is noncommutative. Two commuting
+operators can represent its scalar quotient, so the example is not literally
+false, but that choice distracts from the intended point. Say 'operators
+may obey the fusion-algebra relations on a vector space while carrying no
+junction associator data'. If only the rho-square relation is printed,
+call it one of the relations rather than suggesting it is the full ring.
+
+4. Glossary corrections and refinements
+======================================
+
+4.1 r09_notation.tex:83--87 -- all-module tensor products need hypotheses.
+C_A is a category of right modules for any algebra object. It is not in
+general monoidal merely because C is braided. In the setting used here,
+A is connected commutative separable; the braiding equips a right module
+with a compatible left action, and balancing gives tensor_A. Add those
+adjectives. For local modules, the precise condition is invariance of the
+action under monodromy, r c_(A,X)c_(X,A)=r. This is an equation involving
+the action; it does not require the underlying double braiding itself to
+be the identity morphism on all of X tensor A. Do not conflate the two.
+
+4.2 r09:215--218 -- primitive transfer definition needs simplicity.
+'A unique peripheral eigenvalue' can mean only one distinct eigenvalue
+value. The identity map on M_2(C) has only the eigenvalue 1, but is not
+primitive. State that the normalized peripheral eigenvalue 1 is simple,
+all other eigenvalues have modulus less than one, and the left/right fixed
+metrics are strictly positive on the specified supported algebra. Equivalently
+for the finite completely positive setting, an appropriate positive power
+sends every nonzero positive operator to a strictly positive one.
+The parallel statement in l04_tensor_networks.tex:169 also merits the word
+'simple'; I sent that small point to its author.
+
+4.3 r09:237--240 -- tube factors really do multiply physical degeneracies.
+Replace 'central charge sectors' by 'center charge sectors' to avoid the
+Virasoro-central-charge meaning. Also qualify 'not a CFT state multiplicity':
+dim W_x^mu is not the dimension or level degeneracy of the dynamical space
+V_mu, but it is the number of copies of that dynamical space in H_x and
+multiplies its level degeneracies. The current absolute wording conflicts
+with the correct factor-two discussion at r07:226--229.
+
+4.4 r09:208--209 -- ordinary modules can be sums of lowest-weight strings.
+For a simple ordinary module, a single lowest-weight grading is correct.
+For a general ordinary module the precise definition is semisimple L0,
+finite-dimensional eigenspaces, and lower truncation along each integral
+weight string. A finite direct sum can have several h+Z strings. The glossary
+can say 'lower-truncated weight grading' or explicitly restrict its entry
+to simple ordinary modules. This is a small precision point.
+
+4.5 Add the conventions C^op versus C^rev noted in item 2.1, and mention D
+as the local notation for intrinsic translation used in the construction
+chapters. The current mathsf T entry correctly distinguishes translation
+from a stress field and modular T, but D occurs often enough to deserve
+the cross-reference.
+
+5. Additional short worked examples with high pedagogical value
+=============================================================
+
+5.1 Recover Haagerup twisted characters from the twined character vectors.
+In the center ordering (0,b,a,c0,c1,c2,d1,...,d6), define
+
+    t_alpha=(1,1,-1,0,...,0),
+    t_rho=(d,-1/d,0,...,0).
+
+Direct multiplication by the explicit S in f04 gives
+
+    S t_alpha=(0,0,0,1,1,1,0,...,0)=n_alpha,
+    S t_rho=(0,1,1,1,1,1,1,...,1)=n_rho.
+
+For the second vector the nonresidue rows use
+(d+1/d)/sqrt(13)=1, while the four middle rows use
+(d-1/d)/3=1. The first row vanishes because S_0b=d^2 S_00.
+This makes the relation among the small fusion-algebra matrices, modular
+transformation, and actual restriction multiplicities transparent. No large
+Verlinde computation is required.
+
+5.2 Derive one twisted scalar multiplicity instead of quoting its fusion
+integer. With the f04 abbreviations A=S00, B=S0b, u=1/3 and AB=1/117,
+
+    N_(c1,c1)^(c1)=(1/27)(1/A+1/B)+5/9=13/9+5/9=2.
+
+The second term is the sum of cubes of a middle-block row divided by u;
+its entries are one 2/3 and three -1/3. The c1 top has dimension three,
+so the scalar ground multiplicity is 2*3^2=18. The defect ground itself
+comes instead from the two vacuum/c1 placements and has multiplicity six.
+This extends r07's good ground-versus-scalar example by the one missing
+fusion computation.
+
+5.3 A small condensation model for all modules versus local modules.
+The Z3 center already worked out in f03 has labels (g,k) and monodromy
+exp(2pi i(kg'+k'g)/3). Take A=direct_sum_k(0,k). The three right modules
+x_g=direct_sum_k(g,k) satisfy x_g tensor_A x_h=x_(g+h). Thus all modules
+form Vec_Z3. Locality with every condensed charge forces g=0, leaving only
+the vacuum local module. Twisting the left A action gives nine bimodules.
+This reproduces, entirely by finite characters, the distinction among a
+trivial local-module category, a nontrivial all-module category, and a larger
+bimodule category. It is the cleanest elementary precursor to the 6/12/36
+Haagerup discussion.
+
+5.4 Distinct noninvertible boundaries have twelve light boundary fields.
+The exercise is well chosen; a selected solution is a one-line ring
+calculation: rho*(alpha rho)=alpha^2 rho^2=alpha^2+rho+alpha rho+alpha^2 rho.
+After restriction the coefficient of chi_c1 is 1+3=4, hence 4*3=12
+weight-1/3 fields, compared with nine for the self-annulus. The extra three
+come from a nontrivial invertible channel, not an unexplained degeneracy.
+
+Suggested revision order: glossary primitivity and tensor-product hypotheses;
+the op/rev convention and the two F-matrix meanings; explicit Ising insertion
+and normalization; then the BPZ/branch-free example and twined-to-twisted
+matrix check. The existing distinction between a sewn full theory and a
+chiral commutant is mathematically sound and should remain prominent.
+
+6. Follow-up review of r_solutions.tex
+===================================
+I subsequently read the complete root solution file (lines 1--524) and
+checked the displayed elementary calculations against their exercises.
+No substantive mathematical correction was found. In particular:
+
+- Lines 22--33 give the correct Ising null vector, including its L1 and
+  L2 annihilation. The BPZ equation proposed above follows from this vector.
+- The global descendant norm n!(2h)_n and the first two hypergeometric
+  coefficients at lines 3--20 are correct; the identity must indeed be
+  handled separately at p=0.
+- The compact-boson radius, transported norm 12, rank-one lattice top
+  dimensions, Heisenberg C2 example, oscillator coefficient 726 and E8
+  grade-four coefficient 213126 check correctly.
+- The nonvacuum primary subtraction table, E8 dimension-two state count,
+  relevant scalar total 2941, and energy-moment tail extrema check correctly.
+- The stress cubic coefficient, global-block subtraction A4=107/15, and
+  the light-field Gram eigenvalues (0,35/39,1) agree with hand algebra.
+- Lines 411--464 correctly distinguish the dimension-squared invariant
+  projector normalization, three ordinary fusion-algebra representations,
+  the fractional-spin alpha-twisted top, twelve fields between distinct
+  noninvertible boundaries, and the 6/12/36 categorical counts.
+- Lines 466--489 derive the correct Hadamard relation and D=aI pairing,
+  yielding the stated |C_sigma,sigma,epsilon|=1/2.
+
+One harmless convention mismatch can be removed at r_solutions:482--484.
+The chapter writes G=f^t D conjugate(f), so after f->Mf the exact invariant
+pairing equation is M^t D conjugate(M)=D, rather than M^dagger D M=D.
+For the diagonal Ising monodromy with relative phase -1 and the real
+Hadamard F, both printed equations impose exactly the same constraints,
+so the solution's conclusion is unaffected. Use the chapter's convention
+in the solution to prevent that accidental equivalence from becoming a
+general rule for complex channel matrices.
+
+At r_solutions:455--459, the phrase 'the stated opposite convention' will
+be fully justified once the proposed op definition is added to r07/r09.
+The count itself is correct. No root solution file was edited.

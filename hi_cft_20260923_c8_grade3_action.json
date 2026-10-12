@@ -1,0 +1,39 @@
+{
+  "generator": "the single (2,14) three-vertex highest field",
+  "tested_source_dimension": 956,
+  "modes": [
+    {
+      "generator_mode": 1,
+      "target_grade": 3,
+      "total_leakage": 4.1114545252219427e-10,
+      "total_image_norm": 22.494443758403722,
+      "max_entry": 6.063864022980211e-11,
+      "max_block_relative_leakage": 6.342583303178625e-11
+    },
+    {
+      "generator_mode": 2,
+      "target_grade": 2,
+      "total_leakage": 1.5240605805323696e-10,
+      "total_image_norm": 11.31370849898463,
+      "max_entry": 5.808058675718571e-11,
+      "max_block_relative_leakage": 5.4079231854704005e-11
+    },
+    {
+      "generator_mode": 3,
+      "target_grade": 1,
+      "total_leakage": 6.015401415899253e-11,
+      "total_image_norm": 3.7416573867738983,
+      "max_entry": 5.2367788681155393e-11,
+      "max_block_relative_leakage": 5.237208361250783e-11
+    }
+  ],
+  "seconds": 4.3097177690360695,
+  "peak_rss_KiB": 139108,
+  "scope": "Numerical generator-mode stability through weight three; no conclusion about higher composites.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_grade3_action.py": "4cebbf3bf0e9fccba3261c4fb7b97ceadf913ac2bd0dc47d880917d3b9756145",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_grade3.py": "f21592c326bef918f37fd5ee6831a53e419dbad95b56fa932ee9678ad9a1c101",
+    "hi_cft_20260923_c8_grade3_span.npz": "6ae1f6eb52872f808e8ac7484365011629d95dd6839d5bb3c06880263c590b5a",
+    "hi_cft_20260923_c8_fields_precise.npz": "57b34695b28180d1dbf6ddbd62a3457be1b996d1fc8f4e3621806f5d174139bf"
+  }
+}

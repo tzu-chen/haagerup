@@ -1,0 +1,3 @@
+Visual review of PDF SHA256 48ddf9fc3f71d1fb82cc8b60572af510b90bedb0ec926a9dcd5d63fe2cb08b38, 304 pages.
+Physical pages viewed: 72,73,106,107,108,128,130,165,166,176,177,178,179.
+Current multiplet, construction roadmap, indicator definitions and examples, nonabelian logarithms, noncompact density, and exact Ising chain all readable. No clipping or overlapping text. One minor spacing improvement proposed for Ising dispersion equation (20.7): two-line alignment would give the equation number more space. No mathematical changes inferred from layout inspection.

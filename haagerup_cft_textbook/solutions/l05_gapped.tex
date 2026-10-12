@@ -1,0 +1,106 @@
+\section{Solutions for Chapter~\ref{ch:gapped}}
+
+\paragraph{Exercise~\ref{ex:gapped-PF}.}
+\phantomsection
+\label{sol:ex:gapped-PF}
+On the neutral basis $(f,s)$, with
+$s=(o_0+o_1+o_2)/\sqrt3$, the rho matrix is
+$R_0=\left(\begin{smallmatrix}1&\sqrt3\\\sqrt3&2\end{smallmatrix}\right)$.
+Its characteristic polynomial is $x^2-3x-1$, giving $d$ and
+$-d^{-1}$. On the color-orthogonal plane, $J$ vanishes and
+rho is $-P$, where $P$ is the reflection of two colors. Hence
+rho squares to one on that plane. Alpha is the order-three
+rotation and $P\alpha P=\alpha^{-1}$.
+
+On the neutral plane, $1+\alpha+\alpha^2=3$ and
+$R_0^2=1+3R_0$. On the charged plane that alpha sum is zero
+and $(-P)^2=1$. These two checks prove the full fusion relation
+$R^2=1+(1+\alpha+\alpha^2)R$, as well as
+$R\alpha=\alpha^{-1}R$. They identify the representation as
+the two scalar fusion representations plus the two-dimensional
+charged representation.
+
+
+
+\paragraph{Exercise~\ref{ex:gapped-cubics}.}
+\phantomsection
+\label{sol:ex:gapped-cubics}
+The ordered total probability is $p=3/(b^2+3)$ and the fixed
+probability is $1-p=b^2/(b^2+3)$. Each ordered point has probability
+$1/(b^2+3)$. The charges satisfy $\omega^{3j}=1$, so
+\[
+ \langle\Phi^3\rangle=p\,p^{-3/2}=p^{-1/2},\qquad
+ \langle\Phi^\dagger\Phi E\rangle=p\,p^{-1}b/\sqrt3=b/\sqrt3.
+\]
+For the neutral cubic,
+\[
+ \langle E^3\rangle
+ =\frac{b^3/\sqrt3-3\sqrt3/b}{b^2+3}
+ =\frac{b^2-3}{\sqrt3 b}=-\frac1{\sqrt3},
+\]
+using $b^2+b=3$. Checking the multiplication identities at
+the ordered and fixed points separately proves them as
+identities of functions. For example, $1+gE$ equals
+$1+b^2/3=p^{-1}$ on an ordered point and zero on the fixed
+point, exactly the values of $\Phi^\dagger\Phi$.
+Similarly $1-E/\sqrt3$ has values $b^2/3$ and $3/b^2$,
+equal to $E^2$. Substituting $g=b/\sqrt3$ yields
+$C_{EEE}=(g^2-1)/g$ and $p^{-1}=1+g^2$.
+Finally $b^2=(7-\sqrt{13})/2$ gives
+$p^{-1}=(13-\sqrt{13})/6$, recovering the charged cubic's
+radical expression.
+
+
+
+\paragraph{Exercises~\ref{ex:gapped-parent} and \ref{ex:gapped-short}.}
+\phantomsection
+\label{sol:ex:gapped-parent}
+\label{sol:ex:gapped-short}
+Invariance of a few global vectors constrains the operator only
+on their span. It says nothing about its action on the local
+range with arbitrary boundary data and arbitrary outside
+environment. The stronger statement is that the open line
+maps every interval module vector, with all allowed endpoint
+and MPO boundary indices, into the complete local module
+range. Closure under adjoints makes this range reducing, so
+its orthogonal projector commutes with the closed line.
+
+For the short Hamiltonian, one still needs equality of its
+global zero space with the proposed MPS family and a positive
+gap above that zero space uniformly in ring size. A different
+longer parent can penalize directions left unpenalized by the
+short terms. Its gap does not provide an operator comparison
+bounding the short Hamiltonian from below by a positive
+multiple of that parent. The four-site kernel count supplies
+a concrete obstruction to the simplest such comparison.
+
+
+
+\paragraph{Exercise~\ref{ex:gapped-filter}.}
+\phantomsection
+\label{sol:ex:gapped-filter}
+With $B=Y_\rho-2$ and $B^\dagger B=5-Y_\rho$, commutation
+with $H$ gives
+\[
+ E_B=\frac{5E-\langle HY_\rho\rangle}
+                  {5-\langle Y_\rho\rangle}.
+\]
+Subtracting $E$ gives the covariance formula. The denominator
+is at least $5-d>0$, and
+$\operatorname{Var}(Y_\rho)\leq(d+d^{-1})^2/4=13/4$.
+Cauchy--Schwarz therefore bounds the total energy difference
+by
+\[
+ |E_B-E|\leq
+ \frac{\sqrt{13}}{2(5-d)}
+       \sqrt{\operatorname{Var}(H_L)}.
+\]
+For variance $O(L)$, division by $L$ gives $O(L^{-1/2})$.
+A cat with nonzero weights on branches of densities $e_1\ne e_2$
+has a contribution $w_1w_2(e_1-e_2)^2L^2$ to the variance.
+For an explicit example, take $H_L=\sum_jZ_j$ on qubits and
+$(|0\rangle^{\otimes L}+|1\rangle^{\otimes L})/\sqrt2$.
+The branches have energies $L,-L$, so $\langle H_L\rangle=0$
+and $\operatorname{Var}(H_L)=L^2$.
+
+

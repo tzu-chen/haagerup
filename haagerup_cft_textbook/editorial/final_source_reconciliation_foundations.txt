@@ -1,0 +1,84 @@
+Final foundations-source reconciliation
+Reviewer: scope_foundations
+Review completed: 2026-10-05, after the 22:02:26 UTC source inspection
+
+Disposition: PASS. No chapter scope correction is needed in f05, f06,
+r10 or r11. This was read-only declaration/document/status inspection,
+not a Lean rebuild, transitive axiom audit, certificate rerun or new
+scientific-source hash snapshot.
+
+1. Uniform coefficient theorem: current versus recorded revision
+
+The recorded coefficient revision remains
+698b66ac2c667e68b1e19c196fb91e84a0c82235 (14 September 2026).
+Current GammaConstruction.lean and Completion.lean have no working-tree
+changes and no changes between that revision and repository HEAD.
+GammaConstruction.lean was last changed in that coefficient revision;
+Completion.lean was last changed in
+6a301f6039bf0cd51c76811e6bb4829cdfe7f8d7 and is included unchanged in it.
+The later tracked README revision is
+8c79800200a5001b85d9fe92acb5e51fca4944ca. Its only difference from the
+coefficient revision is replacement of the old local launcher path by
+~/.local/bin/research-safe-run. Its mathematical status is unchanged.
+
+Direct declarations still support the book's exact distinction:
+GammaConstruction supplies hypGamma through the proved Euler interface,
+constructs ruijsenaarsCoeffData, and proves EGEquations_ruijsenaars and
+exists_EGEquations_odd. The latter's mathematical premise is Odd n;
+NeZero follows from it. Completion.EGEquations includes rotation, axis,
+quadratic, cubic and quartic equations. Completion.EGEquations_of itself
+assumes the quadratic and RestrictedFourier inputs; the final analytic
+constructor discharges those inputs. No categorical reconstruction,
+positive adjoint or CFT is asserted by these final coefficient types.
+README continues to report the earlier standard-axiom-only audit and to
+exclude categorical reconstruction from formalization. f05 and r10
+accurately attribute that recorded audit without claiming a fresh build.
+
+2. Conditional C8 formalization: current working-tree source
+
+C8/TRUST_BOUNDARY.md is an untracked working-tree document, dated
+4 October 2026, not an immutable file belonging to the coefficient
+revision. ProofMapConcrete.lean is modified relative to HEAD;
+ProofMapLattice.lean is also untracked. Current RemainingInputs still
+has the five certificate, eleven external and four open manuscript
+fields described by the trust document. The lattice theorem still
+takes FLMBorcherds, S3, LatticeClosureInputs, LatticeRemainingInputs
+and the remaining branch-specific bundles. Opaque predicates and
+unlinked models remain explicitly documented. The book's conditional
+description is therefore current; no complete formal C8/CFT theorem
+has silently superseded it. r11 points to the correct working-tree
+trust document and r10 keeps its status distinct from the coefficient
+proof.
+
+3. Noncyclic and extended-Haagerup scope
+
+hi_noncyclic_gamma_identification_status.md still says order-twelve
+algebraic existence and unitarity are complete, while exact gamma
+identification is open. The order-eight gamma proof still supplies
+exact eliminants and positive-branch selection. The order-twelve exact
+source still supplies all 16 quadratic and 246 cubic polynomial types,
+plus the Hermitian positive-embedding corollary; six embeddings are
+not asserted to be six inequivalent categories. f06/r11 agree.
+
+extended_haagerup_README.md and
+extended_haagerup_reconstruction_and_coefficients.tex still distinguish
+published BMPS/GMPPS reconstruction and 21 seeds from the local closed
+formula and recorded exact verification of the 6,561 word tensor.
+They do not supply a complete enumerated skeletal F table or a new
+CFT. f06/r11 preserve those boundaries, including the separate
+Morrison--Snyder field-of-definition statement.
+
+4. Changes during today's work and final identity capture
+
+The inspected coefficient, trust-boundary, noncyclic and EH files have
+modification times before 5 October; the tracked coefficient files are
+clean. No inspected declaration or status differs substantively from
+the earlier textbook review. The current overall repository HEAD is
+f3cfd4c595dd831635f39f87827aeaacbe1bda31, but it must not be used as a
+revision identifier for the untracked noncyclic/EH/C8 sources.
+
+Modification times and this static comparison are evidence of present
+status, not a claim that every workspace byte was monitored throughout
+the day. Earlier recorded file hashes remain historical identities.
+Root's planned 22:35 UTC selected-source snapshot should bind the final
+current bytes explicitly; no fresh hashes were computed in this review.

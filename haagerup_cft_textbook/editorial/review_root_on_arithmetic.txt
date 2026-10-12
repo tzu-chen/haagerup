@@ -1,0 +1,39 @@
+Independent hand review of the expanded f05 arithmetic chapter
+Reviewer: root. Source snapshot: 2026-10-05 approximately 18:07 UTC.
+
+This review does not rebuild Lean or execute gamma numerical integrals.
+
+Checks:
+1. The regularized gamma integral has the correct sign for the stated
+   shifts/reflection, and the t->0 Taylor subtraction leaves a bounded
+   integrand. The infinity bound is uniform on compact subsets of
+   0<Re z<omega1+omega2. Positivity and midpoint value follow directly.
+2. The logarithmic shift reduces to the stated sine integral. The residue
+   R=sqrt(omega1 omega2)/(2pi), gamma(omega1)=sqrt(d), and
+   gamma(omega2)=1/sqrt(d) follow from both shifts and reflection.
+3. The sample reflection, generic integer shift, exceptional origin limit,
+   and reciprocal W signs match the factorized finite coefficients.
+4. The four gamma arguments in the reciprocal Fourier product have the
+   stated complementary sums. The sine ratio sign is correct: its two
+   arguments sum to an integer M, so the ratio is (-1)^(M+1), equal
+   to the printed (-1)^((h-n)/2+k). The denominator argument lies in
+   (0,1) for the reduced odd-h/principal-k range.
+   A minor wording correction was sent to the author: both period shifts
+   are used, not only omega2.
+5. Transforming the convolution gives the phase that cancels the
+   reciprocal Fourier product. The h=0 sum is
+   n-2tau+tau^2 delta(g,0), and the dimension equation gives precisely
+   tau^2[delta(g,0)-delta^(-1)].
+6. At n=3 the displayed B matrix agrees entry by entry with the W ansatz.
+   The h=1 quadratic sums are 2+pq,1-p-q,1-p-q. The selected roots
+   p>0,q<0 have p+q=1,pq=delta, and tau^2=delta+2. The sample
+   identity p=F(1)^3/sqrt(d) has the correct sign and normalization.
+
+The analytic column identity and its continuation are retained as imported
+analytic results, with the corrected domain explained. The chapter does
+not claim that this hand review proves that analytic input.
+
+Formal scope was also checked read-only against lean/README.md,
+Analytic/GammaConstruction.lean, and Completion.lean. The all-odd coefficient
+theorem has an actual gamma constructor; its recorded unconditional audit
+is separate from the C8 trust boundary and from categorical reconstruction.

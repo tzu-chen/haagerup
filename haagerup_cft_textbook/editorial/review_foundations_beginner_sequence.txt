@@ -1,0 +1,281 @@
+Beginner-reader audit of the introductory and analytic sequence
+Foundations agent; actual clock read during final source pass:
+2026-10-05 20:15:35 UTC.
+Read-only review of f01,f02,f03,f04,r01,r02,r03,r04 in the master's actual
+order: f01 -> r01 -> r02 -> f02 -> f03 -> f04, then the construction
+chapters, r04 -> r03. No jobs, source edits, or calculations launched.
+
+APPLIED STATUS (authorized integration after the original read-only audit)
+
+All numbered recommendations and the compact optional glosses below are now
+integrated. Item3 (f03 opening, outer action, principal graph, L^2 completion)
+was integrated by root, as was the r01 hypergeometric/Pochhammer definition;
+both were retained. The foundations agent then changed exactly:
+chapters/f01_fusion.tex, f02_haagerup.tex, f03_centers.tex, f04_modular.tex,
+r01_cft.tex, r02_vertex_algebras.tex, r03_characters.tex, r04_unitarity.tex.
+No labels, exercises, ordinary-module definition, or theorem strengths were
+changed. The final source self-read used an actual clock read of
+2026-10-05 20:21:02 UTC. No build or calculation was run.
+
+The typed Frobenius identity was checked as an equality A tensor A ->
+A tensor A, and beta^{-1}Delta is the stated bimodule splitting. The
+pointed-center completeness argument uses diagonalizability of an order3
+operator over C. Admissibility uses a separate compatible Z>=0 grading
+without adding a finite-dimensionality or L0-diagonalizability condition.
+The modular-curve proof retains modular covariance at every cusp before
+using compactness and the maximum principle.
+
+Root's additional requested clarification was also integrated after f04's
+S^2=I conclusion: linear ribbon duality preserves a simple twist scalar,
+whereas a Hermitian adjoint conjugates it; the self-dual c1 with twist
+exp(2pi i/3) is the concrete example.
+
+The findings below record the original review snapshot and proposed wording;
+their old line numbers are retained as provenance.
+
+OVERALL
+
+The recent module/intertwiner, braiding, rigidity/trace, central-functor,
+affine/PF and indicator bridges have removed the substantial prerequisite
+gaps. The remaining repairs can mostly be one sentence each. The strongest
+recommendations are the operator-algebra/graph glossary in f03, the actual
+Frobenius identity, and a compact explanation of the modular-curve uniqueness
+argument. Do not add another broad primer or new exercises for these items.
+
+The hypergeometric/Pochhammer definition in r01 is now being supplied by
+root and is not an outstanding issue.
+
+HIGH-VALUE SMALL REPAIRS
+
+1. f01_fusion.tex:76--78: semisimplicity and finiteness are conflated.
+
+   Current: 'Semisimplicity permits a finite list of simple line types.'
+   Semisimplicity supplies decomposition; finiteness of the simple list is
+   a separate assumption in the displayed definition.
+
+   Replace with:
+   'Semisimplicity means that every object decomposes into simples; the
+   separate finiteness assumption limits the list of simple line types.'
+
+   At 124--125, optional short gloss:
+   'Natural and monoidal mean compatible with all morphisms and tensor
+   products.' This is enough to decode the pivotal definition without
+   introducing a separate discussion of natural transformations.
+
+2. f02_haagerup.tex:257: K_0 appears without definition. It also returns in
+   the character exercise about equal traces versus distinct modules.
+
+   Suggested replacement opening:
+   'The Grothendieck ring K_0(H3) is the free abelian group on the six
+   simple-object classes, with addition induced by direct sum and
+   multiplication induced by fusion. Allowing complex coefficients gives
+   the six-dimensional algebra A=K_0(H3) tensor_Z C.'
+
+   Nearby two tiny terminology fixes:
+   - 247--249: the undefined symbol mathsf A_{0,0} is unnecessary here.
+     Say the repeated entry is 'the same displayed value
+     [F^{rho rho rho}_rho]_{rho rho} within each category'.
+     The A-coordinate notation can wait until f05 where it is defined.
+   - 311--312: write the adjoint relation explicitly as Y_x^dagger=Y_{x*}.
+     This makes the later self-adjointness of Y_rho and orthogonality of
+     P_+ transparent. At the earlier first mention around108, say
+     'the closed-line operator Y_rho'.
+
+3. f03_centers.tex:17--39: give the promised concrete operator-algebra and
+   graph vocabulary before using it. The later r04 definition currently
+   arrives several chapters after first use.
+
+   STATUS: ROOT-INTEGRATED during this review. Root reports the von Neumann,
+   outer-action, principal-graph, and L^2 trace-completion sentences are now
+   in f03. The wording below records the reviewed proposal, not pending work.
+
+   Proposed opening replacement:
+   'A von Neumann algebra is a unital adjoint-closed algebra of bounded
+   operators on a Hilbert space, closed in the weak operator topology
+   (convergence of all matrix elements). It is a factor when its algebraic
+   center consists only of scalar multiples of the identity.'
+
+   After the fixed-point example:
+   'Outer means that no nonidentity group element acts as x -> u x u*
+   for a unitary u inside M.'
+
+   Near the basic-bimodule/even-parts paragraph:
+   'Write X={}_N L^2(M)_M for the basic bimodule. The principal graph is
+   rooted and bipartite: its even vertices are the simple N--N bimodules
+   and its odd vertices the simple N--M bimodules generated by alternating
+   X with its dual. An even vertex Z is joined to an odd vertex Y with
+   multiplicity dim Hom(Y,Z tensor_N X), and the root is L^2(N); reversing
+   N and M gives the dual principal graph.'
+
+   This provides exactly the graph definition later used in f06. No graph
+   classification or extra example is required.
+
+   Near the II_1 calculation at 53--58, a useful single sentence is:
+   'Here L^2(M) is the Hilbert completion of M for
+   ||x||_2^2=tr(x* x), with commuting left and right multiplication.'
+   This is stated in the finite-trace setting, not as a finite-trace
+   construction for arbitrary type-III factors.
+
+4. f03_centers.tex:103: the two-strand Jones--Wenzl projection is named
+   before any definition, although this case needs only the displayed
+   Jones projection.
+
+   Replace the noun phrase with:
+   'the two-strand Jones--Wenzl projection 1-e_1
+   =1-delta_TL^{-1} U_1'.
+   It is visibly the complementary projection, and its dimension is the
+   difference already computed in the example.
+
+5. f03_centers.tex:204--209: 'dagger Frobenius algebra' is a central
+   technical ingredient but the Frobenius compatibility is never written
+   before it is used. The later sewing chapter describes its role verbally.
+
+   After defining Delta=mu^dagger, add, with associators suppressed,
+
+     (mu tensor 1)(1 tensor Delta)
+       = Delta mu
+       = (1 tensor mu)(Delta tensor 1).
+
+   Suggested introduction:
+   'The Frobenius condition says that Delta=mu^dagger respects both
+   A actions; suppressing associators, ...'
+
+   Together with the existing unit, associativity, adjoint and
+   mu mu^dagger=beta 1 normalization, this tells the reader what the term
+   means. It also explains directly why beta^{-1}Delta is the separable
+   splitting; this last observation is optional.
+
+6. f03_centers.tex:443--450: the nine scalar half-braidings are correctly
+   listed, but their completeness has a one-sentence hidden step. The
+   preceding section specifically warns that a simple central object can
+   forget to a nonsimple object, so a reader may reasonably ask why that
+   does not produce extra simples in this example.
+
+   Add after the character calculation:
+   'On an arbitrary graded object, the half-braiding with the generator
+   acts on each graded multiplicity space by an operator of order three.
+   It diagonalizes into the three characters, so every center object
+   decomposes into these pairs (g,k).'
+
+   This is elementary linear algebra, and it closes the classification
+   without appealing to an unintroduced quantum double.
+
+7. r02_vertex_algebras.tex:697--701,754--759: two technical terms remain
+   less concrete than surrounding definitions.
+
+   PCT:
+   Replace 'a positive Hermitian form on its physical real form' by
+   'a canonical positive Hermitian form and an antilinear PCT involution'.
+   The Hermitian form is on the complex VOA; the present 'on its physical
+   real form' wording can distract. Add:
+   'PCT denotes the conjugation entering the radial-adjoint identity;
+   it preserves the vacuum and conformal vector.'
+   There is no need to identify it with coordinatewise conjugation, and
+   the existing next sentence correctly says why one must not do that.
+
+   Admissible:
+   'An admissible module is a weak module with a compatible nonnegative
+   integer grading M=sum_{n>=0} M(n), such that a_(m) shifts the grade
+   by wt(a)-m-1. This grading need not itself be the L_0 eigenspace
+   grading, and finite-dimensional pieces are not part of the definition.'
+   Then rationality can be stated as complete reducibility of admissible
+   modules, without the vague word 'appropriate'. The formula only uses
+   the already-established mode weight rule. The strong-rationality
+   definition is supplied in c04, so a forward reference there is enough.
+
+8. r03_characters.tex:116--123: the compact modular-curve proof is correct,
+   but 'cusps', 'kernel subgroup', and compactification arrive together.
+   A short explanation of the geometric object makes the uniqueness
+   theorem teachable with standard complex analysis.
+
+   Suggested replacement middle of proof:
+   'Let Gamma be the kernel of the finite-image modular representation;
+   it has finite index in SL_2(Z). The quotient Gamma\H becomes a compact
+   Riemann surface after adding its finitely many cusps, the orbits of
+   rational boundary points and infinity. Absence of negative powers in
+   the local q-expansions means that each component extends holomorphically
+   over those added points. A holomorphic function on a compact Riemann
+   surface is constant by the maximum principle.'
+
+   The previous modular covariance sentence explains why regularity at
+   infinity gives regularity at every cusp. Retain that premise rather
+   than implying a single arbitrary q-expansion controls all cusps.
+
+   132--134: explain 'Xi_{:,j}' with 'the colon denotes the full
+   twelve-component column'. This is array notation, not standard
+   self-explanatory mathematical punctuation.
+
+SYMBOL GLOSSES THAT CAN BE FIXED WITHOUT ADDING PARAGRAPHS
+
+9. f01:142 and f04:370,404,434:
+   Explicitly identify the symbols qdim and FPdim with the previously
+   described dimension functions. For example, in f01:
+   'We write qdim(X)=d_X for the spherical dimension and FPdim(X)
+   for the positive fusion-ring dimension; they coincide in the canonical
+   unitary structure.'
+   Before the first category-level FPdim in f04, say it is the sum of
+   squares of simple FP dimensions, hence the same global dimension Dim
+   in the unitary setting. This prevents 'FPdim(category)' from looking
+   like the dimension of an ordinary vector space of morphisms.
+
+10. f04:440: replace 'fully faithful' by 'fully faithful, meaning that it
+    induces an isomorphism on each morphism space'. This also prepares
+    r04's reconstruction argument. At r04:352, gloss 'tensorator' as
+    'coherent isomorphisms comparing the image of a fusion product with
+    the fusion product of the images'. The existing distinction between
+    a linear comparison and a tensor comparison should remain.
+
+11. r02:560--570: the invariant form kappa^{ab}, structure constants
+    f^{ab}{}_c, and lowering the index in J_a are used without a dictionary.
+    One sentence suffices:
+    'For a basis t^a, write [t^a,t^b]=f^{ab}{}_c t^c and
+    kappa^{ab}=(t^a,t^b); inverse-metric contraction defines J_a,
+    and repeated indices are summed.'
+    The level k is already described just after the OPE.
+
+12. r04 has several easy local first-use fixes:
+    - 104ff: 'Localized means equivalent to the vacuum outside a chosen
+      interval; transportable means the charge can be relocated to any
+      other interval by an equivalent representation.'
+    - 204: identify 1_[0,R](L_0) as the spectral projection onto energies
+      between zero and R.
+    - 296: say the net representation acts on the Hilbert space K before
+      K appears in the bounded-energy union.
+    - 474: append 'pi_M denotes the net representation on the Hilbert
+      completion of M' to the existing explanation of mathsf U.
+    - 499--505: name A_bl as the bounded-insertion vacuum net before
+      displaying the inclusion chain. This notation currently appears
+      without an explicit definition.
+    These do not alter any domain argument or theorem hypothesis.
+
+VERY SMALL CLEANUPS / OPTIONAL
+
+* r01:9: expand 'operator product expansion (OPE)' at its first use.
+  r01:203--209: add z_ij=z_i-z_j by the three-point formula.
+* f04:94--104: define bold 1_n as the all-ones column; later J_n is the
+  all-ones n-by-n matrix. f02 only defined J_3 explicitly.
+* f03:630: Irr means representatives of simple isomorphism classes.
+* r03:226ff: call the Kac determinant the general-level analogue of the
+  Virasoro Gram determinant computed in r01. Its zero formula is imported;
+  the proof here then correctly specializes it to c=8.
+* f04 uses d_i both as a generic simple dimension and as one of the named
+  sector labels. The fusion example already warns about the latter. A
+  cheap additional safeguard is to write (qdim M_i)_i rather than (d_i)_i
+  in the numerical dimension row, and call the d_j's sector names when
+  first listing them. This is clarity only; the computations are correct.
+
+THINGS THAT DO NOT NEED FURTHER EXPANSION
+
+The module Hom/intertwiner/splitting-space orientation is now explicit.
+The radius, central-charge, mode-number, actual-weight versus grade, and
+right-moving conjugate conventions are sufficiently introduced. The two
+meanings of transparency are distinguished. The all-module/local-module/
+bimodule and ordinary-fusion-algebra/tube-algebra distinctions are taught
+with concrete examples. The ordinary-module definition is deliberately
+broader than a single h+Z translate for arbitrary direct sums; retain it.
+The current chapter order correctly places strong unitarity before
+Virasoro-primary subtraction. Avoid turning every later use into another
+qualification or another copy of these definitions.
+
+Original audit was read-only. The later authorized integration is recorded
+at the top of this report; no pending edit remains from these findings.

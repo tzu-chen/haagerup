@@ -1,0 +1,165 @@
+{
+  "field_multiplicities": [
+    {
+      "dimensions": [
+        1,
+        5
+      ],
+      "e_weight": "798/1271",
+      "real_multiplicity": 2,
+      "positive_mode_max_residual": 8.080948761252162e-14
+    },
+    {
+      "dimensions": [
+        1,
+        9
+      ],
+      "e_weight": "200/1271",
+      "real_multiplicity": 2,
+      "positive_mode_max_residual": 1.3853551639791908e-14
+    },
+    {
+      "dimensions": [
+        1,
+        9
+      ],
+      "e_weight": "1512/1271",
+      "real_multiplicity": 2,
+      "positive_mode_max_residual": 7.42021865636271e-14
+    },
+    {
+      "dimensions": [
+        1,
+        13
+      ],
+      "e_weight": "420/1271",
+      "real_multiplicity": 2,
+      "positive_mode_max_residual": 0.0
+    },
+    {
+      "dimensions": [
+        2,
+        2
+      ],
+      "e_weight": "192/1271",
+      "real_multiplicity": 2,
+      "positive_mode_max_residual": 1.4101068519772977e-14
+    },
+    {
+      "dimensions": [
+        2,
+        6
+      ],
+      "e_weight": "1830/1271",
+      "real_multiplicity": 2,
+      "positive_mode_max_residual": 2.3120725444508418e-14
+    },
+    {
+      "dimensions": [
+        2,
+        8
+      ],
+      "e_weight": "752/1271",
+      "real_multiplicity": 3,
+      "positive_mode_max_residual": 1.3681070165638687e-13
+    },
+    {
+      "dimensions": [
+        2,
+        14
+      ],
+      "e_weight": "180/1271",
+      "real_multiplicity": 2,
+      "positive_mode_max_residual": 0.0
+    }
+  ],
+  "b_highest_labels": [
+    [
+      1,
+      3,
+      0
+    ],
+    [
+      1,
+      5,
+      0
+    ],
+    [
+      1,
+      5,
+      1
+    ],
+    [
+      1,
+      7,
+      0
+    ],
+    [
+      1,
+      9,
+      0
+    ],
+    [
+      1,
+      11,
+      0
+    ],
+    [
+      2,
+      4,
+      0
+    ],
+    [
+      2,
+      6,
+      0
+    ],
+    [
+      2,
+      10,
+      0
+    ]
+  ],
+  "best_full_current_residual": 3.212150897147588e-10,
+  "best_full_current_max_entry": 7.980265643495175e-11,
+  "theta": [
+    -4.089733777084728,
+    -2.5494305443103475,
+    1.0209366141679497,
+    0.8509705801895538,
+    0.8892195316082305,
+    2.355232951134905,
+    -1.514834686265368,
+    0.9117182770587507,
+    2.3061107796121463
+  ],
+  "search_history": [
+    {
+      "attempt": 0,
+      "projected_residual": 0.16301323721503777,
+      "full_residual": 2.6820086304653494,
+      "full_max_entry": 0.3560168731605411,
+      "nfev": 20,
+      "optimality": 6.155580167550162e-09
+    },
+    {
+      "attempt": 1,
+      "projected_residual": 1.0736870560501219e-11,
+      "full_residual": 3.212150897147588e-10,
+      "full_max_entry": 7.980265643495175e-11,
+      "nfev": 7,
+      "optimality": 3.93666564313066e-17
+    }
+  ],
+  "analytic_jacobian_directional_error": 2.2416624112508998e-11,
+  "seconds": 3.4543102929601446,
+  "peak_rss_KiB": 170028,
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_fields.py": "0a2b7e32e0415091f1edf9f860977859d525b543a4f9b423da87057bc8e4ccf9",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_lattice.py": "398601b48fdea83207922d784a50eda32edad05113f5fe12f0a9410c542715ee",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_ope.py": "27136b9f33e767cd0f8cc66a420a44ba08451006d8e7de9c1320a8fab85df65a",
+    "hi_cft_20260923_c8_ope_control.json": "6aae01595acbd705de125d8b1c57056b1105e5f66127abebfdb6fa81d79fd377",
+    "hi_cft_20260923_c8_ope_control.npz": "ad056eca10bd86e30bac252376b0cc03806507f02643aba4a25f083f46819377"
+  },
+  "scope": "Constructive low-grade current-OPE fit in one explicit spectral ansatz. A failed fit is not an exclusion; passing would still require weight-two OPE closure and higher sewing."
+}

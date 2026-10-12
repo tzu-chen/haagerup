@@ -1,0 +1,434 @@
+\chapter{From a fusion category to a quantum chain}
+\label{ch:chain}
+
+We now return to the six-object $\mathcal H_3$ fusion category and
+construct a microscopic quantum chain from it. This is the lattice
+construction track introduced in the reading guide; the reduced CFTs
+of the preceding chapter will serve as comparison theories.
+A quantum Hamiltonian needs one further choice: which
+local fusion channels should cost or release energy? This chapter makes that
+choice explicit. We construct the Hilbert space of the physical Haagerup
+chain, derive its local projector Hamiltonian, and explain its translation
+and categorical symmetries. The required linear algebra is modest: orthogonal
+projections, eigenvectors of a small adjacency matrix, and Fourier sums. The
+important conceptual step is to distinguish a fusion label, a physical anyon,
+and an ordinary local spin.
+The fusion-space conventions of Chapter~\ref{ch:fusion} and the explicit
+Haagerup associator in Chapter~\ref{ch:haagerup} are the categorical inputs.
+
+\section{The physical object and the fusion-path basis}
+\index{fusion path}\index{anyon chain}
+
+Write the six simple objects as
+\[
+ I_j=\alpha^j,\qquad X_j=\alpha^j\rho,\qquad j\in\Z/3\Z.
+\]
+Their dimensions are $\qdim(I_j)=1$ and $\qdim(X_j)=d$, where
+\[
+ d^2=1+3d,\qquad d=\frac{3+\sqrt{13}}2.
+\]
+We put one physical object $\rho$ at every site. The physical objects are all
+the same; it is their possible fusion histories that fluctuate.
+
+An open fusion history starts with a label $a$, fuses successively with the
+physical $\rho$ objects, and ends with a label $b$. At a trivalent vertex the
+outgoing label must occur in the fusion of the incoming label with $\rho$.
+The multiplicities here are zero or one, so no additional vertex index is
+needed. For example,
+\[
+ I_j\rho=X_j,\qquad
+ X_j\rho=I_j+X_0+X_1+X_2.
+\]
+An invertible height must therefore be followed by its corresponding
+noninvertible height. A noninvertible height can be followed by any
+noninvertible height or by its one matching invertible height.
+
+\begin{definition}[Regular periodic path space]
+The length-$L$ periodic Hilbert space $\HH_{\mathrm{path},L}$ has an orthonormal basis
+\[
+ |x_0,x_1,\ldots,x_{L-1}\rangle
+\]
+indexed by admissible closed paths, meaning that
+$x_{i+1}\subset x_i\otimes\rho$ for every $i$, with indices modulo $L$.
+The inner product is the ordinary orthonormal fusion-basis inner product.
+\end{definition}
+
+The word ``regular'' records that all starting heights and compatible closed
+flux sectors are included. It is a choice of periodic Hilbert space, not a
+synonym for the sector obtained by fusing all $L$ physical objects to the
+tensor unit. Open chains with fixed endpoint labels give other spaces.
+
+One can embed $\HH_{\mathrm{path},L}$ in $(\C^6)^{\otimes L}$ by identifying each height
+with a six-state basis vector and setting the coefficients of forbidden words
+to zero. This embedding is useful for ordinary Schmidt decompositions.
+Chapter~\ref{ch:tensor_networks} develops those decompositions and their
+tensor-network realization.
+Nevertheless, $\HH_{\mathrm{path},L}$ is a constrained subspace: changing one height
+arbitrarily can violate two adjacent fusion constraints. A Hamiltonian or
+tensor ansatz must preserve these constraints.
+
+\begin{example}[Counting closed paths exactly]
+In the ordered height basis $(I_0,I_1,I_2;X_0,X_1,X_2)$, right fusion by
+$\rho$ has adjacency matrix
+\[
+ N_\rho=\begin{pmatrix}0&I_3\\I_3&J_3\end{pmatrix},
+\]
+where $J_3$ is the all-ones matrix. Its $L$th power counts length-$L$ paths,
+and taking the trace closes them. On the color-independent subspace,
+$N_\rho$ is the matrix $\left(\begin{smallmatrix}0&1\\1&3\end{smallmatrix}\right)$.
+Its eigenvalues are $d$ and $-d^{-1}$. On each of the two color-orthogonal
+directions it is $\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$,
+with eigenvalues $1,-1$. Thus
+\begin{equation}
+ \dim\HH_{\mathrm{path},L}=d^L+(-d^{-1})^L+2\bigl(1+(-1)^L\bigr).
+ \label{eq:path-dimension}
+\end{equation}
+This apparently irrational expression is an integer. Indeed, if
+$t_L=d^L+(-d^{-1})^L$, then
+\[
+ t_0=2,\quad t_1=3,\quad t_{L+2}=3t_{L+1}+t_L.
+\]
+Consequently the path-space dimensions at $L=3,4,6,9$ are
+$36,123,1302,46764$, respectively. The dimension grows as $d^L$,
+even though the local height alphabet has six letters.
+\end{example}
+
+This calculation already explains why symmetry reduction and matrix-free
+algorithms matter. A final energy table is small; the vector needed to obtain
+it can have exponentially many entries. Nothing about the file size of a
+reported spectrum estimates the memory needed for its calculation.
+
+\section{An \texorpdfstring{$F$}{F}-move becomes a local projector}
+
+Fix three consecutive heights $a,e,c$. They represent a piece of fusion tree
+in which $a$ first fuses with one physical $\rho$ to $e$, and then with the
+next physical $\rho$ to $c$. There is another fusion tree: first fuse the two
+physical objects into $f\subset\rho^2$, and then fuse $a$ with $f$ into $c$.
+The unitary matrix $F^{a\rho\rho}_c$ changes between these trees. We use
+\begin{equation}
+ |((a\rho)e\rho);c\rangle
+  =\sum_f F^{a\rho\rho}_c[e,f]\,
+       |(a(\rho\rho)f);c\rangle.
+ \label{eq:chain-F-convention}
+\end{equation}
+The allowed $e$ and $f$ depend on the fixed endpoints. Every sum below is
+over allowed channels only.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=.9, every node/.style={font=\small}]
+ \draw (0,0)--(.7,.8)--(1.5,1.6)--(1.5,2.35);
+ \draw (1.4,0)--(.7,.8);
+ \draw (2.8,0)--(1.5,1.6);
+ \node[below] at (0,0) {$a$};
+ \node[below] at (1.4,0) {$\rho$};
+ \node[below] at (2.8,0) {$\rho$};
+ \node[left] at (1.05,1.2) {$e$};
+ \node[above] at (1.5,2.35) {$c$};
+ \draw[-{Stealth}] (3.3,1.1)--(4.7,1.1);
+ \node[above] at (4,1.1) {$F^{a\rho\rho}_c$};
+ \draw (5.2,0)--(6.5,1.6)--(6.5,2.35);
+ \draw (6.6,0)--(7.3,.8)--(6.5,1.6);
+ \draw (8,0)--(7.3,.8);
+ \node[below] at (5.2,0) {$a$};
+ \node[below] at (6.6,0) {$\rho$};
+ \node[below] at (8,0) {$\rho$};
+ \node[right] at (6.95,1.2) {$f$};
+ \node[above] at (6.5,2.35) {$c$};
+\end{tikzpicture}
+\caption{The local recoupling move. The neighboring heights $a,c$ are
+fixed. In the left tree the middle path height $e$ varies; in the right
+tree the physical pair's fusion channel $f$ is measured.}
+\label{fig:chain-F-projector}
+\end{figure}
+
+In the second basis, asking whether the physical pair fuses to $\rho$ is
+simply a diagonal yes-or-no measurement. Transforming that projection back
+to the path basis gives
+\begin{equation}
+ (P^{(\rho)}_{a,c})_{e',e}
+   =\overline{F^{a\rho\rho}_c[e',\rho]}
+      F^{a\rho\rho}_c[e,\rho].
+ \label{eq:rho-projector}
+\end{equation}
+If the $\rho$ channel is absent for the given endpoints, this block is zero.
+Otherwise it is an outer product and has rank one.
+
+\begin{proposition}
+For each endpoint block, $P^{(\rho)}$ is an orthogonal projection. On the
+periodic path space, the operator $P_i^{(\rho)}$ changes only the height
+$x_i$ and preserves admissibility.
+\end{proposition}
+\begin{proof}
+Put $v_e=\overline{F[e,\rho]}$. Unitarity gives $v^\dagger v=1$, and
+\(P=vv^\dagger\). Hence $P^\dagger=P$ and
+$P^2=v(v^\dagger v)v^\dagger=P$. Both the original and the updated middle
+height are allowed channels with the same endpoints, so the two adjacent
+fusion constraints remain satisfied. All other constraints are unchanged.
+\end{proof}
+
+The physical Hamiltonian studied here is
+\begin{equation}
+ H_L=-\sum_{i=0}^{L-1}P_i^{(\rho)}.
+ \label{eq:physical-chain-H}
+\end{equation}
+The minus sign rewards the $\rho$ channel. Changing the sign, rewarding the
+unit channel, or using another associator defines another dynamical problem.
+Neighboring terms usually do not commute, because the fusion of sites
+$i,i+1$ and that of sites $i+1,i+2$ are incompatible measurements. The
+pentagon controls the consistency of all reassociations; it does not make
+these overlapping measurements simultaneously diagonal.
+
+The simple bounds $-L\leq H_L\leq0$ follow from $0\leq P_i\leq1$.
+Saturating the lower bound requires a state in the $+1$ eigenspace of every
+projector. Such a state need not exist at a given length. A sum of local
+projections is not automatically frustration free.
+
+\begin{example}[An exact local imaginary-time gate]
+Since $P^2=P$, its exponential is
+\[
+ e^{\epsilon P}=1+(e^\epsilon-1)P.
+\]
+Thus the Trotter gate for $e^{-\epsilon H}$ on a single bond is an exact
+linear combination of $1$ and $P_\rho$. Approximation enters when products
+of overlapping gates replace the exponential of their sum, not in the
+single-projector exponential itself. This gives a direct tensor-network
+route from the Hamiltonian to a two-dimensional Euclidean model.
+\end{example}
+
+\section{Why the associator is physical data}
+
+A change of orthonormal basis at every trivalent vertex changes the printed
+$F$-symbols. If all operators and states are transformed consistently, it
+does not change the spectrum. This is a gauge change. In contrast, two
+inequivalent unitary associators with the same fusion rules need not give
+the same local projectors or spectra.
+
+The categories commonly called $\mathcal H_2$ and $\mathcal H_3$ provide exactly this warning.
+Both have the six-object fusion ring used above. The physical chain in
+\eqref{eq:physical-chain-H} uses the specified real unitary $\mathcal H_3$
+associator. A uniform positive solution occurring in several algebraic
+constructions belongs to $\mathcal H_2$. Substituting it because the object names
+and fusion rules agree changes the chain.
+
+\begin{constructioninput}[A finite distinction between $\mathcal H_2$ and $\mathcal H_3$]
+For the same rho-channel coupling and the regular periodic length-four
+path space, the repository's exact local-data calculation gives
+\[
+ \Tr(H_2^2)-\Tr(H_3^2)=\frac{16}{3d}>0.
+\]
+The space has dimension $123$, as independently obtained from
+\eqref{eq:path-dimension}. This is a finite algebraic distinction between
+the two Hamiltonians, not a statement about their eventual infrared limits.
+\end{constructioninput}
+
+Unitary equivalence preserves every trace of a power. The displayed
+difference therefore excludes a unitary equivalence of these two finite
+Hamiltonians at the stated coupling and closure. It does not exclude a
+more elaborate equivalence involving module categories, boundary seams,
+changed couplings, or a common infrared fixed point. Such a proposal must
+specify those extra choices.
+
+\section{Translation and the ordinary \texorpdfstring{$C_3$}{C3} charge}
+\index{translation!fusion-path chain}
+
+Let $U_{\rm tr}$ roll the height word one place to the right. Let $A$ increase every
+color label by one, preserving whether the height is invertible or
+noninvertible. In a compatible gauge the Hamiltonian commutes with both,
+and $U_{\rm tr}^L=A^3=1$. They commute with each other. A simultaneous eigenspace
+is labeled by
+\[
+ U_{\rm tr}=e^{2\pi im/L},\qquad A=e^{2\pi iq/3},
+ \quad m\in\Z/L\Z,\quad q\in\Z/3\Z.
+\]
+There are $3L$ possible ordinary symmetry sectors, though their dimensions
+need not be equal.
+
+The formal sector projector is
+\[
+ \Pi_{m,q}=\frac1{3L}\sum_{r=0}^{L-1}\sum_{s=0}^2
+       e^{-2\pi i(mr/L+qs/3)}U_{\rm tr}^rA^s.
+\]
+It is often implemented through orbit representatives rather than as a
+dense matrix. Short orbits require care: if a combined translation and
+color shift fixes a path, the chosen character must be trivial on its
+stabilizer or its projected vector vanishes. Dividing indiscriminately by
+$\sqrt{3L}$ gives the wrong normalization on such orbits.
+
+For $h_j=-P_j^\rho$, our translation convention is
+$U_{\rm tr}h_jU_{\rm tr}^{-1}=h_{j+1}$. Define
+\begin{equation}
+ H_m=\sum_{j=0}^{L-1}e^{-2\pi imj/L}h_j.
+ \label{eq:energy-Fourier}
+\end{equation}
+Changing the summation variable gives
+$U_{\rm tr}H_mU_{\rm tr}^{-1}=e^{2\pi im/L}H_m$.
+Therefore $H_m$ raises momentum by $m$.
+The sign can look reversed if one uses a left translation or the opposite
+Fourier exponential. There is no physical disagreement, but the state
+selector and Fourier operator must use one convention together.
+
+\begin{example}[A selection rule without diagonalization]
+Suppose $|a\rangle$ has charge $q_a$ and momentum $m_a$, and an operator
+$O$ has charge $q_O$ and momentum $m_O$. If
+$\langle b|O|a\rangle\ne0$, then
+\[
+ q_b=q_a+q_O\pmod3,\qquad m_b=m_a+m_O\pmod L.
+\]
+This follows by inserting $A^{-1}A$ and $U_{\rm tr}^{-1}U_{\rm tr}$ on both sides of the
+matrix element. It is an exact lattice statement and needs no CFT limit.
+\end{example}
+
+\section{Dragging an auxiliary line around the ring}
+\index{topological symmetry operator}
+
+Ordinary color rotation is only the invertible part of the symmetry. To
+construct a general categorical line, put an auxiliary object $c$ around
+the periodic fusion tree and move it past each physical $\rho$ by an
+$F$-move. Closing the auxiliary line gives an operator $Y_c$. In the
+orthonormal path convention its matrix elements are a cyclic product of
+the corresponding $F$ coefficients:
+\begin{equation}
+ \langle b|Y_c|a\rangle
+ =\prod_i F(c,a_i,\rho,b_{i+1};b_i,a_{i+1}).
+ \label{eq:topological-line-product}
+\end{equation}
+The six-argument notation specifies the external objects and internal
+channels by
+\[
+ F(a,b,c,d;e,f)=F^{abc}_d[e,f].
+\]
+It avoids suppressing the height indices that
+make the product meaningful. There is no extra quantum-dimension
+prefactor in this convention.
+In the selected gauge the invertible line $Y_\alpha$ is the color
+rotation $A$ defined above.
+
+Two auxiliary lines can be fused before or after being moved through the
+chain. Pentagon coherence equates the two operations, giving
+\[
+ Y_aY_b=\sum_cN_{ab}^{c}Y_c.
+\]
+The same local graphical move shows that these lines commute with the
+fusion-channel Hamiltonian. For self-dual $\rho$, unitarity makes
+$Y_\rho$ self-adjoint. These statements use the associator, not merely
+the fusion matrices considered as abstract integer matrices.
+
+\begin{example}[Topological eigenvalues in the neutral sector]
+From the fusion ring,
+\[
+ Y_\rho^2=1+(1+A+A^2)Y_\rho.
+\]
+On $A=1$ states this reduces to $Y_\rho^2=1+3Y_\rho$, so the only
+possible eigenvalues are $d$ and $-d^{-1}$. The associated spectral
+projections are
+\[
+ \Pi_+=\frac{Y_\rho+d^{-1}}{d+d^{-1}},\qquad
+ \Pi_-=\frac{d-Y_\rho}{d+d^{-1}}.
+\]
+These formulas are useful for sector checks. They do not say that every
+neutral eigenstate belongs to the vacuum conformal family. Both sectors
+contain many lattice energies.
+\end{example}
+
+The operator $Y_\rho$ is not a unitary symmetry. Its eigenvalues have
+different absolute values, and its fusion square is a sum of lines.
+Replacing it by its polar unitary preserves a Hilbert-space operation,
+but need not preserve locality or the multiplication of local fields.
+One cannot infer a new ordinary CFT symmetry just by taking the polar
+part of a commuting matrix.
+
+In a conformal limit with a unique vacuum, a topological line acts on the
+vacuum by its quantum dimension. The stress family is then in the
+$Y_\rho=d$, $A=1$ sector because topological lines preserve the stress
+tensor. Conversely, finding that an energy-density source has these
+labels does not identify it as pure stress: other invariant fields can
+have the same labels.
+The continuum interpretation of line eigenvalues and twisted sectors
+is developed in Chapter~\ref{ch:defects}; the finite fusion equations
+alone do not supply that limiting dictionary.
+
+\section{The category supplies kinematics, the Hamiltonian dynamics}
+
+It is tempting to read a central charge directly from the categorical
+dimension $d$, the number of simple objects, or the modular data of the
+Drinfeld center. There is a simple obstruction to any such general rule.
+
+\begin{proposition}[Spectator underdetermination]
+Suppose a nonchiral CFT $\mathcal X$ realizes a specified Haagerup defect
+action. For any independent nonchiral CFT $\mathcal B$, the product
+$\mathcal X\otimes\mathcal B$ realizes the same specified action through
+$D_a\otimes1$, while its central charge is $c_{\mathcal X}+c_{\mathcal B}$.
+\end{proposition}
+\begin{proof}
+Fusion and junction maps on the first factor are unchanged when tensored
+with the identity of the second. The stress tensors add, so their central
+terms add. A defect-sector partition function is multiplied by the
+modular-invariant spectator partition function, preserving its sector
+transformation law.\end{proof}
+
+This does not make the fixed Hamiltonian's infrared charge arbitrary.
+Adding a spectator changes the microscopic system. It shows what must be
+learned dynamically once the category has been chosen. The topological
+central charge of a modular tensor category and the coefficient of the
+nonchiral chain's Casimir energy answer different questions.
+
+A similar distinction occurs for strange correlators. A topological bulk
+tensor network supplies a state $|\Psi_{\mathcal C}\rangle$; a boundary
+choice $\langle\Omega|$ supplies the amplitude
+$\langle\Omega|\Psi_{\mathcal C}\rangle$. The boundary tensor contains
+additional dynamics. In particular, a two-strand gate in the span
+$a1+bP_1$ cannot distinguish $\rho$ from the other nonunit channels,
+whereas the gate in the worked example above does. An entire decorated
+strange-correlator cell also contains algebra and module tensors. Its
+Hamiltonian limit must be established by an explicit local contraction,
+including seams and sectors, rather than by recognizing a familiar
+fusion category in one of its tensors.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:chain-dimension}
+Use the recurrence for $t_L$ to compute $\dim\HH_{\mathrm{path},5}$ and
+$\dim\HH_{\mathrm{path},8}$. Explain why the leading exponential growth is $d^L$ and
+why this differs from $6^L$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:chain-dimension]{Solution on page~\pageref*{sol:ex:chain-dimension}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:chain-projector}
+Let $F$ be a unitary $n\times n$ matrix and let $S$ be a subset of its
+columns. Show that the sum of the corresponding rank-one channel
+projectors is an orthogonal projector of rank $|S|$. What changes if the
+fusion multiplicity of a selected channel is greater than one?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:chain-projector]{Solution on page~\pageref*{sol:ex:chain-projector}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:chain-orbit}
+For a finite abelian group $G$ acting by permutations on an orthonormal
+basis, construct the character projection of one orbit vector. Prove
+that it vanishes precisely when the character is nontrivial on the
+orbit stabilizer, and normalize it when it is nonzero.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:chain-orbit]{Solution on page~\pageref*{sol:ex:chain-orbit}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:chain-noninvertible}
+On the alpha-neutral space prove that $Y_\rho-2$ is invertible and that
+\[
+ (Y_\rho-2)^\dagger(Y_\rho-2)=5-Y_\rho.
+\]
+Give upper and lower bounds for its squared norm on a unit vector.
+Why is it incorrect to call $Y_\rho-2$ a projection on this whole space?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:chain-noninvertible]{Solution on page~\pageref*{sol:ex:chain-noninvertible}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:chain-boundary}
+Write the dimension of the open path space with fixed endpoints $a,b$
+as a matrix element of $N_\rho^L$. Explain why a periodic trace and a
+fixed-endpoint matrix element need not have the same low-energy spectrum.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:chain-boundary]{Solution on page~\pageref*{sol:ex:chain-boundary}.}}\par
+\end{exercise}

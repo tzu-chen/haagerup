@@ -1,0 +1,135 @@
+{
+  "ambient_grade3": 11586,
+  "norm6_vectors": 2346,
+  "generated_grade3_dimension": 956,
+  "Haagerup_character_target": 956,
+  "target_matches": true,
+  "history": [
+    {
+      "stage": "affine_and_translation_descendants",
+      "dimension": 634
+    },
+    {
+      "stage": "1,5;e=798/1271",
+      "dimension": 902
+    },
+    {
+      "stage": "1,9;e=200/1271",
+      "dimension": 956
+    },
+    {
+      "stage": "1,9;e=1512/1271",
+      "dimension": 956
+    },
+    {
+      "stage": "1,13;e=420/1271",
+      "dimension": 956
+    },
+    {
+      "stage": "2,2;e=192/1271",
+      "dimension": 956
+    },
+    {
+      "stage": "2,6;e=1830/1271",
+      "dimension": 956
+    },
+    {
+      "stage": "2,8;e=752/1271",
+      "dimension": 956
+    },
+    {
+      "stage": "2,14;e=180/1271",
+      "dimension": 956
+    }
+  ],
+  "weight_multiplicities": {
+    "1,-15": 1,
+    "0,-4": 37,
+    "2,2": 7,
+    "0,14": 4,
+    "-1,-11": 7,
+    "-1,-1": 29,
+    "-2,-2": 7,
+    "1,15": 1,
+    "-1,7": 16,
+    "1,-13": 5,
+    "0,-2": 49,
+    "2,4": 5,
+    "0,16": 1,
+    "-1,-9": 10,
+    "-2,0": 12,
+    "-1,9": 10,
+    "0,-18": 1,
+    "2,-12": 1,
+    "0,0": 58,
+    "-1,-7": 16,
+    "-2,2": 7,
+    "-1,11": 7,
+    "0,-16": 1,
+    "2,-10": 1,
+    "0,2": 49,
+    "1,3": 25,
+    "-1,-5": 22,
+    "-2,4": 5,
+    "0,-14": 4,
+    "2,-8": 3,
+    "1,5": 22,
+    "-2,-12": 1,
+    "-1,-3": 25,
+    "0,-12": 8,
+    "1,-11": 7,
+    "1,-1": 29,
+    "1,7": 16,
+    "-2,-10": 1,
+    "2,6": 3,
+    "0,18": 1,
+    "0,-10": 14,
+    "1,-9": 10,
+    "1,9": 10,
+    "-2,-8": 3,
+    "2,8": 3,
+    "-1,13": 5,
+    "1,-7": 16,
+    "-1,-15": 1,
+    "0,4": 37,
+    "1,11": 7,
+    "2,10": 1,
+    "-2,6": 3,
+    "-1,15": 1,
+    "1,-5": 22,
+    "2,-6": 3,
+    "0,6": 31,
+    "1,13": 5,
+    "2,12": 1,
+    "-2,8": 3,
+    "1,-3": 25,
+    "2,-4": 5,
+    "0,8": 22,
+    "-1,1": 29,
+    "-2,10": 1,
+    "0,-8": 22,
+    "2,-2": 7,
+    "0,10": 14,
+    "-2,-6": 3,
+    "-1,3": 25,
+    "-2,12": 1,
+    "0,-6": 31,
+    "1,1": 29,
+    "2,0": 12,
+    "0,12": 8,
+    "-1,-13": 5,
+    "-2,-4": 5,
+    "-1,5": 22
+  },
+  "minimum_accepted_relative_residual": 9.773072541572878e-05,
+  "maximum_rejected_relative_residual": 2.615594754218131e-09,
+  "seconds": 10.655070708016865,
+  "peak_rss_KiB": 212712,
+  "scope": "Numerical span of generator products in grade three. Higher composites could enlarge the generated subalgebra; rationality and category are not established.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_grade3.py": "f21592c326bef918f37fd5ee6831a53e419dbad95b56fa932ee9678ad9a1c101",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_lattice.py": "398601b48fdea83207922d784a50eda32edad05113f5fe12f0a9410c542715ee",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_ope.py": "27136b9f33e767cd0f8cc66a420a44ba08451006d8e7de9c1320a8fab85df65a",
+    "hi_cft_20260923_c8_fields_precise.npz": "57b34695b28180d1dbf6ddbd62a3457be1b996d1fc8f4e3621806f5d174139bf"
+  }
+}

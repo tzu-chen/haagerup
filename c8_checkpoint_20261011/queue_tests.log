@@ -1,0 +1,29 @@
+.....c8q runner: queue /tmp/tmpg_9qmb9w, max parallel 1, declared reservations
+c8q runner: start a build /tmp/tmpg_9qmb9w/a.lean (1536 MiB)
+c8q runner: done a exit 0 /tmp/tmpg_9qmb9w/a.lean (10s, 1536 MiB)
+c8q runner: stop flag seen, exiting
+.c8q: declare a reviewed --memory-mib or explicitly set C8Q_MEMORY_MIB; there is no automatic estimate for this request
+.c8q runner: queue /tmp/tmpej77267j, max parallel 1, declared reservations
+c8q runner: start a build /tmp/tmpej77267j/a.lean (1024 MiB)
+c8q: admission stopped by /tmp/tmpej77267j/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q runner: done a exit 125 /tmp/tmpej77267j/a.lean (20s, 1024 MiB)
+c8q runner: stop flag seen, exiting
+c8q: admission stopped by /tmp/tmpej77267j/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q: admission stopped by /tmp/tmpej77267j/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q: admission stopped by /tmp/tmpej77267j/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+.c8q runner: queue /tmp/tmp5fipse9t, max parallel 1, declared reservations
+c8q: admission stopped by /tmp/tmp5fipse9t/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q runner: stop flag seen, exiting
+c8q: a: declare a reviewed --memory-mib or explicitly set C8Q_MEMORY_MIB; there is no automatic estimate for this request
+.c8q runner: queue /tmp/tmp2pap662h, max parallel 2, declared reservations
+c8q runner: start a build /tmp/tmp2pap662h/a.lean (1024 MiB)
+c8q runner: start b build /tmp/tmp2pap662h/b.lean (1024 MiB)
+c8q: admission stopped by /tmp/tmp2pap662h/MEMORY_STOP.json; review the failed allocation and job design before explicitly clearing MEMORY_STOP.json and STOP. No automatic restart or memory increase is permitted.
+c8q runner: done a exit 125 /tmp/tmp2pap662h/a.lean (30s, 1024 MiB)
+c8q runner: done b exit 0 /tmp/tmp2pap662h/b.lean (30s, 1024 MiB)
+c8q runner: stop flag seen, exiting
+..
+----------------------------------------------------------------------
+Ran 11 tests in 0.038s
+
+OK

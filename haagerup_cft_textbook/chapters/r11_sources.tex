@@ -1,0 +1,299 @@
+\chapter{A short source guide}
+\label{ch:sources}
+
+This book emphasizes explanations and calculations. The following
+guide is deliberately selective: it gives a route to the main
+constructions and to the strongest external inputs without turning
+each page into a literature survey. The repository manuscripts
+and the public literature have different roles. In particular,
+the detailed lattice realization developed in Part II is presented
+as the repository's research construction with the finite inputs
+and qualifications stated in the text.
+
+\raggedright
+
+For the elementary theta and eta transformations, the
+\href{https://dlmf.nist.gov/20.7#viii}{NIST theta-function formulas}
+and \href{https://dlmf.nist.gov/23.18}{eta modular transformations}
+fix the analytic conventions used in the rank-one lattice example.
+The discriminant and cyclotomic ramification facts used in
+Example~\ref{ex:coset-ramification} are explained in
+J.~S.~Milne's \href{https://www.jmilne.org/math/CourseNotes/ANT.pdf}
+{\emph{Algebraic Number Theory}}, Sections~3 and~6.
+
+\section*{Fusion categories, centers, and modular data}
+\addcontentsline{toc}{section}{Fusion categories, centers, and modular data}
+
+D.~E.~Evans and T.~Gannon,
+\emph{The exoticness and realisability of twisted Haagerup--Izumi
+modular data},
+\href{https://arxiv.org/abs/1006.1326}{arXiv:1006.1326},
+is the principal source for the modular data and the
+vector-valued character construction used here.
+It is especially useful after Chapters~\ref{ch:modular}
+and~\ref{ch:characters}, when the difference between modular
+data and a realized VOA is clear.
+
+M.~Izumi,
+\emph{The classification of $3^n$ subfactors and related fusion
+categories},
+\href{https://arxiv.org/abs/1609.07604}{arXiv:1609.07604},
+develops the operator-algebraic reconstruction and classification
+framework. P.~Grossman and N.~Snyder,
+\emph{Quantum subgroups of the Haagerup fusion categories},
+\href{https://arxiv.org/abs/1102.2631}{arXiv:1102.2631},
+is a source for the relations among the Haagerup categories and
+their module categories.
+
+For the center and extension mechanisms, useful primary sources are
+M.~M\"uger,
+\emph{From subfactors to categories and topology II},
+\href{https://arxiv.org/abs/math/0111205}{arXiv:math/0111205},
+and A.~Davydov, M.~M\"uger, D.~Nikshych, and V.~Ostrik,
+\emph{The Witt group of non-degenerate braided fusion categories},
+\href{https://arxiv.org/abs/1009.2117}{arXiv:1009.2117}.
+The small pointed-center and algebra-object examples in this book
+are intended to make those structural results easier to enter.
+
+The cyclic-rotation definition and center-trace formula for
+Frobenius--Schur indicators used in Chapter~\ref{ch:branching}
+are due to S.-H.~Ng and P.~Schauenburg; see
+\href{https://arxiv.org/abs/math/0601012}{\emph{Frobenius--Schur
+indicators and exponents of spherical categories}}, Theorem~4.1.
+The group and pointed-center calculations in that chapter fix
+the normalization needed for the Haagerup twist moments.
+
+D.~E.~Evans and T.~Gannon,
+\emph{Non-unitary fusion categories and their doubles via
+endomorphisms},
+\href{https://arxiv.org/abs/1506.03546}{arXiv:1506.03546},
+provides reconstruction machinery relevant to the arithmetic
+chapter. The uniform arithmetic existence argument discussed there
+comes from the repository research manuscript; it should not be
+attributed wholesale to this paper.
+
+For Chapter~\ref{ch:related-categories}, Grossman--Izumi--Snyder,
+\href{https://arxiv.org/abs/1501.07324}{\emph{The Asaeda--Haagerup
+fusion categories}}, supplies the published order-eight generalized
+Haagerup example. Its exact hyperbolic-gamma identification is a local
+result recorded in \sourcefile{hi_noncyclic_gis_gamma_proof.tex}.
+The distinction between the completed order-twelve algebraic
+construction and its open gamma identification is recorded in
+\sourcefile{hi_noncyclic_gamma_identification_status.md}, with the
+algebraic certificate explained in
+\sourcefile{hi_noncyclic_ansatz_z2xz6_exact.tex}.
+
+For extended Haagerup, the primary construction is
+Bigelow--Morrison--Peters--Snyder,
+\href{https://arxiv.org/abs/0909.4099}{\emph{Constructing the extended
+Haagerup planar algebra}}. Grossman--Morrison--Penneys--Peters--Snyder,
+\href{https://arxiv.org/abs/1810.06076}{\emph{The Extended Haagerup
+fusion categories}}, develops its fusion-category and Morita theory;
+Morrison--Snyder,
+\href{https://arxiv.org/abs/1002.0168}{\emph{Non-cyclotomic fusion
+categories}}, explains the field-of-definition distinction. The local
+\sourcefile{extended_haagerup_reconstruction_and_coefficients.tex}
+reorganizes the published coefficient seeds and explains their
+reconstruction into categorical data. These category constructions
+do not by themselves supply a new conformal field theory.
+
+\section*{Rationality and the analytic bridge}
+\addcontentsline{toc}{section}{Rationality and the analytic bridge}
+
+T.~Abe, G.~Buhl, and C.~Dong,
+\emph{Rationality, regularity, and $C_2$-cofiniteness},
+\href{https://arxiv.org/abs/math/0204021}{arXiv:math/0204021},
+is a basic source for the finiteness implications.
+R.~McRae,
+\emph{On rationality for $C_2$-cofinite vertex operator algebras},
+\href{https://arxiv.org/abs/2108.01898}{arXiv:2108.01898},
+and P.~Etingof and D.~Penneys,
+\emph{Rigidity of non-negligible objects of moderate growth in
+braided categories},
+\href{https://arxiv.org/abs/2412.17681v3}{arXiv:2412.17681v3},
+are the deeper inputs in the regularity route.
+Their hypotheses are part of the argument; quoting their
+conclusions without checking the relevant module category would
+skip the main work of Chapter~\ref{ch:regularity}.
+
+T.~Arakawa, C.~H.~Lam, and H.~Yamada,
+\emph{Parafermion vertex operator algebras and $W$-algebras},
+\href{https://arxiv.org/abs/1701.06229}{arXiv:1701.06229},
+is useful for the parafermion identification in
+Chapter~\ref{ch:factors}.
+C.~Dong and Q.~Wang,
+\emph{Quantum dimensions and fusion rules for parafermion vertex
+operator algebras},
+\href{https://arxiv.org/abs/1411.7429}{arXiv:1411.7429},
+supplies the affine and parafermion branching, identification, and
+fusion formulas used in that chapter's Potts-module example.
+
+S.~Carpi, Y.~Kawahigashi, R.~Longo, and M.~Weiner,
+\emph{From vertex operator algebras to conformal nets and back},
+\href{https://arxiv.org/abs/1503.01260}{arXiv:1503.01260},
+provides the locality and net framework.
+A.~G.~Henriques and J.~E.~Tener,
+\emph{Every conformal net has an associated unitary VOA},
+\href{https://arxiv.org/abs/2507.20735v3}{arXiv:2507.20735v3},
+supplies the reconstruction input in the version used by the
+research manuscript. J.~E.~Tener,
+\emph{Fusion and positivity in chiral conformal field theory},
+\href{https://arxiv.org/abs/1910.08257}{arXiv:1910.08257},
+is the source for the final fusion-positivity implication.
+Chapter~\ref{ch:unitarity} separates the module-counting,
+domain, and annulus-comparison steps needed to apply these results.
+
+M.~Krauel and M.~Miyamoto,
+\href{https://arxiv.org/abs/1501.00124}{\emph{A modular invariance
+property of multivariable trace functions for regular vertex operator
+algebras}}, Theorem~1, supplies the simultaneous two-temperature
+transformation used in Chapter~\ref{ch:cosets}. The regular ambient
+algebra and trace analyticity are the relevant hypotheses there;
+the two smaller Virasoro algebras need not be rational.
+
+B.~Gui,
+\emph{Q-systems and extensions of completely unitary vertex
+operator algebras},
+\href{https://arxiv.org/abs/1908.03484}{arXiv:1908.03484},
+and Y.-Z.~Huang, A.~Kirillov, Jr., and J.~Lepowsky,
+\emph{Braided tensor categories and extensions of vertex operator
+algebras},
+\href{https://arxiv.org/abs/1406.3420}{arXiv:1406.3420},
+explain the relation between categorical algebra objects and
+actual extensions. These are the relevant sources when moving
+from the center equivalence to the selected holomorphic theory.
+
+For the actual diagonal full conformal net, K.-H.~Rehren,
+\href{https://arxiv.org/abs/math/9911149}{\emph{Canonical tensor
+product subfactors}}, gives the Longo--Rehren route used here
+(Theorem~1.4, Proposition~1.5, and Corollary~1.6).
+For categorical sewing, the paper by J.~Fjelstad, J.~Fuchs,
+I.~Runkel, and C.~Schweigert,
+\href{https://arxiv.org/abs/hep-th/0503194}{\emph{TFT construction
+of RCFT correlators V}}, proves mapping-class invariance and
+bulk and boundary factorization.
+The paper by M.~Bischoff, Y.~Kawahigashi, and R.~Longo,
+\href{https://arxiv.org/abs/1410.8848}{\emph{Characterization of
+2D rational local conformal nets and its boundary conditions}},
+identifies the categorical full center with the corresponding
+net construction. Chapter~\ref{ch:sewing} distinguishes these
+theorems from the analytic sewing statements used to interpret
+surface amplitudes.
+
+\section*{The physical chain and the central-charge-eight proposal}
+\addcontentsline{toc}{section}{The physical chain and the central-charge-eight proposal}
+
+For the controlled marginal directions,
+S.~F\"orste and D.~Roggenkamp,
+\emph{Current-current deformations of conformal field theories,
+and WZW models},
+\href{https://arxiv.org/abs/hep-th/0304234}{arXiv:hep-th/0304234},
+gives the abelian current-deformation framework used in
+Chapter~\ref{ch:full_theories}.
+
+T.-C.~Huang, Y.-H.~Lin, K.~Ohmori, Y.~Tachikawa, and M.~Tezuka,
+\emph{Numerical evidence for a Haagerup conformal field theory},
+\href{https://arxiv.org/abs/2110.03008}{arXiv:2110.03008},
+and R.~Vanhove and collaborators,
+\emph{A critical lattice model for a Haagerup conformal field theory},
+\href{https://arxiv.org/abs/2110.03532}{arXiv:2110.03532},
+are two complementary starting points for the physical
+motivation. Their lattice constructions and evidentiary roles
+should be kept distinct.
+
+The overlap approach developed in Part IV is related to
+Y.~Liu, Y.~Zou, and S.~Ryu,
+\emph{Operator fusion from wavefunction overlaps: Universal
+finite-size corrections and application to Haagerup model},
+\href{https://arxiv.org/abs/2203.14992}{arXiv:2203.14992}.
+The book derives the normalization and finite-size tests it
+uses, so the reader need not take an overlap value on trust
+as a direct measurement of central charge.
+
+P.~Calabrese and J.~Cardy,
+\emph{Entanglement Entropy and Quantum Field Theory},
+\href{https://arxiv.org/abs/hep-th/0405152}{arXiv:hep-th/0405152},
+supplies the interval and massive single-cut entropy framework.
+Chapter~\ref{ch:tensor_networks} derives the replica weights and
+separates those geometries from the finite-entanglement scaling
+hypothesis used for variational states.
+
+For the rational-candidate tests in Chapter~\ref{ch:identification},
+Dong--Ren--Xu, \href{https://arxiv.org/abs/1507.03306}
+{\emph{On Orbifold Theory}}, Theorem~4.4 and Lemma~4.7, supplies
+the orbifold dimension formula under the stated hypotheses.
+Etingof--Nikshych--Ostrik, \href{https://arxiv.org/abs/math/0203060}
+{\emph{On fusion categories}}, Corollary~8.14 and Proposition~8.27,
+supplies Morita invariance and the weak-integrality dimension bound.
+For $W_3$, Beltaos--Gannon, \href{https://arxiv.org/abs/1004.1205}
+{\emph{The $W_N$ minimal model classification}}, Theorem~3.3,
+classifies modular-invariant matrices; Edie-Michell--Gannon,
+\href{https://arxiv.org/abs/2408.02794}
+{\emph{Type II quantum subgroups for quantum $\mathfrak{sl}_N$.
+II: Classification}}, Theorem~1.1, Remark~1.2 and Section~5.1,
+provides the affine module-category input. The chapter explains the
+additional category and full-center transfers rather than identifying
+matrix classification with OPE sewing. The height-thirteen comparison
+is a separate finite exact repository input, and all these exclusions
+retain their stated chiral-algebra-preservation premises.
+
+J.~Albert, Y.~Honda, J.~Kaidi, and Y.~Zheng,
+\emph{Haagerup symmetry in $(E_8)_1$?},
+\href{https://arxiv.org/abs/2512.08225v2}{arXiv:2512.08225v2},
+gives the public central-charge-eight proposal relevant to this
+project. The question mark is part of its title. A proposal
+based on modular and spectral structure, the repository's
+explicit lattice construction, and an identification of a
+microscopic chain are three different achievements.
+
+\section*{The construction record used for this textbook}
+\addcontentsline{toc}{section}{The construction record used for this textbook}
+
+The main algebraic record is
+\sourcefile{hi_cft_c8_proof.tex}, with the structural and analytic
+arguments in
+\sourcefile{hi_cft_c8_manuscript_structure.tex} and
+\sourcefile{hi_cft_c8_manuscript_analytic.tex}.
+These files give the finite lattice gates and the global
+deductions on which Part II is based. The review note
+\sourcefile{hi_cft_c8_explicitness_review_20260928.md}
+and the expanded material in
+\sourcefile{c8_expanded_20260929/}
+help expose intermediate steps that are compressed in the
+shorter manuscript.
+
+The spectrum, coupling, correlator, and defect records are in
+\sourcefile{c8_physics_20260927/}. They are the immediate
+research inputs for the detailed observables in Part III.
+This textbook rederives the small examples and explains their
+normalizations; it does not substitute a few successful
+low-weight calculations for a reconstruction of every bulk
+nonvacuum OPE.
+
+The chain discussion uses the completed research summaries and
+their linked evidence, especially
+\sourcefile{hi_cft_20261001_status.md} and
+\sourcefile{hi_cft_20261001_theory_handoff.md}.
+The completed October 5 continuation is recorded in
+\sourcefile{hi_cft_20261005_status.md},
+\sourcefile{hi_cft_20261005_chain_handoff.md}, and
+\sourcefile{hi_cft_20261005_theory_handoff.md}.
+Its qualified variational sequence and completed operator and
+correlation comparisons are included in the later chain chapters.
+Earlier calculations retain their original finite scope; a later
+qualified tensor does not retroactively qualify an earlier endpoint.
+
+Formal verification has a separate scope. The authoritative
+description of the current conditional development is
+\sourcefile{lean/HaagerupIzumi/C8/TRUST_BOUNDARY.md}.
+Appendix~\ref{app:verification} explains how to read a
+trust boundary and why a theorem proved from named finite
+inputs is not the same as a machine verification of those
+inputs. The local audit notes in this textbook's
+\sourcefile{editorial/} directory record independent
+mathematical reviews of the exposition itself.
+
+These paths identify the source snapshot in the accompanying
+workspace. The textbook source bundle is self-contained for
+typesetting, but it does not duplicate the entire research
+repository or all of its numerical checkpoints.

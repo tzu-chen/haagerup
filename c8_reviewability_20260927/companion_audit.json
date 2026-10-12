@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "transcription_rows": {
+    "structural_fields.tsv": 525,
+    "core_spectral_witnesses.tsv": 126,
+    "top81_pivots.tsv": 324,
+    "top81_seeds_and_first_steps.tsv": 12
+  },
+  "documents": {
+    "hi_cft_c8_verification_guide": {
+      "pages": 20,
+      "labels": 17,
+      "references": 16,
+      "clean_build": true
+    },
+    "hi_cft_c8_lean_assessment": {
+      "pages": 10,
+      "labels": 1,
+      "references": 0,
+      "clean_build": true
+    }
+  },
+  "checked_report_bindings": 10,
+  "old_manuscript_source_files_unchanged": 7,
+  "scope": "Transcription, report bindings, local TeX references and packaging only; no new mathematical theorem."
+}

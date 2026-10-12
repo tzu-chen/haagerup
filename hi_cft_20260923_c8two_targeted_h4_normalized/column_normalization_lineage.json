@@ -1,0 +1,1195 @@
+{
+  "format": "targeted-H4-exact-column-normalization-v1",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_h4_normalized.py": "d266de55a9222fd7da3cff918df93fee30be05c5a114f996a8b2e21b86144847",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_h4_trim_v2.py": "8422c189b0c30850c32ca05858c119ebd0acb0bec91bcbb55337d21318a8a12c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4.py": "4857680860efabde0cb8a86bb93ac2f1fc822432829bdb5138cc9957d5eb9a52",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_saturation.json": "a9818c616d3d25e68f9a35f59b59441558ee4e1f8985353e0aa88c907d9b99d6"
+  },
+  "ancestor_directory": "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2",
+  "ancestor_files_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_m1_m1.json": "5fd9e3e44bf6ccc4fd0ceab80a36f396a6e3d2491dd3044cdff8fa00d823e458",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_m1_m1.sqlite": "ac6e3ca87285c234ed7f49b2511490884abc8da5f4644978ba386b4bc034963a",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_m1_p1.json": "645197fbb45fcf38368285c30359d3842f3cc19c1a3aee2089e6d707d1b3244c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_m1_p1.sqlite": "12cf078f12f1677ccfa9555eccb80462e351664defd51126320a06eba9b30d4c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_m2.json": "99163fe0d809b0a231730abe1c440e150744fa08bc267c92656e3cebafe10c25",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_m2.sqlite": "3d3eec0e6ec2c1759ba65d24bd97c1b5da78457957dd067902447f7464c07871",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_m4.json": "fc7477433e3f1dc330ca693b7726328ea12de1d552cea7b260cdd12efdb57908",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_m4.sqlite": "7a51d0338c82605c2397d78904da033b8ca0606565919feef8b82f740f0e2c5c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_m6.json": "aa6f930d087e0461579685c6a65a79d6b0c8b5a8572eab1b833d5c689e8ecca5",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_m6.sqlite": "77c4be965cee2db908ac461ca3a1d959b00bb0fbb6eee799816b2b93217fad8d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_p0.json": "ad2ad496b3f186f27df2a0ce2a3b33e85905ea40d1b7370f3c32dc1c264bd16f",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_p0.sqlite": "c4f1b538276dc21c8bb03d60187eb667f2a7e16c6359208423877ea47af58955",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_p2.json": "9341fc093f92c60b58b4708c32096da9a13a986e902e9a86cd9163e68220bd31",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_p2.sqlite": "2798fcc84d05b09ea38b1e49f8233aa7cbe3de851dc505aff109e8e0cf8553aa",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_p4.json": "fdddb5bcadcc086c228a685d42c7426b14f58b682a175708a9e5b3eba8a02388",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_p4.sqlite": "30024c8f8a4141fdca5dc0705b4b918fc1dda024b353c9e383d22710ab0ad12e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_p6.json": "7ce70481933ea3128655b00e0742b056e13d24bd20421961e737ad78ab7b7533",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_p6.sqlite": "98e49b938b6245c09eb25cb38f8805c6b0a2b490698ce4ec742840072797618c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p1_m1.json": "60294398ac5904ca5f672e610f4760507ed4895c33ce67d4478e41804bc9abf0",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p1_m1.sqlite": "a78e6964167e0906464df42e1950195773095b54c5aedd69b85e3d9fd6857724",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p1_p1.json": "b68d586eb2cd7953fbbd29c9a32ac16b5a8e8f084fe11b920a5c8019edda8c87",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p1_p1.sqlite": "8845ccf2d5af3a0e61e3e084de15993d7e314efc960bc34d9a08026d581c55f4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/pre_native_trim_lineage.json": "04f4597a8f9ea1ae27a9cefa7345217b57191db860b0d2882d0bea5f4c9324a4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/summary.json": "70bf71e327a299f9317cac765acfe789269102bf8db7267cf3d0f953f221cc50",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/targeted_policy.json": "a91a1367849a437ce6158c12e9d6d6c11b57d98e1ca74d8bab6dc5244a6fd989"
+  },
+  "legacy_trim_policy": {
+    "format": "targeted-H4-pre-native-cache-trim-v2",
+    "source_sha256": {
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_h4_trim_v2.py": "8422c189b0c30850c32ca05858c119ebd0acb0bec91bcbb55337d21318a8a12c",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4.py": "4857680860efabde0cb8a86bb93ac2f1fc822432829bdb5138cc9957d5eb9a52",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_integer_cached_v2.py": "663ca02887cf23cfaf6bde151b6f917d4290c2abec7a0623db4a5bb47211736e",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_integer_residual.py": "782538a65c4a5ef3c9553a6463089a8dbf9b85d205e5a9ad2ca4d0ae100ee5e3",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_exact_cached.py": "8206f925b87769e7466210381b49ffa2b6872244812ae8aaf67c4910fcc2f7a9",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_exact_mode_cache.py": "aa4b96fea7e13a688d0d9b36d1481550882b13cc9127cfff50fc527d9e543a64",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_saturation.py": "522b04757f76b58daf02b555fd36dd5fb89bdd8fa8354341f0c8311bb8ac97a7",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_saturation.json": "a9818c616d3d25e68f9a35f59b59441558ee4e1f8985353e0aa88c907d9b99d6"
+    },
+    "ancestor_directory": "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk",
+    "ancestor_files_sha256": {
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_m1_m1.json": "6124e51176edd967ab87bfdbdb4d5439e2c6ac488e78c8ce0c82619eb2ce5d16",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_m1_m1.sqlite": "d2fdcda46fd81d4e69ed572a4bab02a2b964baa043a9ae895cd6bf65ea4df2f7",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_m1_p1.json": "83236f8718812a4c887fd30eedad94aded35701db3a304bb50641b525075c38e",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_m1_p1.sqlite": "999bea44ab3ac4a633a7acde7b361e9ff403e294e32bece574b7514c81f83db9",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m2.json": "aaba2de3486f89045fe98a6d6d7d78015cd6422612752bf54a7087661b9dd803",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m2.sqlite": "bfab06c0490a53c6b4cd0a2c530a0244b46eb7b7d53b2fe51d6aef9b6f4d9b68",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m4.json": "a40c38b85f8688a83826e59ed226a35a920613582c7fdeda5e0cf9ad2d23dd34",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m4.sqlite": "af8fe45e9931ef0708b5ec8966bf4aafda469d61cb22afe5ec789ed73a4ab6d9",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m6.json": "5fbf0c9a4ebfd24dca902cb4d1d875301ccd020d4379d978d282bd1f02e7a13d",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m6.sqlite": "1419dbe8ea504317c4493325594860c376015428a22df487d1046a6a2015cbdf",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_p4.json": "4c6f5e98c095f6be0a6df2f921ece7070a8b17653717384b09a43627995dfd6c",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_p4.sqlite": "9b7abfc6cccc3d89c1e4c9bfccb8e116a0c2ea0a07f001f386b9da9bf8489386",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_p6.json": "95eca92f699f03011d37d915e2ea0615c1467dc1f4ec1778313e6efa4fe2e477",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_p6.sqlite": "fd5488959f739d2b72f723f05f69bc47052c9679b4367a02dcab40300d887a24",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p1_m1.json": "1dd37fcbe457f68573ca24561364bcbc3f2ba853d5fd513ae21eacd4111f2ed2",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p1_m1.sqlite": "5668ddae885561176338d74f11e0e637e32420c45c13576f4c802217637ec3c6",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p1_p1.json": "b78af5ac823d967a1ad5afa2e70a0d122a102aba90fa33218d8b19b133d00573",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p1_p1.sqlite": "24612107faab311d5397e786ff6639eb8130dd258dc6bd836e82d98e0139d5ac",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/summary.json": "235cb316c1b62177564dea9a69a21f95744c2743618ac97378e56f12633b9e20",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/targeted_policy.json": "a91a1367849a437ce6158c12e9d6d6c11b57d98e1ca74d8bab6dc5244a6fd989"
+    },
+    "legacy_targeted_policy": {
+      "batch": 8,
+      "format": "targeted-H4-integer-residual-v1",
+      "requested_targets": [
+        [
+          0,
+          "r3_000874"
+        ],
+        [
+          0,
+          "r3_000912"
+        ],
+        [
+          0,
+          "r3_000913"
+        ],
+        [
+          0,
+          "r3_000915"
+        ],
+        [
+          0,
+          "r3_000916"
+        ],
+        [
+          0,
+          "r3_000917"
+        ],
+        [
+          0,
+          "r3_000920"
+        ],
+        [
+          0,
+          "r3_000921"
+        ],
+        [
+          0,
+          "r3_000945"
+        ],
+        [
+          0,
+          "r3_000946"
+        ],
+        [
+          0,
+          "r3_000947"
+        ],
+        [
+          0,
+          "r3_000950"
+        ],
+        [
+          0,
+          "r3_000951"
+        ],
+        [
+          0,
+          "r3_000952"
+        ],
+        [
+          0,
+          "r3_000955"
+        ],
+        [
+          1,
+          "r3_000882"
+        ],
+        [
+          1,
+          "r3_000898"
+        ],
+        [
+          1,
+          "r3_000910"
+        ],
+        [
+          1,
+          "r3_000912"
+        ],
+        [
+          1,
+          "r3_000913"
+        ],
+        [
+          1,
+          "r3_000915"
+        ],
+        [
+          1,
+          "r3_000916"
+        ],
+        [
+          1,
+          "r3_000917"
+        ],
+        [
+          1,
+          "r3_000920"
+        ],
+        [
+          1,
+          "r3_000921"
+        ],
+        [
+          1,
+          "r3_000922"
+        ],
+        [
+          1,
+          "r3_000923"
+        ],
+        [
+          1,
+          "r3_000945"
+        ],
+        [
+          1,
+          "r3_000946"
+        ],
+        [
+          1,
+          "r3_000947"
+        ],
+        [
+          1,
+          "r3_000950"
+        ],
+        [
+          1,
+          "r3_000951"
+        ],
+        [
+          1,
+          "r3_000952"
+        ],
+        [
+          1,
+          "r3_000955"
+        ],
+        [
+          2,
+          "r3_000882"
+        ],
+        [
+          2,
+          "r3_000898"
+        ],
+        [
+          2,
+          "r3_000900"
+        ],
+        [
+          2,
+          "r3_000910"
+        ],
+        [
+          2,
+          "r3_000912"
+        ],
+        [
+          2,
+          "r3_000913"
+        ],
+        [
+          2,
+          "r3_000915"
+        ],
+        [
+          2,
+          "r3_000916"
+        ],
+        [
+          2,
+          "r3_000917"
+        ],
+        [
+          2,
+          "r3_000920"
+        ],
+        [
+          2,
+          "r3_000921"
+        ],
+        [
+          2,
+          "r3_000922"
+        ],
+        [
+          2,
+          "r3_000923"
+        ],
+        [
+          2,
+          "r3_000945"
+        ],
+        [
+          2,
+          "r3_000946"
+        ],
+        [
+          2,
+          "r3_000947"
+        ],
+        [
+          2,
+          "r3_000950"
+        ],
+        [
+          2,
+          "r3_000951"
+        ],
+        [
+          2,
+          "r3_000952"
+        ],
+        [
+          2,
+          "r3_000955"
+        ],
+        [
+          3,
+          "r3_000901"
+        ],
+        [
+          3,
+          "r3_000902"
+        ],
+        [
+          3,
+          "r3_000910"
+        ],
+        [
+          3,
+          "r3_000912"
+        ],
+        [
+          3,
+          "r3_000913"
+        ],
+        [
+          3,
+          "r3_000915"
+        ],
+        [
+          3,
+          "r3_000916"
+        ],
+        [
+          3,
+          "r3_000917"
+        ],
+        [
+          3,
+          "r3_000919"
+        ],
+        [
+          3,
+          "r3_000920"
+        ],
+        [
+          3,
+          "r3_000921"
+        ],
+        [
+          3,
+          "r3_000922"
+        ],
+        [
+          3,
+          "r3_000923"
+        ],
+        [
+          3,
+          "r3_000946"
+        ],
+        [
+          3,
+          "r3_000951"
+        ],
+        [
+          3,
+          "r3_000952"
+        ],
+        [
+          4,
+          "r3_000873"
+        ],
+        [
+          4,
+          "r3_000874"
+        ],
+        [
+          4,
+          "r3_000879"
+        ],
+        [
+          4,
+          "r3_000882"
+        ],
+        [
+          4,
+          "r3_000897"
+        ],
+        [
+          4,
+          "r3_000898"
+        ],
+        [
+          4,
+          "r3_000945"
+        ],
+        [
+          4,
+          "r3_000947"
+        ],
+        [
+          4,
+          "r3_000955"
+        ],
+        [
+          5,
+          "r3_000873"
+        ],
+        [
+          5,
+          "r3_000874"
+        ],
+        [
+          5,
+          "r3_000879"
+        ],
+        [
+          5,
+          "r3_000882"
+        ],
+        [
+          5,
+          "r3_000897"
+        ],
+        [
+          5,
+          "r3_000898"
+        ],
+        [
+          5,
+          "r3_000899"
+        ],
+        [
+          5,
+          "r3_000900"
+        ],
+        [
+          5,
+          "r3_000901"
+        ],
+        [
+          5,
+          "r3_000912"
+        ],
+        [
+          5,
+          "r3_000913"
+        ],
+        [
+          5,
+          "r3_000946"
+        ],
+        [
+          5,
+          "r3_000950"
+        ],
+        [
+          5,
+          "r3_000951"
+        ],
+        [
+          5,
+          "r3_000952"
+        ],
+        [
+          6,
+          "r3_000873"
+        ],
+        [
+          6,
+          "r3_000874"
+        ],
+        [
+          6,
+          "r3_000879"
+        ],
+        [
+          6,
+          "r3_000882"
+        ],
+        [
+          6,
+          "r3_000897"
+        ],
+        [
+          6,
+          "r3_000898"
+        ],
+        [
+          6,
+          "r3_000899"
+        ],
+        [
+          6,
+          "r3_000900"
+        ],
+        [
+          6,
+          "r3_000901"
+        ],
+        [
+          6,
+          "r3_000902"
+        ],
+        [
+          6,
+          "r3_000912"
+        ],
+        [
+          6,
+          "r3_000913"
+        ],
+        [
+          6,
+          "r3_000916"
+        ],
+        [
+          6,
+          "r3_000920"
+        ],
+        [
+          6,
+          "r3_000946"
+        ],
+        [
+          6,
+          "r3_000951"
+        ],
+        [
+          6,
+          "r3_000952"
+        ],
+        [
+          7,
+          "r3_000882"
+        ],
+        [
+          7,
+          "r3_000898"
+        ],
+        [
+          7,
+          "r3_000899"
+        ],
+        [
+          7,
+          "r3_000900"
+        ],
+        [
+          7,
+          "r3_000901"
+        ],
+        [
+          7,
+          "r3_000902"
+        ],
+        [
+          7,
+          "r3_000910"
+        ],
+        [
+          7,
+          "r3_000922"
+        ],
+        [
+          7,
+          "r3_000923"
+        ],
+        [
+          8,
+          "r3_000873"
+        ],
+        [
+          8,
+          "r3_000912"
+        ],
+        [
+          8,
+          "r3_000913"
+        ],
+        [
+          8,
+          "r3_000945"
+        ],
+        [
+          8,
+          "r3_000946"
+        ],
+        [
+          8,
+          "r3_000947"
+        ],
+        [
+          8,
+          "r3_000950"
+        ],
+        [
+          8,
+          "r3_000951"
+        ],
+        [
+          8,
+          "r3_000952"
+        ],
+        [
+          8,
+          "r3_000955"
+        ]
+      ],
+      "serial_policy": {
+        "format": "serial-exact-h4-v1",
+        "omitted_neutral_family_derived_from_total_stress": true,
+        "operators": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "plan_sha256": "f93a8f55c3bc820137a5610cb49404800afba7f29383ff7030a59eb61578b75e",
+        "source_sha256": {
+          "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_h4_flint.py": "41f0222b5892e2ace3cb76eb313d64d7edfbfb8eb3a4ac8935bbe6982846b5de",
+          "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_strong_skip_v2.sqlite": "8b0dc383a49249db5d8b369300d0d8f145d9725461cb5a2c3e236af9ca682f08",
+          "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_h4_bulk.py": "6401adec66896cfd8526f9f629db9ee1b0654a184179579904d7aebca00f8e11",
+          "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.json": "cd3247f2919fd4b88531f8fcb528a34f4b51b245b3b408abb1d1c7c2274c2ae6",
+          "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.vectors.json.gz": "c8c3ce8b8ab361fabca3c54c3f77a234029bf9b62858f74b5991dc5ed73c1d4e",
+          "hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/manifest.json": "8fd8a3eedee018e6caa18cf773c49740265ede07e0ac705c3bfc79d1b2be84fd"
+        }
+      },
+      "source_sha256": {
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_saturation.json": "a9818c616d3d25e68f9a35f59b59441558ee4e1f8985353e0aa88c907d9b99d6",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4.py": "4857680860efabde0cb8a86bb93ac2f1fc822432829bdb5138cc9957d5eb9a52",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_exact_mode_cache.py": "aa4b96fea7e13a688d0d9b36d1481550882b13cc9127cfff50fc527d9e543a64",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_exact_cached.py": "8206f925b87769e7466210381b49ffa2b6872244812ae8aaf67c4910fcc2f7a9",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_integer_cached_v2.py": "663ca02887cf23cfaf6bde151b6f917d4290c2abec7a0623db4a5bb47211736e",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_integer_residual.py": "782538a65c4a5ef3c9553a6463089a8dbf9b85d205e5a9ad2ca4d0ae100ee5e3",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_h4_bulk.py": "6401adec66896cfd8526f9f629db9ee1b0654a184179579904d7aebca00f8e11"
+      }
+    },
+    "scope": "Only reconstructible caches are discarded before the unchanged native solve."
+  },
+  "legacy_targeted_policy": {
+    "batch": 8,
+    "format": "targeted-H4-integer-residual-v1",
+    "requested_targets": [
+      [
+        0,
+        "r3_000874"
+      ],
+      [
+        0,
+        "r3_000912"
+      ],
+      [
+        0,
+        "r3_000913"
+      ],
+      [
+        0,
+        "r3_000915"
+      ],
+      [
+        0,
+        "r3_000916"
+      ],
+      [
+        0,
+        "r3_000917"
+      ],
+      [
+        0,
+        "r3_000920"
+      ],
+      [
+        0,
+        "r3_000921"
+      ],
+      [
+        0,
+        "r3_000945"
+      ],
+      [
+        0,
+        "r3_000946"
+      ],
+      [
+        0,
+        "r3_000947"
+      ],
+      [
+        0,
+        "r3_000950"
+      ],
+      [
+        0,
+        "r3_000951"
+      ],
+      [
+        0,
+        "r3_000952"
+      ],
+      [
+        0,
+        "r3_000955"
+      ],
+      [
+        1,
+        "r3_000882"
+      ],
+      [
+        1,
+        "r3_000898"
+      ],
+      [
+        1,
+        "r3_000910"
+      ],
+      [
+        1,
+        "r3_000912"
+      ],
+      [
+        1,
+        "r3_000913"
+      ],
+      [
+        1,
+        "r3_000915"
+      ],
+      [
+        1,
+        "r3_000916"
+      ],
+      [
+        1,
+        "r3_000917"
+      ],
+      [
+        1,
+        "r3_000920"
+      ],
+      [
+        1,
+        "r3_000921"
+      ],
+      [
+        1,
+        "r3_000922"
+      ],
+      [
+        1,
+        "r3_000923"
+      ],
+      [
+        1,
+        "r3_000945"
+      ],
+      [
+        1,
+        "r3_000946"
+      ],
+      [
+        1,
+        "r3_000947"
+      ],
+      [
+        1,
+        "r3_000950"
+      ],
+      [
+        1,
+        "r3_000951"
+      ],
+      [
+        1,
+        "r3_000952"
+      ],
+      [
+        1,
+        "r3_000955"
+      ],
+      [
+        2,
+        "r3_000882"
+      ],
+      [
+        2,
+        "r3_000898"
+      ],
+      [
+        2,
+        "r3_000900"
+      ],
+      [
+        2,
+        "r3_000910"
+      ],
+      [
+        2,
+        "r3_000912"
+      ],
+      [
+        2,
+        "r3_000913"
+      ],
+      [
+        2,
+        "r3_000915"
+      ],
+      [
+        2,
+        "r3_000916"
+      ],
+      [
+        2,
+        "r3_000917"
+      ],
+      [
+        2,
+        "r3_000920"
+      ],
+      [
+        2,
+        "r3_000921"
+      ],
+      [
+        2,
+        "r3_000922"
+      ],
+      [
+        2,
+        "r3_000923"
+      ],
+      [
+        2,
+        "r3_000945"
+      ],
+      [
+        2,
+        "r3_000946"
+      ],
+      [
+        2,
+        "r3_000947"
+      ],
+      [
+        2,
+        "r3_000950"
+      ],
+      [
+        2,
+        "r3_000951"
+      ],
+      [
+        2,
+        "r3_000952"
+      ],
+      [
+        2,
+        "r3_000955"
+      ],
+      [
+        3,
+        "r3_000901"
+      ],
+      [
+        3,
+        "r3_000902"
+      ],
+      [
+        3,
+        "r3_000910"
+      ],
+      [
+        3,
+        "r3_000912"
+      ],
+      [
+        3,
+        "r3_000913"
+      ],
+      [
+        3,
+        "r3_000915"
+      ],
+      [
+        3,
+        "r3_000916"
+      ],
+      [
+        3,
+        "r3_000917"
+      ],
+      [
+        3,
+        "r3_000919"
+      ],
+      [
+        3,
+        "r3_000920"
+      ],
+      [
+        3,
+        "r3_000921"
+      ],
+      [
+        3,
+        "r3_000922"
+      ],
+      [
+        3,
+        "r3_000923"
+      ],
+      [
+        3,
+        "r3_000946"
+      ],
+      [
+        3,
+        "r3_000951"
+      ],
+      [
+        3,
+        "r3_000952"
+      ],
+      [
+        4,
+        "r3_000873"
+      ],
+      [
+        4,
+        "r3_000874"
+      ],
+      [
+        4,
+        "r3_000879"
+      ],
+      [
+        4,
+        "r3_000882"
+      ],
+      [
+        4,
+        "r3_000897"
+      ],
+      [
+        4,
+        "r3_000898"
+      ],
+      [
+        4,
+        "r3_000945"
+      ],
+      [
+        4,
+        "r3_000947"
+      ],
+      [
+        4,
+        "r3_000955"
+      ],
+      [
+        5,
+        "r3_000873"
+      ],
+      [
+        5,
+        "r3_000874"
+      ],
+      [
+        5,
+        "r3_000879"
+      ],
+      [
+        5,
+        "r3_000882"
+      ],
+      [
+        5,
+        "r3_000897"
+      ],
+      [
+        5,
+        "r3_000898"
+      ],
+      [
+        5,
+        "r3_000899"
+      ],
+      [
+        5,
+        "r3_000900"
+      ],
+      [
+        5,
+        "r3_000901"
+      ],
+      [
+        5,
+        "r3_000912"
+      ],
+      [
+        5,
+        "r3_000913"
+      ],
+      [
+        5,
+        "r3_000946"
+      ],
+      [
+        5,
+        "r3_000950"
+      ],
+      [
+        5,
+        "r3_000951"
+      ],
+      [
+        5,
+        "r3_000952"
+      ],
+      [
+        6,
+        "r3_000873"
+      ],
+      [
+        6,
+        "r3_000874"
+      ],
+      [
+        6,
+        "r3_000879"
+      ],
+      [
+        6,
+        "r3_000882"
+      ],
+      [
+        6,
+        "r3_000897"
+      ],
+      [
+        6,
+        "r3_000898"
+      ],
+      [
+        6,
+        "r3_000899"
+      ],
+      [
+        6,
+        "r3_000900"
+      ],
+      [
+        6,
+        "r3_000901"
+      ],
+      [
+        6,
+        "r3_000902"
+      ],
+      [
+        6,
+        "r3_000912"
+      ],
+      [
+        6,
+        "r3_000913"
+      ],
+      [
+        6,
+        "r3_000916"
+      ],
+      [
+        6,
+        "r3_000920"
+      ],
+      [
+        6,
+        "r3_000946"
+      ],
+      [
+        6,
+        "r3_000951"
+      ],
+      [
+        6,
+        "r3_000952"
+      ],
+      [
+        7,
+        "r3_000882"
+      ],
+      [
+        7,
+        "r3_000898"
+      ],
+      [
+        7,
+        "r3_000899"
+      ],
+      [
+        7,
+        "r3_000900"
+      ],
+      [
+        7,
+        "r3_000901"
+      ],
+      [
+        7,
+        "r3_000902"
+      ],
+      [
+        7,
+        "r3_000910"
+      ],
+      [
+        7,
+        "r3_000922"
+      ],
+      [
+        7,
+        "r3_000923"
+      ],
+      [
+        8,
+        "r3_000873"
+      ],
+      [
+        8,
+        "r3_000912"
+      ],
+      [
+        8,
+        "r3_000913"
+      ],
+      [
+        8,
+        "r3_000945"
+      ],
+      [
+        8,
+        "r3_000946"
+      ],
+      [
+        8,
+        "r3_000947"
+      ],
+      [
+        8,
+        "r3_000950"
+      ],
+      [
+        8,
+        "r3_000951"
+      ],
+      [
+        8,
+        "r3_000952"
+      ],
+      [
+        8,
+        "r3_000955"
+      ]
+    ],
+    "serial_policy": {
+      "format": "serial-exact-h4-v1",
+      "omitted_neutral_family_derived_from_total_stress": true,
+      "operators": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "plan_sha256": "f93a8f55c3bc820137a5610cb49404800afba7f29383ff7030a59eb61578b75e",
+      "source_sha256": {
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_h4_flint.py": "41f0222b5892e2ace3cb76eb313d64d7edfbfb8eb3a4ac8935bbe6982846b5de",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_strong_skip_v2.sqlite": "8b0dc383a49249db5d8b369300d0d8f145d9725461cb5a2c3e236af9ca682f08",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_h4_bulk.py": "6401adec66896cfd8526f9f629db9ee1b0654a184179579904d7aebca00f8e11",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.json": "cd3247f2919fd4b88531f8fcb528a34f4b51b245b3b408abb1d1c7c2274c2ae6",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.vectors.json.gz": "c8c3ce8b8ab361fabca3c54c3f77a234029bf9b62858f74b5991dc5ed73c1d4e",
+        "hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/manifest.json": "8fd8a3eedee018e6caa18cf773c49740265ede07e0ac705c3bfc79d1b2be84fd"
+      }
+    },
+    "source_sha256": {
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_saturation.json": "a9818c616d3d25e68f9a35f59b59441558ee4e1f8985353e0aa88c907d9b99d6",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4.py": "4857680860efabde0cb8a86bb93ac2f1fc822432829bdb5138cc9957d5eb9a52",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_exact_mode_cache.py": "aa4b96fea7e13a688d0d9b36d1481550882b13cc9127cfff50fc527d9e543a64",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_exact_cached.py": "8206f925b87769e7466210381b49ffa2b6872244812ae8aaf67c4910fcc2f7a9",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_integer_cached_v2.py": "663ca02887cf23cfaf6bde151b6f917d4290c2abec7a0623db4a5bb47211736e",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_integer_residual.py": "782538a65c4a5ef3c9553a6463089a8dbf9b85d205e5a9ad2ca4d0ae100ee5e3",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_h4_bulk.py": "6401adec66896cfd8526f9f629db9ee1b0654a184179579904d7aebca00f8e11"
+    }
+  },
+  "native_preflight_limit_bytes": 536870912,
+  "rank_limit": 300,
+  "normalization_rule": "Choose a rational primitive-content or field-entry scale only if exact column height decreases; undo in original-word coefficients before full residual"
+}

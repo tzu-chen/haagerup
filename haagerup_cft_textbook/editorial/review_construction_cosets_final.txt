@@ -1,0 +1,216 @@
+Final hand review of c06: charge-six transport and coset scopes
+Reviewer: scope_construction
+Timestamp: 2026-10-05 20:53:36 UTC (clock tool)
+Read-only source and hand-algebra review. No numerical execution,
+imports, builds, certificate reruns, or live chapter/solution edits.
+
+Conclusion
+----------
+The charge-six construction passes: the lattice is explicit, the
+commutants and rationality use the appropriate special hypotheses,
+categorical transitivity transports the actual multiplication, and the
+diagonal rank-six lattice full CFT exists independently of a further
+analytic defect-sector comparison. The text correctly retains that
+comparison premise for the physical C6-preserving defects. It never
+selects the original extension's H2/H3 fork or substitutes the separately
+selected canonical H3 algebra. The solutions preserve the same convention.
+
+I found one incorrect description of a projection, one missing simplicity
+premise in the short weak-integrality argument, and one exercise whose
+wording is stronger than its intended irrational-projection example.
+All can be repaired in a sentence; none changes the construction.
+
+Concrete repairs
+----------------
+1. chapters/c06_cosets.tex:306--310. The A2 stress ZERO-ENERGY projection
+does not select the A2 Cartan component of H_R; it selects the E6
+component. The intended operation is L_0^(A2), which acts by1 on the A2
+current and0 on the E6 current. Replace
+  "apply the A2 stress zero-energy projection to H_R"
+by
+  "apply the A2 stress operator L_0^(A2) to H_R".
+Equivalently write (omega_A2)_(1) H_R. The selected A2 component is
+outside the retained Cartan span, so the rest of the contradiction is
+correct. This agrees with the source equivariant-gauging diagnostic.
+
+2. chapters/c06_cosets.tex:271--278. Weak integrality bounds the squared
+dimensions of SIMPLE defects; it does not say that every reducible
+object has integral dimension squared. Thus the implication from d^2
+irrational to absence of a categorical action should explicitly invoke
+the full-faithfulness proposition at lines875--909, which guarantees
+that the image of the simple Haagerup rho line remains simple under a
+genuine unitary strong tensor action on this semisimple simple-unit
+defect category. Add a label to that existing proposition and a short
+forward reference here. This uses an already proved theorem and avoids
+silently defining 'action' to mean a full embedding. Foundation author
+independently agrees with this clarification. The stronger fact that a
+pointed category's Morita dual is integral also works, but would add an
+unnecessary theorem to this paragraph.
+
+3. chapters/c06_cosets.tex:1019--1023, Exercise ex:c-coset-7. The requested
+irrational-projection example has infinitely many states in a bounded
+reduced-energy interval, but at most two lattice points at a given
+nonzero squared projected energy. Its solution explicitly and correctly
+makes this distinction at solutions/c06_cosets.tex:163--165. Reword the
+exercise's first sentence, for example:
+  "Explain why finiteness below every ambient-energy cutoff need not
+   imply finiteness below every reduced-energy cutoff after one
+   positive commuting energy is discarded."
+Keep the rest of the exercise and solution. The intended trace-divergence
+lesson concerns bounded energy intervals, not necessarily infinite
+degeneracy at one exact eigenvalue.
+
+Charge-six checks and analytic boundary
+--------------------------------------
+LATTICE. For L0 with Gram [[2,3],[3,24]], determinant39 is squarefree,
+so no proper integral overlattice in its real span is possible. Its
+discriminant group is cyclic (gcd of Gram entries is1). The dual vector
+(-3 ell+2v)/39 has order39 and norm2/39, giving q(n)=n^2/39. The
+orthogonal lattice in unimodular E8 has the reverse discriminant form.
+The displayed rank-six glue has pairings integral with the root lattice,
+norm4 and order6; 3*3*2*78/6^2=39. The distinction between the norm78
+generator gamma_78 and the later norm20 vector u0 is maintained in both
+chapter and solution.
+
+COMMUTANTS. Plane Heisenberg commutation eliminates its oscillator and
+momentum energies, giving U intersect V_N. Conversely every V_N state
+has regular OPE with the full plane lattice. C6 contains the perpendicular
+stress, whose zero-energy space in the ambient lattice is exactly V_L0.
+Thus the double-commutant statement is all-grade. The regularity claim
+uses the positive-definite lattice double commutant and established
+strong rationality of U, as required by the Heisenberg/lattice coset
+theorem; it does not appeal to rationality of arbitrary cosets.
+
+CATEGORIES. Full support of all39 lattice labels is supplied by the
+actual core, not inferred merely from the stress. The rational mirror
+theorem therefore gives P39^rev inside Rep(C6); its nondegeneracy gives
+the factorization P39^rev tensor Rep(U), of rank468. The diagonal algebra
+in P39 tensor P39^rev condenses to Vec. Transitivity then lifts the
+actual E8/U algebra A to Diag(P39) tensor A, including multiplication.
+Its plane-vacuum multiplicity is1 tensor A, the actual extension V_N/C6.
+The resulting bimodule category P39^rev tensor F tensor F^op has the
+correct rev/op meanings. The total algebra1 tensor A is not Lagrangian
+in Rep(C6); its local modules retain P39^rev. Original F in {H2,H3} is
+kept throughout, with no premature Y=a selection.
+
+FULL THEORY VERSUS DEFECT REALIZATION. The state space in equation
+eq:c-C6-full-space is the ordinary diagonal lattice full CFT with39
+chiral labels and c_L=c_R=6. Its positive local construction and sewing
+come from the lattice theory and do not require proving that every
+canonical C6 fusion pairing agrees with a unitary net realization.
+The later physical interpretation of all C6 bimodules does require
+that comparison, as lines226--241 expressly say. Finite index and a
+rational subnet alone do not fill it. Abstract transport of a unitary
+category under the mirror equivalence likewise would not establish
+canonical VOA positivity. The text does not make either inference.
+
+PRESERVED ALGEBRAS. C6-preserving defects preserve the charge-six stress
+because C6 is a conformal subalgebra. They are allowed to act nontrivially
+on the larger V_N fields; imposing pointwise preservation of V_N gives
+the pointed Cardy defect category of the diagonal lattice theory. This
+is compatible with the presence of the transported noninvertible
+subcategory under the smaller-algebra preservation condition. The c2
+obstruction explicitly concerns V_L0-preserving rational defects, not
+all stress-preserving defects on the same torus. The current-transmission
+bound elsewhere has its own stronger one-automorphism-per-simple-line
+premise; these conditions are not interchanged.
+
+REVERSE BRANCHING. The actual multiplicities1,1,2 square in the diagonal
+pairing, giving6 Z_L0. Neither this numerical vacuum coefficient nor
+identifying repeated characters constructs a vacuum product or defect
+junctions. The chapter and Exercise2 solution correctly retain this
+distinction and the original A. A sixfold partition function can describe
+six disconnected components after additional product/sewing choices;
+it is not automatically the requested unique-vacuum Haagerup theory.
+
+Stress equations and bounded no-go scopes
+-----------------------------------------
+SEMICONFORMAL DEFINITION. Restriction equality for L_n, n>=0, together
+with the inherited translation equality, gives f_(m)a=0 for all m>=0
+and all a in Vir(e). Skew symmetry gives the reversed regularity.
+Hence omega=e+f is a commuting Virasoro split with the correct charges.
+The assumptions are on the generated subalgebra, not the full ambient
+VOA. The paragraph does not infer tensor factorization of the ambient.
+
+TENSOR-FACTOR OBSTRUCTION. The minimum nonunit dimension is3d, the
+maximum is1+d^2, and (3d)^2 exceeds the latter. A nontrivial product of
+two nonpointed factors would produce a forbidden simple dimension.
+The only-invertible-is-unit condition excludes a nontrivial pointed
+factor, while a holomorphic VOA factor of charge2 or6 is excluded by
+its charge modulo8. Proper extensions and commutants remain allowed.
+
+CURRENT COSET. The full retained affine charge is1+117/41=158/41,
+leaving at least170/41. The group-transmission argument works without
+commutativity of the group: rho^2 contains both1 and rho, forcing
+g_rho^2=1=g_rho, then the alpha-rho constituent forces g_alpha=1.
+Its extension to denominator currents is expressly conditional on
+single automorphism transmission through every fusion junction.
+The seven-dimensional C6 weight-two exclusion remains an imported
+exact model-specific input; it is not a generic c6 coset theorem.
+
+NEAR-TWO RATIONAL STRESS. The diagonal level is40. Its charge20/7
+gives GKO charge286/287 and, after adding the Cartan stress,573/287.
+The vector u0=(ell+h)/2=v-ell has norm20. The rational dimension-field
+obstruction concerns the stated preserved rational algebra and does
+not follow from stress preservation alone, as the text emphasizes.
+
+FOUR-AXIS EQUATIONS. Sum lambda_i=2, consistently with the total
+commutant stress acting on x with weight2. The three ratios lambda_i/
+(2f_i) are7/26,2/25,7/10. Invariance on the idempotent locus gives
+c(e)=2 f dot a. At c=2 the two necessary quadratics have roots13/250
+and-3/10 from the first; the second evaluates to-3512064/15625 and
+112896/25, respectively. No common complex root exists. The t=0
+subset stresses also miss charge2. The scope is explicitly the complete
+four-dimensional diagonal-affine commutant slice, not all U2.
+The rational four-charge sum is36/7, and the radical/quartic entries
+match the already audited exact source transcriptions. No checker was
+rerun here.
+
+IRRATIONAL COMMUTANTS. The vacuum-like-vector argument uses the actual
+translation of N_e, namely e_(0); it proves the full opposite equality,
+not merely a Virasoro inclusion. The current decomposition sums to248
+and contains no singlet. The low-grade N_e dimensions(1,0,1,1,2) and
+M_f weight-two dimension10 are expressly finite construction inputs.
+The grade-four Gram matrix and determinant agree with the solution.
+No all-grade equality M_f=A_1,40 tensor Vir_g is inferred from them.
+
+CONDITIONAL DIVERGENCE AND DENSITY. Root is separately reviewing these
+passages. My consistency pass found their stated assumptions retained:
+dimensionless independent trace parameters, simultaneous (not separate)
+modular inversion, explicit all-grade opposite-product hypothesis,
+positive basis multiplicities for the diagonal-square bound, and strict
+diagonality/no vacuum atom for the continuum uniqueness proposition.
+The solution to Exercise9 correctly uses a common large third argument;
+equal-temperature inversion alone would not force the density. The
+noncompact-boson Gaussian uses p_L=m/R+nR/2 and the displayed square
+completion, giving sqrt(2pi)/sqrt(beta+bar beta) after division by R.
+The volume-density interpretation and countable exceptional c1 weights
+are properly distinguished from a literal Hilbert-space trace.
+
+DESCENT AND CURRENT TEST. The central adjoint algebra R(1) is a new
+local algebra, not the original E8/U extension A; Exercise10's solution
+makes that distinction explicit. The dimension-threshold proof is
+correct and supplies the full-faithfulness input needed in repair2.
+For the final two-current test, the current level form must be positive
+and nondegenerate; unitary independence supplies that premise. The
+displayed grade-six Gram entries and its negative-norm polynomial have
+the stated Virasoro normalization. The criterion remains conditional
+on actual Hermitian holomorphic currents, not nearly spin-one lattice
+levels. No current-identification conclusion is asserted.
+
+Sources actually read
+---------------------
+chapters/c06_cosets.tex; solutions/c06_cosets.tex;
+hi_cft_20260923_next_c6_lattice.md;
+hi_cft_20260923_next_structure_c6_coset_audit.md;
+hi_cft_20260923_next_c2_asymmetric_coset.md;
+hi_cft_20260923_c2two_coset.md;
+hi_cft_20260923_next_coset_finite_index_net.md;
+hi_cft_c6_cosets.md (older bounded-coset scope, not substituted for
+the later exact construction);
+editorial/review_construction_extension_conventions.txt;
+targeted r04 source passages identifying the separate analytic bridge.
+
+The historical source notes retain their original conditional
+properness language. The textbook's earlier chapters now supply that
+finite construction input; this review did not rerun its certificates.

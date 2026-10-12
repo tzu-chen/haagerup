@@ -1,0 +1,94 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,inner=26mm,outer=24mm,top=25mm,bottom=26mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+\makeindex
+\usepackage{hyperref}
+\usepackage{bookmark}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,
+ pdftitle={Haagerup Symmetry and Conformal Field Theory},
+ pdfsubject={A graduate textbook on fusion categories, the central-charge-eight construction, and the Haagerup chain}}
+\urlstyle{tt}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{0.2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\makeatletter
+\renewcommand{\chaptermark}[1]{\markboth{\if@mainmatter\thechapter.\ \fi#1}{}}
+\makeatother
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Worked example}
+\newtheorem{exercise}{Exercise}[chapter]
+\newtheorem{constructioninput}[theorem]{Construction input}
+\newtheorem{numericalrecord}[theorem]{Numerical record}
+\let\textbookexample\example
+\let\endtextbookexample\endexample
+\RenewDocumentEnvironment{example}{o}{%
+ \IfNoValueTF{#1}{\textbookexample}{\textbookexample[#1]}%
+ \addcontentsline{loe}{workedexample}{%
+  \protect\numberline{\thetheorem}%
+  \IfNoValueTF{#1}{Worked example}{#1}}%
+}{\endtextbookexample}
+\makeatletter
+\newcommand{\l@workedexample}{\@dottedtocline{1}{0em}{3.8em}}
+\newcommand{\toclevel@workedexample}{1}
+\newcommand{\listofworkedexamples}{%
+ \chapter*{Worked examples}%
+ \phantomsection
+ \addcontentsline{toc}{chapter}{Worked examples}%
+ \markboth{Worked examples}{Worked examples}%
+ \@starttoc{loe}}
+\makeatother
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\one}{\mathbf1}
+\newcommand{\HH}{\mathcal H}
+\providecommand{\mathscr}[1]{\mathcal{#1}}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\ZZ}{\mathbb Z}
+\DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\Com}{Com}
+\DeclareMathOperator{\FPdim}{FPdim}
+\DeclareMathOperator{\qdim}{qdim}
+\DeclareMathOperator{\wt}{wt}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Vir}{Vir}
+\DeclareMathOperator{\Irr}{Irr}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Spec}{Spec}
+\renewcommand{\Vec}{\operatorname{Vec}}
+\newcommand{\sourcefile}[1]{\texttt{\nolinkurl{#1}}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inner}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\chapterinput}[1]{\input{chapters/#1.tex}}

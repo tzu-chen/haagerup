@@ -1,0 +1,22 @@
+{
+  "status": "exact_field_and_mode_equivalence_passed",
+  "field_checks": 1294,
+  "mode_checks": 32,
+  "mode_output_grades": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "scope": "Exact arithmetic control on deterministic inputs; not an all-input formal verification of the lattice engine or a properness certificate.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_fast_field_check.py": "4905d5aafa4276fb0259d130bd5430bab624027e1002908a166eb1e39659ae91",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_fast_field.py": "7e8151431ec87a24df39a325e5891561150fdacf237fb098c2d080486189be55",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact.py": "e9816e9b3cd30d092b45d6ce85297f49ec8431f2f6081d862dd2b41c17ebc865",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_exact4.py": "1dc0dee2a68b012b00c1dadc5329ba23b91820c5196d710e453561ec56197b7e",
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d"
+  },
+  "seconds": 4.385931283934042,
+  "peak_rss_KiB": 42896
+}

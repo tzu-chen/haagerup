@@ -1,0 +1,64 @@
+Independent literal joining-map review
+Actual clock read: 2026-10-05 19:54:51 UTC.
+Read draft editorial/literal_joining_map_insertion.tex.txt and its integrated
+form in chapters/l03_overlaps.tex:421-528. Checked against l01_chain.tex's
+regular periodic path definition and source hi_cft_overlap_ed.py:56-86.
+Hand algebra and source reading only; no numerical execution or source edits.
+
+Conclusion: no mathematical or convention repair requested.
+
+1. Domain and norm.
+The path spaces retain a marked ordering of all heights, without quotienting
+by cyclic translations. Therefore each iota_L is indeed an isometric inclusion
+into the ordinary six-height tensor product. Splitting a parent word at fixed
+L1 is unique. J maps an orthonormal subset of child word pairs bijectively to
+an orthonormal subset of parent words and kills all other pairs. Both claims
+about J^dagger J and JJ^dagger follow, and all nonzero singular values are 1.
+This is stronger than merely knowing that a composition of isometries and
+coisometries is a contraction; such compositions need not be partial
+isometries in general, but the subset-inclusion argument establishes it here.
+
+2. Seam example.
+The l01 convention is right fusion: I_i rho=X_i and
+X_i rho=I_i+X_0+X_1+X_2. Both length-three child words displayed in the draft
+are admissible, including their closing edges. After concatenation the
+crossed edges X_0->I_1 and X_1->I_0 both fail. Identical I_0,X_0,X_0 words
+pass. No reversal of one child's path, dualization of its heights, or
+unmentioned sum over seams occurs in the implemented literal map.
+
+3. Cup orientation and categorical dimension.
+The displayed R_x:1->x* tensor x is a right coevaluation, while the f01
+typed map coev_x:1->x tensor x* was a left coevaluation. Both are valid
+with the canonical unitary pivotal structure; concretely
+R_x=(id_{x*} tensor j_x^{-1}) coev_{x*} relates the conventions.
+For a standard unitary solution, R_x^dagger R_x=d_x>0, so the normalization
+R_x/sqrt(d_x) is correct. Nothing in this identity changes the ordinary
+orthonormal path embedding, and the text correctly declines to insert a
+universal sqrt(d_x) into J. No self-duality assumption is hidden in the
+general cup formula, even though the worked Haagerup object rho is self-dual.
+
+4. Basis gauge and state phases.
+If state-coordinate columns transform as v'_L=U_L v_L, then the same
+linear map has matrix J'=U_L J (U_L1^dagger tensor U_L2^dagger).
+The bra transforms oppositely, so the numerical contraction is invariant
+when map and states are transformed together. Rephasing the actual three
+states with fixed J instead multiplies A_abc by
+exp(i theta_a+i theta_b-i theta_c), exactly as written. The local source's
+literal_gluing explicitly conjugates the parent full-vector coefficient.
+
+5. Error estimate and physical scope.
+The tensor-product triangle inequality gives delta1+delta2 because both
+original and approximate children have norm one. Contracting with J and a
+fixed unit parent preserves this bound. The divided estimate is correct
+because the text requires the SAME nonzero A000; changing or approximating
+the denominator independently would require an additional error term.
+Pair-dependent renormalization of J(u tensor v) would be nonlinear and
+would change the overlap tensor, so the warning against it is necessary.
+The final continuum-pants interpretation remains explicitly conditional,
+as it should: finite contraction and correct duality normalization do not
+prove that a microscopic seam has the proposed continuum limit.
+
+The existing explicit right/left dual conventions are sufficient. If the
+editor wants one extra word, calling R_x a "right coevaluation" would tie it
+to f01 immediately, but it is not a mathematical correction or missing
+hypothesis.

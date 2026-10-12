@@ -1,0 +1,251 @@
+Independent mathematical review: root chapters r01 through r06
+Reviewer: scope_construction
+Snapshot: 2026-10-05, approximately 17:30 UTC
+
+This review checked the claims against their mathematical premises and worked
+the small examples by hand. No numerical jobs were launched. The examples
+checked below agree with the displayed formulas. The main repairs concern
+premises in the analytic chapter, rather than arithmetic errors.
+
+1. HIGH PRIORITY: establish finite index of the actual smeared-field inclusion
+
+Location: chapters/r04_unitarity.tex:173, before the introduction of its
+extension algebra and the boundary fusion category.
+
+The preceding paragraph transports complete rationality from the
+bounded-insertion construction only as an isomorphism-invariant property.
+That does not itself identify the actual inclusion N_U(I) subset N_H(I) as
+a finite-index irreducible inclusion. Those are premises for the canonical
+algebra, its all-module fusion category, and the Lagrangian-center argument.
+The text currently jumps from actual branching to these objects.
+
+Repair: insert the local irreducibility argument, then the finite-index
+extension theorem. If x lies in N_H(I) intersect N_U(I)', locality makes it
+commute with N_U(I') too. Strong additivity implies that N_U(I) and N_U(I')
+generate the global represented subnet (remove the two endpoints from test
+intervals). Thus x commutes with its local diffeomorphisms and the common
+rotation generator. The zero-energy space of H is one dimensional, so
+x Omega is scalar Omega; the ambient separating-vacuum property then gives
+x scalar. Complete rationality gives finitely many finite-dimensional
+sectors; the irreducible local-extension finite-index theorem now applies.
+Its dual canonical object is the already established restriction
+1 + X + 2Y. Holomorphicity of H makes that algebra Lagrangian.
+
+This is present, with the precise Kawahigashi--Longo proposition stated, in
+hi_cft_c8_manuscript_analytic.tex:111-129. It should be reproduced as a short
+argument here because it closes the apparent circularity in the textbook.
+
+2. MEDIUM PRIORITY: make the net-side no-sign step explicit
+
+Location: chapters/r04_unitarity.tex:179-185.
+
+"The same boundary-category argument used algebraically can now be applied"
+compresses a nontrivial passage: the net boundary category must not become
+the pointed rank-six alternative. The algebraic no-sign result is useful
+on this side only after relating a hypothetical net automorphism to the
+actual lattice VOA automorphism.
+
+Repair: explain the short bridge. A pointed rank-six boundary category,
+together with [H:B]=3, would make [B:U]=2. Such a local index-two extension
+has a sign involution. The unitary VOA/net automorphism correspondence
+lifts it to B, and fixed-point compatibility plus injectivity of the
+subalgebra/subnet correspondence identifies its fixed VOA with U. This
+contradicts the explicit no-sign calculation of the branching chapter.
+Then the three invertibles, untwisted pointed subcategory, and indicator
+argument apply exactly as stated.
+
+The original argument appears in
+hi_cft_c8_manuscript_analytic.tex:146-164. A concise paragraph is enough;
+there is no need to repeat the full rank-six fusion-ring derivation.
+
+3. MEDIUM PRIORITY: state the geometric scope of annulus continuation
+
+Location: chapters/r04_unitarity.tex:308-316 and 347-353.
+
+The finite-Laurent observation and the inverse-energy-domain lemma are
+correct. Analytic continuation to the entire prescribed insertion interior
+also needs a geometric coverage statement. Agreement on two open subsets
+alone does not imply agreement on a disconnected domain whose other
+components do not meet either subset.
+
+Repair: name the test domains
+ D_A = {xi : A_M xi is finite-energy},
+ D_{B*} = {eta : B_M* eta is finite-energy}.
+For one geometric representative define
+ Omega = int(closure(O_in) union closure(O_out)).
+Every component of Omega meets O_in union O_out, since the omitted set
+lies in two nowhere-dense boundaries. The identity theorem therefore
+extends each finite-Laurent matrix coefficient throughout Omega. Repeat
+for every representative; the prescribed insertion interior is the union
+of their interiors. This also clarifies that the argument compares bounded
+extensions of forms, not graph closures of a point field on arbitrary
+vectors.
+
+At the concrete-net conclusion, it would help to display the one-line
+inclusion proof on the common vacuum Hilbert space:
+ A_bl(I) subset N_U(I) subset A_bl(I')' = A_bl(I).
+The first inclusion was just proved; the second uses locality and the
+first inclusion at I'; the last uses Haag duality of A_bl with cyclic
+vacuum and its conformal covariance.
+
+The full source mechanism is in
+hi_cft_c8_manuscript_analytic.tex:470-521 and 630-651.
+
+4. MEDIUM PRIORITY: ordinary-module definition excludes ordinary direct sums
+
+Location: chapters/r02_vertex_algebras.tex:424-426.
+
+The phrase "a spectrum bounded below in a translate of the nonnegative
+integers" is appropriate for a simple ordinary module, but not for an
+arbitrary ordinary module. For example U direct sum c_1 is an ordinary
+module with integer and 1/3-plus-integer energies. No single translate
+contains both. The later linear comparison explicitly uses finite direct
+sums, so the narrow definition creates a small inconsistency.
+
+Repair: define an ordinary module as L_0-semisimple with finite-dimensional
+weight spaces and the standard lower-truncation condition in every
+integer-shift class. Then state that each simple ordinary module in the
+present positive-energy setting has spectrum h + Z_{\geq 0}; finite direct
+sums can involve several such translates. A simpler introductory variant
+is to label the displayed definition "a simple ordinary module" and give
+the finite-direct-sum convention immediately afterward.
+
+5. LOW/MEDIUM PRIORITY: replace "conformal inclusion hypotheses"
+
+Location: chapters/r02_vertex_algebras.tex:359-363.
+
+The Sugawara subtraction statement is correct for the embeddings used
+here, but "conformal inclusion" normally means equality of conformal
+vectors. That convention would make the following nonzero complement
+confusing.
+
+Repair: say that the affine currents are ambient weight-one primaries,
+the level is positive integral, and the embedding is compatible with the
+ambient unitary grading; equivalently state the semiconformal/coset
+embedding hypotheses. Under these hypotheses the Sugawara stress and
+omega_V - omega_A are commuting stresses. This also gives the beginning
+reader an actual condition rather than the undefined word "standard."
+
+6. PEDAGOGICAL DEPENDENCY: the primary-count formula uses Virasoro decomposition
+
+Location: chapters/r03_characters.tex:229-243.
+
+The positive-weight Kac-determinant calculation is correct. To count
+actual primary components by multiplying by the Euler product, one also
+uses decomposition of the module into Virasoro highest-weight summands.
+This is immediate from the positive invariant form and finite-dimensional
+energy spaces, but the positivity of all nonvacuum U-modules is proved
+only in the next chapter.
+
+Repair: add one sentence saying that, using the strong-unitarity
+conclusion proved in Chapter ch:unitarity, the module decomposes
+orthogonally by successively taking the complement of descendants in
+each finite energy space. The irreducible-Verma calculation then gives
+the formulas. The vacuum example is already justified by lattice
+positivity. This is a dependency clarification, not a numerical error.
+
+7. OPTIONAL WORKED STEP: derive the PF13 weight-four norm subtraction
+
+Location: chapters/r06_correlators.tex:283-299.
+
+The displayed gamma_4 formula and both specialized values are correct.
+This is an especially useful calculation to make reproducible in a
+textbook, since it distinguishes a null channel from a positive one.
+With Q=5c_0+22, Virasoro Gram products give
+ norm(partial^2 T_0)^2 = 20 c_0,
+ <Lambda, partial^2 T_0> = 0,
+ norm(Lambda)^2 = c_0 Q / 10.
+Therefore
+ norm(W_4)^2
+   = B - 9c_0/5 - 512c_0/(5Q).
+Dividing by N^2=c_0^2/9 simplifies to the stated
+ 48(c_0+2)(8-lambda Q)/(c_0 Q).
+At c_0=8/5 and lambda=14/473 one has
+ Q=30, 8-lambda Q=3364/473, and the prefactor is 18/5,
+ giving 60552/2365. At the Potts point Q=26 and lambda Q=8.
+These few lines would turn a correct asserted normalization into a
+canonical hand-worked example.
+
+8. MINOR TERMINOLOGY
+
+Location: chapters/r04_unitarity.tex:383.
+"Rank-eight holomorphic VOA classification" should be "central-charge-eight
+holomorphic VOA classification." Rank can mean lattice rank, current-algebra
+rank, or number of simple modules, so it is ambiguous in this context.
+
+Independent checks that passed
+
+r01_cft:
+ - The level-two Virasoro Gram determinant simplifies to
+   2h[16h^2 + 2(c-5)h + c].
+ - Stress norm c/2 and unit-stress coupling squared 2h^2/c give one
+   for h=2,c=8.
+ - The compact-boson convention p_L=m/R+nR/2,
+   p_R=m/R-nR/2 gives Delta=m^2/R^2+n^2R^2/4 and spin mn.
+ - The Gaussian neutral four-point powers and the cylinder Casimir
+   energy agree with these conventions.
+
+r02_vertex_algebras:
+ - The triangular lattice cocycle has the required commutator for the
+   displayed simply-laced root Gram matrix.
+ - Its diagonal value is -1 on a root, so E=e^alpha,
+   F=-e^{-alpha}, H=alpha(-1)1 give the stated positive-level A1 OPE.
+ - The skew-symmetry coefficient and the mode/weight conventions agree.
+
+r03_characters:
+ - Multiplying the E6 and A2 theta series gives coefficients
+   1,78,702,2346 through q^3; multiplication by eta^{-8}
+   gives the stated B character.
+ - The vacuum-pole and d_3-pole analysis is correct. The uniqueness
+   argument correctly separates the absence of an invariant constant
+   vector from existence of a candidate character solution.
+ - The c=8 Kac determinant gives only nonpositive real singular
+   weights h_{r,r}=-7(r^2-1)/24.
+ - The primary counts 113,830,4934 and the E8 count 3875 agree with
+   the vacuum Euler-product correction.
+
+r04_unitarity:
+ - The common-core projection lemma is correct and does not require
+   a separate core for T*. The direct-sum reduction proves the claim.
+ - The inverse-annulus density argument is correct: injectivity and
+   AC=lambda r^{L_0} imply A^{-1}M_fin=C M_fin.
+ - The reconstruction argument explicitly establishes finite energy
+   multiplicities instead of assuming them for a net sector.
+ - Paired deck transformations cancel because every vacuum-VOA mode
+   changes L_0 by an integer. The warning that vacuum normalization
+   cannot remove a charged-sector phase is correct.
+
+r05_full_theories:
+ - Relevant scalar multiplicity is
+   9+25+49+169+196+729+1764=2941.
+ - The two new spin-one primary contributions at Delta=5/3 are
+   240*3=720 per spin.
+ - At Delta=2, scalar primaries total
+   80^2+81^2+81^2+6^2=19558.
+   Adding the 226 chiral weight-two primaries gives 19784; adding
+   the remaining 14 descendant states gives 19798.
+ - The selected E8 extension has 248^2=61504 scalar primaries
+   at Delta=2 and 69752 total states there.
+ - The thermal tail bound has the correct inequality direction and
+   denominator; the self-dual derivative bound has the correct sign.
+
+r06_correlators:
+ - Charge conservation leaves 15 assignments. Their three groups
+   give the stated exact G_0 and G_+ rational functions, crossing
+   identities, and values 512/3 and 11/3 at x=1/2.
+ - Equal-charge leading exchange has weight six and norm 4/3.
+ - Triangular global-block subtraction gives
+   1,8/3,14/3,58/9,107/15.
+   In particular the q^4 subtraction is
+   65/3 - (2/3 + 21/5 + 29/3) = 107/15.
+ - The two-stress cubic formula yields 23104/9243 at levels 1,39.
+ - The spin-three OPE gives the rational four-point simple-pole
+   coefficient 2B-2c_0, including the derivative of partial^3 T.
+ - The PF13 weight-four coefficient is exactly 60552/2365.
+ - The light-sector residual Gram matrix is
+   I - J/3 - q q^t/78, q=(2,0,-2), with eigenvalues 0,1,35/39.
+
+No contradiction was found in these six chapters' distinctions between
+the original E8 embedding, a selected H_3 extension, diagonal full theory,
+vacuum correlators, selected nonvacuum lattice blocks, and fully sewn bulk
+nonvacuum amplitudes. The latter limitations are stated appropriately.

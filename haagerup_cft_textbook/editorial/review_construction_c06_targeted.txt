@@ -1,0 +1,85 @@
+Targeted c06 precision and charge-six bridge revision
+2026-10-05 19:00:08 UTC
+Read-only source audit, hand algebra, and text edits; no numerical jobs or build.
+
+Implemented in chapters/c06_cosets.tex:
+
+1. Lines20--48 replace the vague semiconformal condition by the exact
+   restriction L_n^e|Vir(e)=L_n^V|Vir(e) for n>=0, together with inherited
+   translation at n=-1. Vir(e) is explicitly required to be a VOA with
+   conformal vector e. These are restrictions, not operator equalities on V.
+   The direct proof uses f_(m)a=0 for a in Vir(e),m>=0, then skew symmetry
+   to obtain a_(m)f=0. Mixed singular terms vanish; subtracting the e OPE
+   from the ambient OPE gives f=omega-e with charge cV-ce and inherited
+   translation on Vir(f). This also checks that the definition supplies
+   the stated commuting complement rather than merely a matching grade.
+
+   Primary convention check: Jiang--Lin, arXiv:1406.4191, Section5.1,
+   https://arxiv.org/html/1406.4191#S5.SS1
+   explicitly uses restrictions for n>=-1 and identifies the commutant
+   stress as omega-omega'. Our n>=0 plus translation formulation is
+   the same convention.
+
+2. Lines168--241 now separate the actual extension algebra, its algebraic
+   defect category, the concrete full state space, and the analytic
+   realization premise. A remains the algebra of the ORIGINAL E8/U
+   embedding. F=Rep(U)_A remains either H2 or H3; it is not identified
+   with the separately chosen canonical H3 algebra in r07.
+
+   The actual VN/C6 algebra is 1_(P39rev) tensor A, including multiplication.
+   Its bimodule category is P39rev tensor Bimod_A(Rep(U)), and Lagrangian
+   reconstruction gives Bimod_A(Rep(U))=F tensor Fop. The total algebra
+   in Rep(C6) is explicitly NOT called Lagrangian: local modules retain
+   P39rev. This prevents confusing the rank39 local category with Vec.
+
+   The Hilbert space is the diagonal sum over lambda in N*/N of the
+   Hilbert-completed lattice module and its antiholomorphic conjugate.
+   There are39 labels, cL=cR=6, and Z6=sum|Theta_(lambda+N)/eta^6|^2.
+   Positivity of N gives a unique vacuum, and the ordinary lattice full
+   CFT supplies positive local OPE and sewing independently of C6.
+   The extra noninvertible defects preserve C6; the rational defects
+   preserving the larger VN pointwise are pointed.
+
+   Applicable repository records checked:
+   hi_cft_20260923_next_c6_lattice.md;
+   hi_cft_20260923_next_c2_asymmetric_coset.md;
+   hi_cft_20260923_next_structure_c6_coset_audit.md.
+   These give the actual rank6 lattice, determinant39, all39 lattice
+   branching labels, regularity/mirror hypotheses, transitivity of the
+   specific extension algebra, and the same retained analytic premise.
+
+3. The two-temperature trace now defines beta,epsilon>0 as dimensionless,
+   tau_e=i beta/(2pi),tau_f=i epsilon/(2pi),q_e=exp(-beta),q_f=exp(-epsilon).
+   A physical inverse temperature b corresponds to2pi v b/L in hbar=kB=1
+   units. Independent variation is explicitly a trace-variable operation.
+   The subsequent continuum proof uses the same dimensionless convention.
+   This fixes the scope of simultaneous4pi^2 inversion without modifying
+   any inequality or the solutions' arithmetic.
+
+Analytic scope retained, not silently closed:
+
+Tener's Corollary4.24 in 'Fusion and Positivity in Chiral Conformal Field
+Theory', https://link.springer.com/article/10.1007/s00039-024-00685-8,
+applies to a regular unitary conformal subalgebra of a simple unitary VOA
+with bounded localized vertex operators. It supplies finite index and
+rationality of the C6 subnet inside the lattice net. It does not by
+itself identify every C6 VOA module or its canonical fusion form with
+the corresponding net sector. r04 closes that comparison for U, not
+automatically for every new coset. The abstract mirror equivalence
+Rep(C6)=P39rev tensor Rep(U) likewise does not by itself prove that
+comparison for the actual C6 intertwining operators.
+
+Accordingly the physical interpretation of the full algebraic bimodule
+category explicitly carries the positive sector/extension/intertwiner
+comparison premise. The diagonal VN CFT and the algebraic transported
+category are established independently. Scope-foundations independently
+reviewed this distinction and agreed; no unproved inheritance theorem
+has been inserted. A future separate unitary coset/mirror theorem or a
+repeat of the r04 sector comparison could discharge this premise.
+
+Validation:
+The standard-library text audit passed on the current shared document:
+61 TeX files,26 main chapters,151 exercises,151 linked solutions,
+668 labels,489 references,errors=[]. Concurrent agents may change counts.
+No solution formulas were affected, so solutions/c06_cosets.tex was
+left unchanged. Old aggregate solutions remain archived and untouched.

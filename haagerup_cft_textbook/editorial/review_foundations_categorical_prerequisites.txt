@@ -1,0 +1,82 @@
+Categorical prerequisite review
+Actual clock check: 2026-10-05 19:38:08 UTC.
+Scope: f01/f02/f03/f04 -> c04/c05, with the new indicator bridge included.
+Read-only source review; hand algebra; no numerical jobs.
+
+Priority 1: make rigidity and pivotal trace operational rather than only pictorial.
+  f01_fusion.tex:78-95 explains cups/caps and Frobenius reciprocity verbally;
+  :105-110 invokes pivotal structure without defining it. The first serious
+  later uses are the Hopf-link trace in f04:43-46, the rigidity distinction in
+  c04:300-310, and the newly integrated indicator definition in c05.
+  A reader can currently understand the pictures but cannot write the domains
+  of an evaluation map, identify the role of X -> X**, or calculate the
+  categorical trace of a nonsimple object. This is a real prerequisite gap.
+  Repair: add the typed evaluation/coevaluation maps and two snake identities
+  after f01:82, then a short pivotal/trace paragraph before the dimension
+  character. A Fibonacci multiplicity-block example computes
+  Tr_cat(lambda on 1, B on tau^2)=lambda+phi Tr(B).
+  This directly prepares the dimension-weighted twist moments, with no new
+  chapter or diagram package. Draft A below is about half a page plus formulas.
+  A local continuation in c04 should spell out the defining GV adjunction
+  Hom(Y tensor X,1)=Hom(Y,DX): the evaluation is the image of id_DX and is
+  therefore nonzero. This closes the otherwise implicit nonzero-evaluation
+  step in c04's proof while making clear that a coevaluation is still absent.
+
+Priority 2: identify the center-reconstruction theorem and explain module
+dimensions before c05 uses both.
+  f04_modular.tex:376-392 states the global dimension formulas and the
+  canonical special case Z(H3)_A=H3. It does not state the converse/general
+  Lagrangian reconstruction theorem. c05_branching.tex:269-280 invokes
+  "the center theorem" to infer Rep(U)=Z(Rep(U)_H), which is not just the
+  earlier Morita-invariance theorem. The connection through a central free
+  module functor has never been introduced.
+  Also, no earlier equation says that the same A-module has different
+  dimensions as an underlying ambient object and as an object of C_A.
+  Without this, the appearance of the unit A with ambient dimension 3s,
+  yet module dimension 1, is an avoidable source of confusion.
+  Repair: one compact paragraph defining central functor as a braided lift
+  to the center, the free functor X -> X tensor A, the precise Lagrangian
+  reconstruction statement, and FPdim_CA(M)=FPdim_C(M)/FPdim_C(A).
+  Reuse the pointed center: a three-summand flux module has ambient
+  dimension 3 and module dimension 1. Do not duplicate the full nine-object
+  condensation example already in r07; point forward to that derivation.
+  Draft B can follow f04's algebra-module-dimension equations. It provides a
+  label for replacing c05's unqualified "center theorem" with a cross-reference.
+  Primary theorem checked directly: Davydov--Mueger--Nikshych--Ostrik,
+  arXiv:1009.2117v2, Definition 2.4 (central functor), Section 3.3,
+  Lemma 3.11, Corollaries 3.28 and 4.1. Corollary 4.1 assumes a nondegenerate
+  braided fusion category and connected etale A with FPdim(A)^2=FPdim(C);
+  it does not require a categorical C* structure. Thus it is available at
+  c05's pseudo-unitary stage without anticipating the later analytic chapter.
+
+Priority 3 (smaller, but worth repairing): define the module-category action
+and add the indecomposability premise to the dual-category sentence.
+  f03_centers.tex:341-346 introduces a module category only by analogy and
+  calls its endofunctor category a fusion category without stating finite
+  semisimplicity and indecomposability. These are needed: for a decomposable
+  module category the dual can be a multifusion category with nonsimple unit.
+  A reader is also never told what makes an endofunctor a module endofunctor.
+  Repair: replace those six lines with an action bifunctor, its module
+  associativity isomorphism, and the commuting-action condition on a module
+  functor. Fix a right-module convention with composition as tensor product.
+  The one-simple category Vec with its untwisted Vec_Z3 action gives a tiny
+  concrete example: the endofunctor W tensor - carries an operator U with
+  U^3=1, so its three simple possibilities are the three Z3 characters.
+  This distinguishes the one simple object of the module category from the
+  three simples of its dual. Draft C is a concise replacement, not a new section.
+
+What already works and should not be expanded:
+  - f01 does introduce Frobenius reciprocity before f02/c05 use it.
+  - f03 gives actual algebra/module/locality axioms, the anomalous Vec_Z2
+    example, and a useful all/local/bimodule distinction.
+  - f04 already gives the adjunction that computes I(1), so adjoint functors
+    do not need an abstract standalone primer.
+  - c04 explicitly defines projectivity, gives a right-exactness example,
+    and marks the finite VOA category and rigidity results as inputs.
+    Expanding all finite abelian category theory would interrupt the proof.
+  - The indicator bridge now fills the formerly missing FS definition.
+  - The algebra-automorphism/two-product result is correctly identified as
+    a structural input; no extra convolution-algebra chapter is warranted.
+
+Concrete draft text is in categorical_prerequisite_insertions.tex.txt.
+No chapter files were changed in this pass.

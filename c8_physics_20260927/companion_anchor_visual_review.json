@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "date": "2026-09-27",
+  "verification_guide_pages": 20,
+  "Lean_assessment_pages": 17,
+  "verification_guide_inspected_pages": [2, 3],
+  "Lean_assessment_inspected_pages": [12],
+  "review": "Inspected rendered navigation and concordance tables. Current numbers, appendix letters, titles and manuscript pages are readable, with dark-blue external links and no clipping or overlap. The historical and current columns are explicitly distinguished.",
+  "scope": "Presentation review of the changed navigation; PDF destination checks are recorded separately in manuscript_reference_check.json. The manuscript and mathematical certificates are unchanged."
+}

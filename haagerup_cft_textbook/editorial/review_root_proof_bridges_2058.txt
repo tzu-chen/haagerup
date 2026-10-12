@@ -1,0 +1,62 @@
+Root integration and proof-bridge review, October 5, 2026
+
+Scope: editorial integration and independent hand reasoning. No new
+scientific computation or certificate replay.
+
+Applied the independent c04 review's two precision additions: the ordinary
+module definition agrees with r02, and the finite-generation/cyclic-module
+argument explains why semisimplicity gives usual regularity and rationality.
+The positive-stress, projective-unit and rigidity arguments were left intact.
+
+Applied the c02 review's full-N5 exhaustion explanation and higher-negative-
+mode translation identity. The finite gates remain construction inputs.
+The source-guide/manuscript certificate-ledger pointer does not imply replay.
+
+Applied all l05 gapped-parent review clarifications: real scalar parameter,
+defined B_f, global interval range with arbitrary compatible outside data,
+inheritance of the parent gap under a reducing restriction, and explicit
+selection of Y_alpha=1,Y_rho=d before using Perron vacuum probabilities.
+
+Applied the correlator review's two notational qualifications: b returns to
+the module label in the light sector; swapping equal-charge stresses is an
+automorphism of the two-stress vacuum subalgebra, not a claim about the whole
+ambient theory.
+
+Applied the c06 projection repair, the fully-faithful-descent justification
+needed before applying weak integrality to a simple rho image, and the
+energy-cutoff wording in Exercise7. Its existing solution already explained
+that bounded-energy accumulation differs from infinite exact degeneracy.
+
+Root independently read the latter c06 arguments and their solutions:
+- The positive two-temperature trace converges by comparison with the
+  ambient E8 trace at the smaller positive inverse temperature. Theorem1 of
+  Krauel--Miyamoto, arXiv:1501.00124v2, was checked directly: its vacuum
+  analytic clause supplies the descendant convergence hypothesis, and its
+  transformation is simultaneous with the ambient S coefficients.
+- The uniform opposite-character upper bound has oscillator effective
+  charge1 and finite affine charge20/7. Under the explicitly assumed all-
+  grade product identity, the vacuum lower bound forces divergence of the
+  sum of reduced characters. Positivity of individual basis contributions
+  supplies the separate square-sum argument; no false general implication
+  from a divergent sum to a divergent square sum is used.
+- For the strict diagonal density, eta inversion has factor sqrt(p)/(2pi).
+  Positive independent temperatures realize st>=16pi^2, allowing the common-
+  large-argument proof that sqrt(s)G(s) is constant. The Laplace measure,
+  threshold (c-1)/24, and effective charge1 follow. The vacuum-atom obstruction
+  retains positivity and the same strict diagonality assumption.
+- The noncompact-boson square completion, R-normalized Riemann sum, two-sign
+  h=p^2/2 measure, and equal-temperature asymptotic have consistent factors.
+  The partition density is correctly distinguished from an actual finite
+  Hilbert-space trace. Nothing here constructs a near-two Haagerup CFT.
+
+The new primary-source guide entry for Krauel--Miyamoto records only the
+theorem used, not a general assertion that arbitrary cosets are rational.
+
+Root also checked the early c05 top-bound reasoning. The finite m cutoff
+applies separately to the lattice--Potts minimization in each charge class;
+the parafermion term is constant in that comparison. The live text now says
+this explicitly. No table entries or numerical data were changed.
+
+A new independent E8 root-count example was added to r03 and sent for a
+separate hand review. Its orthonormal coordinate model is distinguished from
+the simple-root coordinates of the actual six-current embedding.

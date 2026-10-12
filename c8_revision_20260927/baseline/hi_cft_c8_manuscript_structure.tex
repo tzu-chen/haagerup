@@ -1,0 +1,609 @@
+% Fragment: regularity, branching, fusion-ring reduction, and characters.
+% The main document supplies theorem environments, reviewnote, and artifact.
+
+\section{Regularity from a positive conformal-vector identity}
+\label{sec:regularity}
+
+This section concerns the actual PCT-stable subalgebra $U\subset B$ defined
+in the construction. Its conclusions do not require properness. We use
+the convention $Y(a,z)=\sum_{n\in\mathbb Z}a_nz^{-n-1}$ and write
+$L^e(n)=e_{n+1}$ for the Virasoro operators of a conformal vector $e$.
+The input from the local construction is the identity
+\begin{equation}
+ \omega_U=\omega_{A_{1,1}}
+   +\frac{3403}{4563}\omega_{A_{1,39}}
+   +\frac{25}{6}\overline p+\frac{25}{26}\overline z.
+ \label{eq:positive-stress}
+\end{equation}
+Here $p$ and $z$ are the conformal vectors of actual embedded copies of
+the three-state Potts algebra $K(\mathfrak{sl}_2,3)$ and the parafermion
+algebra $K(\mathfrak{sl}_2,13)$; a bar denotes normalized averaging over
+the compact current group. Each subalgebra is regular and unitary, and
+its intrinsic grading agrees with the ambient grading on its states.
+The averages take place in the finite-dimensional space $U_2$.
+Finite-dimensional convexity replaces each average by a finite convex
+combination of conjugate conformal vectors, so that
+\begin{equation}
+ \omega_U=\sum_{i=1}^N c_i e_i,\qquad c_i>0.
+ \label{eq:finite-positive-stress}
+\end{equation}
+Zero coefficients, if any, are omitted. All simple modules of each
+regular subalgebra $A_i$ have nonnegative lowest weights, with zero
+occurring only for its vacuum module.
+
+\begin{reviewnote}{R1: the embedded regular factors are local inputs}
+The existence and normalization of the Potts and parafermion fields,
+their inclusion in the generated $U$, and
+\eqref{eq:positive-stress} are imported from the earlier construction
+and the proof records
+\artifact{hi_cft_20260923_next_structure_c2_energy_bound.md} and
+\artifact{hi_cft_20260923_next_structure_top_bound.md}.
+They are not consequences of the finite closure theorem alone.
+This manuscript gives the deductions from those inputs, but does not
+reproduce their full field-identification calculation. A review of
+regularity must verify these embeddings, not only the displayed
+positive coefficients.
+\end{reviewnote}
+
+\begin{lemma}[Orthogonal energy bound]
+Let $V$ be a unitary VOA of CFT type admitting an identity of the form
+\eqref{eq:finite-positive-stress}, with the properties just stated.
+Then $V$ is $C_2$-cofinite.
+\end{lemma}
+\begin{proof}
+For an ordinary simple $A_i$-module $M$, put
+\[
+ C_{2,A_i}(M)=\operatorname{span}\{a_{-2}m:a\in A_i,\ m\in M\}.
+\]
+These quotients are finite-dimensional by
+\href{https://arxiv.org/html/math/0204021#S5}{Abe--Buhl--Dong,
+Proposition~5.2}. There are finitely many simple $A_i$-modules. Hence
+there is a finite number $D_i$ bounding the intrinsic energy in all
+their $C_{2,A_i}$ quotients; this includes their lowest weights.
+Regularity decomposes the weak $A_i$-module $V$ into ordinary simples,
+and the unitary form permits an orthogonal decomposition. Since
+\[
+ C_{2,A_i}(V)\subset C_2(V),
+\]
+the self-adjoint intrinsic energy satisfies
+\[
+ \langle L^{e_i}(0)v,v\rangle\le D_i\|v\|^2
+ \qquad (v\in C_2(V)^\perp).
+\]
+For $v\in V_n\cap C_2(V)^\perp$, the conformal-vector identity gives
+\[
+ n\|v\|^2
+ =\sum_i c_i\langle L^{e_i}(0)v,v\rangle
+ \le\Bigl(\sum_i c_iD_i\Bigr)\|v\|^2.
+\]
+Thus the graded quotient $V/C_2(V)$ vanishes above a finite weight.
+No simultaneous diagonalization of the different energy operators is
+required. The same proof applies directly to averages, since every
+conjugate factor has the same bound $D_i$.
+\end{proof}
+
+\begin{lemma}[Lowest weights and projectivity of the vacuum]
+Every simple ordinary $U$-module has nonnegative lowest conformal weight,
+and the only simple module of lowest weight zero is $U$. Moreover $U$
+is projective in the category of grading-restricted generalized modules.
+\end{lemma}
+\begin{proof}
+Let $E$ be the lowest space of a simple ordinary module of weight $h$.
+Every mode of an $A_i$ state that lowers intrinsic weight also lowers
+ambient weight, and therefore annihilates $E$. Thus
+$E\subset\Omega_{A_i}(M)$, the Zhu highest space. Restriction initially
+gives a weak $A_i$-module; regularity decomposes it into ordinary simple
+modules. The highest space of an ordinary simple is its top, so each
+$L^{e_i}(0)|_E$ is diagonalizable with nonnegative real spectrum.
+Taking traces, rather than assuming the operators commute, gives
+\begin{equation}
+ h\dim E=\sum_i c_i\operatorname{Tr}_E L^{e_i}(0)\ge0.
+ \label{eq:top-trace}
+\end{equation}
+If $h=0$, every summand vanishes. Hence every partial energy is zero
+on $E$, which lies in sums of vacuum tops for every $A_i$. Consequently
+$L^{e_i}(-1)E=0$, and \eqref{eq:finite-positive-stress} gives
+$L_U(-1)E=0$. Any nonzero $v\in E$ is vacuum-like: translation covariance
+and lower truncation show that $Y_M(a,z)v$ has no negative powers of $z$.
+The map $a\mapsto a_{-1}v$ is a nonzero module map $U\to M$, hence an
+isomorphism.
+
+Now let $\pi:E\twoheadrightarrow U$ be an epimorphism in the generalized
+module category. $C_2$-cofiniteness gives finite length, and the preceding
+argument excludes negative weights in all its composition factors.
+The finite generalized weight-zero space $E_{[0]}$ therefore has no
+lower-weight target for a lowering mode. It is again in every
+$\Omega_{A_i}(E)$. On this space $L_U(0)$ is nilpotent, so
+\[
+ 0=\operatorname{Tr}_{E_{[0]}}L_U(0)
+  =\sum_i c_i\operatorname{Tr}_{E_{[0]}}L^{e_i}(0).
+\]
+Diagonalizability and nonnegativity of each partial energy imply it is
+zero. The vacuum-top argument gives $L_U(-1)E_{[0]}=0$. Choose
+$v\in E_{[0]}$ with $\pi(v)=\mathbf1$. Then
+\[
+ s:U\longrightarrow E,\qquad s(a)=a_{-1}v,
+ \qquad \pi s=\mathrm{id}_U,
+\]
+is a section. Every epimorphism onto the vacuum splits.
+\end{proof}
+
+\begin{proposition}[Regularity of the actual generated algebra]
+The VOA $U$ is strongly rational.
+\end{proposition}
+\begin{proof}
+Simplicity, CFT type, and self-contragredience follow from the unitary
+construction. The preceding lemmas supply $C_2$-cofiniteness and a
+projective vacuum. The category $\mathcal C$ of grading-restricted
+generalized modules is finite abelian and braided, with right-exact
+tensor product and Grothendieck--Verdier duality whose dualizing object
+is $U'=U$; the relevant VOA tensor-category hypotheses are reviewed in
+\href{https://arxiv.org/html/2108.01898}{McRae, Sections~2.3 and~3}.
+
+Here is the remaining categorical argument. Realize $\mathcal C$ as
+finite-dimensional modules for a finite-dimensional algebra, denote
+underlying vector-space dimension by $d_0$, and let $P$ correspond to
+its regular module. Every $Z$ is a quotient of $P^{\oplus d_0(Z)}$.
+For fixed $X$, right exactness gives
+\[
+ d_0(Z\otimes X)\le C_Xd_0(Z),\qquad
+ \dim\operatorname{End}(X^{\otimes n})
+ \le d_0(\mathbf1)^2C_X^{2n}<n!
+\]
+for large $n$, where $C_X=\max\{1,d_0(P\otimes X)\}$.
+For nonzero indecomposable $X$, Grothendieck--Verdier evaluation
+$DX\otimes X\to\mathbf1$ is nonzero, hence surjective onto the simple
+unit, and splits by projectivity. Thus $X$ is non-negligible and has
+moderate growth in the precise sense of
+\href{https://arxiv.org/html/2412.17681v3}{Etingof--Penneys,
+Theorem~1.1}; that theorem proves $X$ rigid. Finite direct sums give
+rigidity of all objects. Tensoring is now exact, and
+\[
+ \operatorname{Hom}(X,-)
+ \cong\operatorname{Hom}(\mathbf1,-\otimes X^*)
+\]
+is exact. Every object is projective, so $\mathcal C$ is semisimple and
+$U$ is rational. This does not assume complete unitarity of its modules.
+The local argument is recorded in
+\artifact{hi_cft_20260923_next_structure_rationality.md}.
+\end{proof}
+
+\section{Branching and the boundary fusion ring}
+\label{sec:branching}
+
+From this point we use the properness conclusion and $\dim U_1=6$ of
+the finite closure argument. Before that conclusion is supplied, every
+statement in this section is conditional on the proper branch.
+
+\subsection{A universal top bound and actual lattice branching}
+
+The sharper bound uses an actual regular subalgebra $A_L\subset U$.
+In the notation of the local construction, a rational lattice--Potts
+core $\mathcal T$ and $K(\mathfrak{sl}_2,13)$ have pointed charges
+$(j,k)\in(\mathbb Z/13)^2$ with quadratic form
+$-(j^2+k^2)/13$. Exact weight-two vectors witness the simple-current
+charge $(5,1)$ (up to reversing the second charge). Locality and
+multiplicity one in a connected extension force its entire isotropic
+line, yielding
+\[
+ A_L=\bigoplus_{k=-5j}\mathcal T_{1,j}\otimes\mathrm{PF}_{0,k}
+ \subset U,\qquad
+ \operatorname{Rep}(A_L)\simeq
+ \mathrm{Fib}\boxtimes\mathrm{SO}(3)_{13}.
+\]
+The field witness and extension argument are in
+\artifact{hi_cft_20260923_next_structure_order13_core.md} and
+\artifact{hi_cft_20260923_next_structure_core_extension.json}.
+There are fourteen simple tops, labelled $x_a=(1,a)$ and
+$y_a=(\tau,a)$ for $0\le a\le6$.
+
+Let $E$ be any simple $U$-module top and write $x_a,y_a$ also for the
+nonnegative integer multiplicities of these $A_L$ tops in $E$.
+Set $D=\dim E$. For each top, let $L$ be the trace of the left affine
+energy, $Q=\operatorname{Tr}H_R(0)^2$, and $P,Z$ the Potts and
+parafermion energy traces. Its contribution to \eqref{eq:top-trace} is
+\begin{equation}
+ W=L+\frac{83}{6084}Q+\frac{25}{6}P+\frac{25}{26}Z.
+ \label{eq:top-W}
+\end{equation}
+This is a trace formula on a complete right $\mathfrak{sl}_2$
+representation, not an assertion about a single partial-energy
+eigenvector. The exact dimensions and trace contributions are
+\[
+\begin{array}{c|r|r@{\qquad}c|r|r}
+ \text{top}&d&4680W&\text{top}&d&4680W\\\hline
+ x_0&1&0&y_0&1&7800\\
+ x_1&1&600&y_1&7&36960\\
+ x_2&5&10440&y_2&15&110880\\
+ x_3&9&56640&y_3&2&4080\\
+ x_4&2&5520&y_4&14&81480\\
+ x_5&14&148560&y_5&6&18240\\
+ x_6&6&54240&y_6&2&4920
+\end{array}
+\]
+Complete right $\mathfrak{sl}_2$ characters imply
+$y_2\ge x_5$ and $y_4\ge x_5+x_6$: these compare charges $10,12$
+and charges $7,9$, respectively, with the common left doublet removed
+in the second comparison. Direct comparison of the displayed table gives
+\begin{align}
+ 4680\bigl(\tfrac{17}{10}D-W_{\rm total}\bigr)
+ ={}&8460(y_2-x_5)+28716(y_4-x_5-x_6)\notag\\
+ &+7956x_0+7356x_1+29340x_2+14964x_3+10392x_4\notag\\
+ &+22212x_6+156y_0+18732y_1+11832y_3\notag\\
+ &+1188y_4+29496y_5+10992y_6\ge0.
+ \label{eq:sharp-top-bound}
+\end{align}
+Since $W_{\rm total}=hD$, this proves $0\le h\le17/10<2$ for
+\emph{every} simple $U$-module, without assuming it is unitarizable.
+
+\begin{reviewnote}{R2: the core-top table and finite-top actions}
+The inequality \eqref{eq:sharp-top-bound} can be checked directly from
+the displayed table. Deriving that table, including all minimizing
+charge representatives, uses
+\artifact{hi_cft_20260923_next_structure_order13_top_bound.md}.
+The construction of $\mathcal T$, the thirteen-charge extension, and
+completeness of the resulting fourteen-module list are substantial
+local inputs whose full derivations are not repeated here. Likewise,
+the finite-top irreducibility used below is imported from exact field
+actions, particularly
+\artifact{hi_cft_20260923_next_81top_all.json}; it should not be replaced
+by numerical cyclicity alone.
+\end{reviewnote}
+
+The strongly rational restriction $B\downarrow_U$ is semisimple. Its
+simple summands have integer lowest weights, hence only weights $0,1$
+are possible. The vacuum occurs once, while the complementary current
+space has dimension $86-6=80$. Its certified irreducible zero-mode
+action therefore implies
+\begin{equation}
+ B\downarrow_U=U\oplus X,\qquad h_X=1,\qquad\dim X_{\rm top}=80.
+ \label{eq:B-branching}
+\end{equation}
+The four mixed nontrivial $E_6\oplus A_2$ lattice sectors start at
+weight $1$, with $81$-dimensional tops. Their next possible top weight
+would be $2$, excluded by \eqref{eq:sharp-top-bound}. Their exact
+top-action certificates use a one-dimensional Cartan eigenline,
+positive-metric adjoint identities, and a cyclic span of dimension
+$81$. The adjoint identities make the generated operator algebra a
+star algebra; orthogonal complements are therefore invariant, and
+the unique eigenline plus cyclicity proves irreducibility.
+
+Write the actual lattice extension as $H=B\oplus J\oplus J^2$. Its
+restriction is consequently
+\begin{equation}
+ H\downarrow_U=\mathbf1\oplus X\oplus Y\oplus Y^*,\qquad
+ h_Y=1,\quad\dim Y_{\rm top}=81.
+ \label{eq:H-branching-fork}
+\end{equation}
+At this stage $Y\cong Y^*$ has not been assumed. The three types
+$\mathbf1,X,Y$ are distinguished by their lowest spaces.
+
+\subsection{The rank-four or rank-six alternative}
+
+Put $\mathcal C=\operatorname{Rep}(U)$ and
+$\mathcal F=\mathcal C_H$, the category of \emph{all} right modules
+over the extension algebra $H$. The strict positivity of nonvacuum
+lowest weights gives the positive spherical structure through character
+asymptotics. Since $H$ is holomorphic, it is Lagrangian and the
+\href{https://arxiv.org/abs/1009.2117}{DMNO center correspondence}
+gives $\mathcal C\simeq Z(\mathcal F)$.
+Write $s=\operatorname{FPdim}_{\mathcal C}B$. Extension dimension
+identities give
+\[
+ d_X=s-1,\qquad d_Y=d_{Y^*}=s,\qquad
+ \operatorname{Dim}\mathcal C=9s^2,\quad
+ \operatorname{Dim}\mathcal F=3s.
+\]
+Pseudo-unitarity of $\mathcal F$ follows from that of its center and
+the squared global-dimension and Frobenius--Perron-dimension identities.
+No $C^*$ structure is needed in this section.
+
+For center induction $I$ and forgetful functor $F$, one has $H=I(\mathbf1)$
+and $FI(\mathbf1)=\bigoplus_{a\in\operatorname{Irr}\mathcal F}a\otimes a^*$.
+Adjunction therefore gives
+\begin{equation}
+ \operatorname{rank}\mathcal F
+ =\dim\operatorname{End}_{\mathcal C}(H)
+ =\begin{cases}4,&Y\not\cong Y^*,\\6,&Y\cong Y^*.
+ \end{cases}
+ \label{eq:rank-fork}
+\end{equation}
+The actual order-three automorphisms of $H/B$ inject into
+$\operatorname{Inv}(\mathcal F)$. This injection is already spherical:
+under the composition/convolution description of
+$\operatorname{End}(I(\mathbf1))$ in
+\href{https://arxiv.org/html/1909.02816}{Bischoff--Jones,
+Lemma~3.1 and Corollary~3.4}, an algebra automorphism and its inverse
+are convolution idempotents. They are positive sums of the primitive
+idempotents $d_a[a]$; their fusion product is $[\mathbf1]$. Positivity
+forces singleton supports consisting of inverse invertibles.
+
+The earlier pointwise automorphism calculation gives
+$\operatorname{Aut}(B/U)=1$. If rank six had six invertibles, then
+$3s=6$, so $X$ would be invertible and $B=\mathbf1\oplus X$ would
+have a nontrivial sign automorphism, a contradiction. Thus there are
+exactly three invertibles in either rank. Their associator is also
+determined: the local $B$-module category has metric group
+\[
+ (\mathbb Z/3)^2,\qquad q(a,b)=\frac{2a^2+b^2}{3}\pmod1.
+\]
+The actual extension $H/B$ selects an isotropic line. Forming its
+modules gives an embedded untwisted $\operatorname{Vec}_{\mathbb Z/3}$
+subcategory of $\mathcal F$. Merely knowing the group of invertibles
+would not determine this associator.
+
+\subsection{Excluding rank four: scope of the longer local argument}
+
+At rank four the fusion ring is near-group:
+\[
+ a^3=1,\qquad a\rho=\rho a=\rho,\qquad
+ \rho^2=1+a+a^2+m\rho.
+\]
+The published \href{https://doi.org/10.1016/j.jalgebra.2022.02.020}
+{Dong--Chen--Wang, Theorem~6.2}, restricts $m$ to $0,2,3,6$.
+For $m=0$, $s=2$ and the sign-automorphism contradiction just given
+applies. For $m=2$, the categorical reduction of
+\href{https://arxiv.org/html/math/0304194#S7}{Etingof--Gelaki--Ostrik,
+Theorem~7.1 and Corollary~7.4} supplies the twisted $A_4$ double.
+Its electric regular algebra gives a holomorphic $c=8$ extension
+$H'$ with $U=(H')^{A_4}$, and
+\href{https://msp.org/pjm/2004/213-2/pjm-v213-n2-p05-p.pdf}
+{Dong--Mason, Theorem~1}, identifies $H'$ with $V_{E_8}$.
+The order-two and order-three adjoint traces in $E_8$ are bounded
+below by $-8$ and $-4$, respectively, as follows from the affine
+Dynkin-diagram classification. Therefore
+\[
+ \dim(E_8^{A_4})\ge\frac{248+3(-8)+8(-4)}{12}=16,
+\]
+contradicting $\dim U_1=6$.
+
+For clarity, the remaining exclusions use universal spherical
+induction arguments, not a classification limited to unitary examples.
+For $m=3k$, induction yields integers $p,q\ge0$ with $p+q=k$.
+At $k=1$ the pointed factor and two indicator moments force the modular
+representation of $G_{2,3}\otimes A_{2,1}$ or its reversal. Harmonic
+theta-series pole cancellation in these two orientations gives
+\[
+ \dim U_1=15+A+10B\quad\hbox{or}\quad14+42A,
+ \qquad A,B\in\mathbb Z_{\ge0}.
+\]
+At $k=2$, the balanced pattern $p=q=1$ forces, by signed Galois symmetry,
+a row of the center's $S$ matrix whose Verlinde coefficient is
+\[
+ N_{XX}^{X}=\frac{97}{72}+\frac{32}{72}-\frac{33}{72}=\frac43.
+\]
+The unbalanced pattern $\{p,q\}=\{0,2\}$ admits a weighted character
+projection. Its three-dimensional block is
+\[
+ S_v=-\frac12\begin{pmatrix}1&2&1\\1&0&-1\\1&-2&1\end{pmatrix},
+ \qquad T_v=\operatorname{diag}(1,-i,-1)
+\]
+before the common central-charge factor; reversal conjugates $T_v$.
+Harmonic theta-series subtraction gives the two alternatives
+\[
+ \dim U_1=8+A\quad\hbox{or}\quad5+12P,
+ \qquad A,P\in\mathbb Z_{\ge0}.
+\]
+None of these formulas allows six currents. The parameters are actual
+weighted polar top dimensions, so their integrality and positivity
+do not require linear independence of all simple characters.
+
+\begin{reviewnote}{R3: compressed rank-four exclusions}
+The preceding paragraph is a summary, not a full proof of the universal
+$m=3,6$ exclusions. The derivation of the complete modular representation
+for $m=3$ is in
+\artifact{hi_cft_20260923_next_m3_universal_data.md}, with an independent
+audit in
+\artifact{hi_cft_20260923_next_m3_universal_independent_audit.md}.
+The $m=6$ arguments are in
+\artifact{hi_cft_20260923_next_structure_m6_balanced_exclusion.md} and
+\artifact{hi_cft_20260923_next_structure_m6_universal_projection.md}.
+The coefficient calculations and pole-cancellation arguments are in
+\artifact{hi_cft_20260923_next_structure_m3_character_obstruction.md}
+and
+\artifact{hi_cft_20260923_next_structure_m6_character_obstruction.md}.
+These are new local deductions, not statements of the cited
+rank-four classification theorem. Their universal induction reductions
+and theta normalizations remain an explicit review dependency of this
+condensed manuscript. In particular, the older character notes alone
+only exclude specified model representations; the later universal
+reductions are essential. The pointwise claim
+$\operatorname{Aut}(B/U)=1$ and the $m=2$ electric-extension argument
+also rely on the longer record
+\artifact{hi_cft_20260923_next_structure_rank46.md} and its replacement
+spherical audit
+\artifact{hi_cft_20260923_next_structure_final_dependency_audit.md}.
+\end{reviewnote}
+
+\subsection{The rank-six ring and exclusion of higher multiplicity}
+
+Rank four being excluded, \eqref{eq:rank-fork} gives
+$H=\mathbf1\oplus X\oplus2Y$. The fusion algebra is
+\[
+ K_0(\mathcal F)\otimes\mathbb C
+ \cong\mathbb C\oplus\mathbb C\oplus M_2(\mathbb C),
+\]
+by the composition algebra of $\operatorname{End}_{\mathcal C}(H)$.
+Hence it is noncommutative. The three invertibles act transitively on
+the three noninvertibles: otherwise both nontrivial idempotents of
+$\mathbb C[\mathbb Z/3]$ split off, leaving a four-dimensional ideal
+with a dimension character, incompatible with the $M_2$ block.
+The left and right cyclic actions must be inverse; equality would
+make the fusion ring commutative. Duality then fixes every noninvertible,
+and reciprocity and associativity give
+\begin{equation}
+ a^3=1,\qquad\rho a=a^2\rho,\qquad
+ \rho^2=1+m(\rho+a\rho+a^2\rho),\qquad m\ge1.
+ \label{eq:rank6-ring}
+\end{equation}
+
+Here are the essential numerical identities in the local multiplicity
+exclusion. Put
+\[
+ d=\frac{3m+\sqrt{9m^2+4}}2,\quad s=1+d^2,\quad
+ \Delta=9m^2+4,\quad R=\rho+a\rho+a^2\rho.
+\]
+Center induction, with the untwisted pointed subcategory, yields
+\[
+ I(1)=1+X+2Y,\quad d_X=d^2,\quad d_Y=s,
+ \qquad I(a)=I(a^2)=C_0+C_1+C_2,
+\]
+where $\theta_X=\theta_Y=1$, $d_{C_j}=s$, and the $C_j$ twists are
+$1,\zeta_3,\zeta_3^2$.
+All remaining central simples $Z_j$ have $F(Z_j)=n_jR$,
+$n_j\in\mathbb Z_{>0}$. Global dimension and the first two
+Ng--Schauenburg indicators give
+\begin{align}
+ \sum_jn_j^2&=4m^2+2,\notag\\
+ \sum_jn_j^2\theta_j&=-\frac{m^2+m\sqrt\Delta}{2},
+ \label{eq:indicator-first}\\
+ \sum_jn_j^2\theta_j^2
+ &=\frac{-m^2+(2\varepsilon-m)\sqrt\Delta}{2},
+ \qquad\varepsilon=\nu_2(\rho)\in\{1,-1\}.
+ \label{eq:indicator-second}
+\end{align}
+These follow from the center-twist trace formula in
+\href{https://arxiv.org/pdf/math/0601012}{Ng--Schauenburg,
+Theorem~4.1}. They concern a multiset of exactly $4m^2+2$ roots,
+repeating $\theta_j$ precisely $n_j^2$ times.
+
+Write $\Delta=t^2D$ with $D$ squarefree. One has $D\equiv1\pmod3$
+and $7\nmid D$. Except when $D=10$, the elementary prime-factor estimate
+$\varphi(2D)/\sqrt D\ge12/\sqrt{13}$ and
+\href{https://arxiv.org/pdf/1401.1879}{Larson's root-count theorem}
+applied to \eqref{eq:indicator-first} give
+\[
+ 4m^2+2\ge\frac{mt}{2}\varphi(2D)
+ \ge\frac{6m\sqrt{9m^2+4}}{\sqrt{13}}.
+\]
+For $m>1$ this is impossible, since
+\[
+ 36m^2(9m^2+4)-13(4m^2+2)^2
+ =4(m^2-1)(29m^2+13)>0.
+\]
+For $D=10$, a root multiset with sum $-a-b\sqrt{10}$, with
+$a,b\in\mathbb Z_{\ge0}$, has at least $a+8b$ members. In the equality
+case its squared-root sum is $a$, provided that sum lies in
+$\mathbb Q(\sqrt{10})$. To see the equality condition, average over
+the Galois group fixing $\sqrt{10}$. Rational contributions cost at
+least one root per negative unit, with equality only for $-1$;
+quadratic contributions cost at least eight roots per unit, with
+equality only for a primitive-40 orbit. That orbit has squared sum
+zero. The hypothesis on the second sum permits undoing the average.
+
+In our application $m,t$ are even and $a=m^2/2$, $b=mt/2$.
+The bound
+\[
+ 4m^2+2\ge\frac{m^2}{2}+4mt
+\]
+excludes even $m\ge4$. The remaining $m=t=2$ is the equality case,
+so the squared sum must be $2$, whereas \eqref{eq:indicator-second}
+gives $-2$ or $-2-4\sqrt{10}$. Thus $m=1$.
+The full conductor-orbit proof, including imprimitive orbits and the
+second-moment hypothesis, is retained in
+\artifact{hi_cft_20260923_next_structure_rank6_indicators.md} and
+\artifact{hi_cft_20260923_next_rank6_root_audit.md}.
+
+Consequently
+\begin{equation}
+ d=\frac{3+\sqrt{13}}2,\qquad
+ s=\frac{13+3\sqrt{13}}2,\qquad
+ d_X=\frac{11+3\sqrt{13}}2.
+ \label{eq:haagerup-dimensions}
+\end{equation}
+For $m=1$, \eqref{eq:indicator-first} has six roots with sum
+$(-1-\sqrt{13})/2$. The quadratic-period equality case forces the
+six distinct nonresidue thirteenth roots, so $n_j=1$ and the center
+has twelve simples. Its dimensions and twist exponents are
+\[
+ \begin{array}{c|cccc}
+ \text{number}&1&1&4&6\\\hline
+ \text{dimension}&1&d^2&s&3d
+ \end{array}
+ \qquad
+ 0,0,0,0,\tfrac13,\tfrac23,
+ \tfrac2{13},\tfrac5{13},\tfrac6{13},
+ \tfrac7{13},\tfrac8{13},\tfrac{11}{13}.
+\]
+\begin{reviewnote}{R4: conductor-orbit bounds and equality cases}
+The reduction to $m=1$ and the count of twelve central simples use more
+than the displayed indicator identities. The prime-factor estimate,
+the exceptional $\mathbb Q(\sqrt{10})$ equality case, and the
+quadratic-period equality case at $m=1$ are compressed here. Their full
+conductor-orbit arguments, including imprimitive roots and multiplicities,
+are in
+\artifact{hi_cft_20260923_next_structure_rank6_indicators.md},
+\artifact{hi_cft_20260923_next_rank6_root_audit.md}, and
+\artifact{hi_cft_20260923_next_structure_rank6_center.md}.
+These local deductions need review independently of the cited indicator
+formula. The later net-sector count inherits this dependency.
+\end{reviewnote}
+The complete $S,T$ data follow from
+\href{https://arxiv.org/html/2609.25185v1}{Gannon--Schopieray--Yadav,
+Theorem~A(2), equivalently Theorem~5.1}: its relevant statement assumes
+a complex spherical untwisted HI category. The auxiliary metric group
+has prime order $13$ and its negative quadratic Gauss sum fixes its
+isometry class. This identifies the standard Haagerup modular data.
+It does not by itself identify a braided category; that stronger
+conclusion is treated separately after complete unitarity.
+
+\section{The complete character vector}
+\label{sec:characters}
+
+Let $q=e^{2\pi i\tau}$. Character exponents are $h-c/24=h-1/3$.
+Using the preceding twist list and strict positivity of nonvacuum
+lowest weights, the only allowed nonvacuum pole is
+$\gamma q^{-7/39}$ in the twist-$2/13$ coordinate. Here
+$\gamma\in\mathbb Z_{\ge0}$ is its top dimension if that module starts
+at $2/13$, and is zero if its lowest weight is shifted upward. The
+vacuum pole is $q^{-1/3}$ with coefficient one.
+
+\begin{lemma}[Uniqueness from the principal part]
+Two character vectors for this modular representation with the same
+$\gamma$ coincide in every weight.
+\end{lemma}
+\begin{proof}
+Their difference is holomorphic at infinity. The modular representation
+has finite image, and covariance transports this property to every cusp
+of a finite-index kernel. Each component is therefore a holomorphic
+function on a compact modular curve, hence constant. A constant vector
+must be fixed by both $S$ and the \emph{character} $T$ matrix, which
+includes $e^{-2\pi i/3}$. The only $T$-fixed coordinate is the object
+of categorical twist $e^{2\pi i/3}$. Its $S$ image has a nonzero vacuum
+component, so it cannot span an invariant line. The constant is zero.
+\end{proof}
+
+\href{https://arxiv.org/pdf/1006.1326}{Evans--Gannon, Sections~1.4
+and~2.4, equation~(2.7)}, provide a fundamental matrix $\Xi$ whose
+vacuum and $d_3$ columns have precisely the two principal parts above.
+Thus, in their labeling,
+\[
+ \boldsymbol\chi=\Xi_{:,0}+\gamma\Xi_{:,d_3},
+ \qquad\dim U_1=6+13\gamma.
+\]
+The actual six-current result forces $\gamma=0$. Their recursive
+construction of $\Xi$ and the uniqueness lemma give the entire vector,
+not just a finite coefficient match. In particular,
+\begin{equation}
+ \operatorname{ch}U
+ =q^{-1/3}\bigl(1+6q+120q^2+956q^3+6010q^4+\cdots\bigr).
+ \label{eq:vacuum-character}
+\end{equation}
+The lowest weights and top dimensions are
+\[
+\begin{array}{c|c|r@{\qquad}c|c|r}
+ \text{label}&h&\dim M_{\rm top}&\text{label}&h&\dim M_{\rm top}\\\hline
+ 0&0&1&d_1&6/13&7\\
+ b&1&80&d_2&11/13&42\\
+ a&1&81&d_3&15/13&119\\
+ c_0&1&81&d_4&5/13&5\\
+ c_1&1/3&3&d_5&7/13&13\\
+ c_2&2/3&27&d_6&8/13&14
+\end{array}
+\]
+In particular the final maximum is $15/13$, improving the preliminary
+$17/10$ bound. The proof record is
+\artifact{hi_cft_20260923_next_structure_conditional_characters.md}.
+Although this vector fixes every unflavoured homogeneous dimension,
+it does not determine the separate branching functions for the
+fourteen-module core $A_L$, and it was not used to prove properness.

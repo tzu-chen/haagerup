@@ -1,0 +1,317 @@
+% Proposed insertion for l02_scaling.tex, after the cylinder dictionary
+% and its gap-ratio example. Draft only: not integrated.
+%
+% All sums, expansions, and parity statements below were checked by hand.
+% Primary-source cross-checks, with conventions translated explicitly:
+% P. Pfeuty, "The One-Dimensional Ising Model with a Transverse Field",
+% Ann. Phys. 57 (1970), 79--90:
+% https://www.math.ucdavis.edu/~bxn/pfeuty1970.pdf
+% N. Iorgov, V. Shadura, Yu. Tykhyy, arXiv:1011.2603, secs. 2--3:
+% https://arxiv.org/abs/1011.2603
+% Y. He and H. Guo, arXiv:1707.02400, sec. II and parity discussion:
+% https://arxiv.org/abs/1707.02400
+% The draft uses Pauli matrices, J>0, a spin-periodic even ring, and
+% c_j=(product sigma_z) sigma_j^+, so n_j=(1-sigma_j^z)/2.
+% These normalizations and the zero-mode convention are specified below
+% rather than imported from sources with different spin conventions.
+% No numerical or symbolic job was run.
+
+\section{Canonical calibration: the periodic critical Ising chain}
+\label{sec:scaling-Ising}
+
+Before analyzing an unfamiliar chain, it helps to run the cylinder
+dictionary through a model whose finite spectrum can be found exactly.
+
+\begin{example}[From a periodic spin spectrum to Ising CFT]
+\label{ex:scaling-Ising-calibration}
+Take Pauli matrices $\sigma_j^a$ and
+\begin{equation}
+ H_{\rm I}=-J\sum_{j=1}^L
+       \left(\sigma_j^x\sigma_{j+1}^x+\sigma_j^z\right),
+ \qquad J>0,\qquad \sigma_{L+1}^a=\sigma_1^a.
+ \label{eq:scaling-Ising-H}
+\end{equation}
+The lattice spacing is one, so the circumference is $L$.
+We take $L$ even; the displayed stress-pair construction below
+uses $L\ge4$. The equality of the interaction and transverse-field
+coefficients is the critical point in this Pauli-matrix convention.
+Changing from Pauli matrices to spin operators $\sigma^a/2$ without
+changing the couplings would change the normalization of every energy.
+
+\paragraph{A periodic spin ring has two fermion boundary conditions.}
+
+The conserved spin-flip parity is
+$P=\prod_j\sigma_j^z$. Introduce Jordan--Wigner fermions
+\[
+ c_j=\left(\prod_{m<j}\sigma_m^z\right)\sigma_j^+,
+ \qquad
+ \sigma_j^+=\frac{\sigma_j^x+i\sigma_j^y}{2}.
+\]
+The string makes fermions on different sites anticommute.
+At the same site,
+\[
+ n_j=c_j^\dagger c_j=\frac{1-\sigma_j^z}{2},
+ \qquad P=(-1)^{\sum_jn_j}.
+\]
+For an interior bond the strings cancel to give
+$\sigma_j^x\sigma_{j+1}^x
+=(c_j^\dagger-c_j)(c_{j+1}^\dagger+c_{j+1})$.
+Across the last bond their uncancelled product is the total
+parity. The quadratic Hamiltonian therefore has the uniform form
+\[
+ H_{\rm I}=-J\sum_{j=1}^L
+ \left[(c_j^\dagger-c_j)(c_{j+1}^\dagger+c_{j+1})
+                  +1-2n_j\right],
+ \qquad c_{L+1}=-P c_1,
+\]
+where the boundary sign is imposed within a fixed parity sector.
+Consequently the physical Hilbert space is
+\begin{equation}
+ \HH_{\rm spin}
+ =\HH_{\rm NS,\ even}\oplus\HH_{\rm R,\ odd}.
+ \label{eq:scaling-Ising-parity}
+\end{equation}
+Here NS means antiperiodic fermions, the Neveu--Schwarz sector,
+with momenta $k=(2n+1)\pi/L$. R means periodic fermions, the
+Ramond sector, with $k=2n\pi/L$. These are two sectors of the
+same periodic spin Hamiltonian. Each fermion Fock space must
+still be projected to the indicated parity. Keeping both full
+Fock spaces would count twice as many states as the $2^L$ spin
+Hilbert space.
+
+A Fourier transform leaves a two-mode problem for each pair
+$k,-k$. In the basis $(c_k,c_{-k}^\dagger)$ its single-particle
+matrix can be written
+\[
+ \mathsf h(k)=2J\left[(1-\cos k)\tau_z+\sin k\,\tau_y\right],
+\]
+where the $\tau$ matrices act on this particle-hole pair.
+Its positive eigenvalue is
+\begin{equation}
+ \epsilon(k)=2J\sqrt{(1-\cos k)^2+\sin^2k}
+             =4J\left|\sin\frac k2\right|.
+ \label{eq:scaling-Ising-dispersion}
+\end{equation}
+The associated Bogoliubov transformation mixes creation and
+annihilation operators in opposite-momentum pairs and preserves
+fermion parity. In the NS sector there are no unpaired $k=0,\pi$
+modes for even $L$. Its Bogoliubov vacuum has even parity, and
+each quasiparticle flips parity. Physical NS excitations must
+therefore contain an even number of quasiparticles.
+
+The Ramond sector requires more care. It contains unpaired
+$k=0$ and $k=\pi$ modes, with terms
+$2J(1-\cos k)(n_k-\tfrac12)$.
+At criticality the $k=0$ term is exactly zero, whereas
+$k=\pi$ costs $4J$ to occupy. The paired-mode vacuum has even
+parity. The physical R ground state has the $\pi$ mode empty
+and the zero mode occupied, supplying the required odd parity
+at no energy cost. Thus its energy is the usual zero-point sum.
+The two possible zero-mode occupations belong to different
+fermion parities; they are not two physical R ground states
+of the periodic spin problem.
+
+\paragraph{Two finite trigonometric sums give the Casimir energy.}
+
+Put $x=\pi/(2L)$. Choosing momenta in $[0,2\pi)$ makes every
+sine in the zero-point sums nonnegative. The NS vacuum energy is
+\[
+ E_0(L)=-\frac12\sum_{k\in{\rm NS}}\epsilon(k)
+        =-2J\sum_{n=0}^{L-1}\sin[(2n+1)x].
+\]
+The elementary identity
+$2\sin x\sin y=\cos(y-x)-\cos(y+x)$ telescopes:
+\[
+ 2\sin x\sum_{n=0}^{L-1}\sin[(2n+1)x]
+ =\cos0-\cos(2Lx)=2.
+\]
+Therefore
+\begin{equation}
+ E_0(L)=-2J\csc\frac{\pi}{2L}.
+ \label{eq:scaling-Ising-E0}
+\end{equation}
+The same argument in the physical R sector gives
+\[
+ 2\sin x\sum_{n=0}^{L-1}\sin(2nx)
+ =\cos(-x)-\cos[(2L-1)x]=2\cos x,
+\]
+and hence
+\begin{equation}
+ E_{\rm R}(L)=-2J\cot\frac{\pi}{2L}.
+ \label{eq:scaling-Ising-ER}
+\end{equation}
+The zero-mode occupation changes no term in this sum.
+Since $\csc x>\cot x$ for the present $x$, the NS state is the
+ground state of the full spin Hamiltonian.
+
+The small-momentum slope of the exact dispersion gives an
+independent velocity:
+\[
+ \epsilon(k)=2J|k|-\frac J{12}|k|^3+O(|k|^5),
+ \qquad v=2J.
+\]
+Using $\csc x=x^{-1}+x/6+7x^3/360+O(x^5)$,
+\begin{equation}
+ E_0(L)=-\frac{4J}{\pi}L-\frac{\pi J}{6L}
+        -\frac{7\pi^3J}{1440L^3}+O(L^{-5}).
+ \label{eq:scaling-Ising-Casimir}
+\end{equation}
+Thus $e_\infty=-4J/\pi$. Comparing the $L^{-1}$ coefficient
+with $-\pi vc/(6L)$, using the independently known $v=2J$,
+gives $c=1/2$. The coefficient alone would only have given
+$vc=J$. The long-wavelength modes form a massless Majorana
+fermion, providing an independent continuum description with
+the same central charge.
+
+Even here a finite-size central-charge estimator is not exactly
+its limiting value. If the exact $e_\infty$ and $v$ are used,
+\[
+ -\frac{6L}{\pi v}\bigl[E_0(L)-e_\infty L\bigr]
+ =\frac12+\frac{7\pi^2}{480L^2}+O(L^{-4}).
+\]
+The correction is a property of an exactly solved finite
+Hamiltonian, not an eigensolver error.
+
+\paragraph{The spin, energy, and stress levels.}
+
+The odd-parity ground lies above the NS ground by
+\begin{equation}
+ g_\sigma(L):=E_{\rm R}(L)-E_0(L)
+ =2J\bigl(\csc x-\cot x\bigr)
+ =2J\tan\frac x2.
+ \label{eq:scaling-Ising-spin-gap}
+\end{equation}
+The last equality uses
+$(1-\cos x)/\sin x=\tan(x/2)$.
+In particular,
+\[
+ g_\sigma(L)=\frac{\pi J}{2L}
+             +\frac{\pi^3J}{96L^3}+O(L^{-5}),
+ \qquad
+ \frac{L g_\sigma(L)}{2\pi v}
+ =\frac18+\frac{\pi^2}{384L^2}+O(L^{-4}).
+\]
+This is the Ising spin-field sector, with limiting
+$(h,\bar h)=(1/16,1/16)$. The sector identification has more
+content than an energy fit: the lattice order operator
+$\sigma_j^x$ changes $P$, and its Jordan--Wigner string changes
+the Majorana boundary condition between NS and R.
+In the continuum this boundary-condition change is the spin
+field. Both parity-sector ground states have physical momentum
+zero. One can see this directly in the spin basis: the
+off-diagonal matrix elements are nonpositive, adjacent pair
+flips connect each fixed-parity sector, and its positive ground
+vector is invariant under translation.
+
+In the NS sector a single quasiparticle at $k=\pi/L$ is
+not a physical periodic-spin state: it has the wrong parity.
+The allowed opposite-momentum pair at $k=\pm\pi/L$ has
+zero total momentum and gap
+\begin{equation}
+ g_\epsilon(L)=2\epsilon(\pi/L)=8J\sin x.
+ \label{eq:scaling-Ising-energy-gap}
+\end{equation}
+Its known-velocity dimension estimate is
+\begin{equation}
+ \Delta_\epsilon^{(v)}(L)
+ :=\frac{L g_\epsilon(L)}{2\pi v}
+ =\frac{2L}{\pi}\sin\frac{\pi}{2L}
+ =1-\frac{\pi^2}{24L^2}+O(L^{-4}).
+ \label{eq:scaling-Ising-epsilon-v}
+\end{equation}
+In the Majorana continuum theory this pair is
+$\psi_{-1/2}\bar\psi_{-1/2}|0\rangle$, with weights
+$(1/2,1/2)$: the energy field $\epsilon$.
+
+The same-direction pair at $k=\pi/L,3\pi/L$ is also allowed.
+Its total momentum is $4\pi/L$ modulo $2\pi$, and its gap is
+\begin{align}
+ g_T(L)&=4J(\sin x+\sin3x)
+        =16J\sin x\cos^2x,\label{eq:scaling-Ising-stress-gap}\\
+ \frac{Lg_T(L)}{2\pi v}
+       &=2-\frac{7\pi^2}{12L^2}+O(L^{-4}).\notag
+\end{align}
+The momenta correspond to continuum half-integer fermion modes
+$1/2$ and $3/2$. This identifies the limiting state, rather
+than merely matching its momentum. With
+$\{\psi_r,\psi_s\}=\delta_{r+s,0}$ and
+$T=-\tfrac12:\!\psi\partial\psi\!:$,
+\[
+ L_{-2}|0\rangle
+ =\frac12\psi_{-3/2}\psi_{-1/2}|0\rangle.
+\]
+The two-fermion vector has norm one, so the stress state has
+norm squared $1/4=c/2$, as required by the Virasoro algebra.
+Its weights are $(2,0)$ and its spin is $+2$.
+The negative-momentum pair gives the opposite chirality.
+At $L=4$ the total lattice momenta of the two opposite-chirality
+pairs coincide modulo $2\pi$;
+their distinct continuum chiral labels should not be inferred
+from that short-ring momentum alone.
+
+The parity projection also explains the bosonic local
+continuum spectrum. Even-even chiral NS fermion parity gives
+the vacuum family, and odd-odd chiral NS parity gives the
+energy family. The projected R space gives the spin family.
+Thus its continuum Hilbert space is
+\[
+ \HH_{\rm Ising}
+ =\bigl(\mathcal V_0\otimes\overline{\mathcal V_0}\bigr)
+  \oplus\bigl(\mathcal V_{1/2}
+                   \otimes\overline{\mathcal V_{1/2}}\bigr)
+  \oplus\bigl(\mathcal V_{1/16}
+                   \otimes\overline{\mathcal V_{1/16}}\bigr),
+\]
+where $\mathcal V_h$ is the irreducible Ising Virasoro module.
+An unprojected single chiral fermion of spin $1/2$ is not an
+additional local field in this periodic bosonic theory.
+
+\paragraph{Two legitimate calibrations approach from opposite sides.}
+
+The exact velocity $v=2J$ is an infinite-volume slope. A
+stress-gap estimate uses a different quantity,
+\[
+ \widehat v_T(L):=\frac{Lg_T(L)}{4\pi}
+ =\frac{4JL}{\pi}\sin x\cos^2x
+ =2J\left[1-\frac{7\pi^2}{24L^2}+O(L^{-4})\right].
+\]
+It tends to $v$, but differs from it at every finite size.
+Using this estimate to normalize the energy-field gap gives
+\begin{equation}
+ \Delta_\epsilon^{(T)}(L)
+ :=\frac{L g_\epsilon(L)}{2\pi\widehat v_T(L)}
+ =2\frac{g_\epsilon(L)}{g_T(L)}
+ =\sec^2\frac{\pi}{2L}
+ =1+\frac{\pi^2}{4L^2}+O(L^{-4}).
+ \label{eq:scaling-Ising-epsilon-stress}
+\end{equation}
+The exact identity follows by cancelling $\sin x$ between
+$g_\epsilon=8J\sin x$ and $g_T=16J\sin x\cos^2x$.
+The known-velocity estimate
+\eqref{eq:scaling-Ising-epsilon-v} approaches dimension one
+from below; the stress-calibrated estimate approaches it from
+above. They use the same exact eigenvalues and track the same
+limiting field. Removing the velocity by a ratio does not
+remove the unequal finite-size corrections of the two levels.
+
+For this nearest-neighbor Ising Hamiltonian the corrections can
+be derived from the full dispersion and the finite sums:
+the cubic term in $\epsilon(k)$ produces $L^{-3}$ corrections
+to gaps and hence $L^{-2}$ corrections to dimension estimates.
+That power is consistent with dimension-four irrelevant
+contributions in a continuum expansion, but the power alone
+does not specify a unique irrelevant operator.
+Other Hamiltonians can have different coefficients, vanishing
+leading coefficients, or logarithmic running such as the
+current example in Chapter~\ref{ch:full_theories}.
+
+This calibration illustrates what becomes possible when the
+boundary conditions, parity projection, velocity, eigenstates,
+and continuum field dictionary are all independently controlled.
+For the Haagerup chain, exact finite eigenvalues or a small
+residual do not supply those missing identifications. Its
+finite-size analysis must still determine which sectors
+approach a common vacuum and velocity, which states approach
+the proposed fields, and what correction law governs that
+approach.
+\end{example}

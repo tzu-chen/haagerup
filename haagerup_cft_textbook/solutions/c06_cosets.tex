@@ -1,0 +1,249 @@
+\section{Solutions for Chapter~\ref{ch:cosets}}
+
+\paragraph{Exercise~\ref{ex:c-coset-1}: the perpendicular lattice.}
+\phantomsection
+\label{sol:ex:c-coset-1}
+The orthogonal summands make the glue norm the sum
+$2/3+2/3+1/2+78/36=4$. Its components have orders
+$3,3,2,6$ modulo their respective lattices, so the full glue
+class has order $\operatorname{lcm}(3,3,2,6)=6$.
+Its pairings with the original lattice are integral: the
+$A_2$ weights are dual-lattice vectors, while
+$(\alpha/2,\alpha)=1$ and $(\gamma_{78}/6,\gamma_{78})=13$.
+The even norm therefore gives an even integral index-six extension.
+Its determinant is
+\[
+ \frac{3\cdot3\cdot2\cdot78}{6^2}
+ =\frac{1404}{36}=39.
+\]
+If the plane lattice $L_0$ had a larger saturation of index
+$r>1$ in $E_8$, that integral lattice would have determinant
+$39/r^2$. Integrality of its Gram matrix makes this an integer,
+so $r^2$ would divide the squarefree integer $39$, impossible.
+This argument uses the actual integral ambient lattice; an
+arbitrary real enlargement has no such determinant restriction.
+
+
+
+\paragraph{Exercise~\ref{ex:c-coset-2}: why branching multiplicities square.}
+\phantomsection
+\label{sol:ex:c-coset-2}
+For each lattice charge $n$, the three nonzero branching functions
+are $\chi_n,\chi_n,2\chi_n$. Pairing each full multiplicity
+space with its complex conjugate produces multiplicities
+$1^2,1^2,2^2$. Summing gives $6Z_{L_0}$. The lattice vacuum
+occurs at $n=0$, so the zero-energy multiplicity is six.
+These are the multiplicities of the original embedded extension
+$A=\one\oplus X\oplus2Y$. The calculation does not choose between
+its possible $\mathcal H_2$ and $\mathcal H_3$ boundary categories,
+nor replace it by a separately selected canonical algebra.
+
+A partition function alone supplies no product on that
+six-dimensional vacuum space. A full interpretation requires
+a unital associative commutative vacuum product, its positive pairing and
+adjoint, and compatible local OPE and sewing data for all other
+sectors. In a unitary finite vacuum algebra the mutually orthogonal
+primitive idempotents describe the separate vacuum components;
+defect junctions must act consistently on this algebra. Six
+disconnected identical lattice theories give one possible partition
+function with this multiplicity, but do not automatically supply
+the intended Haagerup action. A unique-vacuum, clustering theory
+cannot simply keep the six-dimensional zero-energy space unchanged.
+
+
+
+\paragraph{Exercise~\ref{ex:c-coset-3}: exact near-two charges.}
+\phantomsection
+\label{sol:ex:c-coset-3}
+The affine charge is $3(40)/(40+2)=20/7$. Hence the diagonal
+GKO charge is
+\[
+ 1+\frac{117}{41}-\frac{20}{7}
+ =\frac{286}{287}=1-\frac1{287}.
+\]
+Adding one Cartan stress gives $573/287=2-1/287$.
+Its distance below two is $1/287$, approximately $.00348432$,
+whereas $c_*-2$ is approximately $.025004294$ and is positive.
+For completeness, the GKO stress by itself is $288/287$ below
+two, and the diagonal affine stress is $6/7$ above two.
+These exact rational stresses and the irrational axis are different
+vectors and different chiral algebras; closeness of their charges
+does not identify their full theories.
+
+
+
+\paragraph{Exercise~\ref{ex:c-coset-4}: solving for a Virasoro axis.}
+\phantomsection
+\label{sol:ex:c-coset-4}
+Expand $e*e$ using the table. The coefficient of $e_i$ is
+$2a_i^2+t^2\lambda_i/f_i$ and that of $x$ is
+$2t\lambda\cdot a$. Equating them to $2a_i$ and $2t$ gives
+$a_i(1-a_i)=\lambda_i t^2/(2f_i)$ and the second equation.
+The three ratios are
+\[
+ \frac{11/41}{286/287}=\frac7{26},\qquad
+ \frac{192/1271}{2400/1271}=\frac2{25},\qquad
+ \frac{49/31}{70/31}=\frac7{10},
+\]
+giving the stated $q_i$.
+Let $\omega'=e_0+e_1+e_2$. Invariance and $\omega'*e=2e$
+give
+$2\langle e,e\rangle=\langle\omega',e*e\rangle
+=2\langle\omega',e\rangle$. Therefore
+$c(e)=2\langle e,e\rangle=2\sum_i f_i a_i$ on the
+idempotent locus.
+
+
+
+\paragraph{Exercise~\ref{ex:c-coset-5}: the vacuum grade-four Gram matrix.}
+\phantomsection
+\label{sol:ex:c-coset-5}
+Using $[L_m,L_n]=(m-n)L_{m+n}+\frac c{12}(m^3-m)\delta_{m+n,0}$
+and $L_{-1}\one=0$, the matrix in the stated basis is
+\[
+ \begin{pmatrix}5c&3c\\3c&c(c+8)/2\end{pmatrix}.
+\]
+For example the mixed entry follows from
+$L_4L_{-2}^2\one=6L_2L_{-2}\one=3c\one$.
+The first diagonal entry is
+$\langle\one,[L_4,L_{-4}]\one\rangle=5c$.
+For the other one, commute $L_2$ past both factors to obtain
+$L_2L_{-2}^2\one=(8+c)L_{-2}\one$; a second $L_2$ gives
+$(8+c)c/2$. These are inner products because the unitary
+adjoint is $L_n^\dagger=L_{-n}$ and $\|\one\|=1$.
+Its determinant is
+$5c^2(c+8)/2-9c^2=c^2(5c+22)/2$, positive for $c>0$.
+The two vacuum descendants are therefore independent at $c_*$.
+
+
+
+\paragraph{Exercise~\ref{ex:c-coset-6}: the trivial grading.}
+\phantomsection
+\label{sol:ex:c-coset-6}
+Let $g_X$ be the group element assigned to a simple $X$, with
+$g_Z=g_Xg_Y$ whenever $Z$ occurs in $X\otimes Y$.
+The tensor unit has $g_{\one}=1$, either by the unital assignment
+or by $g_{\one}^2=g_{\one}$ in a group.
+Since both $\one$ and $\rho$ occur in $\rho^2$,
+$g_\rho^2=1=g_\rho$. Thus $g_\rho=1$.
+The constituent $\alpha\rho$ then implies
+$g_\alpha g_\rho=g_{\alpha\rho}=g_\rho^2=1$,
+so $g_\alpha=1$; the same holds for every remaining simple.
+The group need not be abelian for this argument.
+
+To apply this to currents, each simple line must transmit the
+chosen current algebra by a definite invertible rotation, and
+every nonzero fusion junction must identify the rotation of
+each output constituent with the product of the two input
+rotations. Those rotations then give the required group-valued
+assignment. Preserving only the stress, or retaining arbitrary
+matrix elements of a line after a projection, does not establish
+this transmission property.
+
+
+
+\paragraph{Exercise~\ref{ex:c-coset-7}: bounded projected energy.}
+\phantomsection
+\label{sol:ex:c-coset-7}
+Project $(m,n)\in\Z^2$ to $m+\theta n$ with irrational $\theta$.
+There are infinitely many pairs whose projected value lies in any
+fixed sufficiently large interval: for each $n$, choose $m$ nearest
+to $-\theta n$, giving absolute value at most $1/2$. Their full
+Euclidean lengths grow, so a finite ambient-energy cutoff would
+remove all but finitely many. Discarding the perpendicular energy
+removes that control. To put this in the form of positive commuting
+energies, use
+\[
+ E_{\parallel}=\frac{(m+\theta n)^2}{1+\theta^2},\qquad
+ E_{\perp}=\frac{(n-\theta m)^2}{1+\theta^2},\qquad
+ E_{\parallel}+E_{\perp}=m^2+n^2.
+\]
+The selected states have $E_{\parallel}\leq1/[4(1+\theta^2)]$,
+so their reduced thermal sum already diverges at any positive
+temperature. Irrationality makes the linear projection injective:
+the issue is infinitely many states in a bounded energy interval,
+not necessarily infinite multiplicity at one exact eigenvalue.
+This example illustrates the convergence
+problem; it does not identify the actual irrational commutant
+branching with a freely projected lattice.
+
+
+
+\paragraph{Exercise~\ref{ex:c-coset-8}: a sum and its diagonal square.}
+\phantomsection
+\label{sol:ex:c-coset-8}
+The example $a_n=1/n$ has a divergent sum and a convergent square
+sum. Therefore the divergence of $R(\beta)$ alone would be
+insufficient. A character is more special: write it as a sum over
+an actual basis,
+$\chi_\lambda(\beta)=\sum_j e^{-\beta E_j}$, including repetitions
+for multiplicities. Its square is a sum over ordered pairs of basis
+vectors. Keeping only the pairs $(j,j)$ gives
+$\chi_\lambda(\beta)^2\geq\sum_j e^{-2\beta E_j}
+=\chi_\lambda(2\beta)$.
+All terms are positive, and integer multiplicities permit this
+basis interpretation: a multiplicity $d$ contributes $d^2$
+ordered pairs and at least $d$ diagonal pairs. The shifted energies
+$E_j$ may be negative; positivity of their exponentials is all
+that is used. Since $R(2\beta)$ diverges for every
+$\beta>0$, the diagonal thermal sum diverges too.
+
+
+
+\paragraph{Exercise~\ref{ex:c-coset-9}: independent temperatures.}
+\phantomsection
+\label{sol:ex:c-coset-9}
+Write $s=\beta+\bar\beta$, $p=\beta\bar\beta$, and
+$t=4\pi^2s/p$. The inverted temperatures sum to $t$, while
+eta inversion gives
+\[
+ \eta(4\pi^2/\beta)\eta(4\pi^2/\bar\beta)
+ =\frac{\sqrt p}{2\pi}\eta(\beta)\eta(\bar\beta).
+\]
+Equating the original and inverted amplitudes therefore gives
+$G(t)=\sqrt p\,G(s)/(2\pi)=\sqrt{s/t}\,G(s)$.
+For fixed $s>0$, independently positive temperatures allow
+all $0<p\leq s^2/4$, equivalently all $t$ with
+$st\geq16\pi^2$. Given $s_1,s_2>0$, choose
+$u\geq16\pi^2\max(s_1^{-1},s_2^{-1})$. Both pairs $(s_i,u)$
+are allowed, forcing $\sqrt{s_1}G(s_1)=\sqrt{s_2}G(s_2)$.
+
+If only equal temperatures were checked, one would have
+$p=s^2/4$ and only the involution $t=16\pi^2/s$.
+It relates each argument to one partner, with no freedom to
+connect two arbitrary arguments through a common $u$.
+An invariance under this involution alone does not force
+$\sqrt{s}G(s)$ to be constant. The stronger two-variable
+modularity hypothesis is essential to the uniqueness proof.
+
+
+\paragraph{Exercise~\ref{ex:c-coset-10}: the dimension threshold.}
+\phantomsection
+\label{sol:ex:c-coset-10}
+For a noninvertible simple $X$, the product $X\otimes X^*$ contains
+the unit and at least one further simple. All simple
+Frobenius--Perron dimensions are at least one, so
+$\FPdim(X)^2\geq2$. If there are at least three simples, two
+others each contribute at least one to global dimension, proving
+the bound four.
+
+At rank two, the nonunit simple is self-dual and
+$X^2=\one+nX$ for an integer $n\geq1$. Its positive dimension
+is $(n+\sqrt{n^2+4})/2$, an increasing function of $n$. At $n=1$
+the global dimension is $1+((1+\sqrt5)/2)^2=(5+\sqrt5)/2$.
+In the descent argument, a nontrivial central adjoint algebra would
+have dimension at least $d^2$, forcing the image category below
+both nonpointed thresholds:
+\[
+ \operatorname{Dim}\mathcal D
+ \leq\frac{3(1+d^2)}{d^2}=3+\frac3{d^2}
+ <\frac{10}{3}<\frac{5+\sqrt5}{2},
+\]
+where $d>3$ gives the strict bound. Its being pointed would
+contradict the irrational dimension $d$ of the image of $\rho$,
+since any object of a pointed category is a direct sum of
+dimension-one simples. The adjoint algebra in this argument is
+$R(\one)$ for the hypothesized descent functor; it is not the
+original $E_8/U$ extension algebra, despite the chapter's reused
+local letter $A$.
+

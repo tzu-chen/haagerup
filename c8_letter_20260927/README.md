@@ -30,7 +30,7 @@ provides RevTeX 4.2 itself.
 To regenerate Fig. 2 (it takes seconds and needs little memory):
 
 ```sh
-python hi_cft_safe_run.py --limit-mib 2048 -- timeout 300s python c8_letter_20260927/make_figures.py
+~/.local/bin/research-safe-run --limit-mib 2048 -- timeout 300s python c8_letter_20260927/make_figures.py
 ```
 
 ## Placeholders to fill

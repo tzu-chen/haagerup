@@ -1,0 +1,479 @@
+\chapter{Notation and a working glossary}
+\label{app:notation}
+
+The subject joins several mathematical languages. The same letter
+can have a conventional meaning in more than one of them. This
+appendix records the principal conventions and identifies the
+distinctions that matter when moving between chapters.
+
+\section{Fields and states}
+
+\begin{longtable}{p{0.23\textwidth}p{0.70\textwidth}}
+\toprule Symbol&Meaning\\\midrule
+\endhead
+$\one$&Vacuum state, tensor unit, or identity object according to
+context. The vacuum simple-module label is also written $0$.\\
+$Y(a,z)$&Field associated to state $a$;
+$Y(a,z)=\sum_n a_{(n)}z^{-n-1}$.\\
+$a_{(n)}b$&The coefficient of $(z-w)^{-n-1}$ in the OPE of $a$
+and $b$; it has weight $\wt(a)+\wt(b)-n-1$.\\
+$\mathsf T$, $D$&Translation operator on a VOA, equal to $L_{-1}$.
+The construction chapters often use $D$.
+It is distinct from a stress field $T(z)$ and a modular matrix $T$.\\
+$\omega$, $T(z)$&Conformal vector and corresponding stress field;
+$Y(\omega,z)=T(z)=\sum_nL_nz^{-n-2}$.\\
+$H_L,H_R$&In the construction chapters, Cartan currents of the internal affine factors at
+levels one and thirty-nine. Both are holomorphic; the subscripts
+do not denote the two physical chiralities. In the chain chapter,
+$H_L$ instead denotes the Hamiltonian of a chain of length $L$.\\
+$\omega_L,\omega_R$&Sugawara conformal vectors of those internal
+factors, with charges $1,117/41$ and fields $T_L,T_R$.\\
+$a_{(-1)}b$&Normal-product state, corresponding to
+$:Y(a,z)Y(b,z):$.\\
+$h,\bar h$&Holomorphic and antiholomorphic conformal weights.\\
+$\Delta$&Full scaling dimension $h+\bar h$.\\
+$s_{\rm spin}$&Conformal spin $h-\bar h$. Some local physics
+formulas abbreviate it to $s$; this is distinct from the
+categorical abbreviation $1+d^2$.\\
+$c$&One chiral central charge. For the nonchiral theories here,
+$c_L=c_R=c$; their sum is $2c$.\\
+$v$&The nonuniversal velocity in a lattice-to-cylinder energy
+conversion; elsewhere a generic state vector when no velocity
+is involved.\\
+$\HH_{\mathrm{path},L}$&The length-$L$ periodic chain Hilbert
+space, with orthonormal basis the admissible closed fusion paths.\\
+$U_{\rm tr}$&The chain's unitary right cyclic shift, with
+$U_{\rm tr}^L=1$ and $U_{\rm tr}h_jU_{\rm tr}^{-1}=h_{j+1}$.
+It is distinct from the chiral algebra $U$ and VOA translation
+$\mathsf T$.\\
+$\widehat a$&A field divided by its positive norm. It does not
+fix the remaining phase of a complex field.\\
+$a^\dagger$&Radial adjoint or Hilbert-space adjoint, according
+to context; not an instruction to add a right-moving field.\\
+$\theta$&An antilinear PCT operation in VOA sections;
+$\theta_i$ can also denote a categorical twist, distinguished
+by its indexed scalar use.\\
+\bottomrule
+\end{longtable}
+
+\section{Categories and modular data}
+
+\begin{longtable}{p{0.23\textwidth}p{0.70\textwidth}}
+\toprule Symbol&Meaning\\\midrule
+\endhead
+$\mathcal H_3$&The specified unitary six-object Haagerup
+fusion category used for the physical chain.\\
+$\mathcal H_2$&A different unitary category with the same
+six-object fusion ring, Morita equivalent to $\mathcal H_3$.\\
+$\alpha$&The invertible order-three Haagerup object. A lattice
+root is also conventionally denoted by $\alpha$; its lattice
+context or subscript distinguishes it.\\
+$\rho$&A noninvertible Haagerup simple with
+$\rho^2=\one+\rho+\alpha\rho+\alpha^2\rho$.\\
+$d$&The positive quantum dimension
+$(3+\sqrt{13})/2$, satisfying $d^2=1+3d$.\\
+$s$&In the category and extension formulas,
+$s=1+d^2=2+3d$.\\
+$\operatorname{Dim}(\mathcal C)$&Global dimension,
+$\sum_i d_i^2$, for a positive spherical fusion category.\\
+$\mathcal D$&Total quantum dimension
+$\sqrt{\operatorname{Dim}(\mathcal C)}$ of the modular category
+under discussion. For $\mathcal C=Z(\mathcal H_3)$,
+$\mathcal D=3s=\operatorname{Dim}(\mathcal H_3)$.\\
+$Z(\mathcal C)$&Drinfeld center, whose objects have compatible
+half-braidings with every object of $\mathcal C$.\\
+$F^{abc}_d$&Associator matrix between two bases of a fusion
+space. Left channels index rows and right channels index columns;
+see \eqref{eq:F-basis-convention}.
+Elsewhere $F$ can denote a lowering current or a forgetful
+functor; its arguments distinguish these uses.\\
+$X^*$&Categorical dual object. Dualizing a morphism is linear;
+it differs from taking a Hermitian adjoint, which conjugates scalars.\\
+$S$&Modular matrix, normalized by $S_{00}=1/\mathcal D$.
+For a pointed lattice example we use the negative Fourier sign.\\
+$\Theta$&Categorical twist matrix, with entries
+$e^{2\pi ih_i}$.\\
+$T_{\rm ch}$&Character transformation matrix,
+$e^{-2\pi ic/24}\Theta$. At $c=8$ its common prefactor is
+$e^{-2\pi i/3}$.\\
+$a$&One of the twelve central simple labels. It is not the
+invertible Haagerup object $\alpha$.\\
+$\mathcal C_A$&All right modules of an algebra object $A$.
+For the connected commutative separable algebras in the braided
+setting used here, the braiding supplies a left action and
+defines the balanced tensor product $\otimes_A$.\\
+$\mathcal C_A^0$&Local modules: if $r:X\otimes A\to X$ is
+the action, then $r\,c_{A,X}c_{X,A}=r$. This is an equation
+for the action, not necessarily identity of the double
+braiding on the entire underlying tensor product.\\
+${}_A\mathcal C_A$&Algebra bimodules, describing the relevant
+full-theory defects in the rational construction.\\
+$\mathcal C^{\rm op}$&The convention in this book reverses
+the order of the tensor product, not the direction of
+morphisms.\\
+$\mathcal C^{\rm rev}$&For a braided category, reverse the
+braiding and twist. This differs from reversing tensor order.\\
+$\mathcal C\boxtimes\mathcal D$, $M\boxtimes_V N$&The first is
+the external product of two categories, with pairs of simple labels.
+The second fuses two modules of one VOA $V$. Neither is the plain
+tensor product of the underlying module vector spaces.\\
+\bottomrule
+\end{longtable}
+
+\section{The main algebras and their charges}
+
+\begin{longtable}{p{0.34\textwidth}p{0.59\textwidth}}
+\toprule Object&Role\\\midrule
+\endhead
+$V_L$&Positive even lattice VOA, with central charge
+$\rank L$.\\
+$B=V_{E_6\oplus A_2}$&The immediate ambient algebra of the
+six-current construction; $c=8$ and $\dim B_1=86$.\\
+$H=V_{E_8}$&The original holomorphic lattice extension of
+$B$; $c=8$ and $\dim H_1=248$.\\
+$U$&The actual vertex algebra generated by the two affine
+current triples, the ambient conformal vector, and the field
+$u$. Under the finite closure inputs, $\dim U_1=6$.\\
+$H'$&The holomorphic extension selected through the canonical
+$\mathcal H_3$ algebra. It is isomorphic to $V_{E_8}$ but its
+embedding of $U$ is not automatically the original one.\\
+$A_{1,k}$&The simple integrable affine
+$L_k(\mathfrak{sl}_2)$ VOA, of charge $3k/(k+2)$.\\
+$K(\mathfrak{sl}_2,k)$&The parafermion commutant of the
+Cartan Heisenberg algebra, of charge $2(k-1)/(k+2)$.\\
+Potts&The $k=3$ parafermion algebra, of charge $4/5$.\\
+Level-thirteen parafermion&The $k=13$ factor, of charge $8/5$.\\
+$\mathcal T$&The rank-two lattice--Potts core, of charge
+$14/5$. Its detailed lattice extension is defined in
+Chapter~\ref{ch:factors}.\\
+$A_L$&The larger order-thirteen core extension, of charge
+$22/5$ and fourteen simple modules. The subscript is part of
+the core notation, not a declaration that it is an affine
+level.\\
+$C_6$&The rational central-charge-six commutant constructed
+from the saturated plane lattice under the accepted $c=8$
+construction.\\
+$c_*$&The irrational chiral charge
+$2.025004294\ldots$ arising from a stress axis. It is not an
+identified central charge of the physical chain.\\
+\bottomrule
+\end{longtable}
+
+\section{A glossary of the main logical distinctions}
+
+\begin{description}
+\item[Abelian current.]A current whose OPE with the other currents
+in the selected abelian family has only a central double pole
+and no Lie-bracket simple pole. The double pole need not vanish.
+
+\item[Anomaly.]An obstruction to a specified symmetry operation,
+such as gauging a group action with nontrivial associator class.
+A chiral gravitational anomaly and a finite-group associator
+anomaly are different data; the context must specify which is meant.
+
+\item[Associator.]A coherent change between the two ways of
+parenthesizing a tensor product. Its pentagon relation is more
+information than associativity of the fusion multiplicities.
+
+\item[Boundary category.]The category of boundary conditions or
+all extension modules in the specified construction. It can be
+nonbraided even though the bulk chiral category is braided.
+
+\item[Bounded localized vertex operators.]A property combining
+bounded annulus-regularized insertion maps, with suitable energy
+damping on the inserted state, and locality of the bounded
+algebras they generate. It is stronger than boundedness of an
+insertion for each fixed state separately.
+
+\item[Branching.]Decomposition of a representation after restricting
+to a subalgebra. Multiplicity spaces can carry a commuting algebra.
+
+\item[Canonical.]A construction determined naturally after its
+input data and conventions have been specified. The word does not
+remove the need to state which category, algebra, or normalization
+is being used.
+
+\item[Cauchy complete category.]A category in which every
+idempotent splits: if $p^2=p$ on $X$, there is an object
+representing its image, with inclusion and projection composing
+to $p$. This is the categorical version of retaining the range
+of a projection as an object.
+
+\item[CFT type.]A nonnegatively integer-graded VOA with
+finite-dimensional homogeneous spaces and
+$V_0=\C\one$. This does not assert rationality.
+
+\item[Character.]A trace counting states by conformal energy.
+It forgets most operator products and can coincide for distinct
+simple modules.
+
+\item[Commutant.]Fields whose singular OPE with a subalgebra
+vanishes. Constructing a commutant is a chiral operation.
+
+\item[Completely positive map.]A linear map preserving positive
+semidefinite matrices even after tensoring with the identity on
+any finite auxiliary matrix space. The MPS transfer formula
+$\mathcal E(X)=\sum_sA^sX(A^s)^\dagger$ makes this property
+explicit; trace preservation is a separate condition.
+
+\item[Complete unitarity.]Positivity of module forms and canonical
+fusion forms, beyond positivity of the vacuum space.
+
+\item[Completely rational net.]A chiral conformal net satisfying
+the split and strong-additivity properties and having finite
+two-interval index. These hypotheses give a finite unitary
+modular sector theory.
+
+\item[Conformal block.]A chiral solution of the symmetry Ward
+identities for specified external representations. A factorization
+basis labels blocks by intermediate representations and junction
+multiplicities, summing their descendants. A general block may be
+a linear combination of that basis. Full correlators additionally
+specify how holomorphic and antiholomorphic blocks are paired.
+
+\item[Conformal net.]An assignment of a von Neumann algebra of
+bounded observables to each interval, satisfying inclusion,
+locality, conformal covariance, and the vacuum and positive-energy
+conditions used in the text.
+
+\item[Construction input.]A model-specific finite identity,
+membership, rank, or structural datum accepted from the exact
+construction record. It is a mathematical premise with a stated
+verification scope.
+
+\item[Core of an operator.]A subspace of an operator's domain
+dense in its graph norm. Approximating a vector there also
+approximates its image. Ordinary Hilbert-space density alone
+does not supply this property.
+
+\item[Effective central charge.]The parameter governing a leading
+asymptotic trace or entropy under its stated spectral assumptions;
+it need not equal the Virasoro central charge without a
+normalizable vacuum of lowest weight zero.
+
+\item[Energy bound.]An estimate controlling field modes by a
+polynomial in their mode number and in the conformal Hamiltonian.
+Such estimates make smearing and operator closure possible on
+controlled domains.
+
+\item[\'Etale algebra.]A commutative separable algebra object
+in the braided category under discussion. Connectedness is
+an additional condition, $\dim\operatorname{Hom}(\one,A)=1$.
+
+\item[Exact finite result.]A statement about the specified finite
+algebraic calculation or finite chain, proved with appropriate
+arithmetic or certification. It does not alone control an
+infinite-size limit.
+
+\item[Fiber functor.]A faithful exact strong monoidal functor
+from a fusion category to finite-dimensional vector spaces.
+It is much more structure than a representation of the fusion
+ring by ordinary matrices.
+
+\item[Frobenius--Schur indicator.]The trace of pivotal cyclic
+rotation on $\Hom(\one,X^{\otimes n})$. It detects information
+about the associator and duality beyond the fusion rules. In a
+spherical fusion category it also equals the categorical twist
+trace of center induction divided by the global dimension.
+
+\item[Fusion category.]A rigid semisimple complex linear tensor
+category with finitely many simple isomorphism classes,
+finite-dimensional morphism spaces, and simple tensor unit.
+It need not have a braiding or a positive adjoint.
+
+\item[Fusion space.]A junction multiplicity space such as
+$\Hom(c,a\otimes b)$. Its dimension is a fusion coefficient,
+not the dimension of a physical lattice Hilbert space.
+
+\item[Gap.]An energy gap is an excitation-energy separation above
+the vacuum sector. A scalar scaling gap is the lowest nonidentity
+scalar dimension $\Delta$. A positive scaling gap in a CFT
+corresponds to energies of order $1/L$.
+
+\item[Haag duality.]On the conformal vacuum Hilbert space,
+the algebra assigned to an interval equals the commutant of
+the algebra assigned to its complementary interval. The
+representation and cyclic-vacuum hypotheses matter.
+
+\item[Holomorphic.]A rational chiral algebra with only its vacuum
+module. The corresponding full theory still has infinitely many
+local fields.
+
+\item[Invariant field.]A field on which each simple symmetry line
+acts by its vacuum eigenvalue, equal to that line's quantum
+dimension.
+
+\item[Ishibashi state.]A formal solution of chiral boundary
+gluing equations within a compatible representation pair.
+Its propagated overlap is a character; the unregularized
+state is not generally normalizable.
+
+\item[Isotropic subgroup.]A subgroup of a finite discriminant
+form on which the quadratic function vanishes modulo one.
+It determines an even lattice extension in the lattice setting.
+
+\item[Jones--Wenzl projection.]The Temperley--Lieb idempotent
+on a fixed number of parallel strands killed by the adjacent
+turnback operators. It removes the lower-through-strand
+summands and makes simple projections explicit.
+
+\item[Lagrangian algebra.]A connected commutative separable algebra
+whose squared dimension equals the global dimension of the
+ambient modular category; its local module category is trivial.
+
+\item[Marginal by dimension.]A scalar of dimension two. Exact
+marginality additionally requires vanishing beta functions and
+compatibility among deformations.
+
+\item[Modular category.]A braided ribbon fusion category with
+nondegenerate braiding; equivalently in this setting, its
+normalized $S$ matrix is invertible. Positivity is a further
+property when a unitary structure is specified.
+
+\item[Module category.]A category on which a fusion category acts,
+with coherent associativity maps. It encodes boundary and gapped
+vacuum patterns unavailable from the fusion ring alone.
+
+\item[Morita equivalence.]Equivalence through an invertible
+bimodule-category relation. Morita-equivalent fusion categories
+have equivalent centers but need not have the same simple objects
+or the same chain Hamiltonian.
+
+\item[Near-group rules.]Fusion rules with a group of invertible
+simples and only one noninvertible simple. Generalized Haagerup
+rules instead have one noninvertible simple for each group
+element.
+
+\item[Normal convergence.]Uniform absolute convergence on
+compact subsets of the relevant complex parameter domain.
+It permits the analytic operations used with the trace
+functions in the stated domains.
+
+\item[Ordinary module.]A module with diagonalizable energy,
+finite-dimensional eigenspaces, and lower truncation along
+each integer-shift weight string. A simple ordinary module
+here has one lowest-weight grading; a direct sum can have several.
+
+\item[Perron eigenvector.]A positive eigenvector of a nonnegative
+matrix at its spectral radius. For a matrix with strongly connected
+directed graph it is unique up to scale; primitivity additionally
+excludes other eigenvalues of the same modulus. Such vectors supply
+positive weights in fusion graphs and classical transfer matrices.
+
+\item[Planar algebra.]Vector spaces of labeled boxes equipped
+with multilinear operations specified by planar string diagrams.
+Substituting diagrams agrees with composition of operations.
+A positive subfactor planar algebra reconstructs tensor categories
+by taking sums and splitting projections.
+
+\item[Primary versus quasiprimary.]A Virasoro primary is killed by
+all positive Virasoro modes; a quasiprimary need only be killed by
+$L_1$ and have definite weight.
+
+\item[Primitive transfer operator.]A finite-dimensional completely
+positive transfer map for which, after normalization and restriction
+to its supported algebra, the eigenvalue one is simple, all other
+eigenvalues have modulus less than one, and the left and right
+fixed metrics are strictly positive. Equivalently in this setting,
+a suitable positive power sends every nonzero positive operator
+to a strictly positive operator. A symmetry cat can fail this
+property even when its pure components are well behaved.
+
+\item[Projective object.]An object $P$ for which any morphism
+$P\to Y$ lifts through every surjection $X\to Y$.
+Projectivity of the vacuum is a central step in the
+regularity argument; right exactness of a functor is a
+different property.
+
+\item[Pseudounitary category.]A fusion category whose
+categorical and Frobenius--Perron global dimensions agree,
+with the corresponding canonical positive spherical dimensions.
+The definition does not supply a positive adjoint on morphisms.
+
+\item[Q-system.]A positive separable Frobenius algebra object in a
+unitary tensor category, in the appropriate normalization. It is
+the algebraic datum of a finite-index extension or a module
+construction.
+
+\item[Ramified prime.]For a number field, a rational prime
+dividing its field discriminant. Ramification persists in a larger
+number field, which lets it obstruct a proposed field inclusion.
+For $\Q(\zeta_N)$, only primes dividing $N$ can ramify.
+
+\item[Regularity.]Complete decomposition of weak modules into
+ordinary simple modules, in the VOA sense used in the construction.
+
+\item[Right exact functor.]A functor preserving cokernels,
+and therefore sequences $X\to Y\to Z\to0$ in the relevant
+abelian setting. It need not preserve kernels or split extensions.
+
+\item[Schmidt decomposition.]The singular-value decomposition
+of a pure-state coefficient matrix across a bipartition.
+Its squared singular values are the reduced density-matrix
+eigenvalues and determine the bipartite entropy.
+
+\item[Sewing.]Compatibility of correlation functions under cutting,
+inserting a complete set of states, and gluing surfaces. Sphere
+crossing and torus modular invariance are related parts of this
+larger requirement.
+
+\item[Smith normal form.]An integer matrix diagonalized using
+invertible integer row and column operations, with successive
+nonzero diagonal entries dividing the next. Those entries
+describe the cyclic factors of its presented abelian group.
+
+\item[Spherical structure.]A coherent choice of duality traces
+for which left and right categorical traces agree. It permits
+isotopy-invariant loop evaluations and categorical dimensions.
+
+\item[Split rational form.]A tensor category defined over a
+smaller field with its simple objects and scalar endomorphism
+algebras already split there. Extending scalars gives the complex
+category. A field of dimensions alone need not be such a field
+of definition.
+
+\item[Strong generation.]Spanning by derivatives and normal
+products of a set of fields. It is stronger than arbitrary-mode
+vertex generation.
+
+\item[Strongly rational VOA.]A simple, self-contragredient,
+CFT-type VOA that is rational and $C_2$-cofinite, with the
+module-theoretic conventions stated in the regularity chapter.
+
+\item[Tensorator.]The coherent isomorphisms comparing the image
+of a tensor product with the tensor product of images under
+a monoidal functor. A linear equivalence does not supply them.
+
+\item[Tube algebra.]A finite algebra of annular line networks whose
+simple representations encode center charge sectors of a fusion
+category. Its finite representation dimension is not a quantum
+dimension or the dimension of the dynamical CFT sector. It counts
+copies of that dynamical sector and therefore multiplies its
+state degeneracies.
+
+\item[Twined versus twisted.]A twined trace inserts a line operator
+in an ordinary trace; a twisted trace counts states in a Hilbert
+space with a defect crossing the spatial circle.
+
+\item[Unitary fusion category.]A fusion category with compatible
+positive adjoints on morphisms and unitary structural maps.
+Positive Frobenius--Perron dimensions alone do not imply
+this structure.
+
+\item[Weakly integral.]A fusion category whose global
+Frobenius--Perron dimension is an integer. Its simple dimensions
+have integer squares but need not be integers: the Ising
+dimensions $1,1,\sqrt2$ give global dimension four.
+The square condition concerns simple objects, not their arbitrary sums.
+
+\item[Weak module.]A VOA module satisfying the field and
+Jacobi identities without a preassigned ordinary energy grading.
+Regularity supplies a decomposition into ordinary simple modules;
+it is not part of the weak-module definition.
+
+\item[Zhu algebra.]An associative algebra built from a VOA
+whose representations describe the degree-zero action on
+module top spaces. Its use here relates complete component
+tops to the spectrum of partial conformal energies.
+
+\end{description}

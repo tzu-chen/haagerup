@@ -1,0 +1,98 @@
+Review of revised endings and overlap prerequisites
+scope_lattice, 2026-10-05. Hand algebra and source reading only.
+No numerical jobs, builds, or live-source edits.
+
+1. Revised l06:1161-1213 passes.
+
+The operational field dictionary now uses a common assignment of states and
+operators, allows basis choices within multiplets, and explicitly distinguishes
+candidate-CFT existence from the chain's convergence. Its uses of the Ising
+and SU(2) examples have the correct scope. The gapped criterion indexes ordered
+energies with multiplicity: q collapsing vacuum levels occupy a=0,...,q-1,
+and E_q is the first level outside that cluster. The positive liminf criterion
+and finite connected lengths within pure vacua are mutually consistent.
+The exact rank-four comparison module is explicitly not assigned to the
+physical Hamiltonian's vacuum degeneracy. No correction requested.
+
+2. Revised l04:352-357 and 461-478.
+
+Both orthogonal-component premises now require orthogonal Schmidt supports
+on both sides. This is sufficient: tracing the right supports kills all
+cross terms, and disjoint left supports make the reduced density matrix a
+direct sum. The qutrit Fourier counterexample is exact because
+sum_{j=0}^2 zeta_3^{ja}=3 delta_{a0}; the normalized equal superposition is
+therefore |0,0>. The equal-weight, equal-spectrum Renyi shift log(3) is correct.
+
+One precision point sent to root: the earlier Shannon mixture sentence should
+explicitly say von Neumann entropy. In general
+S_1(rho)=H(w)+sum_j w_j S_1(rho_j), whereas
+S_n(rho)=(1-n)^{-1} log sum_j w_j^n Tr(rho_j^n).
+Root has taken this small clarification.
+
+3. l03's principal missing prerequisite: the finite joining map.
+
+l03:408-417 correctly says 'common height embedding', but never makes explicit
+that concatenation can violate the two new seam constraints. The partial
+isometry J=iota_L^dagger(iota_L1 tensor iota_L2) explains all of:
+- the actual finite operation represented by A_{abc};
+- why one must retain lost norm instead of normalizing each joined vector;
+- why literal gluing against a unit parent is a contraction at l03:778-782;
+- why categorical cup normalization and plain height tensor products differ;
+- why changes of path basis require transformation of the joining map itself.
+
+Concrete proposed insertion:
+editorial/literal_joining_map_insertion.tex.txt
+
+It uses l01's actual cyclic-height conventions. The invalid example is
+(I0,X0,X0) joined to (I1,X1,X1): both children close, but X0->I1 and X1->I0
+are forbidden. Joining (I0,X0,X0) to itself survives. Since distinct child
+word pairs have distinct concatenations, J sends an orthonormal subset
+isometrically to an orthonormal subset and annihilates the complement.
+This proves the partial-isometry claim without an assumption about the CFT.
+
+The square-root dimension paragraph uses standard unitary coevaluation
+R_x^dagger R_x=d_x. It explains the normalized cup R_x/sqrt(d_x) while
+explicitly declining to add such a factor to the chosen height overlap.
+The factors are properties of different geometries and inner products.
+
+Local source provenance supporting the finite map:
+- l01_chain.tex:43-65: cyclic path space and ordinary height embedding.
+- hi_cft_overlap_ed.py:1-5,56-86: literal concatenation, parent bra conjugation,
+  and independent full-height contraction.
+- hi_cft_third_sewing_return.md:16-24: J includes parent admissibility and
+  need not be an isometry.
+- hi_cft_sixhour_sewing_audit.md:85-101: endpoint gauge dependence of a
+  literal joining tensor when fusion bases change.
+
+4. Other l03 derivations inspected; no new error found.
+
+The primary pants map identifies the three local coordinates, correctly uses
+the negative outgoing exponential, and does not double-count cylinder state
+normalization. The vacuum divisor is explicitly required to use the same
+geometry. The signed outgoing Schwarzian and sqrt(c/2) stress normalization
+agree. The current singular-value bound states the different-shape factor
+and the requirement that both children grow.
+
+The phase invariants concern one-dimensional phase freedom of specified
+fields. Arbitrary unitary mixing of retained multiplets is handled separately
+by the current singular-value test. The nonorthogonal-span Ward projection
+also uses the Gram inverse correctly. A useful short reminder would be that
+the ratios I_lambda, I_nu, I_kappa require their displayed denominators to be
+nonzero; they are not complete invariants under arbitrary degenerate-field
+mixing. Their stated uses already respect those premises.
+
+The connected-moment definition handles a factorized tensor correctly:
+if R_{ijk}=r_i s_j t_k with r_0=s_0=t_0=1, then B_ij=K=0. The normalized
+connected quotient is then undefined, not a central charge or OPE coefficient
+equal to zero. The text already requires nonzero pair factors. If a one-line
+disconnected-limit example is wanted, this is enough; do not infer that
+every gapped phase has a rank-one overlap tensor, because vacuum cats and
+seam maps can retain nontrivial finite algebraic structure.
+
+The remaining unproved leading scaling law is A000~L^{-c/8}, stated at
+l03:492-495. This is a genuine independent geometric result, not a consequence
+of the primary ratios alone. If root wants a brief forward bridge, the new
+replica derivation in l04 supplies h_2=c/16, Delta_2=c/8 for the local twofold
+branch; the normalized periodic pants overlap has one such branch and its
+squared fidelity consequently has exponent c/4. No new lengthy derivation
+is necessary to address the joining-map prerequisite.

@@ -21,8 +21,10 @@ weights `hw M`, and the multiplicities `x M a`, `y M a` of the fourteen tops `x_
 `CFT.core_top_bound`), with `0 ≤ h` from the nonnegativity of the fourteen trace contributions.
 
 If `S` were empty the node would be vacuous; the combined file `ProofMapConcrete` takes `S` to be
-the type `Characters.Label` of the twelve simple `U`-modules and `hw` to be their actual lowest
-weights `CharacterData.hw`, shared with the character branch.
+the type `Simp` of the isomorphism classes of all simple `U`-modules (`SimpleData`, nonempty: it
+contains the class of `U`) and `hw` to be their lowest weights `SD.hw`, shared with the branching
+and projective-vacuum branches; the identification with the twelve labels of the character table
+comes later, after `modularData`.
 -/
 
 namespace HaagerupIzumi.C8.ProofMap

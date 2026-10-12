@@ -1,0 +1,632 @@
+{
+  "scope": "PDF navigation and destination integrity; no mathematical certification or external-link verification",
+  "checked_utc": "2026-10-09T04:28:22.425278+00:00",
+  "pdf_sha256": "37041e26a4701678de1cd516d715b4a6cce0a3bbbadb3c1fcb909f0702f83d0b",
+  "pages": 352,
+  "internal_links": 1487,
+  "external_links": 50,
+  "bookmarks": 371,
+  "top_level_bookmarks": [
+    "What this book constructs",
+    "Worked examples",
+    "I The language of the problem",
+    "II Constructing the central charge eight theory",
+    "III Local fields, defects, and observables",
+    "IV Reduced theories and the physical Haagerup chain",
+    "V Further mathematical tools",
+    "Notation and a working glossary",
+    "Exercise solutions",
+    "Proofs, finite certificates, and numerical evidence",
+    "A short source guide",
+    "Index"
+  ],
+  "linked_solution_anchors": 151,
+  "linked_worked_examples": 99,
+  "solution_pages": {
+    "sol:ex:fib-count": {
+      "pdf_page": 307,
+      "printed_page": "288"
+    },
+    "sol:ex:gauge-cancel": {
+      "pdf_page": 307,
+      "printed_page": "288"
+    },
+    "sol:ex:projectors": {
+      "pdf_page": 307,
+      "printed_page": "288"
+    },
+    "sol:ex:fib-pentagon": {
+      "pdf_page": 307,
+      "printed_page": "288"
+    },
+    "sol:ex:dimension-not-state": {
+      "pdf_page": 308,
+      "printed_page": "289"
+    },
+    "sol:ex:cft-level1": {
+      "pdf_page": 308,
+      "printed_page": "289"
+    },
+    "sol:ex:cft-null": {
+      "pdf_page": 308,
+      "printed_page": "289"
+    },
+    "sol:ex:cft-compact": {
+      "pdf_page": 308,
+      "printed_page": "289"
+    },
+    "sol:ex:cft-stress-combination": {
+      "pdf_page": 308,
+      "printed_page": "289"
+    },
+    "sol:ex:cft-thermal": {
+      "pdf_page": 309,
+      "printed_page": "290"
+    },
+    "sol:ex:cft-marginality": {
+      "pdf_page": 309,
+      "printed_page": "290"
+    },
+    "sol:ex:voa-weight": {
+      "pdf_page": 309,
+      "printed_page": "290"
+    },
+    "sol:ex:voa-cocycle": {
+      "pdf_page": 309,
+      "printed_page": "290"
+    },
+    "sol:ex:voa-rankone": {
+      "pdf_page": 309,
+      "printed_page": "290"
+    },
+    "sol:ex:voa-heisenberg-c2": {
+      "pdf_page": 310,
+      "printed_page": "291"
+    },
+    "sol:ex:voa-coset": {
+      "pdf_page": 310,
+      "printed_page": "291"
+    },
+    "sol:ex:voa-gauge": {
+      "pdf_page": 310,
+      "printed_page": "291"
+    },
+    "sol:ex:H3-fusion": {
+      "pdf_page": 310,
+      "printed_page": "291"
+    },
+    "sol:ex:H3-F": {
+      "pdf_page": 311,
+      "printed_page": "292"
+    },
+    "sol:ex:H3-P": {
+      "pdf_page": 311,
+      "printed_page": "292"
+    },
+    "sol:ex:H3-characteristic": {
+      "pdf_page": 311,
+      "printed_page": "292"
+    },
+    "sol:ex:H3-neutral": {
+      "pdf_page": 311,
+      "printed_page": "292"
+    },
+    "sol:ex:Z3-halfbraid": {
+      "pdf_page": 312,
+      "printed_page": "293"
+    },
+    "sol:ex:Z3-tube": {
+      "pdf_page": 312,
+      "printed_page": "293"
+    },
+    "sol:ex:tube171": {
+      "pdf_page": 312,
+      "printed_page": "293"
+    },
+    "sol:ex:forgetful-qdim": {
+      "pdf_page": 312,
+      "printed_page": "293"
+    },
+    "sol:ex:all-local": {
+      "pdf_page": 312,
+      "printed_page": "293"
+    },
+    "sol:ex:Z3-S-square": {
+      "pdf_page": 313,
+      "printed_page": "294"
+    },
+    "sol:ex:H3-S-square": {
+      "pdf_page": 313,
+      "printed_page": "294"
+    },
+    "sol:ex:Gauss13": {
+      "pdf_page": 313,
+      "printed_page": "294"
+    },
+    "sol:ex:Verlinde-d1": {
+      "pdf_page": 313,
+      "printed_page": "294"
+    },
+    "sol:ex:modular-extension": {
+      "pdf_page": 314,
+      "printed_page": "295"
+    },
+    "sol:ex:central-charge-scope": {
+      "pdf_page": 314,
+      "printed_page": "295"
+    },
+    "sol:ex:c-lattice-1": {
+      "pdf_page": 314,
+      "printed_page": "295"
+    },
+    "sol:ex:c-lattice-2": {
+      "pdf_page": 314,
+      "printed_page": "295"
+    },
+    "sol:ex:c-lattice-3": {
+      "pdf_page": 314,
+      "printed_page": "295"
+    },
+    "sol:ex:c-lattice-4": {
+      "pdf_page": 315,
+      "printed_page": "296"
+    },
+    "sol:ex:c-lattice-5": {
+      "pdf_page": 315,
+      "printed_page": "296"
+    },
+    "sol:ex:c-closure-1": {
+      "pdf_page": 315,
+      "printed_page": "296"
+    },
+    "sol:ex:c-closure-2": {
+      "pdf_page": 315,
+      "printed_page": "296"
+    },
+    "sol:ex:c-closure-3": {
+      "pdf_page": 315,
+      "printed_page": "296"
+    },
+    "sol:ex:c-closure-4": {
+      "pdf_page": 316,
+      "printed_page": "297"
+    },
+    "sol:ex:c-closure-5": {
+      "pdf_page": 316,
+      "printed_page": "297"
+    },
+    "sol:ex:c-closure-6": {
+      "pdf_page": 316,
+      "printed_page": "297"
+    },
+    "sol:ex:c-factors-1": {
+      "pdf_page": 316,
+      "printed_page": "297"
+    },
+    "sol:ex:c-factors-2": {
+      "pdf_page": 316,
+      "printed_page": "297"
+    },
+    "sol:ex:c-factors-3": {
+      "pdf_page": 317,
+      "printed_page": "298"
+    },
+    "sol:ex:c-factors-4": {
+      "pdf_page": 317,
+      "printed_page": "298"
+    },
+    "sol:ex:c-factors-5": {
+      "pdf_page": 317,
+      "printed_page": "298"
+    },
+    "sol:ex:c-factors-6": {
+      "pdf_page": 317,
+      "printed_page": "298"
+    },
+    "sol:ex:c-regular-1": {
+      "pdf_page": 318,
+      "printed_page": "299"
+    },
+    "sol:ex:c-regular-2": {
+      "pdf_page": 318,
+      "printed_page": "299"
+    },
+    "sol:ex:c-regular-3": {
+      "pdf_page": 318,
+      "printed_page": "299"
+    },
+    "sol:ex:c-regular-4": {
+      "pdf_page": 318,
+      "printed_page": "299"
+    },
+    "sol:ex:c-regular-5": {
+      "pdf_page": 318,
+      "printed_page": "299"
+    },
+    "sol:ex:c-regular-6": {
+      "pdf_page": 319,
+      "printed_page": "300"
+    },
+    "sol:ex:c-branch-1": {
+      "pdf_page": 319,
+      "printed_page": "300"
+    },
+    "sol:ex:c-branch-2": {
+      "pdf_page": 319,
+      "printed_page": "300"
+    },
+    "sol:ex:c-branch-3": {
+      "pdf_page": 319,
+      "printed_page": "300"
+    },
+    "sol:ex:c-branch-4": {
+      "pdf_page": 320,
+      "printed_page": "301"
+    },
+    "sol:ex:c-branch-5": {
+      "pdf_page": 320,
+      "printed_page": "301"
+    },
+    "sol:ex:c-branch-6": {
+      "pdf_page": 320,
+      "printed_page": "301"
+    },
+    "sol:ex:unitarity-damping": {
+      "pdf_page": 320,
+      "printed_page": "301"
+    },
+    "sol:ex:unitarity-projector": {
+      "pdf_page": 321,
+      "printed_page": "302"
+    },
+    "sol:ex:unitarity-counting": {
+      "pdf_page": 321,
+      "printed_page": "302"
+    },
+    "sol:ex:unitarity-deck": {
+      "pdf_page": 321,
+      "printed_page": "302"
+    },
+    "sol:ex:unitarity-end": {
+      "pdf_page": 321,
+      "printed_page": "302"
+    },
+    "sol:ex:char-oscillator": {
+      "pdf_page": 321,
+      "printed_page": "302"
+    },
+    "sol:ex:char-primary": {
+      "pdf_page": 321,
+      "printed_page": "302"
+    },
+    "sol:ex:char-pole": {
+      "pdf_page": 322,
+      "printed_page": "303"
+    },
+    "sol:ex:char-equal": {
+      "pdf_page": 322,
+      "printed_page": "303"
+    },
+    "sol:ex:char-uniqueness-scope": {
+      "pdf_page": 322,
+      "printed_page": "303"
+    },
+    "sol:ex:full-relevant": {
+      "pdf_page": 322,
+      "printed_page": "303"
+    },
+    "sol:ex:full-E8states": {
+      "pdf_page": 322,
+      "printed_page": "303"
+    },
+    "sol:ex:full-tail": {
+      "pdf_page": 322,
+      "printed_page": "303"
+    },
+    "sol:ex:full-onevac": {
+      "pdf_page": 323,
+      "printed_page": "304"
+    },
+    "sol:ex:full-symmetry": {
+      "pdf_page": 323,
+      "printed_page": "304"
+    },
+    "sol:ex:full-boost": {
+      "pdf_page": 323,
+      "printed_page": "304"
+    },
+    "sol:ex:corr-fifteen": {
+      "pdf_page": 323,
+      "printed_page": "304"
+    },
+    "sol:ex:corr-blocks": {
+      "pdf_page": 324,
+      "printed_page": "305"
+    },
+    "sol:ex:corr-stress": {
+      "pdf_page": 324,
+      "printed_page": "305"
+    },
+    "sol:ex:corr-spin3": {
+      "pdf_page": 324,
+      "printed_page": "305"
+    },
+    "sol:ex:corr-lightgram": {
+      "pdf_page": 324,
+      "printed_page": "305"
+    },
+    "sol:ex:defect-projector": {
+      "pdf_page": 324,
+      "printed_page": "305"
+    },
+    "sol:ex:defect-twined": {
+      "pdf_page": 324,
+      "printed_page": "305"
+    },
+    "sol:ex:defect-alpha": {
+      "pdf_page": 325,
+      "printed_page": "306"
+    },
+    "sol:ex:defect-between": {
+      "pdf_page": 325,
+      "printed_page": "306"
+    },
+    "sol:ex:defect-categories": {
+      "pdf_page": 325,
+      "printed_page": "306"
+    },
+    "sol:ex:sewing-Ising": {
+      "pdf_page": 325,
+      "printed_page": "306"
+    },
+    "sol:ex:sewing-pairing": {
+      "pdf_page": 326,
+      "printed_page": "307"
+    },
+    "sol:ex:sewing-object": {
+      "pdf_page": 326,
+      "printed_page": "307"
+    },
+    "sol:ex:sewing-coset": {
+      "pdf_page": 326,
+      "printed_page": "307"
+    },
+    "sol:ex:sewing-descent": {
+      "pdf_page": 326,
+      "printed_page": "307"
+    },
+    "sol:ex:c-coset-1": {
+      "pdf_page": 326,
+      "printed_page": "307"
+    },
+    "sol:ex:c-coset-2": {
+      "pdf_page": 326,
+      "printed_page": "307"
+    },
+    "sol:ex:c-coset-3": {
+      "pdf_page": 327,
+      "printed_page": "308"
+    },
+    "sol:ex:c-coset-4": {
+      "pdf_page": 327,
+      "printed_page": "308"
+    },
+    "sol:ex:c-coset-5": {
+      "pdf_page": 327,
+      "printed_page": "308"
+    },
+    "sol:ex:c-coset-6": {
+      "pdf_page": 327,
+      "printed_page": "308"
+    },
+    "sol:ex:c-coset-7": {
+      "pdf_page": 328,
+      "printed_page": "309"
+    },
+    "sol:ex:c-coset-8": {
+      "pdf_page": 328,
+      "printed_page": "309"
+    },
+    "sol:ex:c-coset-9": {
+      "pdf_page": 328,
+      "printed_page": "309"
+    },
+    "sol:ex:c-coset-10": {
+      "pdf_page": 328,
+      "printed_page": "309"
+    },
+    "sol:ex:chain-dimension": {
+      "pdf_page": 329,
+      "printed_page": "310"
+    },
+    "sol:ex:chain-projector": {
+      "pdf_page": 329,
+      "printed_page": "310"
+    },
+    "sol:ex:chain-orbit": {
+      "pdf_page": 329,
+      "printed_page": "310"
+    },
+    "sol:ex:chain-noninvertible": {
+      "pdf_page": 329,
+      "printed_page": "310"
+    },
+    "sol:ex:chain-boundary": {
+      "pdf_page": 329,
+      "printed_page": "310"
+    },
+    "sol:ex:scaling-residual": {
+      "pdf_page": 330,
+      "printed_page": "311"
+    },
+    "sol:ex:scaling-stress": {
+      "pdf_page": 330,
+      "printed_page": "311"
+    },
+    "sol:ex:scaling-improvement": {
+      "pdf_page": 330,
+      "printed_page": "311"
+    },
+    "sol:ex:scaling-casimir": {
+      "pdf_page": 330,
+      "printed_page": "311"
+    },
+    "sol:ex:scaling-fraction": {
+      "pdf_page": 330,
+      "printed_page": "311"
+    },
+    "sol:ex:scaling-modular": {
+      "pdf_page": 330,
+      "printed_page": "311"
+    },
+    "sol:ex:overlap-phases": {
+      "pdf_page": 331,
+      "printed_page": "312"
+    },
+    "sol:ex:overlap-descendant": {
+      "pdf_page": 331,
+      "printed_page": "312"
+    },
+    "sol:ex:overlap-cumulant": {
+      "pdf_page": 331,
+      "printed_page": "312"
+    },
+    "sol:ex:overlap-filter": {
+      "pdf_page": 332,
+      "printed_page": "313"
+    },
+    "sol:ex:overlap-response": {
+      "pdf_page": 332,
+      "printed_page": "313"
+    },
+    "sol:ex:overlap-current": {
+      "pdf_page": 332,
+      "printed_page": "313"
+    },
+    "sol:ex:overlap-branch": {
+      "pdf_page": 332,
+      "printed_page": "313"
+    },
+    "sol:ex:MPS-schmidt": {
+      "pdf_page": 332,
+      "printed_page": "313"
+    },
+    "sol:ex:MPS-edge": {
+      "pdf_page": 333,
+      "printed_page": "314"
+    },
+    "sol:ex:MPS-correlation": {
+      "pdf_page": 333,
+      "printed_page": "314"
+    },
+    "sol:ex:MPS-cat": {
+      "pdf_page": 333,
+      "printed_page": "314"
+    },
+    "sol:ex:MPS-resolvent": {
+      "pdf_page": 333,
+      "printed_page": "314"
+    },
+    "sol:ex:MPS-scaling": {
+      "pdf_page": 333,
+      "printed_page": "314"
+    },
+    "sol:ex:gapped-PF": {
+      "pdf_page": 334,
+      "printed_page": "315"
+    },
+    "sol:ex:gapped-cubics": {
+      "pdf_page": 334,
+      "printed_page": "315"
+    },
+    "sol:ex:gapped-parent": {
+      "pdf_page": 334,
+      "printed_page": "315"
+    },
+    "sol:ex:gapped-short": {
+      "pdf_page": 334,
+      "printed_page": "315"
+    },
+    "sol:ex:gapped-filter": {
+      "pdf_page": 334,
+      "printed_page": "315"
+    },
+    "sol:ex:identification-product": {
+      "pdf_page": 335,
+      "printed_page": "316"
+    },
+    "sol:ex:identification-Narain": {
+      "pdf_page": 335,
+      "printed_page": "316"
+    },
+    "sol:ex:identification-triad": {
+      "pdf_page": 335,
+      "printed_page": "316"
+    },
+    "sol:ex:identification-crossing": {
+      "pdf_page": 335,
+      "printed_page": "316"
+    },
+    "sol:ex:identification-orbifold": {
+      "pdf_page": 336,
+      "printed_page": "317"
+    },
+    "sol:ex:identification-Potts": {
+      "pdf_page": 336,
+      "printed_page": "317"
+    },
+    "sol:ex:identification-norm": {
+      "pdf_page": 336,
+      "printed_page": "317"
+    },
+    "sol:ex:identification-residues": {
+      "pdf_page": 336,
+      "printed_page": "317"
+    },
+    "sol:ex:HI-periods": {
+      "pdf_page": 337,
+      "printed_page": "318"
+    },
+    "sol:ex:HI-sign": {
+      "pdf_page": 337,
+      "printed_page": "318"
+    },
+    "sol:ex:exact-rank": {
+      "pdf_page": 337,
+      "printed_page": "318"
+    },
+    "sol:ex:component-norm": {
+      "pdf_page": 337,
+      "printed_page": "318"
+    },
+    "sol:ex:unitarity-hierarchy": {
+      "pdf_page": 338,
+      "printed_page": "319"
+    },
+    "sol:ex:noncyclic-factorization": {
+      "pdf_page": 338,
+      "printed_page": "319"
+    },
+    "sol:ex:noncyclic-eight-branch": {
+      "pdf_page": 338,
+      "printed_page": "319"
+    },
+    "sol:ex:noncyclic-smith": {
+      "pdf_page": 339,
+      "printed_page": "320"
+    },
+    "sol:ex:EH-moment-projections": {
+      "pdf_page": 339,
+      "printed_page": "320"
+    },
+    "sol:ex:EH-word-tensor": {
+      "pdf_page": 339,
+      "printed_page": "320"
+    },
+    "sol:ex:EH-reflection-F": {
+      "pdf_page": 339,
+      "printed_page": "320"
+    }
+  },
+  "errors": []
+}

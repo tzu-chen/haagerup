@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "fresh_tree": "/tmp/c8-physics-release-replay-s1ixdltr",
+  "producers": [
+    "spectrum",
+    "primary_seeds",
+    "primary_tensor",
+    "correlators",
+    "defects",
+    "crosslinks"
+  ],
+  "byte_identical_payload_files": 31,
+  "structured_payload_comparisons": 4,
+  "ignored_run_metadata": "elapsed time, measured RSS and absolute fresh-output locations only",
+  "elapsed_seconds": 95.85010581201641,
+  "scope": "Fresh-tree arithmetic replay from the same files selected for the release. Does not replay the entire historical CFT construction or bootstrap SDP."
+}

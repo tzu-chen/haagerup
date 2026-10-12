@@ -1,0 +1,568 @@
+\chapter{Why the generated algebra is rational}
+\label{ch:regularity}
+
+The construction so far gives an infinite-dimensional unitary algebra
+inside a lattice theory. Rationality asks for a much stronger form of
+control: a finite and semisimple representation theory. A unitary
+vacuum representation does not automatically provide this. The
+positive conformal-vector identity from the previous chapter is the
+extra ingredient. We will use it first to bound a quotient of the
+vacuum algebra, then to constrain arbitrary modules, and finally to
+split extensions of the vacuum. A categorical theorem turns the last
+property into semisimplicity.
+
+The proof is worth following even for readers primarily interested in
+physics. It explains why the later finite list of characters is a
+conclusion of the construction rather than an initial assumption.
+
+\section{The finiteness properties that must be distinguished}
+\index{regularity!vertex algebras}\index{C2-cofiniteness@$C_2$-cofiniteness}
+
+For a VOA $V$ define
+\[
+ C_2(V)=\Span\{a_{(-2)}b:a,b\in V\}.
+\]
+The notation $C_2$ here has no relation to central charge two. The VOA
+is $C_2$-cofinite when $V/C_2(V)$ is finite dimensional.
+This quotient removes many derivatives and normal composites, so it
+measures a different kind of finiteness from $\dim V_n<\infty$.
+Finite-dimensional homogeneous spaces alone do not imply
+$C_2$-cofiniteness.
+
+\begin{example}[The Heisenberg warning]
+A rank-one Heisenberg VOA has finite-dimensional weight spaces, but
+the classes of $J_{(-1)}^n\one$ survive in its $C_2$ quotient. The
+quotient is a polynomial algebra in the current class and is infinite
+dimensional. Correspondingly, there are continuously many Fock modules
+labeled by momentum. A simple positive vacuum representation is fully
+compatible with this nonrational behavior.
+\end{example}
+
+\begin{example}[A five-dimensional quotient of the rank-one lattice theory]
+\label{ex:regularity-A1-C2}
+\index{C2-cofiniteness@$C_2$-cofiniteness!rank-one lattice example}
+Let $V=V_{A_1}=L_1(\mathfrak{sl}_2)$, with the weight-one
+currents $E,F,H$ normalized as in
+Example~\ref{ex:c-root-triple}.
+The VOA identities make
+\[
+ R=V/C_2(V),\qquad [a][b]=[a_{(-1)}b],
+\]
+a commutative associative graded algebra. Derivatives vanish in
+$R$, so strong generation by $E,F,H$ implies that their classes
+$e,f,h$ generate it as an ordinary commutative algebra.
+
+The lattice exponential formula supplies the decisive relation.
+For a root $\alpha$ of squared norm two, $Y(e^\alpha,z)e^\alpha$
+starts at $z^2$. Its constant coefficient is therefore zero:
+\[
+ E_{(-1)}E=0,\qquad e^2=0.
+\]
+This is a relation in the actual simple lattice VOA. The universal
+affine vacuum algebra at level one has not yet imposed this
+integrability relation.
+
+Zero modes preserve $C_2(V)$ and act as derivations on $R$.
+The derivation $\partial_F$ induced by $F_{(0)}$ obeys
+\[
+ \partial_F(e)=-h,\qquad
+ \partial_F(h)=2f,\qquad \partial_F(f)=0.
+\]
+Apply it successively to $e^2=0$, $eh=0$, $h^2-2ef=0$,
+and $hf=0$. The resulting equations are
+\[
+ -2eh=0,\qquad -h^2+2ef=0,\qquad
+ 6hf=0,\qquad 2f^2=0.
+\]
+Consequently every class is a linear combination of
+\[
+ 1,\quad e,\quad h,\quad f,\quad ef.
+\]
+Every cubic monomial vanishes; for instance
+$h^3=2ehf=0$. This proves an upper bound of five, but it does
+not yet prove that the last class survives.
+
+Weights zero and one already give four independent classes,
+since $C_2(V)$ has no component in either weight. At weight two,
+the weight formula for $a_{(-2)}b$ gives exactly
+\[
+ C_2(V)\cap V_2=D V_1,\qquad D=L_{-1}.
+\]
+The conformal vector satisfies $L_1\omega=0$, so
+$\langle Da,\omega\rangle=\langle a,L_1\omega\rangle=0$
+for $a\in V_1$. Its squared norm is $c/2=1/2$, hence
+$\omega\notin C_2(V)$. Finally the level-one Sugawara formula
+gives
+\[
+ [\omega]=\frac16\left(\frac{h^2}{2}+2ef\right)
+          =\frac{ef}{2}=\frac{h^2}{4}.
+\]
+Thus $ef\ne0$, and the displayed spanning set is a basis:
+\[
+ \dim R=5,\qquad
+ \sum_{n\geq0}(\dim R_n)t^n=1+3t+t^2.
+\]
+
+Adding the lattice exponential fields to the Heisenberg algebra
+has made the surviving current classes nilpotent and the quotient
+finite. This establishes $C_2$-cofiniteness; by itself it is not
+a proof of rationality. Nor is five a count of simple modules:
+this VOA has the two affine simples labelled $\ell=0,1$.
+\end{example}
+
+An ordinary module has diagonalizable $L_0$, finite-dimensional
+eigenspaces, and lower truncation in each integer translate of an
+eigenvalue. The simple ordinary modules used below have spectrum in
+one $h+\Z_{\geq0}$. A grading-restricted generalized module
+allows finite Jordan blocks for $L_0$. Such modules have to be
+considered before rationality has been proved: excluding them at the
+definition stage would assume part of the conclusion.
+
+For the present discussion, rationality means semisimplicity of the
+appropriate grading-restricted module theory; under the standard
+$C_2$-cofinite hypotheses this agrees with the usual rationality
+condition. A VOA is strongly rational when it is simple, of CFT type,
+self-contragredient, rational, and $C_2$-cofinite. Regularity of the
+component algebras below means that every weak module decomposes as
+an algebraic direct sum of ordinary simple modules. This stronger
+component property is known for the positive-integral affine,
+Potts, and parafermion algebras being used.
+
+\section{Compatible gradings and partial energies}
+
+Let $A\subset V$ be a vertex subalgebra with its own conformal vector
+$e$. We do not require $e=\omega_V$. The inclusion is
+\emph{grading compatible} when a homogeneous state of $A$ has the
+same intrinsic weight in $A$ as its ambient weight in $V$.
+The two energy operators need not agree on all of $V$.
+
+This distinction is familiar for a tensor product: $A\otimes\one$
+has its own stress and its own energy, while the total energy also
+counts the other factor. The Haagerup construction is subtler because
+the many regular subalgebras in its positive identity need not commute.
+Nevertheless each inclusion is grading compatible, so a mode of an
+$A$-state changes ambient and intrinsic degrees by the same amount.
+
+We use the following precise package of hypotheses.
+
+\begin{definition}[A positive regular stress family]
+A simple unitary VOA $V$ of CFT type has a positive regular stress
+family if there are finitely many PCT-stable, grading-compatible, regular
+unitary subalgebras, carrying the inherited positive form,
+$A_i\subset V$ with conformal vectors $e_i$ such that
+\begin{equation}\label{eq:c-regular-positive}
+ \omega_V=\sum_i t_i e_i,\qquad t_i>0,
+\end{equation}
+and each $A_i$ has only nonnegative simple lowest weights, with the
+vacuum its unique simple module of lowest weight zero. We require
+each $e_i$ to be an ambient weight-two quasiprimary fixed by
+PCT:
+\[
+ L^V_0e_i=2e_i,\qquad L^V_1e_i=0,\qquad\theta(e_i)=e_i.
+\]
+The invariant-form identity then gives
+$(L^{e_i}_n)^\dagger=L^{e_i}_{-n}$ on $V$.
+\end{definition}
+
+The affine, Potts, and PF$_{13}$ embeddings established in the preceding
+chapter give exactly such a family for $U$. Their PCT-real stresses
+are ambient quasiprimary vectors of weight two; the invariant-form
+adjoint identity therefore gives the displayed mode adjoints.
+In particular the partial energies are self-adjoint on each ambient
+grade. No properness assumption
+is needed here. The regularity argument would still work if the
+generated algebra had turned out to be the ambient $B$.
+
+\section{\texorpdfstring{Bounding the $C_2$ quotient by energy}{Bounding the C2 quotient by energy}}
+
+Regularity implies $C_2$-cofiniteness by Li's theorem; this is an
+available implication, not a further assumption about the embedded
+components. We also use the module-cofiniteness theorem for a regular
+$C_2$-cofinite algebra $A$: for each ordinary simple $A$-module $M$,
+the quotient
+\[
+ M/C_{2,A}(M),\qquad
+ C_{2,A}(M)=\Span\{a_{(-2)}m:a\in A,\ m\in M\},
+\]
+is finite dimensional. The theorem includes modules, not only the
+vacuum algebra. Because $A$ has finitely many simple modules, one can
+choose a uniform upper bound on the intrinsic energies that survive
+in these quotients.
+
+\begin{proposition}[Positive stresses imply $C_2$-cofiniteness]
+\label{prop:c-c2}
+A VOA with a positive regular stress family is $C_2$-cofinite.
+\end{proposition}
+\begin{proof}
+For each $A_i$, choose a number $D_i$ bounding the intrinsic energy
+of every quotient $M/C_{2,A_i}(M)$ over its finitely many simple
+modules. Regularity decomposes the weak $A_i$-module $V$ into such
+modules. The component $C_2$ construction commutes with an algebraic
+direct sum:
+$C_{2,A_i}(\bigoplus_jM_j)=\bigoplus_jC_{2,A_i}(M_j)$.
+An isomorphism of component modules preserves their intrinsic
+conformal operator, so repeated copies do not introduce arbitrary
+intrinsic energy shifts. Thus the same $D_i$ works even when a
+component simple occurs infinitely often in $V$.
+Therefore every $L^{e_i}_0$ eigenvector of energy greater
+than $D_i$ belongs to $C_{2,A_i}(V)$, which is contained in $C_2(V)$.
+
+The operator $L^{e_i}_0$ preserves each finite-dimensional ambient
+space $V_n$ and is self-adjoint for its positive form. Take
+$v\in V_n\cap C_2(V)^\perp$. Its components along all intrinsic
+energies greater than $D_i$ vanish, so
+\[
+ \langle L^{e_i}_0v,v\rangle\leq D_i\|v\|^2.
+\]
+Taking the zero mode of \eqref{eq:c-regular-positive} yields
+\[
+ n\|v\|^2=\sum_i t_i\langle L^{e_i}_0v,v\rangle
+                 \leq\left(\sum_i t_iD_i\right)\|v\|^2.
+\]
+Thus no nonzero $v$ exists once $n>\sum_i t_iD_i$. Since $C_2(V)$
+is ambient graded, these orthogonal complements represent the graded
+pieces of $V/C_2(V)$. Only finitely many finite-dimensional grades
+survive.
+\end{proof}
+
+Only one partial energy is diagonalized at a time. The proof would be
+invalid if it assumed a simultaneous eigenbasis for all $L^{e_i}_0$.
+It instead applies separate expectation-value bounds to the same vector
+and adds them using positive coefficients. This is the precise point
+of the positive-stress construction.
+
+The proof is existential: it gives a finite cutoff from the component
+quotients but does not compute a sharp numerical cutoff for $U/C_2(U)$.
+That is enough for the structural conclusion. A tight cutoff would be
+useful for an explicit presentation of its Zhu algebra, the associative
+algebra that encodes degree-zero mode actions on lowest spaces. Such a
+presentation is not required to establish rationality by the route below.
+
+\section{Lowest spaces are complete component tops}
+
+Before applying positivity to arbitrary $V$-modules we must avoid an
+easy mistake. A partial conformal energy can be positive on the vacuum
+Hilbert space without a positive form having yet been supplied on every
+module. The argument below uses regular component representation theory
+and traces; it does not assume all $V$-modules are already unitary.
+
+For a weak $A$-module $M$, its highest space is
+\[
+ \Omega_A(M)=\{v:a_{(n)}v=0\text{ for homogeneous }a\in A,
+                                  \ n\geq\wt_A(a)\}.
+\]
+These are precisely the modes that lower intrinsic degree. The
+degree-zero modes $o(a)=a_{(\wt(a)-1)}$ act on this space through
+the Zhu algebra. Regularity makes that finite-dimensional top algebra
+semisimple on the highest spaces under consideration.
+
+\begin{lemma}[Compatible top spaces]\label{lem:c-compatible-tops}
+Let $A\subset V$ be regular and grading compatible. A finite space
+$E$ in a weak $V$-module, stable under all $A$ degree-zero modes and
+killed by all negative-degree $A$ modes, is a direct sum of simple
+$A$ top representations. In particular, $L^A_0$ is diagonalizable on
+$E$ with eigenvalues among the simple lowest weights of $A$.
+\end{lemma}
+\begin{proof}
+Compatibility places $E$ in $\Omega_A(M)$. Decompose $M$ as a weak
+$A$-module using regularity. The highest space of an ordinary simple
+module is its top: a vector of higher energy killed by every lowering
+mode would, after mode reordering, generate a nonzero submodule
+at its own energy and above. That submodule could not contain the
+original lowest space, contradicting simplicity.
+Thus $\Omega_A(M)$ is a sum of those tops. The
+finite invariant subspace $E$ is consequently a sum of simple
+representations of the semisimple top algebra.
+\end{proof}
+
+The condition concerns lowering modes of \emph{all} $A$-states.
+Checking only a few generator modes requires an additional argument
+that they imply the full highest-space condition.
+
+\begin{proposition}[Nonnegative lowest weights]
+Every simple ordinary $V$-module for a positive regular stress family
+has real nonnegative lowest weight. Its only simple module of lowest
+weight zero is the vacuum module $V$.
+\end{proposition}
+\begin{proof}
+Let $E=M_h$ be the finite lowest space. Degree-zero modes preserve it
+and lowering modes kill it. By Lemma~\ref{lem:c-compatible-tops}, each
+$L^{e_i}_0$ is diagonalizable on $E$ with nonnegative real spectrum.
+Taking traces gives
+\begin{equation}\label{eq:c-top-positive-trace}
+ h\dim E=\sum_i t_i\Tr_E L^{e_i}_0\geq0.
+\end{equation}
+This proves the assertion about $h$ even if the partial energies do
+not commute.
+
+If $h=0$, all nonnegative traces vanish. Each partial energy is
+diagonalizable, so it vanishes on $E$. The unique-zero-top hypothesis
+puts $E$ in sums of vacuum tops for every $A_i$. Therefore
+$L^{e_i}_{-1}E=0$, and the conformal-vector identity gives
+$L^V_{-1}E=0$. The vacuum-like lemma below supplies a nonzero module
+map $V\to M$. Simplicity makes it an isomorphism.
+\end{proof}
+
+\section{A translation-invariant vector is a vacuum vector}
+
+\begin{lemma}[Vacuum-like vectors]\label{lem:c-vacuumlike}
+\index{vacuum-like vector}
+If $v$ in a weak $V$-module satisfies $L_{-1}v=0$, then
+$a_{(n)}v=0$ for every $a\in V$ and $n\geq0$. The map
+\[
+ s:V\longrightarrow M,\qquad s(a)=a_{(-1)}v
+\]
+is a module homomorphism with $s(\one)=v$.
+\end{lemma}
+\begin{proof}
+Lower truncation says that $a_{(n)}v=0$ for sufficiently large $n$.
+Translation covariance gives
+\[
+ L_{-1}a_{(n+1)}v=-(n+1)a_{(n)}v.
+\]
+Downward induction proves vanishing for every $n\geq0$. Taking the
+appropriate constant coefficient in module associativity, or using
+the module Jacobi identity, now gives
+$b_{(m)}(a_{(-1)}v)=(b_{(m)}a)_{(-1)}v$. This is precisely the
+homomorphism assertion.
+\end{proof}
+
+This lemma explains why the translation mode, rather than only energy
+zero, appears in the projectivity proof. A generalized weight-zero
+vector could initially belong to a nontrivial Jordan extension. The
+positive component structure forces it to satisfy the full vacuum
+condition.
+
+\section{Splitting every extension onto the vacuum}
+
+In an abelian category, an object $P$ is projective when every
+epimorphism onto $P$ splits, equivalently when $\Hom(P,-)$ is exact.
+Think of a possible nonsplit extension
+\[
+ 0\longrightarrow X\longrightarrow E\longrightarrow V
+                                      \longrightarrow0.
+\]
+Projectivity says that a vacuum copy can always be lifted back into
+$E$ as an actual submodule.
+
+\begin{proposition}[The vacuum is projective]\label{prop:c-projective}
+\index{projective vacuum}
+For a positive regular stress family, $V$ is projective in the
+category of grading-restricted generalized modules.
+\end{proposition}
+\begin{proof}
+Let $\pi:E\twoheadrightarrow V$. The standard $C_2$-cofinite module
+theory gives finite length and makes its simple composition factors
+ordinary modules. The preceding lowest-weight result therefore implies
+that every composition factor has nonnegative energy. Generalized
+weight spaces are exact in these short exact sequences: module maps
+commute with $L_0$, and every vector has a finite decomposition into
+generalized eigenspaces. Induction along a composition series then
+shows that $E$ has no negative generalized weights. Exactness also
+gives a surjection $E_{[0]}\twoheadrightarrow V_0$.
+
+Consider the finite generalized weight-zero space $E_{[0]}$. It is
+killed by every negative-degree mode and is invariant under
+degree-zero modes. By compatible-top semisimplicity, each partial
+energy $L^{e_i}_0$ is diagonalizable there with nonnegative spectrum.
+But $L^V_0$ is nilpotent on $E_{[0]}$, so
+\[
+ 0=\Tr_{E_{[0]}}L^V_0
+       =\sum_i t_i\Tr_{E_{[0]}}L^{e_i}_0.
+\]
+Every partial energy vanishes. As before, their vacuum-top translation
+operators vanish, so $L^V_{-1}E_{[0]}=0$.
+
+Since $\pi$ respects generalized weights, choose $v\in E_{[0]}$
+with $\pi(v)=\one$. Lemma~\ref{lem:c-vacuumlike} gives
+$s(a)=a_{(-1)}v$. Then $\pi s(a)=a_{(-1)}\one=a$, so $s$ is a
+section of $\pi$.
+\end{proof}
+
+No Hermitian form on $E$ was used. The positivity in the proof lies
+in the known nonnegative spectra of the regular component tops and
+the positive coefficients of the stress identity. This avoids
+assuming strong unitarity before it is proved by the later analytic
+argument.
+
+\section{From a projective unit to a semisimple category}
+
+At this stage standard $C_2$-cofinite VOA tensor theory provides a
+finite complex linear abelian braided category $\mathcal C$ of
+generalized modules. Its tensor product is right exact. Contragredient
+duality is a Grothendieck--Verdier duality with dualizing object $V$,
+which is the tensor unit. These are the categorical inputs to the
+next argument; we do not assume rigidity or semisimplicity already.
+
+\index{Grothendieck--Verdier duality}
+In this categorical section $D$ denotes contragredient duality, so $DX$
+is the contragredient object; here $D$ is not the translation operator.
+More precisely, this duality gives natural isomorphisms
+\[
+ \Hom(Y\otimes X,\one)\simeq\Hom(Y,DX).
+\]
+At $Y=DX$, the identity of $DX$ corresponds to the evaluation
+$DX\otimes X\to\one$, so this map is nonzero when $X\ne0$.
+The assertion represents maps \emph{into} the unit; it does not yet
+supply a coevaluation from the unit satisfying the snake identities
+or the exactness consequences of rigidity.
+
+\begin{example}[Right exactness already bounds growth]
+Let $A$ be a finite-dimensional algebra, and let $P=A$ be its
+left regular module. A module $M$ of vector-space dimension $n$
+is a quotient of $P^{\oplus n}$: choose a vector-space basis
+$m_1,\ldots,m_n$ and send the $i$th copy's unit to $m_i$.
+For any additive right-exact functor $G$ between finite module
+categories, this gives a surjection
+$G(P)^{\oplus n}\twoheadrightarrow G(M)$, hence
+$\dim G(M)\leq n\dim G(P)$.
+
+This estimate does not require $G$ to preserve injections.
+For instance, with $A=\C[\varepsilon]/(\varepsilon^2)$,
+$G(M)=M/\varepsilon M$ is right exact. The inclusion
+$\varepsilon A\hookrightarrow A$ becomes the zero map
+$\C\to\C$, so $G$ is not left exact. The dimension bound
+still holds. This is the modest amount of exactness used in
+the growth argument below.
+\end{example}
+
+We invoke the following rigidity theorem in its precise form: in a
+Cauchy-complete linear braided category with finite-dimensional Hom
+spaces and $\End(\one)=\C$, a nonzero indecomposable $X$ is rigid
+if (i) $\one$ is a direct summand of $Y\otimes X$ for some $Y$, and
+(ii) $\dim\End(X^{\otimes n})<n!$ for some $n$. These are called
+non-negligibility and moderate growth. The theorem does not assume
+tensor exactness.
+The finite abelian category at hand is Cauchy complete, meaning that
+every idempotent splits as a projection onto an actual direct summand.
+It also has finite-dimensional Hom spaces and finite decompositions
+into indecomposables, so the theorem can be applied one summand at a time.
+
+\begin{proposition}[Projective unit implies semisimplicity]
+\index{rigidity!from a projective unit}
+\label{prop:c-projective-unit}
+Let $\mathcal C$ be finite complex linear abelian and braided, with
+simple unit, right-exact tensor product, and Grothendieck--Verdier
+duality with dualizing object $\one$. If $\one$ is projective, then
+$\mathcal C$ is rigid and semisimple.
+\end{proposition}
+\begin{proof}
+Realize the underlying finite abelian category as finite-dimensional
+modules over a finite-dimensional algebra. Let $P$ correspond to its
+regular module and let $d_0(Z)$ denote the underlying vector-space
+dimension. Every $Z$ is a quotient of $P^{\oplus d_0(Z)}$.
+For fixed $X$, right exactness gives
+\[
+ d_0(Z\otimes X)\leq C_Xd_0(Z),\qquad
+ C_X=\max(1,d_0(P\otimes X)).
+\]
+Iterating,
+\[
+ \dim\End(X^{\otimes n})
+ \leq d_0(X^{\otimes n})^2
+ \leq d_0(\one)^2C_X^{2n}<n!
+\]
+for sufficiently large $n$. The last inequality is the elementary
+fact that factorial growth eventually dominates any fixed exponential.
+
+For nonzero indecomposable $X$, duality gives a nonzero evaluation
+$DX\otimes X\to\one$. Since the unit is simple, it is surjective.
+Projectivity makes it split. The rigidity theorem therefore applies
+to $X$. Finite direct sums and Krull--Schmidt decompositions make all
+objects rigid.
+
+Only now may we use that tensoring is exact. Rigidity identifies
+\[
+ \Hom(X,-)\cong\Hom(\one,-\otimes X^*).
+\]
+The right side is exact because the unit is projective and tensoring
+by $X^*$ is exact. Thus every object is projective. Every short exact
+sequence splits, which is semisimplicity.
+\end{proof}
+
+The order is important. Using tensor exactness to prove rigidity would
+create a circular proof. The growth bound above uses only right
+exactness, a property available before rigidity.
+
+To connect this categorical conclusion with ordinary VOA rationality,
+we use one more standard consequence of $C_2$-cofiniteness: every
+finitely generated weak module belongs to the grading-restricted
+generalized category. Each vector of any weak module belongs to its
+cyclic submodule. Once that finite category is semisimple, these cyclic
+submodules are sums of ordinary simple modules. The whole weak module
+is therefore a sum of simple submodules, hence a direct sum of them
+by the usual semisimple-module argument. In this setting the conclusion
+actually gives regularity as well as rationality.
+
+\begin{theorem}[Rationality of the Haagerup candidate]
+Under the actual embedded-factor and positive-stress inputs of
+Chapter~\ref{ch:factors}, the generated $U$ is strongly rational.
+\end{theorem}
+\begin{proof}
+The lattice construction gives simplicity, CFT type, and a positive
+invariant form; the latter gives self-contragredience. The positive
+stress family gives $C_2$-cofiniteness by
+Proposition~\ref{prop:c-c2} and projectivity of the vacuum by
+Proposition~\ref{prop:c-projective}. The standard finite VOA category
+and Proposition~\ref{prop:c-projective-unit} give semisimplicity,
+hence rationality.
+\end{proof}
+
+This theorem does not identify the module category with the Haagerup
+center. It does not yet construct positive forms on all simple modules
+or on their intertwining-operator spaces. What it does provide is the
+finite semisimple setting in which the branching and character arguments
+of the next chapters become legitimate.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:c-regular-1}
+Explain why $C_2(V)$ is homogeneous for ambient weight. Show that the
+orthogonal complement in each $V_n$ represents the grade-$n$ quotient
+even if $C_2(V)$ is not closed in the Hilbert completion.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-regular-1]{Solution on page~\pageref*{sol:ex:c-regular-1}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-regular-2}
+Prove that a diagonalizable operator with nonnegative real eigenvalues
+and zero trace is zero. Give a nondiagonalizable counterexample if
+diagonalizability is omitted.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-regular-2]{Solution on page~\pageref*{sol:ex:c-regular-2}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-regular-3}
+In the vacuum-like lemma, write the downward induction explicitly for
+$a_{(2)}v$, $a_{(1)}v$, and $a_{(0)}v$. Why does the coefficient
+$n+1$ never obstruct the induction through $n=0$?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-regular-3]{Solution on page~\pageref*{sol:ex:c-regular-3}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-regular-4}
+For the algebra $\C[\varepsilon]/(\varepsilon^2)$, exhibit a nonsplit
+short exact sequence of modules with one-dimensional endpoints.
+Compare the role of a projective simple module with the vacuum
+projectivity argument above.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-regular-4]{Solution on page~\pageref*{sol:ex:c-regular-4}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-regular-5}
+Prove directly that $A^n<n!$ for all sufficiently large $n$, for any
+fixed $A>0$. Use it to fill in the moderate-growth bound.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-regular-5]{Solution on page~\pageref*{sol:ex:c-regular-5}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-regular-6}
+List the point in the proof at which each of these hypotheses is used:
+positive stress coefficients; component regularity; grading
+compatibility; the unique component vacuum at weight zero; braiding;
+right exactness. Which arguments would fail if a component had a
+second simple module of weight zero?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-regular-6]{Solution on page~\pageref*{sol:ex:c-regular-6}.}}\par
+\end{exercise}

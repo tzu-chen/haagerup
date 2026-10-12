@@ -1,0 +1,20 @@
+% Draft paragraph for the short source guide; four external links.
+% Suggested placement: physical-chain section, after the overlap/entropy sources.
+For the rational-candidate tests in Chapter~\ref{ch:identification},
+Dong--Ren--Xu, \href{https://arxiv.org/abs/1507.03306}
+{\emph{On Orbifold Theory}}, Theorem~4.4 and Lemma~4.7, supplies
+the orbifold dimension formula under the stated hypotheses.
+Etingof--Nikshych--Ostrik, \href{https://arxiv.org/abs/math/0203060}
+{\emph{On fusion categories}}, Corollary~8.14 and Proposition~8.27,
+supplies Morita invariance and the weak-integrality dimension bound.
+For $W_3$, Beltaos--Gannon, \href{https://arxiv.org/abs/1004.1205}
+{\emph{The $W_N$ minimal model classification}}, Theorem~3.3,
+classifies modular-invariant matrices; Edie-Michell--Gannon,
+\href{https://arxiv.org/abs/2408.02794}
+{\emph{Type II quantum subgroups for quantum $\mathfrak{sl}_N$.
+II: Classification}}, Theorem~1.1, Remark~1.2 and Section~5.1,
+provides the affine module-category input. The chapter explains the
+additional category and full-center transfers rather than identifying
+matrix classification with OPE sewing. The height-thirteen comparison
+is a separate finite exact repository input, and all these exclusions
+retain their stated chiral-algebra-preservation premises.

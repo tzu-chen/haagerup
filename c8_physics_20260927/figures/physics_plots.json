@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "schema": "haagerup-c8-physics-plots-v1",
+  "primary_figure": {
+    "Delta_cutoff_inclusive": "6",
+    "identity_included": false,
+    "plotted_Delta_spin_pairs": 160,
+    "marker_area_in_points_squared": "12+10*log10(multiplicity)",
+    "color": "log10(multiplicity)",
+    "relevant_scalar_components": 2941,
+    "scope": "Individual Virasoro-primary components, aggregated by exact Delta and integer spin; not merely extended-sector ground states."
+  },
+  "thermal_figure": {
+    "temperatures_beta_v_over_L": [
+      "1/2",
+      "3/4",
+      "1",
+      "3/2",
+      "2"
+    ],
+    "observables": [
+      "heat_capacity",
+      "entropy"
+    ],
+    "maximum_input_interval_width": {
+      "heat_capacity": "1.914540329516348975172650452471372156646803615867983196255696366292E-12",
+      "entropy": "2.1278835174530459397040459115623899530758555438775473674835977736E-14"
+    },
+    "lines_between_data_points": false,
+    "scope": "Only the five saved temperatures are plotted. Error bars are the conditional certified input intervals and are smaller than the markers. Floating-point conversion is for plotting only."
+  },
+  "matplotlib_version": "3.10.8",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/c8_physics_20260927/data/diagonal_spectrum.tsv": "8db9e9f9cd6e09863212bc5078b87dbbbc9b84b0eff72bc30d806be2b4a6c80c",
+    "/home/tzuchen/Codes/haagerup/c8_physics_20260927/data/scalars.tsv": "c5910a6ecc569ddcac03cadde0b8dace07e530f8c8119b8510f74dfa9a6fb53b",
+    "/home/tzuchen/Codes/haagerup/c8_physics_20260927/data/thermal.tsv": "2d88f78a6ad1b908448a1b5119f9d940b3d3e00fd1321a7ea0d74e1a7015a962",
+    "/home/tzuchen/Codes/haagerup/c8_physics_20260927/data/run_summary.json": "05149240d466fcbee43b42e65919949c22d0218e275f8abc7e61b7edd778768d",
+    "/home/tzuchen/Codes/haagerup/c8_physics_20260927/physics_plots.py": "50746578b5f5a6d0165cae044175742cdf0f83927e321682852fda3fba031375"
+  },
+  "output_sha256": {
+    "physics_primary_spectrum.pdf": "55a0c61af9b5e8351109cac56ac19bd9af49086128a5444b92f7c12f1331d1ae",
+    "physics_primary_spectrum.svg": "72a50c1dce637a82faf5589b4485041cc678cb7a56b35168e9bf92752deed6b4",
+    "physics_thermal_comparison.pdf": "56a16036015158a70a80c49ade87bfda962e211a7f0833a9d99247d97ed27577",
+    "physics_thermal_comparison.svg": "d33aa20405c11f396a2333461cf5946529391128ae1f698b0b47e4e4b7611b90"
+  },
+  "elapsed_seconds": 1.67886757501401,
+  "peak_RSS_KiB": 123920,
+  "scope": "Visualization of authenticated existing data only. No new coefficient computation, regression, interpolation, or bootstrap bound."
+}

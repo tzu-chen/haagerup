@@ -1,0 +1,102 @@
+\section{Solutions for Chapter~\ref{ch:lattice_embedding}}
+
+\paragraph{Exercise~\ref{ex:c-lattice-1}: cocycle signs.}
+\phantomsection
+\label{sol:ex:c-lattice-1}
+Let $B(a,b)$ be the exponent in the cocycle, considered modulo two.
+The diagonal terms cancel in $B(a,b)-B(b,a)$, while the remaining
+terms give the off-diagonal part of $(a,b)$. The omitted diagonal
+part is $2\sum_i a_ib_i$, which is zero modulo two. Hence the
+cocycle commutator is $(-1)^{(a,b)}$. For the second identity,
+\[
+ B(a,-a)\equiv\sum_i a_i^2+\sum_{i>j}a_i a_jG_{ij}
+                  =\frac{(a,a)}2\pmod2.
+\]
+Evenness makes the last expression integral. In this root basis the
+diagonal entries are two; an analogous formula in a general even
+basis uses $G_{ii}/2$ in its diagonal exponent.
+
+
+
+\paragraph{Exercise~\ref{ex:c-lattice-2}: a weight-two exponential.}
+\phantomsection
+\label{sol:ex:c-lattice-2}
+The opposite-momentum cocycle is $+1$. Expanding the exponential gives
+the terms through degree three in
+$\exp(za(-1)+z^2a(-2)/2+z^3a(-3)/3+\cdots)$:
+\begin{align*}
+ Y(e^a,z)e^{-a}={}&z^{-4}\one+z^{-3}a(-1)\one\\
+ &+\frac{z^{-2}}2\bigl(a(-2)+a(-1)^2\bigr)\one\\
+ &+z^{-1}\left(\frac{a(-3)}3+\frac{a(-1)a(-2)}2
+                              +\frac{a(-1)^3}{6}\right)\one+O(1).
+\end{align*}
+The coefficient of $z^{-n-1}$ has weight $3-n$, since both input
+states have weight two. Thus the four displayed coefficient weights
+are $0,1,2,3$, exactly as required. There is no need to enumerate any
+other lattice momentum because the output momentum is fixed at zero.
+
+
+
+\paragraph{Exercise~\ref{ex:c-lattice-3}: the affine share of $u$.}
+\phantomsection
+\label{sol:ex:c-lattice-3}
+The two highest weights are $1$ and $13$, so
+\[
+ h_K=\frac{1\cdot3}{4(1+2)}
+       +\frac{13\cdot15}{4(39+2)}
+     =\frac14+\frac{195}{164}=\frac{59}{41}.
+\]
+The complementary weight is $2-59/41=23/41$. It is positive, as
+it must be in the unitary complementary-stress decomposition.
+This also checks the recorded pair
+$180/1271+13/31=(180+533)/1271=713/1271=23/41$
+for the two neutral stresses. The affine formula applies without
+an additional grade because $u$ is an affine highest vector;
+an arbitrary descendant with the same horizontal charges need not
+have this energy.
+
+
+
+\paragraph{Exercise~\ref{ex:c-lattice-4}: transport preserves unitarity.}
+\phantomsection
+\label{sol:ex:c-lattice-4}
+Applying $\theta_g$ twice cancels the two oscillator signs, complex
+conjugates the coefficients twice, and multiplies opposite momentum
+factors $\prod_i\widetilde c_i^{\beta_i}$ and
+$\prod_i\widetilde c_i^{-\beta_i}$. The result is the identity.
+For $v\ne0$, invertibility of $g$ gives
+$\langle v,v\rangle_g=\|g^{-1}v\|^2>0$.
+More explicitly, the torus factors are positive real numbers, so
+antilinearity leaves them unchanged on the second application:
+$\theta_g^2(e^\beta)=
+(\prod_i\widetilde c_i^{\beta_i})
+(\prod_i\widetilde c_i^{-\beta_i})e^\beta=e^\beta$.
+For the simple roots in $E_R$, the transported operation gives
+\[
+ \theta_g(E_R)=\sum_i c_i e^{-\alpha_i}=-F_R.
+\]
+For weight-one primary fields the mode-adjoint formula has a further
+minus sign, so $(E_R)_{(n)}^\dagger=(F_R)_{(-n)}$.
+Ordinary coefficient conjugation would omit the unequal $c_i$
+and would therefore fail to give this compact adjoint relation.
+
+
+
+\paragraph{Exercise~\ref{ex:c-lattice-5}: determinant and index.}
+\phantomsection
+\label{sol:ex:c-lattice-5}
+If $L\subset\widetilde L$ has index $r$, a fundamental region of
+$\widetilde L$ has volume $1/r$ times that of $L$. The Gram
+determinant is the square of that volume, giving
+$\det\widetilde L=\det L/r^2$. Here $r=3$ and $\det L=9$,
+so the extended determinant is one. Isotropy is the condition that
+the adjoined discriminant classes have integral conformal weights,
+and hence that the overlattice remains even. It also ensures integral
+pairings: for classes $x,y$ in the isotropic subgroup,
+$q(x+y)-q(x)-q(y)=(x,y)$ vanishes modulo $\Z$.
+For $E_6\oplus A_2$, the glue generator has quadratic value
+$2/3+1/3=1$ and order three. Its multiples therefore form the
+required isotropic subgroup of size three. The determinant formula
+uses this subgroup's size, not the size nine of the whole
+discriminant group.
+

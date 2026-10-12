@@ -1,0 +1,60 @@
+{
+  "scope": "User-authorized temporary lock bypass for this announcement typesetting check only; no numerical research computation or certificate replay.",
+  "limits": {
+    "address_MiB": 1536,
+    "group_RSS_MiB": 1024,
+    "host_reserve_GiB": 32,
+    "CPUs": 1,
+    "threads": 1,
+    "seconds_per_pass": 120
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "exit_code": 0,
+      "seconds": 0.429,
+      "sampled_peak_RSS_MiB": 22.605,
+      "minimum_host_MemAvailable_GiB": 49.437,
+      "stop_reason": null,
+      "log": "closing_build_pass_1.log"
+    },
+    {
+      "pass": 2,
+      "exit_code": 0,
+      "seconds": 0.43,
+      "sampled_peak_RSS_MiB": 23.344,
+      "minimum_host_MemAvailable_GiB": 49.404,
+      "stop_reason": null,
+      "log": "closing_build_pass_2.log"
+    }
+  ],
+  "checked_at_utc": "2026-10-10T00:56:35.251075+00:00",
+  "authorization": "Continued user-authorized temporary typesetting-only lock exception for this announcement.",
+  "kernel_controls": {
+    "MemoryMax_bytes": 1073741824,
+    "MemorySwapMax_bytes": 0,
+    "TasksMax": 16,
+    "CPUQuota_percent": 100,
+    "affinity": [
+      31
+    ]
+  },
+  "source_sha256": {
+    "haagerup_c8_announcement.tex": "652babe860f9c21e2c1551ba92f85d10adac04f9a851412041911d68be884f3d",
+    "references.tex": "f015f9048058729196d70d8e445517c4b054c4f7413caaafea69474ec5c83284"
+  },
+  "pdf_sha256": "dc252964992dd77ad7d00bf0cc4f9547a862ea106dfd80200b8499ac828f56ac",
+  "source_archive_sha256": "0cd7ad254d51a8d12521d7eb5a5acf6ceb42086cf221ba87fc608ef9c8fcc79a",
+  "guard_sha256": "09b9986966402a73bba8e078884a50b5762c4980485ea295e8cca2e02fc8ae63",
+  "pages": 11,
+  "archive_members": [
+    "haagerup_c8_announcement.tex",
+    "references.tex"
+  ],
+  "static_checks": {
+    "labels": 39,
+    "cited_bibliography_entries": 30,
+    "unresolved_references": 0,
+    "source_comments": 0
+  }
+}

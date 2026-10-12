@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "PDF_sha256": "08c2b2c2ebb92f43729378b675f286d867d1f9ea2b484c29ba62c18e7f2e7660",
+  "render_dpi": 90,
+  "pages_inspected": {
+    "title": 1,
+    "orientation": 2,
+    "contents": 6,
+    "fields": 107,
+    "membership": 134,
+    "structure": 147,
+    "coupling": 182,
+    "fusion": 204,
+    "thermal": 262,
+    "coordinates": 270,
+    "top_recipe": 293,
+    "formalization": 322
+  },
+  "scope": "Visual inspection of twelve representative pages: title/navigation, coefficients, membership, residual tensor, couplings/fusion, intervals, long cyclic recipes and formalization. No clipping, missing rows at page boundaries, or overlapping table columns observed. Large exact coefficient tables remain dense and can be zoomed. Not an all-page mathematical review."
+}

@@ -1,0 +1,7 @@
+defect_x	lowest_Delta	lowest_degeneracy	first_nonidentity_scalar_Delta	scalar_degeneracy	left_character_coefficients_right_E8
+1	0	1	2	61504	[1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+alpha	1/3	3	2	20088	[0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+alpha2	1/3	3	2	20088	[0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+rho	1/3	3	2	60016	[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+alpha_rho	1/3	3	2	60016	[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+alpha2_rho	1/3	3	2	60016	[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]

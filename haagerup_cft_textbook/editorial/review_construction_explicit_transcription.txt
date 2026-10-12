@@ -1,0 +1,174 @@
+Static transcription audit: construction data in c01, c03, c06
+Reviewer: scope_construction
+Timestamp: 2026-10-05 20:02:03 UTC (clock tool immediately before report write)
+
+Scope and conclusion
+--------------------
+Read-only comparison of the displayed data with the canonical manuscript,
+verification guide, exact formula producers, and saved exact output rows.
+No producer, certificate replay, numerical calculation, or build was run.
+This verifies transcription and conventions, not the truth of every imported
+finite lattice-vector identity or the provenance hashes of their producers.
+
+No substantive coefficient, sign, mode-index, or normalization discrepancy
+was found in the requested tables. One minor decimal-display issue appears
+at c06_cosets.tex:407: 3.605333237\ldots is a rounded nine-place value,
+whereas the source's expansion begins 3.6053332369... . Either truncate it
+as 3.605333236\ldots or mark a rounded finite list with approximately signs.
+The exact radical and quartic are correct, so this does not affect a theorem.
+No live chapter edits were made.
+
+1. c01_lattice_embedding.tex: currents and exceptional vector
+------------------------------------------------------------
+Compared with hi_cft_c8_proof.tex, the lattice/current/PCT section beginning
+near line 357, and hi_cft_c8_verification_guide.tex, the current and three-term
+vector subsections near lines 140-229.
+
+Checked all eight coordinates of both current Cartans:
+  ell=(-1,-2,-3,-2,-1,-2,0,0), h=(5,8,9,8,5,0,2,2).
+Checked both triples at c01:157-161, including the minus sign in each
+lowering current and the coefficients (5,8,9,8,5,2,2) in F_R.
+Checked the simple-root cocycle convention against the canonical formula
+and against cocycle() in hi_cft_20260923_c8_exact.py; the diagonal term and
+the i>j lower-triangular term agree. Consequently the textbook's lowering
+signs use the same convention as the saved exact construction.
+The displayed level normalizations, Cartan norms 2 and 78 and E-F central
+terms 1 and 39, match the manuscript and verification guide.
+
+Checked all three eight-component momenta a,b,c at c01:250-254, and both
+exceptional coefficients at c01:257-260:
+  (sqrt(13)+3sqrt(-3))/20 and (sqrt(13)-3sqrt(-3))/20.
+The signs belong to b and c in the same order as the canonical manuscript.
+Also checked all entries of the displayed Ga,Gb,Gc vectors at c01:270-274
+against the verification-guide table; all agree. The orthonormal-coordinate
+phase zeta=(sqrt(13)+3i sqrt(3))/sqrt(40) agrees with the manuscript.
+
+Checked the transported gauge c01:312-326: tilde c=(5,8,9,8,5,1,2,2),
+the exponent -beta_i/2 in g, theta_g=g theta g^{-1}, and the exponent
++beta_i in theta_g on a lattice monomial all match. The form pulls back
+by g^{-1}, consistent with these signs. The guide independently prints
+the three momentum norms 4,40,40 and ||u||^2=12 used in the new example.
+The compact-current factor 8640 and its reciprocal, c01:329-352, match
+hi_cft_20260923_c2two_report.md:24-31. The same corrected compact diagonal
+is copied correctly in c06:320; the historically rejected raw diagonal
+E_L+E_R was not accidentally reintroduced.
+
+2. c03_factors.tex: actual Potts fields
+------------------------------------
+Compared with hi_cft_20260923_proof_potts.py:17-31, exact_axis(), and
+hi_cft_20260923_proof_potts_exact.py:16-23, exact_primary(); the coefficient
+field order (1,sqrt(13),sqrt(-3),sqrt(-39)) was checked in c8_exact.py.
+These files were read as text and were not imported or executed.
+
+Checked beta_1=b-a, beta_2=c-b, beta_3=beta_1+beta_2, the Gram matrix
+[[4,-2],[-2,4]], and the three Heisenberg coefficients 1/15.
+Checked all six exponential coefficients in c03:219-223, including the
+asymmetric denominators 100 versus 10 and the two signs on beta_3:
+  beta_1: -(r+3t)/100, (-r+3t)/10;
+  beta_2: (7+3rt)/100, (7-3rt)/100;
+  beta_3: (-r+3t)/100, -(r+3t)/10.
+All match exact_axis() term by term.
+The stated PCT multipliers (10,1,10) at c03:256-259 agree with the already
+matched torus monomial convention and beta coordinates; thus no extra
+conjugation or reciprocal factor has been introduced.
+
+Checked every term of the cubic field c03:263-273: the three Cartan
+directions A,C,E; X_delta=5 p_delta e^delta; coefficient -9; and the pairing
+of A with beta_3, C with beta_1, E with beta_2. The source calls those
+directions A,B,C; the textbook's harmless renaming avoids a derivative
+notation conflict and preserves their order. The primary/membership
+claims remain explicitly marked as a construction input.
+
+3. c03_factors.tex: PF13 singular rows and decoupling relation
+-----------------------------------------------------------
+Checked normalization c=8/5 and lambda=14/473 against
+hi_cft_c8_manuscript_structure.tex and the PF13 reconstruction note.
+Compared the actual formula rows with:
+  hi_cft_20260923_proof_pf13_upper_poles.py:25-40;
+  hi_cft_20260923_proof_pf13_nonlinear.py:47-51;
+  hi_cft_20260923_proof_pf13_truncation.json, basis and coefficient arrays;
+  hi_cft_20260923_proof_pf13_simple_pole_algebra.py:31-49 and its JSON;
+  hi_cft_20260923_proof_pf13_ope.json, a0/lambda fields.
+
+Coverage was the complete displayed singular first row, not a sample:
+* a_3 with itself, modes 5,4,3,2,1,0 at c03:306-311: all six entries match.
+* a_3 with b_4, vanishing modes >=4 and modes 3,2,1,0 at c03:317-326:
+  all entries match. In particular a0=69283/2365 is the saved exact scalar,
+  and the nonlinear simple pole has coefficients 2/5,32lambda/5,
+  -48lambda/5, (2/15)(-5+2lambda(c-1)) with the same normal products.
+* R=(a_3)_(1)d_5, c03:330-338: all seven basis monomials and coefficients
+  match the truncation JSON in the displayed order:
+  -148744/473; 566160/473; -4800/121; 3860/11; -33320/121;
+  -489817/4730; 2193061/52030.
+  In particular :L(:LL:): and :(D^2L)L: were not reordered.
+* a_3 with d_5, modes 7,6,5,4,3,2 at c03:344-354: every term matches
+  the producer's upper-pole targets, including the c-dependent signs.
+* Mode 1 is R as defined, and mode 0 at c03:355-360 matches the full
+  eight-slot simple-pole output after omitting its two zero coefficients:
+  1/3;448/1419;-896/1419;-224/1419;0;0;-34019/28380;9473/170280.
+  The producer's basis identifies these slots as DR,:LDb:,:(DL)b:,
+  :(D^3L)L:,:(D^2L)(DL):,:(Da)a:,D^3b,D^5L, respectively.
+
+The historical intermediate JSON scope warnings do not contradict the
+current chapter: those records only certified their own partial row when
+written. The later reconstruction note supplies the combined proof logic.
+This audit did not re-prove that reconstruction or replay full vector checks.
+
+4. c03_factors.tex: positive-stress projection data
+-------------------------------------------------
+Compared c03:593-650 with hi_cft_c8_verification_guide.tex:233-286,
+hi_cft_c8_manuscript_structure.tex:63-93, and the coefficient list in
+hi_cft_20260923_proof_pf13_membership.json.
+
+Checked all four stress charges 1,117/41,2400/1271,70/31; all eight
+entries in the two projection rows; all four coefficients in the positive
+stress identity; and the printed four-coordinate verification. The rows
+are exactly
+  pbar=(0,2/45,9/100,39/175),
+  zbar=(0,14/195,13/20,13/175),
+in the same column order (omega_L,omega_R,e,f).
+The guide's raw overlap rows and diagonal norm row also agree with these
+normalized rows. The positive identity coefficients are
+  1,3403/4563,25/6,25/26.
+The textbook correctly keeps the four-axis invariant-space claim as an
+independent finite input; the scalar coordinate sum is not made to prove it.
+
+5. c06_cosets.tex: four-axis algebra and irrational charge
+-------------------------------------------------------
+Compared c06:315-420 with hi_cft_20260923_c2two_report.md:24-66,
+hi_cft_20260923_c2two_charged_axes.md:115-165, and
+hi_cft_20260923_c2two_irrational_axis_action.md:192-205.
+
+Checked the compact diagonal triple, rational GKO charge 286/287,
+f=(143/287,1200/1271,35/31), lambda=(11/41,192/1271,49/31),
+q=(7/26,2/25,7/10), and every multiplication/axis equation, including
+the factor 2 in the Griess idempotent and the factor 2 in c(e)=2f.a.
+The norm of x is one in both source and textbook, so the x*x row requires
+no missing rescaling.
+Checked both affine equations for a0,a2 on the charge-two slice and both
+primitive quadratics. The charged-axes note also prints the quadratics
+multiplied by 41 and 31, respectively; this is an equivalent normalization,
+not a coefficient discrepancy. The later report prints the textbook's
+primitive forms exactly.
+Checked all digits and signs of the exact c* radical and all three quartic
+coefficients. The minus-inside/minus-outside branch agrees with the source
+near-two value. The complement sum 36/7 and center 18/7 agree.
+Of the four displayed decimal expansions only the final rounded-prefix
+issue listed above merits a cosmetic repair.
+
+Also checked the adjacent imported finite dimension data: the complete
+248=10(3)+10(5)+10(7)+6(9)+4(11) row at c06:451 matches the charged-axes
+note:261. The low-grade vector (1,0,1,1,2) and weight-four Gram determinant
+match hi_cft_20260925_axis2_sewing_complement.md:59-80. The opposite
+weight-two identity and dimension ten match
+hi_cft_20260925_axis2_sewing.md:109 and the final axis2 report:111.
+The textbook retains their finite-grade scope; it does not infer an
+all-grade Virasoro/product identification from these dimensions.
+
+Not covered by this transcription pass
+-------------------------------------
+No full 337-monomial field listing, large OPE matrix, finite-field rank
+certificate, source fingerprint, character certificate, or category/net
+comparison theorem was independently revalidated here. The newly written
+current-multiplet and Gaussian examples received separate hand reviews
+earlier; this pass only checked their copied normalization inputs.

@@ -1,0 +1,130 @@
+% Proposed insertion after the existing order-three matrix example and
+% before "The further work needed for reconstruction". Root integrates.
+% Also replace the existing example's final claim about unchecked cubics
+% by a forward pointer to this elementary completion. No new exercise.
+
+\subsection{Completing the order-three cubics by hand}
+
+At order three we can now forget the special-function origin and solve
+the finite coefficient problem directly. Choose either root of
+$\delta^2=3\delta+1$, and choose $p,q$ with $p+q=1$ and $pq=\delta$.
+The displayed matrix then satisfies rotation, the axis sum, and the
+quadratics by the elementary checks above. We will verify all its
+cubics using only these same three relations. Identifying these
+algebraic numbers with the gamma samples is the separate analytic
+step already discussed.
+
+Put $\tau=\delta-1$, $a=\delta-2$, and $\kappa=7-\delta$.
+Useful consequences of the three relations are
+\[
+ p^2=p-\delta,\quad q^2=q-\delta,\quad
+ \tau^2=\delta+2,\quad a\tau=3,\quad a^2=5-\delta,
+ \quad\frac{\tau^3}{\delta}=\kappa.
+\]
+Neither denominator vanishes: neither zero nor one solves the
+dimension equation. After multiplying \eqref{eq:HI-cubic} by
+$\tau^3$, define its left side and its quadratic product by
+\[
+ \begin{split}
+ C_{g,h}(k,l)&=\sum_{m=0}^2
+       \mathsf B_{m,g+h}\mathsf B_{g,m+k}\mathsf B_{h,m+l},\\
+ R_{g,h}(k,l)&=\mathsf B_{g+l,k}\mathsf B_{h+k,l}.
+ \end{split}
+\]
+All indices are modulo three. The required equality is
+\[
+ C_{g,h}(k,l)=\tau R_{g,h}(k,l)
+                    -\kappa\mathbf1_{g=0}\mathbf1_{h=0}.
+\]
+When $g=h=0$, the correction is present for every $k,l$, not only
+for $k=l=0$.
+
+Three entries show the different cancellations. At $(g,h,k,l)=(1,1,0,0)$,
+the three summands are $-1,p,-p^2$, giving
+\[
+ C_{1,1}(0,0)=-1+p-p^2=\delta-1=\tau R_{1,1}(0,0).
+\]
+At $(1,1,1,1)$, the equality is $p^3-2=\tau q^2$:
+\[
+ p^3-2=-\tau p-\delta-2=-\tau p-\tau^2,
+ \qquad
+ \tau q^2=\tau(1-p-\delta)=-\tau p-\tau^2.
+\]
+At the exceptional all-zero entry, the full residual is
+\[
+ a^3-2-\tau a^2+\kappa=-a^2+5-\delta=0.
+\]
+The invertible-channel correction is essential in this last check.
+
+Here is a complete finite verification, rather than an inference
+from these three examples. Regard $C_{g,h}$ and $R_{g,h}$ as
+$3\times3$ matrices with row $k$ and column $l$, in the order
+$0,1,2$. Write $b=-a^2+a-1$ to shorten one table. Expanding the
+three-term sums gives
+\[
+\begin{array}{c|c|c}
+ (g,h)&C_{g,h}&R_{g,h}\\\hline
+ (0,0)&
+ \begin{pmatrix}a^3-2&b&b\\b&b&3a\\b&3a&b\end{pmatrix}&
+ \begin{pmatrix}a^2&1&1\\1&1&\delta\\1&\delta&1\end{pmatrix}
+ \\[5pt]
+ (0,1)&
+ \begin{pmatrix}-3&\tau&-\tau p\\
+       \tau&-\tau q&-\tau q\\-3&-\tau p&\tau\end{pmatrix}&
+ \begin{pmatrix}-a&1&-p\\1&-q&-q\\-a&-p&1\end{pmatrix}
+ \\[5pt]
+ (1,1)&
+ \begin{pmatrix}\tau&\tau&3p\\
+       \tau&p^3-2&\tau\\3p&\tau&\tau\end{pmatrix}&
+ \begin{pmatrix}1&1&ap\\1&q^2&1\\ap&1&1\end{pmatrix}
+ \\[5pt]
+ (1,2)&
+ \begin{pmatrix}\tau&-\tau q&-3\\
+       -3&-\tau q&\tau\\-\tau p&\tau&-\tau p\end{pmatrix}&
+ \begin{pmatrix}1&-q&-a\\-a&-q&1\\-p&1&-p\end{pmatrix}
+\end{array}
+\]
+The entries already use $p+q=1$ and $pq=\delta$.
+For instance, a mixed entry reduces as
+$-ap-1+q=-\tau p$, and $a\delta-2=\tau$.
+The first row of tables obeys $C_{0,0}=\tau R_{0,0}-\kappa\mathbf J$,
+where $\mathbf J$ is the all-ones matrix: besides the all-zero
+entry checked above,
+\[
+ b=2\delta-8=\tau-\kappa,
+ \qquad3a=3\delta-6=\tau\delta-\kappa.
+\]
+The other three rows obey $C=\tau R$ by $a\tau=3$ and
+$p^3-2=\tau q^2$.
+
+These four tables contain $36$ checked entries. Two symmetries
+cover the other ordered indices. Interchanging $(g,k)$ with $(h,l)$
+only exchanges commuting scalar factors on both sides. Simultaneously
+negating all four indices exchanges $p$ and $q$, because
+\[
+ \mathsf B_{-r,-s}(p,q)=\mathsf B_{r,s}(q,p).
+\]
+The scalar relations are unchanged by that exchange. The ordered
+pairs $(g,h)$ therefore have four classes,
+\[
+ \{(0,0)\},\quad
+ \{(0,1),(1,0),(0,2),(2,0)\},\quad
+ \{(1,1),(2,2)\},\quad
+ \{(1,2),(2,1)\}.
+\]
+Each class has a representative in the table, with all nine choices
+of $k,l$. Thus all $81$ cubic equations hold, including every
+exceptional or repeated index.
+
+This is an independent elementary solution of the order-three
+coefficient equations. At the positive embedding $\delta=d$, its
+two roots are
+\[
+ p,q=\frac{1\pm i\sqrt{4d-1}}2.
+\]
+They are complex conjugates, so the displayed $\mathsf A$ is
+Hermitian. That matrix property alone does not prove unitarity of
+the complete reconstructed associator or identify it with the
+physical $\HH_3$ associator. General odd order still requires
+the analytic coefficient theorem, and categorical reconstruction
+remains its own structural step.

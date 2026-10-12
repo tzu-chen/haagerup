@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "arithmetic": "independent stdlib Fraction arithmetic in Q(sqrt13,sqrt-3)",
+  "certificate_sha256": "18c8c5cf5360d1f82350c4a8bc9a196280e89f49f68b97a9e820fad0e9ec5ebc",
+  "checker_sha256": "c697b20d8cfde39557b35046f653e924e6503d439c53fa015cc6620306310b23",
+  "targets": {
+    "Potts_w": {
+      "target_terms": 92,
+      "selected_source_words": 33,
+      "exact_coordinate_sum": true
+    },
+    "PF13_w": {
+      "target_terms": 342,
+      "selected_source_words": 42,
+      "exact_coordinate_sum": true
+    }
+  },
+  "all_stored_states_have_claimed_grade": true,
+  "all_S3_sources_and_targets_have_Cartan_weight_zero": true,
+  "decoded_basis_rows": 21772,
+  "peak_rss_KiB": 52788,
+  "scope": "Exact exported coordinate sums and state labels only; source mode-product provenance, source authentication, S2 generation and VOA structure are not checked here."
+}

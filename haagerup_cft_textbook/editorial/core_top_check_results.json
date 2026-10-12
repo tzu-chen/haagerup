@@ -1,0 +1,439 @@
+{
+  "scope": "Exact core-top minimization, charge multiplicities and 17/10 trace certificate from the printed formulas; no VOA embedding verification",
+  "checked_utc": "2026-10-05T21:15:33.589731+00:00",
+  "script_sha256": "4418af14fd300ef2c50da761d4cb62ae660665aacad7b69bb87ecf905e2fee80",
+  "chapter_sha256_at_check": "610bf914ebeaeca763ebef7634aaca988b3d8509d9f55daae7e293cf51226e69",
+  "guard_sha256": "09b9986966402a73bba8e078884a50b5762c4980485ea295e8cca2e02fc8ae63",
+  "cpu_affinity": [
+    0
+  ],
+  "elapsed_seconds": 0.001979992026463151,
+  "max_rss_mib": 15.92578125,
+  "measurement_scope": "Elapsed time and process high-water RSS sampled before final report serialization",
+  "rows": {
+    "x0": {
+      "dimension": 1,
+      "lowest_weight": "0",
+      "charges_with_multiplicities": [
+        [
+          0,
+          1
+        ]
+      ],
+      "L": "0",
+      "P": "0",
+      "Z": "0",
+      "Q": 0,
+      "W": "0",
+      "4680_W": 0
+    },
+    "x1": {
+      "dimension": 1,
+      "lowest_weight": "2/15",
+      "charges_with_multiplicities": [
+        [
+          0,
+          1
+        ]
+      ],
+      "L": "0",
+      "P": "0",
+      "Z": "2/15",
+      "Q": 0,
+      "W": "5/39",
+      "4680_W": 600
+    },
+    "x2": {
+      "dimension": 5,
+      "lowest_weight": "2/5",
+      "charges_with_multiplicities": [
+        [
+          -3,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "L": "1",
+      "P": "0",
+      "Z": "10/13",
+      "Q": 36,
+      "W": "29/13",
+      "4680_W": 10440
+    },
+    "x3": {
+      "dimension": 9,
+      "lowest_weight": "4/5",
+      "charges_with_multiplicities": [
+        [
+          -6,
+          1
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "L": "1",
+      "P": "4/3",
+      "Z": "268/65",
+      "Q": 116,
+      "W": "472/39",
+      "4680_W": 56640
+    },
+    "x4": {
+      "dimension": 2,
+      "lowest_weight": "1/3",
+      "charges_with_multiplicities": [
+        [
+          -6,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "L": "0",
+      "P": "0",
+      "Z": "8/39",
+      "Q": 72,
+      "W": "46/39",
+      "4680_W": 5520
+    },
+    "x5": {
+      "dimension": 14,
+      "lowest_weight": "1",
+      "charges_with_multiplicities": [
+        [
+          -12,
+          1
+        ],
+        [
+          -9,
+          2
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          12,
+          1
+        ]
+      ],
+      "L": "2",
+      "P": "4",
+      "Z": "44/13",
+      "Q": 720,
+      "W": "1238/39",
+      "4680_W": 148560
+    },
+    "x6": {
+      "dimension": 6,
+      "lowest_weight": "4/5",
+      "charges_with_multiplicities": [
+        [
+          -9,
+          2
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          9,
+          2
+        ]
+      ],
+      "L": "1",
+      "P": "4/3",
+      "Z": "12/65",
+      "Q": 356,
+      "W": "452/39",
+      "4680_W": 54240
+    },
+    "y0": {
+      "dimension": 1,
+      "lowest_weight": "2/5",
+      "charges_with_multiplicities": [
+        [
+          0,
+          1
+        ]
+      ],
+      "L": "0",
+      "P": "2/5",
+      "Z": "0",
+      "Q": 0,
+      "W": "5/3",
+      "4680_W": 7800
+    },
+    "y1": {
+      "dimension": 7,
+      "lowest_weight": "8/15",
+      "charges_with_multiplicities": [
+        [
+          -8,
+          1
+        ],
+        [
+          -5,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "L": "1",
+      "P": "4/5",
+      "Z": "92/195",
+      "Q": 228,
+      "W": "308/39",
+      "4680_W": 36960
+    },
+    "y2": {
+      "dimension": 15,
+      "lowest_weight": "4/5",
+      "charges_with_multiplicities": [
+        [
+          -10,
+          1
+        ],
+        [
+          -8,
+          1
+        ],
+        [
+          -5,
+          2
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "L": "2",
+      "P": "8/3",
+      "Z": "56/13",
+      "Q": 472,
+      "W": "308/13",
+      "4680_W": 110880
+    },
+    "y3": {
+      "dimension": 2,
+      "lowest_weight": "1/5",
+      "charges_with_multiplicities": [
+        [
+          -2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "L": "0",
+      "P": "2/15",
+      "Z": "14/65",
+      "Q": 8,
+      "W": "34/39",
+      "4680_W": 4080
+    },
+    "y4": {
+      "dimension": 14,
+      "lowest_weight": "11/15",
+      "charges_with_multiplicities": [
+        [
+          -7,
+          2
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "L": "2",
+      "P": "8/5",
+      "Z": "14/3",
+      "Q": 312,
+      "W": "679/39",
+      "4680_W": 81480
+    },
+    "y5": {
+      "dimension": 6,
+      "lowest_weight": "2/5",
+      "charges_with_multiplicities": [
+        [
+          -4,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "L": "1",
+      "P": "2/5",
+      "Z": "10/13",
+      "Q": 36,
+      "W": "152/39",
+      "4680_W": 18240
+    },
+    "y6": {
+      "dimension": 2,
+      "lowest_weight": "1/5",
+      "charges_with_multiplicities": [
+        [
+          -4,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "L": "0",
+      "P": "2/15",
+      "Z": "4/65",
+      "Q": 32,
+      "W": "41/39",
+      "4680_W": 4920
+    }
+  },
+  "finite_cutoff_checked": true,
+  "charge_inequality_coefficients_checked": true,
+  "nonnegative_trace_certificate_checked": true,
+  "all_checks_passed": true
+}

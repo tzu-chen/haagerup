@@ -1,0 +1,132 @@
+Read-only kernel/user-journal evidence, inspected 4 October 2026
+==============================================================
+
+Scope: investigate memory notifications. No numerical job, host configuration
+change, process termination, or notification-setting change was performed.
+Only memory-related messages and relevant guard-unit start records were read.
+Counts below describe the retained journal at inspection, not live telemetry.
+
+Original cubic research window
+-----------------------------
+UTC: 2026-10-02 23:20:35 through 2026-10-03 05:20:35.
+America/Chicago (CDT, UTC-05): October 2 18:20:35 through October 3 00:20:35.
+
+The accessible journal contains 43,464 records in this interval, including
+56 kernel records and 40,601 user-journal records. The first accessible entry
+is 23:20:36.449910 UTC and the last is 05:20:33.463776 UTC. This is an
+available historical log, not an unavailable-log inference.
+
+No matching OOM, killed-process, allocation-failure, ENOMEM, low-memory,
+memory-pressure, memory-shortage, or systemd-oomd event was found in that
+window. This does not establish that instantaneous memory pressure was zero.
+
+Exact journal queries (each is read-only):
+
+journalctl --utc --no-pager --quiet --since '2026-10-02 23:20:35 UTC' --until '2026-10-03 05:20:35 UTC' -o json
+journalctl --utc --no-pager --quiet --since '2026-10-02 23:20:35 UTC' --until '2026-10-03 05:20:35 UTC' _TRANSPORT=kernel -o json
+journalctl --user --utc --no-pager --quiet --since '2026-10-02 23:20:35 UTC' --until '2026-10-03 05:20:35 UTC' -o json
+journalctl --utc --no-pager --since '2026-10-02 23:20:35 UTC' --until '2026-10-03 05:20:35 UTC' --grep='[Oo]ut of memory|[Oo][Oo][Mm]|[Mm]emory pressure|[Mm]emory shortage|[Mm]emory resource|[Mm]emory limit|memory-pressure' -o short-iso-precise
+journalctl --utc --no-pager --since '2026-10-02 23:20:35 UTC' --until '2026-10-03 05:20:35 UTC' --grep='[Aa]llocation failed|[Ff]ailed to allocate|[Cc]annot allocate memory|ENOMEM|oom-kill|oom_reaper|[Pp]ressure stall|[Ll]ow memory|[Mm]emory exhaustion|[Mm]emory exhausted' -o short-iso-precise
+journalctl --utc --no-pager --since '2026-10-02 23:20:35 UTC' --until '2026-10-03 05:20:35 UTC' -u systemd-oomd.service -o short-iso-precise
+
+The JSON streams were counted and their timestamp extrema summarized without
+printing unrelated messages. The user-journal memory query also returned no
+matches.
+
+Dating the cumulative counters
+------------------------------
+At inspection, user-1000.slice and user@1000.service memory.events each had
+oom=324, oom_kill=324, max=1836517. These counters alone contain no timestamps.
+The tool's emacs.service cgroup had oom=oom_kill=max=0.
+
+The current-boot kernel journal independently contains 324 kill notices,
+324 CONSTRAINT_MEMCG records, and 324 associated OOM-invocation records:
+
+  October 1, 23:00--23:59 UTC:   7 kills
+  October 2, 00:00--00:59 UTC:   2 kills
+  October 4, 17:00--17:59 UTC:  82 kills
+  October 4, 18:00--18:59 UTC: 115 kills
+  October 4, 19:00--19:59 UTC:  66 kills
+  October 4, 20:00--20:59 UTC:  50 kills
+  October 4, 21:00--21:59 UTC:   2 kills
+
+Thus nine precede the original research window and 315 occur on October 4.
+None is time-correlated with the original six-hour window.
+
+journalctl -b --utc --no-pager --quiet _TRANSPORT=kernel --grep='oom-kill:|[Oo]ut of memory:|[Kk]illed process|oom_reaper|invoked oom-killer' -o json --output-fields=__REALTIME_TIMESTAMP,MESSAGE
+
+October 4 affected workload and limits
+------------------------------------
+First kernel constraint event: 2026-10-04 17:00:04.021019 UTC
+                              2026-10-04 12:00:04.021019 CDT.
+Last kernel constraint event:  2026-10-04 21:37:26.187592 UTC
+                              2026-10-04 16:37:26.187592 CDT.
+The corresponding final kill notice is at 21:37:26.187601 UTC.
+
+All 315 kills concern process name lean, all have CONSTRAINT_MEMCG, and all
+occur in distinct research-guard-*.scope cgroups. Matching every killed
+cgroup name against the systemd unit-start record succeeded: 315/315 matches.
+Every command invokes:
+
+  /usr/bin/python3 /home/tzuchen/Codes/haagerup/lean/safe_lean.py --guarded [--build] TARGET.lean
+
+These are 305 distinct files, with 302 build-mode and 13 direct-check attempts:
+304 attempts under HaagerupIzumi/C8/Lattice, nine under tools/lattice_export/
+drafts, and two under HaagerupIzumi/C8/Theta. Seven files had two or three
+OOM-killed attempts; most affected files had one. No matched command was a
+research-guard OOM self-test.
+
+Configured cgroup reservation / MemoryMax, confirmed by kernel limits and
+unit-start metadata:
+
+  640 MiB: 301 kills
+  821 MiB:   1 kill
+ 2048 MiB:  10 kills
+ 4096 MiB:   3 kills
+
+All had limit_mib=6144 for the separate virtual-address cap. All 315 kernel
+reports show swap usage 0kB and swap limit 0kB. Cgroup usage was at its cap
+(one 640-MiB report rounded below 640 when converted to whole MiB).
+
+Systemd independently recorded 315 "The kernel OOM killer killed some
+processes in this unit" messages and 315 "Failed with result 'oom-kill'"
+messages. There were also 23 separate client-requested SIGKILL unit-cleanup
+messages; these are not added to the 315 OOM count.
+
+No memory-pressure/low-memory service message or host-wide memory snapshot
+was found in the October 4 search interval. The positive evidence establishes
+memory-cgroup limit exhaustion, not global host-RAM exhaustion. Process RSS
+and virtual size in kill lines are not interchangeable with charged cgroup
+memory usage, especially for shared file-backed pages.
+
+Exact queries feeding these summaries and cgroup-name joins:
+
+journalctl --utc --no-pager --quiet --since '2026-10-04 16:30:00 UTC' --until '2026-10-04 22:00:00 UTC' _TRANSPORT=kernel --grep='oom-kill:|[Mm]emory cgroup out of memory: Killed process|memory: usage|swap: usage' -o json --output-fields=__REALTIME_TIMESTAMP,MESSAGE
+journalctl --user --utc --no-pager --quiet --since '2026-10-04 16:30:00 UTC' --until '2026-10-04 22:00:00 UTC' --grep='Started research-guard-' -o json --output-fields=__REALTIME_TIMESTAMP,MESSAGE
+journalctl --user --utc --no-pager --quiet --since '2026-10-04 16:30:00 UTC' --until '2026-10-04 22:00:00 UTC' --grep='research-guard-.*([Oo][Oo][Mm]|[Kk]illed|[Ff]ailed)' -o json --output-fields=__REALTIME_TIMESTAMP,MESSAGE
+journalctl --utc --no-pager --quiet --since '2026-10-04 16:30:00 UTC' --until '2026-10-04 22:00:00 UTC' --grep='[Mm]emory pressure|[Ll]ow memory|[Pp]ressure stall|memory-pressure' -o json --output-fields=__REALTIME_TIMESTAMP,MESSAGE
+
+Three representative events
+---------------------------
+Only the host label is replaced by [host]. These excerpts are relevant
+kernel constraint/kill and unit-failure lines, not a full journal dump.
+
+821 MiB; direct check of HaagerupIzumi/C8/Theta/LatticeData.lean:
+2026-10-04T17:00:04.021019+00:00 [host] kernel: oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=user.slice,mems_allowed=0,oom_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/research-guard-1183031-4f21df4b5755d35f.scope,task_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/research-guard-1183031-4f21df4b5755d35f.scope,task=lean,pid=1183134,uid=1000
+2026-10-04T17:00:04.021035+00:00 [host] kernel: Memory cgroup out of memory: Killed process 1183134 (lean) total-vm:3668792kB, anon-rss:622160kB, file-rss:922820kB, shmem-rss:0kB, UID:1000 pgtables:60196kB oom_score_adj:200
+2026-10-04T17:00:04.079461+00:00 [host] systemd[3016]: research-guard-1183031-4f21df4b5755d35f.scope: Failed with result 'oom-kill'.
+
+640 MiB; build of HaagerupIzumi/C8/Lattice/S2Rel00.lean:
+2026-10-04T17:02:06.750215+00:00 [host] kernel: oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=user.slice,mems_allowed=0,oom_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/research-guard-1187794-e7d4d959280089e3.scope,task_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/research-guard-1187794-e7d4d959280089e3.scope,task=lean,pid=1187906,uid=1000
+2026-10-04T17:02:06.750229+00:00 [host] kernel: Memory cgroup out of memory: Killed process 1187906 (lean) total-vm:2656796kB, anon-rss:475308kB, file-rss:921304kB, shmem-rss:0kB, UID:1000 pgtables:48848kB oom_score_adj:200
+2026-10-04T17:02:06.781817+00:00 [host] systemd[3016]: research-guard-1187794-e7d4d959280089e3.scope: Failed with result 'oom-kill'.
+
+2048 MiB; build of HaagerupIzumi/C8/Lattice/S2SvOut2.lean:
+2026-10-04T21:37:26.187592+00:00 [host] kernel: oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=user.slice,mems_allowed=0,oom_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/research-guard-1633304-bf3626d855662ee8.scope,task_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/research-guard-1633304-bf3626d855662ee8.scope,task=lean,pid=1633430,uid=1000
+2026-10-04T21:37:26.187601+00:00 [host] kernel: Memory cgroup out of memory: Killed process 1633430 (lean) total-vm:4034684kB, anon-rss:1913072kB, file-rss:962108kB, shmem-rss:0kB, UID:1000 pgtables:51700kB oom_score_adj:200
+2026-10-04T21:37:26.244821+00:00 [host] systemd[3016]: research-guard-1633304-bf3626d855662ee8.scope: Failed with result 'oom-kill'.
+
+Interpretation: these October 4 events are actual terminated Lean jobs. The
+guard contained each job at its configured cgroup limit; that does not make
+the repeated failures benign or equivalent to admission-wait notifications.
+Queue-source/log review is recorded separately from this kernel evidence.

@@ -1,0 +1,88 @@
+% Draft only. Root may place this after the Cardy test, before the
+% nearby-rational-algebra inventory. No new exercise is needed.
+% Primary hypotheses checked directly in Dong--Ren--Xu1507.03306,
+% Section2 (V1)--(V4), Lemma4.7; categorical inputs in ENOmath/0203060,
+% Corollary8.14 and Proposition8.27. No calculation was executed.
+
+\subsection{A dimension obstruction for rational lattice orbifolds}
+\index{orbifold!weak integrality}
+
+The scalar-shell arguments above need detailed low-energy information.
+A different test uses only the finite category of defects, provided one
+specifies the chiral algebra that those defects preserve. It extends the
+pointed-lattice argument of Chapter~\ref{ch:cosets} to rational finite
+orbifolds, including their twisted sectors.
+
+Let $L$ be an even positive-definite lattice and $G$ a finite faithful
+group of unitary automorphisms of $V_L$. Put $W=V_L^G$. Assume that $W$
+is rational and $C_2$-cofinite, and that every irreducible $g$-twisted
+$V_L$-module, except the untwisted vacuum module itself, has strictly
+positive lowest weight. These are the hypotheses of the orbifold
+global-dimension theorem being used; finiteness of $G$ alone is not
+being offered as a proof of them. The theorem gives
+\[
+ \FPdim\Rep(W)=|G|^2\FPdim\Rep(V_L)=|G|^2|L^*/L|.
+\]
+The last equality follows because all lattice modules are invertible
+and have dimension one.
+
+\begin{proposition}[The retained rational-orbifold algebra matters]
+\label{prop:rational-orbifold-Haagerup}
+Assume the preceding orbifold hypotheses and a unitary rational full
+CFT described over $\mathcal C=\Rep(W)$ by a simple separable Frobenius
+algebra $A$, with the usual local sewing construction. Its
+$W$-preserving defect category cannot contain $\mathcal H_3$ as a
+full fusion subcategory.
+\end{proposition}
+\begin{proof}
+These defects form the fusion category
+$\mathcal D={}_A\mathcal C_A$. It is Morita equivalent to $\mathcal C$,
+so their Frobenius--Perron global dimensions agree. Therefore
+$\FPdim\mathcal D=|G|^2|L^*/L|$ is an integer. A fusion category with
+integer global Frobenius--Perron dimension is called
+\emph{weakly integral}; the corresponding dimension theorem says
+that every simple $X$ satisfies $\FPdim(X)^2\in\Z$.
+The Haagerup simple $\rho$ violates this necessary condition:
+\[
+ \FPdim(\rho)^2=d^2=\frac{11+3\sqrt{13}}2\notin\Z.
+\]
+A full fusion embedding preserves simplicity and these positive
+dimensions, giving a contradiction.
+\end{proof}
+
+The simplicity qualification is important: a sum of simple objects can
+have irrational squared dimension even in a weakly integral category.
+For a genuine unitary strong tensor action of $\mathcal H_3$, however,
+Proposition~\ref{prop:c-faithful-descent} already proves full
+faithfulness into a semisimple rigid target with simple unit. Thus
+sending $\rho$ to a reducible defect does not evade this particular
+Haagerup obstruction.
+
+\begin{example}[A finite-group center has noninvertible objects]
+Consider the untwisted group category $Z(\mathrm{Vec}_{S_3})$.
+Its simples are labeled by a conjugacy class $[g]$ and an irreducible
+representation $\pi$ of its centralizer; their dimensions are
+$|[g]|\dim\pi$. The identity class gives dimensions $1,1,2$.
+The transposition class has size three and centralizer $\Z_2$,
+giving $3,3$. The three-cycle class has size two and centralizer
+$\Z_3$, giving $2,2,2$. Consequently
+\[
+ \FPdim Z(\mathrm{Vec}_{S_3})
+ =1^2+1^2+2^2+3^2+3^2+2^2+2^2+2^2=36=|S_3|^2.
+\]
+Finite-group constructions can therefore produce noninvertible
+sectors while still obeying strong arithmetic restrictions. Weak
+integrality does not require every simple dimension to be an integer:
+the Ising dimensions $1,1,\sqrt2$ illustrate the distinction. Their
+squares remain integers, unlike the Haagerup value above.
+\end{example}
+
+The algebra $A$ may encode a non-diagonal pairing or a local extension;
+the proof is not restricted to the Cardy choice $A=\one$. It does
+require the proposed defects to preserve $W$ on both chiralities.
+Preserving only the total stress is weaker, and does not place a
+defect in ${}_A\mathcal C_A$. Nonrational radii or orbifolds, a new
+action breaking $W$, and asymmetric constructions without this
+specified rational category remain outside the argument. Conversely,
+within its stated framework the exclusion needs no extrapolated scalar
+gap, isolated doublet, or numerical OPE coefficient.

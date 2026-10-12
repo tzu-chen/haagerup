@@ -1,0 +1,49 @@
+"""Foreground, nonnumerical wait controller; every child uses safe_run.
+
+Retry only the launcher's exact no-child lock refusal. Never retry an
+executed numerical failure, remove a lock, or run jobs concurrently.
+"""
+from datetime import datetime, timezone
+import fcntl
+from pathlib import Path
+import signal
+import subprocess
+import sys
+
+DEADLINE = datetime(2026, 9, 30, 0, 23, 59, tzinfo=timezone.utc)
+REFUSAL = b'Refusing: another bounded numerical job holds the shared lock\n'
+COMMAND = [sys.executable, 'hi_cft_safe_run.py', '--limit-mib', '2048', '--',
+           'timeout', '--signal=TERM', '--kill-after=5', '315', sys.executable,
+           'hi_cft_20260929_chain_crossing_channels.py']
+
+
+def expired(*_):
+    raise TimeoutError('No safe launch slot before deadline margin')
+
+
+signal.signal(signal.SIGALRM, expired)
+attempt = 0
+while True:
+    remaining = (DEADLINE-datetime.now(timezone.utc)).total_seconds()-340
+    if remaining <= 0:
+        sys.exit('No numerical child launched: deadline margin reached')
+    signal.alarm(max(1, int(remaining)))
+    try:
+        with open('/tmp/haagerup_numerical.lock', 'a+') as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            fcntl.flock(lock, fcntl.LOCK_UN)
+    except TimeoutError as exc:
+        sys.exit(str(exc))
+    finally:
+        signal.alarm(0)
+    if (DEADLINE-datetime.now(timezone.utc)).total_seconds() <= 340:
+        sys.exit('No numerical child launched: deadline margin reached')
+    attempt += 1
+    log = Path(f'hi_cft_20260929_chain_crossing_channels_wait_attempt{attempt}.log')
+    with log.open('xb') as output:
+        child = subprocess.run(COMMAND, stdout=output, stderr=subprocess.STDOUT)
+    if child.returncode == 1 and log.read_bytes() == REFUSAL:
+        print(f'Attempt {attempt}: shared slot reacquired by another job; waiting.', flush=True)
+        continue
+    print(f'Launcher finished: exit={child.returncode}, log={log}', flush=True)
+    sys.exit(child.returncode)

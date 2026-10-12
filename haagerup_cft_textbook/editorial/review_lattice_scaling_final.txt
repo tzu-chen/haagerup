@@ -1,0 +1,284 @@
+Final hand review: finite-size scaling and overlap normalizations
+Reviewer: scope_lattice
+Scope: chapters/l02_scaling.tex, solutions/l02_scaling.tex, and the
+cross-chapter conventions used in chapters/l01_chain.tex and
+chapters/l03_overlaps.tex. Read-only review of live TeX and completed saved
+records; no numerical jobs, symbolic programs, or builds.
+
+RESULT
+
+The mathematical derivations pass. I found no wrong Ising coefficient,
+parity projection, velocity factor, stress normalization, thermal-moment
+factor, or contradiction with the overlap chapter. All six scaling
+exercises have matching solutions with the essential intermediate steps.
+There is one useful source-calibration clarification and one optional
+short-ring caveat below. Neither changes a quantitative result.
+
+1. RECOMMENDED CLARIFICATION: NAME THE SCALE OF THE MOMENTUM-ONE RECORD
+
+chapters/l02_scaling.tex:591-598 quotes 2.800, 2.846, 2.884 "in their
+prescribed conformal scale." These are correctly rounded saved values,
+but the lengths and calibration should be stated. They are L=9,12,15 and
+use the saved epsilon-descendant velocity, rather than the stress-gap
+velocity used in the preceding table and several later diagnostics.
+
+Exact provenance:
+  hi_cft_continuum_analysis_results.json:6-20
+    L=9, velocity_epsilon_descendant=0.8256400021115865,
+    Delta_first_invariant_spin_one=2.7998142246949196.
+  hi_cft_continuum_analysis_results.json:50-64
+    L=12, velocity_epsilon_descendant=0.9085520954008096,
+    Delta_first_invariant_spin_one=2.8464808283765177.
+  hi_cft_continuum_analysis_results.json:94-108
+    L=15, velocity_epsilon_descendant=0.9494413477230412,
+    Delta_first_invariant_spin_one=2.883817858044005.
+  hi_cft_noncompact_ground_audit.md:81-91 specifies the fully
+    Haagerup-invariant sector, stronger than intrinsic Z3 neutrality.
+
+Suggested replacement for the first two sentences:
+  "At L=9,12,15 the saved first fully Haagerup-invariant momentum-one
+  gaps have effective dimensions about 2.800,2.846,2.884, using the
+  saved epsilon-descendant velocity calibration. They do not display
+  the required threshold descendant near dimension one in the
+  observed regime."
+Keep the subsequent qualifications about slow convergence, control of
+the stress map, and absence of a general noncompact exclusion.
+
+2. OPTIONAL CLARIFICATION: EXTREMELY SHORT-RING CHIRALITY ALIASING
+
+chapters/l02_scaling.tex:498-500 is correct under its explicitly stated
+lattice-to-CFT mode assumption: a complex H_2 source creates one chiral
+stress state from the vacuum and does not acquire a factor of two.
+The Ising example already correctly explains at lines315-318 that the
+two opposite-chirality total momenta coincide modulo 2pi at L=4.
+An optional sentence at the general stress discussion could connect
+these observations:
+  "On a ring so short that the two Fourier labels coincide, such as
+  m=2 and m=-2 at L=4, the source momentum alone cannot establish this
+  one-chirality identification."
+Do not add a universal doubled normalization at L=4: the actual source
+matrix elements still have to be determined. The exact Ising gap ratio
+remains valid at L=4. The quoted Haagerup stress records begin at L=6.
+
+3. EXACT ISING BENCHMARK: PARITY, ENERGIES, AND SCALING
+
+The Hamiltonian uses Pauli matrices, lattice spacing one, and coupling
+J. The Jordan-Wigner definition with sigma^+ gives n=(1-sigma^z)/2.
+Its boundary condition c_(L+1)=-P c_1 is consistent with the bond
+identity and with physical NS-even plus R-odd Fock-space projection.
+The unprojected direct sum would double count the spin Hilbert space.
+At criticality the R zero mode can supply the required odd parity
+without changing the energy; it does not imply a second physical R
+ground state after projection.
+
+The dispersion is epsilon(k)=4J|sin(k/2)|. Thus the infinite-volume
+velocity is 2J. With x=pi/(2L), the displayed telescoping trigonometric
+sums give exactly
+  E_NS=-2J csc x,       E_R=-2J cot x.
+The expansion
+  E_NS=-4JL/pi-pi J/(6L)-7 pi^3 J/(1440 L^3)+O(L^-5)
+therefore gives vc=J and, after the independent dispersion calculation,
+c=1/2. The finite known-velocity Casimir estimate is
+  c(L)=1/2+7 pi^2/(480L^2)+O(L^-4).
+All coefficients in the chapter agree.
+
+The spin-family gap is E_R-E_NS=2J tan(x/2). Its dimension in the
+known velocity is 1/8+pi^2/(384L^2)+O(L^-4). The Perron-Frobenius
+argument assigning momentum zero to the ground state in each physical
+parity sector is sound: adjacent pair flips span the even bit changes
+within either fixed-parity configuration space, so the nonpositive
+off-diagonal matrix is irreducible there. The positive ground vector is
+translation invariant.
+
+The NS pair with momenta +/-pi/L is parity allowed and has
+  g_epsilon=8J sin x.
+It limits to weights (1/2,1/2), not a single chiral fermion. The pair
+pi/L,3pi/L is also parity allowed and has
+  g_T=4J(sin x+sin 3x)=16J sin x cos^2 x.
+Its total momentum is 4pi/L and its known-velocity dimension is
+  2-7pi^2/(12L^2)+O(L^-4).
+The Majorana identity L_-2|0>=(1/2)psi_-3/2 psi_-1/2|0> has norm
+squared 1/4=c/2. The sign and factor follow from
+T=-(1/2):psi partial psi: and fermion anticommutation.
+
+The projected continuum Hilbert space is correctly the diagonal Ising
+sum of vacuum, energy, and spin families. A single unprojected chiral
+fermion is not an additional local field in this bosonic periodic model.
+
+4. EXACT ISING CALIBRATIONS AND THEIR DIFFERENT BIASES
+
+The chapter consistently distinguishes
+  v=2J
+from
+  vhat_T(L)=L g_T/(4pi)
+           =2J (sin x/x) cos^2 x
+           =2J[1-7pi^2/(24L^2)+O(L^-4)].
+Consequently
+  Delta_epsilon^(v)=sin x/x
+      =1-pi^2/(24L^2)+O(L^-4),
+whereas
+  Delta_epsilon^(T)=2g_epsilon/g_T=sec^2 x
+      =1+pi^2/(4L^2)+O(L^-4).
+These use the same exact pair of finite-ring levels but approach from
+opposite sides. The calibration figure uses these same formulas.
+
+The discussion correctly treats this as a solved comparison model.
+Its power corrections do not establish an irrelevant exponent for the
+Haagerup chain, identify a unique perturbing operator, or remove the
+need for an actual scaling map in the latter problem. The later
+Haagerup epsilon label is explicitly separated from the Ising field
+name at lines764-766.
+
+5. MOMENTUM CONVENTIONS AND THE STRESS ESTIMATOR
+
+l01's translation convention and H_m=sum_j exp(-2pi i m j/L) h_j
+give U_tr H_m U_tr^-1=exp(2pi i m/L) H_m. This agrees with l02's
+H_2 -> omega(L_-2+bar L_2), and l03's
+H_+1 -> omega(L_-1+bar L_1), with omega=2pi v/L.
+Positive H_m raises the residual momentum by m in these conventions.
+Carrier momenta, residual conformal spin, and spin modulo the finite
+ring's momentum lattice are distinguished correctly.
+
+For a normalized stress state,
+  |M|^2=omega^2 c/2,       g_T=2omega,
+so c_hat=8|M|^2/g_T^2. The norm here is the extensive energy Fourier
+source. It is not the 1/L-averaged microscopic scalar source in l03.
+The book and solutions keep those definitions distinct.
+
+The improvement h_j -> h_j+B_(j+1)-B_j contributes
+  delta H_m=(e^(ik)-1) sum_j e^(-ikj) B_j.
+For fixed nonzero m and a nonvanishing scaling matrix element, it
+scales as L^-Delta_B. Thus a dimension-one current can contaminate a
+dimension-two energy-density source at the same L^-1 order. The
+solution properly retains selection-rule and fixed-m qualifications.
+
+The nonidentity-threshold discussion is also algebraically correct:
+c_eff=c-24h_0, norm(L_-1)^2=2h_0, and
+norm(L_-2)^2=4h_0+c/2. A controlled full level-two source weight returns
+c+8h_0 under the vacuum estimator, not c_eff. The need to sum a
+nonorthogonal/mixing descendant cluster is explicitly stated.
+For the stated cigar assignment k=4 gives c=5, h_0=1/8, c_eff=2,
+and this stress-weight diagnostic equal to six. The claim remains
+conditional and is not broadened to all noncompact theories.
+
+6. COMPLETED SAVED RECORDS AND THEIR SCOPE
+
+The numerical table in l02:509-512 matches
+hi_cft_stress_analysis_results.json:6-45:
+  L=6:  g=1.2719800476097936, M^2=1.1599491833954776,
+        c_hat=5.735461284212666;
+  L=9:  g=1.1533089599137778, M^2=.516954434464991,
+        c_hat=3.1092161869727732;
+  L=12: g=.9509087276876276, M^2=.2935693611268414,
+        c_hat=2.597305575142754;
+  L=15: g=.7938412469051794, M^2=.1893230991889815,
+        c_hat=2.4034011861215667.
+The source records select a state by its large stress overlap, not the
+lowest state in the sector. The book states this limitation.
+
+The L=18 continuation agrees with
+hi_cft_20261001_independent_stress_lanczos_N18.json:
+  :4351 residual=3.8295765591043466e-14;
+  :4352 full stress-source norm squared=.13845684234661476;
+  :4353 selected weight=.13214903296600805;
+  :4354 selected fraction=.9544420537569703;
+  :4366 gap=.6768446828683299;
+  :4399 stress velocity=.9695085928556489;
+  :4400 c_hat=2.3076818446086467.
+The chapter labels this a conditional finite result and does not use
+the tiny eigenpair residual as a proof of conformal-family assignment.
+
+The old illustrative extrapolations 1.9896726, 2.0586823, 2.1259277
+match hi_cft_stress_analysis_results.json:61,76,93. They are explicitly
+old L=9,12,15 prescriptions, with zero fit degrees of freedom for the
+two interpolation cases, rather than extrapolations incorporating L=18.
+
+The entropy values and earlier chord/cut fits match the previously
+audited hi_cft_rho_chain_results.json records; their unchanged exact
+source positions are retained in editorial/audit_lattice_saved_values.txt.
+The open H2 comparison now says S^z=0 versus S^z=1, rather than
+mistaking fixed magnetization for a total-spin quantum number.
+
+The modular-temperature values match the completed saved root nearest
+velocity one: L=6 has v=1.108558603284362,c=2.3124957670250486;
+L=9 has v=.9606613535249572,c=2.242145828682129;
+L=12 has v=.9618298092733933,c=2.197993852602467.
+The L=6 spectrum is complete, while the L=9,12 stored spectra are
+truncated. The text retains the important distinction between a small
+conditional partition-function tail and much larger potential errors
+in high thermal moments. It does not promote the fifth-derivative
+failure to a rigorous continuum exclusion.
+
+The light-field gap ratios, L=18 absolute gaps, finite multiplicity
+census, and source-visible singlet effective dimensions retain the
+correct qualifications documented in the earlier exact-source audit.
+Finite shell multiplicities do not certify the complete infrared
+operator space; a singlet near two does not establish exact marginality.
+
+7. THERMAL AND RESIDUAL EXERCISES
+
+The spectral residual estimate follows directly from a sum of positive
+weights, and the outside-cluster squared weight is bounded by
+||r||^2/gamma^2 only with an independently supplied separation gamma.
+The two-size Casimir solution has the correct overall minus sign and
+retains the difference of the per-site remainders divided by the
+inverse-square-size difference.
+
+The thermal convention is physical beta, beta_*=L/v. It matches r05's
+dimensionless b=2pi beta v/L, whose self-dual value is 2pi. With
+a=pi c/(6 beta_*), the first condition gives
+c=6 beta_* <g>/pi. The third condition is beta_* m_3=3m_2, and the fifth
+is 15 beta_*^2 m_2-25 beta_*^3 m_3+10 beta_*^4 m_4-beta_*^5 m_5=0.
+The Stirling coefficients, alternating derivative signs, and use of
+central moments rather than cumulants all agree. A single projected
+charge sector need not be modular S-invariant; exchanging cycles
+introduces a spatial twist. The solution explains this premise.
+
+8. CROSS-CHECK WITH l03 OVERLAPS
+
+No mismatch found in the following potentially sensitive interfaces:
+
+- The microscopic scalar source is averaged by 1/L. Its leading
+  vacuum-to-primary matrix element scales as (2pi/L)^Delta times the
+  source coefficient; ratios remove that coefficient. No velocity
+  factor is silently imported from the Hamiltonian Fourier source.
+
+- The normalized scalar daughter
+  L_-1^n bar L_-1^n phi/[n!(Delta)_n]
+  has vacuum-source amplitude (Delta)_n/n!, so the first daughter
+  amplitude is Delta. For an excited scalar source into a family of
+  weight h, the first relative daughter coefficient instead is
+  C Delta_beta/4. The important factor-four distinction is retained.
+  Norm-squared heat filtering gives q=exp(-4 tau omega), because the
+  paired daughter gap is 2n omega.
+
+- The literal cyclic-height joining map is a partial isometry on the
+  compatible coordinate subset. Its norm bound and fixed-parent
+  daughter-error bound are divided by the same vacuum overlap. This
+  does not insert a categorical sqrt(d) factor into the raw height
+  contraction. Normalized cups are separately and correctly defined.
+
+- The primary pants Jacobians act on normalized cylinder states; no
+  extra cylinder field factors should be appended. The vacuum
+  amplitude exponent is c/8, while its squared overlap exponent is
+  c/4. These use c_L=c_R=c and the full twofold-branch dimension.
+  The local branch geometry and fixed-shape scaling premises are
+  explicitly stated, rather than presented as exact finite-chain
+  identities.
+
+- The pants stress state is divided by sqrt(c/2), exactly as in l02.
+  The outgoing Schwarzian gives -B(x)sqrt(c/8) in the stated phase
+  convention, while its modulus is the phase-independent quantity.
+  The connected stress invariant c=8 B_12 B_13 B_23/K^2 has the same
+  normalization. Hermitian/self-conjugate and nonzero-pair assumptions
+  are present for the scalar connected quotient.
+
+- Current/adjoint pairing keeps the same holomorphic chirality. Its
+  equal-split identity-channel geometry gives 1/16. The singular-value
+  lower bound now carries the general shape factor, with 1/16 only
+  after the equal-split and matching-vacuum-shape specialization.
+  The current Ward formulas omega^2(Delta_J-1) and
+  omega^2(Delta_J+1) follow from weights
+  ((Delta_J+1)/2,(Delta_J-1)/2) and agree with the l01/l02 mode signs.
+
+No live source changes made.

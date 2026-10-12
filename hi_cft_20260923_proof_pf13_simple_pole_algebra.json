@@ -1,0 +1,35 @@
+{
+  "exact_A2_simple_pole_from_Jacobi_and_skew": true,
+  "requires_exact_first_row_upper_poles": true,
+  "c": "8/5",
+  "lambda": "14/473",
+  "coefficients": [
+    "1/3",
+    "448/1419",
+    "-896/1419",
+    "-224/1419",
+    "0",
+    "0",
+    "-34019/28380",
+    "9473/170280"
+  ],
+  "derived_b1b": [
+    "4/5",
+    "896/2365",
+    "-4032/2365",
+    "448/473",
+    "224/473",
+    "72527/35475",
+    "439/212850"
+  ],
+  "derived_b3b": [
+    "154824/2365",
+    "1792/473",
+    "23986/2365"
+  ],
+  "derived_b5b": "1150244/7095",
+  "scope": "Exact scalar verification of the displayed algebraic derivation, conditional only on the separately checked input OPEs.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_pf13_simple_pole_algebra.py": "c2b0db8e2f31e7a581ede05022b1045d69fac5550d3932e78e784d9e4568fd6a"
+  }
+}

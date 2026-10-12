@@ -1,0 +1,490 @@
+{
+  "format": "exact-Jacobi-Gate5-data-v1",
+  "status": "exact_Jacobi_data_passed_conditional_prerequisites",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_jacobi_check.py": "c35cffc67b884f382c6f90bdac09ba4d5746ba143884860b8231b493512d1848",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_saturation.py": "522b04757f76b58daf02b555fd36dd5fb89bdd8fa8354341f0c8311bb8ac97a7",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_lower_closure.py": "015ae0525f94219a64c8554c1df9fa05cd669135981dab70c535ed4e13ee1b1f",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_fast_field.py": "7e8151431ec87a24df39a325e5891561150fdacf237fb098c2d080486189be55",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_disk.py": "2c18f4118534cd15e695fd3d08cfcf20f429e2db3c993ef9b8ad7822c72765b9",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_exact.py": "342f8eb1803474efae310501ed56e10bc812347fd8b0fe1186405c5d015ac135",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact.py": "e9816e9b3cd30d092b45d6ce85297f49ec8431f2f6081d862dd2b41c17ebc865",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_exact4.py": "1dc0dee2a68b012b00c1dadc5329ba23b91820c5196d710e453561ec56197b7e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_grade3_span.json": "90424a1a748f377f4cd105022cb6401cc506215bf3ec368ff78cc6cfc413433d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_grade4_tol5.json": "6de0183c9813f69916779aa4ca730b1e9640e90eb1cc30e0837ad6ee496c50e2",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/manifest.json": "8fd8a3eedee018e6caa18cf773c49740265ede07e0ac705c3bfc79d1b2be84fd",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact_grade3.py": "6066fa2cbdf1babb35c2045941faae96d1ae4dea6a38c938dfcc3ac67cc96d04",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_fast_field_check.json": "565be5dddaa27dc2df4d0f17a202870186fb6e5c32359f074e31aab05c7da31d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-2_-2.json.gz": "9fc1df390da53961f341712ab60bcfbd2e5ec8bbfb7d695cc310034b8179b39f",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-2_0.json.gz": "6f20ef425b06f1dccc0b4dff1a2487a891517c962457a7c1bc7216bf17d2480e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-2_2.json.gz": "deac075fed1ba0b23bd024d309ba36901b8c18e2044b653e1882c209dc145041",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_-13.json.gz": "52b798f9cb70b2e64e9fac391eb63d27a9344c3486571590af27ccc432a6840d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_-11.json.gz": "5152d82d7434d84b099e4dc65ec176680ef077fc6b73e579e540901324fbe859",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_-9.json.gz": "56bef5f85a32784f9adf90c7aefe655d5b3419d90e639bdcc67dabc3a73f3e28",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_-7.json.gz": "c557fbe4cd9348917f120907d029fc1f4cb685f09e2ea9b6f4f955176d2aceda",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_-5.json.gz": "d13da9afd893a08f5cd194e3ba56db0dda6949014aa8f88a84f411bf3eea4d94",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_-3.json.gz": "e24012b52f164bb7e0741008485c35d25b92c0b6a596ffca1d3dd63f40144663",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_-1.json.gz": "58c79aa8d5502dfb22e3382e9eaeba0771cecd18b484b9f2ffe00feb205ab8b4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_1.json.gz": "1d7011b61d81f2161fcca0de7bfdafc34367a7d69cfbae29e399e7999e976ff0",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_3.json.gz": "fa30353b392b4c9c9d944cc4829140442f0a38668a155aaf06ff145d9017681a",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_5.json.gz": "faa3c889f0ed28f9fe6584e7a8d496f76204632b7920a6f28cb0377cbff27fb4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_7.json.gz": "08db0eefdaaa6ff7ebeb26f8a01ca5ba201a1fbdb1dd5cc8499915c7e908d204",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_9.json.gz": "66b0db90265b156f0fe71e116a4833e3bd41d3d96d58eccd145e009866923d72",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_11.json.gz": "1b56e38253c6c926ace05d44e015317d0b01326c306921610a0274e4f823ab0e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_-1_13.json.gz": "982bd9dfb0955364b7c704a2aff3ccef1adc79a41c7d7b41c071dac5de97c847",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_-12.json.gz": "77cdccc7c8a8a2de087132cd03b14b552c01ad73891eecbe7b97d0c273bfec4d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_-10.json.gz": "287b7d8b65b23307de6c94bfe0ae16454533d983e5e3d5822cf996a94cf56243",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_-8.json.gz": "9ab349d52398a415f5ce0a5e0464fea90ae602ae0bb1c4da1182c4057b2b845c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_-6.json.gz": "44363f568a031f62202f2e4558ac4daac864ce45dafa3d5b611c6acb22595fe6",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_-4.json.gz": "f942fc2bb0abfc7a51882a3791fbb0a0d3f237dc3e32c0494c5ebc64455b82fb",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_-2.json.gz": "03e94121543242f1b426f9ba1f611927f86cd099e9bb49bd3da3118b879d8469",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_0.json.gz": "d3ecb571b93b10fb881830b4584126bc459a55670336790763bb819ae2caa83d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_2.json.gz": "c9fce2f50db5e9191467cdb4419f22df60362507577603f40141161611575251",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_4.json.gz": "bb3832ebcae288e67b356cc6149b5e7f153c220f1cb56a6ec5b1a77969ba181e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_6.json.gz": "d93d8a0554121bd208d23b8f62453f11072697bd608e73dc52be49cb3717457b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_8.json.gz": "6a77d25bc9fab518b797a6804449202890581a8151845480a5ff6e2b5d2c2686",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_10.json.gz": "e5c4eed4d9cfbe4c6f728a5d7b79ddf73cc8f7115724f407bfbcea375866867c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_0_12.json.gz": "4a77ce47fa0bd55ddd3ad109ea28cee41972f282364b5b8ccc0f49757bff8174",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_-13.json.gz": "4e071c2dd6d2befc3d816905c645bae8a8392b9cc6d40591b60d9c8d9f4d52bd",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_-11.json.gz": "eff103d1dda7c31e119422a4a43fb383cc82f6859d89058e9546133828842a9e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_-9.json.gz": "8a998f324f8735d7df4455d18b74e293d1747176e819670ea834e5d5c1f3f1c5",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_-7.json.gz": "a5e86ffc6703655374c846fd262dbe3d107bd3b291edfd088c2428a07d99f634",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_-5.json.gz": "105685058b86347b77b5938e090912049d6d1c93d0010f8dbf5dbec8b7b3a0b9",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_-3.json.gz": "1e28b06c18540a6db80696a404fb0c161db66853cc0f8493e10a89d64d024613",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_-1.json.gz": "12b9780fa901e8f448310212a7fc08a98f50a748f539ef21049b8922b2b3c4e8",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_1.json.gz": "6d07dc6f2db62ad13069cc278fc8d318e04ab619f71d68e5de768300f983a216",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_3.json.gz": "7c487a105fa36405771379c698d5c56c968b664311cbf1ba7fefb2319b2ccc33",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_5.json.gz": "6dd2907f8a3ed677c284cab0690e3a30d18fb78fe8bb2f428cf11f5e371958d1",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_7.json.gz": "95fe4a6d2f52d0a2c2e2f3594c3aba8029f0e203e8ad59ee6ead1cd9507c4bee",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_9.json.gz": "7c39a65897e766cb44f94c8151b39f9dfdd795f600d21d524baff64c114fd162",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_11.json.gz": "c1b8a7bb2fdd050bc093e70c99cb8baf6cf23acc142c846d2012467153258528",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_1_13.json.gz": "273de3e46f0ffd33b8880711acd7df99c0cd55d7f6a02735f9fbd4929e9db0f5",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_2_-2.json.gz": "c4cde6ea43e91ca67641fc471bdf1d3a53ea98ff61288fc33165fa334e906008",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_2_0.json.gz": "8f709471b4df20cba28b08d450c70a24c9d3cd62b6a832493e1c319ec01db9c2",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade2_weight_2_2.json.gz": "f9343400fce10ae006baad91b8a89b90e891cf3002c7b7033b0011c1ea9e9b4c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_-12.json.gz": "12d3cd90bb61454038b9752e5e831e085534bc33f95654f0b52416babc28c5a3",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_-10.json.gz": "9fd785ecc6591f79195ebbffadbbbb7e1fd74cb5b927ad903bd27fb49d5a3d72",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_-8.json.gz": "e9418a5ff330711415b0489c6c8a03ad14824631a677314ed9785f408929b3fc",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_-6.json.gz": "d21e6153d96eca8e40e7940492bc0efb09e98fda7aa3c494db400fd5260630ed",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_-4.json.gz": "c82d373599e2ffcdbec3bb739afb9d2f4faa2da1f58ebec164b00299eeacfb09",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_-2.json.gz": "029ff0087a70341f8124b36a031221dc5e903a183b63ac09280e65c0470a0e7c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_0.json.gz": "29e87e107975929174a53e68918edff30e7941148bb3be4e9ec99b647cb15d23",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_2.json.gz": "b4b807caccf2cf1530abf326b9b5d234c69aeb4d9cf621633f1f8c493d860183",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_4.json.gz": "7eaac6eaca206773414950d0a67b52c40cd2f3a6b7c3d770bcacc5b01d4d16c6",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_6.json.gz": "24319dfc6786d11b7266dd1cfb4a694e7adbef889829c7c10513b7c8b0e676d0",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_8.json.gz": "96871e3fa7d3f0b44cd25e2888033e2fed25238b50c4a0982ef5e121199a3112",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_10.json.gz": "270fc8e1efcf6387f554bdafebe7fb6ec8685c998aca952c6cb691632f9eac42",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-2_12.json.gz": "8678d85dec6bca5d08ef3c3580206af4fbeda82906fe549241545e1684e05e9b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_-15.json.gz": "3f26dc693364fb1839b5cc44008e9ad508113ae88937f86723a9ff2a3de65aaa",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_-13.json.gz": "bf9bf3aa69a8410f68a52acdc76c429609fb50660cc46c16c205525fa2018faa",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_-11.json.gz": "aaf2e3b0a931c622419e59c3eafec846741820cd90aceb1d8841255dc2113a80",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_-9.json.gz": "4a2889a43ab5ba603c143960234cf7418c7f4fee69121f9160256f0fb9bde23a",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_-7.json.gz": "0dcc358c9e5d224a4f3babbc3c980f0aa7a59f2ede73a49d66a31e6aee3d8ff2",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_-5.json.gz": "d611a6e8976f64946c22a5ed3f4e37a4049a2cb0547d8721cd5157a87bb20f8e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_-3.json.gz": "cf6beed607b13566940df09c3e764e730e78a8b9110fda88715a44b91907cc5e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_-1.json.gz": "ba1075f510e39674d07fd9a153714fc1570dfdd2dd24a6999e8e7cc37c6eabd1",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_1.json.gz": "9c19028615a7316ce707008bc8a480418b5ee50370ee26968146930cc8d4ed01",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_3.json.gz": "a9be741074d9e5c4f20773a0f57efd89643ba80bbb681be9dc29461130065e62",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_5.json.gz": "0147fdcc35aa5637cc37e4e3f88b9b7b965d8180b42b3a59333d9fa8451692a1",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_7.json.gz": "b62391f8dd743d3646e2d193d2c8f81cbcd780c9d2623448cc264bce7a7e60f6",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_9.json.gz": "b461ca54cb8ffe74b710458accbd1ca7a031eaeb58c4d39bb2b529564e38fd5e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_11.json.gz": "73fcb1b63feaf179b1e0ad06b1f33aea45f0edffad02a4c3320f7180dcc7169d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_13.json.gz": "bfa8d5b9f6902df7553dad9c2fa7558ae9b6c9dd666dda42cf8215b8ce743d2b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_-1_15.json.gz": "81f9d57265c158bc4bd280581ce98389a57ad468145bf99d6d1a906028ecccba",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-18.json.gz": "23bc244ac5b94c03de28cfcee9104ebf8753e53c3ab77e210006eceb85f510cf",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-16.json.gz": "e42ced45ebf3f807b6f10fd84bd46efc134755f5378465300d7c0493b1195f75",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-14.json.gz": "4b80c53ee42156802e4296cb2f9fb60a91e4e94997d07ca83313d6abb4b61168",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-12.json.gz": "7e68064426f19fb4bd3b0cf155bd6738af2e2719839ceb8bfc353d01a7737ee9",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-10.json.gz": "cf090c30607273389f67d631b2e48989979e5752b5e28f50f6aa44373dc9e1f4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-8.json.gz": "4951a6cebf678129a44884d6c8f398d942862a29b74b5a9b2db461b8d58c8fb4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-6.json.gz": "5a87de29c1537160ee9b5338884e9f5e97f150801ab30091762fba399aef0945",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-4.json.gz": "8792d2c42234e5f020895da53dc7302d5eb7bb3b8466aea543f3098aae63c7e6",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_-2.json.gz": "4e6fba76245b4efba89c149d98127dbf3421e0789d9ff562c2932061d3d8e6a0",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_0.json.gz": "dfe28c8c8270571109451725129cd681f6f8259bad8f6a32aa6bc7797720a998",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_2.json.gz": "a116a1e0bf257a3ee50ac226d8576614d92a6e4e1166a5b118072af78475962c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_4.json.gz": "b9623da1bc0456c9fec65495142a733efae874b3c935f6a90343f564a1ec989f",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_6.json.gz": "204cddd68bd5392df5d52c936adfdac25dc053de2b79001f280124214956c017",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_8.json.gz": "7fe6267ad79fae86b78bf18599ba5b671c8ca9ae5dbc510161321530642bacd7",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_10.json.gz": "5454902192a4c45489a3614204482496b45e24ba81f4b07c2a4d457fc044baaf",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_12.json.gz": "4463b7033d6a1e06cef101e5f6d1e66fa9e1cf5aed19922633a4aa6175cdba7d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_14.json.gz": "1920e4349913841f1bb8893df77ad8e2098b4b4a3d1eab8066a934afae099582",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_16.json.gz": "ee715e369578e88b3dc594a97ef722abfc8b7221606252b3fd1f4140a6d7c05f",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_0_18.json.gz": "f40e6866edd33d8978f2a1f266bf1c4e1270a63cf95ac91a5162f832db662460",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_-15.json.gz": "52d0529af85cba9ef04aaedbb5eadd74e99aca2c47f8e6b713fc423c5c516360",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_-13.json.gz": "e5ff612d6a534c546e7cc1ff3e5f98d0ca4616d567085c1011f49cb3c191d5ac",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_-11.json.gz": "c55c16f741f425e0deb10af0dbc91fd286a5b231803615e411becddc297ad0f5",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_-9.json.gz": "1e7ab0ea1a8ff39a6d0e65847fda91124201dafcadb5360825c9263a85c6154d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_-7.json.gz": "22814698431a7d8cd2af76d1b9a7c0a2853ae0ca004d451c00513433d753d226",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_-5.json.gz": "90327fb28ae03e0962caccd78271464998050e93d6ec3940507d17353db24039",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_-3.json.gz": "5820c9808dfba6bf2a1c42a15a22582ea4bf9b1becd45842c7d9f7c390dd362f",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_-1.json.gz": "3507cbb63eeda029f8a8f00e23853bd03360440b8ae93ba6ca4974d01207387f",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_1.json.gz": "8167e6974501b321f16645cd37191598bf5397eb0048900f95030e9e2d344544",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_3.json.gz": "283f0c5582e8c6568540faa631d8d52f33d43228a0b60d1de662a4ba5a829cc1",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_5.json.gz": "79438cf53603b6bf1a0a4202434260c01a82f35e9873e7ee9ffa61c27b4d01d5",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_7.json.gz": "5373c863066fdf586792b2477c278a00a534216cddcfadca4676b9b889163c7b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_9.json.gz": "062cb4a986d5c2801081a7225710dc3a89e40938a2282ed8270f2f8316188c33",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_11.json.gz": "db01aa3dee232623cf272a0a6f4e754f85747c040900df273f04db67408a4840",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_13.json.gz": "ce711d9f091e7df7d03fa66fc8fcce9d7e1f1a3235098f1bf25104391aae8603",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_1_15.json.gz": "321bbdb46fd2e0c87d25c312ea83a5bc9c3cb6663d45adaa66ac5b01e10f7fc1",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_-12.json.gz": "105e1adeac76208ab1386df7fcea651a401dc53de6ac87e0024ef23983d3e7fa",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_-10.json.gz": "a23b7c31c7686d9ab2b5fbf3f98de1753b58d07d0a23b8c4ef104e5c8b263919",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_-8.json.gz": "77766cb6d6a323e8443265d9ee5dd8bac89b85c5b14864042f18aa82c175ac12",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_-6.json.gz": "e3a976f587b6f58d1ef0e257623001d41a07891e39cf1f07116117d4a6193c3d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_-4.json.gz": "a7eb2bdea4486b1154468f2d2382533f06601fdd5e11684f2846d7f9571ab32f",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_-2.json.gz": "ee9b4893ef7423f440b05138b17fd47708f50c5ea2e5c4eaf08de2239823e5eb",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_0.json.gz": "ca9b0bb58b8778e33ccf990f1c59e94b0c19ff84951459997a40a15de6c84f7b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_2.json.gz": "3e31cc9e34f6831d070cf1a97623701ba13b46b59d7a5665b89ec8b15ecd5485",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_4.json.gz": "261471d74c8b8a3fc823a8af4b048b338950bcf0423cf81318c78b465cd64176",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_6.json.gz": "0674d9c7641328c9d86a641457bb58456bfb8899aeb8facaf7c20ed56268cd3e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_8.json.gz": "e2d5fe723179a4590b95464af2a2710ad17e9a9b63c62836acc051f987bfbe83",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_10.json.gz": "a759ead9fb06a787babd17a2cb2bb89ffa305c4e3fea34e95a0c417bd599126c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/grade3_weight_2_12.json.gz": "4c67425de935c7fcb1a4bad5a6f05a050c6a85b654dd537a50abb4c9d178f469",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_lower_closure.json": "af6f1e7c94df6dc781ac9b674e7f21b8f048d79ea514d42e6f09e0e6116672d3",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact_check.py": "f66cc7a10e052531920214bac17b4ce393911d206d37fb46f5e4d4669a7ff94d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact_unitary_certificate.json": "9ac0e5ced2fc899f70216e49e37dec1f93faa85cecca8a456fe443ceb092c515",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_fast_field_check.py": "4905d5aafa4276fb0259d130bd5430bab624027e1002908a166eb1e39659ae91",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_saturation.json": "a9818c616d3d25e68f9a35f59b59441558ee4e1f8985353e0aa88c907d9b99d6",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_lower_closure.sqlite": "ad358c3c65a3d7e6c856a23423eb84f28cb27a6fa765a94dab987d3bbbcd595e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.py": "08dae8c0026b28170d7f0d13fd7272f62eee4ac655bfe206f61643611f1afcda",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.json": "cd3247f2919fd4b88531f8fcb528a34f4b51b245b3b408abb1d1c7c2274c2ae6",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.vectors.json.gz": "c8c3ce8b8ab361fabca3c54c3f77a234029bf9b62858f74b5991dc5ed73c1d4e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_flint_field_solve.py": "a34162592474e7bc12a211cc3e1fbf6638317ce7832e687dbd20cb3f17989bd4",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_h4_flint.py": "41f0222b5892e2ace3cb76eb313d64d7edfbfb8eb3a4ac8935bbe6982846b5de",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_flint_field_check.json": "2c7f9db4ad82e0244ed005afb61faf2263e82845aba95168775fa9688ed406da",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_strong_skip_v2.sqlite": "8b0dc383a49249db5d8b369300d0d8f145d9725461cb5a2c3e236af9ca682f08",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_h4_bulk.py": "6401adec66896cfd8526f9f629db9ee1b0654a184179579904d7aebca00f8e11",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4.py": "4857680860efabde0cb8a86bb93ac2f1fc822432829bdb5138cc9957d5eb9a52",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_exact_mode_cache.py": "aa4b96fea7e13a688d0d9b36d1481550882b13cc9127cfff50fc527d9e543a64",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_exact_cached.py": "8206f925b87769e7466210381b49ffa2b6872244812ae8aaf67c4910fcc2f7a9",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_integer_cached_v2.py": "663ca02887cf23cfaf6bde151b6f917d4290c2abec7a0623db4a5bb47211736e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_integer_residual.py": "782538a65c4a5ef3c9553a6463089a8dbf9b85d205e5a9ad2ca4d0ae100ee5e3",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_m1_m1.json": "6124e51176edd967ab87bfdbdb4d5439e2c6ac488e78c8ce0c82619eb2ce5d16",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_m1_m1.sqlite": "d2fdcda46fd81d4e69ed572a4bab02a2b964baa043a9ae895cd6bf65ea4df2f7",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_m1_p1.json": "83236f8718812a4c887fd30eedad94aded35701db3a304bb50641b525075c38e",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_m1_p1.sqlite": "999bea44ab3ac4a633a7acde7b361e9ff403e294e32bece574b7514c81f83db9",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m2.json": "aaba2de3486f89045fe98a6d6d7d78015cd6422612752bf54a7087661b9dd803",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m2.sqlite": "bfab06c0490a53c6b4cd0a2c530a0244b46eb7b7d53b2fe51d6aef9b6f4d9b68",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m4.json": "a40c38b85f8688a83826e59ed226a35a920613582c7fdeda5e0cf9ad2d23dd34",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m4.sqlite": "af8fe45e9931ef0708b5ec8966bf4aafda469d61cb22afe5ec789ed73a4ab6d9",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m6.json": "5fbf0c9a4ebfd24dca902cb4d1d875301ccd020d4379d978d282bd1f02e7a13d",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_m6.sqlite": "1419dbe8ea504317c4493325594860c376015428a22df487d1046a6a2015cbdf",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_p4.json": "4c6f5e98c095f6be0a6df2f921ece7070a8b17653717384b09a43627995dfd6c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_p4.sqlite": "9b7abfc6cccc3d89c1e4c9bfccb8e116a0c2ea0a07f001f386b9da9bf8489386",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_p6.json": "95eca92f699f03011d37d915e2ea0615c1467dc1f4ec1778313e6efa4fe2e477",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p0_p6.sqlite": "fd5488959f739d2b72f723f05f69bc47052c9679b4367a02dcab40300d887a24",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p1_m1.json": "1dd37fcbe457f68573ca24561364bcbc3f2ba853d5fd513ae21eacd4111f2ed2",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p1_m1.sqlite": "5668ddae885561176338d74f11e0e637e32420c45c13576f4c802217637ec3c6",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p1_p1.json": "b78af5ac823d967a1ad5afa2e70a0d122a102aba90fa33218d8b19b133d00573",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/block_p1_p1.sqlite": "24612107faab311d5397e786ff6639eb8130dd258dc6bd836e82d98e0139d5ac",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/summary.json": "235cb316c1b62177564dea9a69a21f95744c2743618ac97378e56f12633b9e20",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_bulk/targeted_policy.json": "a91a1367849a437ce6158c12e9d6d6c11b57d98e1ca74d8bab6dc5244a6fd989",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_h4_trim_v2.py": "8422c189b0c30850c32ca05858c119ebd0acb0bec91bcbb55337d21318a8a12c",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_exact_block.py": "43d8729ec6fcbe8efe0018d4d8af993e25472dd3b5a0a2d934a364efe0f4c283",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_strong_pilot.py": "bb671d53c63089db5314487366c60a5818232f0bd1d5ad406b526b918e3c14cd",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_strong_skip_v2.py": "0d8cdd67f1f2dac5e2c29c4b65a51584a8e6eb81da9ff79ea763a839587ac6a6",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/fields.json.gz": "c973a1fe249da0cd80e5999a8530d5e7f84d98eb598dae2ce6f2ece4f9a8e751",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_strong_skip_v2.md": "69a4c6a7d56d26d7ce2762715c8ee78b03a66a6a4c2a39d71c679265fdfa1c54",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4_trimmed_v2/block_p0_m2.sqlite": "3d3eec0e6ec2c1759ba65d24bd97c1b5da78457957dd067902447f7464c07871",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_charged_span.py": "551c07672b84dc564d33e9fc42a3048a13cc53d0fccd570e83d8449b52a42b54",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_charged_span.json": "6ca5d15b566186dd25f33073b11d18e2e3bd893bcb639699ed6e821e1fd20168"
+  },
+  "grade2_input_terms": 4104,
+  "primitive_decompositions": {
+    "3": [
+      [
+        "r2_000047",
+        [
+          "3/7",
+          "1/7",
+          "-2/7",
+          "1/14"
+        ]
+      ]
+    ],
+    "6": [
+      [
+        "r2_000076",
+        [
+          "307/1880",
+          "0",
+          "0",
+          "297/1880"
+        ]
+      ]
+    ]
+  },
+  "bottom_witnesses": [
+    {
+      "operator": 3,
+      "input": "r3_000910",
+      "input_weight": [
+        0,
+        -14
+      ],
+      "record_name": "A3_zero_r3_000910",
+      "record_sha256": "823f663bc1d46b519d3aabab686aba9015a09e974a3409e6d9ec2832e36a04f6",
+      "P4_minus_coefficient": [
+        "-593619/9831968",
+        "1349829/9831968",
+        "1399567/9831968",
+        "-1072149/9831968"
+      ],
+      "exact_residual_zero": true
+    },
+    {
+      "operator": 6,
+      "input": "r3_000899",
+      "input_weight": [
+        -1,
+        -9
+      ],
+      "record_name": "A6_zero_r3_000899",
+      "record_sha256": "d83f305150b7022be3a60d3d563c4c2c8cbeb04c977724d3dbd184af42d59930",
+      "P4_minus_coefficient": [
+        "-57967/42018",
+        "0",
+        "0",
+        "22295/798342"
+      ],
+      "exact_residual_zero": true
+    }
+  ],
+  "charged_pair_checks": [
+    {
+      "a": 0,
+      "b": 3,
+      "right_bottom_input": "r3_000910",
+      "a_zero_p_weight": [
+        0,
+        -10
+      ],
+      "beta_a_p_vanishes_by_weight": true,
+      "B_a_b_exact_quotient_zero": true,
+      "normal3_coefficients": [],
+      "lower_records": [
+        {
+          "id": 537,
+          "recipe": [
+            "weight_two",
+            0,
+            "r2_000047",
+            0,
+            3
+          ],
+          "record_sha256": "1d537673b501afb791544b1667fd35ab59efe8939a9b0afe8648841834598367"
+        }
+      ]
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "right_bottom_input": "r3_000910",
+      "a_zero_p_weight": [
+        0,
+        -6
+      ],
+      "beta_a_p_vanishes_by_weight": true,
+      "B_a_b_exact_quotient_zero": true,
+      "normal3_coefficients": [],
+      "lower_records": [
+        {
+          "id": 777,
+          "recipe": [
+            "weight_two",
+            1,
+            "r2_000047",
+            0,
+            3
+          ],
+          "record_sha256": "cd2e66df190734cfc6646c519bfd67fd45273e19380c40053cc8d3374ef3d324"
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "right_bottom_input": "r3_000910",
+      "a_zero_p_weight": [
+        0,
+        -6
+      ],
+      "beta_a_p_vanishes_by_weight": true,
+      "B_a_b_exact_quotient_zero": true,
+      "normal3_coefficients": [],
+      "lower_records": [
+        {
+          "id": 1017,
+          "recipe": [
+            "weight_two",
+            2,
+            "r2_000047",
+            0,
+            3
+          ],
+          "record_sha256": "add97c10743657b78c1819a84d54566eb3f7a7782c9cf193f2da3f038b70c72e"
+        }
+      ]
+    },
+    {
+      "a": 3,
+      "b": 6,
+      "right_bottom_input": "r3_000899",
+      "a_zero_p_weight": [
+        -1,
+        3
+      ],
+      "beta_a_p_vanishes_by_weight": true,
+      "B_a_b_exact_quotient_zero": true,
+      "normal3_coefficients": [],
+      "lower_records": [
+        {
+          "id": 1286,
+          "recipe": [
+            "weight_two",
+            3,
+            "r2_000076",
+            0,
+            3
+          ],
+          "record_sha256": "683df08adc3425ced5ffb0329b5cb929886075072657f9b3816ae49f56db4ba0"
+        }
+      ]
+    },
+    {
+      "a": 4,
+      "b": 6,
+      "right_bottom_input": "r3_000899",
+      "a_zero_p_weight": [
+        0,
+        -8
+      ],
+      "beta_a_p_vanishes_by_weight": true,
+      "B_a_b_exact_quotient_zero": true,
+      "normal3_coefficients": [
+        [
+          "r3_000141",
+          [
+            "0",
+            "-54087/138650",
+            "20899/138650",
+            "0"
+          ]
+        ],
+        [
+          "r3_000150",
+          [
+            "0",
+            "6853/110920",
+            "20779/110920",
+            "0"
+          ]
+        ]
+      ],
+      "lower_records": [
+        {
+          "id": 1526,
+          "recipe": [
+            "weight_two",
+            4,
+            "r2_000076",
+            0,
+            3
+          ],
+          "record_sha256": "25288f0d69d4d1da4ba356602d06f8167b69739c77a59425b212b7154c108e02"
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 3,
+      "right_bottom_input": "r3_000910",
+      "a_zero_p_weight": [
+        1,
+        -9
+      ],
+      "beta_a_p_vanishes_by_weight": true,
+      "B_a_b_exact_quotient_zero": true,
+      "normal3_coefficients": [],
+      "lower_records": [
+        {
+          "id": 1737,
+          "recipe": [
+            "weight_two",
+            5,
+            "r2_000047",
+            0,
+            3
+          ],
+          "record_sha256": "a78e3f2734dbcc2ff70b82091cc996fd6c86ad7ed2825eb978cd55291234e157"
+        }
+      ]
+    },
+    {
+      "a": 6,
+      "b": 3,
+      "right_bottom_input": "r3_000910",
+      "a_zero_p_weight": [
+        1,
+        -7
+      ],
+      "beta_a_p_vanishes_by_weight": true,
+      "B_a_b_exact_quotient_zero": true,
+      "normal3_coefficients": [],
+      "lower_records": [
+        {
+          "id": 1977,
+          "recipe": [
+            "weight_two",
+            6,
+            "r2_000047",
+            0,
+            3
+          ],
+          "record_sha256": "655cc2d0eb2e074b1b36177327c1ce32835aebc685c1597e3f80ae4200b0eb12"
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 3,
+      "right_bottom_input": "r3_000910",
+      "a_zero_p_weight": [
+        1,
+        -1
+      ],
+      "beta_a_p_vanishes_by_weight": true,
+      "B_a_b_exact_quotient_zero": true,
+      "normal3_coefficients": [],
+      "lower_records": [
+        {
+          "id": 2217,
+          "recipe": [
+            "weight_two",
+            7,
+            "r2_000047",
+            0,
+            3
+          ],
+          "record_sha256": "f723b17914d4d6866ccce433ebd31aff85d45e544851946d2740890a723a6787"
+        }
+      ]
+    }
+  ],
+  "all_eight_charged_pair_data_passed": true,
+  "all_eight_charged_families_derived": false,
+  "Gate4_certificate_authenticated": false,
+  "charged_pair_span_certificate_authenticated": true,
+  "neutral_family_derived": false,
+  "all24_independent_Gate5_channels": false,
+  "lemma_dependencies": [
+    "S2_0 N4 subset N5",
+    "N3_0 S3 subset N5",
+    "bottom Jacobi identity followed by current raising",
+    "charged-pair spanning gives neutral Jacobi identity",
+    "second neutral field from ambient stress minus affine stresses"
+  ],
+  "scope": "No unknown N4 upper bound or new grade5 mode. Charged conclusions use the audited Jacobi lemma and require Gate4. Neutral additionally requires charged-pair quotient spanning. Properness follows only with the separately audited finite strong-generation theorem.",
+  "seconds": 0.2503277739742771,
+  "peak_rss_KiB": 42424
+}

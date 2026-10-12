@@ -1,0 +1,97 @@
+% Editorial draft only. Suggested placement: after the proof of
+% Proposition prop:c-continuum, before the discussion of c=c_*.
+
+\begin{example}[The noncompact boson as a partition density]
+\label{ex:c-noncompact-boson}
+The compact boson gives a familiar way to obtain an inverse-square-root
+measure. Use the radius convention of Chapter~\ref{ch:cft},
+\[
+ p_L=\frac mR+\frac{nR}{2},\qquad
+ p_R=\frac mR-\frac{nR}{2},\qquad m,n\in\Z.
+\]
+For independently positive $\beta,\bar\beta$, its partition function is
+\[
+ Z_R(\beta,\bar\beta)=
+ \frac{1}{\eta(\beta)\eta(\bar\beta)}
+ \sum_{m,n\in\Z}
+ e^{-\beta p_L^2/2-\bar\beta p_R^2/2}.
+\]
+The eta factors count oscillators and include the two chiral Casimir
+shifts. We use the same dimensionless inverse temperatures and eta
+normalization as in Proposition~\ref{prop:c-continuum}.
+
+Take $R\to\infty$ at fixed positive temperatures. To check suppression
+of winding even when the two temperatures differ, put
+$s=\beta+\bar\beta$ and $a=\beta-\bar\beta$. Completing the square gives
+\[
+ \frac\beta2p_L^2+\frac{\bar\beta}2p_R^2
+ =\frac s2\left(\frac mR+\frac{anR}{2s}\right)^2
+  +\frac{\beta\bar\beta}{2s}n^2R^2.
+\]
+The momentum Gaussian sum is $O(R)$ uniformly in its shift, as follows
+by comparison with its Gaussian integral, or by Poisson summation.
+The second term therefore suppresses the entire $n\ne0$ contribution
+after division by $R$. For $n=0$, the spacing of $p=m/R$ is $1/R$,
+so the remaining sum is a Riemann sum:
+\begin{equation}
+ \begin{split}
+ \mathcal Z_\infty(\beta,\bar\beta)
+ &:=\lim_{R\to\infty}\frac{Z_R(\beta,\bar\beta)}R\\
+ &=\frac{\displaystyle\int_{\R}e^{-sp^2/2}\,dp}
+         {\eta(\beta)\eta(\bar\beta)}
+ =\frac{\sqrt{2\pi}}
+         {\eta(\beta)\eta(\bar\beta)\sqrt{\beta+\bar\beta}}.
+ \end{split}
+ \label{eq:c-noncompact-density}
+\end{equation}
+Dividing instead by the target-space circumference $2\pi R$ changes
+only the overall constant. Eta inversion verifies exact simultaneous
+modular inversion of this density.
+
+The surviving primary weights are diagonal:
+$h=\bar h=p^2/2$. Both signs of $p$ give the same Virasoro weight,
+and changing variables gives
+\[
+ \int_{\R} f(p^2/2)\,dp
+ =\sqrt2\int_0^\infty f(h)h^{-1/2}\,dh.
+\]
+Thus our normalization has $d\mu(h)=\sqrt2\,h^{-1/2}dh$ for $h>0$.
+The singularity at zero is integrable and carries no atom.
+At $c=1$, the Heisenberg Fock character is
+$e^{-\beta h}/\eta(\beta)$. It agrees with the irreducible Virasoro
+character at generic momentum. The exceptional degenerate weights
+$h=j^2/4$, $j\in\Z_{\ge0}$, form a countable set of measure zero
+for this continuous measure. Their distinct Virasoro decompositions,
+including the special vacuum relations at $p=0$, do not change the
+density integral.
+
+There is still no literal finite Hilbert-space trace in the noncompact
+limit. The zero-mode Hilbert space is $L^2(\R)$, and the heat operator
+has an infinite spatial-volume trace. Equation~
+\eqref{eq:c-noncompact-density} is the trace \emph{per unit target
+volume}, obtained from the compact regulator. The finite-radius
+$m=n=0$ sector contributes $1/R$ times its oscillator factor and
+disappears from this density. Its constant zero-mode wavefunction has no
+normalizable limit on the real line. A generalized zero-momentum
+state and the local identity operation remain meaningful, but there
+is no normalizable vacuum atom in the spectral measure.
+
+The continuum threshold is zero, so $c_{\rm eff}=1-24\cdot0=1$.
+For example at equal temperatures, eta inversion gives
+\[
+ \mathcal Z_\infty(\beta,\beta)
+ \sim\frac{\sqrt\beta}{2\sqrt\pi}
+       e^{\pi^2/(3\beta)}\qquad(\beta\downarrow0).
+\]
+The polynomial prefactor records the continuum; the exponential has
+the common chiral effective charge one.
+
+For $c>1$, the proposition forces the same Gaussian measure shape
+after the shift $h=A+p^2/2$, where $A=(c-1)/24$. This comparison
+explains the threshold density and again gives
+$c-24A=1$. The compact-boson limit itself still has $c=1$.
+Constructing a theory at $c=c_*$ would additionally require actual
+fields, OPEs, and compatible sewing and defect data. This Gaussian
+calculation supplies none of those additional data for a Liouville
+or Haagerup construction.
+\end{example}

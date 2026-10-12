@@ -28,8 +28,11 @@ Exact arguments from the proof of Proposition `clm:analytic-net-count`
   (`Lplus_isotropic`, `Lminus_isotropic`), transverse (`Lplus_inter_Lminus`), and for
   `t, t' ∈ L₋` one has `t ∈ t' + L₊` only when `t = t'` (`Lminus_coset_Lplus`), which is
   the support computation behind `Hom(t, t' ⊗ Q₊) = ℂ` or `0`.  Kernel `decide`.
-  The categorical statements (Tannakian subcategory, free-module induction, the count
-  `9/3 = 3` of simple `Q₊`-modules as an equivalence) are not formalized.
+  The categorical statements are formalized in `Category/`: free-module induction as a (monoidal)
+  equivalence (`RightMod.freeLminus_monoidalEquivalence_of_separable`), the count `9/3 = 3` of simple
+  `Q₊`-modules (`RightMod.netCount_simple_modules`, `Category/SimpleModulesLminus`), and the
+  identification with the untwisted `Vec_{ℤ/3}` (`untwisted_vec_equivalence_of_separable`), given the
+  pointed structure of the ambient category and the self-braiding input `hθ`.
 -/
 
 namespace HaagerupIzumi.C8

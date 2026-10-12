@@ -1,0 +1,55 @@
+% Draft only. Replace the opening paragraph of l06's final identification
+% section, then insert the construction input before "The constructive
+% algebraic results are valuable on their own." Keep the field-dictionary
+% discussion and gapped-vacuum-cluster criterion unchanged.
+At the completed October 5 research cutoff, the physical regular
+$H_3$ chain $H=-\sum P_\rho$ has no identified continuum CFT.
+Its data suggest a long nearly critical regime, with several
+central-charge diagnostics near two but substantial drift,
+separated light charge shells, and a detailed nontrivial mixed
+three-point tensor. They do not yet establish ultimate
+masslessness, a controlled exact central charge, or continuum
+OPE coefficients with error bounds.
+
+\begin{constructioninput}[What the latest finite comparisons add]
+The $64$-state Ward runs empirically cover all four predetermined
+descendant-energy windows at $L=12$ and the first three at $L=15$.
+The widest $L=15$ window remains truncated. Agreement between
+independent starts and recovery of known states support this
+coverage, but do not certify the entire low spectrum.
+Intermediate filtering improves several energy and norm
+comparisons while leaving operator-dependent amplitude
+discrepancies. A vector can align closely with the proposed
+Ward direction and still have the wrong normalized source
+amplitude; the descendant assignment must satisfy both tests.
+
+Two invariant local directions,
+\[
+ V_1=\sum_jP_{\one,j},\qquad
+ W=\sum_j\bigl(P_{\alpha\rho,j}-P_{\alpha^2\rho,j}\bigr),
+\]
+both couple strongly to the same chosen invariant-state candidate.
+Their stress-subtracted diagonal responses on four fixed states
+are not proportional at $L=12,15$: all six response minors are
+nonzero in the saved finite arithmetic. This tests a concrete
+common-operator model at those sizes. It does not establish two
+infrared primaries or two marginal couplings; subleading fields
+and finite-size corrections can produce two finite response
+directions even when only one field dominates in the infrared.
+Separate equal-energy comparisons in the two charged families
+show small decreasing deviations from proportionality over
+$L=9,12,15$, with nonzero individual discrepancies retained.
+They support further common-field tests but prove neither an
+exact operator identity nor a limiting OPE normalization.
+
+Two stationary module-based variational trials with height-fiber
+dimensions $18/54$ have visible charged height correlations
+through separation $513$. One has a pronounced period-three
+pattern; the other is nearly uniform at the longest measured
+distances. These are direct physical insertions, so they add
+information beyond auxiliary transfer eigenvalues. Both trials
+are finite-capacity local optimization endpoints. The observations
+do not establish an infinite-distance plateau, a ground-state
+vacuum count, or a bulk gap. An ordered finite-bond approximation
+can also occur when the exact chain is critical.
+\end{constructioninput}

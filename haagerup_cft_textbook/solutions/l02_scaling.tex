@@ -1,0 +1,136 @@
+\section{Solutions for Chapter~\ref{ch:scaling}}
+
+\paragraph{Exercise~\ref{ex:scaling-residual}.}
+\phantomsection
+\label{sol:ex:scaling-residual}
+Expand $u=\sum_nc_n|n\rangle$. Then
+$\|r\|^2=\sum_n|c_n|^2(E_n-E)^2$. This is at least the squared
+distance from $E$ to the spectrum, since the weights sum to one.
+If $\Pi$ projects onto the target cluster and all other eigenvalues
+are at least $\gamma$ from $E$, the same sum is at least
+$\gamma^2\|(1-\Pi)u\|^2$. Hence the unwanted squared weight is
+at most $\|r\|^2/\gamma^2$. The value of $\gamma$ is a separate
+spectral input.
+
+
+
+\paragraph{Exercise~\ref{ex:scaling-stress}.}
+\phantomsection
+\label{sol:ex:scaling-stress}
+For the vacuum, $L_n|0\rangle=0$ for $n\geq-1$ and
+$L_0|0\rangle=0$. Therefore
+\[
+ \|L_{-n}|0\rangle\|^2
+ =\langle0|[L_n,L_{-n}]|0\rangle
+ =\frac c{12}n(n^2-1).
+\]
+At $n=2$ this is $c/2$. The source amplitude squared is
+$(2\pi v/L)^2c/2$, whereas the stress gap squared is
+$(4\pi v/L)^2$. Their ratio is $c/8$, proving the estimator.
+The calculation assumes the source has the displayed Virasoro
+normalization; it does not establish the lattice-to-CFT map.
+
+
+
+\paragraph{Exercise~\ref{ex:scaling-improvement}.}
+\phantomsection
+\label{sol:ex:scaling-improvement}
+Put $k=2\pi m/L$ and use periodic indices. In the first sum
+below, relabel $i=j+1$:
+\[
+ \sum_j e^{-ikj}(B_{j+1}-B_j)
+ =e^{ik}\sum_i e^{-iki}B_i-\sum_j e^{-ikj}B_j.
+\]
+The phase is periodic because $e^{ikL}=1$, so the difference
+is $(e^{ik}-1)B_m$. It vanishes identically for $m=0$, as
+required for the unchanged total Hamiltonian.
+
+For fixed nonzero $m$, matrix elements of a scaling field
+$B_j$ of dimension $\Delta_B$ between normalized low-energy
+states scale as $L^{-\Delta_B}$. Summing its Fourier component
+over $L$ sites gives $O(L^{1-\Delta_B})$ when the relevant
+continuum matrix element is nonzero. Since
+$e^{ik}-1=2\pi i m/L+O(L^{-2})$, the improvement contributes
+$O(L^{-\Delta_B})$. A dimension-one current can therefore
+contribute at the same $L^{-1}$ order as the extensive stress
+Fourier mode. A field of dimension greater than one is
+subleading under this scaling assumption. Selection rules may
+make a particular matrix element vanish; dimension counting
+alone does not guarantee a nonzero coefficient.
+
+
+
+\paragraph{Exercise~\ref{ex:scaling-casimir}.}
+\phantomsection
+\label{sol:ex:scaling-casimir}
+Write
+$E_0(L)/L=e_\infty-A/L^2+r(L)$, with $A=\pi vc/6$.
+Subtracting the two sizes eliminates $e_\infty$ and gives
+\begin{align*}
+ (vc)_{\mathrm{two\ sizes}}
+ &=-\frac6\pi
+ \frac{E_0(L_1)/L_1-E_0(L_2)/L_2}
+ {L_1^{-2}-L_2^{-2}},\\
+ &=vc-\frac6\pi\frac{r(L_1)-r(L_2)}
+ {L_1^{-2}-L_2^{-2}}.
+\end{align*}
+Thus even small per-site remainders can matter when divided by
+the difference of two small inverse-square lengths. Two exact
+energies solve for two leading coefficients exactly, but do not
+estimate this remainder.
+
+
+
+\paragraph{Exercise~\ref{ex:scaling-fraction}.}
+\phantomsection
+\label{sol:ex:scaling-fraction}
+If $\phi$ is scalar of dimension $\Delta_\phi$, then
+$L_{-1}\phi$ has weights
+$(\Delta_\phi/2+1,\Delta_\phi/2)$ and spin one. A holomorphic
+current has weights $(1,0)$. The former has nonzero right weight
+whenever $\Delta_\phi>0$. A momentum-one level near
+$\Delta_\phi+1$ is therefore consistent with an ordinary
+descendant and is not evidence for a current. It could also mix
+with an unrelated finite-size primary.
+
+
+
+\paragraph{Exercise~\ref{ex:scaling-modular}.}
+\phantomsection
+\label{sol:ex:scaling-modular}
+Let $D=\beta\partial_\beta$, $a=\pi c/(6\beta_*)$, and
+$\mu_\beta=\langle g\rangle_\beta$. Directly differentiating
+$Z=e^{\beta a}\sum_j e^{-\beta g_j}$ gives
+\[
+ \frac{D Z}{Z}=\beta(a-\mu_\beta).
+\]
+Its vanishing at $\beta=\beta_*$ gives $a=\mu_{\beta_*}=\mu$,
+or $c=6\beta_*\mu/\pi$. At that point,
+$Z^{(j)}/Z=(-1)^jm_j$ for $j\geq2$, where the derivatives
+are in $\beta$ and the moments are centered. Repeated use of
+$D\beta^j=\beta^j(D+j)$ gives
+\begin{align*}
+ D^3&=\beta\partial_\beta+3\beta^2\partial_\beta^2+
+       \beta^3\partial_\beta^3,\\
+ D^5&=\beta\partial_\beta+15\beta^2\partial_\beta^2+
+       25\beta^3\partial_\beta^3\\
+ &\hspace{2em}+10\beta^4\partial_\beta^4+
+       \beta^5\partial_\beta^5.
+\end{align*}
+The first-derivative term vanishes. The third condition is
+$3\beta_*^2m_2-\beta_*^3m_3=0$, hence $\beta_*m_3=3m_2$.
+The fifth condition is
+\[
+ 15\beta_*^2m_2-25\beta_*^3m_3
+       +10\beta_*^4m_4-\beta_*^5m_5=0.
+\]
+These are derivatives of $Z$ itself, so the $m_j$ are central
+moments; replacing them by cumulants would require differentiating
+$\log Z$ instead. The odd
+derivatives vanish because modular $S$ acts by $t\mapsto-t$
+in $\beta=\beta_*e^t$. A charge projection inserts a symmetry
+operator into the torus trace. Exchanging cycles generally
+turns that insertion into a spatial twist; the projected
+partition function alone is therefore not $S$-invariant.
+
+

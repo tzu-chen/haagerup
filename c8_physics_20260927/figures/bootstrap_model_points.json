@@ -1,0 +1,38 @@
+{
+  "c_left": 8,
+  "c_right": 8,
+  "points": [
+    {
+      "theory": "Diagonal U",
+      "sector": "all scalars",
+      "Delta": "2/3",
+      "comparison": "ordinary scalar bootstrap"
+    },
+    {
+      "theory": "Full E8",
+      "sector": "all scalars",
+      "Delta": "2",
+      "comparison": "ordinary scalar bootstrap"
+    },
+    {
+      "theory": "Diagonal U",
+      "sector": "all center Verlinde lines invariant",
+      "Delta": "2",
+      "comparison": "distinct center symmetry"
+    },
+    {
+      "theory": "Full E8",
+      "sector": "left H3 invariant (V1)",
+      "Delta": "2",
+      "comparison": "AHKZ Figure2"
+    },
+    {
+      "theory": "Full E8",
+      "sector": "Vpi2 union Vsigma1",
+      "Delta": "2",
+      "comparison": "AHKZ Figure3"
+    }
+  ],
+  "curve_status": "No numerical exclusion curve is generated; these are exact model points.",
+  "source_figures": "https://arxiv.org/html/2512.08225v2"
+}

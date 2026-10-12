@@ -1,0 +1,82 @@
+\section{Solutions for Chapter~\ref{ch:sewing}}
+
+\paragraph{Exercise~\ref{ex:sewing-Ising}.}
+\phantomsection
+\label{sol:ex:sewing-Ising}
+For $0<z<1$, put $u=\sqrt{1+\sqrt{1-z}}$ and
+$v=\sqrt{1-\sqrt{1-z}}$. Then
+$u^2+v^2=2$ and $uv=\sqrt z$.
+Consequently
+$(u\pm v)/\sqrt2=\sqrt{1\pm\sqrt z}$.
+The common factor $[z(1-z)]^{-1/8}/\sqrt2$
+is unchanged by $z\mapsto1-z$, proving the Hadamard
+fusing relation. It mixes both blocks: the continued
+identity block is $(\mathcal F_1+\mathcal F_\epsilon)/\sqrt2$.
+Its absolute square therefore cannot equal
+$|\mathcal F_1|^2$ for all $z$.
+
+
+
+\paragraph{Exercise~\ref{ex:sewing-pairing}.}
+\phantomsection
+\label{sol:ex:sewing-pairing}
+Write $D=\left(\begin{smallmatrix}a&b\\\bar b&d\end{smallmatrix}\right)$.
+The relative phase of the two monodromy eigenvalues is $-1$.
+With the convention $G=\mathcal F^{\mathsf t}D\overline{\mathcal F}$,
+the condition $M^{\mathsf t}D\overline M=D$ forces $b=0$.
+For $D=\operatorname{diag}(a,d)$, the condition
+$F^{\mathsf t}D\overline F=D$ with the real Hadamard $F$ forces $a=d$.
+Thus $D=aI$. Positivity gives $a\ge0$, and a nontrivial
+theory with unit vacuum coefficient has $a=1$.
+Because $\mathcal F_\epsilon\sim\frac12z^{3/8}$,
+the energy-channel bulk coefficient is $1/4$, giving
+$|C_{\sigma\sigma\epsilon}|=1/2$.
+
+
+
+\paragraph{Exercise~\ref{ex:sewing-object}.}
+\phantomsection
+\label{sol:ex:sewing-object}
+An equivalence of full local theories preserves all
+correlators and their sewing structures. An algebra-object
+description specifies the chiral multiplication, unit, and
+compatibilities that enter the rational full-theory construction.
+Forgetting multiplication leaves an underlying module, which
+still remembers how the chiral algebra acts. Taking its
+character retains only energy multiplicities. Thus OPE
+products are lost on passing to the module, and most
+representation matrices are lost on passing to the character.
+An equality at a weaker level does not reconstruct the stronger
+one. In the rational construction, Morita equivalence of
+appropriate algebra objects can describe equivalent full
+theories even when the algebra objects are not isomorphic.
+
+
+
+\paragraph{Exercise~\ref{ex:sewing-coset}.}
+\phantomsection
+\label{sol:ex:sewing-coset}
+If infinitely many orthogonal states have energy $E\le E_*$,
+each contributes at least $e^{-\beta E_*}>0$ to the trace.
+The partial sums are unbounded for every $\beta>0$.
+A common vacuum-energy shift only multiplies this divergence
+by a finite positive constant. Positivity rules out cancellations;
+an alternating formal series is not a positive thermal trace.
+
+
+
+\paragraph{Exercise~\ref{ex:sewing-descent}.}
+\phantomsection
+\label{sol:ex:sewing-descent}
+One needs the chosen reduced Hilbert space and its left-right
+pairing, bounded or otherwise controlled line operators on
+that space, junction maps with the specified associator,
+compatibility with the local OPE, and sewing consistency.
+For a nontrivial branching extension, one also needs coherence
+with the complementary-sector multiplicities and the algebra
+object defining the reduction. A torus trace can detect
+spectra and certain line eigenvalue sums. It does not record
+the junction associator or all the local and higher-surface
+sewing identities.
+
+

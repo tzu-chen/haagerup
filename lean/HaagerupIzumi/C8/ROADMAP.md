@@ -1,6 +1,7 @@
 # What remains to formalize: scope and plan
 
-Hand-off of 1 October 2026 (evening, end of the second session).  This is the work list for the
+Hand-off of 4 October 2026 (end of the third session).  Earlier hand-off notes are kept in the
+work items below, each with its date.  This is the work list for the
 next sessions.  `README.md` has the module map, the arrow-status table and the trust boundary;
 `BRIEF.md` has the agent rules and Lean pitfalls.  Manuscript line numbers refer to
 `c8_expanded_20260929/haagerup_c8_expanded.tex`.
@@ -9,41 +10,45 @@ next sessions.  `README.md` has the module map, the arrow-status table and the t
 
 ### State at hand-off
 
-* **Size:** about 134 Lean files in `HaagerupIzumi/C8/`, about 55,000 lines (the lattice sample
-  data are a large part), about 2,650 theorems.
-* **Axiom audit:** `C8Axioms.lean` audits 119 headline theorems.  At the last green integration
-  build (19:47) all 117 then listed used only `propext`, `Classical.choice`, `Quot.sound`.  There is
-  no `sorry`, `axiom` or `native_decide` in the source tree.
-* **Build state — must be refreshed first.**  The integration build
-  `c8_build_all.py --skip-built --keep-going lean/HaagerupIzumi/C8Axioms.lean` was green at 19:47
-  (124 of 124 modules).  After that, from about 20:03, another session (`~/Codes/vcc`) held an
-  exclusive guard job and every queue job was refused, so these later changes are **not
-  re-verified**:
-  - `Lattice/Fock.lean`, `Modes.lean` (changed by W2; their direct dependants `Semantic`, `QA`,
-    `Model*`, `VOA`, `S2Data` were rebuilt at 19:50–19:52, but `Samples*`, `CentralCharge`, `Bench`
-    were not re-checked against them, and `Data`, `Roots`, `Dimensions`, `Relations` have unverified
-    docstring edits);
-  - the free-module files `Category/FreeModule*.lean` (audit-fix edits in progress when the queue
-    blocked; see the agent report in the session log);
-  - docstring-only edits by root in `ProofMap.lean` (`certDimensions`), `Data/Weights.lean`, and the
-    new registrations in `C8All.lean`, `C8Axioms.lean`.
-  So: restart the runner, run the integration build, fix whatever it reports, then continue.
-* **Drafts outside the source tree (written, never compiled):**
-  `lean/tools/lattice_export/drafts/` (W2: kernel replay of minimal generation),
-  `lean/tools/w6_drafts/` (W6 phase 2: `LatticeData`, `Eta8`, `QExpansion`),
-  `lean/tools/category_drafts/DoubleDual.lean` (monoidal double dual).
-* **Git:** session-start checkpoint `8c79800`; end-of-session checkpoint committed after this
-  hand-off (see `git log`).
+* **Size:** about 1,250 Lean files in `HaagerupIzumi/C8/` (most are generated kernel-replay files
+  under `Lattice/`), about 416,000 lines, about 8,350 theorems.
+* **Build and axioms:** the final integration build of 4 October (17:10 CDT) was green
+  (1257 modules).  `C8Axioms.lean` audits 320 headline theorems; all use only `propext`,
+  `Classical.choice`, `Quot.sound`.  There is no `sorry`, `axiom` or `native_decide` in the tree.
+* **Trust boundary:** `TRUST_BOUNDARY.md` lists every remaining hypothesis of the concrete proof map
+  (`ProofMapConcrete.concrete_proof_map`) and of its instance at the actual lattice VOA
+  (`ProofMapLattice.lattice_proof_map`), tagged and located (regenerate with
+  `python3 lean/tools/trust_boundary/tb_gen.py && python3 lean/tools/trust_boundary/tb_check.py`).
+* **Git:** nothing was committed in the third session (last commit `f3cfd4c`).  Commit a checkpoint
+  before new work.
+* **Queue correction after the 4 October notification audit:** the earlier 640-MiB fallback
+  and automatic budget doubling caused repeated contained OOM failures and have been removed.
+  Every request now needs a reviewed `--memory-mib N` estimate or an explicitly configured
+  `C8Q_MEMORY_MIB`. A resource failure stops admission and persists `MEMORY_STOP.json` across
+  restarts; `--keep-going` does not override it. Review the failed allocation path and revise
+  the design/estimate before archiving that stop record and restarting. Each attempt keeps
+  its own log. The previous queue and hand-off text are preserved in
+  `memory_notice_audit_20261004/before/`. Kernel-time growth observed in earlier probes is
+  evidence for sizing generated files, not permission to discover budgets by repeated OOMs.
+* **Drafts outside the tree:** `lean/tools/lattice_export/drafts/p4ctl/` (superseded single-merge
+  versions of the triplet controls, now all built in the tree; `pending/` is empty; deletable),
+  `lean/tools/lattice_export/drafts/` (probes),
+  `lean/tools/category_drafts/` (copies of compiled drafts and the superseded `VecZ3`; deletable).
 
 ### Environment
 
 ```sh
 export PATH="$HOME/.elan/bin:$PATH"      # elan is on PATH only in login shells (~/.zprofile)
 cd ~/Codes/haagerup
-C8Q_MAX_PARALLEL=2 python3 lean/tools/c8q.py runner &   # root only; stop: touch /tmp/haagerup-c8q-1000/STOP
-python3 lean/tools/c8_build_all.py --skip-built --keep-going lean/HaagerupIzumi/C8Axioms.lean
-python3 lean/tools/c8q.py build lean/HaagerupIzumi/C8Axioms.lean      # headline axiom report
+python3 lean/tools/c8q.py runner   # root-controlled foreground session
+# Submit from a separate root-controlled tool session, after allocation review:
+python3 lean/tools/c8_build_all.py --memory-mib REVIEWED_MIB --skip-built --keep-going lean/HaagerupIzumi/C8Axioms.lean
+python3 lean/tools/c8q.py build lean/HaagerupIzumi/C8Axioms.lean --memory-mib REVIEWED_MIB
 ```
+
+Replace `REVIEWED_MIB` with the estimate justified for that job or batch;
+it is not a literal argument or an invitation to raise a failed job's cap.
+The canonical machine policy remains the authority for admission and resources.
 
 Without the PATH line, every queued job fails at once with
 `No such file or directory: 'lean'`.
@@ -64,7 +69,8 @@ LD_PRELOAD="$PWD/$(ls .lake/safe-runtime/lean-stack-*.so | grep -v building | he
 
 Resource rules (from `AGENTS.md` and the machine policy):
 
-* Only `research-safe-run` admits jobs, at most two at a time.
+* Only `research-safe-run` admits jobs; concurrency and resource limits follow
+  the canonical machine policy in `~/.codex/AGENTS.md`.
 * Subagents never launch jobs; the root runs the queue.
 * A job that exceeds its budget is redesigned, never rerun blindly.
 
@@ -103,25 +109,35 @@ The new "stated generally" inputs (Verlinde formula, DLN II(iii), Ng–Schauenbu
 theorems; the lists of center simples with dimensions, twists and multiplicities (Ostrik's
 induction–codegree correspondence) remain external inputs.
 
+**Closed in the session of 4 October 2026:**
+
+| Item | Manuscript | Now a theorem | Remaining input |
+|---|---|---|---|
+| Theta identities after pole cancellation (`hcancel`) | 3615–3770 | `Theta.m{3,6}_{first,reverse}_obstruction_of_voa` (`Theta/ObstructionsOfVoa`; capstones `*_hcancel_of_voa`; SL₂ relations of the four Weil blocks `sl2_relations_*`, `gauss7_eq`) | VOA side: σ with finite image identified with the even Weil block (Zhu, DLN, Huang), the vector `V`, its `q`-expansion and polar data |
+| `End(1 ⊕ X ⊕ 2Y) ≅ ℂ ⊕ ℂ ⊕ M₂(ℂ)` (Schur part of `Ψ`) | 3794–3800 | `Fusion.endHIsoOfSimple`, `fusionAlgebraIsoOfSimple` (`Fusion/EndHSchur`) | Bischoff–Jones identification `BJIso` (external) |
+| Vacuum-top step on `N_[0]` | 2966–2970 | `VacuumTopZero.omega_zero_on_genZero`, `vacuum_splitting_of_tops` | `ComponentTops` (regularity of the factors, external) |
+| Free-module induction and the Tannakian step (`L_untwisted`) | 3320–3352 | `untwisted_vec_equivalence_of_separable` (monoidal equivalence `𝒞_{H/B} ≃` untwisted symmetric `Vec_{ℤ/3}`), with `freeLminus_monoidalEquivalence_of_separable`, `PointedCocycle.Lminus_untwisted_symmetric`, `AbelianCocycle.isTrivial_iff`, `GrMat` | pointed structure of `Rep(B)` (Dong), separability of `H/B` (connected étale), `hθ`: self-braiding trivial on `L₋` (Huang / Dong–Lepowsky) |
+| Coequalizer identification | 4900–4934 | `SeparableTensor.isSplitCoequalizer` (`Category/SeparableCoequalizer`) | — |
+| "9/3 = 3" | 4383–4406 | `RightMod.netCount_simple_modules(_of_separable)` | as for `L_untwisted` |
+| Pivotal uniqueness | 4109–4115 | `Fusion.IsHIRing.pivotalStructure_eq` (`Category/DoubleDual`, `Category/Pivotal`) | — |
+| Forgetful embedding, algebraic core | 3349–3352 | `ModuleTower.TowerMod.forget_isEquivalence`, `tensorComparisonIsColimit`, `tensorComparison_assoc` | the braided specialization to local modules |
+| Lattice certificates (modulo `FLMBorcherds`) | ledger 5236–5297 | `certDimensions_latticeD`, `minimalGeneration_latticeD`, `S2span_eq_closureSpace`, `certPCT_latticeD`, `pctModeCompatible` (unconditional), the 18 triplet controls in `P4Link`, `P4Left`, `P4RFRP`, `P4RFRZ`, `P4RFRM`, `P4RERP`, `P4RDerived`, `P4NonZero`; `S2savedSpan_eq`; `L2_P4_latticeDP`, `KS21_latticeDP` | see W2 |
+
 **Still hypotheses:**
 
 | Item | Manuscript | Lean form (file) | Arrow affected |
 |---|---|---|---|
-| Theta identities after pole cancellation | 3615–3770 | `hcancel` (`Theta/M3First`, `M3Reverse`, `M6First`, `M6Reverse`) | `L_notRankFour` (`m = 3, 6`) |
 | Lists of center simples (forgetful images, dimensions, twists) | 3392–3449, 3836–3913 | parameters of `TwistTraces`, `CenterDimension`, `M6BalancedModular` (Ostrik's induction–codegree correspondence) | `L_notRankFour`, `L_rankSixMoments` |
-| `K₀(𝓕)⊗ℂ ≅ ℂ ⊕ ℂ ⊕ M₂(ℂ)` (via Bischoff–Jones) | 3799 | `Ψ : FusionAlgebraIso` (`Fusion/Rank6Iso`) | `L_rankSixRing` |
-| `lem:vacuum-projective`: finite length from `C₂`-cofiniteness (Huang, Miyamoto); `L(0) - μ` injective on each composition factor for `μ < 0` | 2959–2961 | hypotheses `F`, `hstep` of `VacuumProjective.maxGenEigenspace_eq_bot_of_filtration` (`Regularity/NoNegativeWeights`; the consequence for lowering modes is `lowering_mode_eq_zero`) | `L_projectiveVacuum` |
-| `lem:vacuum-projective`: `ω_(0) v = 0` on `N_[0]` (vacuum-top step applied to `N_[0]`) | 2966–2970 | input of `omega_vacuumLike_section` (`CompatibleTop.vacuum_top_step` gives the algebra) | `L_projectiveVacuum` |
+| Bischoff–Jones `K₀(𝓕)⊗ℂ ≅ End(H)` | 3799 | `BJIso` (`Fusion/EndHSchur`) | `L_rankSixRing` |
+| `lem:vacuum-projective`: finite length from `C₂`-cofiniteness (Huang, Miyamoto) | 2959–2961 | hypotheses of `VacuumProjective.maxGenEigenspace_eq_bot_of_filtration` | `L_projectiveVacuum` |
 | Characters as `q`-series; finite image (DLN); `S_{0,c₁} ≠ 0` (Huang) | 4140–4159 | hypotheses of `CharacterUniqueness.haagerup_character_unique` | `L_characters` |
+| Self-braiding of `L₋` trivial (`hθ`) | 3335 | input of `untwisted_vec_equivalence_of_separable` | `L_untwisted` |
 | von Neumann algebra clause of `lem:analytic-graph-reduction` | 4455– | not stated (`Analytic/GraphReduction`) | `L_netCount` |
-| Categorical parts that are only partly formalized | §G, App. J | see the list below | `L_untwisted`, `L_boundaryUnitary`, `L_netCount` |
+| VOA-side data of the rank-four theta argument | 3615–3770 | fields of `ProofMapConcreteRankFourVoa` | `L_notRankFour` |
 
-The categorical parts in the last row:
-
-* the free-module adjunction and the Tannakian identification (`L_untwisted`);
-* the coequalizer identification (`Category/RelativeTensor`);
-* the "9/3 = 3" module equivalence (`Analytic/NetCount`);
-* pivotal uniqueness beyond the based ring (`Fusion/Pivotal`).
+Not formalized at all: the braided specialization of the module tower to local modules, Gui's
+unitarity (`L_boundaryUnitary`), and the module, net and unitary-category foundations behind the four
+open arrows `L_rational`, `L_reconstruction`, `L_annulus`, `L_boundaryUnitary`.
 
 ### 1.2 Certificates (the five `C_` inputs of `ProofMap`)
 
@@ -247,6 +263,28 @@ witness format).  Reference data: `lean/tools/lattice_export/` (`samples.json`, 
 
 ### W2. Certificate checker
 
+**Session 3 (4 October 2026).** Kernel replays about the lattice model, all modulo `FLMBorcherds`
+(measurements and the summary for the decision on option (b) in `Lattice/Benchmark.md` §5):
+minimal generation (`S2Link.minimalGeneration_latticeD`, `finrank_S2span`), the full closure of `S₂`
+(`S2Closure.S2span_eq_closureSpace`: all 644 operator images, the 120 that create the basis and
+the 524 closure relations), PCT (`PCTLink.certPCT_latticeD`, θ_g = eq:pct; and **θ_g is an
+antilinear automorphism of the model**, `PCTModes.pctModeCompatible`, unconditional: a
+sesquilinear reduction to basis states plus `ε(−α,−β) = ε(α,β)`), the actual triplet `P₄` in
+`latticeDP` (`P4Link`) with **all 18 current identities** (`P4Link`, `P4Left`; the `F_R`
+controls `P4RFRP`, `P4RFRZ`, `P4RFRM`; `eR_qp` in `P4RERP`; `eR_q0`, `eR_qm` from the `𝔰𝔩₂`
+bracket in `P4RDerived`), and the triplet vectors are nonzero (`P4NonZero`).  The saved `S₂` basis
+(`r2_*` rows of the record) spans exactly `S2span` (`S2Saved.S2savedSpan_eq`; lemma
+`toV4_combo_saved_mem` for importing records keyed to it), and `L(2)P₄ ⊂ S₂`
+(`P4RL2.L2_P4_latticeDP`: `ω_(3) q₊` replayed, `q₀, q₋` by `[L(2), F_R(0)] = 0`, `P4L2Red`), and
+`K_(1) S₂ ⊆ K` (`KS21.KS21_latticeDP`: 720 `modeQRF` checks, 320 s of kernel time, peak 1.41 GiB).  Faster evaluators `ModeQ`, `ModeQR`, `ModeHH` (24× on `ω_(3)`)
+with link theorems to `modeC`.  Written, not run: `gen_s3.py` (S₃ import), `p4_chunks.py` (shared
+chunking).  Open: `L(1)P₄ ⊂ S₃` (needs an `L1_qp` export by the root and `S₃` as a concrete
+submodule: about 140 of the 956 `r3_*` rows suffice for membership; about 15 queue-minutes of checks
+per vector), `P₄_prov` (not scoped), `S₂S₂1`, `S₂S₂2` (`120 × 120` products; by the `KS₂1` method
+about 10⁴ s of kernel time each, probe first), the S₃ import (3–4 queue-hours), the
+3,970 lower relations (10–50 queue-hours), Gates 4/5 (out of kernel reach): **decision needed on
+option (b)**.  An audit of the statement layer (4 October) found no errors.
+
 **Option (c) largely done (1 October 2026, evening):** `Lattice/QA` (`ℚ(√13,√-3)`), `Model`,
 `ModelGrading`, `ModelVacuum`, `VOA`, `S2Data`: the model on the sorted subspace
 `V = ValidState →₀ ℂ`, every field of `BorcherdsVertexAlgebra` except the Borcherds identity proved
@@ -282,6 +320,15 @@ to the trusted base.
 * **Size.** (c) about 1 session.  (a) several sessions; the number depends on the W1 benchmark.
 
 ### W3. Borcherds identity for `B` (FLM)
+
+**Session 3 (4 October 2026).** See `Lattice/W3_PLAN.md` (state-of-W3 summary).  `FLMInput` reduces
+to `FLMBorcherds` (`FLMReduce`; `L(0)`, `L(-1)` derived).  New: Good-vector calculus, Dong's lemma for
+all `n`, abstract local fields (`VertexAlgebra/BorcherdsReduce` … `BorcherdsFieldE`:
+`OpField.borcherds_of_local`, `OpField.dong`, `OpField.assoc_of_local`), and
+`Lattice/FLMBorcherdsGen`, `FLMBorcherdsIter`: `FLMBorcherds` follows from (1) closure under
+products (`IterClosed` or `AssocStep`; open: the bridge `ModeAlgebra → OpField`, Li's E-level
+locality, weak associativity of the E-action; 1.5–2 sessions) and (2) `Good` for the 24 generator
+fields (several sessions).  An audit (4 October) found no errors.
 
 * **Goal.** A `BorcherdsVertexAlgebra` instance for W1's `B`.
 * **What it takes.**
@@ -355,6 +402,13 @@ weight, rows `b_n b`, `b_n d`, `Data.claims`, `Data.all_pairs`, `pf13_reconstruc
 
 ### W6. Theta identities `hcancel` (closes the `m = 3, 6` rank-four cases)
 
+**Done (4 October 2026) up to VOA-side inputs.** Phases 0–5 of `Theta/W6_PLAN.md`; the four
+`Theta.*_obstruction_of_voa` theorems give the `dim U₁` formulas without `hcancel`; the SL₂ relations
+of the four even Weil blocks are proved (`WeilSanity*`), so the capstones are not vacuous through a
+sign slip; the `G₆⁻` capstone uses the 6-dimensional swap-symmetric block (`M6ReverseSym`).
+Remaining inputs (VOA side): σ, `V`, its `q`-expansion and polar data.  An audit (4 October) found
+all capstones sound.
+
 **Phase 1 done (1 October 2026, evening):** `Theta/PoissonPi` (multi-dimensional Poisson summation
 `tsum_eq_tsum_fourierPi`, via Fourier series on `UnitAddTorus d`), `PoissonGaussian` (Gaussian
 Fourier transforms for quadratic forms, `tsum_exp_qf_poisson`), `LatticeTheta` (`latticeTheta_S`,
@@ -382,6 +436,17 @@ the `S`-transformation of `η` (`ModularForm.eta_comp_eq_csqrt_I_inv`, `Discrimi
 
 ### W7. Link `ProofMap` to the concrete theorems
 
+**Session 3 (4 October 2026):** 26 of 30 `L_` arrows concrete (new: `L_branchB`, `L_branchH`,
+`L_rankFork`, `L_noSign`, `L_projectiveVacuum`, `L_rigid`, `L_notRankFour`, `L_netCount`,
+`L_untwisted`); simple modules indexed by an arbitrary type, identified with the twelve labels only
+under `modularData` (`ProofMapSimples`); `ProofMapLattice.lattice_proof_map` instantiates the proof
+map at the actual lattice VOA (264 Lean hypotheses at hand-off, against 288 for
+`concrete_proof_map`: the PCT node and 19 of the 26 `LowerCertificate` fields are theorems; the only
+new input is `FLMBorcherds`); `TRUST_BOUNDARY.md`.  Open: `L_rational`, `L_reconstruction`,
+`L_annulus`, `L_boundaryUnitary`.  Three audits (4 October): no logical errors; all should-fix items
+applied (missing premises, inputs supplying conclusion conjuncts are now documented, label forward
+dependency removed).
+
 **Done (1 October 2026, evening)** for 13 further arrows (17 of 30 in total; list in `README.md`):
 `ProofMapConcreteBoundary`, `Characters`, `PF13`, `Regularity`, `TopBound`, `Unitarity`, combined in
 `ProofMapConcrete` (`inputs_of_concrete`, `concrete_proof_map`).  Adversarial audit: no trivialized
@@ -403,6 +468,12 @@ modelled: module categories, tensor categories, nets): `L_projectiveVacuum`, `L_
 
 ### W8. Smaller items (each at most one session)
 
+**Session 3 (4 October 2026):** the categorical items are done (§1.1): double dual and pivotal
+uniqueness, free induction (monoidal, additive, essentially surjective, an equivalence, a monoidal
+equivalence), separable coequalizer, three simple modules, abelian 3-cocycles on ℤ/3, the cocycle of a
+pointed braided category, the braided monoidal equivalence `Vec_{ℤ/3} ≃` closure of `L₋`, and the
+module tower.  `Category/CATEGORY_PAPER_PASS.md` collects the resulting manuscript feedback.
+
 **Partly done (1 October 2026, evening):** the modular-data items (`Fusion/M6BalancedModular`,
 `TwistTraces`, `CenterDimension`) and, for `lem:vacuum-projective`, the module commutator relation,
 the generalized-weight-space version, the choice of `v` and the splitting with `L_N(-1) = ω_(0)`
@@ -419,27 +490,19 @@ partials (finite length itself is external: Huang, Miyamoto).
   and DLN Galois symmetry as hypotheses.  Derive the rows that `lem:m6-balanced` forces, and
   replace `hVerlinde` by these stated theorems.  `trace1`, `trace2` and `hcenter` would be
   handled the same way, with Ng–Schauenburg as the hypothesis.
-* **Categorical partials:**
-  - the free-module adjunction for `L_untwisted`: **done** (`Category/FreeModule*`: `freeAdjunction`,
-    `Hom_A(X⊗A, Y⊗A) ≃ Hom(X, Y⊗A)` linearly, free induction bijective on Hom-sets between the
-    three simples of `L₋` (`freeMap_bijective_Lminus`, with `Weights.free_induction_hom_count`),
-    every module a retract of a free module for a separable algebra (`retractFree`), and the
-    object-level isomorphism `(X⊗A) ⊗_A (Y⊗A) ≅ (X⊗Y) ⊗ A` (`freeTensorIso`)).  Remaining for
-    `L_untwisted`: naturality, unit and coherence of `freeTensorIso` and the monoidal structure on
-    `𝒞_A`; additivity of free induction; semisimplicity of `𝒞_A` (from separability) and of `Rep(B)`;
-    `ℓ ⊗ A ≅ A` for `ℓ ∈ L₊` and hence essential surjectivity; the existence of a separability
-    section for `H/B`; the facts behind `hSchur`, `hfusion`, `hA`; the Tannakian identification
-    (external: Deligne/EGNO); the embedding into `Rep(U)`;
-  - the coequalizer identification;
-  - the "9/3 = 3" equivalence;
-  - pivotal uniqueness: **done** except the double-dual monoidal functor (Mathlib has no pivotal
-    categories): `Category/MonoidalAutomorphism.lean` proves that a monoidal automorphism of
-    `𝟭 C` acts on simples by scalars `t` with `t_X t_Y = t_Z` whenever `Z → X ⊗ Y` is nonzero
-    (Schur), hence is the identity on a categorification of eq:rank6-ring
-    (`IsHIRing.monoidalAut_eq_refl`), and two monoidal isomorphisms `𝟭 ≅ F` agree
-    (`IsHIRing.monoidalIso_eq`).  The monoidal double-dual functor is drafted (not compiled; queue
-    blocked) in `lean/tools/category_drafts/DoubleDual.lean`; then `Category/Pivotal.lean` is a
-    short application of `monoidalIso_eq`.
+* **Categorical partials** (status 4 October 2026; the 1 October list is superseded):
+  - **done:** the free-module adjunction and free induction: additive, essentially surjective, an
+    equivalence, and a monoidal equivalence onto `𝒞_A` (`Category/FreeModule*`,
+    `UntwistedFromSeparable`); the separable coequalizer (`SeparableTensor.isSplitCoequalizer`);
+    the "9/3 = 3" count (`RightMod.netCount_simple_modules`); `hmul`, `hnondeg`, `hsplit` from
+    categorical properties (`TwistedGroupAlgebraOfUnit`, `NondegFromSeparable`, `LminusSplitting`);
+    the untwisted `Vec_{ℤ/3}` (`untwisted_vec_equivalence_of_separable`, modulo `hθ`); the double
+    dual and pivotal uniqueness (`Category/DoubleDual`, `Category/Pivotal`); the algebraic core of
+    the module tower (`ModuleTower*`);
+  - **remaining:** `hθ` (trivial self-braidings on `L₋`) from the lattice braiding; the facts
+    behind `hSchur`, `hfusion`, `hA`, `hss` (the pointed structure and semisimplicity of
+    `Rep(B)`); the tower comparison as a `Functor.Monoidal` (needs coequalizers in `Bimod B B`
+    preserved by `⊗_B`) and its braided specialization; the embedding into `Rep(U)` and `𝓕`.
 
 ### W9. Keep cited (not recommended now)
 
@@ -451,22 +514,28 @@ partials (finite length itself is external: Huang, Miyamoto).
 
 ## 3. Suggested order
 
-1. Restart the runner and run the integration build (section 0); fix stale or broken modules.
-2. Compile the parked drafts: W2 `S2*` (minimal generation as theorems about `latticeVOA`), W6
-   `LatticeData`, `Eta8`, `QExpansion`, and `DoubleDual` + a short `Category/Pivotal.lean`.
-3. **W6** phases 3–5 (`Theta/W6_PLAN.md`): λ, μ from the data, the representation σ (external
-   inputs named), full polar-part matching, coefficient extraction → `hcancel` as a theorem.
-4. **W2** (a), record by record (`Lattice/Benchmark.md` §5): closure relations of `S₂`, exports of
-   `S₃`, `q±`, PCT; **decision needed** on option (b) (compiled checker) for Gate 4 and the lower
-   relations.
-5. **W8**: the rest of `L_untwisted` (naturality/coherence, essential surjectivity); the
-   `lem:m6-projection`/`prop:m3-modular` moments from the modular centralizer.
-6. **W3** (Borcherds identity for the lattice model, i.e. `FLMInput`), long term.
+1. Health check and integration build (§0); commit a checkpoint.
+2. **Decision (user):** option (b), a compiled checker, for Gates 4/5 and the lower relations
+   (`Lattice/Benchmark.md` §5, "Summary for the decision on option (b)").
+3. **W2** with `modeQRF`: `L(1)P₄` (export `L1_qp` partial images first; `S₃` membership from the
+   named `r3_*` rows), `P₄_prov`; probe `S₂S₂1`/`S₂S₂2`; the full S₃ import after the decision.
+   (Done: the 18 triplet controls, the saved-`S₂` equality, `L(2)P₄`, `KS₂1`.)
+4. **W3:** the bridge `ModeAlgebra → OpField`, Li's E-level locality and weak associativity →
+   `IterClosed`; then `Good` for the 24 generators.
+5. ~~`PCTModeCompatible` for the model~~: done (`Lattice/PCTModes.lean`, 4 October, 16:22).
+6. Categorical: the braided specialization of the module tower; `hθ` from the lattice braiding once
+   lattice modules exist.
+7. The four open arrows need module-category, net and unitary-category foundations (long term).
 
 All compilation goes through the root queue; subagents never admit jobs.
 
 ## 4. Notes for the manuscript (collected so far)
 
+* `eq:pct` (lines 1975–1989) is correct as printed: no extra sign on `e^{−α}` is needed for the
+  bilinear cocycle.  That `θ_g` is an antilinear automorphism follows directly, with no appeal to
+  Dong–Lin, from `ε(−α,−β) = ε(α,β)`, `(−α,−β) = (α,β)` and the multiplicativity of `∏ c̃ᵢ^{αᵢ}`
+  (`Lattice/PCTModes.lean`).  A remark could say so.  Dong–Lin is still needed for positivity
+  (`E_cklw529`).
 * Larson, Theorem 1.3 (line 3936), is false as printed for `c = 1`: `1 = 3 - 2√1` is one root of
   unity.  Quote it for squarefree `c > 1`.
 * No citation is given for the regularity and unitarity of `K(𝔰𝔩₂,3)`, `K(𝔰𝔩₂,13)`, `A₁,₁` and
@@ -499,3 +568,16 @@ All compilation goes through the root queue; subagents never admit jobs.
   with equality only for `u ≤ 2`.
 * Twist traces (`lem:near-group-induction`): the manuscript's `ζ` is an existential primitive cube
   root; both choices are covered (`TwistTraces.neargroup_moments_gen`).
+* Categorical arguments (`Category/CATEGORY_PAPER_PASS.md`, 4 October; corrected after an audit):
+  correct, with unstated steps.  G1: the identification of the self-braiding on `L₋` with the
+  metric-group form `q` (line 3327, "metric group `(ℤ/3)², q`"; line 4383) needs a citation (DGNO
+  convention `q(x) = c_{x,x}`; Huang's `θ = e^{2πiL₀}`; or the Dong–Lepowsky lattice braiding).  G4
+  (3345–3346): "every free module is a sum of these three simple modules" uses that every homogeneous
+  component of the multiplication of `H/B` is nonzero, a standard but unstated fact (it also follows
+  from separability).  G5 (3346): the source of separability (connected étale; HKL, KO, DMNO) is not
+  cited.  G6 (3346–3348): "summand of a free module ⇒ sub-sum" follows from Krull–Schmidt (`End F_a =
+  𝕜`).  H2, P2: small wording fixes.  Shorter arguments: G3 (Eilenberg–Mac Lane for ℤ/3 instead of
+  Tannakian reconstruction), G7, H1, H3, P1, R1 (only the direct-ideal argument at 3806–3809).
+* Rank four, case `m = 2` (around line 3370): the cited Etingof–Gelaki–Ostrik results concern fusion
+  categories of dimension `pq`; check that the cited theorem covers the dimension-12 category there
+  (flagged by an audit, not checked against the paper).

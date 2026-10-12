@@ -1,0 +1,32 @@
+{
+  "format": "short-generation-coordinate-check-v1",
+  "witness": "c8_reviewability_20260927/minimal_generation_witness.json",
+  "witness_sha256": "16f894de5ad43b10bea5d0a5002f4f22b6edf7e63ddb4dc67f2f9996463aec6e",
+  "verifier_sha256": "a4403f27a536fba00380ccd7b3c3b2177e7bc5d268b22b2b909f02bb1894ed62",
+  "arithmetic_helper_sha256": "10e9a8a882b61e85a4c7b5eeb81b66372095b1de262a2bcc3d4e9c155b730a5d",
+  "basis_rows": 120,
+  "unit_triangular_independence": true,
+  "raw_elimination_normalization_identities": 120,
+  "normalized_in_raw_identities": 120,
+  "target_names": [
+    "e",
+    "highest_0",
+    "highest_1",
+    "highest_2",
+    "highest_3",
+    "highest_4",
+    "highest_5",
+    "highest_6",
+    "highest_7",
+    "omega"
+  ],
+  "target_expansions_checked_in_two_bases": 20,
+  "mode_recipe_DAG_shape_checked": true,
+  "mode_products_recomputed": false,
+  "vacuum_currents_omega_u_coordinate_formulas_checked": true,
+  "source_hashes_match": true,
+  "persistent_sparse_entries": 8442,
+  "seconds": 1.0179731590324081,
+  "peak_rss_KiB": 35900,
+  "scope": "Independent exact coordinate, rank and target-expansion verification. Mode-product recipes and the VOA interpretation remain separate inputs."
+}

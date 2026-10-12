@@ -1,0 +1,2910 @@
+{
+  "database_sha256": "ecc3908c8803e43624dff0549bb2d409e092f424b30fb1bd3f6ee1952dbba3a2",
+  "fixed_root_count_distribution": {
+    "72": 1920,
+    "78": 2240,
+    "84": 2160,
+    "126": 240,
+    "240": 1
+  },
+  "three_B_toral_element_count": 2240,
+  "sample_fixed_root_system_simple_roots": [
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "sample_fixed_root_system_components": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "sample_E6_arm_lengths": [
+    1,
+    2,
+    2
+  ],
+  "candidate_rows": [
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 1,
+      "abelian_rank": 3,
+      "factor_description": "A1_1 + U1^3",
+      "residual_c": "4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 2,
+      "abelian_rank": 3,
+      "factor_description": "A1_2 + U1^3",
+      "residual_c": "7/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 3,
+      "abelian_rank": 3,
+      "factor_description": "A1_3 + U1^3",
+      "residual_c": "16/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 4,
+      "abelian_rank": 3,
+      "factor_description": "A1_4 + U1^3",
+      "residual_c": "3",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 5,
+      "abelian_rank": 3,
+      "factor_description": "A1_4 + U1^3",
+      "residual_c": "3",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 6,
+      "abelian_rank": 3,
+      "factor_description": "A1_5 + U1^3",
+      "residual_c": "20/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 7,
+      "abelian_rank": 3,
+      "factor_description": "A1_6 + U1^3",
+      "residual_c": "11/4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 8,
+      "abelian_rank": 3,
+      "factor_description": "A1_10 + U1^3",
+      "residual_c": "5/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 9,
+      "abelian_rank": 3,
+      "factor_description": "A1_7 + U1^3",
+      "residual_c": "8/3",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 10,
+      "abelian_rank": 3,
+      "factor_description": "A1_8 + U1^3",
+      "residual_c": "13/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 11,
+      "abelian_rank": 3,
+      "factor_description": "A1_9 + U1^3",
+      "residual_c": "28/11",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 12,
+      "abelian_rank": 3,
+      "factor_description": "A1_11 + U1^3",
+      "residual_c": "32/13",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 13,
+      "abelian_rank": 3,
+      "factor_description": "A1_12 + U1^3",
+      "residual_c": "17/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 14,
+      "abelian_rank": 3,
+      "factor_description": "A1_28 + U1^3",
+      "residual_c": "11/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 16,
+      "abelian_rank": 3,
+      "factor_description": "A1_12 + U1^3",
+      "residual_c": "17/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 17,
+      "abelian_rank": 3,
+      "factor_description": "A1_13 + U1^3",
+      "residual_c": "12/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 18,
+      "abelian_rank": 3,
+      "factor_description": "A1_14 + U1^3",
+      "residual_c": "19/8",
+      "explicit_ambient_Cartan_completion_available": false,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 19,
+      "abelian_rank": 3,
+      "factor_description": "A1_20 + U1^3",
+      "residual_c": "25/11",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 21,
+      "abelian_rank": 3,
+      "factor_description": "A1_29 + U1^3",
+      "residual_c": "68/31",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 23,
+      "abelian_rank": 3,
+      "factor_description": "A1_21 + U1^3",
+      "residual_c": "52/23",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 25,
+      "abelian_rank": 3,
+      "factor_description": "A1_30 + U1^3",
+      "residual_c": "35/16",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 28,
+      "abelian_rank": 3,
+      "factor_description": "A1_35 + U1^3",
+      "residual_c": "80/37",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 33,
+      "abelian_rank": 3,
+      "factor_description": "A1_60 + U1^3",
+      "residual_c": "65/31",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 93,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_1 + U1^0",
+      "residual_c": "6",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 94,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_2 + U1^0",
+      "residual_c": "11/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 95,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_3 + U1^0",
+      "residual_c": "26/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 96,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_3 + U1^0",
+      "residual_c": "26/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 97,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_4 + U1^0",
+      "residual_c": "5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 98,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_4 + U1^0",
+      "residual_c": "5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 99,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_5 + U1^0",
+      "residual_c": "34/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 100,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_6 + U1^0",
+      "residual_c": "19/4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 101,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_10 + U1^0",
+      "residual_c": "9/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 102,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_7 + U1^0",
+      "residual_c": "14/3",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 103,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_8 + U1^0",
+      "residual_c": "23/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 104,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_9 + U1^0",
+      "residual_c": "50/11",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 105,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_11 + U1^0",
+      "residual_c": "58/13",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 106,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_11 + U1^0",
+      "residual_c": "58/13",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 107,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_12 + U1^0",
+      "residual_c": "31/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 108,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_28 + U1^0",
+      "residual_c": "21/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 109,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_12 + U1^0",
+      "residual_c": "31/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 111,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_14 + U1^0",
+      "residual_c": "35/8",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 112,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_20 + U1^0",
+      "residual_c": "47/11",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 113,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_15 + U1^0",
+      "residual_c": "74/17",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 115,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_21 + U1^0",
+      "residual_c": "98/23",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 116,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_30 + U1^0",
+      "residual_c": "67/16",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 117,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_24 + U1^0",
+      "residual_c": "55/13",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 118,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_35 + U1^0",
+      "residual_c": "154/37",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 119,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_35 + U1^0",
+      "residual_c": "154/37",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 121,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_36 + U1^0",
+      "residual_c": "79/19",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 122,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_60 + U1^0",
+      "residual_c": "127/31",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 123,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_36 + U1^0",
+      "residual_c": "79/19",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 125,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_39 + U1^0",
+      "residual_c": "170/41",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 130,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_84 + U1^0",
+      "residual_c": "175/43",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 132,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_156 + U1^0",
+      "residual_c": "319/79",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 137,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_2 + U1^0",
+      "residual_c": "5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 138,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_2 + U1^0",
+      "residual_c": "5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 139,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_3 + U1^0",
+      "residual_c": "47/10",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 140,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_3 + U1^0",
+      "residual_c": "47/10",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 141,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_4 + U1^0",
+      "residual_c": "9/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 142,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_4 + U1^0",
+      "residual_c": "9/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 143,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_5 + U1^0",
+      "residual_c": "61/14",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 144,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_6 + U1^0",
+      "residual_c": "17/4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 145,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_10 + U1^0",
+      "residual_c": "4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 146,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_10 + U1^0",
+      "residual_c": "4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 147,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_7 + U1^0",
+      "residual_c": "25/6",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 148,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_8 + U1^0",
+      "residual_c": "41/10",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 149,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_11 + U1^0",
+      "residual_c": "103/26",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 150,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_11 + U1^0",
+      "residual_c": "103/26",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 152,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_28 + U1^0",
+      "residual_c": "37/10",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 156,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_14 + U1^0",
+      "residual_c": "31/8",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 157,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_20 + U1^0",
+      "residual_c": "83/22",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 158,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_29 + U1^0",
+      "residual_c": "229/62",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 162,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_35 + U1^0",
+      "residual_c": "271/74",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 163,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A1_32 + U1^0",
+      "residual_c": "125/34",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 170,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_3 + U1^0",
+      "residual_c": "22/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 171,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_3 + U1^0",
+      "residual_c": "22/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 172,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_4 + U1^0",
+      "residual_c": "21/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 173,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_4 + U1^0",
+      "residual_c": "21/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 174,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_5 + U1^0",
+      "residual_c": "142/35",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 175,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_6 + U1^0",
+      "residual_c": "79/20",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 176,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_10 + U1^0",
+      "residual_c": "37/10",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 177,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_7 + U1^0",
+      "residual_c": "58/15",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 178,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_8 + U1^0",
+      "residual_c": "19/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 179,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_9 + U1^0",
+      "residual_c": "206/55",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 180,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_9 + U1^0",
+      "residual_c": "206/55",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 183,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_12 + U1^0",
+      "residual_c": "127/35",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 184,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_28 + U1^0",
+      "residual_c": "17/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 185,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_10 + U1^0",
+      "residual_c": "37/10",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 187,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A1_13 + U1^0",
+      "residual_c": "18/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 197,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_4 + U1^0",
+      "residual_c": "4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 198,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_5 + U1^0",
+      "residual_c": "27/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        0,
+        2,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 199,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_6 + U1^0",
+      "residual_c": "15/4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        2,
+        1,
+        0,
+        2,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 200,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_10 + U1^0",
+      "residual_c": "7/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 201,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_8 + U1^0",
+      "residual_c": "18/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 202,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_9 + U1^0",
+      "residual_c": "39/11",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        0,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 203,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_11 + U1^0",
+      "residual_c": "45/13",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 204,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_12 + U1^0",
+      "residual_c": "24/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 205,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_28 + U1^0",
+      "residual_c": "16/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 206,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_20 + U1^0",
+      "residual_c": "36/11",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 207,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_21 + U1^0",
+      "residual_c": "75/23",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 208,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_30 + U1^0",
+      "residual_c": "51/16",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 209,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_35 + U1^0",
+      "residual_c": "117/37",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 210,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_36 + U1^0",
+      "residual_c": "60/19",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 211,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_60 + U1^0",
+      "residual_c": "96/31",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 212,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_84 + U1^0",
+      "residual_c": "132/43",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 213,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_156 + U1^0",
+      "residual_c": "240/79",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 216,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_8 + U1^0",
+      "residual_c": "18/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 217,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A1_9 + U1^0",
+      "residual_c": "39/11",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 224,
+      "abelian_rank": 0,
+      "factor_description": "A1_5 x A1_5 + U1^0",
+      "residual_c": "26/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 225,
+      "abelian_rank": 0,
+      "factor_description": "A1_5 x A1_10 + U1^0",
+      "residual_c": "47/14",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 226,
+      "abelian_rank": 0,
+      "factor_description": "A1_5 x A1_8 + U1^0",
+      "residual_c": "121/35",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 227,
+      "abelian_rank": 0,
+      "factor_description": "A1_5 x A1_11 + U1^0",
+      "residual_c": "302/91",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 228,
+      "abelian_rank": 0,
+      "factor_description": "A1_5 x A1_20 + U1^0",
+      "residual_c": "241/77",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 229,
+      "abelian_rank": 0,
+      "factor_description": "A1_5 x A1_35 + U1^0",
+      "residual_c": "782/259",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 230,
+      "abelian_rank": 0,
+      "factor_description": "A1_6 x A1_6 + U1^0",
+      "residual_c": "7/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 231,
+      "abelian_rank": 0,
+      "factor_description": "A1_6 x A1_10 + U1^0",
+      "residual_c": "13/4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 232,
+      "abelian_rank": 0,
+      "factor_description": "A1_6 x A1_7 + U1^0",
+      "residual_c": "41/12",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 235,
+      "abelian_rank": 0,
+      "factor_description": "A1_6 x A1_28 + U1^0",
+      "residual_c": "59/20",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 236,
+      "abelian_rank": 0,
+      "factor_description": "A1_6 x A1_10 + U1^0",
+      "residual_c": "13/4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 239,
+      "abelian_rank": 0,
+      "factor_description": "A1_10 x A1_10 + U1^0",
+      "residual_c": "3",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 241,
+      "abelian_rank": 0,
+      "factor_description": "A1_10 x A1_11 + U1^0",
+      "residual_c": "77/26",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 245,
+      "abelian_rank": 0,
+      "factor_description": "A1_10 x A1_14 + U1^0",
+      "residual_c": "23/8",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 252,
+      "abelian_rank": 0,
+      "factor_description": "A1_7 x A1_8 + U1^0",
+      "residual_c": "49/15",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 253,
+      "abelian_rank": 0,
+      "factor_description": "A1_7 x A1_9 + U1^0",
+      "residual_c": "106/33",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 256,
+      "abelian_rank": 0,
+      "factor_description": "A1_8 x A1_8 + U1^0",
+      "residual_c": "16/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 257,
+      "abelian_rank": 0,
+      "factor_description": "A1_8 x A1_28 + U1^0",
+      "residual_c": "14/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 258,
+      "abelian_rank": 0,
+      "factor_description": "A1_8 x A1_29 + U1^0",
+      "residual_c": "433/155",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 260,
+      "abelian_rank": 0,
+      "factor_description": "A1_8 x A1_32 + U1^0",
+      "residual_c": "236/85",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 262,
+      "abelian_rank": 0,
+      "factor_description": "A1_9 x A1_28 + U1^0",
+      "residual_c": "151/55",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 268,
+      "abelian_rank": 0,
+      "factor_description": "A1_12 x A1_28 + U1^0",
+      "residual_c": "92/35",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": null,
+      "simultaneous_full_current_fixed_certificate": false
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 372,
+      "abelian_rank": 4,
+      "factor_description": "A3_1 + U1^4",
+      "residual_c": "1",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 376,
+      "abelian_rank": 2,
+      "factor_description": "A1_1 x G2_1 + U1^2",
+      "residual_c": "11/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 377,
+      "abelian_rank": 2,
+      "factor_description": "A1_2 x G2_1 + U1^2",
+      "residual_c": "17/10",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 378,
+      "abelian_rank": 2,
+      "factor_description": "A1_3 x G2_1 + U1^2",
+      "residual_c": "7/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 379,
+      "abelian_rank": 2,
+      "factor_description": "A1_4 x G2_1 + U1^2",
+      "residual_c": "6/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 483,
+      "abelian_rank": 3,
+      "factor_description": "A2_1 x A2_1 + U1^3",
+      "residual_c": "1",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 492,
+      "abelian_rank": 1,
+      "factor_description": "A1_1 x A3_1 + U1^1",
+      "residual_c": "3",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 493,
+      "abelian_rank": 1,
+      "factor_description": "A1_2 x A3_1 + U1^1",
+      "residual_c": "5/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 494,
+      "abelian_rank": 1,
+      "factor_description": "A1_2 x A3_1 + U1^1",
+      "residual_c": "5/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 495,
+      "abelian_rank": 1,
+      "factor_description": "A1_3 x A3_1 + U1^1",
+      "residual_c": "11/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 496,
+      "abelian_rank": 1,
+      "factor_description": "A1_4 x A3_1 + U1^1",
+      "residual_c": "2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 497,
+      "abelian_rank": 1,
+      "factor_description": "A1_5 x A3_1 + U1^1",
+      "residual_c": "13/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 498,
+      "abelian_rank": 1,
+      "factor_description": "A1_6 x A3_1 + U1^1",
+      "residual_c": "7/4",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 513,
+      "abelian_rank": 1,
+      "factor_description": "A2_1 x B2_1 + U1^1",
+      "residual_c": "5/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 514,
+      "abelian_rank": 1,
+      "factor_description": "A2_1 x B2_2 + U1^1",
+      "residual_c": "1",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 579,
+      "abelian_rank": 2,
+      "factor_description": "A1_1 x A1_1 x A1_1 x A2_1 + U1^2",
+      "residual_c": "1",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 593,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_1 x A1_1 x B2_1 + U1^0",
+      "residual_c": "5/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 600,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A1_1 x A1_4 x B2_1 + U1^0",
+      "residual_c": "3/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 611,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A2_1 x A2_1 + U1^0",
+      "residual_c": "3",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 612,
+      "abelian_rank": 0,
+      "factor_description": "A1_2 x A2_1 x A2_1 + U1^0",
+      "residual_c": "5/2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 613,
+      "abelian_rank": 0,
+      "factor_description": "A1_4 x A2_1 x A2_1 + U1^0",
+      "residual_c": "2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 614,
+      "abelian_rank": 0,
+      "factor_description": "A1_5 x A2_1 x A2_1 + U1^0",
+      "residual_c": "13/7",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 615,
+      "abelian_rank": 0,
+      "factor_description": "A1_8 x A2_1 x A2_1 + U1^0",
+      "residual_c": "8/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 616,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A2_1 x A2_2 + U1^0",
+      "residual_c": "9/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 617,
+      "abelian_rank": 0,
+      "factor_description": "A1_3 x A2_1 x A2_2 + U1^0",
+      "residual_c": "1",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        1,
+        0,
+        2,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 19,
+      "semisimple_database_number": 620,
+      "abelian_rank": 0,
+      "factor_description": "A1_1 x A2_1 x A2_2 + U1^0",
+      "residual_c": "9/5",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    },
+    {
+      "W1_dimension": 6,
+      "semisimple_database_number": 0,
+      "abelian_rank": 6,
+      "factor_description": " + U1^6",
+      "residual_c": "2",
+      "explicit_ambient_Cartan_completion_available": true,
+      "toral_three_B_witness_in_E8_coroot_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "simultaneous_full_current_fixed_certificate": true
+    }
+  ],
+  "simultaneous_certified_count": 136,
+  "scope": "Sufficient certificates only. A failed search is not an exclusion. The abelian currents can be chosen inside the recorded commuting Cartan torus. No Haagerup noninvertible action or chain-to-coset mapping is constructed."
+}

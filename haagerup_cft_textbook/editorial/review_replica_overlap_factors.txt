@@ -1,0 +1,176 @@
+Independent hand review: replica entropy, ordered cats, and vacuum pants overlap
+Author: scope_lattice
+Reviewed current l04:333–488 and l03:531–628, with r01 central-charge
+conventions and the adjacent stress-overlap normalization as cross-checks.
+No computations, imports, builds, or live-source edits.
+
+Verdict: PASS on all replica/overlap factors and the stated scaling scope.
+One small optional premise clarification for the elementary product cat is
+listed at the end. No coefficient or exponent correction is needed.
+
+1. Central-charge convention and the replica Schwarzian
+
+r01:87–90 explicitly uses c for each chiral copy: (c_L,c_R)=(c,c).
+l04:379 repeats that convention, and :389 correctly assigns chiral charge
+nc to the sum of the n replica stresses. Thus none of the formulas below
+use c as c_L+c_R.
+
+For g(w)=(w-u)/(w-v), hand differentiation gives
+  g'/g = (u-v)/[(w-u)(w-v)],
+  {g,w}=0,
+  {g^(1/n),g}=(1-n^(-2))/(2g²).
+The stress expectation on one sheet is c{z,w}/12. Summing n sheets gives
+  <T_total(w)>
+   = [c/24](n-1/n)(u-v)²/[(w-u)²(w-v)²].
+The normalized Ward identity for two conjugate chiral primaries gives
+the same rational function with coefficient h_n. Hence
+  h_n = c(n-1/n)/24,
+  hbar_n = c(n-1/n)/24,
+  Delta_n = h_n+hbar_n = c(n-1/n)/12.
+Equations l04:405–419 are correct. The sheet multiplicity n and the
+left-plus-right factor two are both present, exactly once.
+
+2. Interval, circle, and single-cut entropy
+
+A full scalar two-point function scales as ell^(-2Delta_n), not
+ell^(-Delta_n) or ell^(-4Delta_n). Therefore
+  log Tr rho_A^n = log C_n - [c/6](n-1/n) log(ell/a),
+and division by 1-n gives
+  S_n = [c/6](1+1/n) log(ell/a)+k_n.
+The n->1 limit is c/3, as written at l04:433.
+
+The cylinder Jacobians replace ell by
+  [L/pi] sin(pi ell/L),
+with the same coefficient and cutoff a. The text specifies the circle
+vacuum and additional finite-lattice corrections; it does not apply the
+vacuum answer indiscriminately to excited states.
+
+For a clustering massive vacuum with one diverging physical length, a
+half-line replica moment is one twist expectation. Its leading scale is
+  <T_n> ~ xi^(-Delta_n),
+so the regulated moment is A_n(a/xi)^Delta_n. This gives
+  S_n^half = [c/12](1+1/n) log(xi/a)+s_n+o(1).
+Thus the factor two between l04:428 and :452 is the difference between
+two entangling endpoints and one. It is not a second change in c.
+
+The required assumptions are visible: the full vacuum and cutoff at
+:378–384; physical continuation of the positive regulated density matrix
+at :431–434; clustering massive vacuum and one large length at :444–447.
+Most importantly, :456–458 treats replacement of physical xi by a
+finite-bond MPS transfer length as an additional hypothesis. It does not
+derive finite-entanglement scaling solely from the replica calculation.
+The subsequent component/entropy conventions must still be respected.
+
+The statement about analytic continuation is sound: integer replica
+values alone are not being declared an unrestricted uniqueness theorem.
+The actual positive-density-matrix powers supply the intended physical
+continuation. The S_infinity example additionally states the regime in
+which the largest Schmidt probability obeys the scaling law.
+
+3. Ising numerical coefficients
+
+Putting c=1/2 gives interval coefficients
+  (S1,S2,Sinfinity): (1/6,1/8,1/12),
+and single-cut coefficients
+  (1/12,1/16,1/24).
+All six entries at l04:461–465 are correct.
+Using an interval formula c/3 on a measured single-cut slope1/12 would
+indeed return c=1/4. This is a correct illustrative factor-two error.
+The conversion factors6,8,12 at l04:500–501 agree with the single-cut
+formula for arbitrary c.
+
+4. Cat entropy and the qutrit counterexample
+
+l04:354 now explicitly requires mutually orthogonal Schmidt supports
+on BOTH sides of the cut. This is sufficient for the stated formulas:
+write |Psi>=sum_j sqrt(w_j)e^(i theta_j)|psi_j>. Orthogonality on the
+traced-out side kills all cross terms. Orthogonality on the retained
+side makes rho_A the direct sum of w_j rho_j. Its eigenvalues are
+w_j p_(j,a), so
+  S1 = -sum_j w_j log w_j + sum_j w_j S1(rho_j),
+  Sn = log[sum_j w_j^n Tr(rho_j^n)]/(1-n).
+The text correctly reserves the Shannon-plus-weighted-average form for
+von Neumann entropy and gives the different general Renyi formula.
+
+For three equally weighted components with identical probabilities p_a,
+the full spectrum consists of p_a/3 repeated three times. Consequently
+Tr rho_cat^n=3^(1-n) sum_a p_a^n and Sn_cat=Sn_component+log3, including
+the largest-probability limit. A fixed additive term leaves a limiting
+logarithmic slope unchanged, whereas changing weights can affect finite
+secants. The qualifications at :473–479 are sufficient.
+
+The qutrit example is exact:
+  <Phi_j|Phi_k>=(1/3)sum_a zeta_3^[(k-j)a]=delta_jk;
+  (1/sqrt3)sum_j |Phi_j>
+    =(1/3)sum_a(sum_j zeta_3^(ja))|a,a>=|0,0>.
+Each component is maximally entangled, but their Schmidt supports overlap.
+This directly demonstrates the distinction between global orthogonality
+and the support hypothesis. It is a useful counterexample and contains
+no missing normalization factor.
+
+5. Vacuum pants exponent and the branch-geometry bridge
+
+The pants map at l03:539–540 has
+  z'(w)=[L/(2pi)](w-1+x)/[w(w-1)].
+At its joining point w*=1-x, z'=0 and
+  z''(w*)=-L/[2pi x(1-x)].
+Therefore, locally,
+  z-z*=-L(w-w*)²/[4pi x(1-x)]+higher powers.
+This is a twofold branch: one full circuit in the regular coordinate
+w covers angle4pi in z. The n=2 replica weights above are
+  h2=hbar2=c/16, Delta2=c/8.
+
+For the specified normalized periodic three-cylinder sewing, there is
+one such joining singularity in the amplitude. The geometric input is
+therefore A000~C(x)L^(-Delta2)=C(x)L^(-c/8). Squaring the amplitude
+gives exponentc/4 and hence
+  -log|A000|²=(c/4)log L-2log|C(x)|+...
+exactly as in l03:598–611. One must not square the twist dimension before
+squaring the overlap, or treat the amplitude as a two-twist interval
+correlator. The book does neither.
+
+The current wording also correctly distinguishes the local twist-weight
+calculation from its application to normalized pants: :607–608 labels
+that application as the geometric input, rather than pretending the
+interval Renyi moment is itself the pants amplitude.
+
+The bridge retains the essential scope:
+- periodic pants geometry, not an open-chain cut;
+- normalizable identity vacuum;
+- fixed nonzero split fraction0<x<1;
+- unit-normalized external cylinder vacua;
+- microscopic seams approaching the specified sewing;
+- no additional leading junction field.
+The vacuum normalization cancels extensive cylinder propagation factors;
+the surviving scale anomaly belongs to the joining geometry. Identity
+sewing with a nonzero leading coefficient is implicit in the displayed
+asymptotic. A different junction field or a nonidentity lowest state
+would require a different analysis.
+
+For identical shape and seam at L,L', C(x) cancels in the magnitude
+ratio. The prefactor-8 in l03:618 is consequently correct. The text
+retains finite-size/conical/bulk/logarithmic corrections and does not
+promote this two-size diagnostic to a determination of the physical
+chain's exact central charge.
+
+Adjacent check: dividing the outgoing Schwarzian contribution
+[-c/4]B(x) by the chiral stress-state norm sqrt(c/2) gives
+-B(x)sqrt(c/8), matching l03:654–657. This c/8 under a square root is
+compatible with, but conceptually distinct from, the twist Delta2=c/8.
+
+6. Optional small premise clarification
+
+At l04:311, the elementary example begins "three orthogonal ordered
+product states". Its intended GHZ branches are clear, but the later
+claim at :470–472 applies across any nontrivial cut. As the chapter
+itself emphasizes, global orthogonality alone does not imply both-side
+orthogonal supports.
+
+If desired, make the elementary example completely literal by replacing
+its first sentence with:
+  Let |o_j>=|j>^{tensor N}, j=0,1,2, where the one-site |j> are
+  orthonormal and alpha cycles them.
+Keep the following order-parameter sentence unchanged.
+Then the product-cat entropy and its exercise solution follow without
+any implicit homogeneity assumption. This is a premise clarification,
+not a correction to the intended example or any entropy exponent.

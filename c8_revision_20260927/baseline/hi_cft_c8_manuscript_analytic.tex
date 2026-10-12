@@ -1,0 +1,469 @@
+% Fragment: analytic comparison, unitary identification, and full theories.
+% No preamble.  The master document supplies theorem-like environments,
+% criticalnote/reviewnote, \artifact, \Rep, \Com, \FPdim, \Vec, and \HH.
+
+\section{From vacuum unitarity to complete unitarity}
+\label{sec:analytic-unitarity}
+
+The exact strong-generation certificates concern the actual subVOA
+$U\subset B\subset H=V_{E_8}$.  In particular, they establish
+$\dim U_1=6$ and $U\ne B$; they do not establish positivity on all
+modules or on fusion products.  We now separate those questions.
+\emph{Vacuum unitarity} is the positive invariant form inherited by the
+PCT-stable subVOA $U$.  \emph{Strong unitarity} means that all simple
+ordinary $U$-modules admit compatible positive invariant forms.
+\emph{Complete unitarity} additionally includes positivity of the
+canonical Hermitian fusion forms, giving the VOA representation category
+its unitary modular tensor structure.  An abstract ribbon equivalence to
+a unitary category does not, by itself, prove this last positivity statement.
+
+We use the preceding algebraic analysis as input: regularity of $U$,
+the actual restrictions
+\begin{equation}
+ B\mathord\downarrow_U=U\oplus X,
+ \qquad
+ H\mathord\downarrow_U=U\oplus X\oplus Y^{\oplus2},
+ \qquad h_X=h_Y=1,
+ \label{eq:analytic-branching}
+\end{equation}
+the twelve simple algebraic $U$-modules, and the
+$\operatorname{HI}(\mathbb Z/3)$ fusion ring of the all-module category
+for the original extension.  Every use of these inputs inherits the
+qualifications attached to their preceding proofs.  Agreement of modular
+data alone is never used as a classification of tensor categories.
+
+\begin{criticalnote}{Analytic proof boundary}
+The local applications labelled A1--A3 below are \textbf{claims pending
+expert review}.  Their proposed arguments are included so that the
+domains, geometric identifications, and counting steps can be checked.
+The cited external theorems are used with their stated hypotheses;
+the issue under review is whether our construction satisfies and matches
+those hypotheses.  Thus complete unitarity, the unitary ribbon
+identification, and the specifically $\HH_3$ extension remain conditional
+in this manuscript.  The exact finite certificates are separate accepted
+inputs and are not weakened by this distinction.
+\end{criticalnote}
+
+\subsection{The subnet and its sector count}
+\label{subsec:analytic-net-count}
+
+Write $\mathcal N_U\subset\mathcal N_H$ for the actual conformal-net
+inclusion.  The lattice VOA supplies strong locality and bounded
+localized vertex operators; the unitary conformal subalgebra inherits
+the relevant local construction.  Once regularity is available,
+\href{https://link.springer.com/article/10.1007/s00039-024-00685-8}
+{Tener, Corollary~4.24}, applies to the conformal inclusion and gives
+finite index.  The holomorphic lattice net is completely rational;
+\href{https://arxiv.org/html/math/0102196}
+{Longo, Theorem~24}, gives complete rationality of the subnet.
+This finite-index argument does not require every $U$-module to be unitary.
+
+\begin{criticalnote}{A2: actual net branching and twelve sectors}
+\begin{claim}[Net-sector count; pending expert review]
+\label{clm:analytic-net-count}
+The restriction of the holomorphic $H$ net has precisely the three
+inequivalent irreducible $\mathcal N_U$ summands corresponding to
+\eqref{eq:analytic-branching}, with multiplicities $1,1,2$.
+Its boundary fusion category $\mathcal F_{\mathrm{net}}$ has rank six,
+untwisted invertible subcategory $\Vec_{\mathbb Z/3}$, and the
+$\operatorname{HI}(\mathbb Z/3)$ fusion ring.  Consequently
+\[
+ \Rep(\mathcal N_U)\simeq Z(\mathcal F_{\mathrm{net}}),
+ \qquad
+ \#\operatorname{Irr}\Rep(\mathcal N_U)=12.
+\]
+\end{claim}
+The passage from algebraic summands to irreducible net summands, and
+the transfer of the actual automorphism and endomorphism information,
+must be verified at the level of closed local operators.  A shared
+branching matrix does not identify two tensor categories.
+\end{criticalnote}
+
+Here is the proposed reduction of this claim.  On finite-energy vectors
+of $H$, reconstructed $U$-fields are its original restricted fields.
+Orthogonal projections onto its actual simple summands should commute
+with their closures.  The resulting Lagrangian algebra has endomorphism
+algebra
+\begin{equation}
+ \operatorname{End}(A_{\mathrm{net}})
+ \cong\mathbb C\oplus\mathbb C\oplus M_2(\mathbb C).
+ \label{eq:analytic-end-algebra}
+\end{equation}
+The center-induction description then gives rank six and a
+noncommutative complex fusion algebra for $\mathcal F_{\mathrm{net}}$.
+The actual order-three automorphisms of $H/B$ supply three invertibles.
+If all six simples were invertible, the intermediate index would be
+$[\mathcal N_B:\mathcal N_U]=2$.  The connected intermediate algebra
+$1+X$ would have a sign automorphism.  Reconstruction on finite energies
+would turn it into an automorphism of $B$ fixing $U$, contrary to the
+actual calculation $\operatorname{Aut}(B/U)=1$.  Thus the invertible
+group is exactly $\mathbb Z/3$.  The pointed nine-sector $B$ net and the
+actual $H/B$ extension supply its untwisted associator class.
+
+With these positive spherical inputs, the ring and indicator arguments
+apply independently on the net side.  In particular, for
+$d=(3+\sqrt{13})/2$ and $s=1+d^2$, the center calculation gives dimensions
+\begin{equation}
+ 1,\ d^2,\ \underbrace{s,s,s,s}_{4},\
+ \underbrace{3d,3d,3d,3d,3d,3d}_{6}.
+ \label{eq:analytic-center-dimensions}
+\end{equation}
+The last six twists have exponents
+$\{2,5,6,7,8,11\}/13$.  This is the proposed source of the net count
+twelve.  It is not obtained by assigning the VOA character transformation
+matrix to the net category.  The underlying deductions are recorded in
+\artifact{hi_cft_20260923_next_structure_rank46.md},
+\artifact{hi_cft_20260923_next_structure_rank6_indicators.md}, and
+\artifact{hi_cft_20260923_next_structure_rank6_center.md}.
+
+\subsection{Reverse reconstruction and exhaustion}
+\label{subsec:analytic-reconstruction}
+
+\href{https://arxiv.org/html/2507.20735v3#S9}
+{Henriques--Tener, Theorem~9.5 and Corollary~9.7}, reconstruct unitary
+modules and identify their closed smeared fields.  Remark~9.8 extends
+the construction beyond the finite-multiplicity hypothesis.  This
+extension matters: finite-dimensional energy eigenspaces must not be
+silently assumed for the net representation one is trying to reconstruct.
+
+\begin{criticalnote}{A3: ordinaryness, irreducibility, and linear fullness}
+\begin{claim}[Reverse module comparison; pending expert review]
+\label{clm:analytic-reconstruction}
+For this regular $U$, reconstruction sends each irreducible
+$\mathcal N_U$ sector to an irreducible ordinary unitary $U$-module.
+It preserves $L_0$ and induces a fully faithful linear $*$-functor on
+finite direct sums,
+\[
+ \mathcal R:\Rep(\mathcal N_U)\longrightarrow\Rep^{u}(U).
+\]
+No tensorator or compatibility with braiding is asserted here.
+\end{claim}
+The projection argument below must establish common-core invariance and
+commutation with closed local fields, including their adjoints.  These
+are our analytic deductions from reconstruction, not a quoted
+braided-equivalence theorem.
+\end{criticalnote}
+
+Let $\mathcal K$ be an irreducible net representation and let
+\[
+ M=\bigcup_{R>0}1_{[0,R]}(L_0)\mathcal K
+\]
+be the dense bounded-energy space appearing in the extended construction.
+Regularity decomposes this admissible weak $U$-module algebraically into
+ordinary simple modules.  Choose a nonzero summand $S$, inherit its
+positive form, and let $P$ be the Hilbert projection onto
+$\overline S\subset\mathcal K$.
+
+The intended argument first uses the agreement of the two Virasoro
+actions, as in Henriques--Tener Corollary~9.6.  Each energy space of $S$
+is finite-dimensional, so its closure adds no vector at a fixed energy.
+It follows that $P$ preserves the bounded-energy domain and maps it
+into $S$.  The unitary adjoint identities, tested against $S$, then give
+commutation with all modes on the common domain.  The required closure
+argument is that $P$ and $1-P$ reduce the closed smeared fields and
+therefore the local algebras they generate.  Irreducibility of the net
+sector implies $P=1$, and the finite-dimensional energy spaces then
+give $M=S$.  This proves ordinaryness and simplicity if the stated
+domain assertions hold.
+
+For fullness, an algebraic isomorphism between simple unitary modules is
+unitary after multiplication by a scalar, by uniqueness of the positive
+invariant form.  Its bounded extension should intertwine the closed
+fields by the same argument.  Conversely, net intertwiners commute with
+the reconstructed modes.  Semisimplicity handles finite direct sums.
+The detailed local source is
+\artifact{hi_cft_20260923_next_m3_unitarity_scope.md}.
+
+\begin{proposition}[Conditional strong unitarity]
+\label{prop:analytic-strong-unitarity}
+Assume Claims~\ref{clm:analytic-net-count}
+and~\ref{clm:analytic-reconstruction}, and the preceding algebraic
+count of twelve simple $U$-modules.  Then every simple $U$-module is
+unitarizable, and its character is the character of a net sector.
+\end{proposition}
+\begin{proof}
+Full faithfulness makes the twelve net simples pairwise inequivalent
+simple ordinary $U$-modules.  There are exactly twelve algebraic simple
+modules, so this injection is a bijection.  Each image carries its
+reconstructed positive form, and $L_0$ is preserved.  Finite direct sums
+give the corresponding statement for ordinary modules.
+\end{proof}
+
+This counting step supplies essential surjectivity only as a linear
+comparison.  Neither fusion compatibility, equality of categorical
+$S$ matrices, nor positivity of VOA fusion forms follows from it.
+
+\subsection{The annulus compatibility claim}
+\label{subsec:analytic-annuli}
+
+The next step concerns the specific geometric annulus system of
+\href{https://arxiv.org/html/1810.08168#S3.SS4}
+{Tener, Definition~3.18 and Corollaries~3.20--3.22}.
+Let $(B,A)$ be a localized pair for an interval $I$, with incoming
+factor $A$ and outgoing factor $B$.  Subscripts distinguish their
+actions on the vacuum and on a reconstructed module.  For an insertion
+point $z\in\operatorname{int}(B,A)$, put
+\[
+ X_v(B,z,A)=\overline{B_UY_U(v,z)A_U}\in\mathcal N_U(I).
+\]
+The bar denotes the bounded extension when it exists.  The compatibility
+required by Tener's definition of a module net representation is the
+specific operator identity in the following claim.
+
+\begin{criticalnote}{A1: new annulus compatibility lemma}
+\begin{claim}[Annulus compatibility; pending expert review]
+\label{clm:analytic-annulus}
+For the actual geometric system above, choose matching paths and
+central lifts in the two annulus constructions.  If $M$ is an ordinary
+unitary module reconstructed from a sector $\pi_M$, then
+\begin{equation}
+ \pi_M\bigl(X_v(B,z,A)\bigr)
+   =\overline{B_MY_M(v,z)A_M},
+ \qquad v\in U,\quad z\in\operatorname{int}(B,A).
+ \label{eq:analytic-annulus-identity}
+\end{equation}
+The right side exists as a bounded extension.  The same matching in the
+vacuum identifies the net's geometric insertion with $X_v(B,z,A)$.
+\end{claim}
+The points requiring expert verification are modulewise matching of
+the annulus systems and central lifts, density and core properties of
+the inverse-finite-energy domains, and holomorphic continuation on every
+component across a possible circle seam.  Agreement of vacuum operators
+alone would not prove this claim.
+\end{criticalnote}
+
+We give the proposed proof in three steps.  First, geometric localization
+must precede operator comparison.  The thin-boundary parametrizations in
+the selected system agree outside $I$, and its common localizer is
+geometric.  Its generating operators are univalent-semigroup factors
+$\exp(-tL(\rho))$ and positive-energy diffeomorphism or M\"obius
+operators.  The time-ordered integration in
+\href{https://arxiv.org/html/2506.08684#S5}
+{Henriques--Tener, formula~(5.2)}, gives the proposed comparison with the
+geometric annulus action.  Constant generators give the same exponential;
+thin factors must give the same diffeomorphism action.  A common path
+and central lift are essential.  Using the same localizing lift for both
+members of $(B,A)$ is intended to cancel deck-transformation factors.
+This matching is required on every positive-energy module, not merely
+on the vacuum.
+
+Second, let $M^{\mathrm{fin}}$ be the finite-energy vectors and define
+\begin{equation}
+ \mathcal D_A=\{\xi\in\mathcal K_M:A_M\xi\in M^{\mathrm{fin}}\},
+ \qquad
+ \mathcal D_{B^*}=\{\eta\in\mathcal K_M:B_M^*\eta\in M^{\mathrm{fin}}\}.
+ \label{eq:analytic-annulus-domains}
+\end{equation}
+For an incoming annulus, choose a small round circle inside its smooth
+inner Jordan domain, containing the origin, and fill the complementary
+annulus by $C$.  The proposed factorization, with the matched central
+scalar retained, is
+\begin{equation}
+ A_MC_M=\lambda r^{L_0},\qquad 0<r<1,\quad\lambda\ne0.
+ \label{eq:analytic-round-factorization}
+\end{equation}
+It puts finite-energy vectors in $\operatorname{Ran}(A_M)$ and gives
+$C_M M^{\mathrm{fin}}\subset\mathcal D_A$.  The dense-range property of
+$C_M$ would make $\mathcal D_A$ dense; the adjoint construction treats
+$\mathcal D_{B^*}$.  This is the domain issue addressed by the proposed
+use of Henriques--Tener Lemma~7.9.
+
+Third, Theorem~9.5(i), together with insertion gluing in
+Proposition~6.19, supplies the incoming identity after the preceding
+geometric matching.  Adjoints supply the outgoing identity.  For
+$\xi\in\mathcal D_A$ and $\eta\in\mathcal D_{B^*}$, the algebraic pairing
+\begin{equation}
+ \left\langle Y_M(v,z)A_M\xi,B_M^*\eta\right\rangle
+ \label{eq:analytic-laurent-pairing}
+\end{equation}
+is a finite Laurent polynomial: both vectors have finite energy support,
+and the mode grading permits only finitely many powers.  The geometric
+insertion pairing is holomorphic on $\operatorname{int}(B,A)$.
+The proposed geometric argument shows that every connected component
+meets an incoming or outgoing open part.  The identity theorem would
+then extend equality over the component, including across its seam.
+Equality on the two dense test domains identifies the bounded extension
+with $\pi_M(X_v(B,z,A))$.  Applying the same reasoning to the vacuum
+finishes the proposed matching.  These details, rather than a general
+strong-unitarity implication, are the content of Claim~A1.
+
+\begin{theorem}[Conditional complete unitarity]
+\label{thm:analytic-complete-unitarity}
+Assume Claims~\ref{clm:analytic-net-count},
+\ref{clm:analytic-reconstruction}, and~\ref{clm:analytic-annulus},
+together with the preceding algebraic inputs.  Then $U$ is completely
+unitary.
+\end{theorem}
+\begin{proof}
+Proposition~\ref{prop:analytic-strong-unitarity} unitarizes every simple
+module.  Claim~\ref{clm:analytic-annulus} supplies the representation
+required by
+\href{https://link.springer.com/article/10.1007/s00039-024-00685-8}
+{Tener, Definition~2.18}, for each such module; finite direct sums
+preserve the property.  His Corollary~4.6 then supplies positivity of
+the canonical fusion forms.  Strong unitarity must be established first:
+the unitarizable-fusion-product hypothesis in Theorem~4.4 cannot be used
+to bypass the exhaustion argument.
+\end{proof}
+
+\section{Conditional unitary categorical identification}
+\label{sec:analytic-category}
+
+\begin{theorem}[Unitary Haagerup-center identification, conditional on A1--A3]
+\label{thm:analytic-category}
+Under the hypotheses of Theorem~\ref{thm:analytic-complete-unitarity},
+and the preceding determination of the all-module fusion ring and its
+untwisted pointed subcategory, there is a unitary ribbon equivalence
+\[
+ \Rep(U)\simeq Z(\HH_3).
+\]
+For the original embedded extension $H/U$, its all-module category is
+tensor equivalent to one of $\HH_2$ and $\HH_3$.
+\end{theorem}
+\begin{proof}
+Put $\mathcal C=\Rep(U)$ and let $A$ be the algebra of the actual
+unitary extension $H$.  Complete unitarity allows application of
+\href{https://arxiv.org/html/1908.03484#S2.SS4}
+{Gui, Theorems~2.21 and~2.28}: $A$ is a standard commutative
+Q-system and its modules are unitarizable.  The unitary braiding gives
+each one-sided module a compatible opposite-side action, realizing
+$\mathcal F=\mathcal C_A$ in the unitary bimodule construction.  Thus
+$\mathcal F$ is a $C^*$ fusion category.  Here $\mathcal C_A$ means
+\emph{all} modules.  The local modules form $\mathcal C_A^0\simeq\Vec$
+because the extension is holomorphic, so substituting local modules
+would lose the Haagerup category.
+
+Its already determined fusion ring is
+$\operatorname{HI}(\mathbb Z/3)$.  The actual untwisted pointed
+subcategory makes the obstruction $c^{(0,3)}$ vanish, while the other
+obstruction is in
+\[
+ H^1\!\left(\mathbb Z/2,H^2(\mathbb Z/3,\mathbb C^\times)\right)=0.
+\]
+These are the hypotheses in
+\href{https://arxiv.org/html/1609.07604}
+{Izumi, Definition~2.7 and Theorems~5.9 and~9.1}, giving the two
+unitary tensor classes $\HH_2,\HH_3$.  No algebra structure on
+$1+\rho$ is inserted as an extra assumption.
+\href{https://arxiv.org/html/1102.2631#S1}
+{Grossman--Snyder, Theorem~1.4}, places these categories in the same
+Morita class.  Their centers are therefore braided equivalent.
+The positive spherical structures make this a ribbon equivalence, and
+the Lagrangian-center theorem gives
+\[
+ \mathcal C\simeq Z(\mathcal F)\simeq Z(\HH_3).
+\]
+\href{https://arxiv.org/html/1906.09710}
+{Reutter, Theorem~5}, provides the unitary braided realization of the
+equivalence, preserving the associated positive ribbon structures.
+\end{proof}
+
+This uses the published unitary classification as an external input;
+its classification equations have not been replayed here.  It avoids
+the broader pivotal census, but it does not prove that the natural
+reconstruction functor $\mathcal R$ preserves Connes fusion, the VOA
+tensor product, or braiding.  That particular comparison is a distinct
+statement and is not needed for the theorem just proved conditionally.
+
+\section{Conditional full theories and a chosen \texorpdfstring{$E_8$}{E8} extension}
+\label{sec:analytic-full-theory}
+
+\begin{proposition}[Diagonal full theory; conditional character identification]
+\label{prop:analytic-diagonal}
+The completely rational net $\mathcal N_U$ admits its canonical unitary
+local diagonal full theory.  Under Claims~\ref{clm:analytic-net-count}
+and~\ref{clm:analytic-reconstruction}, and the preceding twelve-module
+character determination, its partition function is
+\begin{equation}
+ Z_{\mathrm{diag}}(\tau,\bar\tau)
+   =\sum_{i=0}^{11}\chi_i(\tau)\overline{\chi_i(\tau)},
+ \qquad c_L=c_R=8.
+ \label{eq:analytic-diagonal-partition}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Apply the diagonal Longo--Rehren construction, in the identity-coupling
+case of
+\href{https://arxiv.org/html/math/9911149}
+{Rehren, Theorem~1.4, Proposition~1.5, and Corollary~1.6}.
+Claims A2--A3 identify all sector Hilbert spaces with the twelve ordinary
+modules and preserve their Hamiltonians.  Hence their traces give
+\eqref{eq:analytic-diagonal-partition}.  The annulus compatibility claim
+is not needed for this net construction or this linear character matching.
+\end{proof}
+
+\begin{theorem}[Chosen $\HH_3$ extension and defects; conditional on A1--A3]
+\label{thm:analytic-e8-extension}
+Assume the hypotheses of Theorem~\ref{thm:analytic-category} and the
+preceding strict positivity of all nonvacuum lowest conformal weights.
+There exists a unitary holomorphic conformal extension $H'\supset U$
+isomorphic to $V_{E_8}$ whose all-module category is $\HH_3$.
+For its extension algebra $A_3\in\Rep(U)$,
+\begin{equation}
+ \Rep(U)_{A_3}\simeq\HH_3,
+ \qquad
+ {}_{A_3}\Rep(U)_{A_3}\simeq\HH_3\boxtimes\HH_3^{\mathrm{op}}.
+ \label{eq:analytic-extension-defects}
+\end{equation}
+The second category describes algebra-bimodule defects preserving the
+$U$ chiral subalgebra in the corresponding full extension theory and
+contains an $\HH_3$ fusion subcategory.
+\end{theorem}
+\begin{proof}
+Let $I_{\HH_3}$ be the right adjoint of the forgetful functor
+$Z(\HH_3)\to\HH_3$.  Transport the canonical algebra
+$I_{\HH_3}(\mathbf1)$ along the unitary ribbon equivalence.  By the
+canonical Lagrangian-algebra construction, as in
+\href{https://arxiv.org/abs/1009.2117}
+{Davydov--M\"uger--Nikshych--Ostrik, Section~4}, the resulting $A_3$
+is connected, commutative, separable, and twist-free, with
+\[
+ \FPdim(A_3)^2=\FPdim(\Rep(U)),
+ \qquad \Rep(U)_{A_3}^{0}\simeq\Vec,
+ \qquad \Rep(U)_{A_3}\simeq\HH_3.
+\]
+Trivial twist makes its constituent conformal weights integral.
+Connectedness and strict positivity away from the vacuum give a
+one-dimensional weight-zero space.  The extension correspondence of
+\href{https://arxiv.org/html/1406.3420}
+{Huang--Kirillov--Lepowsky, Theorems~3.2--3.6}, together with Gui's
+unitary Q-system theorem, produces a unitary conformal VOA extension
+$H'$.  It is a finite sum of ordinary $U$-modules; finite-extension
+$C_2$-cofiniteness and the semisimple local-module description give
+strong rationality.  The Lagrangian condition makes it holomorphic.
+Its central charge is eight, so
+\href{https://msp.org/pjm/2004/213-2/pjm-v213-n2-p05-p.pdf}
+{Dong--Mason, Theorem~1}, identifies $H'$ with $V_{E_8}$.
+
+For the canonical algebra, the algebra-bimodule duality gives the
+second equivalence in \eqref{eq:analytic-extension-defects}; see
+\href{https://arxiv.org/abs/math/0111205}
+{M\"uger, Sections~4 and~8}.  Here ``op'' reverses the tensor product.
+The first-factor embedding $x\mapsto x\boxtimes\mathbf1$ supplies
+the stated $\HH_3$ fusion subcategory.
+\end{proof}
+
+\begin{remark}[Extension choice and preserved symmetry]
+\label{rem:analytic-extension-scope}
+The selection of the canonical $\HH_3$ algebra proves existence of
+$H'$ with the specified all-module category.  It does not identify
+$A_3$ with the original embedded $H/U$ algebra; the original boundary
+category may be $\HH_2$ or $\HH_3$.  Both holomorphic VOAs being
+isomorphic to $V_{E_8}$ does not identify their embeddings of $U$.
+Moreover, the defects in \eqref{eq:analytic-extension-defects} preserve
+$U$ and need not preserve the enlarged $E_8$ chiral algebra.
+The local chiral $H'$-module category is $\Vec$.
+\end{remark}
+
+The logical separation is therefore explicit: completed finite
+certificates prove the actual strong-generation and properness result;
+the algebraic identification supplies its stated representation-theory
+inputs; A2--A3 supply sector exhaustion and strong unitarity; A1 supplies
+the additional analytic comparison needed for complete unitarity.
+The unitary categorical and $\HH_3$ extension conclusions retain those
+conditions until the highlighted applications are independently verified.
+The synthesis sources are
+\artifact{hi_cft_20260923_c8two_final_theorem.md} and
+\artifact{hi_cft_20260923_c8two_certificate_audit.md}; their unqualified
+analytic conclusion is deliberately recorded here with the review boundary
+made visible.

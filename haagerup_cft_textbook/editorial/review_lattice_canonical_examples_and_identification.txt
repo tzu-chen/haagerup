@@ -1,0 +1,210 @@
+Canonical examples and continuum-identification review
+Reviewer: scope_lattice, 2026-10-05. Read-only main-text audit.
+Scope: the integrated Ising example in l02_scaling.tex, isotropic-current
+and logarithm examples in r05_full_theories.tex, and their uses in
+l03_overlaps.tex, l04_tensor_networks.tex, l06_identification.tex.
+All calculations below were checked by hand. No numerical job or build.
+
+Outcome
+
+No scientific correction is required. The integrated examples preserve
+their explicit comparison-model scope, and the later Haagerup diagnostics
+do not import their exponents, parity projection, beta coefficients, or
+continuum identifications. The remaining suggestions are small reader aids
+and a positive explanation of the final identification target.
+
+Checks that pass
+
+1. l02:108-145: the internal spin-flip operator P=(-1)^N gives NS momenta
+   with even physical fermion parity and R momenta with odd physical parity.
+   Occupying the critical R zero mode imposes the projection at zero energy;
+   it does not produce an extra physical twofold ground-state degeneracy.
+   The NS pair at opposite momenta is in the energy family. The same-direction
+   pair has even total parity, spin +/-2, and is the chiral stress descendant.
+   The local bosonic continuum space at l02:317-332 includes the three diagonal
+   Ising modules and excludes a lone chiral fermion as an additional local field.
+   Consequently it is consistent with later integer-spin local-boson tests.
+
+2. l02:184-220,276-361: E_NS=-2J csc x, E_R=-2J cot x, x=pi/(2L), v=2J;
+   their difference is 2J tan(x/2). The energy and stress gaps are
+   8J sin x and 16J sin x cos^2 x. Hence their stress-normalized ratio is
+   sec^2 x, whereas the known-velocity energy dimension is sin x/x.
+   They approach one from opposite sides exactly as stated. The vacuum-energy
+   estimator approaches 1/2 from above, with correction 7pi^2/(480L^2).
+   This does not conflict with the below-1/2 Ising pants estimators quoted at
+   l03:683-685: these are different finite observables and calibrations.
+
+3. l02:299-310: bare L_{-2}|0> has norm squared c/2=1/4; the displayed
+   two-fermion state has norm one. This agrees with the normalized-stress
+   matrix-element estimator later in l02 and the factors sqrt(c/2) in l03's
+   pants amplitudes. The connected Ward invariant is likewise consistent.
+   The total-momentum alias at L=4 is now stated correctly.
+
+4. r05:193-325: with both chiral current algebras using +i epsilon, the
+   unit-normalized isotropic scalar has C_OOO=-4/(sqrt(3) k). For the stated
+   e^{-S_0-g int O} convention and increasing length, the shell cumulant gives
+   beta_length=-pi C_OOO g^2=4pi g^2/(sqrt(3) k). Negative g is marginally
+   irrelevant. Positive g loses weak-coupling control; no endpoint or mass gap
+   is inferred. The Cartan comparison correctly distinguishes a vanishing
+   quadratic obstruction from the all-order commuting-current theorem.
+
+5. r05:327-394: O acts by 2 t_L.t_R/(sqrt(3) k), so for left/right spins
+   1/2, q_J=[J(J+1)-3/2]/(sqrt(3) k). The two external neighborhoods give
+   delta Delta=2pi g q_J. Integrating g~-[B_k log(r/a)]^{-1} yields logarithm
+   powers 4pi q_J/B_k=-3/2,+1/2 at k=1. The limiting two-point power is r^{-1}.
+   The final paragraph explicitly prevents an inference about the H3 chain,
+   its endpoint, or transport of categorical junctions.
+
+6. l03:800-834: the Hellmann--Feynman direction is a response to a specified
+   bare lattice perturbation, not automatically the continuum beta direction.
+   The nonparallel finite drifts are therefore used only to reject the stated
+   one-parameter finite explanation. This is consistent with the new running
+   example and with mixing of a lattice source with several continuum fields.
+
+7. l04:365-389: the finite-entanglement entropy and order-amplitude slopes are
+   expressly conditional on a suitable single-scale regime. The SU(2)_1
+   logarithms in real-distance correlators are not silently assigned to these
+   MPS observables. l06:1041-1046 also explicitly distinguishes the modular
+   category Ising_{5/2} from the ordinary charge-1/2 Ising CFT just solved.
+
+Small reader aids, in priority order
+
+A. l02:740-751, before the Haagerup light-field census:
+   Add a sentence such as: "These Greek letters label tracked Haagerup-chain
+   states; the name epsilon does not identify this state with the Ising energy
+   field in Example [ex:scaling-Ising-calibration]."
+   This is the likeliest accidental transfer after adding a lengthy Ising tour.
+
+B. r05:332-336:
+   After introducing J=0,1, say that these are internal SU(2) representation
+   spins, whereas all four components have conformal spin h-hbar=0.
+   No formula changes. It distinguishes internal triplet/singlet labels from
+   the momentum-derived spin used throughout the chain chapters.
+
+C. l02:108-109 versus l03:164-171:
+   Both uses of P are defined, but one is internal spin-flip parity and one is
+   spatial reflection. A short parenthetical in the Ising example would help:
+   "Here parity means internal spin flip, not spatial reflection."
+
+D. l02:308-310:
+   Optional explicit normalization bridge: "Thus the normalized lattice pair
+   tends to 2 L_{-2}|0>, while L_{-2}|0> itself has norm squared 1/4."
+   The current text already implies this correctly; the extra clause protects
+   the reader applying the later normalized-stress overlap formulas.
+
+E. l03:830-834:
+   An optional reference to Example [ex:full-nonabelian-running] can make the
+   sign issue concrete: the lattice source and coupling must be matched to the
+   same action convention. Replacing O by -O flips both the quoted OPE
+   coefficient and the coordinate g, while leaving the physical perturbation
+   unchanged. A source's finite sign alone is not an invariant flow diagnosis.
+
+F. l04:381-389:
+   If the new replica/entropy insertion does not already mention corrections,
+   one sentence could note that marginal running can add field-dependent
+   logarithms to power-law fits. Do not import the SU(2)_1 exponents by replacing
+   physical separation r with an MPS correlation length without an additional
+   regulator/field dictionary.
+
+G. Rendered typography reported by root: equation (20.7), the Ising dispersion
+   at l02:156, is very close to its equation number. Splitting the equality into
+   two aligned lines is sufficient; the four rendered example pages otherwise
+   passed root's visual inspection.
+
+What is genuinely missing at the l06 ending
+
+l06:15-31 already gives the four-layer checklist. Repeating that checklist at
+the ending would not add much. The phrase "a limiting primary-field dictionary"
+at l06:1161-1163 would benefit from an operational explanation of how the same
+dictionary is constrained by different measurements, and from separating a
+strong numerical identification from a proof of a scaling limit.
+
+Suggested insertion, approximately 330 words, after that phrase or as a short
+subsection immediately before the closing paragraph (editor may shorten):
+
+"To make such a dictionary concrete, choose a candidate full CFT and a fixed
+scaling-dimension cutoff. Track the entire low-energy space below that cutoff
+along a specified size sequence, including the sectors required by the
+proposal. A single assignment of these spaces must match rescaled energies,
+residual momenta, and symmetry actions. Near-degenerate multiplets permit a
+change of basis; they do not permit a different field identification for each
+observable. The required vacuum and velocity must likewise be shared.
+
+For each proposed continuum field, choose a controlled sequence of lattice
+operators and its normalization and mixing coefficients. Use that same choice
+for vacuum-to-field amplitudes, matrix elements between primary states, and
+descendant matrix elements. The first group fixes the two-point normalization;
+the second tests OPE coefficients; the third tests the Ward identities and
+descendant assignment. Fitting an independent scale to each matrix element
+would discard precisely the consistency that makes this a field dictionary.
+Several microscopic recipes for the same field provide additional checks when
+their separately fixed limits agree.
+
+A correction model should then explain several observables using the same
+irrelevant or running couplings and predict levels or amplitudes not used in
+the fit. The solved Ising example shows that two valid finite-size calibrations
+can approach the same limit from opposite sides. The current-current example
+shows that one running coupling can produce different logarithms in different
+fields. These are lessons about consistency, not correction exponents to
+assign to the Haagerup chain.
+
+A finite, mutually consistent table can support a strong numerical
+identification. A proof that the chain has that scaling limit requires further
+control of convergence of the state and operator data, compatibility as the
+cutoff increases, and the resulting continuum correlations. The existence of
+the candidate CFT is a separate question from this convergence. Finally, the
+lattice lines must have the claimed limiting action and junction spaces, with
+associators equivalent to the physical H3 data. Agreement of loop dimensions
+or fusion multiplicities alone does not establish that part of the dictionary."
+
+An optional short clarification of the alternative in l06:1164-1166:
+
+For a gapped phase with q thermodynamic vacua, the finite-size diagnostic would
+separate a collapsing cluster E_a-E_0 -> 0 (a=0,...,q-1) from a positive bulk
+scale liminf(E_q-E_0)>0, with finite connected lengths inside pure vacua. This
+does not prescribe an exponential splitting law, and q is not automatically
+four merely because the exact comparison tensors have a rank-four vacuum
+module. This is a useful precise reading of "complete collapsing vacuum
+cluster" if the editor wants one additional displayed formula.
+
+Replica insertion note requested by root
+
+No existing replica-twist derivation was found in r01, l02, or l04. l02 only
+states the periodic/open entropy coefficients; l04 states the conditional
+half-chain finite-entanglement formula. A Schwarzian derivation of h_n followed
+by interval and one-cut coefficients fills a genuine gap. It should distinguish
+the n-sheet total stress from a single sheet, and identify analytic continuation
+to n=1 and the single-cut massive/finite-entanglement assumptions when used.
+
+Follow-up: integrated replica section, l04:365-470
+
+The integrated derivation passes the hand checks:
+{g^{1/n},g}=(1-n^{-2})/(2g^2), (g'/g)^2=(u-v)^2/
+[(w-u)^2(w-v)^2], and summing n sheets yields h_n=c(n-1/n)/24.
+The interval moment exponent is -2 Delta_n, the single-cut exponent is
+-Delta_n, and division by 1-n gives the two stated entropy coefficients.
+The n->1 and largest-Schmidt-probability qualifications are appropriate.
+For c=1/2 the interval coefficients 1/6,1/8,1/12 and the one-cut
+coefficients 1/12,1/16,1/24 all pass. Applying the interval inversion c=3s
+to a true single-cut slope s=1/12 indeed returns the wrong value 1/4.
+The physical massive length versus finite-bond MPS length distinction is clear.
+
+One necessary premise repair was sent immediately to root:
+l04:464-466, global orthogonality of the components is insufficient for the
+Schmidt probabilities to concatenate. Require mutually orthogonal Schmidt
+supports on both sides of the cut, as for the ordered product cats, or state
+directly that the reduced state has three orthogonal blocks with weights 1/3.
+Counterexample: the three qutrit states
+|Phi_b>=(1/sqrt(3)) sum_{a=0}^2 omega^{ab}|a,a>, b=0,1,2,
+are globally orthogonal and each has Schmidt probabilities (1/3,1/3,1/3);
+their normalized equal superposition is |0,0>, whose entropy is zero.
+With the stronger block-support premise, p_a/3 repeated three times and the
+additive log(3) formula are correct.
+
+Authorized implementation status
+
+The l02 internal-parity clarification, Haagerup epsilon-label clarification,
+and two-line dispersion display have been applied. The r05 internal-SU(2)
+versus conformal-spin clarification has been applied. No other live-source
+change was made in this audit. The proposed field-dictionary ending is saved
+as editorial/continuum_dictionary_ending.tex.txt for root review.

@@ -1,0 +1,331 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,xurl}
+\input{c8_physics_20260927/manuscript_refs.tex}
+\newcommand{\QQ}{\mathbb Q}\newcommand{\CC}{\mathbb C}\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\Span}{\operatorname{span}}\newcommand{\Rep}{\operatorname{Rep}}
+\newcommand{\HH}{\mathcal H}\newcommand{\one}{\mathbf1}
+\newcommand{\artifact}[1]{\path{#1}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{corollary}[proposition]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[proposition]{Remark}
+\setlength{\emergencystretch}{2em}
+\title{Human verification of the finite inputs\\to the $c=8$ Haagerup construction}
+\author{Companion to the revised research manuscript}
+\date{27 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The construction uses exact calculations, but a list of successful jobs
+does not explain what a mathematician should inspect. This guide replaces
+that interface with explicit scalar equations, sparse field coordinates,
+membership witnesses and a small independent checker. It separates three
+tasks: checking a displayed arithmetic identity, checking a finite vector
+identity in the lattice model, and proving the theorem that turns those
+identities into an all-weight or categorical conclusion. The first two
+are made more accessible here; the third remains in the manuscript.
+\end{abstract}
+\tableofcontents
+
+\section{How to audit the inputs}
+The reference manuscript is the expanded physics revision of
+\href{hi_cft_c8_proof.pdf}{\artifact{hi_cft_c8_proof.pdf}}.
+References explicitly marked ``manuscript'' use its current section,
+appendix and proposition numbers. Their linked numbers and pages are
+imported from the manuscript's own labels; unqualified references are
+internal to this guide. Keep the two PDFs in the same directory to follow
+the links. The original certificates remain unchanged.
+This companion makes selected inputs inspectable without
+asking the reader to trust a hash, a rank counter, or a printed
+\texttt{true} value as a mathematical proof.
+
+A useful audit proceeds in three passes.
+\begin{enumerate}
+\item Check the small equations below: the current levels, the three
+momenta, the stress projection matrix, the explicit parafermion rows,
+and the short Gate~5 relation. These are literal formulas, with all
+coefficient conventions fixed.
+\item For larger finite equalities, inspect a witness rather than repeat
+the search that discovered it. The necessary format is an equation
+$v=\sum_j c_jw_j$, the coordinates of each vector, and a recipe identifying
+$w_j$ with the claimed lattice product. A rank lower bound needs a
+nonzero minor or an elimination transcript; a rank upper bound needs
+spanning expressions. These are different obligations.
+\item Follow the printed implications in manuscript
+Appendices~\msref{sec:finite}--\msref{sec:analytic-full-theory}.
+An exact residual of zero proves its finite identity. It does not by
+itself prove strong generation, regularity, module exhaustion, or
+complete unitarity.
+\end{enumerate}
+
+\begin{center}\small
+\begin{tabular}{@{}P{.25\linewidth}P{.65\linewidth}@{}}
+\toprule Input & Human-facing evidence supplied here\\\midrule
+Lattice, currents, $u$ & An eight-dimensional integer calculation and
+explicit coefficient extraction; all $72$ current singular products
+are independently checked.\\
+Positive stress identity & Four orthogonal stress norms and eight actual
+overlaps; the resulting vector identity is independently checked.\\
+Low-grade fields & All $337$ monomials of eight relevant grade-two fields
+are exported in plain tab-separated form.\\
+Short generation & A $120$-row construction graph, exact elimination
+identities and expansions of all ten target fields in two bases.\\
+Factor membership & A $33$-word Potts expression and a $42$-word
+parafermion expression, with full coordinates and an independent check.\\
+Gates~4 and~5 & Denominator-cleared equations, named normal words,
+nonzero scalar witnesses and a precise residual format.\\
+Embedded factors and tops & Full first-row OPE formulas, charge and
+spectral tables, an $80$-row cyclic basis and the precise distinction
+between finite matrix evidence and its mode interpretation.\\
+\bottomrule
+\end{tabular}\end{center}
+
+\subsection{Navigation in the expanded manuscript}
+The following references locate the current arguments supported by
+these finite inputs. Page numbers refer to the manuscript, not to this
+guide. The Lean companion supplies a section-by-section assessment of
+the remaining formalization work.
+\begin{longtable}{@{}P{.28\linewidth}P{.60\linewidth}@{}}
+\toprule Audit topic & Current manuscript location\\\midrule
+\endhead
+Lattice and initial spaces & Appendix~\msref{sec:construction},
+p.~\mspageref{sec:construction}; Lemma~\msref{lem:levels} and
+Certificate~\msref{cert:initial}.\\
+All-weight closure & Appendix~\msref{sec:finite},
+p.~\mspageref{sec:finite}; Theorem~\msref{thm:recursive} and
+Certificate~\msref{cert:lower}.\\
+Gates and properness & Appendices~\msref{sec:gate4}--\msref{sec:properness},
+pp.~\mspageref{sec:gate4}--\mspageref{sec:properness};
+Lemmas~\msref{lem:singlet}, \msref{lem:bootstrap}, and \msref{lem:jacobi}.\\
+Embedded factors and stresses & Appendix~\msref{sec:regularity},
+p.~\mspageref{sec:regularity}; Certificate~\msref{cert:structural-inputs},
+Proposition~\msref{prop:pf13-finite-reconstruction}, and
+Theorem~\msref{thm:positive-stress-rationality}.\\
+Branching and characters & Appendices~\msref{sec:branching}--\msref{sec:characters},
+pp.~\mspageref{sec:branching}--\mspageref{sec:characters}.\\
+Analytic and categorical conclusions & Appendices~\msref{sec:analytic-unitarity}--\msref{sec:analytic-full-theory},
+pp.~\mspageref{sec:analytic-unitarity}--\mspageref{sec:analytic-full-theory}.\\
+Physical observables & Sections~\msref{sec:physics-spectrum}--\msref{sec:physics-data-guide},
+pp.~\mspageref{sec:physics-spectrum}--\mspageref{sec:physics-data-guide};
+the data guide is Section~\msref{sec:physics-data-guide}.\\
+Evidence and formalization scope & Appendices~\msref{sec:ledger}--\msref{sec:compilation},
+pp.~\mspageref{sec:ledger}--\mspageref{sec:compilation}.\\
+\bottomrule
+\end{longtable}
+
+\section{The small lattice calculation}
+Put $s^2=13$, $t^2=-3$, and use the coefficient field
+$K=\QQ(s,t)$ with ordered basis $(1,s,t,st)$. Complex conjugation fixes
+$s$ and negates $t$. If $x=(a,b,c,d)$ and $y=(e,f,g,h)$, then
+\[
+xy=(ae+13bf-3cg-39dh,\quad af+be-3ch-3dg,
+\quad ag+ce+13bh+13df,\quad ah+de+bg+cf).
+\]
+Thus every vector equality is exactly four rational equalities per
+lattice monomial. No numerical recognition tolerance occurs in the
+checker. The historical field file also contains floating-point discovery
+data; only its exact rational coefficient arrays are read.
+
+The lattice Gram matrix is
+\[
+G=\begin{pmatrix}
+2&-1&0&0&0&0&0&0\\-1&2&-1&0&0&0&0&0\\
+0&-1&2&-1&0&-1&0&0\\0&0&-1&2&-1&0&0&0\\
+0&0&0&-1&2&0&0&0\\0&0&-1&0&0&2&0&0\\
+0&0&0&0&0&0&2&-1\\0&0&0&0&0&0&-1&2
+\end{pmatrix}.
+\]
+Let $\ell=(-1,-2,-3,-2,-1,-2,0,0)$ and
+$r=(5,8,9,8,5,0,2,2)$. Two matrix multiplications give
+\[
+G\ell=(0,0,0,0,0,-1,0,0),\qquad
+Gr=(2,2,2,2,2,-9,2,2).
+\]
+Consequently $\ell^TG\ell=2$, $r^TGr=78$, and
+$\ell^TG\alpha_i=0$ for every $i$ with $r_i\ne0$.
+These are the geometric ingredients of levels $1$ and $39$.
+Explicitly, with $I=\{0,1,2,3,4,6,7\}$, the six currents are
+\[
+\begin{aligned}
+H_L&=\ell(-1)\one,& E_L&=e^\ell,& F_L&=-e^{-\ell},\\
+H_R&=r(-1)\one,& E_R&=\sum_{i\in I}e^{\alpha_i},&
+F_R&=-\sum_{i\in I}r_i e^{-\alpha_i}.
+\end{aligned}
+\]
+
+For signs use
+\[
+\epsilon(\alpha,\beta)=(-1)^{\sum_i\alpha_i\beta_i+
+ \sum_{i>j}\alpha_i\beta_jG_{ij}}.
+\]
+For example $\epsilon(\alpha_i,-\alpha_i)=-1$, so
+$e^{\alpha_i}_0e^{-\alpha_i}=-\alpha_i(-1)\one$ and
+$e^{\alpha_i}_1e^{-\alpha_i}=-\one$.
+The minus signs in the lowering currents therefore give
+\[
+(E_R)_0F_R=\sum_i r_i\alpha_i(-1)\one=H_R,
+\qquad (E_R)_1F_R=\sum_i r_i\one=39\one.
+\]
+Together with the Heisenberg brackets this checks the complete affine
+relations. The reader can derive the mixed vanishing from the displayed
+orthogonality. The independent checker evaluates all ordered pairs of
+the six currents at modes $0$ and $1$, rather than checking only these
+two examples. Higher singular modes vanish by weight.
+
+\subsection{The three-term vector without a mode engine}
+\label{hr:three-term-vector}
+Write $u=e^a+(s+3t)e^b/20+(s-3t)e^c/20$, with
+\[
+\begin{split}
+a&=(0,0,0,0,0,-1,1,1),\\
+b&=(0,0,0,1,1,-1,0,0),\\
+c&=(1,1,0,0,0,-1,0,0).
+\end{split}
+\]
+The following table can be checked directly using $G$.
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}\toprule
+$\alpha$ & $G\alpha$ & $\alpha^TG\alpha$ & $\ell^TG\alpha$ & $r^TG\alpha$\\\midrule
+$a$ & $(0,0,1,0,0,-2,1,1)$ & $4$ & $1$ & $13$\\
+$b$ & $(0,0,0,1,1,-2,0,0)$ & $4$ & $1$ & $13$\\
+$c$ & $(1,1,0,0,0,-2,0,0)$ & $4$ & $1$ & $13$\\\bottomrule
+\end{tabular}\end{center}
+For each summand the inner product with a raising root is nonnegative.
+The coefficient of $z^{-1}$ in
+\[
+Y(e^\alpha,z)e^\beta
+=\epsilon(\alpha,\beta)z^{\alpha^TG\beta}
+\exp\left(\sum_{n>0}\frac{\alpha(-n)}n z^n\right)e^{\alpha+\beta}
+\]
+therefore vanishes for every raising current. The absolute inner
+product with a root occurring in either current triple is at most one,
+so positive current modes also vanish. The Cartan positive modes kill
+oscillator-free exponentials. Thus $u$ is an affine primary highest
+vector of current dimensions $(2,14)$; this check uses no cancellation
+between its three coefficients.
+
+Set $\widetilde r=(5,8,9,8,5,1,2,2)$ and
+$q(\alpha)=\prod_i\widetilde r_i^{\alpha_i}$. In the transported
+positive form, $\|e^\alpha\|^2=q(\alpha)$. Here
+$q(a)=4$ and $q(b)=q(c)=40$, while
+\[
+\left|\frac{s\pm3t}{20}\right|^2=\frac{13+27}{400}=\frac1{10}.
+\]
+The three orthogonal summands each have norm squared four, and
+$\|u\|^2=12$. This explains the equal-magnitude phase convention
+without confusing the transported PCT with ordinary conjugation.
+
+\section{A four-column check of the positive stress identity}
+\label{hr:positive-stress-check}
+The ordered axes are $w=(\omega_L,\omega_R,e,f)$. Their Gram matrix
+is diagonal with diagonal
+\[
+N=\left(\frac12,\frac{117}{82},\frac{1200}{1271},\frac{35}{31}\right).
+\]
+The entries can be checked in two independent ways: from the stated
+commuting Virasoro structures, or from the sparse fields and the lattice
+Fock inner product. The new checker uses the latter, so it does not
+assume the claimed central charges to compute the pairings.
+
+For precision, if $\alpha=\beta$, the pairing of two oscillator
+monomials with $r$ factors is
+\[
+\left\langle\prod_{k=1}^r\alpha_{i_k}(-n_k)e^\alpha,
+\prod_{k=1}^r\alpha_{j_k}(-m_k)e^\alpha\right\rangle_g
+=q(\alpha)\sum_{\sigma\in S_r}
+\prod_{k=1}^r\delta_{n_k,m_{\sigma(k)}}\,n_kG_{i_kj_{\sigma(k)}}.
+\]
+Different momenta or different numbers of oscillator factors are
+orthogonal. Coefficients in the first argument are conjugated. In
+weight two there are at most two oscillator factors, so the permutation
+sum has at most two terms. For example the pairing of
+$\alpha_i(-1)\alpha_j(-1)\one$ with
+$\alpha_k(-1)\alpha_l(-1)\one$ is
+$G_{ik}G_{jl}+G_{il}G_{jk}$, while the pairing of the two mode-two
+oscillators is $2G_{ij}$.
+
+The freshly recomputed overlaps and normalized projections are
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}\toprule
+ & $\omega_L$ & $\omega_R$ & $e$ & $f$\\\midrule
+$\langle w_i,p\rangle_g$ & $0$ & $13/205$ & $108/1271$ & $39/155$\\
+$\langle w_i,z\rangle_g$ & $0$ & $21/205$ & $780/1271$ & $13/155$\\\midrule
+$\langle w_i,p\rangle_g/N_i$ & $0$ & $2/45$ & $9/100$ & $39/175$\\
+$\langle w_i,z\rangle_g/N_i$ & $0$ & $14/195$ & $13/20$ & $13/175$\\\bottomrule
+\end{tabular}\end{center}
+The squared norms of the actual saved fields are
+$\langle p,p\rangle_g=2/5$ and $\langle z,z\rangle_g=4/5$.
+These norm checks alone do not verify their Virasoro OPEs.
+
+The four columns reduce the positive identity to
+\[
+\begin{split}
+1&=1,\\
+1&=\frac{3403}{4563}+\frac{25}{6}\frac{2}{45}
+                         +\frac{25}{26}\frac{14}{195}
+   =\frac{3403+845+315}{4563},\\
+1&=\frac{25}{6}\frac9{100}+\frac{25}{26}\frac{13}{20}
+   =\frac38+\frac58,\\
+1&=\frac{25}{6}\frac{39}{175}+\frac{25}{26}\frac{13}{175}
+   =\frac{13}{14}+\frac1{14}.
+\end{split}
+\]
+Thus the exact vector identity
+\[
+\omega_B=\omega_L+\frac{3403}{4563}\omega_R
+                      +\frac{25}{6}\overline p+\frac{25}{26}\overline z
+\]
+has a small inspectable arithmetic certificate. The identification of
+the orthogonal projections with Haar averages still uses the separately
+certified statement that these four axes exhaust the current invariants
+in the actual $S_2$. The checker verifies the projected vector equality;
+it does not replace that representation-theoretic input.
+
+All $337$ monomials of $u,\omega_B,\omega_L,\omega_R,e,f,p,z$ are
+printed as machine-independent rows in
+\artifact{c8_reviewability_20260927/grade2_fields.tsv}. Each row has
+the field name, eight momentum coordinates, the oscillator indices,
+and the four rational coefficients. An oscillator index $8(n-1)+i$
+means $\alpha_i(-n)$. Repeated indices are repeated commuting creation
+operators, with no divided-power convention.
+
+\input{c8_physics_20260927/verification_finite_inputs.tex}
+\input{c8_reviewability_20260927/structural_inputs.tex}
+
+\section{Reproduction and the remaining large checks}
+The new small checker is
+\artifact{c8_reviewability_20260927/check_readable_inputs.py}. It uses
+only Python's exact rational arithmetic and the displayed formulas;
+it imports none of the research mode engine. Run from the repository:
+\begin{quote}\small\begin{verbatim}
+python hi_cft_safe_run.py --limit-mib 512 -- \
+  timeout 120s python \
+  c8_reviewability_20260927/check_readable_inputs.py \
+  --output-dir /tmp/c8-readable-review
+\end{verbatim}\end{quote}
+This writes a fresh report in the chosen output directory; use a new
+directory if it already exists. The report from this revision is
+\artifact{c8_reviewability_20260927/readable_checks.json}.
+The source hashes in that report identify the exact coordinate inputs.
+The mathematical content is the recomputation; the hashes identify
+which inputs were used. The complete current singular brackets,
+the highest-vector conditions, the stress Gram matrix, the overlaps,
+the projected identity, both complete compact Potts formulas and the
+eight primary energy sums are checked.
+The script does not check every higher OPE or prove that a saved field
+belongs to the algebra generated by the short defining set.
+
+The old large calculations remain relevant. In particular, dimensions
+$120$, $956$ and $322$ and the full Gate~4 closure are not established
+by inspecting a representative row. The preceding sections specify
+which actual saved witnesses can be checked and which missing witness
+formats would make the remaining verification easier. The companion
+\artifact{hi_cft_c8_lean_assessment.pdf} explains how these finite
+interfaces could become kernel-checked theorems, and why doing so would
+still leave substantial VOA, tensor-category and analytic foundations.
+\end{document}

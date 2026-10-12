@@ -1,0 +1,25 @@
+{
+  "arithmetic": "Q(sqrt(13),sqrt(-3))",
+  "current_complement_dimension": 80,
+  "exact_invariance_under_K0_and_all_S2_zero_modes": true,
+  "exact_generator_lowering_annihilation": true,
+  "unique_joint_Cartan_eigenspace_dimension": 1,
+  "zero_mode_algebra_on_complement_is_irreducible": true,
+  "highest_seed_cyclicity": [
+    {
+      "highest_weight": [
+        0,
+        10
+      ],
+      "cyclic_dimension": 80
+    }
+  ],
+  "seconds": 0.6754491470055655,
+  "peak_rss_KiB": 26456,
+  "scope": "Exact irreducibility on the current complement, using the previously certified PCT-stable S2. This does not establish an all-weight U-module decomposition.",
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_proof_current_module.py": "e1d88245d504382edab26afeeeaad63de8181242efe3eee2a00bdf44decfea7b",
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8_exact.py": "e9816e9b3cd30d092b45d6ce85297f49ec8431f2f6081d862dd2b41c17ebc865",
+    "hi_cft_20260923_c8_exact_fields.json": "898ee3f2b7621d6eefa39a7afb3d82176c6ed3580b776008f8b801414d62f59d"
+  }
+}

@@ -1,0 +1,61 @@
+RENDERED-PAGE REVIEW, 295-PAGE BUILD
+Reviewer: scope_foundations
+Method: actual visual inspection with view_image; page 38 additionally
+inspected at original resolution. No TeX edits, rendering jobs or other
+computations were performed by this reviewer.
+
+Requested PDF-page images inspected:
+34 (printed 20), 36 (22), 38 (24), 49 (35), 232 (218),
+284 (270), 293 (279), and 295 (281).
+
+Result: no clipping, overlapping text/formulas, missing glyphs, unreadable
+mathematical notation, or urgent layout repair found in these samples.
+
+Page 34: the new module/intertwiner section is clearly headed. The
+module-action and intertwining-field displays are visually distinct;
+the energy commutator and exponent equation remain readable. The last
+paragraph continues to the next page naturally; the section heading is
+not stranded.
+
+Page 36: the Poisson example has clear equation spacing and aligned
+two-character expansions. The new half-charge example begins in the
+last quarter and continues on the next page. It retains a substantial
+setup, top-state display and fusion explanation before that break.
+Optional preference only: move the example to the next page if one
+wants its main OPE calculation immediately beside the setup. The
+current break is acceptable and avoids a large blank area.
+
+Page 38: the diagonal-affine/Ising example and its small branching table
+are readable. The final displayed h_C calculation fits ABOVE the page
+number; original-resolution inspection confirms that it is not clipped
+or overlapping the footer. The small table's fractions are compact but
+legible at normal page magnification.
+
+Page 49: the subfactor example and new braiding section are clearly
+separated. Both hexagons and the R-symbol convention fit cleanly.
+The braiding section starts late on the page but has enough explanatory
+material and equations beneath it; there is no orphan heading.
+
+Page 232: the exact-certificate section is dense but evenly spaced.
+The field-versus-product-algebra example is easy to distinguish from
+the surrounding prose. The next section begins with a substantial
+paragraph rather than a stranded heading. The final paragraph break
+is a routine continuation.
+
+Page 284: blue exercise numbers visibly link the answer back to its
+exercise; labels 25.2--25.5 and the next chapter's section B.26 make
+the navigation clear. The chapter-26 first solution begins near the
+bottom and continues, with its two starting equations retained on
+this page. This is acceptable; forcing a new page is optional only.
+
+Pages 293 and 295: the two-column index is clear, with distinguishable
+main entries and indented subentries. Blue page links are legible.
+The final right column is short, as expected at the end of an index;
+there is no clipping or need to compress the left column. The index
+provides useful navigation by mechanisms as well as named categories.
+
+Coverage limit: the selected samples show the arithmetic chapter and
+the start of the related-category solutions, but not the main extended
+Haagerup planar-algebra pages. This review makes no claim about unseen
+rendered pages. No required editorial action is outstanding from the
+eight pages actually inspected.

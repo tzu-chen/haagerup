@@ -1,0 +1,199 @@
+Independent review of construction chapters c01--c06
+Reviewer: scope_lattice; 2026-10-05, source snapshot approximately 17:47--17:57 UTC.
+
+Scope
+-----
+Read all six expanded chapters and the earlier foundations review. Checked
+the hand derivations and logical dependencies against the local construction
+manuscript and the completed September coset/sewing audit notes. No numerical
+jobs, external scientific edits, or new independent finite-rank certificates
+were made. Model-specific OPE identities, kernel ranks, branching tables,
+and specialized arithmetic/theta inputs retain their stated input status.
+
+Overall conclusion
+------------------
+The construction is coherent conditional on the identified finite inputs.
+The repairs requested in review_foundations_on_construction.txt are present
+in the expanded versions and materially improve the proof. In particular,
+c02 now supplies the positive-mode bootstrap, c03 supplies the acyclic
+parafermion reconstruction, and c05 restores the squareclass restrictions
+and exceptional-case argument. I found no new incorrect hand formula in
+the substantive c01--c06 arguments.
+
+The c06 scope is especially good: the rational charge-six commutant is an
+actual strongly rational VOA with a transported extension algebra; the
+irrational axis is an actual chiral stress with certified low-grade
+commutants; the reduced full theory is still a sewing problem. The trace
+and continuum obstructions are explicitly conditional and do not amount
+to a global exclusion of all charge-near-two theories.
+
+1. Concrete correction
+----------------------
+
+c06_cosets.tex:207--208 contains literal carriage-return bytes before
+"m denominator" and "m coset", rather than the TeX command \\rm. This is
+confirmed by `rg -n $'\\r' .../c0*.tex`; these are the only matching c
+chapter lines. Use c_{\\mathrm{denominator}} and c_{\\mathrm{coset}}.
+The intended inequalities and numbers, 158/41 and 170/41, are correct.
+
+2. Targeted pedagogy improvements
+--------------------------------
+
+2a. c01_lattice_embedding.tex:190--191, then the transported-form section.
+The inference from the displayed noncompact coordinate triple to the
+simple positive-level affine quotient is valid, but the appropriate
+positive form is explained later. Add a forward sentence: "The transported
+positive form constructed below makes this coordinate realization compact;
+equivalently one may first conjugate to that compact gauge." This helps a
+reader avoid assuming that the raw right triple is already compact for
+the untransported lattice PCT. No change to the embedding is needed.
+
+2b. c04_regularity.tex:73--82 and 117--118.
+The proof uses self-adjoint partial energies for the inherited positive
+form. The actual affine/Potts/parafermion subalgebras have this property.
+For a theorem meant to be read as a reusable abstract package, explicitly
+say that the subalgebras carry their inherited unitary structures and that
+their conformal vectors are PCT real/semiconformal for the ambient form,
+or recall the unitary-subalgebra fact that supplies this from the chosen
+embeddings. The present reader otherwise sees "PCT-stable" and "grading
+compatible" followed by self-adjointness without an explanation of the
+stress adjoint. This is an exposition precision request, not a claim of
+a counterexample to the actual construction.
+
+2c. c06_cosets.tex:433--438.
+Give a short proof, or a cross-reference to a proof, for the countable
+ordinary semisimple branching statement. It is quite important that this
+is available even though neither irrational factor is rational. The useful
+mechanism is positivity, commuting energies, orthogonal decomposition,
+and finite ambient graded pieces; fixing an opposite ground weight makes
+each multiplicity-module grade sit inside one finite ambient grade.
+Immediately retain the existing warning that none of this bounds the
+number of reduced branches in an energy interval. The two facts should
+not be mistaken for each other.
+Source: hi_cft_20260925_ident2_construction.md, section 3 and its end just
+before section 4. This is already proved in the completed source notes.
+
+2d. c06_cosets.tex:483--486.
+Name the multivariable modular theorem (Krauel--Miyamoto) in this one
+location and give its actual application hypotheses in a sentence:
+orthogonal conformal vectors sum to the regular ambient stress, and the
+vacuum two-variable trace is normally convergent. Neither reduced factor
+needs rationality. The present statement is accurate; the extra sentence
+would forestall the tempting but false objection that irrational factors
+invalidate ambient modularity. The next sentence correctly rejects
+separate modular invariance and should remain.
+Source: hi_cft_20260925_axis2_sewing_trace.md, "Ambient two-temperature
+modular identity".
+
+2e. c06_cosets.tex:563--569.
+The positive-weight irreducible Virasoro character formula holds for
+c>1, including 1<c<25, but a beginner may expect exceptional Verma nulls.
+A brief parenthesis explaining the absence of positive real degenerate
+weights in this unitary range would be helpful; the vacuum is the lone
+exception used below. For 1<c<25 put c=1+6Q^2 and Q=b+b^{-1}, |b|=1.
+The Kac weights [Q^2-(rb+s/b)^2]/4 are nonreal for r!=s and nonpositive
+for r=s. This is in the source note; no new hypothesis is needed.
+
+2f. c06_cosets.tex:149--161 and 191--197.
+The c6 transport and c2 lattice obstruction are correctly scoped but
+would benefit from one sentence naming the preserved chiral algebra.
+The c6 noninvertible defects preserve C6; they are not noninvertible
+simple modules of V_N, whose representation category is pointed. The
+reverse c2 no-go concerns V_L0-preserving defects. This prevents readers
+from perceiving a contradiction between the two paragraphs. The chapter
+already supplies enough information to deduce this, but making it explicit
+is worthwhile for the intended audience.
+
+3. Hand checks that passed
+--------------------------
+
+c01: Root-lattice cocycle now correctly distinguishes the norm-two basis
+from an arbitrary even basis. The h and ell levels are 39 and 1;
+principal A5/A2 indices are 35 and 4. The g-conjugation normalizes all
+three charged exponential magnitudes to 2, while the relative phases
+have unit modulus. The 8640 reciprocal PCT rescaling of the left triple
+is consistent with its displayed coefficients.
+
+c02: The filtered Wick induction does not assume a PBW basis. The only
+equal-total-weight recursive term decreases the left weight. The repaired
+L1/L2 formulas retain the derivative and scalar terms; the primitive
+current multiplets are quasiprimary for the stated representation reason.
+The neutral Gate 5 calculation uses already controlled charged zero modes
+and is not circular. Low-grade properness is only asserted after closure.
+
+c03: The Potts opposite-root coefficient products are 1/25 and its charge
+is 4/5. The parafermion reconstruction order now makes all b,b; b,d; d,d
+dependencies available before use. The L0 Gram determinant is 39 and
+r0 is congruent to 26h/39; changing the pointed generator by a factor two
+turns 3j^2/13 into -j^2/13. The two isotropic lines are k=+/-5j. The
+positive averaged-stress coefficients sum to the required ambient stress.
+
+c04: The C2 orthogonal-complement bound never needs simultaneous
+diagonalization of the partial energies. The module-top trace argument
+uses component ordinary semisimplicity instead of assuming an arbitrary
+U module is unitary. Zero trace plus nonnegative component eigenvalues
+forces each component energy to vanish. Vacuum projectivity, moderate
+growth, rigidity and then semisimplicity appear in the needed order.
+The right-exact functor example correctly shows why right exactness
+alone cannot split a vacuum extension.
+
+c05: The coefficient (3403/4563)(3/164)=83/6084 is correct, and W is
+now described as additive bookkeeping until a complete right sl2 top is
+assembled. The involution/right-action correction uses duality correctly.
+The D=1 mod3 and 7-not-dividing-D conditions are present before the
+totient estimate. The factorization is
+4(m^2-1)(29m^2+13)>0 for m>1. The D=10 parity argument makes m,t even;
+for m=t=2 the two possible second sums are -2 and -2-4sqrt(10), both
+incompatible with the equality case 2. The final H2/H3 Morita distinction
+is kept separate from identifying the chosen boundary category.
+
+c06: The perpendicular lattice glue has norm4, order6, determinant39.
+The lattice double commutant follows from positive perpendicular energy
+and saturation; the specific regular lattice-coset theorem applies.
+Full lattice support gives P39^rev, its diagonal condensation gives Rep(U),
+and extension transitivity transports multiplication, not just branching.
+The reverse diagonal vacuum coefficient is 1+1+4=6. The categorical
+tensor-product obstruction is valid since 3d is the smallest nontrivial
+central dimension, s is largest, and (3d)^2>s.
+
+The four-dimensional idempotent equations follow from the invariant
+Griess form. At c=2 the first necessary quadratic factors as
+(250b-13)(10b+3), and evaluating the second gives exactly the two nonzero
+numbers printed. This only excludes the stated four-dimensional slice.
+The charge-star formula is irrational and thus obstructs strong
+rationality with that exact stress, not all alternative stresses.
+
+The conditional divergence proof has the right order of limits. The
+ambient two-temperature trace converges normally by the minimum-temperature
+bound. The opposite simple characters have a uniform Verma upper bound
+only under the displayed all-grade product hypothesis. Its exponential
+growth c_A+1 is smaller than c_f. The key final inequality
+chi_lambda(beta)^2 >= chi_lambda(2beta) correctly uses individual basis
+vectors and integer multiplicities; the false generic l1-to-l2 inference
+is explicitly avoided.
+
+The strict continuum proof has the correct eta prefactor and the correct
+condition st>=16pi^2. A common large u compares arbitrary s1,s2, fixing
+sqrt(s)G(s); positive Laplace uniqueness then fixes the threshold density.
+The vacuum-atom contradiction uses a bounded original numerator and an
+exponentially growing positive transformed vacuum term. It remains a
+strict identical-irreducible-Virasoro pairing result, not a theorem about
+arbitrary reducible branching-block pairings.
+
+The tensor-descent argument correctly first passes to the finite fusion
+category generated by image summands. A genuine strong tensor functor
+supplies a connected central adjoint algebra. Its nontrivial dimension
+is at least 1+3d=d^2, forcing the target below the Fibonacci global
+dimension minimum, hence pointed, contradicting preserved irrational
+FP dimension. This says that a true descent is faithful; it does not
+construct that descent from compressed stress-preserving operators.
+
+4. Remaining scope is represented accurately
+-------------------------------------------
+No new hard correction to the irrational-stress no-go statements is
+needed. Keep all four separate: the c6 rational construction, the exact
+irrational chiral axis, conditional failures of specific reduced state
+spaces, and the unresolved physical projector-chain continuum. In
+particular the two-current negative-Gram criterion has the unique-vacuum,
+unitarity, commuting-current premises and is not applied to the numerical
+near-spin-one chain states as a theorem.

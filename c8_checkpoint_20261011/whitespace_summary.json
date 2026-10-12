@@ -1,0 +1,11 @@
+{
+  "command": "git diff --cached --check",
+  "exit_code": 2,
+  "issues": {
+    "trailing whitespace": 45896,
+    "new blank line at EOF": 31
+  },
+  "affected_files": 68,
+  "unexpected": [],
+  "decision": "Preserve the selected scientific sources, generated witnesses and historical evidence byte-for-byte. Report existing cosmetic whitespace rather than rewriting data authenticated by historical manifests."
+}

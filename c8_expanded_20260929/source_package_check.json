@@ -1,0 +1,14 @@
+{
+  "archive": "c8_expanded_20260929/haagerup_c8_expanded_sources.zip",
+  "bytes": 1019806,
+  "sha256": "a70ec60fa91d09dd8d2e82044b5c250b672af3ae46ed765eea2d7b645f2214b0",
+  "files": 73,
+  "fresh_build_directory": "/tmp/c8-expanded-source-build-r1oijw9u/c8_expanded_20260929",
+  "scope": "Portable typesetting sources and figures; original research input stores are not included.",
+  "fresh_build_pages": 341,
+  "extracted_PDF_text_identical": true,
+  "fresh_build_has_overfull_boxes": false,
+  "fresh_build_has_undefined_references": false,
+  "fresh_build_missing_glyphs": false,
+  "status": "PASS"
+}

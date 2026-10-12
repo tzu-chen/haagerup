@@ -1,0 +1,84 @@
+{
+  "format": "portable-gate4-residual-replay-v1",
+  "status": "all_twelve_residuals_zero",
+  "identities": [
+    {
+      "id": 0,
+      "target_terms": 2343,
+      "columns_used": 19,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 1,
+      "target_terms": 2343,
+      "columns_used": 19,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 2,
+      "target_terms": 2343,
+      "columns_used": 19,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 3,
+      "target_terms": 2343,
+      "columns_used": 19,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 4,
+      "target_terms": 2343,
+      "columns_used": 19,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 5,
+      "target_terms": 2343,
+      "columns_used": 19,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 6,
+      "target_terms": 2726,
+      "columns_used": 21,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 7,
+      "target_terms": 2726,
+      "columns_used": 21,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 8,
+      "target_terms": 2726,
+      "columns_used": 21,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 9,
+      "target_terms": 2726,
+      "columns_used": 21,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 10,
+      "target_terms": 2726,
+      "columns_used": 21,
+      "full_fraction_residual_zero": true
+    },
+    {
+      "id": 11,
+      "target_terms": 2726,
+      "columns_used": 21,
+      "full_fraction_residual_zero": true
+    }
+  ],
+  "packet_sha256": "e779060a45eecb1decabedb8e1829a511951ea1347a6c28ae2553719379a227d",
+  "relations_sha256": "b573938ea27ab06e7b5ef98f698b8dc96233f9a0520473cbac6f5d1f0409df9c",
+  "checker_sha256": "a48355174393acbb22330192e676b372df8c35863646635e460f87a8c3dc088a",
+  "seconds": 20.282457990047988,
+  "peak_rss_KiB": 35380,
+  "scope": "Full exact residual replay using only portable saved vectors and their relation coefficients. Does not reconstruct ambient vertex modes, projector application, normal-word membership, raising premises, or rank witnesses."
+}

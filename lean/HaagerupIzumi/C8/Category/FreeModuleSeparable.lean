@@ -17,7 +17,9 @@ separability makes every module a summand of a free module."
   `A`-bimodules (`μ ≫ sep = (sep ▷ A) ≫ α ≫ (A ◁ μ)` and
   `μ ≫ sep = (A ◁ sep) ≫ α⁻¹ ≫ (μ ▷ A)`).  This is the definition of a separable algebra
   (for `H/B` it is supplied by the normalized separability idempotent of a connected étale
-  algebra in a fusion category; that existence statement is not formalized here).
+  algebra in a fusion category; for a twisted group algebra, the shape of `H/B`, the section
+  is constructed in `Category/FreeModuleTwistedSeparable.lean`,
+  `RightMod.twistedSeparabilitySection`).
 * `sepSplit hS M : M ⟶ M ⊗ A`, `m ↦ m · sep(1)`, satisfies `sepSplit ≫ act = 𝟙`
   (`sepSplit_act`) and is a module map (`act_sepSplit`, `sepSplit_whiskerRight_freeAct`:
   both sides equal `m ⊗ a ↦ m · sep(a)`, by left resp. right `A`-linearity of `sep`).

@@ -1,0 +1,135 @@
+{
+  "diagonal_U": {
+    "relevant_scalar_primaries": [
+      {
+        "Delta": "2/3",
+        "multiplicity": 9
+      },
+      {
+        "Delta": "10/13",
+        "multiplicity": 25
+      },
+      {
+        "Delta": "12/13",
+        "multiplicity": 49
+      },
+      {
+        "Delta": "14/13",
+        "multiplicity": 169
+      },
+      {
+        "Delta": "16/13",
+        "multiplicity": 196
+      },
+      {
+        "Delta": "4/3",
+        "multiplicity": 729
+      },
+      {
+        "Delta": "22/13",
+        "multiplicity": 1764
+      }
+    ],
+    "relevant_scalar_components": 2941,
+    "all_relevant_Virasoro_primaries": [
+      {
+        "Delta": "2/3",
+        "spin": 0,
+        "multiplicity": 9
+      },
+      {
+        "Delta": "10/13",
+        "spin": 0,
+        "multiplicity": 25
+      },
+      {
+        "Delta": "12/13",
+        "spin": 0,
+        "multiplicity": 49
+      },
+      {
+        "Delta": "1",
+        "spin": -1,
+        "multiplicity": 6
+      },
+      {
+        "Delta": "1",
+        "spin": 1,
+        "multiplicity": 6
+      },
+      {
+        "Delta": "14/13",
+        "spin": 0,
+        "multiplicity": 169
+      },
+      {
+        "Delta": "16/13",
+        "spin": 0,
+        "multiplicity": 196
+      },
+      {
+        "Delta": "4/3",
+        "spin": 0,
+        "multiplicity": 729
+      },
+      {
+        "Delta": "5/3",
+        "spin": -1,
+        "multiplicity": 720
+      },
+      {
+        "Delta": "5/3",
+        "spin": 1,
+        "multiplicity": 720
+      },
+      {
+        "Delta": "22/13",
+        "spin": 0,
+        "multiplicity": 1764
+      },
+      {
+        "Delta": "23/13",
+        "spin": -1,
+        "multiplicity": 1120
+      },
+      {
+        "Delta": "23/13",
+        "spin": 1,
+        "multiplicity": 1120
+      },
+      {
+        "Delta": "25/13",
+        "spin": -1,
+        "multiplicity": 1995
+      },
+      {
+        "Delta": "25/13",
+        "spin": 1,
+        "multiplicity": 1995
+      }
+    ],
+    "all_relevant_primary_components": 10623,
+    "dimension_two_scalar_primaries": 19558,
+    "dimension_two_scalar_extended_sector_tops": 19522,
+    "dimension_two_U_current_bilinears": 36,
+    "dimension_two_all_states": 19798,
+    "dimension_two_all_Virasoro_primaries": 19784,
+    "ordinary_primary_gap": "2/3",
+    "scalar_primary_gap": "2/3",
+    "currents_each_chirality": 6
+  },
+  "holomorphic_E8_full": {
+    "ordinary_primary_gap": "1",
+    "scalar_primary_gap": "2",
+    "currents_each_chirality": 248,
+    "relevant_scalar_components": 0,
+    "dimension_two_scalar_primaries": 61504,
+    "dimension_two_all_states": 69752,
+    "first_chiral_H3_invariant_scalar_gap": "2",
+    "first_chiral_H3_invariant_dimension_two_scalars": 1488,
+    "both_H3_times_H3op_invariant_scalar_gap": "2",
+    "both_H3_times_H3op_invariant_dimension_two_scalars": 36,
+    "invariant_action_scope": "For the selected canonical extension and first-factor action described in defects.tex, singlets are U tensor conjugate(Hprime). For both independent factors, singlets are U tensor conjugate(U)."
+  },
+  "scope": "Component multiplicities, not counts of extended-algebra sectors. Dimension two does not assert exact marginality. Invariant counts additionally use the selected canonical-extension defect action derived in defects.tex; characters alone do not determine that action."
+}

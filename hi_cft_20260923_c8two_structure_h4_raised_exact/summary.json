@@ -1,0 +1,104 @@
+{
+  "format": "targeted-H4-summary-v1",
+  "status": "all_requested_exact_H4_targets_passed",
+  "blocks": [
+    {
+      "weight": [
+        0,
+        2
+      ],
+      "rank": 250,
+      "verified_targets": 12,
+      "output": "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_h4_raised_exact/block_p0_p2.json"
+    }
+  ],
+  "policy": {
+    "batch": 3,
+    "format": "targeted-H4-integer-residual-v1",
+    "requested_targets": [
+      [
+        0,
+        "r3_000944"
+      ],
+      [
+        1,
+        "r3_000905"
+      ],
+      [
+        1,
+        "r3_000907"
+      ],
+      [
+        2,
+        "r3_000905"
+      ],
+      [
+        2,
+        "r3_000907"
+      ],
+      [
+        3,
+        "r3_000909"
+      ],
+      [
+        4,
+        "r3_000842"
+      ],
+      [
+        5,
+        "r3_000850"
+      ],
+      [
+        5,
+        "r3_000871"
+      ],
+      [
+        6,
+        "r3_000854"
+      ],
+      [
+        6,
+        "r3_000875"
+      ],
+      [
+        7,
+        "r3_000885"
+      ]
+    ],
+    "serial_policy": {
+      "format": "serial-exact-h4-v1",
+      "omitted_neutral_family_derived_from_total_stress": true,
+      "operators": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "plan_sha256": "f93a8f55c3bc820137a5610cb49404800afba7f29383ff7030a59eb61578b75e",
+      "source_sha256": {
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_h4_flint.py": "41f0222b5892e2ace3cb76eb313d64d7edfbfb8eb3a4ac8935bbe6982846b5de",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_n4_strong_skip_v2.sqlite": "8b0dc383a49249db5d8b369300d0d8f145d9725461cb5a2c3e236af9ca682f08",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_h4_bulk.py": "6401adec66896cfd8526f9f629db9ee1b0654a184179579904d7aebca00f8e11",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.json": "cd3247f2919fd4b88531f8fcb528a34f4b51b245b3b408abb1d1c7c2274c2ae6",
+        "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_p4_controls.vectors.json.gz": "c8c3ce8b8ab361fabca3c54c3f77a234029bf9b62858f74b5991dc5ed73c1d4e",
+        "hi_cft_20260923_next_grade4_checkpoint/checkpoint_000024/manifest.json": "8fd8a3eedee018e6caa18cf773c49740265ede07e0ac705c3bfc79d1b2be84fd"
+      }
+    },
+    "source_sha256": {
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_structure_h4_raise_request.json": "7e35145ec8915993b0df2c04592e4d0739cfa1c18fd3c3354a83e2688e3681b5",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_c8two_targeted_h4.py": "4857680860efabde0cb8a86bb93ac2f1fc822432829bdb5138cc9957d5eb9a52",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_exact_mode_cache.py": "aa4b96fea7e13a688d0d9b36d1481550882b13cc9127cfff50fc527d9e543a64",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_exact_cached.py": "8206f925b87769e7466210381b49ffa2b6872244812ae8aaf67c4910fcc2f7a9",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_h4_integer_cached_v2.py": "663ca02887cf23cfaf6bde151b6f917d4290c2abec7a0623db4a5bb47211736e",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_integer_residual.py": "782538a65c4a5ef3c9553a6463089a8dbf9b85d205e5a9ad2ca4d0ae100ee5e3",
+      "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_h4_bulk.py": "6401adec66896cfd8526f9f629db9ee1b0654a184179579904d7aebca00f8e11"
+    }
+  },
+  "requested_count": 12,
+  "seconds_this_call": 167.21934849198442
+}

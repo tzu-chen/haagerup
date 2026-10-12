@@ -1,0 +1,121 @@
+{
+  "scope": "Input identity for document assembly; no research replay is claimed.",
+  "files": {
+    "hi_cft_c8_proof.tex": {
+      "bytes": 63553,
+      "sha256": "e67701657faa6a2993be42358f47585384979e7e43489312822c2d00189111f7"
+    },
+    "hi_cft_c8_bibliography.tex": {
+      "bytes": 10831,
+      "sha256": "34ce31b39e36da40419004309731f17dbfa0f3f57b1d86084c351056fa70643f"
+    },
+    "c8_physics_20260927/bibliography_additions.tex": {
+      "bytes": 860,
+      "sha256": "9948a1668dcf26ab89eb4015dc305b5fd2897654b38dbd5e5e561a1b84621ca6"
+    },
+    "c8_physics_20260927/spectrum.tex": {
+      "bytes": 17380,
+      "sha256": "8970cdae85bd851450c47f6c9524d05b5390900d9bce1f8404bb09ea8cd3e070"
+    },
+    "c8_physics_20260927/data/thermal_readable.tex": {
+      "bytes": 800,
+      "sha256": "d606d9b9a6601a0de280b7017fd34db6698e40850654675438981e3f41a087b9"
+    },
+    "c8_physics_20260927/correlators.tex": {
+      "bytes": 16012,
+      "sha256": "b6d8edcc8bee55a91ca5cfcb6ba8ba82d23835cef08825d142563e761ea8dadf"
+    },
+    "c8_physics_20260927/couplings.tex": {
+      "bytes": 7958,
+      "sha256": "685a58205dc2ece5314273d7ebdbf1929a1ab6102f94de0811fde4bacdfafe63"
+    },
+    "c8_physics_20260927/defects.tex": {
+      "bytes": 17535,
+      "sha256": "ef644c75648ba0b8367e51ea90d3ee1773e1f8ebe4a3cace10e7b9c1e7d99088"
+    },
+    "c8_physics_20260927/physics_guide.tex": {
+      "bytes": 7602,
+      "sha256": "57c19821d4f03fb873b3a9ec155b298310049abab24edb22b84982af07c6bde5"
+    },
+    "hi_cft_c8_manuscript_structure.tex": {
+      "bytes": 69846,
+      "sha256": "474e4dd9074cb4d02135a6869340285daf0302336b5f64ec216dd7a79780d369"
+    },
+    "hi_cft_c8_manuscript_analytic.tex": {
+      "bytes": 47958,
+      "sha256": "c87f5e1f57746fb60b33e894751f452c2699926a46af329a4417f66c12cd035f"
+    },
+    "c8_physics_20260927/figures/physics_primary_spectrum.pdf": {
+      "bytes": 48645,
+      "sha256": "55a0c61af9b5e8351109cac56ac19bd9af49086128a5444b92f7c12f1331d1ae"
+    },
+    "c8_physics_20260927/figures/physics_thermal_comparison.pdf": {
+      "bytes": 18725,
+      "sha256": "56a16036015158a70a80c49ade87bfda962e211a7f0833a9d99247d97ed27577"
+    },
+    "c8_physics_20260927/figures/defect_observables.pdf": {
+      "bytes": 26260,
+      "sha256": "51df3a01ead4f9fde552531efb02cd23785798d59fada152a7e93979e363bf65"
+    },
+    "c8_physics_20260927/figures/haagerup_bootstrap_comparison.pdf": {
+      "bytes": 397883,
+      "sha256": "1a303741ef6f5dcae3f55b9f16ccd57e65cf07d3a426c5172e63fbca4a979a84"
+    },
+    "hi_cft_c8_verification_guide.tex": {
+      "bytes": 15325,
+      "sha256": "057592b29fcf11c0601c7907dce409189d30d56b792b30804384e01e9efdebc2"
+    },
+    "c8_physics_20260927/manuscript_refs.tex": {
+      "bytes": 654,
+      "sha256": "4b40cf19d01695f531b79b4c5cb7925e1cfaf4504481cd065e7eafcdc4261654"
+    },
+    "c8_physics_20260927/verification_finite_inputs.tex": {
+      "bytes": 21671,
+      "sha256": "045fb2b3fc8f7fe4f02d4748df5a643052f33fee31ed2ff3f4f812357be4b4d0"
+    },
+    "c8_reviewability_20260927/structural_inputs.tex": {
+      "bytes": 25470,
+      "sha256": "094dd20a4baafcb2444b913da1bbc54a82b6ec2091724d032f4cb622ba89afe6"
+    },
+    "c8_physics_20260927/lean_baseline_assessment.tex": {
+      "bytes": 36248,
+      "sha256": "4768c77a4270a7153ad679520153e4cc654d73703c6b86009e15b3126d4c285d"
+    },
+    "c8_physics_20260927/lean_assessment.tex": {
+      "bytes": 20495,
+      "sha256": "3a6d53ac01ab0ef694fa4c4f10e94e4d4fe790013494357a0821678d6e33a55b"
+    },
+    "c8_physics_20260927/data/characters.json": {
+      "bytes": 15284,
+      "sha256": "b03b49bb3c05a5db467a15662b1202405b7cbb704afd1dd6bd6bdc5d0fc7fa80"
+    },
+    "c8_physics_20260927/data/fundamental_matrix.json": {
+      "bytes": 86183,
+      "sha256": "66e76aee17dd65a5bcbb8a47065cd5229e5ef0204508437d20bef4f62bdad535"
+    },
+    "c8_physics_20260927/data/scalars.tsv": {
+      "bytes": 5388,
+      "sha256": "c5910a6ecc569ddcac03cadde0b8dace07e530f8c8119b8510f74dfa9a6fb53b"
+    },
+    "c8_physics_20260927/data/diagonal_spectrum.tsv": {
+      "bytes": 98582,
+      "sha256": "8db9e9f9cd6e09863212bc5078b87dbbbc9b84b0eff72bc30d806be2b4a6c80c"
+    },
+    "c8_physics_20260927/data/e8_spectrum.tsv": {
+      "bytes": 11869,
+      "sha256": "6a82b9d25bc1e7e81dbb2e9547b3f974c4020a2a818e341ad899860291a924fb"
+    },
+    "c8_physics_20260927/data/thermal.json": {
+      "bytes": 27128,
+      "sha256": "1ba761d39345fe89015718745b2daf2f4666ba948f885e432efdfafa085ca5d9"
+    },
+    "c8_reviewability_20260927/grade2_fields.tsv": {
+      "bytes": 12539,
+      "sha256": "85f4f4abc0940a2f4ec850028766612eec6300a7e8ce184734d068d9d2d1f320"
+    },
+    "c8_reviewability_20260927/structural_fields.tsv": {
+      "bytes": 19960,
+      "sha256": "394543f09b497f08bc876d69373f077a03c69e657d8224c3c6e03806e90bb5ed"
+    }
+  }
+}

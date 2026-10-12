@@ -1,0 +1,22 @@
+{
+  "recorded_utc": "2026-10-08T16:47:00.330081+00:00",
+  "scope": "Current infrastructure identities for the Chapter 2 editorial revision. No numerical job, research import, or certificate replay. Historical scientific and execution records remain unchanged.",
+  "files": [
+    {
+      "path": "/home/tzuchen/.codex/AGENTS.md",
+      "sha256": "e7e9399f145e3eaf92a89d41e9760e191f454b50cadd93f8409b46021763cc6c"
+    },
+    {
+      "path": "/home/tzuchen/Codes/haagerup/AGENTS.md",
+      "sha256": "a3d38c2d724ea7a2612d90dcdb065b2165cbac9c74af23ef68626079245d611f"
+    },
+    {
+      "path": "/home/tzuchen/.local/bin/research-safe-run",
+      "sha256": "09b9986966402a73bba8e078884a50b5762c4980485ea295e8cca2e02fc8ae63"
+    },
+    {
+      "path": "/home/tzuchen/Codes/haagerup/hi_cft_safe_run.py",
+      "sha256": "e06f29f8c507f3355ab005e4bc1216dc2ef21226515fff5ce9bda7528c77517b"
+    }
+  ]
+}

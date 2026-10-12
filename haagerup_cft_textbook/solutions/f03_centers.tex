@@ -1,0 +1,102 @@
+\section{Solutions for Chapter~\ref{ch:centers}}
+
+\paragraph{Exercise~\ref{ex:Z3-halfbraid}.}
+\phantomsection
+\label{sol:ex:Z3-halfbraid}
+The scalar $\sigma_1$ must obey $\sigma_1^3=1$, and
+$\sigma_h=\sigma_1^h$.  Its three choices are $\omega^k$,
+giving the labels $(g,k)$ for all nine pairs.  The twist is
+$\omega^{gk}$.  Five pairs have $gk=0$: the three with $g=0$
+and the two further pairs with $k=0$.  Two pairs have product one,
+and two have product two.  Hence the twist multiplicities are
+$5,2,2$ for $1,\omega,\omega^2$.
+
+
+
+\paragraph{Exercise~\ref{ex:Z3-tube}.}
+\phantomsection
+\label{sol:ex:Z3-tube}
+If $g\ne g'$, multiplication vanishes.  Otherwise set $t=h+h'$
+in the double sum:
+\begin{align*}
+ p_{g,k}p_{g,l}
+ &=\frac19\sum_{t,h'}\omega^{-k(t-h')-lh'}e_{g,t}\\
+ &=\frac19\sum_t\omega^{-kt}e_{g,t}
+             \sum_{h'}\omega^{(k-l)h'}
+ =\delta_{kl}p_{g,k}.
+\end{align*}
+Summing over $k$ kills every $h\ne0$, so
+$\sum_kp_{g,k}=e_{g,0}$.  Summing over $g$ gives the algebra
+unit.  Only $p_{0,k}$ occur in the untwisted sector.
+
+
+
+\paragraph{Exercise~\ref{ex:tube171}.}
+\phantomsection
+\label{sol:ex:tube171}
+For a fixed invertible $c$, tensoring on either side permutes the
+six simples.  For each $a$ there is exactly one $b$ giving a
+one-dimensional morphism space, so these choices contribute
+$3\cdot6=18$ in total.
+
+Fix now $c=R_l$. If $a=A_i,b=A_j$, then
+$ca=R_{l-i}$ and $bc=R_{j+l}$, so a morphism exists exactly
+when $j=-i$. There are three such one-dimensional spaces.
+If exactly one of $a,b$ is
+noninvertible, each of the nine pairs contributes one, giving
+nine in each orientation.  If both are noninvertible, the two
+products share all three noninvertible summands, contributing
+$9\cdot3=27$. For $a=R_i,b=R_j$, their invertible summands
+are $A_{l-i}$ and $A_{j-l}$; these agree exactly when $j=2l-i$.
+There are three such pairs, adding three. Thus each noninvertible $c$
+contributes $3+9+9+27+3=51$, and
+\[
+ \dim\operatorname{Tube}(\HH_3)=18+3\cdot51=171.
+\]
+This independently checks the matrix-block sum in
+\eqref{eq:H3-tube-Wedderburn}.
+
+
+
+\paragraph{Exercise~\ref{ex:forgetful-qdim}.}
+\phantomsection
+\label{sol:ex:forgetful-qdim}
+The forgetful functor preserves the positive categorical dimension.
+The images have dimensions
+$1$, $1+3d=d^2$, $2+3d=s$, and $3d$, respectively.
+For the center object $a$, its ordinary tube module has dimension
+$2+1+1+1=5$, while its categorical dimension is $2+3d$.
+The former counts summand multiplicities; the latter weights each
+noninvertible summand by its categorical dimension $d$.  They are
+different trace constructions and need not agree.
+
+
+
+\paragraph{Exercise~\ref{ex:all-local}.}
+\phantomsection
+\label{sol:ex:all-local}
+For a right action $r_M:M\otimes A\to M$, locality is the extra
+equation
+\[
+ r_M\circ c_{A,M}\circ c_{M,A}=r_M.
+\]
+An ordinary module satisfies the associative action equations;
+it need not satisfy this double-braiding equation. If $A$ is
+Lagrangian in a positive modular category $\mathcal C$, as here, then
+\[
+ \operatorname{Dim}(\mathcal C_A^0)
+   =\frac{\operatorname{Dim}(\mathcal C)}{\qdim(A)^2}=1,
+ \qquad
+ \operatorname{Dim}(\mathcal C_A)
+   =\frac{\operatorname{Dim}(\mathcal C)}{\qdim(A)}=\qdim(A).
+\]
+Thus the local category is $\mathrm{Vec}$, while the all-module
+category can be nontrivial. For the canonical algebra in
+$Z(\HH_3)$ these categories are respectively $\mathrm{Vec}$ and
+$\HH_3$. Holomorphicity concerns the first category.
+The decomposition $A=\bigoplus_i m_iX_i$ gives an object and its
+multiplicities. Multiplication still requires actual maps
+$\mu:A\otimes A\to A$ and a unit, satisfying associativity and
+commutativity with the specified associator and braiding. Those
+maps are not contained in the list of summands.
+

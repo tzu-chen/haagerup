@@ -1,0 +1,38 @@
+{
+  "target_central_charge": "4/5",
+  "sympy_version": "1.14.0",
+  "coefficient_field": "Q(sqrt(13),sqrt(-3))",
+  "eliminated_coordinate_b": "38/91 - 80*a/91",
+  "variables": [
+    "a",
+    "t0",
+    "t1",
+    "t2"
+  ],
+  "input_equations": [
+    "2*a**2 - 2*a + t0**2*(-5 - 5*sqrt(3)*I) + t0*t1*(5*sqrt(13)/48 + 475/48 + 65*sqrt(3)*I/48 + 475*sqrt(39)*I/48) + t0*t2*(-335/48 + 715*sqrt(13)/48 - 235*sqrt(39)*I/48 - 205*sqrt(3)*I/48) + t1**2*(-4265*sqrt(13)/144 + 10405/72 - 5615*sqrt(3)*I/48 + 85*sqrt(39)*I/24) + t1*t2*(-20425/48 + 1075*sqrt(39)*I/48) + t2**2*(4265*sqrt(13)/144 + 10405/72 + 85*sqrt(39)*I/24 + 5615*sqrt(3)*I/48)",
+    "12800*a**2/8281 + 2400*a/8281 + t0**2*(-220100/8281 - 220100*sqrt(3)*I/8281) + t0*t1*(31925*sqrt(13)/24843 + 319675/24843 + 31925*sqrt(3)*I/1911 + 319675*sqrt(39)*I/24843) + t0*t2*(-782375/24843 + 495475*sqrt(13)/24843 - 143875*sqrt(39)*I/24843 + 47675*sqrt(3)*I/24843) + t1**2*(-366500*sqrt(13)/74529 + 3607250/74529 - 1476500*sqrt(3)*I/24843 - 174250*sqrt(39)*I/24843) + t1*t2*(-1330475/8281 + 70025*sqrt(39)*I/8281) + t2**2*(366500*sqrt(13)/74529 + 3607250/74529 - 174250*sqrt(39)*I/24843 + 1476500*sqrt(3)*I/24843) - 4028/8281",
+    "-296*a*t0/91 + a*t1*(55/364 + 107*sqrt(13)/364 - 29*sqrt(3)*I/364 + 5*sqrt(39)*I/52) + a*t2*(-71/364 + sqrt(13)/364 - 71*sqrt(39)*I/364 + sqrt(3)*I/28) + t0**2*(-409/182 + 409*sqrt(3)*I/182) + t0*t1*(2813/546 + 2117*sqrt(13)/546 - 827*sqrt(39)*I/546 - 1919*sqrt(3)*I/546) + t0*t2*(-2117*sqrt(13)/546 + 2813/546 - 827*sqrt(39)*I/546 + 1919*sqrt(3)*I/546) - 106*t0/273 + t1**2*(-286577/13104 - 817*sqrt(13)/1008 + 559*sqrt(3)*I/1008 + 15083*sqrt(39)*I/13104) + t1*t2*(15161*sqrt(13)/4368 + 288059/13104 - 15161*sqrt(39)*I/13104 + 288059*sqrt(3)*I/13104) + t1*(-107*sqrt(13)/1638 - 55/1638 - 5*sqrt(39)*I/234 + 29*sqrt(3)*I/1638) + t2**2*(-27935*sqrt(13)/13104 + 22027/1872 - 139655*sqrt(3)*I/13104 - 2231*sqrt(39)*I/13104) + t2*(-sqrt(13)/1638 + 71/1638 - sqrt(3)*I/126 + 71*sqrt(39)*I/1638)",
+    "a*t0*(-36*sqrt(13)/455 - 99/455 + 18*sqrt(3)*I/455 + 9*sqrt(39)*I/455) + a*t1*(64/91 - 60*sqrt(13)/91) + a*t2*(-81/182 + 45*sqrt(13)/182 - 81*sqrt(3)*I/182 + 45*sqrt(39)*I/182) + t0**2*(9*sqrt(13)/455 + 9/91 - 9*sqrt(39)*I/91 - 9*sqrt(3)*I/35) + t0*t1*(3/7 + 76*sqrt(13)/91 - 76*sqrt(39)*I/91 - 3*sqrt(3)*I/7) + t0*t2*(1381/182 - 13*sqrt(13)/14) + t0*(22/455 + 8*sqrt(13)/455 - 2*sqrt(39)*I/455 - 4*sqrt(3)*I/455) + t1**2*(-6779/1092 - 601*sqrt(13)/1092 + 21*sqrt(39)*I/52 + 869*sqrt(3)*I/364) + t1*t2*(-11*sqrt(13)/7 + 4673/546 - 457*sqrt(39)*I/546 + 998*sqrt(3)*I/273) + t1*(-346/273 + 40*sqrt(13)/273) + t2**2*(-41*sqrt(13)/182 + 547/364 - 41*sqrt(3)*I/14 + 547*sqrt(39)*I/364) + t2*(-5*sqrt(13)/91 + 9/91 - 5*sqrt(39)*I/91 + 9*sqrt(3)*I/91)",
+    "a*t0*(-9*sqrt(13)/910 + 9/182 - 9*sqrt(39)*I/182 + 9*sqrt(3)*I/70) + a*t1*(-45*sqrt(13)/182 - 81/182 + 81*sqrt(3)*I/182 + 45*sqrt(39)*I/182) + a*t2*(64/91 + 60*sqrt(13)/91) + t0**2*(-198/455 + 72*sqrt(13)/455 - 36*sqrt(3)*I/455 + 18*sqrt(39)*I/455) + t0*t1*(-1381/364 - 13*sqrt(13)/28 - 1381*sqrt(3)*I/364 - 13*sqrt(39)*I/28) + t0*t2*(-76*sqrt(13)/91 + 3/7 - 3*sqrt(3)*I/7 + 76*sqrt(39)*I/91) + t0*(-1/91 + sqrt(13)/455 - sqrt(3)*I/35 + sqrt(39)*I/91) + t1**2*(41*sqrt(13)/182 + 547/364 + 41*sqrt(3)*I/14 + 547*sqrt(39)*I/364) + t1*t2*(11*sqrt(13)/7 + 4673/546 - 998*sqrt(3)*I/273 - 457*sqrt(39)*I/546) + t1*(9/91 + 5*sqrt(13)/91 - 5*sqrt(39)*I/91 - 9*sqrt(3)*I/91) + t2**2*(-6779/1092 + 601*sqrt(13)/1092 - 869*sqrt(3)*I/364 + 21*sqrt(39)*I/52) + t2*(-346/273 - 40*sqrt(13)/273)"
+  ],
+  "Groebner_order": "grevlex",
+  "Groebner_method": "buchberger",
+  "Groebner_basis": [
+    "a - 1/24",
+    "t0 - 7/120 - 7*sqrt(3)*I/120",
+    "t1 - 19/400 - sqrt(13)/400 - 7*sqrt(3)*I/400 - sqrt(39)*I/400",
+    "t2 - 19/400 + sqrt(13)/400 - sqrt(39)*I/400 + 7*sqrt(3)*I/400"
+  ],
+  "Groebner_basis_size": 4,
+  "Groebner_total_terms": 8,
+  "exact_complex_axis_exclusion": false,
+  "zero_dimensional_nonempty_ideal": true,
+  "scope": "Exact target-charge idempotent ideal in the full residual Griess algebra. A non-unit ideal alone does not assert unitary axes or a rational VOA frame.",
+  "seconds": 5.116340196924284,
+  "peak_rss_KiB": 68976,
+  "source_sha256": {
+    "/home/tzuchen/Codes/haagerup/hi_cft_20260923_next_structure_residual_axis.py": "e81ac3c7eee9ce817181e2966a1eea56284d05f5465004cf153d618493d167ee",
+    "hi_cft_20260923_next_structure_residual_tensor.json": "4efd695f588412ce64c0da5123e0f06c185cc78116c7f6c3ba1ea7b0822affa0"
+  }
+}

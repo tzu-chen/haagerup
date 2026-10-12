@@ -1,0 +1,296 @@
+Independent review of retained rational candidates and uniform-construction scope
+Reviewer: scope_foundations, 2026-10-05
+
+Scope: l06_identification.tex, especially lines 435–721 at the reviewed
+snapshot; f05_arithmetic.tex; the six local candidate audit notes; current
+uniform-construction manuscript and final Lean declarations. Read-only review
+of scientific sources, with hand algebra. No numerical jobs, Lean builds, or
+new independent certification. Parent subsequently authorized the f05 scope
+repairs described below; no l06 or scientific source was edited.
+
+Overall result
+--------------
+The retained-algebra exclusions are substantially and appropriately more
+limited than exclusions by central charge. I found no wrong rational value,
+twist-residue list, norm obstruction, or concrete counterexample to the stated
+candidate conclusions. In particular the E6 partial/fully condensed branches
+are correctly distinguished, and the remaining intermediate-extension problem
+is explicitly left open. The principal improvements are an explicit global
+unitarity/completeness hypothesis, a defect-category inclusion rather than an
+equality, and a slightly more conditional description of the E6 transfer.
+
+The f05 result is not merely speculative or based on finite numerical
+residuals: the repository contains the final all-odd-order formal coefficient
+theorem. Conversely, the short revised preprint still has documented analytic
+exposition gaps, and neither the formal coefficient theorem nor its recorded
+axiom audit formalizes the categorical reconstruction or CFT conclusion. The
+textbook must represent all three facts together. I implemented this distinction
+in f05 with parent authorization.
+
+1. Candidate-family hypotheses and category conventions
+------------------------------------------------------
+
+1a. l06:435–450 and 622–646: make the shared assumptions explicit.
+
+The underlying audit results concern bosonic unitary rational full CFTs,
+retaining the specified rational chiral algebra in both chiralities, with
+complete physical sewing/OPE data and a unique vacuum. The text currently says
+"physical rational full CFT" and later uses a real positive inner product to
+exclude odd-order rotations of a one-dimensional primary space. This is
+consistent with the book's intended setting, but the hypothesis should not
+be left to the word "physical" alone.
+
+Suggested sentence near 442:
+"Throughout this test, assume a bosonic unitary rational full CFT with a
+unique vacuum, retaining the stated algebra in both chiralities and satisfying
+the usual completeness and sewing assumptions."
+
+The full-center/graph-pairing statement at 483–502 is then appropriately
+scoped. In particular it uses the *maximal algebras actually present in the
+full theory*, not a largest abstract extension one could choose. Its use of
+a braided equivalence between the two chiral representation categories is
+compatible with the overline on the right-moving modules; if the right
+category is already defined with reversed braiding, the same statement would
+instead be an equivalence into its reversal. The current convention agrees
+with the rest of the book.
+
+Useful primary support checked read-only:
+Davydov–Nikshych–Ostrik, Proposition 3.7 and Remark 3.10,
+https://arxiv.org/html/1109.5558
+Gelaki–Nikshych, Theorem 6.3 (invertibles and tensor automorphisms),
+https://arxiv.org/html/math/0610726
+Gannon, Section 3.5/Corollary 3.11 (total positivity),
+https://arxiv.org/html/2301.07287
+
+1b. l06:538–541: clarify the category containing the symmetry kernel.
+
+"The chiral-trivial defect category is Morita equivalent to the product
+representation category" is ambiguous after passing to maximal left/right
+chiral algebras. The category of all defects preserving the *original retained*
+V is the bimodule category _A Rep(V)_A for the full-CFT algebra A; it is Morita
+equivalent to Rep(V). A symmetry fixing the *maximal* left/right algebras
+pointwise lies among its invertible objects. The subcategory formed by this
+smaller kernel need not itself have the full Morita-equivalent dimension.
+
+Suggested replacement:
+"Every symmetry in the remaining kernel is an invertible defect preserving
+the original product algebra V. All V-preserving defects form a bimodule
+fusion category Morita equivalent to Rep(V), of global dimension ... ."
+
+Then the order-three pointed subcategory sits in that ambient defect category,
+and the existing divisibility argument applies verbatim. This repair also
+avoids propagating the slightly loose wording in the source note
+hi_cft_tricritical_nondiagonal.md:158–175.
+
+1c. l06:669–685: E6 commutant transfer should remain visibly conditional.
+
+The genuine exceptional affine (E6)_4 commutant algebra is established in
+the source note. The explicit partial-category conclusion in
+hi_cft_e6_extension_status.md:242 onward begins with "Assume the affine
+commutant algebra above has been transferred ..." and is a categorical
+calculation, not a complete classification/VOA identification. l06:680
+correctly says "Under the specified ... transfer", but 673–674's earlier
+"supplies an algebra that can be transferred" can read as completion of all
+VOA transfer/existence steps.
+
+Suggested wording:
+"A genuine exceptional affine (E6)_4 extension supplies a commutant algebra
+for a proposed coset extension. Under the specified categorical transfer,
+the following partial-category calculation applies."
+
+Or keep the stronger algebraic transfer wording but explicitly say it is
+an algebra-object statement and does not claim that the corresponding VOA
+or every intermediate extension has been independently constructed here.
+Do not place E6 in the completed exclusion inventory.
+
+2. Checks that passed and small teaching repairs
+----------------------------------------------
+
+2a. l06:454–468, the two commuting order-three actions.
+
+If the surviving shift S has order three, acts faithfully, and commutes with
+the faithful full Haagerup action, then it cannot equal alpha or alpha^2:
+rho alpha^k and rho alpha^{-k} are distinct simple lines for k=1,2. The
+intersection of the two order-three groups is therefore trivial, so their
+commuting product is Z3^2. These premises are essential; neither survival nor
+faithfulness follows solely from a finite-size momentum cone. The current
+paragraph explicitly keeps these premises and the original/gauged field
+dictionary. The mixed-anomaly statement is correctly phrased as a possible
+extension law, not a universal result of gauging.
+
+2b. l06:504–526, minimal products at c=21/10.
+
+The final list M4^3 and M3 M5^2 is correct. Add one short omitted case:
+"If the smallest label is at least five, the total is at least 12/5."
+The remaining cases are already explained correctly. This makes the claimed
+complete classification transparently complete for a first-year reader.
+
+2c. l06:528–552, tricritical Ising cubed.
+
+The even-fermion supports have weights three and cannot change weight two.
+The weight-two product has three primitive stress idempotents; its permutation
+group contributes a Sylow-three subgroup of size at most three, while the
+kernel consists of characters of the bosonic support subgroup and is a
+two-group. The induced modules with the nontrivial Fibonacci label in one
+factor are moved by every nontrivial three-cycle, preventing independent
+left/right three-cycles in a graph pairing.
+
+Hand check of the arithmetic step: phi+phi'=1 and phi phi'=-1 give
+(phi+2)(phi'+2)=5. Thus the norm of 64(phi+2)^3/3 is exactly
+64^2*5^3/9, not an integer. Fusion-subcategory divisibility is contradicted
+if an order-three invertible lies in the ambient Morita-equivalent category.
+For Z9, the cube of an order-nine symmetry would lie nontrivially in that
+forbidden kernel. This justifies excluding either group of order nine.
+
+2d. l06:554–579, Ising times two M5 factors.
+
+The exact extension classification is quoted input, appropriately marked.
+Conditional on the two Potts extensions being forced by an order-nine group,
+the subsequent uniqueness/neutrality argument is elementary and correct.
+Potts-pair residues lie in (1/15)Z/Z. No nonzero difference among
+0, 1/2, 1/16 belongs to that subgroup, so T makes the Ising sectors block
+diagonal. Commutation with S then equates all three Potts-pair blocks, because
+the vacuum row S_{0i} is nonzero. The Ising-spin block therefore contains the
+Potts vacuum pair. Nonvacuum Potts chiral weight 1/15 is greater than 1/16,
+so no other scalar can have total dimension 1/8. Its Hermitian real line
+is fixed by every odd-order symmetry. A finite gap near .26 is correctly
+treated as motivation; its limiting value is an extra premise.
+
+An optional worked example could display Z = I_Ising tensor N and the
+one-line off-diagonal block equation S_{0i} S_P N_i = N_0 S_P S_{0i}.
+Using the diagonal block's commutation with S_P then gives N_i=N_0.
+
+2e. l06:581–620, type-A candidates and W4 sign.
+
+The charge formulas and surviving candidates are correct. The sentence
+excluding N>=7 uses monotonicity in k and in N at k=2. Add
+"For N=2,3 the charge is at most two" before checking N=4,5,6.
+At k=2, c(7,2)=6(1-56/72)=34/15; the relevant values are
+c(4,4)=3(1-20/72)=13/6 and c(6,2)=5(1-42/72)=25/12.
+
+The common-field sign argument is correct. Multiplication by five takes
+sin^2(4pi/9)/(sin(pi/9)sin(2pi/9)) to a positive square divided by
+sin(5pi/9)sin(10pi/9)<0. The common automorphism 113 fixes the numerator
+dimension field (113=1 mod16), acts as five on the denominator field
+(113=5 mod18), and is coprime to the common conductor. Add the last fact
+if presenting it as a complete stand-alone example: gcd(113,288)=1.
+
+The other W4 conclusions rely on the quoted affine extension classification,
+faithful coset transfer, and the noncollapsed T,W3 generation at this
+particular minimal point. They are not deductions from the sign of one
+dimension alone; the surrounding text/inventory treats those classification
+steps as input. All added fields indeed have weights >=4 in the audit.
+
+2f. l06:649–660, W6 and E8.
+
+These are compressed summaries of exhaustive local audits, not independently
+reproduced proofs. The inventory's constructioninput label and final paragraph
+make that distinction. For precision change "the only bosonic extension" at
+649 to "the only nontrivial bosonic extension". The vacuum algebra is also
+an extension in the usual convention.
+
+The W6 fixed-point resolution/faithful dual Z3 action is precisely what is
+needed to prevent an independent right three-cycle. E8's real-generator
+argument uses distinct *strong-generator* weights and induction on the
+subalgebra generated at lower weights; it does not claim that the full
+weight-h subspace is one dimensional. The existing wording preserves this.
+
+2g. l06:690–711, E6 scalar arithmetic checked by hand.
+
+For the partial category, start with affine residues
+0, 1/9, 1/5, 11/45, 4/9, 26/45, 3/5, 7/9, 4/5, 41/45.
+Adding 0,1/2,5/16 modulo one, taking 0<h<1/2, then doubling gives
+  7/45, 13/72, 1/5, 2/9, 9/40, 2/5, 161/360,
+  22/45, 5/9, 3/5, 5/8, 37/45, 61/72, 8/9.
+For example 26/45+1/2 = 1+7/90 produces 7/45;
+7/9+5/16 = 1+13/144 produces 13/72;
+41/45+5/16 = 1+161/720 produces 161/360.
+The minimum and the open gap (9/40,2/5) are therefore as stated.
+
+For the fully condensed category the possible Fibonacci residues are
+0,3/5,1/5,4/5. Adding the Ising residues gives just
+1/5,9/40,2/5,3/5,5/8 below total dimension one. The word "contained"
+is essential: a residue does not force the actual lowest module weight to
+equal its representative, or force a pairing to include that module.
+The chapter keeps this distinction and cannot thereby be read as predicting
+characters from a braided category.
+
+Useful extra worked check: the topological central charge of the fully
+condensed category is 3*(-14/5)+5/2 = -59/10 = 21/10 mod8; that of the
+partial category is c((E6)_3)+5/2 = 78/5+5/2 = 181/10 = 21/10 mod8.
+Agreement is a necessary consistency check, not an identification of VOAs.
+
+3. Uniform coefficient theorem: current source status and implemented repair
+--------------------------------------------------------------------------
+
+Current declarations directly inspected:
+- lean/HaagerupIzumi/Analytic/GammaConstruction.lean:22: hypGamma is built
+  using the concrete GammaK4Contour.K4_euler theorem.
+- Same file:36–48: ruijsenaarsHypGamma and ruijsenaarsCoeffData use the
+  construction periods and actual regularized-integral gamma.
+- Same file:52–63: EGEquations_ruijsenaars and exists_EGEquations_odd.
+  The latter has only Odd n as mathematical premise; positivity/nonzero of
+  n follow from oddness. These are all-order propositions.
+- lean/HaagerupIzumi/Completion.lean:348–363: EGEquations includes rotation,
+  axis sum, every quadratic, every cubic and every quartic; EGEquations_of
+  obtains quartics by contraction. It contains no Category/VOA conclusion.
+- lean/HaagerupIzumi/Analytic/GammaK4EulerInterface.lean:17 onward states
+  explicit convergence and no-pinch hypotheses for both r and -r. This
+  confirms that the final analytic interface does not simply assume an
+  unrestricted meromorphic-continuation claim.
+- lean/README.md:3–20 records a successful complete build and axiom audit
+  [propext, Classical.choice, Quot.sound], with no sorry or new axioms.
+  Lines 51–53 expressly exclude categorical reconstruction from formalization.
+- The non-C8 uniform source files contain no sorry/admit/new axiom declarations
+  in the inspected direct source scan. A comment containing the English word
+  "admit" was the sole search hit. This scan is not a replacement for a
+  transitive kernel axiom audit; the latter remains the recorded audit.
+
+The relevant immutable coefficient revision is
+698b66ac2c667e68b1e19c196fb91e84a0c82235 (2026-09-14).
+A read-only comparison found no changes since it in
+lean/HaagerupIzumi/Analytic or Completion.lean. README differs only in its
+launcher instruction. The overall repository HEAD is later, and the C8
+formalization has many newer files; those do not turn the separate uniform
+coefficient theorem into a formal C8 construction theorem.
+
+Current file SHA256 values:
+GammaConstruction.lean:
+  7e077929597c1b0c4d1b682bbc97e305762fa073a34ec3763c6f0763e1c71f83
+lean/README.md:
+  0f459382f1c88420a693e45bd684f7814fff8e0e0bb9c45dd6adcb8a64e954ee
+proof_revised/formalization_review.md:
+  91aa540f48ed5d5cb7307726fa89b8e8ae5733b505ea2c16002c793d0edfb59a
+
+The 2026-09-14 formalization review must be read in full. Its opening flags
+incomplete continuation-domain exposition and a concrete zero-denominator
+possibility in the short preprint's initial four-term parameter range.
+Those defects remain in proof_revised/analytic_setup.tex:157 and
+proof_revised/contour_cubics.tex:371. For example the latter permits
+eta0=omega2 at n>=5, making sin(pi eta0/omega2)=0. The same review points
+to corrected domains in the expanded/formal development and explicitly
+states the complete Lean coefficient proof is unconditional. It does NOT
+conclude the all-order coefficient identity is false or unproved.
+
+Categorical reconstruction and dimension embedding are outside Lean:
+proof_revised/reconstruction.tex:40–54 extends the automorphism of the
+quadratic dimension field to C, so algebraicity of every gamma sample is
+unnecessary. Lines 57–82 apply Evans–Gannon Theorem 2(a), then obtain
+pseudounitarity from categorical dimensions 1,d equaling FP dimensions.
+The additional Hermitian criterion for unitarity is explicitly not proved.
+
+With parent's authorization, f05 now:
+1. Gives the all-odd-order coefficient result as a recorded formal input.
+2. Separates it from the quoted categorical consequence and explains what
+   the categorical theorem additionally uses.
+3. States that this textbook did not rebuild the formal development.
+4. Notes the short manuscript's documented analytic exposition limitations.
+5. Removes the false suggestion in the old source note that all formal
+   certificates have only finite-instance scope.
+6. Changes the n=3 example to say its A00 value equals the H2 invariant,
+   explicitly denying that one equal coefficient identifies the full category
+   or supplies unitarity. The manuscript itself disclaims such small-order
+   category identification; the matching entry is still a useful diagnostic.
+
+No mathematical research source, formal source, checkpoint, or historical
+execution record was changed. No build or numerical job was run.

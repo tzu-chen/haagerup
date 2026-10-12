@@ -1,0 +1,1117 @@
+\chapter{Cosets, stress splitting, and the near-two frontier}
+\label{ch:cosets}
+
+A central-charge-eight construction naturally invites a smaller theory:
+can part of its stress tensor be removed while preserving Haagerup
+symmetry? This chapter explains both a successful charge-six reduction
+and the obstacles in the charge-two direction. It also constructs an
+irrational stress of charge $2.025004294\ldots$ and follows the precise
+distance between that chiral construction and a local full CFT.
+
+The distinction is structural. Finding a Virasoro vector is an OPE
+problem inside one chiral algebra. A full reduced theory additionally
+needs a state space, a modular pairing, convergent positive OPEs, and
+coherent defect junctions. None of those later requirements can be
+inferred from a central charge being close to two.
+
+\section{A commuting stress is not automatically a tensor factor}
+\index{coset!commuting stress}
+
+Let $V$ be unitary, with stress $\omega$ and translation operator
+$D=L^V_{-1}$. Write $L^e_n=e_{(n+1)}$ for the modes of a
+PCT-real weight-two vector $e$. Here PCT-real means fixed by the
+antilinear involution of Chapter~\ref{ch:vertex_algebras}, with the
+positive form transported in the chosen coordinate gauge.
+\begin{definition}[Semiconformal Virasoro subalgebra]
+\index{semiconformal vector}
+The vector $e$ is semiconformal if the vertex subalgebra
+$\Vir(e)\subset V$ has $e$ as its conformal vector and
+\[
+ L^e_n\big|_{\Vir(e)}=L^V_n\big|_{\Vir(e)}\quad(n\geq0),
+ \qquad L^e_{-1}\big|_{\Vir(e)}=D\big|_{\Vir(e)}.
+\]
+These are equalities on the generated subalgebra; they are not
+equalities on all of $V$. The last equality specifies compatibility
+with the inherited translation operator.
+\end{definition}
+
+This definition explains why $f=\omega-e$ is a commuting stress.
+For every $a\in\Vir(e)$ and $m\geq0$, the restrictions give
+$f_{(m)}a=(L^V_{m-1}-L^e_{m-1})a=0$. Skew symmetry then gives
+$a_{(m)}f=0$ as well. Thus $e$ and $f$ have no singular mixed OPE.
+Subtracting their contributions from the ambient Virasoro OPE shows
+that $f$ is a Virasoro vector of charge $c_V-c_e$; its translation
+on $\Vir(f)$ is again the inherited $D$. In particular,
+\[
+ e(z)e(w)\sim\frac{c_e/2}{(z-w)^4}
+       +\frac{2e(w)}{(z-w)^2}+\frac{\partial e(w)}{z-w},
+ \qquad e(z)f(w)\text{ is regular},
+\]
+and $c_f=c_V-c_e$.
+
+The commutant
+\[
+ \Com(A,V)=\{v\in V:a_{(n)}v=0
+                       \text{ for all }a\in A,\ n\geq0\}
+\]
+collects fields whose OPEs with $A$ are regular. In the unitary
+setting it is often an energy-zero space for a complementary stress.
+This gives an actual chiral subalgebra with a definite positive form.
+It does not imply that $V$ is the tensor product of the two
+commutants. Nonvacuum paired modules may be needed to reconstruct $V$.
+
+\begin{example}[A lattice extension with two commuting stresses]
+The plane lattice $L_0$ of Chapter~\ref{ch:factors} and its orthogonal
+rank-six lattice $N$ give commuting stress tensors inside $V_{E_8}$.
+Their central charges add to eight. Nevertheless the $E_8$ lattice
+contains glue cosets beyond $L_0\oplus N$, so
+$V_{E_8}$ is a finite extension of $V_{L_0}\otimes V_N$, not that
+tensor product itself. The extra paired sectors are exactly what a
+naive stress subtraction would overlook.
+\end{example}
+
+There is also a categorical obstruction to an actual rational
+$c=2$ times $c=6$ factorization of $U$. Its simple quantum dimensions
+are $1,d^2$, four copies of $s=1+d^2$, and six copies of $3d$.
+The unit is its only invertible simple, and
+\[
+ (3d)^2>s.
+\]
+If $\Rep(U)=\mathcal D\boxtimes\mathcal E$ with both factors
+nontrivial, neither could be pointed. Choose nonunit simples $X,Y$
+from the two factors. Each has dimension at least $3d$, whereas the
+simple $X\boxtimes Y$ would exceed the largest allowed dimension $s$.
+Thus no such categorical factorization exists. If one VOA tensor
+factor were holomorphic, its central charge would be a multiple of
+eight, incompatible with charges two or six. This excludes a tensor
+product, while allowing proper conformal extensions and commutants.
+
+\section{The concrete charge-six commutant}
+\index{charge-six construction}
+
+Recall
+\[
+ L_0=\Z\ell+\Z v,
+ \qquad G_{L_0}=\begin{pmatrix}2&3\\3&24\end{pmatrix},
+ \qquad\det L_0=39.
+\]
+Let $P$ be its real plane in the $E_8$ lattice $\Lambda$. Since
+$39$ is squarefree, the displayed lattice is saturated:
+$L_0=\Lambda\cap P$. Indeed an integral overlattice of index $r$
+would have determinant $39/r^2$, forcing $r=1$.
+
+Let $N=\Lambda\cap P^\perp$. Its rank is six and its determinant
+is also $39$. An explicit description is
+\begin{equation}\label{eq:c-rank6-lattice}
+ N=(A_2\oplus A_2\oplus A_1\oplus\langle78\rangle)
+        +\Z(\omega_1,\omega_2,\alpha/2,\gamma_{78}/6),
+\end{equation}
+Here $\omega_i$ is a fundamental weight of the $i$th $A_2$ factor,
+$\alpha$ generates $A_1$, and $\gamma_{78}$ generates the rank-one
+lattice $\langle78\rangle$. Their squared norms are
+$\omega_i^2=2/3$, $\alpha^2=2$, and $\gamma_{78}^2=78$.
+The glue vector has squared norm
+\[
+ \frac23+\frac23+\frac12+\frac{78}{36}=4.
+\]
+It has order six modulo the direct-sum lattice. Its index-six
+extension has determinant
+$3\cdot3\cdot2\cdot78/6^2=39$, as required.
+
+Define
+\begin{equation}\label{eq:c-C6}
+ C_6=\Com(V_{L_0},U).
+\end{equation}
+Positive lattice energy gives an explicit ambient realization,
+\[
+ C_6=U\cap V_N.
+\]
+To see it, a state commuting with the plane Heisenberg algebra has
+neither plane oscillator excitations nor plane momentum. Such states
+are exactly $V_N$. Conversely, commuting with the full plane lattice
+is no stronger on this subspace. Its stress is the perpendicular
+free-boson stress, of charge six.
+
+The pair is mutual:
+\[
+ \Com(C_6,U)=V_{L_0}.
+\]
+The key is that $C_6$ contains its full perpendicular stress. A vector
+commuting with that stress has zero perpendicular energy, so has no
+perpendicular momenta or oscillators. Saturation identifies the
+remaining lattice states with precisely $V_{L_0}$. This is an
+all-grade argument, not a low-weight count.
+
+The regular lattice-coset theorem now applies: a strongly rational
+VOA with this positive-definite lattice double commutant has a
+strongly rational Heisenberg/lattice coset. Thus $C_6$ is strongly
+rational. This uses a specific theorem with verified lattice
+hypotheses; rationality of arbitrary cosets is not being assumed.
+
+\section{Why the Haagerup extension data survive at charge six}
+
+Let $P_{39}=\Rep(V_{L_0})$. It is the nondegenerate pointed category
+on $\Z/39$ with quadratic form $q(n)=n^2/39$. The actual core
+$A_L$ contains every one of these lattice labels. The mirror theorem
+for the rational mutual commutants therefore identifies their branching
+subcategory inside $\Rep(C_6)$ with $P_{39}^{\rm rev}$.
+The superscript $\mathrm{rev}$ reverses the braiding and twist;
+reversing tensor order is instead denoted $\mathrm{op}$ below.
+Nondegeneracy splits off this pointed factor:
+\[
+ \Rep(C_6)=P_{39}^{\rm rev}\boxtimes\mathcal D.
+\]
+The extension $U$ of $V_{L_0}\otimes C_6$ is the diagonal algebra
+on the two pointed factors, tensored with the unit in $\mathcal D$.
+Condensing that diagonal algebra leaves $\mathcal D$, while the
+extension correspondence says that it leaves $\Rep(U)$. Hence
+\begin{equation}\label{eq:c-C6-category}
+ \Rep(C_6)\simeq P_{39}^{\rm rev}\boxtimes\Rep(U).
+\end{equation}
+In the Haagerup construction its rank is $39\cdot12=468$.
+The reverse pointed factor has chiral central charge six modulo eight,
+consistent with the actual charge-six stress.
+
+Let $A$ denote the actual algebra of the original $E_8/U$ extension.
+Transitivity of extension algebras identifies the $E_8$ algebra over
+$V_{L_0}\otimes C_6$ as
+\[
+ \operatorname{Diag}(P_{39})\boxtimes A.
+\]
+Taking the $V_{L_0}$ vacuum multiplicity leaves $\one\boxtimes A$.
+The same vacuum multiplicity in $V_{E_8}$ is $V_N$, so the actual
+extension $V_N/C_6$ realizes this same algebra, including its
+multiplication. Put $\mathcal F=\Rep(U)_A$, the category of all
+right $A$-modules. The algebra $A$ is Lagrangian in $\Rep(U)$,
+and the canonical-algebra reconstruction therefore gives
+\begin{equation}\label{eq:c-C6-defects}
+ \begin{aligned}
+ {}_{\one\boxtimes A}\Rep(C_6)_{\one\boxtimes A}
+ &\simeq P_{39}^{\rm rev}\boxtimes{}_A\Rep(U)_A\\
+ &\simeq P_{39}^{\rm rev}\boxtimes
+                 \mathcal F\boxtimes\mathcal F^{\rm op}.
+ \end{aligned}
+\end{equation}
+Here $\mathcal F^{\rm op}$ reverses tensor order. The total algebra
+$\one\boxtimes A$ is not Lagrangian in $\Rep(C_6)$: its local
+modules retain the pointed factor $P_{39}^{\rm rev}$.
+
+For this original embedded extension, the result of
+Chapter~\ref{ch:unitarity} is $\mathcal F\in\{\mathcal H_2,
+\mathcal H_3\}$. No step here selects between them. In particular,
+$A$ in this section continues to mean the original extension algebra,
+not the separately selected canonical $\mathcal H_3$ algebra of
+Chapter~\ref{ch:defects}. The transported multiplication preserves
+whichever of these boundary categories the original embedding has.
+
+The charge-six full state space can now be written explicitly.
+Let $\mathcal H_{\lambda+N}$ be the Hilbert completion of the
+lattice module $V_{\lambda+N}$, where
+$\lambda\in N^*/N$. The ordinary diagonal lattice theory has
+\begin{equation}\label{eq:c-C6-full-space}
+ \HH_6=\bigoplus_{\lambda\in N^*/N}
+     \mathcal H_{\lambda+N}\otimes
+                     \overline{\mathcal H_{\lambda+N}},
+ \qquad c_L=c_R=6.
+\end{equation}
+The bar denotes the conjugate antiholomorphic sector. There are
+$|N^*/N|=\det N=39$ chiral sector labels, and its torus amplitude is
+\[
+ Z_6(\tau,\bar\tau)=\sum_{\lambda\in N^*/N}
+       \left|\frac{\Theta_{\lambda+N}(\tau)}{\eta(\tau)^6}\right|^2.
+\]
+Positive definiteness of $N$ gives a unique zero-energy vector,
+and the standard lattice construction supplies the positive local
+OPE and sewing. This is an actual compact full theory, rather than
+only a proposed central charge or branching function.
+
+To interpret \eqref{eq:c-C6-defects} as physical defects on
+\eqref{eq:c-C6-full-space}, one uses the positive rational extension
+and bimodule-to-defect correspondence of
+Chapters~\ref{ch:unitarity} and~\ref{ch:defects} for the actual
+inclusion $C_6\subset V_N$. Its analytic premise is compatibility
+of the unitary sector realization with this extension and its
+intertwiners. Regularity of $C_6$ and the lattice bounded-insertion
+theorem already give a finite-index rational subnet; that fact
+alone should not be substituted for the required sector comparison.
+With this analytic correspondence in place, the unit pointed
+spectator in \eqref{eq:c-C6-defects} transports the original
+$\mathcal F\boxtimes\mathcal F^{\rm op}$ defects, including their
+junctions, to the charge-six theory. These defects preserve $C_6$.
+The simple defects required to preserve the larger lattice algebra
+$V_N$ pointwise remain pointed. This distinction also explains why
+retaining the smaller preserved algebra is essential here.
+
+The multiplication is the decisive extra information. Restricting the
+matrix representing a line on a few states would not prove that its
+junctions still associate correctly. Here the extension correspondence
+transports the algebra that encodes those junctions.
+
+\section{The reverse coset gives six vacua if labels are retained}
+
+The same calculation explains why deleting the charge-six factor does
+not automatically give the desired charge-two theory. The reverse
+commutant in $E_8$ is exactly $V_{L_0}$. Write the original algebra
+as
+\[
+ A=\one\oplus X\oplus2Y.
+\]
+For the $C_6$ labels indexed by a lattice charge $n$ and an extension
+label $a$, the complementary branching functions are
+$b_{n,a}=m_a\chi_n^{L_0}$ with multiplicities $m_a=1,1,2$.
+An unreduced diagonal sum gives
+\begin{equation}\label{eq:c-six-vacua}
+ \sum_{n,a}|b_{n,a}|^2
+   =(1^2+1^2+2^2)\sum_n|\chi_n^{L_0}|^2=6Z_{L_0}.
+\end{equation}
+Its vacuum coefficient is six. Identifying the repeated branching
+spaces instead gives the ordinary unique-vacuum torus theory, but
+then its rational category is the pointed $P_{39}$, not the
+Haagerup center. The two tasks---removing repeated vacua and retaining
+the noninvertible junction category---are independent.
+
+An ordinary rational full theory preserving the lattice chiral algebra
+$V_{L_0}$ has a weakly integral defect category: every simple defect
+has integer squared Frobenius--Perron dimension. Here weak integrality
+means that the global Frobenius--Perron dimension is an integer;
+the assertion about its simple dimensions is a theorem for such
+fusion categories. A unitary strong
+tensor action of $\mathcal H_3$ would preserve the simplicity of
+$\rho$ by Proposition~\ref{prop:c-faithful-descent} below. Its
+dimension has irrational square, $d^2=(11+3\sqrt{13})/2$,
+so this rational lattice interpretation cannot carry the desired
+lattice-preserving Haagerup action. A new current-breaking action
+would be a separate construction, not a consequence of
+\eqref{eq:c-six-vacua}.
+
+\section{What ordinary invariant cosets cannot remove}
+
+There are several useful obstructions with carefully bounded scope.
+The retained current Lie algebra in the accepted charge-eight
+realization is $U_1=\mathfrak{sl}_2\oplus\mathfrak{sl}_2$, generating
+the affine subalgebra $A_{1,1}\otimes A_{1,39}$. The currents of any
+transparent compact denominator lie in this retained Lie algebra.
+Positivity of its complementary
+Sugawara stress gives
+\[
+ c_{\mathrm{denominator}}\leq\frac{158}{41},\qquad
+ c_{\mathrm{coset}}\geq8-\frac{158}{41}=\frac{170}{41}>2.
+\]
+Allowing each original Haagerup line to transmit the denominator by
+one group automorphism does not evade this bound. If a group label
+$g_x$ is assigned to each simple line and every fusion summand $z$
+of $x\otimes y$ obeys $g_z=g_xg_y$, then $\rho^2$ containing
+both $1$ and $\rho$ forces
+$g_\rho^2=1=g_\rho$. Thus $g_\rho=1$, and the other summands
+force $g_\alpha=1$. All labels are trivial.
+
+The statement assumes one automorphism per simple line and compatible
+transmission through fusion junctions. General noninvertible maps that
+mix or annihilate fields need not have this form. Generalized quotients
+that produce new lines after gauging are also outside the argument.
+
+The standard $A_2$ and $E_6$ stresses are not in $U$. A particularly
+short diagnostic is to apply the $A_2$ stress operator $L_0^{A_2}$
+to $H_R$: it selects the $A_2$ Cartan part of $h$, which is not in
+the two-dimensional retained Cartan span. If the stress belonged to
+$U$, closure would put that extra current in $U_1$, contradicting the
+six-current theorem.
+
+Finally $C_{6,1}=0$ and its exact weight-two algebra has dimension
+seven. Its polynomial Virasoro-vector equations have no solutions of
+charges one or two, even over $\C$. Complementation inside its
+charge-six stress also excludes charges five and four. Thus a further
+ordinary charge-four conformal coset of this particular $C_6$ cannot
+produce charge two. These are exclusions of specified mechanisms,
+not a classification of all possible Haagerup CFTs at charge two.
+
+\section{A nearby rational stress from diagonal affine currents}
+
+The compact diagonal of $A_{1,1}\otimes A_{1,39}$ has level forty.
+This is the diagonal affine construction used in
+Example~\ref{ex:voa-Ising-branching}: the current double poles add
+the levels, and the coset stress subtracts the diagonal Sugawara
+stress from the two numerator stresses.
+In the coordinate gauge of Chapter~\ref{ch:lattice_embedding}, its
+triple is
+\[
+ (H_L+H_R,\ 8640E_L+E_R,\ F_L/8640+F_R).
+\]
+The reciprocal rescaling makes this a PCT-stable compact diagonal.
+Its GKO stress
+\[
+ e_0=\omega_L+\omega_R-\omega_{A_{1,40}}
+\]
+has charge
+\[
+ 1+\frac{117}{41}-\frac{120}{42}
+ =\frac{286}{287}=1-\frac6{41\cdot42}.
+\]
+It is the unitary minimal-model stress $M(41,42)$.
+Add the diagonal Cartan stress, of charge one, to obtain the exact
+near-two value
+\[
+ \frac{573}{287}=2-\frac1{287}.
+\]
+The vector $u_0=(\ell+h)/2=v-\ell$ has norm twenty and its
+exponential has the minimum compatible affine energy ten. Its GKO
+weight is therefore zero. The rational algebra
+\[
+ M(41,42)\otimes V_{\langle20\rangle}
+\]
+is actually embedded with this stress.
+
+This is an existence statement for a rational chiral algebra near
+charge two, not for a Haagerup full theory. Its rational categorical
+dimension field is ramified only at $2,3,7,41$, while the Haagerup
+dimension requires $\sqrt{13}$. Within the ordinary finite rational
+framework preserving this algebra, that is an obstruction. Merely
+preserving its stress would be a weaker premise.
+
+\begin{example}[A discriminant detects the missing Haagerup dimension]
+\label{ex:coset-ramification}
+\index{ramification}\index{discriminant!number field}
+Here is the arithmetic behind that obstruction. For a number field
+$K$, the field trace $\operatorname{Tr}_{K/\Q}$ sums the images
+under its complex embeddings. If $b_1,\ldots,b_r$ is an integral
+basis of its ring of integers, its discriminant is
+$\det(\operatorname{Tr}_{K/\Q}(b_i b_j))$.
+A rational prime is \emph{ramified} precisely when it divides
+this field discriminant. We use two standard facts: a ramified
+prime of a subfield also ramifies in the larger field, and the
+only primes that can ramify in $\Q(\zeta_N)$ divide $N$.
+
+For $\Q(\sqrt{13})$, an integral basis is $1,\xi$ with
+$\xi=(1+\sqrt{13})/2$ and $\xi^2=\xi+3$. Consequently
+\[
+ \operatorname{disc}\Q(\sqrt{13})
+ =\det\begin{pmatrix}2&1\\1&7\end{pmatrix}=13.
+\]
+This is a discriminant of a number field, not the Gram determinant
+of an $E_6$ or $A_2$ root lattice.
+
+The minimal-model quantum dimensions above belong to
+$K=\Q(\zeta_{82},\zeta_{84})=\Q(\zeta_{3444})$;
+the norm-twenty lattice contributes only dimension-one simples.
+Since $3444=2^2\cdot3\cdot7\cdot41$, the prime thirteen does
+not ramify in $K$. Hence $K$ cannot contain $\Q(\sqrt{13})$,
+or the number $d=1+\xi$.
+
+For any simple separable Frobenius sewing algebra $A$ in the
+stated representation category $\mathcal C$, with $A$ simple
+as an $A$--$A$ bimodule, the dimension of a defect bimodule $X$ is
+\[
+ \FPdim_{{}_A\mathcal C_A}(X)
+   =\frac{\FPdim_{\mathcal C}(X)}{\FPdim_{\mathcal C}(A)}\in K.
+\]
+Here numerator and denominator refer to underlying objects;
+direct sums also have dimension in $K$. Thus neither a simple
+nor a reducible defect preserving this rational algebra can
+have Haagerup dimension $d$. No approximation to $c$ enters
+the argument. The same arithmetic will filter the ordinary
+$W_3$ family in Section~\ref{sec:identification-W3}.
+\end{example}
+
+\section{An exactly solvable four-dimensional stress algebra}
+
+Now consider the commutant of the whole diagonal $A_{1,40}$ inside
+$U$. Its weight-two space is four dimensional. Besides $e_0$ above,
+it contains the two stresses $e_1,e_2$ of charges $2400/1271$ and
+$70/31$, and a PCT-real diagonal singlet $x$ from the current
+representation $(2,2)$. Normalize $\langle x,x\rangle=1$.
+
+Use the Griess product $a*b=a_{(1)}b$. Put
+\[
+ f_i=\langle e_i,e_i\rangle,
+ \qquad f=\left(\frac{143}{287},\frac{1200}{1271},\frac{35}{31}\right),
+ \qquad\lambda=\left(\frac{11}{41},\frac{192}{1271},\frac{49}{31}\right).
+\]
+The complete multiplication table is
+\begin{equation}\label{eq:c-axis-table}
+ e_i*e_j=2\delta_{ij}e_i,
+ \quad e_i*x=\lambda_i x,
+ \quad x*x=\sum_i\frac{\lambda_i}{f_i}e_i.
+\end{equation}
+The last coefficients are forced by invariance of the form:
+$\langle x*x,e_i\rangle=\langle x,x*e_i\rangle=\lambda_i$.
+Representation parity excludes an $x$ component. Exact ambient OPE
+identities verify that no omitted weight-two component remains.
+
+For $e=\sum_i a_ie_i+tx$, the Virasoro idempotent equation $e*e=2e$
+becomes
+\begin{equation}\label{eq:c-axis-equations}
+ a_i(1-a_i)=q_it^2,\qquad
+ t(\lambda\cdot a-1)=0,
+ \qquad q=\left(\frac7{26},\frac2{25},\frac7{10}\right).
+\end{equation}
+Its central charge is $c(e)=2f\cdot a$. A real solution has
+$0\leq a_i\leq1$. These small equations describe actual stresses
+because the quasiprimary and remaining Virasoro identities are
+controlled in this current-free commutant.
+
+At $c(e)=2$ and $t\ne0$, the linear equations give
+$a_0=41/44-30a_1/11$ and $a_2=93/196+18a_1/49$.
+Writing $b=a_1$ leaves two necessary quadratics,
+\[
+ 2500b^2+620b-39=0,
+ \qquad10676b^2-10820b+309=0.
+\]
+The first factors as $(250b-13)(10b+3)$. Its roots are $13/250$
+and $-3/10$. Substitution in the second polynomial gives, respectively,
+$-3512064/15625$ and $112896/25$, both nonzero. Thus no common
+root exists, even over $\C$. The $t=0$ subset stresses also have
+no charge two. This is a complete exclusion in this four-dimensional
+slice, not in all of $U_2$.
+
+The nonzero-$t$ solutions do give four real irrational charges:
+\[
+ 1.537523906\ldots,\quad2.025004294\ldots,
+ \quad3.117852848\ldots,\quad3.605333236\ldots.
+\]
+They occur in complementary pairs summing to $36/7$, the charge of
+the diagonal-affine commutant. The one closest to two is
+\begin{equation}\label{eq:c-cstar}
+ c_*=\frac{18}{7}
+ -4\sqrt{\frac{4166013889-141778560\sqrt{274}}{97483514569}}.
+\end{equation}
+\index{irrational stress!near charge two}
+If $z=c_*-18/7$, then
+\[
+ 4776692213881z^4-6532309777952z^2+1524572989696=0.
+\]
+Its displayed squared offset is irrational, so $c_*$ is not exactly
+two. Rational $C_2$-cofinite VOAs have rational central charge;
+therefore a chiral algebra with this stress cannot be strongly
+rational, nor can a finite extension with the same stress become
+strongly rational.
+
+\section{What the irrational commutant actually contains}
+
+Choose the stress $e$ of charge $c_*$ and put
+\[
+ f=\omega_{E_8}-e,\qquad
+ N_e=\Com(\Vir_f,V_{E_8}),\qquad
+ M_f=\Com(N_e,V_{E_8}).
+\]
+The vacuum-like-vector lemma proves
+\[
+ M_f=\Com(\Vir_e,V_{E_8}),\qquad
+ N_e=\Com(M_f,V_{E_8}).
+\]
+Indeed a vector killed by the translation $e_{(0)}$ is killed by
+all nonnegative modes of the whole $N_e$ algebra, not only the
+Virasoro modes. This yields the first equality; the second follows
+from the defining commutant and the reverse containment.
+
+The diagonal affine algebra belongs to $M_f$. Write
+\[
+ f=\omega_{A_{1,40}}+g,
+ \qquad c_g=\frac{36}{7}-c_*.
+\]
+The exact current decomposition under diagonal $SU(2)$ is
+\[
+ 248=10(3)+10(5)+10(7)+6(9)+4(11).
+\]
+There is no singlet. Positivity of the complementary affine energy
+therefore gives $(N_e)_1=0$.
+
+\begin{constructioninput}[Vacuum kernels of the irrational factor]
+Complete exact low-grade calculations of the ambient complementary
+energy kernels give
+\begin{equation}\label{eq:c-N-lowgrades}
+ \bigl(\dim(N_e)_0,\ldots,\dim(N_e)_4\bigr)=(1,0,1,1,2).
+\end{equation}
+Thus the vacuum algebra agrees with its Virasoro vacuum module
+through weight four. Its weight-four basis is
+$L^e_{-4}\one,(L^e_{-2})^2\one$. Their Gram determinant is
+$c_*^2(5c_*+22)/2>0$, so the two states are independent.
+The opposite algebra has the exact finite kernel
+\[
+ (M_f)_2=(A_{1,40})_2\oplus\C g,
+ \qquad\dim(M_f)_2=10.
+\]
+\end{constructioninput}
+There is no additional spin-three or spin-four vacuum generator in
+$N_e$. This rules out ordinary $W_3$ for this factor. It does not
+prove $N_e=\Vir_e$: a first additional generator may occur later.
+Similarly the opposite-algebra statement is not the all-grade equality
+$M_f=A_{1,40}\otimes\Vir_g$.
+
+\section{Three inequivalent proposals for the reduced state space}
+
+The smallest attempted reduction projects onto the complementary
+Virasoro vacuum on both chiralities. Its partition function would be
+$|\chi_{N_e}|^2$. It cannot be modular invariant. If it were, the
+ratio $\chi_{N_e}(-1/\tau)/\chi_{N_e}(\tau)$ would have constant
+modulus one and hence be constant; at $\tau=i$ positivity makes the
+constant one. The one-dimensional modular representation would have
+$S=1$, $T=e^{-2\pi i c_*/24}$. The relation $(ST)^3=S^2$ would
+force $c_*\in8\Z$. Additional sectors are therefore mandatory.
+
+A second proposal branches only over $\Vir_f$,
+\[
+ V_{E_8}=\bigoplus_h B_h\otimes L(c_f,h),
+ \qquad\mathcal H_{\rm naive}=\bigoplus_hB_h\otimes\overline{B_h}.
+\]
+This produces infinitely many reduced vacua. Already the three
+diagonal affine currents are complementary Virasoro primaries of
+weight one and have $e$-energy zero. Pairing their multiplicity space
+with itself adds nine vacuum states. More generally $A_{1,40}$ has
+infinitely many Virasoro primaries: its high-temperature growth has
+effective charge $20/7$, whereas a finite sum of irreducible
+Virasoro characters at that charge grows with effective charge at
+most one. Every such affine primary still has zero $e$-energy.
+
+The more careful third proposal branches over the full opposite
+algebra,
+\[
+ V_{E_8}=\bigoplus_\lambda B_\lambda\otimes(M_f)_\lambda,
+ \qquad\mathcal H_{\rm red}
+      =\bigoplus_\lambda B_\lambda\otimes\overline{B_\lambda}.
+\]
+The unitary ordinary branching is an algebraic countable semisimple
+\index{ordinary branching!without rationality}
+sum, even though the two factors need not be rational. To see why,
+the commuting product $N_e\otimes M_f$ has the full ambient stress.
+Its representation on $V_{E_8}$ is therefore unitary with
+finite-dimensional nonnegative integer ambient grades. On the
+least remaining grade, split the finite-dimensional star-closed
+zero-mode algebra into irreducible top spaces. A simple top
+generates a simple unitary module: any invariant submodule has a
+grade-by-grade invariant orthogonal complement; if the submodule
+misses the simple top, that complement contains the top and hence
+everything it generates. Removing these summands and repeating
+grade by grade exhausts the representation.
+
+The finite-dimensional simple tops for the commuting product
+factor into a simple top for each factor. Their generated modules
+are tensor products of ordinary simple modules. Each separate
+graded piece is finite: tensoring it with one fixed nonzero
+opposite ground vector embeds it in a single finite ambient grade.
+There are only countably many such summands. Grouping identical
+$M_f$ modules produces the multiplicity spaces $B_\lambda$ above;
+fixing their opposite ground weight again proves finite-dimensional
+grades and lower boundedness for each $B_\lambda$. All these
+statements concern algebraic finite-energy vectors, so no direct
+integral or completion has been silently inserted.
+
+This prescription has exactly one zero-energy vector, because
+all zero-$e$-energy states lie in the full opposite vacuum algebra.
+But deleting the complementary energies may bring infinitely many
+different labels into a bounded reduced-energy interval. Ambient
+trace convergence does not prove reduced trace convergence.
+
+It also does not permit selecting attractive branches at will.
+Ambient currents have positive $e$-weights near
+\[
+ .0597642,\quad .0609687,\quad .0624674,\quad .0672163.
+\]
+Their complementary weights are between zero and one, so they are
+tops for both factors. The full-opposite diagonal prescription
+therefore retains scalar dimensions twice all these values, including
+the first three below $.134433$. Ambient $SU(2)$ multiplicities are
+not automatically reduced bulk multiplicities, but the existence of
+these branches is unavoidable for this specified pairing.
+
+\section{What sewing must still establish}
+\index{sewing!coset completion}
+
+An actual reduced local CFT needs all of the following mathematical
+data: a complete branching with finite reduced degeneracies or a
+specified continuous measure; a convergent torus amplitude and its
+modular transformation; a positive local bulk OPE obeying sewing; and
+a transport of Haagerup defects that preserves junction compositions
+and associators. Integral spin from pairing matching complementary
+labels is only one necessary check.
+
+The next two worked arguments turn the convergence warning into
+precise mathematical tests. Their additional hypotheses are part of
+their statements; the low-grade calculations do not establish them.
+
+\subsection{A conditional divergence theorem}
+
+\begin{proposition}\label{prop:c-diagonal-divergence}
+\index{thermal trace!conditional divergence}
+Assume the all-grade identity $M_f=A_{1,40}\otimes\Vir_g$.
+For the complete full-$M_f$ branching, the diagonal reduced state
+space has divergent thermal trace at every positive inverse
+temperature. The conclusion does not require $N_e=\Vir_e$ or
+irreducibility of the multiplicity spaces $B_\lambda$.
+\end{proposition}
+\begin{proof}
+Let $c_A=20/7$ and let $\beta,\epsilon>0$ be dimensionless inverse
+temperatures conjugate to the two Virasoro energies. Thus their
+modular parameters are $\tau_e=i\beta/(2\pi)$ and
+$\tau_f=i\epsilon/(2\pi)$, with $q_e=e^{-\beta}$ and
+$q_f=e^{-\epsilon}$. For a physical inverse temperature $b$ on a
+circle of length $L$ and propagation speed $v$, the corresponding
+dimensionless parameter is $2\pi vb/L$, in units $\hbar=k_B=1$.
+Here the two parameters can be varied independently as trace variables.
+Define the normalized two-temperature trace
+\[
+ F(\beta,\epsilon)=\Tr_{V_{E_8}}
+ e^{-\beta(L^e_0-c_*/24)-\epsilon(L^f_0-c_f/24)}.
+\]
+The two nonnegative commuting energies sum to the ambient energy,
+so convergence follows by comparison with an ordinary $E_8$ trace
+at $\min(\beta,\epsilon)$. The same estimate on compact subsets
+of two upper half-planes proves normal convergence of the
+vacuum two-variable trace. The Krauel--Miyamoto multivariable
+modular theorem applies to orthogonal conformal vectors summing
+to the stress of a regular ambient VOA, with this analyticity;
+its vacuum clause supplies the descendant analyticity needed in
+the theorem. Neither reduced factor is required to be rational.
+The ambient $E_8$ algebra is holomorphic and has $S=(1)$, so the
+theorem gives
+\[
+ F(\beta,\epsilon)=F(4\pi^2/\beta,4\pi^2/\epsilon).
+\]
+This is simultaneous inversion of two variables; it does not assert
+separate modular invariance in either variable. Retaining the positive
+vacuum term on the right gives
+\[
+ F(\beta,\epsilon)\geq
+ \exp\left(\frac{\pi^2c_*}{6\beta}
+                        +\frac{\pi^2c_f}{6\epsilon}\right).
+\]
+
+Under the stated product hypothesis, an opposite simple module is
+one of the forty-one affine integrable modules tensored with a
+unitary Virasoro module of lowest weight $h\geq0$. A Verma spanning
+bound therefore gives, uniformly in $\lambda$,
+\[
+ \chi_{(M_f)_\lambda}(\epsilon)\leq U(\epsilon):=
+ \max_j\chi_{A_j}(\epsilon)\,
+ e^{\epsilon c_g/24}\prod_{n\geq1}(1-e^{-n\epsilon})^{-1}.
+\]
+Finite affine modular transformation and eta inversion imply
+\[
+ \limsup_{\epsilon\downarrow0}\epsilon\log U(\epsilon)
+                      \leq\frac{\pi^2(c_A+1)}6.
+\]
+The oscillator contribution is one. It is an upper bound on character
+growth, not a replacement of the actual central charge $c_g$ by one.
+
+Write
+$\chi_{B_\lambda}(\beta)=\Tr_{B_\lambda}
+e^{-\beta(L^e_0-c_*/24)}$, including the same chiral Casimir shift.
+If $R(\beta)=\sum_\lambda\chi_{B_\lambda}(\beta)$ were finite,
+positive branching would imply
+$F(\beta,\epsilon)\leq U(\epsilon)R(\beta)$.
+Multiply logarithms by $\epsilon$ and let $\epsilon$ decrease to
+zero. The lower and upper bounds force $c_f\leq c_A+1$,
+contradicting $c_f=c_A+c_g$ and $c_g>1$. Hence $R(\beta)$
+diverges for every $\beta>0$.
+
+One must still justify divergence of the diagonal square sum; a
+divergent sum need not have divergent squares in general. Here the
+positive state-by-state character expansion gives
+\[
+ \chi_{B_\lambda}(\beta)^2\geq\chi_{B_\lambda}(2\beta),
+\]
+because the square contains every pair of a basis vector with
+itself. Summing yields a lower bound $R(2\beta)=\infty$ for
+the diagonal thermal trace.
+\end{proof}
+
+The proof isolates a general obstruction: a proposed complementary
+algebra whose simple characters all have a uniform growth rate below
+the complementary central charge cannot be discarded in this
+all-branches diagonal fashion. Additional opposite fields might
+change the uniform bound, or a different left/right pairing might
+change the construction. Neither possibility is settled by vacuum
+dimensions through weight four.
+
+\subsection{A continuous diagonal density can be solved exactly}
+
+An alternative is a noncompact theory with a positive continuum of
+weights. It is important to speak of a partition \emph{density}:
+a continuum direct integral need not have a literal finite
+Hilbert-space trace. A direct integral is the continuum analogue
+of a direct sum of sectors, with a measure replacing the discrete
+sum over labels. Integrating their characters gives a partition
+density only after specifying that measure and its normalization.
+Suppose this density itself, not merely a
+regulator-dependent finite part, obeys exact modular inversion.
+
+\begin{proposition}[Strict diagonal continuum]\label{prop:c-continuum}
+\index{diagonal continuum!modular obstruction}
+Fix $c>1$. Pair only identical positive-weight irreducible unitary
+Virasoro modules, with a positive measure $\mu$ whose Laplace
+integral is finite at every positive argument. Assume no vacuum atom
+and exact simultaneous modular inversion at independently positive
+left and right inverse temperatures. Then, up to a positive overall
+constant,
+\[
+ d\mu(h)=\frac{\mathbf1_{h>(c-1)/24}}{
+                     \sqrt{h-(c-1)/24}}\,dh.
+\]
+In particular its effective central charge is one.
+\end{proposition}
+\begin{proof}
+Put $A=(c-1)/24$. A positive-weight unitary irreducible at $c>1$
+has character
+\[
+ \chi_h(\beta)=\frac{e^{-\beta(h-A)}}{\eta(\beta)},
+\qquad\eta(\beta)=e^{-\beta/24}
+                               \prod_{n\geq1}(1-e^{-n\beta}).
+\]
+There are no positive real degenerate highest weights in this
+unitary range. For $1<c<25$, write $c=1+6Q^2$ and
+$Q=b+b^{-1}$ with $|b|=1$. The Kac values
+$[Q^2-(rb+s/b)^2]/4$ are nonreal when $r\ne s$ and
+nonpositive when $r=s$. For $c\geq25$, take $b>0$;
+then $rb+s/b\geq Q$ for positive integers $r,s$, again giving
+nonpositive values. Thus a positive-weight module has the Verma
+character above. The vacuum is the exception, with its
+$L_{-1}\one=0$ relation, and is treated separately below.
+Define $G(s)=\int e^{-s(h-A)}d\mu(h)$. Strict diagonality gives
+\[
+ Z(\beta,\bar\beta)=
+                 \frac{G(\beta+\bar\beta)}{
+                                      \eta(\beta)\eta(\bar\beta)}.
+\]
+Here $\beta$ and $\bar\beta$ are independently positive,
+dimensionless parameters in the same convention as above. Normal
+convergence gives the analytic continuation needed when deriving this
+identity from a physical modular amplitude.
+
+Set $s=\beta+\bar\beta$, $p=\beta\bar\beta$, and
+$t=4\pi^2s/p$. Eta inversion,
+$\eta(\beta)=\sqrt{2\pi/\beta}\eta(4\pi^2/\beta)$,
+turns modular invariance into
+\[
+ G(t)=\frac{\sqrt p}{2\pi}G(s)=\sqrt{\frac{s}{t}}G(s).
+\]
+For fixed $s$, positive temperatures realize every
+$0<p\leq s^2/4$. Thus this equation holds whenever
+$st\geq16\pi^2$. For arbitrary $s_1,s_2$, choose a common large
+$u$ with $s_i u\geq16\pi^2$. It follows that
+$\sqrt{s_1}G(s_1)=\sqrt uG(u)=\sqrt{s_2}G(s_2)$.
+Hence $G(s)=C/\sqrt s$.
+
+The gamma integral identifies the positive measure:
+\[
+ \int_A^\infty\frac{e^{-sh}}{\sqrt{h-A}}\,dh
+                          =\sqrt\pi\frac{e^{-As}}{\sqrt s}.
+\]
+Uniqueness of positive Laplace transforms rules out any other measure.
+For an elementary justification, weight it by $e^{-s_0h}$ to make
+a finite measure and push it to $x=e^{-h}\in[0,1]$. The Laplace
+values at $s_0+n$ fix all polynomial moments. Density of polynomials
+in continuous functions on $[0,1]$ fixes that measure uniquely.
+Undoing the positive weight fixes the original measure.
+
+Its threshold is $h_{\min}=A$, so
+$c_{\rm eff}=c-24h_{\min}=1$.
+\end{proof}
+
+\begin{example}[The noncompact boson as a partition density]
+\label{ex:c-noncompact-boson}
+\index{partition density}\index{noncompact boson}
+The compact boson gives a familiar way to obtain an inverse-square-root
+measure. Use the radius convention of Chapter~\ref{ch:cft},
+\[
+ p_L=\frac mR+\frac{nR}{2},\qquad
+ p_R=\frac mR-\frac{nR}{2},\qquad m,n\in\Z.
+\]
+For independently positive $\beta,\bar\beta$, its partition function is
+\[
+ Z_R(\beta,\bar\beta)=
+ \frac{1}{\eta(\beta)\eta(\bar\beta)}
+ \sum_{m,n\in\Z}
+ e^{-\beta p_L^2/2-\bar\beta p_R^2/2}.
+\]
+The eta factors count oscillators and include the two chiral Casimir
+shifts. We use the same dimensionless inverse temperatures and eta
+normalization as in Proposition~\ref{prop:c-continuum}.
+
+Take $R\to\infty$ at fixed positive temperatures. To check suppression
+of winding even when the two temperatures differ, put
+$s=\beta+\bar\beta$ and $a=\beta-\bar\beta$. Completing the square gives
+\[
+ \frac\beta2p_L^2+\frac{\bar\beta}2p_R^2
+ =\frac s2\left(\frac mR+\frac{anR}{2s}\right)^2
+  +\frac{\beta\bar\beta}{2s}n^2R^2.
+\]
+The momentum Gaussian sum is $O(R)$ uniformly in its shift, as follows
+by comparison with its Gaussian integral, or by Poisson summation.
+The second term therefore suppresses the entire $n\ne0$ contribution
+after division by $R$. For $n=0$, the spacing of $p=m/R$ is $1/R$,
+so the remaining sum is a Riemann sum:
+\begin{equation}
+ \begin{split}
+ \mathcal Z_\infty(\beta,\bar\beta)
+ &:=\lim_{R\to\infty}\frac{Z_R(\beta,\bar\beta)}R\\
+ &=\frac{\displaystyle\int_{\R}e^{-sp^2/2}\,dp}
+         {\eta(\beta)\eta(\bar\beta)}
+ =\frac{\sqrt{2\pi}}
+         {\eta(\beta)\eta(\bar\beta)\sqrt{\beta+\bar\beta}}.
+ \end{split}
+ \label{eq:c-noncompact-density}
+\end{equation}
+Dividing instead by the target-space circumference $2\pi R$ changes
+only the overall constant. Eta inversion verifies exact simultaneous
+modular inversion of this density.
+
+The surviving primary weights are diagonal:
+$h=\bar h=p^2/2$. Both signs of $p$ give the same Virasoro weight,
+and changing variables gives
+\[
+ \int_{\R} f(p^2/2)\,dp
+ =\sqrt2\int_0^\infty f(h)h^{-1/2}\,dh.
+\]
+Thus our normalization has $d\mu(h)=\sqrt2\,h^{-1/2}dh$ for $h>0$.
+The singularity at zero is integrable and carries no atom.
+At $c=1$, the Heisenberg Fock character is
+$e^{-\beta h}/\eta(\beta)$. It agrees with the irreducible Virasoro
+character at generic momentum. The exceptional degenerate weights
+$h=j^2/4$, $j\in\Z_{\ge0}$, form a countable set of measure zero
+for this continuous measure. Their distinct Virasoro decompositions,
+including the special vacuum relations at $p=0$, do not change the
+density integral.
+
+There is still no literal finite Hilbert-space trace in the noncompact
+limit. The zero-mode Hilbert space is $L^2(\R)$, and the heat operator
+has an infinite spatial-volume trace. Equation~
+\eqref{eq:c-noncompact-density} is a volume-normalized trace, equal
+to $2\pi$ times the trace per unit target-space circumference,
+obtained from the compact regulator. The finite-radius
+$m=n=0$ sector contributes $1/R$ times its oscillator factor and
+disappears from this density. Its constant zero-mode wavefunction has no
+normalizable limit on the real line. A generalized zero-momentum
+state and the local identity operation remain meaningful, but there
+is no normalizable vacuum atom in the spectral measure.
+
+The continuum threshold is zero, so $c_{\rm eff}=1-24\cdot0=1$.
+For example at equal temperatures, eta inversion gives
+\[
+ \mathcal Z_\infty(\beta,\beta)
+ \sim\frac{\sqrt\beta}{2\sqrt\pi}
+       e^{\pi^2/(3\beta)}\qquad(\beta\downarrow0).
+\]
+The polynomial prefactor records the continuum; the exponential has
+the common chiral effective charge one.
+
+For $c>1$, the proposition forces the same Gaussian measure shape
+after the shift $h=A+p^2/2$, where $A=(c-1)/24$. This comparison
+explains the threshold density and again gives
+$c-24A=1$. The compact-boson limit itself still has $c=1$.
+Constructing a theory at $c=c_*$ would additionally require actual
+fields, OPEs, and compatible sewing and defect data. This Gaussian
+calculation supplies none of those additional data for a Liouville
+or Haagerup construction.
+\end{example}
+
+At $c=c_*$, effective charge two would instead require
+$h_{\min}=(c_*-2)/24$, about $.00104185$. The diagonal modular
+density forces the larger threshold $(c_*-1)/24$, about $.0427085$.
+Thus this precise continuum repair does not do the proposed job.
+It also does not identify a Liouville interaction theory: characters
+and a measure supply no OPE coefficients or defect junctions.
+
+Adding a positive vacuum atom cannot fix the strict diagonal ansatz.
+The vacuum character has the extra numerator $1-e^{-\beta}$.
+After stripping eta factors, fix $\bar\beta>0$ and send
+$\beta$ to zero. The original numerator stays bounded by Laplace
+finiteness. Modular inversion would therefore make the transformed
+numerator tend to zero after its square-root prefactor. But the
+transformed positive vacuum term grows at least as
+$\exp(4\pi^2A/\beta)$, a contradiction. This reasoning requires
+positivity; cancellations in a signed formal expression would not
+support it. Reducible branching blocks and asymmetric Virasoro
+pairings remain outside the strict diagonal hypothesis.
+
+\section{What a genuine defect descent would guarantee}
+
+The inherited extension action preserves the two commutant spaces
+because it intertwines the stress modes. This is weaker than a
+tensor action on a sewn reduced theory. Restricted normalized
+operations may cease to be extremal, and their compositions need
+not supply the required fusion junction spaces. There is nevertheless
+a useful positive criterion once a genuine tensor functor exists.
+
+\begin{proposition}[Haagerup tensor descent cannot collapse simples]
+\label{prop:c-faithful-descent}
+Let $F$ be a unitary strong tensor functor from $\HH_3$ into a
+locally semisimple rigid category with simple unit and
+finite-dimensional Hom spaces on the image. Then $F$ is fully
+faithful.
+\end{proposition}
+\begin{proof}
+Take the full category $\mathcal D$ of simple summands of the images
+of the six simples. It is a fusion category: products and duals stay
+inside the finite list of image summands. The induced functor to
+$\mathcal D$ is dominant, meaning every simple target is a summand of
+an image. Its right adjoint gives a connected
+central algebra $A=R(\one)$ and
+\[
+ \operatorname{Dim}\mathcal D
+       =\frac{\operatorname{Dim}\HH_3}{\FPdim A}.
+\]
+If $A$ is not the unit, its central lift contains the unit once and
+at least one nonunit central simple. The smallest such dimension in
+$Z(\HH_3)$ is $3d$, so
+$\FPdim A\geq1+3d=d^2$. Consequently
+\[
+ \operatorname{Dim}\mathcal D\leq3+\frac3{d^2}
+                                      <\frac{5+\sqrt5}{2}.
+\]
+Every nonpointed fusion category has global dimension at least the
+last number. At rank two this is the Fibonacci minimum from
+$X^2=1+nX$, $n\geq1$. At rank at least three, a noninvertible
+has squared dimension at least two and two further simples contribute
+at least two, giving global dimension at least four.
+Thus $\mathcal D$ would be pointed. But $F(\rho)$ still has
+Frobenius--Perron dimension $d$, irrational, whereas every object of
+a pointed category has integer dimension. This is impossible.
+Therefore $A=\one$; the dominant functor is an equivalence onto
+$\mathcal D$, proving full faithfulness into the target.
+\end{proof}
+
+The premise is substantial. A BRST reduction, a branching construction,
+or a generalized quotient would have to build this tensor functor,
+including its unit and junction compatibility. Checking the Haagerup
+fusion polynomial for a few compressed operators does not meet that
+premise. The proposition says what a correct construction would
+preserve, rather than declaring that the missing construction has
+already been carried out.
+
+\section{A current test that survives changes of pairing}
+
+A unitary theory
+with unique normalizable vacuum and two independent commuting
+Hermitian holomorphic currents has a rank-two Heisenberg stress of
+charge two. Subtracting it at charge $c_*$ would leave a unitary
+Virasoro vacuum with $0<c_*-2<1/2$, which is impossible. An explicit
+negative-norm witness at residual charge $k$ is
+\[
+ -108L_{-6}\one-264L_{-4}L_{-2}\one
+             +93L_{-3}^2\one+64L_{-2}^3\one,
+\]
+whose squared norm is
+$12k(2k-1)(128k+6943)<0$ on that interval.
+This is a finite Virasoro calculation, so it can be checked without
+invoking a classification of unitary minimal models. In the ordered
+vacuum basis
+$L_{-6}\one,L_{-4}L_{-2}\one,L_{-3}^2\one,L_{-2}^3\one$,
+the Gram matrix is
+\[
+ k\begin{pmatrix}
+ 35/2&5&18&24\\
+ 5&(5k+16)/2&14&(9k+48)/2\\
+ 18&14&8k+36&30\\
+ 24&(9k+48)/2&30&3(k+8)(k+16)/4
+ \end{pmatrix}.
+\]
+For example,
+$L_4L_{-2}^3\one=(48+9k)L_{-2}\one$ gives the second-row,
+fourth-column entry after applying $L_2$.
+Multiplying the matrix by $(-108,-264,93,64)$ on both sides
+gives $3072k^3+165096k^2-83316k$, which factors as the
+negative expression above. Quotienting null states cannot remove
+a vector of strictly negative norm in a unitary representation.
+
+This is a conditional criterion for rejecting $c_*$. The lattice
+chain's nearly spin-one states have not been proved to be two such
+currents, so the criterion cannot yet be applied as an unconditional
+identification or exclusion.
+
+The exact construction at charge eight, the rational charge-six coset,
+and the irrational chiral stress are three distinct achievements.
+The physical $\rho$-projector chain remains a fourth problem: one
+needs a controlled map from its lattice operators and sectors to the
+full continuum theory. Neither a matching central charge nor a
+matching pair of low dimensions supplies that map.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:c-coset-1}
+Verify the norm, index, and determinant calculation in
+\eqref{eq:c-rank6-lattice}. Explain why the squarefree determinant
+proves saturation of $L_0$ in its plane.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-1]{Solution on page~\pageref*{sol:ex:c-coset-1}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-2}
+Derive the six-vacuum factor in \eqref{eq:c-six-vacua}. What additional
+information would be needed to interpret a multiplicity-six vacuum
+as a full theory with a nontrivial vacuum algebra?
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-2]{Solution on page~\pageref*{sol:ex:c-coset-2}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-3}
+Compute $c(A_{1,40})$ and the GKO charge $286/287$. Check that adding
+one Cartan stress gives $573/287$, and compare both exact distances
+from two with $c_*-2$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-3]{Solution on page~\pageref*{sol:ex:c-coset-3}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-4}
+Derive \eqref{eq:c-axis-equations} from the Griess multiplication
+table. Explain why the central charge is $2f\cdot a$ rather than
+an arbitrary quadratic expression once the idempotent equations hold.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-4]{Solution on page~\pageref*{sol:ex:c-coset-4}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-5}
+Compute the Virasoro Gram matrix on
+$L_{-4}\one,L_{-2}^2\one$ and its determinant. Use it to justify
+the two-dimensional lower bound at weight four in
+\eqref{eq:c-N-lowgrades}.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-5]{Solution on page~\pageref*{sol:ex:c-coset-5}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-6}
+Show directly from $\rho^2=1+\rho+\alpha\rho+\alpha^2\rho$
+that any fusion-compatible group-valued assignment to simple objects
+is trivial. Explain which transmission assumption is needed to apply
+this algebraic observation to a current coset.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-6]{Solution on page~\pageref*{sol:ex:c-coset-6}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-7}
+Explain why finiteness below every ambient-energy cutoff need not
+imply finiteness below every reduced-energy cutoff after one positive
+commuting energy is discarded. Illustrate the issue using projections of a
+rank-two integer lattice onto a line of irrational slope.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-7]{Solution on page~\pageref*{sol:ex:c-coset-7}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-8}
+Give positive numbers $a_n$ for which $\sum_n a_n$ diverges while
+$\sum_n a_n^2$ converges. Why does the stronger character inequality
+$\chi_\lambda(\beta)^2\geq\chi_\lambda(2\beta)$ nevertheless complete
+the proof of Proposition~\ref{prop:c-diagonal-divergence}?
+State where integrality of state multiplicities is used.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-8]{Solution on page~\pageref*{sol:ex:c-coset-8}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-9}
+Starting from $\eta(\beta)=\sqrt{2\pi/\beta}\,
+\eta(4\pi^2/\beta)$, rederive the functional equation for $G$ in
+Proposition~\ref{prop:c-continuum}. Explain why checking only equal
+temperatures would not justify the step that compares arbitrary
+$s_1$ and $s_2$ through one common large $u$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-9]{Solution on page~\pageref*{sol:ex:c-coset-9}.}}\par
+\end{exercise}
+\begin{exercise}\label{ex:c-coset-10}
+Prove that a nonpointed fusion category of rank at least three has
+global dimension at least four. For rank two, show that
+$X^2=\one+nX$ forces the nonpointed minimum
+$(5+\sqrt5)/2$. Use these bounds to explain the role of
+$\FPdim A\geq d^2$ in the tensor-descent proposition.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:c-coset-10]{Solution on page~\pageref*{sol:ex:c-coset-10}.}}\par
+\end{exercise}

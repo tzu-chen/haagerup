@@ -1,0 +1,24 @@
+{
+  "matches_DLY_Appendix_B_exactly": true,
+  "level": 13,
+  "coefficients": [
+    "-148744/473",
+    "566160/473",
+    "-4800/121",
+    "3860/11",
+    "-33320/121",
+    "-489817/4730",
+    "2193061/52030"
+  ],
+  "change_of_generators": {
+    "r_squared": "280578870",
+    "alpha": "269787375/58",
+    "beta": "-143886600/29",
+    "gamma": "10791495/116",
+    "delta": "-671385/232",
+    "epsilon": "43562220/1247",
+    "zeta": "70444803/19952"
+  },
+  "source": "https://arxiv.org/html/0809.3630#S8",
+  "scope": "Independent published parafermion coefficients, transformed to the canonical normal-order convention."
+}

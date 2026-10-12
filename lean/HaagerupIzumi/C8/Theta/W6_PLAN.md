@@ -1,4 +1,4 @@
-# W6 plan: the theta identities `hcancel` (state at the end of phase 2, 1 October 2026)
+# W6 plan: the theta identities `hcancel` (phase 2, 1 October 2026; updated 4 October 2026)
 
 W6 replaces the hypotheses `hcancel` of `Theta/M3First`, `M3Reverse`, `M6First` and
 `M6Reverse` by theorems.  These files cover the proof of `prop:near-group-current-obstructions`,
@@ -75,20 +75,20 @@ The docstring now says (audit item 3):
   theta matrices, taken in the `e(-(γ,δ))` form;
 * `σ` comes from the VOA side (item 4 below).
 
-## 2. Written but NOT compiled (moved out of the tree to `lean/tools/w6_drafts/`)
+## 2. The phase-2 drafts: compiled on 4 October 2026 (phase 0)
 
-The c8q queue could not admit any job during the last part of phase 2.  The guard printed
-"A legacy or exclusive guarded job holds the shared gate".  Per the root's instruction, the three
-new files were therefore moved to `/home/tzuchen/Codes/haagerup/lean/tools/w6_drafts/`.  They are
-complete drafts and have never been elaborated.  To resume:
+**Status 2026-10-04 (phase 0 done):** `LatticeData`, `Eta8`, `QExpansion` were moved back from
+`lean/tools/w6_drafts/` into `Theta/`, checked and built (`c8q build` exit 0; axioms only
+`propext`, `Classical.choice`, `Quot.sound`).  Registration in `C8All`/`C8Axioms` is done by the
+root agent (not by W6); see the root's ledger for the current status.
+Fixes needed: three docstrings placed before `omit … in` (moved after it); the four
+`det_*` proofs (the `norm_num [det_succ_row_zero]` expansion did not close) were replaced by a
+new general lemma `det_eq_of_smith`/`det_gramR_of_smith` (determinant from the Smith data,
+`det U, det V = ±1`, sign from `PosDef.det_pos`); the `O(D)` sum reindexing in
+`thetaQG7m_S_o`/`thetaG7m_S_o` now uses `Fintype.sum_equiv`; `Eta8`/`QExpansion` only had
+linter warnings.  No statement was changed.
 
-1. Move each back into `Theta/`, in the order `LatticeData`, `Eta8`, `QExpansion`.
-2. `c8q check` it and fix any errors.
-3. `c8q build` it.
-4. Register it in `C8All` and `C8Axioms`.
-
-The pending queue request `200350-29fec8` (check of `LatticeData.lean`) will fail on the missing
-file and can be ignored.
+The original drafts remain in `lean/tools/w6_drafts/` (now superseded).
 
 ### `LatticeData.lean` (plan item 1)
 
@@ -179,12 +179,32 @@ Sizes are in six-hour sessions.
    * the support lemma "energies of `γ + L` lie in `q(γ) + ℕ`", from `cexp_qf_add_one`'s
      computation;
    * the evaluation of `thetaQ*` at the table labels via the `*_emod` lemmas.
+
+   **Status 2026-10-04: done.**  Drafts compiled (section 2).  New file `ThetaSupport.lean`
+   (built): `qf_add_intVec_eq`, `energy_cosetPt_eq_add_int`, `thetaCoeff_support`,
+   `nonneg_of_thetaCoeff_ne_zero`, `thetaCoeff_support_nat(_complex)` (support on `λ + ℕ` for
+   every `λ ≤ 0`, `λ ≡ q(γ)`); integer labels as `G⁻¹` of integral vectors
+   (`ratVec_*_eq_inv`); reduction maps `modL7A2`, `modG7m`, `modA1A1A2`, `modG6m` with
+   `latticeThetaQ_coset* = thetaQ* (mod …)` (also unweighted), the new
+   `ratVec_cosetG6m_emod`, the Table 4 coordinates `0 ↦ (0,0,0)`, `polarG6m ↦ (1,1,1)`; and
+   `thetaQ*_mod_eq_tsum`: the component of the theta vector at the reduced label has the
+   table coefficients `thetaCoeff G (label) (quadOf M) e` as `q`-coefficients.
 1. **Define `λ, μ` (`κ, φ`) from `A, B` (`P`)** as the manuscript does (audit item 4), before
    applying `pole_cancellation`.  Today they are free variables of the `*_obstruction`
    theorems.
+
+   **Status 2026-10-04: done** in the new file `ObstructionCoefficients.lean` (built; the four
+   table files are unchanged).  `lamM3First`, `muM3First`, `phiM3Reverse`, `kappaM3Reverse`,
+   `kappaM6First`, `phiM6Reverse`, `kappaM6Reverse`; `*_polar_match` (the combination has the
+   manuscript's polar/vacuum coefficients, including the `M3First`/`M6First` vacuum `q⁰`
+   entries, which vanish by `thetaCoeff_at_zero`), `*_remainder_polar_zero`, `*_polar_unique`,
+   and `*_obstruction_of_defined` (`hcancel` for the *defined* coefficients plus the vacuum
+   coefficient gives `dim U₁`; the polar hypotheses become consequences).
 2. **The representation `σ`** (about 1 session).
-   * Take `σ` from the modularity of the character vector (Zhu; DLN for finite image), as in
-     `CharacterUniqueness`.
+   * Take `σ` from the modularity of the character vector (Zhu), as in `CharacterUniqueness`.
+     Finiteness of the image is **not** a separate VOA input here: `σ` is pinned at the
+     generators (`σ(S) = SθE*`, `σ(T) = TθE*`), so finite image is a property of the explicit
+     Weil-type matrices (manuscript lines 3772–3774); it remains the hypothesis `hfin`.
    * Identify Zhu's `S` with the categorical modular `S` via Huang's theorem (external).
    * State the manuscript's "multiplication by `η⁸` identifies it with the Weil representation"
      as `σ(S)` and `σ(T)` on the even block equal to `-1/√|D| · e(-(γ,δ))` times the
@@ -192,6 +212,46 @@ Sizes are in six-hour sessions.
      modular data.
    * Then `covariant_of_S_T` gives covariance of `Θ_H/η⁸`.  The even projections use the
      symmetry lemmas of `LatticeData`.
+
+   **Status 2026-10-04: finite/theta part done** (new files `WeilBlocks.lean`,
+   `EvenBlocks.lean`, built).
+   * Full vectors `F*_p = Θ_{H,p}/η⁸` with explicit `Sθ*` (`-1/√|D| e(-(γ,δ))`) and
+     `Tθ*` (`diag e(q(γ) - 1/3)`): `F*_S`, `F*_T`; `F*_covariant` given a homomorphism `σ` with
+     `σ S = Sθ*`, `σ T = Tθ*` (named hypotheses); `noInvariant_sigma_*` = the `hinv` input of
+     `pole_cancellation` (kernel-checked `T`-fixed coordinates `tfixed_*`).
+   * Even blocks in the manuscript's labels (`E = Fin 4 × Fin 2` for `L₇ ⊕ A₂` and `G₇⁻`,
+     `Fin 3 × Fin 2` for `A₁ ⊕ A₁ ⊕ A₂`, `Fin 2 × Fin 2 × Fin 2` for `G₆⁻`), kernel-checked
+     orbit maps, orbit-constancy of the theta vector (for `G₇⁻` of the `O(D)` average
+     `FaG7m`), reduced matrices `SθE* = reduceMat …`, `TθE*`; `FE*_S`, `FE*_T`,
+     `FE*_covariant` (given `σ_E S = SθE*`, `σ_E T = TθE*`), `noInvariantE_sigma_*`
+     (`SθEL7A2_vac = -2/√21`, `SθEA1A1A2_vac = -2/√12` at the only `T`-fixed coordinate).
+   * `EvenBlockData.lean` (built): `SθEL7A2_eq`, the even block of `L₇ ⊕ A₂` in the
+     manuscript's printed cosine form, `-(1/√21) C₇(r,r') C₃(s,s')` with `C₇(r,0) = 1`,
+     `C₇(r,r') = 2cos(4πrr'/7)`, `C₃(s,1) = 2cos(4πs/3)` (orbits kernel-checked), and
+     `TθEL7A2_eq` (`e(r²/7 + s²/3 - 1/3)`).
+   * **2026-10-04, later:** closed forms of all even `S`-blocks: `SθEG7m_eq`
+     (`EvenBlockDataG7m.lean`; `SθEG7m = SθEL7A2`), `SθEA1A1A2_eq` and `SθEG6m_eq`
+     (`EvenBlockDataSigns.lean`; `-(1/√12) C₂₂ ⊗ C₃` resp. `-(1/√12)(-1)^{aa'+bb'} C₃`),
+     `SθE6G6m_eq` (`M6ReverseSym.lean`; `SθE6G6m = SθEA1A1A2`).
+   * **2026-10-04, audit fix (G₆⁻ block):** the `G₆⁻` even block used by the capstone and the
+     obstruction theorem is now the **6-dimensional** quotient by `-1` and the interchange
+     `b ↔ c` (`M6ReverseSym.lean`: `SθE6G6m`, `TθE6G6m`, `FE6G6m`, `FFE6G6m`, index
+     `Fin 3 × Fin 2` via `ιA1A1A2`/`πA1A1A2`), matching the manuscript's
+     `(v₀, v_A, v_B) ⊗ (even pointed factor)` (lines 3714–3720, 3762–3766).  The 8-dimensional
+     version (`EvenBlocks`, `M6ReverseCancellation`) is kept but superseded.
+   * **2026-10-04, non-vacuity (audit item 2): done.**  `WeilSanity.lean`,
+     `WeilSanityST.lean`, `WeilSanityST3.lean` (built) prove, for each of the four even blocks,
+     `SθE² = 1`, `(SθE TθE)³ = 1 = SθE²` and `TθE^N = 1` (`N = 21`, `21`, `12`, `12`):
+     `sl2_relations_L7A2`, `sl2_relations_G7m`, `sl2_relations_A1A1A2`, `sl2_relations_G6m`.
+     So `S ↦ SθE`, `T ↦ TθE` satisfies the defining relations of `SL(2, ℤ)`
+     (`S⁴ = 1`, `(ST)³ = S²`, `S²` central), and the hypothesized `σ` exists (with finite image,
+     as the generators' images have finite order and the relations hold); Lean does not construct
+     `σ` (Mathlib has no presentation of `SL(2, ℤ)`).  The signs are checked: the cube is `+1`
+     because of the Gauss-sum signs `G₇ = ∑ ζ₇^{x²} = i√7` (`gauss7_eq`, via `G₇² = -7` and
+     `Im G₇ > 0`), `1 + 2e(1/3) = i√3`, `e(1/4) = i`.
+   * Still open (VOA side, stays a hypothesis): `σ_E` itself (Zhu modularity of the character
+     vector, Huang's identification of Zhu's `S` with the categorical `S`) and the comparison of
+     `SθE*`, `TθE*` with the categorical `G_{2,3}`/`A_{2,1}` (resp. the `m = 6`) modular data.
 3. **Equal principal parts and pole cancellation** (1.5–2 sessions; audit item 4).
    * The **full** polar part must match.  For `M3First` this includes the vacuum `q⁰` term.
    * On the VOA side, the coefficients at all other polar exponents must vanish.  These are not
@@ -206,18 +266,93 @@ Sizes are in six-hour sessions.
      - the `E₂` `q`-expansion behind `minusSixD2Coeff`.
    * Reusable: `CharacterUniqueness.isBoundedAtImInfty_qseries` and
      `character_vector_unique_of_qexp`.
+
+   **Status 2026-10-04: done for all four tables** (theta side; VOA side as named hypotheses).
+   * `PolarParts.lean` (built): `thetaCoeff_polar` (a nonzero coefficient below `c ≤ 1` sits at
+     `frac q(γ)`), and the **complete** polar entries of each theta vector, kernel-checked
+     (`polar_L7A2`: `(0,0)@0`, `(±1,0)@1/7`, `(±3,0)@2/7`; `polar_G7m`: `0@0`,
+     `{4,10,11,17}@2/21`; `polar_A1A1A2`: `(0,0,0)@0`, `(1,0,0),(0,1,0)@1/4`; `polar_G6m`:
+     `(0,0,0)@0`, `(1,1,±1)@1/6`).  Holomorphy `mdifferentiable_F*`, `mdifferentiable_FE*`.
+   * `RemainderBound.lean` (built): `norm_inv_eta8_le` (`|1/η⁸| ≤ (1 + 228/48) e^{2πy/3}`,
+     `y ≥ 1`), `isBoundedAtImInfty_tsum_div_eta8` (a `q`-series with no exponent `< 1/3`,
+     divided by `η⁸`, is bounded at `i∞`), `tsum_sub_lincomb`, `summable_lincomb`.
+   * `M3FirstCancellation.lean` (built): `m3_first_hcancel_of_voa` and
+     **`m3_first_dimension_of_voa`**: `dim U₁ = 15 + A + 10B` with `hcancel` *derived* from
+     `pole_cancellation`.  Remaining hypotheses (all VOA side, named): `σ` on the even block
+     with finite image and `σ(S) = SθEL7A2`, `σ(T) = TθEL7A2`; the difference vector `V`
+     (holomorphic, `σ`-covariant); its `η⁸` `q`-expansion `δc` with support on
+     `lamOf … + ℕ` and absolute convergence; the polar data (`0`, `-B`, `7 - A` at the three
+     polar entries, zero at all other entries below `1/3`); the vacuum coefficient.
+   * `M6FirstCancellation.lean` (built): `m6_first_hcancel_of_voa`,
+     **`m6_first_dimension_of_voa`** (`dim U₁ = 8 + A`), same shape.
+   * **`F` orientations, done the same day (2026-10-04):**
+     - `SerreTheta.lean`: Mathlib's Serre derivative (`Derivative.serreDerivative 2` is the
+       manuscript's `D₂`); `serre_finset_sum`, `serre_S_of_slash`, `serre_T_of_slash`; the weight-two
+       theta laws in slash form (`θG7m_slash_S/T`, `θG6m_slash_S/T`); `FFG7m`, `FFG6m`
+       (`F = -6∂₂Θ/η⁸`) satisfy the **same** `Sθ`, `Tθ` laws as `Θ_H/η⁸` (`FF*_S/T/covariant`).
+     - `SerreQExp.lean`: `deriv_latticeTheta` (termwise), `normDeriv_latticeTheta`
+       (`DΘ = Θ_{G}/2`), `normDeriv_theta_qexp` (`DΘ = ∑ e N(e) q^e`), `minusSix_serre_eq`.
+     - `E2Theta.lean`: `thetaCoeff_support_fract`, `summable_norm_thetaCount`, `hasSum_E2`
+       (Mathlib's `E₂` expansion with `e2Coeff`), `E2_mul_theta_hasSum` (Cauchy product), and
+       **`minusSixSerre_theta_qexp`: `-6∂₂Θ_{g+L} = ∑ minusSixD2Coeff (thetaCount G g) e · q^e`**,
+       i.e. the Table 2/4 `F`-coefficients are the actual `q`-coefficients.
+     - `E2ThetaSummable.lean`: `cauchy_term`, `summable_norm_e2ThetaCoeff`,
+       `summable_norm_minusSixD2Coeff` (absolute convergence at every height).
+     - `M6ReverseCancellation.lean`: `m6_reverse_dimension_of_voa` (`dim U₁ = 5 + 12P`) and
+       `m6_reverse_hcancel_of_voa` on the 8-dimensional block; includes `thetaCoeff_polarG6m_eq`
+       (the polar coset `-w/3` is the label `(1,1,1)`).  **Superseded** by `M6ReverseSym.lean`:
+       **`m6_reverse_dimension_of_voa_sym`**, `m6_reverse_hcancel_of_voa_sym` on the
+       6-dimensional swap-symmetric block (polar coordinate `(11, 1)`, vacuum `(00, 0)`).
+     - `M3ReverseCancellation.lean`: **`m3_reverse_dimension_of_voa`** (`dim U₁ = 14 + 42A`) and
+       `m3_reverse_hcancel_of_voa`, on the separately even block (average over `j ↦ 13j`,
+       coordinates `(r,s) ↦ 9r + 7s`); includes the `O(D)`-twisted `F`-laws, the translates
+       `thetaCount_repG7m_congr`/`thetaCoeff_repG7m_congr`, and the halving of the polar
+       coefficient (`(3/7·1 + 3/7·0)/2 = 3/14`, `(-4/7 + 0)/2 = -2/7`).
+   * **Net status of W6 (2026-10-04): all four `hcancel` hypotheses are now theorems relative to
+     VOA-side inputs.**  In the integer-label form of the table files they are
+     `m3_first_hcancel_table_of_voa`, `m3_reverse_hcancel_table_of_voa`,
+     `m6_first_hcancel_table_of_voa`, `m6_reverse_hcancel_table_of_voa`
+     (`ObstructionsOfVoa.lean`, through the link lemmas of `TableLinks.lean` and
+     `M6ReverseSym.lean`), and the obstruction theorems **without `hcancel`** are
+     `m3_first_obstruction_of_voa`, `m3_reverse_obstruction_of_voa`,
+     `m6_first_obstruction_of_voa`, `m6_reverse_obstruction_of_voa` (each applies the existing
+     `*_obstruction` theorem with `hcancel := *_hcancel_table_of_voa`).  The remaining
+     hypotheses are exactly: `σ` on the even block with `σ(S) = SθE*`, `σ(T) = TθE*` (VOA side:
+     Zhu modularity, Huang's identification of `S`, comparison with the categorical modular
+     data) and finite image `hfin` (a property of the explicit matrices, since `σ` is pinned at
+     the generators); the VOA vector `V` (holomorphic, covariant); its `η⁸` `q`-expansion `δc`
+     (support on `lamOf … + ℕ`, absolute convergence); the polar/vacuum coefficients of `δc` and
+     the vanishing of `δc` at all other entries below `q^{1/3}`.  Non-vacuity of the `σ`
+     hypotheses: `sl2_relations_*` (item 2 status).
 4. **Coefficient extraction** with `qcoeff_eq_of_tsum_eq`, to obtain `hcancel` in its current
    form: about 0.5 session.
 
-Remaining total: about 5–7 sessions.
+   **Status 2026-10-04: done for the theta-only orientations** (new file
+   `CoeffExtraction.lean`, built): `qcoeff_eq_lincomb`; `lamOf`;
+   `hcancel_L7A2_of_eq` and `hcancel_A1A1A2_of_eq` (`hcancel` of `M3First`/`M6First` from the
+   componentwise functional identity `η⁸ δv = λ Θ_{H₁} + μ Θ_{H₂}` resp. `κ Θ_H` on `ℍ`, with
+   VOA-side support/summability of the `δv` coefficients as named hypotheses);
+   `PThetaA1A1A2_eq` (the Table 3 projection does not change the coefficients);
+   `m3_first_obstruction_of_functional`, `m6_first_obstruction_of_functional`.  For the
+   `F = -6D₂Θ` orientations the extraction is done inside `m3_reverse_hcancel_of_voa` and
+   `m6_reverse_hcancel_of_voa` (item 3 status).
+
+Remaining (as of 2026-10-04, end of the session): only the VOA-side inputs listed below, which
+enter the four `*_obstruction_of_voa` theorems as named hypotheses.  The links between the
+even-block statements and the integer-label tables are done (`TableLinks.lean`:
+`thetaCoeff_L7A2_link`, `PThetaA1A1A2_link`, `PFG7m_link`, `PThetaG7m_link`; `M6ReverseSym.lean`:
+`PFG6m_link_sym`, `PThetaG6m_link_sym`), as are the closed forms of all `SθE*` and the
+`SL(2, ℤ)` relations (`sl2_relations_*`).
 
 `hcancel` then becomes a theorem **relative to** these external and VOA-side inputs (audit
 item 5):
 
-* Zhu modularity of the character vector;
-* DLN finite image;
+* Zhu modularity of the character vector (giving `σ` and the covariance of `V`);
 * Huang's identification of Zhu's `S` with the categorical `S`;
-* the identification of the even `S`/`T` block (a finite check given the modular data);
+* the identification of the even `S`/`T` block with `SθE*`, `TθE*` (a finite check given the
+  modular data);
+* finite image of `σ` (hypothesis `hfin`; determined by the explicit matrices once `σ` is pinned
+  at `S`, `T`, manuscript lines 3772–3774);
 * the VOA-side `q`-expansion, polar and holomorphy data of `δv`.
 
 ## 4. Mathlib observations

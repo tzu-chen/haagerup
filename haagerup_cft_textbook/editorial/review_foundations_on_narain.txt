@@ -1,0 +1,81 @@
+Independent foundations review: asymmetric Narain doublet argument
+2026-10-05. Read-only mathematical review; no numerical work or reruns.
+
+Sources read: chapters/l06_identification.tex:245--550, the full
+hi_cft_20261001_theory_asymmetric_orbifold_doublet.md and
+hi_cft_20261001_theory_narain_case_inventory.md, and the earlier
+hi_cft_20260929_chain_affine_kernel.md normalization argument.
+
+Verdict: PASS for the stated current-preserving ordinary-orbifold
+proposition. The enhanced-parent inventory is correctly marked as an
+imported construction input, with a narrower interval and specialized
+classification/spectrum lemmas. No substantive correction required.
+
+1. Anomaly and gauging premises (250--255, 284--319).
+The proof needs an actual consistent ordinary gauging, not just a finite
+group of symmetries or a formal charge-lattice action. This premise is
+explicit. Its chosen anomaly trivialization restricts to K, so the
+intermediate K gauging is available with the restricted ordinary torsion.
+The ineffective case is excluded, which is necessary for distinct shifts,
+the perfect finite pairing, and a single toroidal vacuum. The argument
+does not silently claim that G/K is geometric after K gauging.
+
+2. Shift lattice (284--319).
+The annihilator proof of surjectivity Gamma -> Khat is correct: a proper
+image gives a nontrivial element of the finite double dual K acting
+trivially on every charge. Each projected sector is a nonempty Gamma_0
+coset, and distinct k give distinct rational shift classes. Ordinary
+locality and the Gaussian vertex OPE make their union even integral and
+additive. Its covolume is [Gamma:Gamma_0]/|K|=1. There is no additional
+fixed-point multiplicity in a pure shift sector. Thus the resulting
+theory is again Narain. The proof uses the consistent-orbifold premise
+essentially at the integrality/locality step.
+
+3. Correlator normalization (321--329).
+The K-monodromy subspace embeds into the K-orbifold Hilbert space with
+the inherited two-point metric. Remaining G-equivariance is a restriction
+on this subspace. Sphere monodromies lie in K, ordinary torsion restricts,
+and the change in gauge volume cancels against vacuum normalization.
+No extra square-root group-size multiplier is introduced into normalized
+cubics. This agrees with the separate affine-kernel source derivation.
+
+4. Rotation classification (331--403).
+Both positive determinant signs put the charge action in the identity
+component, modeled by (SL2Z x SL2Z)/diagonal center. Finite lifts have
+finite order because a power is central in both factors. Enumerating
+fractions 0,1/2,+/-1/3,+/-1/4,+/-1/6 and reducing a+b,a-b gives exactly
+the table, including (1/12,5/12). The scalar condition requires twice
+the larger chiral ground weight, not their sum. All numerical fractions
+in the table are exact and correct. The regulator derivation of
+h_theta=theta(1-theta)/2 is also correct.
+
+5. Quantum-character selection (405--442).
+Characters remain genuine symmetries with ordinary discrete torsion:
+e_g -> chi(g)e_g preserves the twisted multiplication. The complete
+eigenspace premise puts their action in the harmonic cubic stabilizer
+D3, whose abelian subgroups are 1,C2,C3. For image 1 or C2 the chosen
+real direction has |CXXX|=|c_phi|/sqrt(2) and is quantum invariant;
+characters then force commutator support and both determinant signs +.
+For image C3, finite abelian double duality gives order-three classes in
+G_ab, killed by each order-two determinant character. The resulting K
+support and parent bounds give exactly 2/sqrt(3).
+
+Optional pedagogical clarification at 426: the physical C3 and the
+quantum C3 have the same image subgroup in D3 because D3 has a unique
+subgroup of order three. Hence their two complex eigenlines coincide;
+no assumption that the physical symmetry commutes with every quantum
+symmetry is necessary. The current sentence is correct but compressed.
+
+Optional normalization clarification at 445--451: this circle example
+uses h=(m/R+wR)^2/4, whereas the CFT primer uses the alpha'=2 convention
+h=(m/R+nR/2)^2/2. The radii obey R_here=R_primer/sqrt(2); R -> R/n is
+unchanged. Either convert the displayed convention or mention this
+rescaling once to help a reader comparing the worked examples.
+
+6. Enhanced-current inventory (481 onward).
+The bounded SU2 projection is correctly attached to the sign-fixing
+kernel in the latest text. Conjugating Cartans by connected current
+groups is an isomorphism of CFT presentations, not a claim that those
+connected groups can themselves be gauged anomaly-free. The component
+lemmas are clearly imported, and the bound is not extended beyond the
+stated narrow interval or to generalized non-group gauging.

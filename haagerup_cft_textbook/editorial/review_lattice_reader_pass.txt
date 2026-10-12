@@ -1,0 +1,116 @@
+Reader and convention pass on l01--l06
+2026-10-05, approximately 18:17--18:28 UTC. Author: scope_lattice.
+Only textbook files edited; no numerical jobs or scientific reruns.
+
+Pants map: independent hand check
+--------------------------------
+The map is
+  z=(L/2pi)[x log(w-1)+(1-x)log w+H(x)].
+Its derivative vanishes at w=1-x, and H places that point at
+zero real cylinder time. Incoming ends have Re z -> -infinity;
+the outgoing end has Re z -> +infinity. Hence the disk coordinates
+are exp(+2pi z/L1), exp(+2pi z/L2), exp(-2pi z/L), respectively.
+With u=1/w, the inverse-Jacobian magnitudes are
+  exp(-H/x), exp(-H/(1-x)), exp(H).
+They give the primary ratio
+  exp[-H(Delta_a/x+Delta_b/(1-x)-Delta_c)] C_ab^c.
+The outgoing field is conjugated because the parent is a bra.
+For spinful fields the coordinate phases remain; the positive
+geometric expression used for the current singular-value test is
+its magnitude. Equal halves give 2^(-2Delta_a-2Delta_b+Delta_c),
+and conjugate dimension-one inputs with vacuum output give 1/16.
+
+All three states use normalized disk-state conventions, so no extra
+(2pi/L_i)^Delta_i factors should be inserted. The nonzero vacuum
+denominator must have the SAME lengths and seams; it cancels the
+common anomaly and gluing normalization. The already printed vacuum
+shape factor remains necessary for a different-shape denominator.
+The equation is now explicitly called the ideal-CFT prediction to
+which a calibrated lattice ratio would converge.
+
+The outgoing inverse series is
+  u=e^H xi - x e^(2H) xi^2
+    +(3x^2-x)e^(3H) xi^3/2 + O(xi^4).
+Substitution in u'''/u'-(3/2)(u''/u')^2 gives
+  Schwarzian=-3x(1-x)e^(2H).
+Dividing its (c/12) vacuum contribution by sqrt(c/2) yields
+  -B(x)sqrt(c/8)
+in this fixed coordinate convention. The printed estimator uses
+the invariant modulus. This independently checks the outgoing sign
+and the factor eight. The derivation is now shown, not asserted.
+
+Reader-facing changes
+----------------------
+* l01 points to fusion-space/F conventions and to later Schmidt/MPS
+  material; its six-argument F notation is explicitly identified with
+  F_d^{abc}[e,f]. It states that Y_alpha equals the defined color
+  rotation in the selected gauge. Continuum topological sectors point
+  back to the defect chapter.
+* l02 points to the cylinder derivation and forward to ordinary/cat
+  entropies. The modular thermal test now explicitly reminds readers
+  that a charge-projected trace usually S-transforms to a twisted
+  trace. Light-field names are decoded before the gap-ratio table.
+* l03 points to the primary/descendant and sewing prerequisites. The
+  second C3 label is identified as the proposed internal carrier
+  symmetry, distinct from residual conformal spin; its faithful
+  continuum survival is not inferred from rephasing algebra.
+  The finite vacuum-overlap exponent is written c^(vac)_{12,18},
+  avoiding confusion with the noncompact c_eff=c-24h0.
+* l04 distinguishes the stationary fixed-metric state from a unique
+  primitive periodic limit, and records that a blocked transfer
+  eigenvalue gives xi=-p/log|lambda| in original sites.
+  The exact one-tensor Rayleigh argument is explicitly distinguished
+  from a shared uniform-tensor variation.
+* l05 points to MPS/defect prerequisites, uses the same F-index
+  notation as l01, and explains that right Q modules in the
+  nonbraided H3 line category form a category of vacua, with no
+  separately assumed tensor product of vacua. Block injectivity is
+  translated into detection of each virtual matrix by physical words.
+* l06 points to the circle and full-sewing constructions. The
+  canonical Cardy premise explicitly includes OPE multiplication,
+  not just the displayed Hilbert-space sum. The shift-circle example
+  now uses the primer convention p_L=m/R+wR/2. The unique C3
+  subgroup of D3 explains the common quantum/physical eigenlines.
+
+Diagnostic-scope audit
+----------------------
+I read the numerical and conditional diagnostics together with their
+adjacent explanations. All distinguish the object actually controlled:
+
+  finite residual -> nearby finite eigenvalue, with coverage separate;
+  Casimir slope -> vc, requiring an independent velocity;
+  stress source -> c only with the stated normalized stress map;
+  entropies -> conditional scaling slope, with cut/convention effects;
+  thermal moments -> full-trace consistency, with tails and fifth moment;
+  source fraction -> vacuum-source weight, not operator purity;
+  Gram optimization -> finite source-span optimum, with size transfer;
+  phase invariant -> exact rephasing-invariant finite tensor;
+  descendant/filter tests -> conditional ideal norms and true tail cutoff;
+  pants ratios -> calibrated geometry and primary-state assumptions;
+  connected ratios -> affine mixing cancellation, not arbitrary branch OPEs;
+  current singular value -> tested subspace/geometry, with explicit errors;
+  HF vector -> finite response direction, not a count of running couplings;
+  MPS energy -> variational bound, not global stationarity or criticality;
+  transfer/entropy secants -> specified primitive component and same tensor;
+  variance -> eigenstate diagnostic, requiring spectral input for fidelity;
+  exact module MPS -> a state family and a sufficiently long gapped parent;
+  short parent -> no unwarranted four-state kernel or gap conclusion;
+  vacuum cubics -> finite vacuum-algebra form factors, not CFT OPEs;
+  Narain/orbifold bounds -> isolated limiting shells in specified classes;
+  crossing -> extra coupled scalar under stated continuum input values;
+  rational/Cardy tests -> retained algebra or specified sewing, not just c.
+
+No diagnostic required a new global-exclusion warning; the local premises
+already keep the scope appropriately bounded. The reader pass added
+definitions and cross-references where a symbol or interpretation could
+otherwise be mistaken for an established continuum dictionary.
+
+Status
+------
+The independent construction review passed the new SVD, Bell, generalized
+eigenvalue and Schmidt exercises. Both other agents passed the asymmetric
+Narain proof and its new regulated twist-energy derivation; their minor
+scope/normalization suggestions are implemented. There are 29 index
+entries and 37 lattice exercises with solution coverage. Numerical
+snapshots still use the completed October 1 cutoff pending the requested
+late October 5 reconciliation.

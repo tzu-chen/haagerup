@@ -1,0 +1,577 @@
+\chapter{The twelve-sector modular data}
+\label{ch:modular}
+
+Modular data translate categorical information into formulas for
+characters, defects, and boundaries.  They are powerful because a
+small pair of matrices constrains infinitely many states.  They are
+also easy to overinterpret: modular matrices do not determine all
+operator products, and matching them does not in general prove an
+equivalence of braided categories.  This chapter derives the main
+Haagerup formulas and works through a nontrivial Verlinde calculation.
+It ends by constructing the categorical algebra underlying the
+selected holomorphic extension.
+
+\section{Tori, twists, and the central-charge phase}
+
+A torus with complex parameter $\tau$ can be described using different
+bases of its two cycles.  The basic changes are
+\[
+ \tau\longmapsto-1/\tau,\qquad \tau\longmapsto\tau+1.
+\]
+For a rational chiral algebra with irreducible modules $M_i$, its
+characters
+\[
+ \chi_i(\tau)=\Tr_{M_i}q^{L_0-c/24},\qquad q=e^{2\pi i\tau},
+\]
+transform by matrices $S$ and $T_{\rm ch}$.  If the lowest weight
+of $M_i$ is $h_i$, then
+\begin{equation}
+ (T_{\rm ch})_{ii}=e^{2\pi i(h_i-c/24)}.
+ \label{eq:character-T-general}
+\end{equation}
+The corresponding categorical twist is
+\begin{equation}
+ \theta_i=e^{2\pi i h_i},\qquad
+ \Theta=\operatorname{diag}(\theta_i),\qquad
+ T_{\rm ch}=e^{-2\pi i c/24}\Theta.
+ \label{eq:twist-character-distinction}
+\end{equation}
+The phase multiplying $\Theta$ is not optional.  Forgetting it
+confuses a topological Dehn twist with the action on a chiral
+character including its vacuum energy.
+
+The normalized $S$-matrix can be obtained from a Hopf-link trace.
+We choose its orientation to agree with the finite Fourier convention
+\eqref{eq:Z3-center-S}.  In a unitary category this is the normalized
+trace of inverse double braiding.  Reversing all orientation
+conventions gives equivalent formulas after the appropriate changes
+to twists and modular generators.  The Haagerup $S$-matrix below is
+real, so complex conjugation of its entries has no effect.
+
+Let
+\[
+ \mathcal D=\left(\sum_i d_i^2\right)^{1/2}
+\]
+be the total quantum dimension of a unitary modular category.
+Normalization gives
+\begin{equation}
+ S_{00}=\mathcal D^{-1},\qquad S_{0i}=d_i/\mathcal D.
+ \label{eq:S-vacuum-row}
+\end{equation}
+The vacuum row is therefore positive.  Charge conjugation is the
+matrix $C_{ij}=\delta_{i,j^*}$, and
+\begin{equation}
+ S^2=C,\qquad
+ (S\Theta)^3=\xi C,
+ \qquad
+ \xi=\frac1{\mathcal D}\sum_i d_i^2\theta_i.
+ \label{eq:modular-relations-phase}
+\end{equation}
+For the representation category of a suitable unitary rational
+chiral theory, $\xi=e^{2\pi i c/8}$.  Substituting
+\eqref{eq:twist-character-distinction} removes that phase and gives
+$(ST_{\rm ch})^3=C$.
+
+The twist determines $h_i$ only modulo integers.  Knowing
+$\theta=e^{4\pi i/13}$ permits lowest weights $2/13$, $15/13$,
+$28/13$, and so on.  Positivity, branching, and actual character
+coefficients are needed to decide which lift occurs.
+
+\section{The Haagerup labels and matrix blocks}
+\index{modular data!Haagerup center}
+
+Use the ordering
+\begin{equation}
+ (0,b,a,c_0,c_1,c_2,d_1,d_2,d_3,d_4,d_5,d_6).
+ \label{eq:H3-center-order}
+\end{equation}
+The first label is the vacuum. The $d_j$ are names of sectors;
+their quantum dimensions will all be $3d$. Write $r=\sqrt{13}$ and set
+\[
+ A=\frac16-\frac1{2r},\qquad
+ B=\frac16+\frac1{2r},\qquad
+ u=\frac13,\qquad v=\frac1r.
+\]
+Let $\mathbf1_n$ denote the column of $n$ ones. In blocks of
+sizes $1,1,4,6$, the matrix is
+\begin{equation}
+ S=\begin{pmatrix}
+ A&B&u\mathbf1_4^{\mathsf t}&v\mathbf1_6^{\mathsf t}\\
+ B&A&u\mathbf1_4^{\mathsf t}&-v\mathbf1_6^{\mathsf t}\\
+ u\mathbf1_4&u\mathbf1_4&C_4&0\\
+ v\mathbf1_6&-v\mathbf1_6&0&D_6
+ \end{pmatrix},
+ \label{eq:H3-modular-S}
+\end{equation}
+where
+\begin{equation}
+ C_4=\frac13\begin{pmatrix}
+ 2&-1&-1&-1\\
+ -1&2&-1&-1\\
+ -1&-1&-1&2\\
+ -1&-1&2&-1
+ \end{pmatrix},\qquad
+ (D_6)_{ij}=-\frac2r\cos\frac{2\pi ij}{13}.
+ \label{eq:H3-modular-blocks}
+\end{equation}
+The twist matrix is
+\begin{align}
+ \Theta=\operatorname{diag}\bigl(&1,1,1,1,
+ e^{2\pi i/3},e^{4\pi i/3},
+ e^{2\pi i6/13},e^{2\pi i11/13},e^{2\pi i2/13},\notag\\
+ &e^{2\pi i5/13},e^{2\pi i7/13},e^{2\pi i8/13}\bigr).
+ \label{eq:H3-modular-twists}
+\end{align}
+Equivalently, $\theta_{d_j}=e^{2\pi i6j^2/13}$ for
+$1\leq j\leq6$.  The six exponents are the quadratic nonresidues
+modulo thirteen.
+
+\begin{constructioninput}[The Haagerup center data]
+The standard unitary Haagerup center has the modular matrices
+\eqref{eq:H3-modular-S}--\eqref{eq:H3-modular-twists} and the
+forgetful data of \eqref{eq:H3-forgetful}.  In the CFT construction,
+identifying the actual module category with this center requires
+the separate structural and analytic arguments developed later.
+Writing down these matrices is not a substitute for those arguments.
+\end{constructioninput}
+
+In the bootstrap notation frequently used for these sectors, the
+same order is
+\[
+ (1,\pi_1,\pi_2,\sigma_1,\sigma_2,\sigma_3,
+ \mu_5,\mu_2,\mu_1,\mu_3,\mu_6,\mu_4).
+\]
+The permutation among the final six labels is fixed by their twists.
+Keeping equal numerical subscripts on $d_j$ and $\mu_j$ would
+misidentify sectors.  We retain \eqref{eq:H3-center-order} in
+calculations and state any translation when comparing conventions.
+
+\section{Checking normalization without a computer}
+
+The first entry can be written
+\[
+ A=\frac{\sqrt{13}-3}{6\sqrt{13}}
+ =\frac1{3s}=\frac1{\mathcal D}.
+\]
+Consequently the ratios of the vacuum-row entries to $A$ are
+\begin{equation}
+ (\qdim(M_i))_i=(1,d^2,s,s,s,s,3d,3d,3d,3d,3d,3d).
+ \label{eq:H3-central-dimensions}
+\end{equation}
+For example $u/A=s$, while $v/A=3d$.  The total squared dimension
+is indeed
+\begin{align*}
+ 1+d^4+4s^2+6(3d)^2
+ &=1+d^4+4(1+d^2)^2+54d^2\\
+ &=5+5d^4+62d^2\\
+ &=9(1+d^2)^2=(3s)^2.
+\end{align*}
+The last step follows from $d^4=11d^2-1$, itself a consequence
+of $d^2=3d+1$.
+
+We can also verify $S^2=I$ using finite Fourier sums.  For
+$m\not\equiv0\pmod{13}$,
+\begin{equation}
+ \sum_{j=1}^6\cos\frac{2\pi mj}{13}=-\frac12.
+ \label{eq:cos13-sum}
+\end{equation}
+It is half the sum over all nonzero residues, which equals $-1$.
+Using $2\cos x\cos y=\cos(x+y)+\cos(x-y)$ gives
+\begin{equation}
+ \sum_{j=1}^6
+ \cos\frac{2\pi ij}{13}\cos\frac{2\pi kj}{13}
+ =\frac{13}{4}\delta_{ik}-\frac12
+ \quad(1\leq i,k\leq6).
+ \label{eq:cos13-orthogonality}
+\end{equation}
+Writing $I_n$ for the identity matrix and $J_n$ for the $n$-by-$n$
+matrix of ones, we obtain
+\[
+ D_6^2=I_6-\frac2{13}J_6,
+ \qquad D_6\mathbf1_6=v\mathbf1_6.
+\]
+The first two columns of $S$ contribute $2v^2J_6$, exactly the
+missing term in the bottom-right block of $S^2$.
+
+For the middle block, let $P$ fix its first two coordinates and
+exchange its last two.  Then $C_4=P-J_4/3$, so
+\[
+ C_4^2=I_4-\frac29J_4,
+ \qquad C_4\mathbf1_4=-\frac13\mathbf1_4.
+\]
+The first two columns contribute $2u^2J_4$, again exactly the
+missing term.  Mixed blocks vanish by these row sums and
+$A+B=u$, $A-B=-v$.  Finally,
+\[
+ A^2+B^2+4u^2+6v^2=1,
+ \qquad 2AB+4u^2-6v^2=0.
+\]
+This verifies every block of $S^2=I$.  All twelve simples are
+therefore self-dual.  This statement concerns the center labels;
+the six-object category still has $\alpha^*=\alpha^2$.
+For a simple object, ribbon duality gives $\theta_{x^*}=\theta_x$:
+the dual morphism is a linear transpose. Taking a Hermitian adjoint
+instead conjugates the scalar. Thus the self-dual label $c_1$ can
+have the nonreal twist $e^{2\pi i/3}$; categorical duality and
+right-moving complex conjugation are different operations.
+
+\section{A Gauss sum and central charge modulo eight}
+\index{central charge!modulo eight}
+
+Let $\zeta=e^{2\pi i/13}$.  The standard quadratic Gauss-sum
+evaluation gives
+\begin{equation}
+ G_-:=\sum_{j=1}^6\zeta^{6j^2}
+ =\frac{-1-\sqrt{13}}2.
+ \label{eq:nonresidue-Gauss13}
+\end{equation}
+One way to see its form is to separate the twelve nonzero residues
+into squares and nonsquares.  Their two sums add to $-1$, while
+their difference is the quadratic Gauss sum $\sqrt{13}$ with
+the standard positive choice for this prime.  The coefficient $6$
+selects the nonsquares.
+
+The Gauss--Milgram numerator is now
+\begin{align}
+ p^+&=1+d^4+s^2(1+1+\omega+\omega^2)
+       +9d^2G_-\notag\\
+ &=1+d^4+s^2+\frac{9d^2}{2}(-1-\sqrt{13})
+ =3s=\mathcal D.
+ \label{eq:H3-Gauss-Milgram}
+\end{align}
+Thus $\xi=1$.  This also follows abstractly because a Drinfeld
+center has trivial multiplicative central charge.
+
+If a rational chiral algebra has representation category
+$Z(\HH_3)$, this constrains its chiral central charge to
+$c\equiv0\pmod8$.  The construction in this book realizes the
+choice $c=8$.
+
+There is no contradiction with a proposed full CFT of central charge
+near two carrying Haagerup \emph{defect symmetry}.  The latter claim
+does not identify its chiral representation category with
+$Z(\HH_3)$.  A symmetry category acts on a full theory, while
+the modular category of chiral modules describes a chosen rational
+chiral algebra.  These are different pieces of structure.  Likewise,
+the holomorphic $E_8$ chiral algebra has a trivial representation
+category while its full theory can possess nontrivial defects
+preserving a smaller algebra $U$.
+
+\section{Verlinde diagonalizes fusion}
+\index{Verlinde formula}
+
+The fusion matrices of a modular category commute and are
+simultaneously diagonalized by $S$.  In our convention their
+structure constants are
+\begin{equation}
+ N_{ij}^{\ k}=\sum_\ell
+ \frac{S_{i\ell}S_{j\ell}\overline{S_{k\ell}}}
+ {S_{0\ell}}.
+ \label{eq:Verlinde-general}
+\end{equation}
+The eigenvalue of the line $i$ in sector $\ell$ is
+$S_{i\ell}/S_{0\ell}$.  The vacuum eigenvalue is $d_i$,
+recovering the dimension character.
+
+For Haagerup all entries are real, so the bar in
+\eqref{eq:Verlinde-general} can be omitted.  Although individual
+entries contain radicals and cosines, the sum gives nonnegative
+integers.  That integrality is a strong consistency condition, but
+its validity alone would still not reconstruct an associator or
+prove that a candidate modular table comes from a CFT.
+
+\begin{example}[The identity coefficient]
+For any two labels,
+\[
+ N_{ij}^{\ 0}=\sum_\ell S_{i\ell}S_{j\ell}
+ =(S^2)_{ij}=\delta_{ij}.
+\]
+This agrees with self-duality of every Haagerup center simple.
+The vacuum fusion rule follows similarly from unitarity:
+$N_{0i}^{\ k}=\delta_{ik}$.
+\end{example}
+
+\section{A full nontrivial fusion product from cosine sums}
+
+We compute $d_i\otimes d_i$.  Here $d_i$ is a center label,
+whereas the italic scalar $d$ remains the quantum dimension of a
+noninvertible Haagerup line.  Write
+$c_m(j)=\cos(2\pi mj/13)$.
+
+For an output $d_k$, the first two columns of Verlinde contribute
+\[
+ v^3\left(\frac1A-\frac1B\right)=\frac9{13},
+\]
+using $AB=1/117$.  The six final columns contribute
+$-(8/13)\sum_j c_i(j)^2c_k(j)$.  Thus
+\begin{equation}
+ N_{d_i d_i}^{\ \ d_k}
+ =\frac9{13}-\frac8{13}
+ \sum_{j=1}^6 c_i(j)^2c_k(j).
+ \label{eq:Verlinde-di-square-sum}
+\end{equation}
+Product-to-sum gives
+\[
+ c_i^2c_k=\frac12c_k+\frac14c_{2i+k}+\frac14c_{2i-k}.
+\]
+Let $[m]$ denote the representative of $\{m,-m\}$ modulo
+thirteen in $\{1,\ldots,6\}$.  If $k\ne[2i]$, all three
+frequencies are nonzero modulo thirteen, so
+\eqref{eq:cos13-sum} makes the sum $-1/2$.  Equation
+\eqref{eq:Verlinde-di-square-sum} then gives one.
+If $k=[2i]$, precisely one of $2i+k$ and $2i-k$ vanishes;
+its cosine sum is six instead of $-1/2$.  The triple-product sum
+becomes $9/8$, giving zero.  Therefore
+\begin{equation}
+ N_{d_i d_i}^{\ \ d_k}=1-\delta_{k,[2i]}.
+ \label{eq:Verlinde-di-square-residual}
+\end{equation}
+
+For any of $a,c_0,c_1,c_2$, only the first two columns contribute,
+and their sum is
+\[
+ uv^2\left(\frac1A+\frac1B\right)=1.
+\]
+The coefficient of $b$ is zero: its first two columns contribute
+$11/13$, while the final block contributes
+$-\sum_j(D_6)_{ij}^2=-11/13$.  The vacuum coefficient is one.
+Putting everything together,
+\begin{equation}
+ d_i^2=\one+a+c_0+c_1+c_2+
+ \sum_{\substack{1\leq k\leq6\\k\ne[2i]}}d_k.
+ \label{eq:Verlinde-di-square}
+\end{equation}
+Here $\one=M_0$ denotes the vacuum object, so the first term has
+dimension one.  The dimension check is
+\[
+ (3d)^2=1+4s+5(3d)=9+27d,
+\]
+exactly as required by $d^2=1+3d$.
+
+Another compact product is
+\[
+ b^2=\one+b+a+c_0+c_1+c_2+\sum_{j=1}^6d_j.
+\]
+Its dimension identity is $d^4=1+d^2+4s+18d$.
+These examples show explicitly how finite Fourier cancellation turns
+algebraic and trigonometric entries into integer fusion rules.
+
+\section{The canonical extension algebra}
+\index{Lagrangian algebra}
+
+Let $F:Z(\HH_3)\to\HH_3$ be the forgetful functor and $I$
+its right adjoint.  The object $I(\one)$ carries a canonical
+connected commutative separable algebra structure.  Its summands
+follow from adjunction:
+\[
+ \Hom_{Z(\HH_3)}(\mu,I(\one))
+ \simeq\Hom_{\HH_3}(F(\mu),\one).
+\]
+Using the first row of the forgetful table gives
+\begin{equation}
+ \mathcal A:=I(\one)\simeq\one\oplus b\oplus a^{\oplus2}.
+ \label{eq:canonical-H3-algebra}
+\end{equation}
+Here $\one=M_0$ is the vacuum center object; the numerical label
+$0$ remains its index in the modular matrices.  Its quantum dimension is
+\begin{equation}
+ \qdim(\mathcal A)=1+d^2+2s=3s=\mathcal D.
+ \label{eq:canonical-H3-algebra-dimension}
+\end{equation}
+Thus $(\qdim\mathcal A)^2$ equals the global dimension of the
+center.  Such an algebra is called Lagrangian.
+
+For a connected commutative separable algebra in a nondegenerate
+braided category, the dimension formulas are
+\begin{align}
+ \operatorname{Dim}(\mathcal M_{\mathcal A})
+ &=\frac{\operatorname{Dim}(\mathcal M)}{\qdim\mathcal A},\notag\\
+ \operatorname{Dim}(\mathcal M_{\mathcal A}^{\rm loc})
+ &=\frac{\operatorname{Dim}(\mathcal M)}{(\qdim\mathcal A)^2}.
+ \label{eq:algebra-module-dimensions}
+\end{align}
+For $\mathcal M=Z(\HH_3)$ these become $\mathcal D$ and one,
+respectively.  More strongly, the canonical algebra has
+\[
+ Z(\HH_3)_{\mathcal A}\simeq\HH_3,
+ \qquad Z(\HH_3)_{\mathcal A}^{\rm loc}\simeq\operatorname{Vec}.
+\]
+The first equivalence retains all modules; the second keeps only
+local ones.
+
+\subsection{Why a Lagrangian algebra recovers a center}
+\label{sec:lagrangian-reconstruction}
+\index{Lagrangian algebra!center reconstruction}
+\index{quantum dimension!module normalization}
+Let $A$ be a connected commutative separable algebra in the
+nondegenerate braided category $\mathcal M$.
+The tensor unit of the module category $\mathcal M_A$ is $A$ itself.
+Its dimension there must be one even when its dimension in
+$\mathcal M$ is large. The normalization is
+\[
+ \FPdim_{\mathcal M_A}(M)
+   =\frac{\FPdim_{\mathcal M}(M)}{\FPdim_{\mathcal M}(A)},
+\]
+where the numerator forgets the module action. In our positive
+spherical setting these are also the categorical dimensions.
+For instance, in $Z(\operatorname{Vec}_{\Z_3})$ take
+$A=\bigoplus_k(0,k)$. The flux module
+$x_g=\bigoplus_k(g,k)$ has ambient dimension three and module
+dimension one. The three flux modules consequently have global
+dimension three, as the dimension formula predicts. Their actions
+and relative tensor products are worked out in
+Chapter~\ref{ch:defects}.
+
+\index{central functor}
+There is also an actual functor behind reconstruction. The free
+module functor is
+$G_A:\mathcal M\to\mathcal M_A$, $G_A(X)=X\otimes A$.
+It is \emph{central}: the ambient braiding supplies coherent
+half-braidings of $G_A(X)$ with every $A$-module. Equivalently,
+it lifts to a braided tensor functor
+\[
+ \widetilde G_A:\mathcal M\longrightarrow Z(\mathcal M_A).
+\]
+This is the meaning of a central functor; it need not take values in
+a braided category before the lift.
+For a fusion category, $\FPdim(\mathcal M)$ means the sum of the
+squares of its simple Frobenius--Perron dimensions. In the unitary
+setting it agrees with the global dimension $\operatorname{Dim}(\mathcal M)$.
+
+\begin{theorem}[Lagrangian reconstruction]
+\label{thm:lagrangian-reconstruction}
+Let $\mathcal M$ be a nondegenerate braided fusion category and
+$A$ a connected commutative separable algebra. If
+$\FPdim(A)^2=\FPdim(\mathcal M)$, then the central lift gives
+a braided equivalence
+$\mathcal M\simeq Z(\mathcal M_A)$, carrying $A$ to the canonical
+algebra $I(\one)$. Here $I$ is the right adjoint of the forgetful
+functor $Z(\mathcal M_A)\to\mathcal M_A$.
+\end{theorem}
+The structural input is that this lift is fully faithful: it induces
+an isomorphism on every morphism space. Once that is known, the
+dimension formulas explain why the Lagrangian condition
+makes it exhaustive:
+\[
+ \FPdim Z(\mathcal M_A)
+ =\left(\frac{\FPdim\mathcal M}{\FPdim A}\right)^2
+ =\FPdim\mathcal M.
+\]
+A fully faithful fusion subcategory with the full positive global
+dimension cannot omit any simple object. This general theorem is
+what turns a holomorphic extension $H/U$ into the identification
+$\Rep(U)\simeq Z(\Rep(U)_H)$ later in the construction.
+
+To apply the canonical Haagerup algebra $\mathcal A$ to $U$, one
+needs an actual unitary ribbon
+equivalence $\Rep(U)\simeq Z(\HH_3)$ and the relevant extension
+theorem.  Transporting $\mathcal A$ then gives a selected holomorphic
+extension.  Matching $S$ and $\Theta$ alone does not provide that
+transport.  The original embedded extension in $V_{E_8}$ may identify
+its boundary category only up to $\HH_2$ or $\HH_3$; selecting
+the canonical $\HH_3$ algebra is a separate categorical choice.
+
+\section{A modular-invariant vector and the number 248}
+
+Let $m=(1,1,2,0,\ldots,0)^{\mathsf t}$ be the multiplicity vector
+of \eqref{eq:canonical-H3-algebra}.  Direct substitution in
+\eqref{eq:H3-modular-S} gives
+\begin{equation}
+ Sm=m,\qquad \Theta m=m.
+ \label{eq:extension-modular-vector}
+\end{equation}
+For example the first component is
+$A+B+2u=1$, the $a$ component is $2u+2(2/3)=2$,
+and every $d_j$ component is $v-v=0$.
+Therefore
+\begin{equation}
+ Z_{\rm ext}=|\chi_0+\chi_b+2\chi_a|^2
+ \label{eq:extension-partition-function}
+\end{equation}
+is modular invariant whenever the characters transform by these
+matrices.  This is a consistency consequence of the extension
+algebra.  Conversely, the same invariant expression written for
+formal character candidates would not construct local vertex
+operators or prove sewing.
+
+For the actual $c=8$ construction, the top spaces of $M_b$ and
+$M_a$ have weight one and dimensions $80$ and $81$, while
+$\dim U_1=6$.  Restricting the selected extension to $U$ gives
+\[
+ H'|_U\simeq U\oplus M_b\oplus2M_a.
+\]
+Consequently its weight-one space has dimension
+\begin{equation}
+ 6+80+2\cdot81=248.
+ \label{eq:248-branching-check}
+\end{equation}
+The equality is a valuable branching check.  Identifying the
+extension with $V_{E_8}$ uses the holomorphic $c=8$ classification
+and the extension's established hypotheses, not merely the familiar
+number $248$.
+
+For this $c=8$ theory,
+$T_{\rm ch}=e^{-2\pi i/3}\Theta$.  The module called $d_3$
+has actual lowest weight $15/13$, although its twist exponent is
+$2/13$.  This one example captures why a modular table cannot be
+read as a complete table of lowest energies.
+
+\section{Exercises}
+
+\begin{exercise}\label{ex:Z3-S-square}
+Using \eqref{eq:Z3-center-S}, prove $S^2=C$ by performing the
+two finite geometric sums.  Explain why replacing $C$ by the
+identity would be incorrect for this example.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:Z3-S-square]{Solution on page~\pageref*{sol:ex:Z3-S-square}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:H3-S-square}
+Complete the block verification of $S^2=I$ for
+\eqref{eq:H3-modular-S}, including the mixed $4\times6$ block.
+Derive $AB=1/117$ and $A^2+B^2=11/117$.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:H3-S-square]{Solution on page~\pageref*{sol:ex:H3-S-square}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:Gauss13}
+List the six squares and six nonsquares modulo thirteen.  Verify
+that $6j^2$, for $1\leq j\leq6$, runs through all nonsquares.
+Use \eqref{eq:nonresidue-Gauss13} to check every algebraic step
+of \eqref{eq:H3-Gauss-Milgram}.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:Gauss13]{Solution on page~\pageref*{sol:ex:Gauss13}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:Verlinde-d1}
+Write the product $d_1^2$ explicitly from
+\eqref{eq:Verlinde-di-square}.  Which $d_j$ is absent?  Repeat
+for $d_4^2$, and check dimensions in both cases.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:Verlinde-d1]{Solution on page~\pageref*{sol:ex:Verlinde-d1}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:modular-extension}
+Prove \eqref{eq:extension-modular-vector} component by component.
+Show that the rank-one coefficient matrix $Z=mm^{\mathsf t}$
+commutes with both $S$ and $\Theta$.  State two additional kinds
+of information needed before interpreting this matrix as an actual
+local CFT.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:modular-extension]{Solution on page~\pageref*{sol:ex:modular-extension}.}}\par
+\end{exercise}
+
+\begin{exercise}\label{ex:central-charge-scope}
+Explain why $\Rep(U)\simeq Z(\HH_3)$ at $c=8$ and a
+conjectural full $c=2$ theory with $\HH_3$ symmetry are not
+inconsistent statements.  Identify exactly which object carries
+the central-charge-modulo-eight constraint in the first statement.
+
+\par\smallskip\noindent{\footnotesize\normalfont
+\hyperref[sol:ex:central-charge-scope]{Solution on page~\pageref*{sol:ex:central-charge-scope}.}}\par
+\end{exercise}

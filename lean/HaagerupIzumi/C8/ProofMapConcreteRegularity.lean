@@ -36,8 +36,8 @@ compact current group; and the remaining factor properties `S.factorNonneg k`.  
   `z_i` in the orbit of a factor conformal vector; for every factor a bound `D` such that every
   orbit point has symmetric zero mode whose eigenvectors of energy `> D` lie in `C₂(U)`
   (`FactorEnergy`: the content of "regular unitary factors" used by `lem:positive-c2`); and the
-  nonnegativity of the factors' lowest weights (`factorNonneg`, an opaque predicate used by the
-  unproved `L_projectiveVacuum`);
+  nonnegativity of the factors' lowest weights (`factorNonneg`, an opaque predicate to which the
+  inputs `compat`, `vtop` of `ProofMapConcreteVacuum.projectiveVacuum_arrow` are applied);
 * `c2Cofinite`: `H ⧸ C₂(U)` is finite-dimensional.
 
 `U` here is not linked to the subalgebra `D.U u` of the properness branch (that model is over an
@@ -83,7 +83,8 @@ structure StressData (E : Type) [NormedAddCommGroup E] [NormedSpace ℝ E] (H : 
   /-- The orbits of the factor conformal vectors under the compact current group. -/
   K : Fin 4 → Set E
   /-- "All simple modules of the `k`-th factor have nonnegative lowest weights, zero only for its
-  vacuum" (lines 2719–2721); used by the unproved `L_projectiveVacuum`, not modelled. -/
+  vacuum" (lines 2719–2721); not modelled: the inputs of
+  `ProofMapConcreteVacuum.projectiveVacuum_arrow` that use it are stated conditionally on it. -/
   factorNonneg : Fin 4 → Prop
 
 variable {E : Type} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]
